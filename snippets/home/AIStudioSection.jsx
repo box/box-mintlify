@@ -1,5 +1,3 @@
-import { Icon } from "@mintlify/components";
-
 export const AIStudioSection = () => {
   const items = [
     {
