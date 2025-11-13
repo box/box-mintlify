@@ -24,7 +24,8 @@
           },
           {
             "tab": "Guides",
-            "groups": [
+            "pages": [
+              "guides/index",
               {
                 "group": "Start Here",
                 "pages": [
@@ -2664,7 +2665,8 @@
         "tabs": [
           {
             "tab": "ガイド",
-            "groups": [
+            "pages": [
+              "ja/guides/index",
               {
                 "group": "はじめに",
                 "pages": [
