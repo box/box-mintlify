@@ -23,7 +23,7 @@ export const Documentation = () => {
         "Box supports a variety of AI models, categorized along two dimensions: access level and capability tier. Check table list of the supported AI models.",
       icon: "/static/ai-dev-zone/code.svg",
       badges: ["DOCUMENTATION"],
-      href: "/guides/box-ai/supported-models/",
+      href: "/guides/box-ai/ai-models/",
     },
     {
       id: "override-config",

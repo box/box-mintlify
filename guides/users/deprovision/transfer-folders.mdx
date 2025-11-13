@@ -18,7 +18,7 @@ account.
 
 There are two general methods that are employed to accomplish this within Box:
 
-* Using the direct [transfer owned folders](/reference/put_users_id_folders_0) API, which will move all content from one user directly to another.
+* Using the direct [transfer owned folders](/reference/put-users-id-folders-0) API, which will move all content from one user directly to another.
 * Using the collaboration transfer method to change ownership of one file or folder at a time from one user to another.
 
 <Note>
@@ -32,7 +32,7 @@ There are two general methods that are employed to accomplish this within Box:
 
 ## Transfer Owned Folders API Method
 
-The [transfer owned folders endpoint](/reference/put_users_id_folders_0) is
+The [transfer owned folders endpoint](/reference/put-users-id-folders-0) is
 designed to move the entirety of content owned by one user over to another user.
 
 <Note>
@@ -162,7 +162,7 @@ client.enterprise.transferUserContent(sourceUserID, destinationUserID)
 ## Collaboration Transfer Method
 
 The collaboration transfer method is a process that uses the
-[collaboration endpoint](/reference/post_collaborations) to change the
+[collaboration endpoint](/reference/post-collaborations) to change the
 ownership of a single file or folder from one user to another instantaneously.
 
 <Note>
@@ -181,7 +181,7 @@ The first step is to add the `transfer_to_user` account as a collaborator with
 
 Making the call as the `transfer_from_user` account, add the `transfer_to_user`
 as a co-owner using the
-[add collaboration endpoint](/reference/post_collaborations).
+[add collaboration endpoint](/reference/post-collaborations).
 
 <CodeGroup>
 
@@ -318,7 +318,7 @@ returned will include a collaboration ID, which is used for the last step.
 
 Making the call as the `transfer_to_user` account, get the collaboration on the
 file or folder ID being transferred, using the
-[get collaboration endpoint](/reference/get_collaborations_id). Capture the
+[get collaboration endpoint](/reference/get-collaborations-id). Capture the
 collaboration ID.
 
 <Sample id='get_collaborations_id' />
@@ -327,7 +327,7 @@ collaboration ID.
 
 The final step is to remove the `transfer_from_user` account as an owner of the
 file or folder, which is accomplished using the
-[delete collaboration endpoint](/reference/delete_collaborations_id).
+[delete collaboration endpoint](/reference/delete-collaborations-id).
 
 Making call as the `transfer_to_user` account, remove the `transfer_from_user`
 as a collaborator on the file or folder.
