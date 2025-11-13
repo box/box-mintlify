@@ -1,0 +1,43 @@
+guides/ai-studio/getting-started-ai-studio.mdx
+ ⎿  ./images/developer-token.png ( image does not exist in the original document )
+
+guides/skills/handle/payload.mdx
+ ⎿  /reference/resources/skill-invocation ( link does not exist in the original document )
+
+ja/guides/skills/handle/payload.mdx
+ ⎿  /ja/reference/resources/skill-invocation ( link does not exist in the original document )
+
+ja/reference/resources/enterprise--base.mdx
+ ⎿  /ja/reference/resources/enterprise--full/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/enterprise/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/enterprise--mini/ ( link does not work in the original document )
+
+ja/reference/resources/file-conflict.mdx
+ ⎿  /ja/reference/resources/file-conflict--full/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/file-conflict--mini/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/file-conflict--base/ ( link does not work in the original document )
+
+ja/reference/resources/user-collaborations.mdx
+ ⎿  /ja/reference/resources/user-collaborations--full/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/user-collaborations--mini/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/user-collaborations--base/ ( link does not work in the original document )
+
+ja/reference/resources/user-integration-mappings-reference.mdx
+ ⎿  /ja/reference/resources/user-integration-mappings-reference--full/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/user-integration-mappings-reference--mini/ ( link does not work in the original document )
+ ⎿  /ja/reference/resources/user-integration-mappings-reference--base/ ( link does not work in the original document )
+
+reference/resources/file-conflict.mdx
+ ⎿  /reference/resources/file-conflict--full/ ( link does not work in the original document )
+ ⎿  /reference/resources/file-conflict--mini/ ( link does not work in the original document )
+ ⎿  /reference/resources/file-conflict--base/ ( link does not work in the original document )
+
+reference/resources/user-collaborations.mdx
+ ⎿  /reference/resources/user-collaborations--full/ ( link does not work in the original document )
+ ⎿  /reference/resources/user-collaborations--mini/ ( link does not work in the original document )
+ ⎿  /reference/resources/user-collaborations--base/ ( link does not work in the original document )
+
+reference/resources/user-integration-mappings-reference.mdx
+ ⎿  /reference/resources/user-integration-mappings-reference--full/ ( link does not work in the original document )
+ ⎿  /reference/resources/user-integration-mappings-reference--mini/ ( link does not work in the original document )
+ ⎿  /reference/resources/user-integration-mappings-reference--base/ ( link does not work in the original document )

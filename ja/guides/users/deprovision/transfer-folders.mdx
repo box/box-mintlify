@@ -27,7 +27,7 @@ fullyTranslated: true
 
 Box内でこれを実行するのに使用される一般的な方法は以下の2つです。
 
-* すべてのコンテンツをあるユーザーから別のユーザーに直接移動する、[所有フォルダの移動](/ja/reference/put_users_id_folders_0)APIを使用する。
+* すべてのコンテンツをあるユーザーから別のユーザーに直接移動する、[所有フォルダの移動](/ja/reference/put-users-id-folders-0)APIを使用する。
 * コラボレーション転送の方法を使用して、一度に1つのファイルまたはフォルダの所有権を、あるユーザーから別のユーザーに変更する。
 
 <Note>
@@ -40,7 +40,7 @@ Box内でこれを実行するのに使用される一般的な方法は以下�
 
 ## 所有フォルダの移動APIの使用
 
-[所有フォルダの移動エンドポイント](/ja/reference/put_users_id_folders_0)は、あるユーザーが所有するコンテンツ全体を別のユーザーに移動することを目的に設計されています。
+[所有フォルダの移動エンドポイント](/ja/reference/put-users-id-folders-0)は、あるユーザーが所有するコンテンツ全体を別のユーザーに移動することを目的に設計されています。
 
 <Note>
 
@@ -167,7 +167,7 @@ client.enterprise.transferUserContent(sourceUserID, destinationUserID)
 
 ## コラボレーション転送の使用
 
-コラボレーション転送は、[コラボレーションエンドポイント](/ja/reference/post_collaborations)を使用して、単一のファイルまたはフォルダの所有権をあるユーザーから別のユーザーに即座に変更するプロセスです。
+コラボレーション転送は、[コラボレーションエンドポイント](/ja/reference/post-collaborations)を使用して、単一のファイルまたはフォルダの所有権をあるユーザーから別のユーザーに即座に変更するプロセスです。
 
 <Note>
 
@@ -181,7 +181,7 @@ client.enterprise.transferUserContent(sourceUserID, destinationUserID)
 
 最初の手順は、転送するファイルまたはフォルダへの`co-owner`アクセス権限を持つコラボレータとして、`transfer_to_user`アカウントを追加することです。
 
-`transfer_from_user`アカウントとして呼び出しを行い、[コラボレーションを追加](/ja/reference/post_collaborations)エンドポイントを使用して`transfer_to_user`を共同所有者として追加します。
+`transfer_from_user`アカウントとして呼び出しを行い、[コラボレーションを追加](/ja/reference/post-collaborations)エンドポイントを使用して`transfer_to_user`を共同所有者として追加します。
 
 <CodeGroup>
 
@@ -314,7 +314,7 @@ client.collaborations.createWithUserID('123456', '987654', client.collaborationR
 
 次の手順では、コラボレーション情報を取得するリクエストを`transfer_to_user`アカウントとして実行します。返されるコラボレーションオブジェクトには、最後の手順で使用するコラボレーションIDが含まれます。
 
-`transfer_to_user`アカウントとして呼び出しを実行し、[コラボレーションを取得エンドポイント](/ja/reference/get_collaborations_id)を使用して、転送するファイルまたはフォルダのIDのコラボレーションを取得します。コラボレーションIDをキャプチャします。
+`transfer_to_user`アカウントとして呼び出しを実行し、[コラボレーションを取得エンドポイント](/ja/reference/get-collaborations-id)を使用して、転送するファイルまたはフォルダのIDのコラボレーションを取得します。コラボレーションIDをキャプチャします。
 
 <Sample id="get_collaborations_id">
 
@@ -322,7 +322,7 @@ client.collaborations.createWithUserID('123456', '987654', client.collaborationR
 
 ### 転送元ユーザーを所有者として削除
 
-最後の手順は、ファイルまたはフォルダの所有者として`transfer_from_user`アカウントを削除することです。これは、[コラボレーションを削除エンドポイント](/ja/reference/delete_collaborations_id)を使用して行います。
+最後の手順は、ファイルまたはフォルダの所有者として`transfer_from_user`アカウントを削除することです。これは、[コラボレーションを削除エンドポイント](/ja/reference/delete-collaborations-id)を使用して行います。
 
 `transfer_to_user`アカウントとして呼び出しを実行し、ファイルまたはフォルダのコラボレータとして`transfer_from_user`を削除します。
 
