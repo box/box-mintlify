@@ -22,16 +22,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/provision/architecture.md
 fullyTranslated: true
 ---
-最初の要件は、アカウントの作成時に一般的なファイルとフォルダを個々のユーザーのルートフォルダにコピーすることです。この問題は、標準のLinuxディストリビューション内の`/etc/skel`と呼ばれるディレクトリを介して解決されています。このディレクトリは、Box固有のソリューションによってエミュレートされます。Linuxで新しいユーザーを追加すると、`/etc/skel`内のファイルとフォルダが新しいユーザーのホームディレクトリにコピーされます。
 
-[JWTベースのBoxアプリケーション](/ja/guides/authentication/jwt/jwt-setup)を作成すると、Box Enterprise内に[サービスアカウント][sa]が作成されます。サービスアカウントはBox Enterpriseの共同管理者に似た機能を持っており、このユースケースに最も有用で、ファイルおよびフォルダに対し、所有、コピー、および他のユーザーとのコラボレーションを行うことができます。さらに重要な点は、サービスアカウントは厳密にユーザー向けのPlatformアプリケーションの開発のみに使用する必要がなく、自動化処理の用途でも使用できるということです。
+最初の要件は、アカウントの作成時に一般的なファイルとフォルダを個々のユーザーのルートフォルダにコピーすることです。この問題は、標準の Linux ディストリビューション内の`/etc/skel`と呼ばれるディレクトリを介して解決されています。このディレクトリは、Box 固有のソリューションによってエミュレートされます。Linux で新しいユーザーを追加すると、`/etc/skel`内のファイルとフォルダが新しいユーザーのホームディレクトリにコピーされます。
+
+[JWT ベースの Box アプリケーション](/ja/guides/authentication/jwt/jwt-setup)を作成すると、Box Enterprise 内に[サービスアカウント][sa]が作成されます。サービスアカウントは Box Enterprise の共同管理者に似た機能を持っており、このユースケースに最も有用で、ファイルおよびフォルダに対し、所有、コピー、および他のユーザーとのコラボレーションを行うことができます。さらに重要な点は、サービスアカウントは厳密にユーザー向けの Platform アプリケーションの開発のみに使用する必要がなく、自動化処理の用途でも使用できるということです。
 
 <Info>
 **Box Platformアプリケーションの要件**
 
-この手順のためにJWTベースのカスタムBoxアプリケーションを作成する場合、**ユーザーを管理する**、**グループを管理する**、**ユーザーとして操作を実行**、および**ユーザーアクセストークンを生成**スコープを有効にする必要があります。
+この手順のために JWT ベースのカスタム Box アプリケーションを作成する場合、**ユーザーを管理する**、**グループを管理する**、**ユーザーとして操作を実行**、および**ユーザーアクセストークンを生成**スコープを有効にする必要があります。
 
-JWTベースのBoxアプリケーションとBoxアプリケーションのスコープの作成の詳細については、[JWTアプリケーションの設定](/ja/guides/authentication/jwt/jwt-setup)を参照してください。
+JWT ベースの Box アプリケーションと Box アプリケーションのスコープの作成の詳細については、[JWT アプリケーションの設定](/ja/guides/authentication/jwt/jwt-setup)を参照してください。
 
 </Info>
 
@@ -52,7 +53,6 @@ JWTベースのBoxアプリケーションとBoxアプリケーションのス�
     }
   ]
 }
-
 ```
 
 ```json skel_sub_directories.json
@@ -87,12 +87,11 @@ JWTベースのBoxアプリケーションとBoxアプリケーションのス�
     ]
   }
 ]
-
 ```
 
 </CodeGroup>
 
-このコードを再利用して、上のJSONオブジェクトが示すフォーマットのフォルダ構造を構築することもできます。
+このコードを再利用して、上の JSON オブジェクトが示すフォーマットのフォルダ構造を構築することもできます。
 
 <CodeGroup>
 
@@ -102,80 +101,76 @@ const fs = require("fs");
 const box = require("box-node-sdk");
 
 class BoxFolderTreeCreator {
-    constructor(boxClient, options) {
-        options = options || {};
-        if (options.boxClient) {
-            throw new Error("Must include a boxClient field.");
-        }
-
-        options.boxFolderTreeName = options.boxFolderTreeName || "tree.json";
-
-        this.boxClient = boxClient;
-        this.boxFolderTree = JSON.parse(fs.readFileSync(options.boxFolderTreeName));
-        this.createdBoxFolders = [];
+  constructor(boxClient, options) {
+    options = options || {};
+    if (options.boxClient) {
+      throw new Error("Must include a boxClient field.");
     }
 
-    async createFolderTree(branch = null, parentFolderId = "0") {
-        this.createdBoxFolders = [];
-        if (Array.isArray(this.boxFolderTree)) {
-            let folderTasks = [];
-            this.boxFolderTree.forEach(folder => {
-                folderTasks.push(this._createFolder(folder, ""));
-            });
-            await Promise.all(folderTasks);
-            return this.createdBoxFolders;
-        } else if (typeof this.boxFolderTree === "object") {
-            console.log("Is object");
-            await this._createFolders(this.boxFolderTree, "");
-            return this.createdBoxFolders;
-        } else {
-            throw new Error("Incorrectly formatted JSON folder tree.");
-        }
-    }
+    options.boxFolderTreeName = options.boxFolderTreeName || "tree.json";
 
-    async _createFolders(branch, parentFolderId = "0") {
-        if (branch.parent != null && branch.parent.id != null) {
-            parentFolderId = branch.parent.id;
-        }
-        let folder;
-        try {
-            folder = await this.boxClient.folders.create(parentFolderId, branch.name);
-        } catch (e) {
-            let existingFolderId = BoxFolderTreeCreator.handleFolderConflictError(e);
-            folder = await this.boxClient.folders.get(existingFolderId);
-        }
-        this.createdBoxFolders.push(folder);
-        if (branch.children.length <= 0) {
-            console.log("No more folders to create...");
-            return;
-        } else {
-            let createFolderTasks = [];
-            branch.children.forEach(child => {
-                console.log("Creating folder...");
-                console.log(child.name);
-                createFolderTasks.push(this._createFolders(child, folder.id));
-            });
-            return await Promise.all(createFolderTasks);
-        }
-    }
+    this.boxClient = boxClient;
+    this.boxFolderTree = JSON.parse(fs.readFileSync(options.boxFolderTreeName));
+    this.createdBoxFolders = [];
+  }
 
-    static handleFolderConflictError(e) {
-        if (e && e.response && e.response.body) {
-            let errorBody = e.response.body;
-            if (errorBody.status === 409) {
-                if (
-                    errorBody.context_info &&
-                    errorBody.context_info.conflicts &&
-                    errorBody.context_info.conflicts.length > 0
-                ) {
-                    let conflict = errorBody.context_info.conflicts[0];
-                    if (conflict && conflict.id) {
-                        return conflict.id;
-                    }
-                }
-            }
-        }
+  async createFolderTree(branch = null, parentFolderId = "0") {
+    this.createdBoxFolders = [];
+    if (Array.isArray(this.boxFolderTree)) {
+      let folderTasks = [];
+      this.boxFolderTree.forEach((folder) => {
+        folderTasks.push(this._createFolder(folder, ""));
+      });
+      await Promise.all(folderTasks);
+      return this.createdBoxFolders;
+    } else if (typeof this.boxFolderTree === "object") {
+      console.log("Is object");
+      await this._createFolders(this.boxFolderTree, "");
+      return this.createdBoxFolders;
+    } else {
+      throw new Error("Incorrectly formatted JSON folder tree.");
     }
+  }
+
+  async _createFolders(branch, parentFolderId = "0") {
+    if (branch.parent != null && branch.parent.id != null) {
+      parentFolderId = branch.parent.id;
+    }
+    let folder;
+    try {
+      folder = await this.boxClient.folders.create(parentFolderId, branch.name);
+    } catch (e) {
+      let existingFolderId = BoxFolderTreeCreator.handleFolderConflictError(e);
+      folder = await this.boxClient.folders.get(existingFolderId);
+    }
+    this.createdBoxFolders.push(folder);
+    if (branch.children.length <= 0) {
+      console.log("No more folders to create...");
+      return;
+    } else {
+      let createFolderTasks = [];
+      branch.children.forEach((child) => {
+        console.log("Creating folder...");
+        console.log(child.name);
+        createFolderTasks.push(this._createFolders(child, folder.id));
+      });
+      return await Promise.all(createFolderTasks);
+    }
+  }
+
+  static handleFolderConflictError(e) {
+    if (e && e.response && e.response.body) {
+      let errorBody = e.response.body;
+      if (errorBody.status === 409) {
+        if (errorBody.context_info && errorBody.context_info.conflicts && errorBody.context_info.conflicts.length > 0) {
+          let conflict = errorBody.context_info.conflicts[0];
+          if (conflict && conflict.id) {
+            return conflict.id;
+          }
+        }
+      }
+    }
+  }
 }
 
 let configFile = fs.readFileSync("config.json");
@@ -187,10 +182,9 @@ let serviceAccountClient = session.getAppAuthClient("enterprise");
 let treeCreator = new BoxFolderTreeCreator(serviceAccountClient);
 
 (async () => {
-    let createdFolders = await treeCreator.createFolderTree();
-    console.log(createdFolders);
+  let createdFolders = await treeCreator.createFolderTree();
+  console.log(createdFolders);
 })();
-
 ```
 
 ```java Java
@@ -440,6 +434,7 @@ namespace BoxPlayground {
 }
 
 ```
+
 </CodeGroup>
 
-[sa]: page!://platform/user-types/#service-account
+[sa]: https://ja.developer.box.com/platform/user-types/#service-account

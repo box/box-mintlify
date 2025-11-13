@@ -23,45 +23,46 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/open-with.md
 fullyTranslated: true
 ---
+
 <Warning>
 
-日本時間2021年12月22日をもって、新規のお客様に対する`OpenWith` UI Elementのサポートは終了しました。
+日本時間 2021 年 12 月 22 日をもって、新規のお客様に対する`OpenWith` UI Element のサポートは終了しました。
 
 </Warning>
 
-Box Content Open With UI Elementを使用すると、開発者は、Boxに保存されているコンテンツをパートナーアプリケーションまたはローカルのデスクトップで開くためのドロップダウンを埋め込むことができます。
+Box Content Open With UI Element を使用すると、開発者は、Box に保存されているコンテンツをパートナーアプリケーションまたはローカルのデスクトップで開くためのドロップダウンを埋め込むことができます。
 
-このElementは、有効化された統合に関する情報をBox APIを使用して取得し、パートナーのサービスを呼び出します。その後、ユーザーはこれらのサービスで操作を行うと、編集したコンテンツはBoxに自動的に保存されます。
+この Element は、有効化された統合に関する情報を Box API を使用して取得し、パートナーのサービスを呼び出します。その後、ユーザーはこれらのサービスで操作を行うと、編集したコンテンツは Box に自動的に保存されます。
 
-Open With Elementに含まれる統合には、Google SuiteおよびBox Editがあります。Google Suiteの統合の詳細については、[Boxコミュニティサイト][community]を参照してください。
+Open With Element に含まれる統合には、Google Suite および Box Edit があります。Google Suite の統合の詳細については、[Box コミュニティサイト][community]を参照してください。
 
 現在、この要素では、認証用に[App User](https://developer.box.com/platform/user-types)のみがサポートされています。
 
 ## インストール
 
-NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](/ja/guides/embed/ui-elements/installation)を参照してください。
+NPM または Box CDN 経由で Box UI Elements をインストールする方法は、[こちら](/ja/guides/embed/ui-elements/installation)を参照してください。
 
 ## Box Edit
 
-Box Editでは、Platformアプリケーションに統合するために追加の設定が必要です。Box Editは、デスクトップアプリケーションの[Box Tools][tools]を使用してコンテンツをローカルで開きます。
+Box Edit では、Platform アプリケーションに統合するために追加の設定が必要です。Box Edit は、デスクトップアプリケーションの[Box Tools][tools]を使用してコンテンツをローカルで開きます。
 
-* リクエストでは (`https`ドメインからの) セキュアな接続を使用する必要があります。
-* アプリケーションのドメインは、Box Toolsで許可する必要があります。手順については、[こちら][custom-domains]を参照してください。理想的なワークフローでは、Box Toolsもインストールされるインストーラにこれらの手順をバンドルします。
-* Safariでは、Box Toolsに接続するためにブラウザの機能拡張が必要です。詳細については、[こちら][safari]を参照してください。
+- リクエストでは (`https`ドメインからの) セキュアな接続を使用する必要があります。
+- アプリケーションのドメインは、Box Tools で許可する必要があります。手順については、[こちら][custom-domains]を参照してください。理想的なワークフローでは、Box Tools もインストールされるインストーラにこれらの手順をバンドルします。
+- Safari では、Box Tools に接続するためにブラウザの機能拡張が必要です。詳細については、[こちら][safari]を参照してください。
 
 ## G Suite
 
-Box for G Suiteの統合を使用するには、有効なG Suiteアカウントが必要です。ユーザーのG SuiteとBoxアカウントを接続するには、App Userの`external_app_user_id`を、ユーザーのG Suiteアカウントに関連付けられたメールアドレスに更新する必要があります。
+Box for G Suite の統合を使用するには、有効な G Suite アカウントが必要です。ユーザーの G Suite と Box アカウントを接続するには、App User の`external_app_user_id`を、ユーザーの G Suite アカウントに関連付けられたメールアドレスに更新する必要があります。
 
-App Userの`external_app_user_id`は、[`PUT /users/:id`](/ja/reference/put-users-id)エンドポイントを介して更新できます。
+App User の`external_app_user_id`は、[`PUT /users/:id`](/ja/reference/put-users-id)エンドポイントを介して更新できます。
 
 ## 設定
 
-Open With UI Elementを使用する前に、アプリケーションを許可し、Box APIエンドポイントを使用してApp Userのために統合を有効にしておく必要があります。
+Open With UI Element を使用する前に、アプリケーションを許可し、Box API エンドポイントを使用して App User のために統合を有効にしておく必要があります。
 
 ### アプリケーションのアクティブ化
 
-「Open With」UI Elementは、Box Platformを使用して構築するすべての開発者が使用できます。インスタンスに対してこの要素をアクティブ化するには、開発者コンソールでアプリケーションに \[統合を有効化] スコープを追加します。
+「Open With」UI Element は、Box Platform を使用して構築するすべての開発者が使用できます。インスタンスに対してこの要素をアクティブ化するには、開発者コンソールでアプリケーションに \[統合を有効化] スコープを追加します。
 
 <Frame border>
 
@@ -69,7 +70,7 @@ Open With UI Elementを使用する前に、アプリケーションを許可し
 
 </Frame>
 
-アプリケーションは、APIコールに対してアクティブ化されたら、会社での再認証が必要になります。この操作を実行する手順については、[こちら](/ja/guides/authorization/platform-app-approval)を参照してください。
+アプリケーションは、API コールに対してアクティブ化されたら、会社での再認証が必要になります。この操作を実行する手順については、[こちら](/ja/guides/authorization/platform-app-approval)を参照してください。
 
 ## 使用可能な統合のリストの取得
 
@@ -92,14 +93,13 @@ curl -X GET https://api.box.com/2.0/app_integrations \
   ],
   "limit": 100
 }
-
 ```
 
-アプリ統合IDを使用して、指定したユーザーに統合を割り当てます。
+アプリ統合 ID を使用して、指定したユーザーに統合を割り当てます。
 
 ## 特定の統合の取得
 
-IDに基づいて、特定の統合に関する追加情報を取得するには、次のGETリクエストを実行できます。
+ID に基づいて、特定の統合に関する追加情報を取得するには、次の GET リクエストを実行できます。
 
 ```sh
 curl -X GET \
@@ -118,38 +118,27 @@ curl -X GET \
   },
   "name": "Edit with G Suite",
   "description": "Securely manage your Google Docs, Sheets and Slides in Box",
-  "executable_item_types": [
-    "file"
-  ],
-  "restricted_extensions": [
-    "docx",
-    "gdoc",
-    "xlsx",
-    "gsheet",
-    "pptx",
-    "gslides",
-    "gslide"
-  ],
+  "executable_item_types": ["file"],
+  "restricted_extensions": ["docx", "gdoc", "xlsx", "gsheet", "pptx", "gslides", "gslide"],
   "scoped_to": "parent"
 }
-
 ```
 
 ## ユーザーへの統合の追加
 
-有効なApp Userにアプリ統合を追加するには、以下の3つの情報が必要です。
+有効な App User にアプリ統合を追加するには、以下の 3 つの情報が必要です。
 
-* 有効な[サービスアカウント](https://developer.box.com/platform/user-types/#service-account)アクセストークン
-* 統合を割り当てるApp UserのID
-* ユーザーに割り当てるアプリ統合のID
+- 有効な[サービスアカウント](https://developer.box.com/platform/user-types/#service-account)アクセストークン
+- 統合を割り当てる App User の ID
+- ユーザーに割り当てるアプリ統合の ID
 
 <Warning>
 
-アプリ統合に関する情報を取得するための前述の2つのリクエストは、有効な開発者トークンなど、任意の有効なトークンを使用して実行できますが、アプリ統合を追加および削除するには、有効なサービスアカウントのアクセストークンが必要です。開発者トークンを使用すると`404 Not Found`エラーが発生します。
+アプリ統合に関する情報を取得するための前述の 2 つのリクエストは、有効な開発者トークンなど、任意の有効なトークンを使用して実行できますが、アプリ統合を追加および削除するには、有効なサービスアカウントのアクセストークンが必要です。開発者トークンを使用すると`404 Not Found`エラーが発生します。
 
 </Warning>
 
-アプリ統合をApp Userに割り当てるには、次の`POST`リクエストを実行できます。
+アプリ統合を App User に割り当てるには、次の`POST`リクエストを実行できます。
 
 ```sh
 curl -X POST https://api.box.com/2.0/app_integration_assignments \
@@ -180,14 +169,13 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
     "id": "3282"
   }
 }
-
 ```
 
-JSONレスポンスに含まれるIDは、割り当て後にアプリ統合を管理するために使用できるため、アプリケーションで保存する必要があります。
+JSON レスポンスに含まれる ID は、割り当て後にアプリ統合を管理するために使用できるため、アプリケーションで保存する必要があります。
 
 ## ユーザーからの統合の削除
 
-App Userからアプリ統合を削除するには、有効なサービスのアクセストークンと、前の手順で取得したアプリ統合割り当てIDを使用して次のリクエストを実行できます。
+App User からアプリ統合を削除するには、有効なサービスのアクセストークンと、前の手順で取得したアプリ統合割り当て ID を使用して次のリクエストを実行できます。
 
 ```sh
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
@@ -200,7 +188,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 ```
 
-## サンプルHTML
+## サンプル HTML
 
 ```html
 <!DOCTYPE html>
@@ -210,10 +198,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     <title>Box Content Open With Demo</title>
 
     <!-- Latest version of the open with css for your locale -->
-    <link
-      rel="stylesheet"
-      href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.css"
-    />
+    <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.css" />
   </head>
   <body>
     <div class="container" style="height:600px"></div>
@@ -224,23 +209,22 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
       var accessToken = "abc";
       var contentOpenWith = new Box.ContentOpenWith();
       contentOpenWith.show(fileId, accessToken, {
-        container: ".container"
+        container: ".container",
       });
     </script>
   </body>
 </html>
-
 ```
 
 ## デモ
 
-### Open Withの例
+### Open With の例
 
 <iframe height="560" scrolling="no" title="Box Open Withの例" src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
 
 </iframe>
 
-### コンテンツエクスプローラとOpen Withの例
+### コンテンツエクスプローラと Open With の例
 
 <iframe height="560" scrolling="no" title="Box Content Explorerの例とOpen With" src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
 
@@ -249,24 +233,24 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 <Info>
 **アクセストークン**
 
-上記のデモは、デモの \[JS] タブで有効なアクセストークンを指定しなければ、十分に機能しない可能性があります。Open With Elementの場合は、有効な[サービスアカウント][service-account]アクセストークンを指定する必要があります。
+上記のデモは、デモの \[JS] タブで有効なアクセストークンを指定しなければ、十分に機能しない可能性があります。Open With Element の場合は、有効な[サービスアカウント][service-account]アクセストークンを指定する必要があります。
 
 </Info>
 
 ## 認証
 
-UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
+UI Element は認証に依存しない方法で設計されているため、Box アカウントを持つユーザー (管理対象ユーザー) と Box 以外のアカウントを持つユーザー (App User) のどちらに UI Element を使用するかどうかに関係なく、UI Element を使用するのに特別な設定は必要ありません。その理由は、UI Element は認証のために「トークン」を受け取ることのみを予期しており、Box にはトークンの生成方法として OAuth と JWT の 2 つがあるからです。
 
-<Card href="/guides/authentication/select" title="認証方法の選択について確認する"/>
+<Card href="/guides/authentication/select" title="認証方法の選択について確認する" />
 
-##  スコープ 
+## スコープ
 
 ダウンスコープされたトークンを使用して統合を実行するには、`item_execute_integration`スコープに加えて、使用する特定の統合で必要となるスコープを含める必要があります。
 
-* **Google**: 親フォルダに対する`item_readwrite`
-* **Adobe**: `root_readwrite`
-* **Box Edit**: 親フォルダに対する`item_readwrite`
-* **Box Edit単一ファイルコラボレーション**: ファイルに対する`item_readwrite`
+- **Google**: 親フォルダに対する`item_readwrite`
+- **Adobe**: `root_readwrite`
+- **Box Edit**: 親フォルダに対する`item_readwrite`
+- **Box Edit 単一ファイルコラボレーション**: ファイルに対する`item_readwrite`
 
 スコープの詳細については、[こちら][scopes]を参照してください。
 
@@ -320,30 +304,29 @@ contentOpenWith.removeListener(eventName, listener);
  * @return {void}
  */
 contentOpenWith.removeAllListeners();
-
 ```
 
 ### パラメータ
 
-| パラメータ         | 型      | 説明                                                                                                                  |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
-| `fileId`      | String | BoxファイルID。統合の実行対象となるファイルのIDです。                                                                                      |
-| `accessToken` | String | 使用するBox APIアクセストークン。このトークンには、上記のフォルダに対する読み取り/書き込みアクセス権限が必要です。このトークンのために渡される値は、エクスプローラの表示中は有効期限切れにならないことが前提となっています。  |
-| `options`     | Object | 省略可能なオプション。詳細は以下を参照してください。たとえば、`contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})`を使用すると、削除オプションが非表示になります。 |
+| パラメータ    | 型     | 説明                                                                                                                                                                                                                           |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fileId`      | String | Box ファイル ID。統合の実行対象となるファイルの ID です。                                                                                                                                                                      |
+| `accessToken` | String | 使用する Box API アクセストークン。このトークンには、上記のフォルダに対する読み取り/書き込みアクセス権限が必要です。このトークンのために渡される値は、エクスプローラの表示中は有効期限切れにならないことが前提となっています。 |
+| `options`     | Object | 省略可能なオプション。詳細は以下を参照してください。たとえば、`contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})`を使用すると、削除オプションが非表示になります。                                                     |
 
 ### オプション
 
 {/* i18n-enable localize-links */}
 
-| パラメータ                 | 型          | 説明                                                                                                                                                                                           |                                                |
-| --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| `dropdownAlignment`   | \`left     | right\`                                                                                                                                                                                      | \[開く] ボタンに対するドロップダウンの位置を決定します。デフォルトは`right`です。 |
-| `boxToolsName`        | `String`   | この文字列は、「このファイルをデスクトップで開くにはBox Toolsをインストールしてください」というメッセージ内のBox Toolsの名前に置き換わります。                                                                                                             |                                                |
-| `boxToolsInstallUrl`  | `String`   | このURLは、「このファイルをデスクトップで開くにはBox Toolsをインストールしてください」というメッセージ内でリンクされている、デフォルトのBoxインストール手順の代わりに使用されます。                                                                                            |                                                |
-| `onExecute`           | `Function` | 統合の呼び出しが試行されたときに実行されるコールバック。                                                                                                                                                                 |                                                |
-| `onError`             | `Function` | エラーが発生したときに実行されるコールバック。                                                                                                                                                                      |                                                |
-| `requestInterceptor`  | `Function` | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |                                                |
-| `responseInterceptor` | `Function` | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |                                                |
+| パラメータ            | 型         | 説明                                                                                                                                                                                                                                                                       |                                                                                   |
+| --------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `dropdownAlignment`   | \`left     | right\`                                                                                                                                                                                                                                                                    | \[開く] ボタンに対するドロップダウンの位置を決定します。デフォルトは`right`です。 |
+| `boxToolsName`        | `String`   | この文字列は、「このファイルをデスクトップで開くには Box Tools をインストールしてください」というメッセージ内の Box Tools の名前に置き換わります。                                                                                                                         |                                                                                   |
+| `boxToolsInstallUrl`  | `String`   | この URL は、「このファイルをデスクトップで開くには Box Tools をインストールしてください」というメッセージ内でリンクされている、デフォルトの Box インストール手順の代わりに使用されます。                                                                                  |                                                                                   |
+| `onExecute`           | `Function` | 統合の呼び出しが試行されたときに実行されるコールバック。                                                                                                                                                                                                                   |                                                                                   |
+| `onError`             | `Function` | エラーが発生したときに実行されるコールバック。                                                                                                                                                                                                                             |                                                                                   |
+| `requestInterceptor`  | `Function` | リクエストをインターセプトする関数。例については、[この CodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となる XHR ライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |                                                                                   |
+| `responseInterceptor` | `Function` | レスポンスをインターセプトする関数。例については、[この CodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となる XHR ライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |                                                                                   |
 
 {/* i18n-disable localize-links */}
 
@@ -355,17 +338,16 @@ contentOpenWith.removeAllListeners();
 
 ### イベント
 
-| イベント名     | イベントデータ | 説明                     |
-| --------- | ------- | ---------------------- |
-| `execute` | 統合ID    | 統合の呼び出しが実行されたときに発生します。 |
-| `error`   | エラー     | エラーが発生したときに発生します。      |
+| イベント名 | イベントデータ | 説明                                         |
+| ---------- | -------------- | -------------------------------------------- |
+| `execute`  | 統合 ID        | 統合の呼び出しが実行されたときに発生します。 |
+| `error`    | エラー         | エラーが発生したときに発生します。           |
 
 [scopes]: /ja/guides/api-calls/permissions-and-errors/scopes
 
 {/* i18n-enable localize-links */}
 
 [community]: https://support.box.com/hc/ja/articles/360043696994-Box-for-Google-Workspaceについて
-
 [tools]: https://support.box.com/hc/ja/categories/360003188014-Box-Tools
 
 {/* i18n-disable localize-links */}
@@ -378,4 +360,4 @@ contentOpenWith.removeAllListeners();
 
 {/* i18n-disable localize-links */}
 
-[service-account]: page!://platform/user-types/#service-account
+[service-account]: https://ja.developer.box.com/platform/user-types/#service-account

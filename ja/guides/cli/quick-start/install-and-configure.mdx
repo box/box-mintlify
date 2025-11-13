@@ -18,32 +18,34 @@ source_url: >-
 fullyTranslated: true
 ---
 
-import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
-import { Store } from '/snippets/store.jsx';
-import { ProgressBar } from '/snippets/progress-bar.jsx';
+import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from "/snippets/choose-choice-components.jsx";
+import { Store } from "/snippets/store.jsx";
+import { ProgressBar } from "/snippets/progress-bar.jsx";
 
-<ProgressBar pages={[
-                          "ja/guides/cli/quick-start/create-oauth-app",
-                          "ja/guides/cli/quick-start/install-and-configure",
-                          "ja/guides/cli/quick-start/build-commands-help",
-                          "ja/guides/cli/quick-start/options-and-bulk-commands",
-                          "ja/guides/cli/quick-start/powershell-script-templates",
-                          "ja/guides/cli/quick-start/next-steps"
-                        ]} />
+<ProgressBar
+  pages={[
+    "ja/guides/cli/quick-start/create-oauth-app",
+    "ja/guides/cli/quick-start/install-and-configure",
+    "ja/guides/cli/quick-start/build-commands-help",
+    "ja/guides/cli/quick-start/options-and-bulk-commands",
+    "ja/guides/cli/quick-start/powershell-script-templates",
+    "ja/guides/cli/quick-start/next-steps",
+  ]}
+/>
 
 <Choice option="cli.app_type" value="create_new,use_existing,clicked" color="none">
 
-Windows用およびmacOS用のインストーラが提供されていますが、その他の環境でCLIを構築する場合はRawソースコードを利用できます。
+Windows 用および macOS 用のインストーラが提供されていますが、その他の環境で CLI を構築する場合は Raw ソースコードを利用できます。
 
-## Windows用およびmacOS用インストーラ
+## Windows 用および macOS 用インストーラ
 
-お使いのマシンに最新のCLIをインストールするには、最新リリースに対応する最新の`.exe` (Windowsの場合) または`.pkg` (macOSの場合) をダウンロードします。
+お使いのマシンに最新の CLI をインストールするには、最新リリースに対応する最新の`.exe` (Windows の場合) または`.pkg` (macOS の場合) をダウンロードします。
 
-<Card href="https://github.com/box/boxcli/releases" title="最新のCLIインストーラをダウンロード"/>
+<Card href="https://github.com/box/boxcli/releases" title="最新のCLIインストーラをダウンロード" />
 
-## LinuxとNodeのインストール
+## Linux と Node のインストール
 
-さらに、CLIは、任意のプラットフォーム (Linuxなど) にNodeパッケージとしてインストールすることができます。このためには、[Node JS](https://nodejs.org/)をマシンにインストールしておく必要があります。
+さらに、CLI は、任意のプラットフォーム (Linux など) に Node パッケージとしてインストールすることができます。このためには、[Node JS](https://nodejs.org/)をマシンにインストールしておく必要があります。
 
 ```bash
 npm install --global @box/cli
@@ -52,13 +54,13 @@ npm install --global @box/cli
 
 ## ソースコード
 
-CLIのソースコードは、[GitHub][cli]で提供されています。
+CLI のソースコードは、[GitHub][cli]で提供されています。
 
 ## 構成コマンドの実行
 
-ここで、BoxアプリにログインしてCLIを構成する必要があります。
+ここで、Box アプリにログインして CLI を構成する必要があります。
 
-この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
+この手順では、前の手順の**クライアント ID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
 ## ログインする理由
 
@@ -66,7 +68,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <Store disabled inline id="cli_credentials.client_id">
 
-クライアントID
+クライアント ID
 
 </Store>
 
@@ -80,7 +82,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ターミナルまたはコマンドラインを開き、`box login -n example_name`コマンドを実行します。
 
-求められたら、ターミナルウィンドウにクライアントIDとクライアントシークレットをコピーします。
+求められたら、ターミナルウィンドウにクライアント ID とクライアントシークレットをコピーします。
 
 <Frame center>
 
@@ -88,7 +90,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 </Frame>
 
-ブラウザウィンドウに表示された \[**Boxへのアクセスを許可**] ボタンをクリックします。
+ブラウザウィンドウに表示された \[**Box へのアクセスを許可**] ボタンをクリックします。
 
 <Frame center>
 
@@ -106,7 +108,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ## 構成の確認
 
-うまく構成されているか確認するには、`box users:get me`コマンドを入力して、Box CLIで最初のBox APIコールを実行します。
+うまく構成されているか確認するには、`box users:get me`コマンドを入力して、Box CLI で最初の Box API コールを実行します。
 
 <Frame center>
 
@@ -139,13 +141,13 @@ Notification Email: []
 
 ## まとめ
 
-* CLIをインストールしました。
-* 前に作成したOAuth 2.0アプリケーションを使用するようCLIを構成しました。
-* **Box CLIの最初のBox APIコールを実行**し、アクセストークンに関連付けられたユーザーを確認しました。
+- CLI をインストールしました。
+- 前に作成した OAuth 2.0 アプリケーションを使用するよう CLI を構成しました。
+- **Box CLI の最初の Box API コールを実行**し、アクセストークンに関連付けられたユーザーを確認しました。
 
 <Next>
 
-CLIをインストールして構成しました
+CLI をインストールして構成しました
 
 </Next>
 
@@ -156,18 +158,14 @@ CLIをインストールして構成しました
 <Danger>
 **前の手順が完了していません**
 
-前の手順を完了し、使用する**Boxアプリ**をセットアップしてください。
+前の手順を完了し、使用する**Box アプリ**をセットアップしてください。
 
 </Danger>
 
 </Choice>
 
 [cli]: https://github.com/box/boxcli
-
 [auth]: /ja/guides/authentication/jwt/without-sdk
-
-[sa]: page!://platform/user-types/#service-account
-
+[sa]: https://ja.developer.box.com/platform/user-types/#service-account
 [at]: /ja/guides/authentication/tokens
-
 [dc]: https://app.box.com/developers/console

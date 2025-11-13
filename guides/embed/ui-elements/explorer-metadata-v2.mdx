@@ -70,7 +70,7 @@ contentExplorer.show(FOLDER_ID, ACCESS_TOKEN, {
   container: ".container",
   defaultView: "metadata",
   // metadataQuery must match the query files/folders by metadata API body request:
-  // <https://developer.box.com/reference/post-metadata-queries-execute-read/>
+  // </reference/post-metadata-queries-execute-read/>
   metadataQuery: {
     from: "METADATA_SCOPE.TEMPLATE_KEY", // For example from: "enterprise_123456789.templatename" where the number is the enterprise_123456789 is metadata template scope)
     ancestor_folder_id: "FOLDER_ID"
@@ -106,14 +106,14 @@ import { IntlProvider } from 'react-intl';
 import ContentExplorer from "box-ui-elements/es/elements/content-explorer"
 
 // Fill with custom values of your metadata template
-// You can use this endpoint to get all needed values: https://developer.box.com/reference/get-metadata-templates-id-id-schema/
+// You can use this endpoint to get all needed values: /reference/get-metadata-templates-id-id-schema/
 const metadataScopeAndKey = `${METADATA_TEMPLATE_SCOPE}.${METADATA_TEMPLATE_KEY}`;
 const metadataFieldNamePrefix = `metadata.${metadataScopeAndKey}`;
 const folderID = "FOLDER_ID"
 
 const metadataQuery = {
    // Check this endpoint for more details on query structure:
-   // https://developer.box.com/reference/post-metadata-queries-execute-read/
+   // /reference/post-metadata-queries-execute-read/
    from: metadataScopeAndKey,
    ancestor_folder_id: folderID,
    fields: [

@@ -20,17 +20,18 @@ type: guide
 total_steps: 6
 sibling_id: box-ai/ai-tutorials
 parent_id: box-ai/ai-tutorials
-next_page_id: ''
+next_page_id: ""
 previous_page_id: box-ai/ai-tutorials/extract-metadata
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/extract-metadata-structured.md
 fullyTranslated: true
 ---
-Box AI APIを使用すると、指定したファイルからメタデータを抽出し、結果をキー/値ペアの形式で取得することができます。入力には、`fields`パラメータを使用して構造を作成するか、すでに定義済みのメタデータテンプレートを使用できます。テンプレートの作成の詳細については、[メタデータテンプレートのカスタマイズ][templates-console]を参照するか、[メタデータテンプレートAPI][templates-api]を使用してください。
+
+Box AI API を使用すると、指定したファイルからメタデータを抽出し、結果をキー/値ペアの形式で取得することができます。入力には、`fields`パラメータを使用して構造を作成するか、すでに定義済みのメタデータテンプレートを使用できます。テンプレートの作成の詳細については、[メタデータテンプレートのカスタマイズ][templates-console]を参照するか、[メタデータテンプレート API][templates-api]を使用してください。
 
 ## 開始する前に
 
-Platformアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。
+Platform アプリを作成して認証するには、[Box AI の使い方][prereq]に記載されている手順に従っていることを確認してください。
 
 ## リクエストの送信
 
@@ -88,42 +89,42 @@ curl -i -L 'https://api.box.com/2.0/ai/extract_structured' \
 await client.ai.createAiExtractStructured({
   fields: [
     {
-      key: 'firstName',
-      displayName: 'First name',
-      description: 'Person first name',
-      prompt: 'What is the your first name?',
-      type: 'string',
+      key: "firstName",
+      displayName: "First name",
+      description: "Person first name",
+      prompt: "What is the your first name?",
+      type: "string",
     } satisfies AiExtractStructuredFieldsField,
     {
-      key: 'lastName',
-      displayName: 'Last name',
-      description: 'Person last name',
-      prompt: 'What is the your last name?',
-      type: 'string',
+      key: "lastName",
+      displayName: "Last name",
+      description: "Person last name",
+      prompt: "What is the your last name?",
+      type: "string",
     } satisfies AiExtractStructuredFieldsField,
     {
-      key: 'dateOfBirth',
-      displayName: 'Birth date',
-      description: 'Person date of birth',
-      prompt: 'What is the date of your birth?',
-      type: 'date',
+      key: "dateOfBirth",
+      displayName: "Birth date",
+      description: "Person date of birth",
+      prompt: "What is the date of your birth?",
+      type: "date",
     } satisfies AiExtractStructuredFieldsField,
     {
-      key: 'age',
-      displayName: 'Age',
-      description: 'Person age',
-      prompt: 'How old are you?',
-      type: 'float',
+      key: "age",
+      displayName: "Age",
+      description: "Person age",
+      prompt: "How old are you?",
+      type: "float",
     } satisfies AiExtractStructuredFieldsField,
     {
-      key: 'hobby',
-      displayName: 'Hobby',
-      description: 'Person hobby',
-      prompt: 'What is your hobby?',
-      type: 'multiSelect',
+      key: "hobby",
+      displayName: "Hobby",
+      description: "Person hobby",
+      prompt: "What is your hobby?",
+      type: "multiSelect",
       options: [
-        { key: 'guitar' } satisfies AiExtractStructuredFieldsOptionsField,
-        { key: 'books' } satisfies AiExtractStructuredFieldsOptionsField,
+        { key: "guitar" } satisfies AiExtractStructuredFieldsOptionsField,
+        { key: "books" } satisfies AiExtractStructuredFieldsOptionsField,
       ],
     } satisfies AiExtractStructuredFieldsField,
   ],
@@ -210,43 +211,41 @@ JsonObject sourceJson = result.getSourceJson();
 
 <Note>
 
-`items`配列に含めることができる要素は1つだけです。
+`items`配列に含めることができる要素は 1 つだけです。
 
 </Note>
 
-| パラメータ                                | 説明                                                                                                                                                                                                                                                                                                                                                                                        | 例                                                        |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| **`metadata_template`**              | 抽出するフィールドを含むメタデータテンプレート。リクエストを機能させるには、`metadata_template`または`fields`を指定する必要がありますが、両方を指定することはできません。                                                                                                                                                                                                                                                                                        |                                                          |
-| **`metadata_template.type`**         | メタデータテンプレートのタイプ。                                                                                                                                                                                                                                                                                                                                                                          | `metadata_template`                                      |
-| **`metadata_template.scope`**        | メタデータテンプレートのスコープ。`global`または`enterprise`のいずれかになります。globalテンプレートは、任意のBox Enterpriseで利用できますが、`enterprise`テンプレートは特定のEnterpriseに関連付けられます。                                                                                                                                                                                                                                                     | `metadata_template`                                      |
-| **`metadata_template.template_key`** | メタデータテンプレートの名前。                                                                                                                                                                                                                                                                                                                                                                           | `invoice`                                                |
-| **`items.id`**                       | ドキュメントのBoxファイルID。IDは、拡張子が付いている実際のファイルを参照する必要があります。                                                                                                                                                                                                                                                                                                                                        | `1233039227512`                                          |
-| **`items.type`**                     | 指定した入力データのタイプ。                                                                                                                                                                                                                                                                                                                                                                            | `file`                                                   |
-| `items.content`                      | 項目のコンテンツ (多くの場合はテキストレプリゼンテーション)。                                                                                                                                                                                                                                                                                                                                                          | `This article is about Box AI`.                          |
-| `fields.type`                        | フィールドのタイプ。これには、`string`、`float`、`date`、`enum`、`multiSelect`が含まれますが、これらに限定されるものではありません。                                                                                                                                                                                                                                                                                                    | `string`                                                 |
-| `fields.description`                 | フィールドの説明。                                                                                                                                                                                                                                                                                                                                                                                 | `The person's name.`                                     |
-| `fields.displayName`                 | フィールドの表示名。                                                                                                                                                                                                                                                                                                                                                                                | `Name`                                                   |
-| `fields.key`                         | フィールドの一意の識別子。                                                                                                                                                                                                                                                                                                                                                                             | `name`                                                   |
-| `fields.options`                     | このフィールドのオプションのリスト。ほとんどの場合、`enum`および`multiSelect`フィールドタイプと組み合わせて使用します。                                                                                                                                                                                                                                                                                                                     | `[{"key":"First Name"},{"key":"Last Name"}]`             |
-| `fields.options.key`                 | フィールドの一意の識別子。                                                                                                                                                                                                                                                                                                                                                                             | `First Name`                                             |
-| `fields.prompt`                      | キー (識別子) に関する追加のコンテキスト。キーの確認方法や形式を含めることができます。                                                                                                                                                                                                                                                                                                                                             | `Name is the first and last name from the email address` |
-| `ai_agent`                           | デフォルトのエージェント構成を上書きするために使用されるAIエージェント。このパラメータを使用すると、たとえば、[`model`][model-param]パラメータを使用してデフォルトのLLMをカスタムのLLMに置き換えたり、よりカスタマイズされたユーザーエクスペリエンスを実現できるようにベースとなる[`prompt`][prompt-param]を微調整したり、`temperature`などのLLMパラメータを変更して結果の創造性を調整したりすることができます。`ai_agent`パラメータを使用する前に、[`GET 2.0/ai_agent_default`][agent]リクエストを使用してデフォルト構成を取得できます。具体的なユースケースについては、[AIモデルの上書きに関するチュートリアル][overrides]を参照してください。 |                                                          |
+| パラメータ                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 例                                                       |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **`metadata_template`**              | 抽出するフィールドを含むメタデータテンプレート。リクエストを機能させるには、`metadata_template`または`fields`を指定する必要がありますが、両方を指定することはできません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                          |
+| **`metadata_template.type`**         | メタデータテンプレートのタイプ。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `metadata_template`                                      |
+| **`metadata_template.scope`**        | メタデータテンプレートのスコープ。`global`または`enterprise`のいずれかになります。global テンプレートは、任意の Box Enterprise で利用できますが、`enterprise`テンプレートは特定の Enterprise に関連付けられます。                                                                                                                                                                                                                                                                                                                                                                                                                                         | `metadata_template`                                      |
+| **`metadata_template.template_key`** | メタデータテンプレートの名前。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `invoice`                                                |
+| **`items.id`**                       | ドキュメントの Box ファイル ID。ID は、拡張子が付いている実際のファイルを参照する必要があります。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `1233039227512`                                          |
+| **`items.type`**                     | 指定した入力データのタイプ。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `file`                                                   |
+| `items.content`                      | 項目のコンテンツ (多くの場合はテキストレプリゼンテーション)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `This article is about Box AI`.                          |
+| `fields.type`                        | フィールドのタイプ。これには、`string`、`float`、`date`、`enum`、`multiSelect`が含まれますが、これらに限定されるものではありません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `string`                                                 |
+| `fields.description`                 | フィールドの説明。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `The person's name.`                                     |
+| `fields.displayName`                 | フィールドの表示名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `Name`                                                   |
+| `fields.key`                         | フィールドの一意の識別子。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | `name`                                                   |
+| `fields.options`                     | このフィールドのオプションのリスト。ほとんどの場合、`enum`および`multiSelect`フィールドタイプと組み合わせて使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `[{"key":"First Name"},{"key":"Last Name"}]`             |
+| `fields.options.key`                 | フィールドの一意の識別子。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | `First Name`                                             |
+| `fields.prompt`                      | キー (識別子) に関する追加のコンテキスト。キーの確認方法や形式を含めることができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `Name is the first and last name from the email address` |
+| `ai_agent`                           | デフォルトのエージェント構成を上書きするために使用される AI エージェント。このパラメータを使用すると、たとえば、[`model`][model-param]パラメータを使用してデフォルトの LLM をカスタムの LLM に置き換えたり、よりカスタマイズされたユーザーエクスペリエンスを実現できるようにベースとなる[`prompt`][prompt-param]を微調整したり、`temperature`などの LLM パラメータを変更して結果の創造性を調整したりすることができます。`ai_agent`パラメータを使用する前に、[`GET 2.0/ai_agent_default`][agent]リクエストを使用してデフォルト構成を取得できます。具体的なユースケースについては、[AI モデルの上書きに関するチュートリアル][overrides]を参照してください。 |                                                          |
 
 ## ユースケース
 
 この例では、サンプル請求書から構造化された形でメタデータを抽出する方法を示します。ベンダー名、請求書番号などの詳細情報を抽出する必要があるとします。
 
-<Frame>
-![サンプル請求書](../images/sample-invoice.png)
-</Frame>
+<Frame>![サンプル請求書](../images/sample-invoice.png)</Frame>
 
 ### リクエストの作成
 
-Box AIから応答を取得するには、以下のパラメータを使用して、`POST /2.0/ai/extract_structured`エンドポイントを呼び出します。
+Box AI から応答を取得するには、以下のパラメータを使用して、`POST /2.0/ai/extract_structured`エンドポイントを呼び出します。
 
-* `items.type`および`items.id`: データの抽出元となるファイルを指定します。
-* `fields`: 指定したファイルから抽出するデータを指定します。
-* `metadata_template`: 既存のメタデータテンプレートを指定します。
+- `items.type`および`items.id`: データの抽出元となるファイルを指定します。
+- `fields`: 指定したファイルから抽出するデータを指定します。
+- `metadata_template`: 既存のメタデータテンプレートを指定します。
 
 <Note>
 
@@ -361,7 +360,7 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 ```bash
 {
   "ai_agent": {
-    "type": "ai_agent_id", 
+    "type": "ai_agent_id",
     "id": "enhanced_extract_agent"
   }
 }
@@ -370,10 +369,10 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 抽出エージェント (強化) を使用してデータを抽出するには、以下のいずれかが必要です。
 
-* [インラインでのフィールド定義][inline-field] (フィールドが頻繁に変わる場合に最適)
-* [メタデータテンプレート][metadata-template] (フィールドが一定である場合に最適)
+- [インラインでのフィールド定義][inline-field] (フィールドが頻繁に変わる場合に最適)
+- [メタデータテンプレート][metadata-template] (フィールドが一定である場合に最適)
 
-Box Python SDKを使用したサンプルのコードスニペットを確認してください。
+Box Python SDK を使用したサンプルのコードスニペットを確認してください。
 
 ```Python
 from box_sdk_gen import (
@@ -410,7 +409,7 @@ box_ai_response = client.ai.create_ai_extract_structured(
             type=AiItemBaseTypeField.FILE
         )
     ],
-    # Reference the Box Metadata template 
+    # Reference the Box Metadata template
     metadata_template=CreateAiExtractStructuredMetadataTemplate(
         template_key="InvoicePO",
         scope="enterprise"
@@ -423,23 +422,13 @@ print(f"box_ai_response: {box_ai_response.answer}")
 ```
 
 [prereq]: /ja/guides/box-ai/ai-tutorials/prerequisites
-
 [agent]: /ja/reference/get_ai_agent_default
-
 [model-param]: /reference/resources/ai_agent_text_gen#param_basic_gen_model
-
 [prompt-param]: /reference/resources/ai_agent_text_gen#param_basic_gen_prompt_template
-
 [templates-console]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
-
 [templates-api]: /ja/guides/metadata/templates/create
-
 [overrides]: /ja/guides/box-ai/ai-agents/ai-agent-overrides
-
-[changelog]: page!://changelog
-
+[changelog]: https://ja.developer.box.com/changelog
 [blog]: https://medium.com/box-developer-blog
-
 [inline-field]: #use-fields-parameter
-
 [metadata-template]: #use-metadata-template

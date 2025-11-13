@@ -19,13 +19,14 @@ type: guide
 total_steps: 5
 sibling_id: authentication
 parent_id: authentication
-next_page_id: ''
+next_page_id: ""
 previous_page_id: authentication/app-token/endpoints
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/index.md
 fullyTranslated: true
 ---
-アプリトークンを使用するサーバー側認証は、Box APIに対する代替の認証方法で、アプリケーションの[サービスアカウント][sa]に制限されている、有効期間の長い固定のアクセストークンを使用します。アプリトークン認証は、[Box View][box-view]を利用するアプリケーションによる使用を目的としています。
+
+アプリトークンを使用するサーバー側認証は、Box API に対する代替の認証方法で、アプリケーションの[サービスアカウント][sa]に制限されている、有効期間の長い固定のアクセストークンを使用します。アプリトークン認証は、[Box View][box-view]を利用するアプリケーションによる使用を目的としています。
 
 ## アプリトークンの制限
 
@@ -35,12 +36,11 @@ fullyTranslated: true
 
 アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* [Box View][box-view]を介してBoxのプレビューサービスを利用する
-* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
-* 独自のIDシステムを使用する
-* ユーザーにBoxを使用していることを認識させたくない
-* ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
+- [Box View][box-view]を介して Box のプレビューサービスを利用する
+- ユーザーモデルがない環境、または Box アカウントを持たないユーザーがいる環境で使用する
+- 独自の ID システムを使用する
+- ユーザーに Box を使用していることを認識させたくない
+- ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
 
-[sa]: page!://platform/user-types/#service-account
-
+[sa]: https://ja.developer.box.com/platform/user-types/#service-account
 [box-view]: /ja/guides/embed/box-view

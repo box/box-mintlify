@@ -25,7 +25,8 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/4-create.md
 fullyTranslated: true
 ---
-メタデータテンプレートを作成するには、`scope`、`displayName`、および必要に応じて一連の`fields`を[`POST /metadata_templates/schema`][e_create_template] APIに渡します。
+
+メタデータテンプレートを作成するには、`scope`、`displayName`、および必要に応じて一連の`fields`を[`POST /metadata_templates/schema`][e_create_template] API に渡します。
 
 <CodeGroup>
 ```sh cURL
@@ -78,51 +79,51 @@ curl -i -X POST "https://api.box.com/2.0/metadata_templates/schema" \
 
 ```typescript Node/TypeScript v10
 await client.metadataTemplates.createMetadataTemplate({
-  scope: 'enterprise',
+  scope: "enterprise",
   displayName: templateKey,
   templateKey: templateKey,
   fields: [
     {
-      type: 'string' as CreateMetadataTemplateRequestBodyFieldsTypeField,
-      key: 'testName',
-      displayName: 'testName',
+      type: "string" as CreateMetadataTemplateRequestBodyFieldsTypeField,
+      key: "testName",
+      displayName: "testName",
     } satisfies CreateMetadataTemplateRequestBodyFieldsField,
     {
-      type: 'float' as CreateMetadataTemplateRequestBodyFieldsTypeField,
-      key: 'age',
-      displayName: 'age',
+      type: "float" as CreateMetadataTemplateRequestBodyFieldsTypeField,
+      key: "age",
+      displayName: "age",
     } satisfies CreateMetadataTemplateRequestBodyFieldsField,
     {
-      type: 'date' as CreateMetadataTemplateRequestBodyFieldsTypeField,
-      key: 'birthDate',
-      displayName: 'birthDate',
+      type: "date" as CreateMetadataTemplateRequestBodyFieldsTypeField,
+      key: "birthDate",
+      displayName: "birthDate",
     } satisfies CreateMetadataTemplateRequestBodyFieldsField,
     {
-      type: 'enum' as CreateMetadataTemplateRequestBodyFieldsTypeField,
-      key: 'countryCode',
-      displayName: 'countryCode',
+      type: "enum" as CreateMetadataTemplateRequestBodyFieldsTypeField,
+      key: "countryCode",
+      displayName: "countryCode",
       options: [
         {
-          key: 'US',
+          key: "US",
         } satisfies CreateMetadataTemplateRequestBodyFieldsOptionsField,
         {
-          key: 'CA',
+          key: "CA",
         } satisfies CreateMetadataTemplateRequestBodyFieldsOptionsField,
       ],
     } satisfies CreateMetadataTemplateRequestBodyFieldsField,
     {
-      type: 'multiSelect' as CreateMetadataTemplateRequestBodyFieldsTypeField,
-      key: 'sports',
-      displayName: 'sports',
+      type: "multiSelect" as CreateMetadataTemplateRequestBodyFieldsTypeField,
+      key: "sports",
+      displayName: "sports",
       options: [
         {
-          key: 'basketball',
+          key: "basketball",
         } satisfies CreateMetadataTemplateRequestBodyFieldsOptionsField,
         {
-          key: 'football',
+          key: "football",
         } satisfies CreateMetadataTemplateRequestBodyFieldsOptionsField,
         {
-          key: 'tennis',
+          key: "tennis",
         } satisfies CreateMetadataTemplateRequestBodyFieldsOptionsField,
       ],
     } satisfies CreateMetadataTemplateRequestBodyFieldsField,
@@ -248,38 +249,35 @@ BoxMetadataTemplate template = await client.MetadataManager.CreateMetadataTempla
 
 ```js Node v4
 // Create a new template, but hide it for now until it's ready for use
-client.metadata.createTemplate(
-  'Vendor Contract',
-  [
-   {
-    type: 'date',
-    key: 'signed',
-    displayName: 'Date Signed'
-   },
-   {
-    type: 'string',
-    key: 'vendor',
-    displayName: 'Vendor'
-   },
-   {
-    type: 'enum',
-    key: 'fy',
-    displayName: 'Fiscal Year',
-    options: [
-     {key: 'FY17'},
-     {key: 'FY18'},
-     {key: 'FY19'}
-    ]
-   }
-  ],
-  {
-   hidden: true,
-   templateKey: 'vcontract',
-   copyInstanceOnItemCopy: false
-  }
- )
- .then(template => {
-  /* template -> {
+client.metadata
+  .createTemplate(
+    "Vendor Contract",
+    [
+      {
+        type: "date",
+        key: "signed",
+        displayName: "Date Signed",
+      },
+      {
+        type: "string",
+        key: "vendor",
+        displayName: "Vendor",
+      },
+      {
+        type: "enum",
+        key: "fy",
+        displayName: "Fiscal Year",
+        options: [{ key: "FY17" }, { key: "FY18" }, { key: "FY19" }],
+      },
+    ],
+    {
+      hidden: true,
+      templateKey: "vcontract",
+      copyInstanceOnItemCopy: false,
+    }
+  )
+  .then((template) => {
+    /* template -> {
    id: '17f2d715-6acb-45f2-b96a-28b15efc9faa',
    templateKey: 'vcontract',
    scope: 'enterprise_12345',
@@ -304,8 +302,9 @@ client.metadata.createTemplate(
      { key: 'FY19' } ],
     hidden: false } ] }
   */
- });
+  });
 ```
+
 </CodeGroup>
 
 <Note>
@@ -317,7 +316,7 @@ client.metadata.createTemplate(
 <Warning>
 **管理者権限が必須**
 
-メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートを作成、編集する**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
+メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートを作成、編集する**権限が付与されている共同管理者だけがウェブアプリまたは API を使用してテンプレートを管理できます。
 
 </Warning>
 
@@ -339,10 +338,9 @@ client.metadata.createTemplate(
     }
   ]
 }
-
 ```
 
-`enum`および`multiSelect`フィールドタイプは、ユーザーが項目のリストからそれぞれ1つまたは複数のオプションを選択できるドロップダウンリストを表します。
+`enum`および`multiSelect`フィールドタイプは、ユーザーが項目のリストからそれぞれ 1 つまたは複数のオプションを選択できるドロップダウンリストを表します。
 
 ```json
 {
@@ -353,18 +351,13 @@ client.metadata.createTemplate(
       "type": "enum",
       "key": "industry",
       "displayName": "Industry",
-      "options": [
-        {"key": "Technology"},
-        {"key": "Healthcare"},
-        {"key": "Legal"}
-      ]
+      "options": [{ "key": "Technology" }, { "key": "Healthcare" }, { "key": "Legal" }]
     }
   ]
 }
-
 ```
 
-<Card href="/guides/metadata/fields" title="メタデータテンプレートフィールドの詳細を確認する"/>
+<Card href="/guides/metadata/fields" title="メタデータテンプレートフィールドの詳細を確認する" />
 
 ## テンプレートキー
 
@@ -372,8 +365,7 @@ client.metadata.createTemplate(
 
 たとえば、`Test Name (with-special_) Characters`という名前のメタデータテンプレートの`templateKey`は`testNameWithspecialCharacters`になります。
 
-その後、このテンプレートキーは、テンプレートの情報を取得したり、項目にテンプレートを割り当てたりするためのAPIリクエストを実行するときに使用されます。
+その後、このテンプレートキーは、テンプレートの情報を取得したり、項目にテンプレートを割り当てたりするための API リクエストを実行するときに使用されます。
 
-[user-types]: page!://platform/user-types
-
+[user-types]: https://ja.developer.box.com/platform/user-types
 [e_create_template]: /ja/reference/post_metadata_templates_schema
