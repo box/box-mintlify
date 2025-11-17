@@ -36,9 +36,13 @@ a code {
   text-decoration-thickness: 1px;
 }
 
-/* #sidebar {
-  z-index: 0 !important;
-} */
+#sidebar {
+  z-index: 1;
+}
+
+#sidebar-content {
+  z-index: 0;
+}
 
 #truste-consent-track {
   z-index: 9999999 !important;
