@@ -255,20 +255,20 @@ client.ai.getAiAgentDefaultConfig({
      "type": "ai_agent_extract",
      "basic_text": {
           "model": "google__gemini_1_5_flash_001",
-          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"displayName\": \"key display name\", \"type\": \"string\", \"description\": \"key description\"}]}. Leverage key description and key display name to identify where the key and value pairs are in the document. In certain cases, key description can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is````document````",
-"prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is````{content}````",
-     "num_tokens_for_completion": 4096,
-     "llm_endpoint_params": {
-          "temperature": 0,
-          "top_p": 1,
-          "top_k": null,
-          "type": "google_params"
-     }
-},
-"long_text": {
-     "model": "google__gemini_1_5_flash_001",
-     "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"displayName\": \"key display name\", \"type\": \"string\", \"description\": \"key description\"}]}. Leverage key description and key display name to identify where the key and value pairs are in the document. In certain cases, key description can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is````document````",
-"prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is````{content}````",
+          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"displayName\": \"key display name\", \"type\": \"string\", \"description\": \"key description\"}]}. Leverage key description and key display name to identify where the key and value pairs are in the document. In certain cases, key description can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is ````document````",
+          "prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is ````{content}````",
+          "num_tokens_for_completion": 4096,
+          "llm_endpoint_params": {
+               "temperature": 0,
+               "top_p": 1,
+               "top_k": null,
+               "type": "google_params"
+          }
+     },
+     "long_text": {
+          "model": "google__gemini_1_5_flash_001",
+          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"displayName\": \"key display name\", \"type\": \"string\", \"description\": \"key description\"}]}. Leverage key description and key display name to identify where the key and value pairs are in the document. In certain cases, key description can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is ````document````",
+          "prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is ````{content}````",
           "num_tokens_for_completion": 4096,
           "llm_endpoint_params": {
                "temperature": 0,
@@ -285,7 +285,6 @@ client.ai.getAiAgentDefaultConfig({
           }
      }
 }
-
 `````
 
 </Tab>
@@ -299,20 +298,20 @@ client.ai.getAiAgentDefaultConfig({
      "type": "ai_agent_extract_structured",
      "basic_text": {
           "model": "google__gemini_1_5_flash_001",
-          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"prompt\": \"prompt to extract the value\", \"type\": \"date\"}]}. Leverage prompt for each key to identify where the key and value pairs are in the document. In certain cases, prompt can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is````document````",
-"prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is````{content}````",
-     "num_tokens_for_completion": 4096,
-     "llm_endpoint_params": {
-          "temperature": 0,
-          "top_p": 1,
-          "top_k": null,
-          "type": "google_params"
-     }
-  },
-"long_text": {
-     "model": "google__gemini_1_5_flash_001",
-     "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"prompt\": \"prompt to extract the value\", \"type\": \"date\"}]}. Leverage prompt for each key to identify where the key and value pairs are in the document. In certain cases, prompt can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is````document````",
-"prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is````{content}````",
+          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"prompt\": \"prompt to extract the value\", \"type\": \"date\"}]}. Leverage prompt for each key to identify where the key and value pairs are in the document. In certain cases, prompt can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is ````document````",
+          "prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is ````{content}````",
+          "num_tokens_for_completion": 4096,
+          "llm_endpoint_params": {
+               "temperature": 0,
+               "top_p": 1,
+               "top_k": null,
+               "type": "google_params"
+          }
+       },
+     "long_text": {
+          "model": "google__gemini_1_5_flash_001",
+          "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"prompt\": \"prompt to extract the value\", \"type\": \"date\"}]}. Leverage prompt for each key to identify where the key and value pairs are in the document. In certain cases, prompt can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is ````document````",
+          "prompt_template": "If you need to know today's date to respond, it is {current_date}. Schema is ``{user_question}`` \n document is ````{content}````",
           "num_tokens_for_completion": 4096,
           "llm_endpoint_params": {
                "temperature": 0,
@@ -329,7 +328,6 @@ client.ai.getAiAgentDefaultConfig({
           }
      }
 }
-
 `````
 
 </Tab>

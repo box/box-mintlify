@@ -7,6 +7,15 @@
     "light": "#f6fafd",
     "dark": "#002947"
   },
+  "api": {
+    "examples": {
+      "languages": [
+        "curl",
+        "python",
+        "javascript"
+      ]
+    }
+  },
   "fonts": {
     "family": "Inter"
   },
@@ -5293,7 +5302,7 @@
         },
         {
           "anchor": "Blog",
-          "href": "https://blog.box.com",
+          "href": "https://blog.box.com/category/developer",
           "icon": "newspaper"
         }
       ]
