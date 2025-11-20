@@ -2252,7 +2252,7 @@
       "get": {
         "operationId": "get_archives_v2025.0",
         "summary": "アーカイブのリストを取得",
-        "description": "企業用のアーカイブを取得します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](g://archives)を参照してください。",
+        "description": "企業用のアーカイブを取得します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2350,7 +2350,7 @@
       "post": {
         "operationId": "post_archives_v2025.0",
         "summary": "アーカイブを作成",
-        "description": "アーカイブを作成します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](g://archives)を参照してください。",
+        "description": "アーカイブを作成します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2468,7 +2468,7 @@
       "delete": {
         "operationId": "delete_archives_id_v2025.0",
         "summary": "アーカイブを削除",
-        "description": "アーカイブを完全に削除します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](g://archives)を参照してください。",
+        "description": "アーカイブを完全に削除します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2557,7 +2557,7 @@
       "put": {
         "operationId": "put_archives_id_v2025.0",
         "summary": "アーカイブを更新",
-        "description": "アーカイブを更新します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](g://archives)を参照してください。",
+        "description": "アーカイブを更新します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "name": "archive_id",
