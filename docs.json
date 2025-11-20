@@ -12,7 +12,9 @@
       "languages": [
         "curl",
         "python",
-        "javascript"
+        "javascript",
+        "swift",
+        "powershell"
       ]
     }
   },
@@ -981,7 +983,8 @@
           },
           {
             "tab": "API Reference",
-            "groups": [
+            "pages": [
+              "reference/index",
               {
                 "group": "AI",
                 "pages": [
@@ -3622,7 +3625,8 @@
           },
           {
             "tab": "APIリファレンス",
-            "groups": [
+            "pages": [
+              "ja/reference/index",
               {
                 "group": "AI",
                 "pages": [
