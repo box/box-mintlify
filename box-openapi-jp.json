@@ -1099,7 +1099,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "クライアントが自動的にリダイレクトとしてHTTP `3xx`レスポンスに従うように**リダイレクトに従う**設定を有効にしている場合は、リクエストされたファイルを返します。有効にしていない場合は、代わりに`302`が返されます。詳細については、[ファイルのダウンロードに関するガイド](g://downloads/file#download-url)を参照してください。",
+                        "description": "クライアントが自動的にリダイレクトとしてHTTP `3xx`レスポンスに従うように**リダイレクトに従う**設定を有効にしている場合は、リクエストされたファイルを返します。有効にしていない場合は、代わりに`302`が返されます。詳細については、[ファイルのダウンロードに関するガイド](/ja/guides/downloads/file#download-url)を参照してください。",
                         "content": {
                             "application/octet-stream": {
                                 "schema": {
@@ -4900,7 +4900,7 @@
             "get": {
                 "operationId": "get_folders_id",
                 "summary": "フォルダ情報を取得",
-                "description": "フォルダ内の最初の100エントリを含むフォルダの詳細を取得します。\n\nクエリで`sort`、`direction`、`offset`、および`limit`パラメータを渡すと、返される[フォルダ項目](r://folder--full#param-item-collection)のリストを管理できます。\n\nフォルダ内の項目をさらに取得するには、[フォルダ内の項目を取得](e://get-folders-id-items)エンドポイントを使用します。",
+                "description": "フォルダ内の最初の100エントリを含むフォルダの詳細を取得します。\n\nクエリで`sort`、`direction`、`offset`、および`limit`パラメータを渡すと、返される[フォルダ項目](/ja/reference/folder--full#param-item-collection)のリストを管理できます。\n\nフォルダ内の項目をさらに取得するには、[フォルダ内の項目を取得](e://get-folders-id-items)エンドポイントを使用します。",
                 "parameters": [
                     {
                         "name": "folder_id",
@@ -10587,7 +10587,7 @@
                     {
                         "name": "include_recent_shared_links",
                         "in": "query",
-                        "description": "ユーザーが最近共有リンクを介してアクセスした項目を検索結果に含めるかどうかを定義します。\n\nこのパラメータがtrueに設定されている場合は、[共有リンクを含む検索結果](r://search_results_with_shared_links)のリストを返すよう、このAPIのレスポンス形式が変更されます。",
+                        "description": "ユーザーが最近共有リンクを介してアクセスした項目を検索結果に含めるかどうかを定義します。\n\nこのパラメータがtrueに設定されている場合は、[共有リンクを含む検索結果](/ja/reference/search_results_with_shared_links)のリストを返すよう、このAPIのレスポンス形式が変更されます。",
                         "required": false,
                         "schema": {
                             "type": "boolean",
@@ -24709,7 +24709,7 @@
             "post": {
                 "operationId": "post_ai_extract_structured",
                 "summary": "メタデータを抽出 (構造化)",
-                "description": "サポートされている大規模言語モデル (LLM) にAIリクエストを送信し、抽出されたメタデータを一連のキー/値ペアとして返します。\n\n抽出の構造を定義するには、メタデータテンプレートまたはフィールドのリストを指定します。テンプレート作成の詳細については、[メタデータテンプレートのカスタマイズ](https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates)を参照するか、[メタデータテンプレートAPI](g://metadata/templates/create)を使用してください。 \n\nこのエンドポイントは、[抽出エージェント (強化)](g://box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) もサポートしています。\n\nサポートされているファイル形式と言語については、[ファイルからメタデータを抽出する (構造化)](g://box-ai/ai-tutorials/extract-metadata-structured) APIガイドを参照してください。",
+                "description": "サポートされている大規模言語モデル (LLM) にAIリクエストを送信し、抽出されたメタデータを一連のキー/値ペアとして返します。\n\n抽出の構造を定義するには、メタデータテンプレートまたはフィールドのリストを指定します。テンプレート作成の詳細については、[メタデータテンプレートのカスタマイズ](https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates)を参照するか、[メタデータテンプレートAPI](/ja/guides/metadata/templates/create)を使用してください。 \n\nこのエンドポイントは、[抽出エージェント (強化)](/ja/guides/box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) もサポートしています。\n\nサポートされているファイル形式と言語については、[ファイルからメタデータを抽出する (構造化)](/ja/guides/box-ai/ai-tutorials/extract-metadata-structured) APIガイドを参照してください。",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -25310,7 +25310,7 @@
                 "type": "object",
                 "properties": {
                     "model": {
-                        "description": "基本テキストに対するAIエージェントで使用されるモデル。特定のモデル値については、[利用可能なモデルのリスト](g://box-ai/supported-models)を参照してください。",
+                        "description": "基本テキストに対するAIエージェントで使用されるモデル。特定のモデル値については、[利用可能なモデルのリスト](/ja/guides/box-ai/supported-models)を参照してください。",
                         "type": "string",
                         "example": "azure__openai__gpt_4o_mini"
                     },
@@ -25548,7 +25548,7 @@
                         "nullable": false
                     },
                     "id": {
-                        "description": "エージェントのID。これは、カスタムエージェントの場合は数値ID (例: `14031`)、組み込みのエージェントの場合は一意の識別子 (例: [抽出エージェント (強化)](g://box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) の場合は`enhanced_extract_agent`) になります。",
+                        "description": "エージェントのID。これは、カスタムエージェントの場合は数値ID (例: `14031`)、組み込みのエージェントの場合は一意の識別子 (例: [抽出エージェント (強化)](/ja/guides/box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) の場合は`enhanced_extract_agent`) になります。",
                         "type": "string",
                         "example": "14031",
                         "nullable": false
@@ -25566,7 +25566,7 @@
                 "type": "object",
                 "properties": {
                     "model": {
-                        "description": "スプレッドシートに対するAIエージェントで使用されるモデル。特定のモデル値については、[利用可能なモデルのリスト](g://box-ai/supported-models)を参照してください。",
+                        "description": "スプレッドシートに対するAIエージェントで使用されるモデル。特定のモデル値については、[利用可能なモデルのリスト](/ja/guides/box-ai/supported-models)を参照してください。",
                         "type": "string",
                         "example": "azure__openai__gpt_4o_mini"
                     },
@@ -25901,7 +25901,7 @@
                                 "$ref": "#/components/schemas/AiExtractStructuredAgent"
                             },
                             {
-                                "description": "抽出 (構造化) に使用されるAIエージェント。指定しなかった場合、デフォルトではエージェント (標準) になります。抽出エージェント (強化) を使用する場合の詳細については、[抽出エージェント (強化)](g://box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) を参照してください。"
+                                "description": "抽出 (構造化) に使用されるAIエージェント。指定しなかった場合、デフォルトではエージェント (標準) になります。抽出エージェント (強化) を使用する場合の詳細については、[抽出エージェント (強化)](/ja/guides/box-ai/ai-tutorials/extract-metadata-structured/#enhanced-extract-agent) を参照してください。"
                             }
                         ]
                     }
@@ -36186,7 +36186,7 @@
                                 "nullable": true
                             },
                             "signers": {
-                                "description": "署名リクエストの署名者の配列。許可されている署名者の最大数は35です。\n\n**注**: 一部の署名者が競合する[セグメント](r://shield-information-barrier-segment-member) (ユーザーグループ) に属している可能性もあります。これは、セキュリティポリシーにより、倫理的な競合につながる可能性のあるやり取りやコミュニケーションを防ぐためにユーザーがセグメントに割り当てられていることを意味します。このような場合、署名リクエストを送信しようとすると、エラーが発生します。\n\nセグメントと情報バリアの詳細については、[こちら](https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers#h_01GFVJEHQA06N7XEZ4GCZ9GFAQ)を参照してください。",
+                                "description": "署名リクエストの署名者の配列。許可されている署名者の最大数は35です。\n\n**注**: 一部の署名者が競合する[セグメント](/ja/reference/shield-information-barrier-segment-member) (ユーザーグループ) に属している可能性もあります。これは、セキュリティポリシーにより、倫理的な競合につながる可能性のあるやり取りやコミュニケーションを防ぐためにユーザーがセグメントに割り当てられていることを意味します。このような場合、署名リクエストを送信しようとすると、エラーが発生します。\n\nセグメントと情報バリアの詳細については、[こちら](https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers#h_01GFVJEHQA06N7XEZ4GCZ9GFAQ)を参照してください。",
                                 "type": "array",
                                 "items": {
                                     "$ref": "#/components/schemas/SignRequestCreateSigner"
@@ -36585,7 +36585,7 @@
                                 "example": true
                             },
                             "signers": {
-                                "description": "テンプレートの署名者の配列。\n\n**注**: テンプレートで指定された一部の署名者が競合する[セグメント](r://shield-information-barrier-segment-member) (ユーザーグループ) に属している可能性もあります。これは、セキュリティポリシーにより、倫理的な競合につながる可能性のあるやり取りやコミュニケーションを防ぐためにユーザーがセグメントに割り当てられていることを意味します。このような場合、競合するセグメントに存在する署名者を含むテンプレートに基づいて署名リクエストを送信しようとすると、エラーが発生します。\n\nセグメントと情報バリアの詳細については、[こちら](https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers#h_01GFVJEHQA06N7XEZ4GCZ9GFAQ)を参照してください。",
+                                "description": "テンプレートの署名者の配列。\n\n**注**: テンプレートで指定された一部の署名者が競合する[セグメント](/ja/reference/shield-information-barrier-segment-member) (ユーザーグループ) に属している可能性もあります。これは、セキュリティポリシーにより、倫理的な競合につながる可能性のあるやり取りやコミュニケーションを防ぐためにユーザーがセグメントに割り当てられていることを意味します。このような場合、競合するセグメントに存在する署名者を含むテンプレートに基づいて署名リクエストを送信しようとすると、エラーが発生します。\n\nセグメントと情報バリアの詳細については、[こちら](https://support.box.com/hc/en-us/articles/9920431507603-Understanding-Information-Barriers#h_01GFVJEHQA06N7XEZ4GCZ9GFAQ)を参照してください。",
                                 "type": "array",
                                 "items": {
                                     "$ref": "#/components/schemas/TemplateSigner"
