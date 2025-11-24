@@ -3664,9 +3664,9 @@
           },
           {
             "tab": "APIリファレンス",
-            "pages": [
+            "versions": [
               {
-                "group": " ",
+                "version": "2024.0",
                 "pages": [
                   "ja/reference/index",
                   {
@@ -3723,144 +3723,6 @@
                           "ja/reference/post-ai-agents",
                           "ja/reference/put-ai-agents-id",
                           "ja/reference/delete-ai-agents-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Archives",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/archive",
-                          "ja/reference/v2025.0/resources/archives"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-archives",
-                          "ja/reference/v2025.0/post-archives",
-                          "ja/reference/v2025.0/delete-archives-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Doc Gen",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/docgen-batch--base",
-                          "ja/reference/v2025.0/resources/docgen-job",
-                          "ja/reference/v2025.0/resources/docgen-job--base",
-                          "ja/reference/v2025.0/resources/docgen-job--full",
-                          "ja/reference/v2025.0/resources/docgen-jobs",
-                          "ja/reference/v2025.0/resources/docgen-jobs--full"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-docgen-batch-jobs-id",
-                          "ja/reference/v2025.0/get-docgen-jobs-id",
-                          "ja/reference/v2025.0/get-docgen-jobs",
-                          "ja/reference/v2025.0/post-docgen-batches"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Doc Genテンプレート",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/docgen-tag",
-                          "ja/reference/v2025.0/resources/docgen-tags-processing-message",
-                          "ja/reference/v2025.0/resources/docgen-tags",
-                          "ja/reference/v2025.0/resources/docgen-template",
-                          "ja/reference/v2025.0/resources/docgen-templates"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-docgen-template-jobs-id",
-                          "ja/reference/v2025.0/get-docgen-templates-id-tags",
-                          "ja/reference/v2025.0/get-docgen-templates-id",
-                          "ja/reference/v2025.0/get-docgen-templates",
-                          "ja/reference/v2025.0/post-docgen-templates",
-                          "ja/reference/v2025.0/delete-docgen-templates-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hubs",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/hub",
-                          "ja/reference/v2025.0/resources/hub--base",
-                          "ja/reference/v2025.0/resources/hubs"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-enterprise-hubs",
-                          "ja/reference/v2025.0/get-hubs-id",
-                          "ja/reference/v2025.0/get-hubs",
-                          "ja/reference/v2025.0/post-hubs-id-copy",
-                          "ja/reference/v2025.0/post-hubs",
-                          "ja/reference/v2025.0/put-hubs-id",
-                          "ja/reference/v2025.0/delete-hubs-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hubコラボレーション",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/hub-collaboration",
-                          "ja/reference/v2025.0/resources/hub-collaborations"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-hub-collaborations-id",
-                          "ja/reference/v2025.0/get-hub-collaborations",
-                          "ja/reference/v2025.0/post-hub-collaborations",
-                          "ja/reference/v2025.0/put-hub-collaborations-id",
-                          "ja/reference/v2025.0/delete-hub-collaborations-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hubの項目",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/hub-item",
-                          "ja/reference/v2025.0/resources/hub-items-manage-response",
-                          "ja/reference/v2025.0/resources/hub-items"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-hub-items",
-                          "ja/reference/v2025.0/post-hubs-id-manage-items"
                         ]
                       }
                     ]
@@ -4125,34 +3987,6 @@
                         "pages": [
                           "ja/reference/get-invites-id",
                           "ja/reference/post-invites"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Shieldリスト",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/shield-list-content--country",
-                          "ja/reference/v2025.0/resources/shield-list-content--domains",
-                          "ja/reference/v2025.0/resources/shield-list-content--email",
-                          "ja/reference/v2025.0/resources/shield-list-content--integration",
-                          "ja/reference/v2025.0/resources/shield-list-content--ip",
-                          "ja/reference/v2025.0/resources/shield-list",
-                          "ja/reference/v2025.0/resources/shield-list--mini",
-                          "ja/reference/v2025.0/resources/shield-lists"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-shield-lists-id",
-                          "ja/reference/v2025.0/get-shield-lists",
-                          "ja/reference/v2025.0/post-shield-lists",
-                          "ja/reference/v2025.0/put-shield-lists-id",
-                          "ja/reference/v2025.0/delete-shield-lists-id"
                         ]
                       }
                     ]
@@ -5101,23 +4935,6 @@
                     ]
                   },
                   {
-                    "group": "外部ユーザー",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/external-users-submit-delete-job-response"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/post-external-users-submit-delete-job"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "group": "共有リンク (アプリ項目)",
                     "pages": [
                       {
@@ -5330,6 +5147,195 @@
                           "ja/reference/post-storage-policy-assignments",
                           "ja/reference/put-storage-policy-assignments-id",
                           "ja/reference/delete-storage-policy-assignments-id"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "version": "2025.0",
+                "pages": [
+                  "ja/reference/v2025.0/index",
+                  {
+                    "group": "Archives",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/archive",
+                          "ja/reference/v2025.0/resources/archives"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-archives",
+                          "ja/reference/v2025.0/post-archives",
+                          "ja/reference/v2025.0/delete-archives-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Doc Gen",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/docgen-batch--base",
+                          "ja/reference/v2025.0/resources/docgen-job",
+                          "ja/reference/v2025.0/resources/docgen-job--base",
+                          "ja/reference/v2025.0/resources/docgen-job--full",
+                          "ja/reference/v2025.0/resources/docgen-jobs",
+                          "ja/reference/v2025.0/resources/docgen-jobs--full"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-docgen-batch-jobs-id",
+                          "ja/reference/v2025.0/get-docgen-jobs-id",
+                          "ja/reference/v2025.0/get-docgen-jobs",
+                          "ja/reference/v2025.0/post-docgen-batches"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Doc Genテンプレート",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/docgen-tag",
+                          "ja/reference/v2025.0/resources/docgen-tags-processing-message",
+                          "ja/reference/v2025.0/resources/docgen-tags",
+                          "ja/reference/v2025.0/resources/docgen-template",
+                          "ja/reference/v2025.0/resources/docgen-templates"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-docgen-template-jobs-id",
+                          "ja/reference/v2025.0/get-docgen-templates-id-tags",
+                          "ja/reference/v2025.0/get-docgen-templates-id",
+                          "ja/reference/v2025.0/get-docgen-templates",
+                          "ja/reference/v2025.0/post-docgen-templates",
+                          "ja/reference/v2025.0/delete-docgen-templates-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hubs",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/hub",
+                          "ja/reference/v2025.0/resources/hub--base",
+                          "ja/reference/v2025.0/resources/hubs"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-enterprise-hubs",
+                          "ja/reference/v2025.0/get-hubs-id",
+                          "ja/reference/v2025.0/get-hubs",
+                          "ja/reference/v2025.0/post-hubs-id-copy",
+                          "ja/reference/v2025.0/post-hubs",
+                          "ja/reference/v2025.0/put-hubs-id",
+                          "ja/reference/v2025.0/delete-hubs-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hubコラボレーション",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/hub-collaboration",
+                          "ja/reference/v2025.0/resources/hub-collaborations"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-hub-collaborations-id",
+                          "ja/reference/v2025.0/get-hub-collaborations",
+                          "ja/reference/v2025.0/post-hub-collaborations",
+                          "ja/reference/v2025.0/put-hub-collaborations-id",
+                          "ja/reference/v2025.0/delete-hub-collaborations-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hubの項目",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/hub-item",
+                          "ja/reference/v2025.0/resources/hub-items-manage-response",
+                          "ja/reference/v2025.0/resources/hub-items"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-hub-items",
+                          "ja/reference/v2025.0/post-hubs-id-manage-items"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Shieldリスト",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/shield-list-content--country",
+                          "ja/reference/v2025.0/resources/shield-list-content--domains",
+                          "ja/reference/v2025.0/resources/shield-list-content--email",
+                          "ja/reference/v2025.0/resources/shield-list-content--integration",
+                          "ja/reference/v2025.0/resources/shield-list-content--ip",
+                          "ja/reference/v2025.0/resources/shield-list",
+                          "ja/reference/v2025.0/resources/shield-list--mini",
+                          "ja/reference/v2025.0/resources/shield-lists"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-shield-lists-id",
+                          "ja/reference/v2025.0/get-shield-lists",
+                          "ja/reference/v2025.0/post-shield-lists",
+                          "ja/reference/v2025.0/put-shield-lists-id",
+                          "ja/reference/v2025.0/delete-shield-lists-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "外部ユーザー",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/external-users-submit-delete-job-response"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/post-external-users-submit-delete-job"
                         ]
                       }
                     ]
