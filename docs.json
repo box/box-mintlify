@@ -988,9 +988,9 @@
           },
           {
             "tab": "API Reference",
-            "pages": [
+            "versions": [
               {
-                "group": " ",
+                "version": "v2024.0",
                 "pages": [
                   "reference/index",
                   {
@@ -1072,27 +1072,6 @@
                     ]
                   },
                   {
-                    "group": "Archives",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/archive",
-                          "reference/v2025.0/resources/archives"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-archives",
-                          "reference/v2025.0/post-archives",
-                          "reference/v2025.0/put-archives-id",
-                          "reference/v2025.0/delete-archives-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "group": "Authorization",
                     "pages": [
                       {
@@ -1109,124 +1088,6 @@
                           "reference/post-oauth2-revoke",
                           "reference/post-oauth2-token",
                           "reference/post-oauth2-token--refresh"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Doc Gen",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/docgen-batch--base",
-                          "reference/v2025.0/resources/docgen-job",
-                          "reference/v2025.0/resources/docgen-job--base",
-                          "reference/v2025.0/resources/docgen-job--full",
-                          "reference/v2025.0/resources/docgen-jobs",
-                          "reference/v2025.0/resources/docgen-jobs--full"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-docgen-batch-jobs-id",
-                          "reference/v2025.0/get-docgen-jobs-id",
-                          "reference/v2025.0/get-docgen-jobs",
-                          "reference/v2025.0/post-docgen-batches"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Doc Gen templates",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/docgen-tag",
-                          "reference/v2025.0/resources/docgen-tags-processing-message",
-                          "reference/v2025.0/resources/docgen-tags",
-                          "reference/v2025.0/resources/docgen-template",
-                          "reference/v2025.0/resources/docgen-templates"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-docgen-template-jobs-id",
-                          "reference/v2025.0/get-docgen-templates-id-tags",
-                          "reference/v2025.0/get-docgen-templates-id",
-                          "reference/v2025.0/get-docgen-templates",
-                          "reference/v2025.0/post-docgen-templates",
-                          "reference/v2025.0/delete-docgen-templates-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hub Collaborations",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/hub-collaboration",
-                          "reference/v2025.0/resources/hub-collaborations"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-hub-collaborations-id",
-                          "reference/v2025.0/get-hub-collaborations",
-                          "reference/v2025.0/post-hub-collaborations",
-                          "reference/v2025.0/put-hub-collaborations-id",
-                          "reference/v2025.0/delete-hub-collaborations-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hub Items",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/hub-item",
-                          "reference/v2025.0/resources/hub-items-manage-response",
-                          "reference/v2025.0/resources/hub-items"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-hub-items",
-                          "reference/v2025.0/post-hubs-id-manage-items"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Box Hubs",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/hub",
-                          "reference/v2025.0/resources/hub--base",
-                          "reference/v2025.0/resources/hubs"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-enterprise-hubs",
-                          "reference/v2025.0/get-hubs-id",
-                          "reference/v2025.0/get-hubs",
-                          "reference/v2025.0/post-hubs-id-copy",
-                          "reference/v2025.0/post-hubs",
-                          "reference/v2025.0/put-hubs-id",
-                          "reference/v2025.0/delete-hubs-id"
                         ]
                       }
                     ]
@@ -1496,27 +1357,6 @@
                     ]
                   },
                   {
-                    "group": "Enterprise Configurations",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/enterprise-configuration-content-and-sharing",
-                          "reference/v2025.0/resources/enterprise-configuration-security",
-                          "reference/v2025.0/resources/enterprise-configuration-shield",
-                          "reference/v2025.0/resources/enterprise-configuration-user-settings",
-                          "reference/v2025.0/resources/enterprise-configuration"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-enterprise-configurations-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "group": "Events",
                     "pages": [
                       {
@@ -1532,23 +1372,6 @@
                         "pages": [
                           "reference/get-events",
                           "reference/options-events"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "External Users",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/external-users-submit-delete-job-response"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/post-external-users-submit-delete-job"
                         ]
                       }
                     ]
@@ -2207,34 +2030,6 @@
                     ]
                   },
                   {
-                    "group": "Shield lists",
-                    "pages": [
-                      {
-                        "group": "Resources",
-                        "pages": [
-                          "reference/v2025.0/resources/shield-list-content--country",
-                          "reference/v2025.0/resources/shield-list-content--domains",
-                          "reference/v2025.0/resources/shield-list-content--email",
-                          "reference/v2025.0/resources/shield-list-content--integration",
-                          "reference/v2025.0/resources/shield-list-content--ip",
-                          "reference/v2025.0/resources/shield-list",
-                          "reference/v2025.0/resources/shield-list--mini",
-                          "reference/v2025.0/resources/shield-lists"
-                        ]
-                      },
-                      {
-                        "group": "Endpoints",
-                        "pages": [
-                          "reference/v2025.0/get-shield-lists-id",
-                          "reference/v2025.0/get-shield-lists",
-                          "reference/v2025.0/post-shield-lists",
-                          "reference/v2025.0/put-shield-lists-id",
-                          "reference/v2025.0/delete-shield-lists-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "group": "Skills",
                     "pages": [
                       {
@@ -2676,6 +2471,217 @@
                           "reference/get-zip-downloads-id-content",
                           "reference/get-zip-downloads-id-status",
                           "reference/post-zip-downloads"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "version": "v2025.0",
+                "pages": [
+                  "reference/v2025.0/index",
+                  {
+                    "group": "Archives",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/archive",
+                          "reference/v2025.0/resources/archives"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-archives",
+                          "reference/v2025.0/post-archives",
+                          "reference/v2025.0/put-archives-id",
+                          "reference/v2025.0/delete-archives-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Doc Gen",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/docgen-batch--base",
+                          "reference/v2025.0/resources/docgen-job",
+                          "reference/v2025.0/resources/docgen-job--base",
+                          "reference/v2025.0/resources/docgen-job--full",
+                          "reference/v2025.0/resources/docgen-jobs",
+                          "reference/v2025.0/resources/docgen-jobs--full"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-docgen-batch-jobs-id",
+                          "reference/v2025.0/get-docgen-jobs-id",
+                          "reference/v2025.0/get-docgen-jobs",
+                          "reference/v2025.0/post-docgen-batches"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Doc Gen templates",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/docgen-tag",
+                          "reference/v2025.0/resources/docgen-tags-processing-message",
+                          "reference/v2025.0/resources/docgen-tags",
+                          "reference/v2025.0/resources/docgen-template",
+                          "reference/v2025.0/resources/docgen-templates"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-docgen-template-jobs-id",
+                          "reference/v2025.0/get-docgen-templates-id-tags",
+                          "reference/v2025.0/get-docgen-templates-id",
+                          "reference/v2025.0/get-docgen-templates",
+                          "reference/v2025.0/post-docgen-templates",
+                          "reference/v2025.0/delete-docgen-templates-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hub Collaborations",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/hub-collaboration",
+                          "reference/v2025.0/resources/hub-collaborations"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-hub-collaborations-id",
+                          "reference/v2025.0/get-hub-collaborations",
+                          "reference/v2025.0/post-hub-collaborations",
+                          "reference/v2025.0/put-hub-collaborations-id",
+                          "reference/v2025.0/delete-hub-collaborations-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hub Items",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/hub-item",
+                          "reference/v2025.0/resources/hub-items-manage-response",
+                          "reference/v2025.0/resources/hub-items"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-hub-items",
+                          "reference/v2025.0/post-hubs-id-manage-items"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Box Hubs",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/hub",
+                          "reference/v2025.0/resources/hub--base",
+                          "reference/v2025.0/resources/hubs"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-enterprise-hubs",
+                          "reference/v2025.0/get-hubs-id",
+                          "reference/v2025.0/get-hubs",
+                          "reference/v2025.0/post-hubs-id-copy",
+                          "reference/v2025.0/post-hubs",
+                          "reference/v2025.0/put-hubs-id",
+                          "reference/v2025.0/delete-hubs-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Enterprise Configurations",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/enterprise-configuration-content-and-sharing",
+                          "reference/v2025.0/resources/enterprise-configuration-security",
+                          "reference/v2025.0/resources/enterprise-configuration-shield",
+                          "reference/v2025.0/resources/enterprise-configuration-user-settings",
+                          "reference/v2025.0/resources/enterprise-configuration"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-enterprise-configurations-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "External Users",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/external-users-submit-delete-job-response"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/post-external-users-submit-delete-job"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Shield lists",
+                    "pages": [
+                      {
+                        "group": "Resources",
+                        "pages": [
+                          "reference/v2025.0/resources/shield-list-content--country",
+                          "reference/v2025.0/resources/shield-list-content--domains",
+                          "reference/v2025.0/resources/shield-list-content--email",
+                          "reference/v2025.0/resources/shield-list-content--integration",
+                          "reference/v2025.0/resources/shield-list-content--ip",
+                          "reference/v2025.0/resources/shield-list",
+                          "reference/v2025.0/resources/shield-list--mini",
+                          "reference/v2025.0/resources/shield-lists"
+                        ]
+                      },
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "reference/v2025.0/get-shield-lists-id",
+                          "reference/v2025.0/get-shield-lists",
+                          "reference/v2025.0/post-shield-lists",
+                          "reference/v2025.0/put-shield-lists-id",
+                          "reference/v2025.0/delete-shield-lists-id"
                         ]
                       }
                     ]
