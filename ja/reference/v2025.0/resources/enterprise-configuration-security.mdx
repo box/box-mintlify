@@ -1,8 +1,8 @@
 ---
-title: "Enterprise configuration security"
+title: "Enterprise構成 (セキュリティ)"
 ---
 
-API version 2025.0
+APIバージョン 2025.0
 
 
 <Note>
@@ -10,31 +10,31 @@ Learn more about [Box SDK versioning strategy](/guides/tooling/sdks/sdk-versioni
 </Note>
 
 
-The enterprise configuration for the security category.
+セキュリティカテゴリのEnterprise構成。
 
 <ParamField body="custom_session_duration_groups" type="object">
-Groups for custom session duration.
+カスタムセッション持続期間の対象グループ。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object[]">
   
   <Expandable>
     <ParamField body="id" type="string">
-    example: `1234`
+    例: `1234`
     
-    Group ID (numerical).
+    グループID (数値)。
     </ParamField>
   
     <ParamField body="name" type="string">
-    example: `Group Name`
+    例: `Group Name`
     
-    Group Name.
+    グループ名。
     </ParamField>
   
   </Expandable>
@@ -44,47 +44,47 @@ Groups for custom session duration.
 </ParamField>
 
 <ParamField body="custom_session_duration_value" type="object">
-Value indicating duration users from specified groups can remain logged in without activity before being logged out.
+指定のグループのユーザーが何も操作をしていなくてもログアウトされずにログイン状態を維持できる時間を示す値。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="enforced_mfa_frequency" type="object">
-Managed Users multi-factor authentication frequency. The default authentication frequency is set to 30 days, with authentication time calculated from the most recent successful MFA login.
+管理対象ユーザーの多要素認証の頻度。デフォルトの認証頻度は30日に設定され、認証時間は直近の成功したMFAログインから計算されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
   
   <Expandable>
     <ParamField body="days" type="integer">
-    example: `30`
+    例: `30`
     
-    Number of days before the user is required to authenticate again.
+    ユーザーが再認証を要求されるまでの日数。
     </ParamField>
   
     <ParamField body="hours" type="integer">
-    example: `24`
+    例: `24`
     
-    Number of hours before the user is required to authenticate again.
+    ユーザーが再認証を要求されるまでの時間数。
     </ParamField>
   
   </Expandable>
@@ -94,65 +94,65 @@ Managed Users multi-factor authentication frequency. The default authentication 
 </ParamField>
 
 <ParamField body="external_collab_multi_factor_auth_settings" type="object">
-External Collaborators multi-factor authentication settings.
+外部コラボレータの多要素認証設定。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  External collab security settings.
+  外部コラボレーションのセキュリティ設定。
   
   <Expandable>
     <ParamField body="allowlist_domains" type="stringarray">
-    example: `["example.com"]`
+    例: `["例.com"]`
     
-    List of domains that are allowed for external collaboration. Applies if state is `allowlist`.
+    外部コラボレーションが許可されているドメインのリスト。状態が`allowlist`の場合に適用されます。
     </ParamField>
   
     <ParamField body="allowlist_emails" type="stringarray">
-    example: `["mail@example.com"]`
+    例: `["mail@例.com"]`
     
-    List of email addresses that are allowed for external collaboration. Applies if state is `allowlist`.
+    外部コラボレーションが許可されているメールアドレスのリスト。状態が`allowlist`の場合に適用されます。
     </ParamField>
   
     <ParamField body="denylist_domains" type="stringarray">
-    example: `["example.com"]`
+    例: `["例.com"]`
     
-    List of domains that are not allowed for external collaboration. Applies if state is `denylist`.
+    外部コラボレーションが許可されていないドメインのリスト。状態が`denylist`の場合に適用されます。
     </ParamField>
   
     <ParamField body="denylist_emails" type="stringarray">
-    example: `["spam@example.com"]`
+    例: `["spam@例.com"]`
     
-    List of email addresses that are not allowed for external collaboration. Applies if state is `denylist`.
+    外部コラボレーションが許可されていないメールアドレスのリスト。状態が`denylist`の場合に適用されます。
     </ParamField>
   
     <ParamField body="factor_type_settings" type="string">
-    example: `totp`
+    例: `totp`
     
-    Factor type for the external collaborators authentication. Possible values include `totp`, `any`, or `unknown`.
+    外部コラボレータの認証の要素の種類。使用可能な値には`totp`、`any`、`unknown`があります。
     </ParamField>
   
     <ParamField body="scheduled_at" type="string(date-time)">
-    example: `2012-12-12T10:53:43-08:00`
+    例: `2012-12-12T10:53:43-08:00`
     
-    Scheduled at.
+    スケジュールされている日時。
     </ParamField>
   
     <ParamField body="scheduled_status" type="string">
-    example: `inprogress`
+    例: `inprogress`
     
-    The status of the scheduling to apply external collaboration security settings. Possible values include `in_progress`, `scheduled`, `completed`, `failed`, and `scheduled_immediate`.
+    外部コラボレーションのセキュリティ設定を適用するためのスケジューリングの状態。使用可能な値には`in_progress`、`scheduled`、`completed`、`failed`、`scheduled_immediate`があります。
     </ParamField>
   
     <ParamField body="state" type="string">
-    example: `enabled`
+    例: `enabled`
     
-    The state of the external collaboration security settings. Possible values include `enabled`, `disabled`, `allowlist`, and `denylist`.
+    外部コラボレーションのセキュリティ設定の状態。使用可能な値には`enabled`、`disabled`、`allowlist`、`denylist`があります。
     </ParamField>
   
   </Expandable>
@@ -162,361 +162,361 @@ External Collaborators multi-factor authentication settings.
 </ParamField>
 
 <ParamField body="failed_login_attempts_to_trigger_admin_notification" type="object">
-Number of failed login attempts before the primary admin is notified.
+プライマリ管理者に通知するまでの、失敗したログイン試行回数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_custom_session_duration_enabled" type="object">
-Enables custom session duration for select users.
+選択したユーザーのカスタムセッション持続期間を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_managed_user_email_change_disabled" type="object">
-When enabled, prevents users from changing their primary email address.
+有効にした場合、ユーザーは自分のプライマリメールアドレスを変更できなくなります。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_managed_user_migration_disabled" type="object">
-Disables users from being migrated in or out of the enterprise.
+ユーザーのEnterprise内外への移行を無効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_managed_user_signup_corporate_email_enabled" type="object">
-When enabled, admin are emailed when new users are added.
+有効にした場合、新規ユーザーが追加されたときに管理者にメールが送信されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_managed_user_signup_enabled" type="object">
-Determines if users are allowed to sign up on their own.
+ユーザーの自己サインアップを許可するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_managed_user_signup_notification_enabled" type="object">
-Determines if users must sign up with your corporate email.
+ユーザーが会社のメールアドレスでサインアップする必要があるかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_multi_factor_auth_required" type="object">
-Determines if multi-factor authentication is required for all managed users.
+すべての管理対象ユーザーに多要素認証を要求するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_new_user_notification_daily_digest_enabled" type="object">
-Depends on `is_managed_user_signup_corporate_email_enabled`. A true value represents `In daily summary emails`. A false value represents `Immediately`.
+`is_managed_user_signup_corporate_email_enabled`によって異なります。trueの値は`日次サマリメール`を示します。falseの値は`即時`を示します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_password_change_notification_enabled" type="object">
-When enabled, admins are notified when users change passwords in Settings.
+有効にした場合、ユーザーが設定でパワードを変更したときに管理者に通知されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_password_leak_detection_enabled" type="object">
-Enables exposed password detection.
+漏えいが確認されたパスワードの検出を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_password_request_notification_enabled" type="object">
-When enabled, admins are notified when users request a forget password email.
+有効にした場合、ユーザーがパスワード忘れのメールをリクエストしたときに管理者に通知されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_strong_password_for_ext_collab_enabled" type="object">
-Requires strong passwords for External Collaborators.
+外部コラボレータに強力なパスワードを要求します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_weak_password_prevention_enabled" type="object">
-When enabled, prevents common words / email address to be used in a password.
+有効にした場合、パスワードに一般的な単語やメールアドレスを使用できなくなります。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="join_link" type="object">
-Join url for self sign up. Depends on `is_managed_user_signup_enabled`. Applies if `join_url` is not used.
+自己サインアップ用の参加URL。`is_managed_user_signup_enabled`によって異なります。`join_url`を使用しない場合に適用されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="join_url" type="object">
-Join url for self sign up. Depends on `is_managed_user_signup_enabled`. Applies if `join_link` is not used.
+自己サインアップ用の参加URL。`is_managed_user_signup_enabled`によって異なります。`join_link`を使用しない場合に適用されます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="keysafe" type="object">
-The basic data included in each enterprise configuration response object.
+各Enterprise構成の応答オブジェクトに含まれる基本データ。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  Keysafe settings.
+  Keysafe設定。
   
   <Expandable>
     <ParamField body="account_id" type="string">
-    example: `1234`
+    例: `1234`
     
-    The account ID.
+    アカウントID。
     </ParamField>
   
     <ParamField body="cloud_provider" type="string">
-    The cloud provider.
+    クラウドプロバイダ。
     </ParamField>
   
     <ParamField body="key_id" type="string">
-    example: `1234`
+    例: `1234`
     
-    The key ID.
+    キーID。
     </ParamField>
   
     <ParamField body="keyring_id" type="string">
-    example: `1234`
+    例: `1234`
     
-    The key ring ID.
+    キーリングID。
     </ParamField>
   
     <ParamField body="keysafe_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    Whether KeySafe addon is enabled for the enterprise.
+    EnterpriseでKeySafeアドオンが有効になっているかどうか。
     </ParamField>
   
     <ParamField body="location_id" type="string">
-    example: `1234`
+    例: `1234`
     
-    The location ID.
+    ロケーションID。
     </ParamField>
   
     <ParamField body="project_id" type="string">
-    example: `1234`
+    例: `1234`
     
-    The project ID.
+    プロジェクトID。
     </ParamField>
   
   </Expandable>
@@ -526,171 +526,171 @@ The basic data included in each enterprise configuration response object.
 </ParamField>
 
 <ParamField body="last_password_reset_at" type="object">
-The basic data included in each enterprise configuration response object.
+各Enterprise構成の応答オブジェクトに含まれる基本データ。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string(date-time)">
-  example: `2012-12-12T10:53:43-08:00`
+  例: `2012-12-12T10:53:43-08:00`
   
-  When an enterprise password reset was last applied.
+  Enterpriseのパスワードリセットが最後に適用された日時。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="multi_factor_auth_type" type="object">
-Managed Users multi-factor authentication requirement method type.
+管理対象ユーザーの多要素認証要件の方法の種類。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="password_min_length" type="object">
-Minimum number of characters required for passwords.
+パスワードに必要な最小文字数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="password_min_numeric_characters" type="object">
-Minimum number of numbers required in passwords.
+パスワードに必要な最小数字数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="password_min_special_characters" type="object">
-Minimum number of symbols required in passwords.
+パスワードに必要な最小記号数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="password_min_uppercase_characters" type="object">
-Minimum number of upper case characters required in passwords.
+パスワードに必要な最小大文字数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="password_reset_frequency" type="object">
-Determines if users must reset their passwords every specified time period.
+指定された期間ごとにユーザーがパスワードをリセットする必要があるかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="previous_password_reuse_limit" type="object">
-Number of previous passwords users are prevented from using.
+ユーザーが使用できない過去のパスワードの数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="session_duration" type="object">
-Value indicating time from the last activity a user can remain logged in without activity before being logged out.
+ユーザーが何も操作をしていなくてもログアウトされずにログイン状態を維持できる、直前の操作からの時間を示す値。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>

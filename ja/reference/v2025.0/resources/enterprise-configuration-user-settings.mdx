@@ -1,107 +1,107 @@
 ---
-title: "Enterprise configuration user settings"
+title: "Enterprise構成 (ユーザー設定)"
 ---
 
-API version 2025.0
+APIバージョン 2025.0
 
 
 <Note>
 Learn more about [Box SDK versioning strategy](/guides/tooling/sdks/sdk-versioning/).
 </Note>
 
+ユーザー設定カテゴリのEnterprise構成。
 
-The enterprise configuration for the user settings category.
 
 <ParamField body="enterprise_feature_settings" type="object[]">
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  An enterprise feature setting.
+  Enterprise機能の設定。
   
   <Expandable>
     <ParamField body="id" type="string">
-    example: `eyJlbnRlcnByaXNlSWQiOiIxMTExNDQyNzY3IiwiZmVhdHVyZUlkIjoiY2FudmFzIn0=`
+    例: `eyJlbnRlcnByaXNlSWQiOiIxMTExNDQyNzY3IiwiZmVhdHVyZUlkIjoiY2FudmFzIn0=`
     
-    The identifier of the enterprise feature setting.
+    Enterprise機能設定の識別子。
     </ParamField>
   
     <ParamField body="allowlist" type="object[]">
-    Enterprise feature setting is enabled for only this set of users and groups.
+    Enterprise機能の設定は、このユーザーとグループのセットに対してのみ有効になっています。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `12345`
+      例: `12345`
       
-      The identifier of the user or group.
+      ユーザーまたはグループの識別子。
       </ParamField>
     
       <ParamField body="type" type="string">
-      example: `user`
+      例: `user`
       
-      The type `user` or `group`.
+      種類は`user`または`group`。
       
-      Value is one of `user`,`group`
+      次の値のいずれか1つ: `user`,`group`
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="can_configure" type="boolean">
-    example: `true`
+    例: `true`
     
-    Whether the feature can be configured.
+    機能を構成できるかどうか。
     </ParamField>
   
     <ParamField body="denylist" type="object[]">
-    Enterprise feature setting is enabled for everyone except this set of users and groups.
+    Enterprise機能の設定は、このユーザーとグループのセットを除くすべてのユーザーに対して有効になっています。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `12345`
+      例: `12345`
       
-      The identifier of the user or group.
+      ユーザーまたはグループの識別子。
       </ParamField>
     
       <ParamField body="type" type="string">
-      example: `user`
+      例: `user`
       
-      The type `user` or `group`.
+      種類は`user`または`group`。
       
-      Value is one of `user`,`group`
+      次の値のいずれか1つ: `user`,`group`
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="feature" type="object">
-    The feature.
+    機能。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `canvas`
+      例: `canvas`
       
-      The identifier of the feature.
+      機能の識別子。
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="is_configured" type="boolean">
-    example: `true`
+    例: `true`
     
-    Whether the feature is configured.
+    機能が構成されているかどうか。
     </ParamField>
   
     <ParamField body="state" type="string">
-    example: `enabled`
+    例: `enabled`
     
-    The state of the feature.
+    機能の状態。
     </ParamField>
   
   </Expandable>
@@ -111,357 +111,357 @@ The enterprise configuration for the user settings category.
 </ParamField>
 
 <ParamField body="is_box_sync_restricted_for_new_users" type="object">
-Determines if Box Sync is restricted for new users.
+新規ユーザーに対してBox Syncを制限するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_device_limit_exemption_enabled_for_new_users" type="object">
-Determines if new users are exempt from the maximum number of devices specified in the Device Protection settings.
+[デバイス保護] 設定で指定されているデバイスの最大数から新規ユーザーを除外するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_enterprise_sso_in_testing" type="object">
-Value indicating if SSO is in testing mode for all users.
+すべてのユーザーに対してSSOがテストモードかどうかを示す値。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_enterprise_sso_required" type="object">
-Value indicating if SSO is required for all users.
+すべてのユーザーに対してSSOが必須かどうかを示す値。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_external_collaboration_restricted_for_new_users" type="object">
-Determines if new users will not be allowed to create folders that can have external collaborators.
+新規ユーザーに、外部コラボレータが含まれるフォルダの作成を許可するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_instant_login_restricted" type="object">
-Determines if users are restricted from granting (limited) access for Box Support for troubleshooting.
+ユーザーがトラブルシューティングのためにBoxサポートへの (制限付き) アクセスを許可することを制限するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_sso_auto_add_groups_enabled" type="object">
-Determines if any new groups received for a user upon login through SSO but not present in the enterprise will be auto added to the enterprise.
+SSOでログインしたユーザー用の新規グループがEnterpriseに登録されていない場合にそのEnterpriseに自動的に追加するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_sso_auto_add_user_to_groups_enabled" type="object">
-Determines if a user will be added to enterprise groups received upon user login through SSO.
+SSOでのログイン時にユーザーをEnterpriseグループに追加するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_sso_auto_remove_user_from_groups_enabled" type="object">
-Determines if a user will be removed from enterprise groups upon user login through SSO.
+SSOでのログイン時にユーザーをEnterpriseグループから削除するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_unlimited_storage_enabled_for_new_users" type="object">
-Determines if new users are given unlimited storage.
+新規ユーザーに無制限のストレージを提供するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_username_change_restricted" type="object">
-Determines if users are restricted from changing their username in Account Settings.
+ユーザーが [アカウント設定] でユーザー名を変更することを制限するかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_view_all_users_enabled_for_new_users" type="object">
-Determines if new users can see all managed users in their contacts when inviting collaborators.
+新規ユーザーがコラボレータを招待する際に、自分の連絡先に登録されているすべての管理対象ユーザーを表示できるようにするかどうかを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="new_user_default_language" type="object">
-example: `{"is_used":true,"value":"English (US)"}`
+例: `{"is_used":true,"value":"English (US)"}`
 
-Determines the default language for new users.
+新規ユーザーのデフォルトの言語を決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="new_user_default_storage_limit" type="object">
-Determines the default storage limit for new users. Does not apply if `is_unlimited_storage_enabled_for_new_users` is true.
+新規ユーザー用にデフォルトのストレージの上限を決定します。`is_unlimited_storage_enabled_for_new_users`がtrueの場合は適用されません。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="new_user_default_timezone" type="object">
-example: `{"is_used":true,"value":"GMT-05:00 America\\/Chicago CDT"}`
+例: `{"is_used":true,"value":"GMT-05:00 America\\/Chicago CDT"}`
 
-Determines the default timezone for new users.
+新規ユーザーのデフォルトのタイムゾーンを決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="number_of_user_tracking_codes_remaining" type="object">
-The remaining number of `user_tracking_codes` that can be created.
+作成可能な`user_tracking_codes`の残数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="user_invites_expiration_time_frame" type="object">
-example: `{"is_used":true,"value":"7 days"}`
+例: `{"is_used":true,"value":"7 days"}`
 
-Determines the time frame for any unaccepted invitation to your Box enterprise account to expire.
+承認されていないBox Enterpriseアカウントへの招待が期限切れになるまでの期間を決定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="user_tracking_codes" type="object">
-Properties that are assigned as additional values to users, like employee ID or region.
+従業員IDや地域など、追加の値としてユーザーに割り当てられるプロパティ。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object[]">
   
   <Expandable>
     <ParamField body="id" type="integer(int64)">
-    example: `1234`
+    例: `1234`
     
-    The ID of the user tracking code.
+    ユーザー追跡コードのID。
     </ParamField>
   
     <ParamField body="name" type="string">
-    example: `Employee ID`
+    例: `Employee ID`
     
-    The name of the user tracking code.
+    ユーザー追跡コードの名前。
     </ParamField>
   
   </Expandable>
@@ -469,6 +469,7 @@ Properties that are assigned as additional values to users, like employee ID or 
 
 </Expandable>
 </ParamField>
+
 
 <ResponseExample>
 

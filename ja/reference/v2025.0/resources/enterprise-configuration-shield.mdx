@@ -1,8 +1,8 @@
 ---
-title: "Enterprise configuration shield"
+title: "Enterprise構成 (Shield)"
 ---
 
-API version 2025.0
+APIバージョン 2025.0
 
 
 <Note>
@@ -10,62 +10,62 @@ Learn more about [Box SDK versioning strategy](/guides/tooling/sdks/sdk-versioni
 </Note>
 
 
-The enterprise configuration for the shield category.
+ShieldカテゴリのEnterprise構成。
 
 <ParamField body="shield_rules" type="object[]">
-The shield rules configuration for the enterprise.
+EnterpriseのShieldルールの構成。
 
 <Expandable>
   <ParamField body="id" type="string">
-  example: `1234567890`
+  例: `1234567890`
   
-  The identifier of the shield rule.
+  Shieldルールの識別子。
   </ParamField>
 
   <ParamField body="type" type="string">
-  example: `shield_rule`
+  例: `shield_rule`
   
-  The value will always be `shield_rule`.
-  
-  Value is always `shield_rule`
+  値は常に`shield_rule`になります。
+
+  次の値に固定: `shield_rule`
   </ParamField>
 
   <ParamField body="created_at" type="string(date-time)">
-  example: `2012-12-12T10:53:43-08:00`
+  例: `2012-12-12T10:53:43-08:00`
   
-  The date and time when the shield rule was created.
+  Shieldルールが作成された日時。
   </ParamField>
 
   <ParamField body="description" type="string">
-  example: `Blocks files identified as malicious content`
+  例: `Blocks files identified as malicious content`
   
-  The description of the shield rule.
+  Shieldルールの説明。
   </ParamField>
 
   <ParamField body="modified_at" type="string(date-time)">
-  example: `2012-12-12T10:53:43-08:00`
+  例: `2012-12-12T10:53:43-08:00`
   
-  The date and time when the shield rule was last modified.
+  Shieldルールが最後に変更された日時。
   </ParamField>
 
   <ParamField body="name" type="string">
-  example: `Block malicious files`
+  例: `Block malicious files`
   
-  The name of the shield rule.
+  Shieldルールの名前。
   </ParamField>
 
   <ParamField body="priority" type="string">
-  example: `high`
+  例: `high`
   
-  The priority level of the shield rule.
+  Shieldルールの優先度レベル。
   
-  Value is one of `informational`,`low`,`medium`,`high`,`critical`
+  次の値のいずれか1つ `informational`,`low`,`medium`,`high`,`critical`
   </ParamField>
 
   <ParamField body="rule_category" type="string">
-  example: `Malicious Content`
+  例: `Malicious Content`
   
-  The category of the shield rule.
+  Shieldルールのカテゴリ。
   </ParamField>
 
 </Expandable>

@@ -1,147 +1,146 @@
 ---
-title: "Enterprise configuration content and sharing"
+title: "Enterprise構成 (コンテンツと共有)"
 ---
 
-API version 2025.0
+APIバージョン 2025.0
 
 
 <Note>
 Learn more about [Box SDK versioning strategy](/guides/tooling/sdks/sdk-versioning/).
 </Note>
 
-
-The enterprise configuration for the content and sharing category.
+コンテンツと共有カテゴリのEnterprise構成。
 
 <ParamField body="auto_delete_days" type="object">
-The number of days before auto delete.
+自動削除までの日数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="auto_delete_target" type="object">
-The selected option of types for applying auto delete.
+自動削除を適用するタイプの選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="collaboration_expiration_days" type="object">
-The number of days before collaboration expiration.
+コラボレーションの有効期限までの日数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="collaboration_expiration_target" type="object">
-The selected option of types for applying collaboration expiration.
+コラボレーションの有効期限を適用するタイプの選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="collaboration_permissions" type="object">
-The basic data included in each enterprise configuration response object.
+各Enterprise構成の応答オブジェクトに含まれる基本データ。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  The collaboration permissions.
+  コラボレーションの権限。
   
   <Expandable>
     <ParamField body="is_co_owner_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The co-owner role is enabled for collaboration.
+    共同所有者のロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_editor_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The editor role is enabled for collaboration.
+    編集者のロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_previewer_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The previewer role is enabled for collaboration.
+    プレビューアーのロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_previewer_uploader_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The previewer uploader role is enabled for collaboration.
+    プレビューアー/アップローダーのロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_uploader_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The uploader role is enabled for collaboration.
+    アップローダーのロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_viewer_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The viewer role is enabled for collaboration.
+    ビューアーのロールでコラボレーションが有効になっています。
     </ParamField>
   
     <ParamField body="is_viewer_uploader_role_enabled" type="boolean">
-    example: `true`
+    例: `true`
     
-    The viewer uploader role is enabled for collaboration.
+    ビューアー/アップローダーのロールでコラボレーションが有効になっています。
     </ParamField>
   
   </Expandable>
@@ -151,17 +150,17 @@ The basic data included in each enterprise configuration response object.
 </ParamField>
 
 <ParamField body="collaboration_restrictions" type="object">
-The collaboration restrictions for the enterprise.
+Enterpriseのコラボレーションの制限。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="stringarray">
-  example: `["internal"]`
+  例: `["internal"]`
   
   </ParamField>
 
@@ -169,19 +168,19 @@ The collaboration restrictions for the enterprise.
 </ParamField>
 
 <ParamField body="default_collaboration_role" type="object">
-The current default collaboration role.
+現在のデフォルトのコラボレーションロール。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
@@ -191,92 +190,92 @@ The current default collaboration role.
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  An enterprise feature setting.
+  Enterprise機能の設定。
   
   <Expandable>
     <ParamField body="id" type="string">
-    example: `eyJlbnRlcnByaXNlSWQiOiIxMTExNDQyNzY3IiwiZmVhdHVyZUlkIjoiY2FudmFzIn0=`
+    例: `eyJlbnRlcnByaXNlSWQiOiIxMTExNDQyNzY3IiwiZmVhdHVyZUlkIjoiY2FudmFzIn0=`
     
-    The identifier of the enterprise feature setting.
+    Enterprise機能設定の識別子。
     </ParamField>
   
     <ParamField body="allowlist" type="object[]">
-    Enterprise feature setting is enabled for only this set of users and groups.
+    Enterprise機能の設定は、このユーザーとグループのセットに対してのみ有効になっています。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `12345`
+      例: `12345`
       
-      The identifier of the user or group.
+      ユーザーまたはグループの識別子。
       </ParamField>
     
       <ParamField body="type" type="string">
-      example: `user`
+      例: `user`
       
-      The type `user` or `group`.
+      種類は`user`または`group`。
       
-      Value is one of `user`,`group`
+      次の値のいずれか1つ: `user`,`group`
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="can_configure" type="boolean">
-    example: `true`
+    例: `true`
     
-    Whether the feature can be configured.
+    機能を構成できるかどうか。
     </ParamField>
   
     <ParamField body="denylist" type="object[]">
-    Enterprise feature setting is enabled for everyone except this set of users and groups.
+    Enterprise機能の設定は、このユーザーとグループのセットを除くすべてのユーザーに対して有効になっています。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `12345`
+      例: `12345`
       
-      The identifier of the user or group.
+      ユーザーまたはグループの識別子。
       </ParamField>
     
       <ParamField body="type" type="string">
-      example: `user`
+      例: `user`
       
-      The type `user` or `group`.
+      種類は`user`または`group`。
       
-      Value is one of `user`,`group`
+      次の値のいずれか1つ: `user`,`group`
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="feature" type="object">
-    The feature.
+    機能。
     
     <Expandable>
       <ParamField body="id" type="string">
-      example: `canvas`
+      例: `canvas`
       
-      The identifier of the feature.
+      機能の識別子。
       </ParamField>
     
     </Expandable>
     </ParamField>
   
     <ParamField body="is_configured" type="boolean">
-    example: `true`
+    例: `true`
     
-    Whether the feature is configured.
+    機能が構成されているかどうか。
     </ParamField>
   
     <ParamField body="state" type="string">
-    example: `enabled`
+    例: `enabled`
     
-    The state of the feature.
+    機能の状態。
     </ParamField>
   
   </Expandable>
@@ -286,34 +285,34 @@ The current default collaboration role.
 </ParamField>
 
 <ParamField body="external_collaboration_allowlist_users" type="object">
-The external collaboration allowlist users.
+外部コラボレーションの許可リストのユーザー。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object[]">
   
   <Expandable>
     <ParamField body="id" type="integer">
-    example: `1234`
+    例: `1234`
     
-    The ID of the user.
+    ユーザーのID。
     </ParamField>
   
     <ParamField body="email" type="string">
-    example: `johndoe@box.com`
+    例: `johndoe@box.com`
     
-    The email of the user.
+    ユーザーのメールアドレス。
     </ParamField>
   
     <ParamField body="name" type="string">
-    example: `John Doe`
+    例: `John Doe`
     
-    The name of the user.
+    ユーザーの名前。
     </ParamField>
   
   </Expandable>
@@ -323,457 +322,457 @@ The external collaboration allowlist users.
 </ParamField>
 
 <ParamField body="external_collaboration_status" type="object">
-The external collaboration status.
-Possible values: `enable_external_collaboration`, `limit_collaboration_to_allowlisted_domains`, `limit_collaboration_to_users_within_enterprise`.
+外部コラボレーションのステータス。
+外部コラボレーションのステータス。: `enable_external_collaboration`, `limit_collaboration_to_allowlisted_domains`, `limit_collaboration_to_users_within_enterprise`.
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `enable_external_collaboration`
+  例: `enable_external_collaboration`
   
-  The external collaboration status.
+  外部コラボレーションのステータス。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_auto_delete_enabled" type="object">
-Enables auto delete.
+自動削除を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_auto_delete_expiration_modification_prevented" type="object">
-Prevents users from modifying auto delete expiration.
+ユーザーが自動削除の有効期限を変更できないようにします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_cc_free_trial_active" type="object">
-Indicates if the enterprise is on a free trial.
+Enterpriseが無料トライアル期間中かどうかを示します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_collaboration_expiration_enabled" type="object">
-Enables collaboration expiration.
+コラボレーションの有効期限を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_collaboration_expiration_modification_prevented" type="object">
-Prevents users from modifying collaboration expiration.
+ユーザーがコラボレーションの有効期限を変更できないようにします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_collaboration_expiration_notification_enabled" type="object">
-Enables collaboration expiration notification.
+コラボレーションの有効期限の通知を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_collaborator_invite_links_disabled" type="object">
-Disables users to invite collaborators using invite links.
+ユーザーによる招待リンクを使用したコラボレータの招待を無効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_custom_domain_hidden_in_shared_link" type="object">
-Hides the custom domain in shared links.
+共有リンクのカスタムドメインを非表示にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_custom_settings_enabled" type="object">
-Enables custom settings.
+カスタム設定を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_email_uploads_enabled" type="object">
-Enables email uploads.
+メールによるアップロードを有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_file_request_branding_default_enabled" type="object">
-Company brand color and logo defaults to Logo for use on Brand Color for File Requests.
+会社のブランドカラーとロゴのデフォルトをファイルリクエストの [ブランドカラーで使用するロゴ] に設定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_file_request_editors_allowed" type="object">
-Indicates if editors are allowed for file requests feature.
+編集者にファイルリクエスト機能が許可されているかどうかを示します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_file_request_login_required" type="object">
-Require uploaders to log in with a Box account for File Requests.
+ファイルリクエストでアップローダーにBoxアカウントを使用したログインを要求します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_forms_branding_default_enabled" type="object">
-Company brand color and logo defaults to Logo for use on Brand Color for Forms.
+会社のブランドカラーとロゴのデフォルトをFormsの [ブランドカラーで使用するロゴ] に設定します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_forms_login_required" type="object">
-Require uploaders to log in with a Box account for Forms.
+FormsでアップローダーにBoxアカウントを使用したログインを要求します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_invite_group_collaborator_disabled" type="object">
-Disables users to invite group collaborators.
+ユーザーによるグループコラボレータの招待を無効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_invite_privilege_restricted" type="object">
-Restrict invites to only admin, folder owners, and co-owners.
+招待を管理者、フォルダ所有者、共同所有者のみに制限します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_open_custom_urls_disabled" type="object">
-Disables custom shared link URLs for public access.
+パブリックアクセスのリンクにカスタム共有リンクURLを許可しません。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_ownership_transfer_restricted" type="object">
-Prevents ownership transfer to external users.
+外部ユーザーへの所有権の移管を禁止します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_public_shared_links_expiration_enabled" type="object">
-Enables public shared links expiration.
+公開共有リンクの有効期限を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_root_content_creation_restricted" type="object">
-Only admins can create and delete first-level folders, files, and bookmarks.
+管理者にのみ第1レベルのフォルダ、ファイル、ブックマークの作成および削除を許可します。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_shared_links_expiration_enabled" type="object">
-Enables shared links expiration.
+共有リンクの有効期限を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_shared_links_expiration_notification_enabled" type="object">
-Enables shared links expiration notification.
+共有リンクの有効期限の通知を有効にします。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
@@ -784,34 +783,34 @@ Prevents users from disabling shared links expiration notification.
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="is_tag_creation_restricted" type="object">
-Only selected users can create tags.
+選択したユーザーのみがタグを作成できます。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
@@ -822,68 +821,68 @@ Enables watermarking enterprise feature.
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="boolean">
-  example: `true`
+  例: `true`
   
-  The value of the enterprise configuration as a boolean.
+  Enterprise構成の値 (ブール値)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="permanent_deletion_access" type="object">
-The selected option for who can delete items from the trash.
+ごみ箱から項目を削除できるユーザーに対して選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="permanent_deletion_allowlist_users" type="object">
-The allowlist users for permanently deleting items from the trash.
+ごみ箱から項目を完全に削除できるユーザーの許可リスト。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object[]">
   
   <Expandable>
     <ParamField body="id" type="integer">
-    example: `1234`
+    例: `1234`
     
-    The ID of the user.
+    ユーザーのID。
     </ParamField>
   
     <ParamField body="email" type="string">
-    example: `johndoe@box.com`
+    例: `johndoe@box.com`
     
-    The email of the user.
+    ユーザーのメールアドレス。
     </ParamField>
   
     <ParamField body="name" type="string">
-    example: `John Doe`
+    例: `John Doe`
     
-    The name of the user.
+    ユーザーの名前。
     </ParamField>
   
   </Expandable>
@@ -893,136 +892,136 @@ The allowlist users for permanently deleting items from the trash.
 </ParamField>
 
 <ParamField body="public_shared_links_expiration_days" type="object">
-The expiration time for public shared links.
+公開共有リンクの有効期限。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_expiration_target" type="object">
-The selected option of types for applying shared link expiration.
+共有リンクの有効期限の適用対象で選択された種類のオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_link_access" type="object">
-The selected option for who has access to shared links.
+共有リンクにアクセスできるユーザーに対して選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_link_company_definition" type="object">
-The definition of the company for shared links (such as `enterprise_id`, `users_with_email_domain`).
+共有リンクにおける会社の定義 (`enterprise_id`、`users_with_email_domain`など)。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_link_default_access" type="object">
-The selected option for the access level of shared links.
+共有リンクのアクセスレベルに対して選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_link_default_permissions_selected" type="object">
-The permissions selected for shared links for each type.
+各タイプの共有リンクに選択された権限。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="object">
-  The shared link permissions for the enterprise.
+  Enterpriseの共有リンクの権限。
   
   <Expandable>
     <ParamField body="default_notes_shared_link_type" type="string">
-    example: `settings_default_notes_shared_link_to_edit`
+    例: `settings_default_notes_shared_link_to_edit`
     
-    The default notes shared link type.
+    メモの共有リンクのデフォルトの種類。
     </ParamField>
   
     <ParamField body="default_shared_link_type" type="string">
-    example: `settings_default_shared_link_preview`
+    例: `settings_default_shared_link_preview`
     
-    The default shared link type.
+    共有リンクのデフォルトの種類。
     </ParamField>
   
     <ParamField body="notes_shared_link_option" type="string">
-    example: `settings_notes_option_to_edit`
+    例: `settings_notes_option_to_edit`
     
-    The selected option for notes shared links permissions.
+    メモの共有リンクの権限に対して選択されたオプション。
     </ParamField>
   
     <ParamField body="shared_links_option" type="string">
-    example: `settings_shared_link_preview`
+    例: `settings_shared_link_preview`
     
-    The selected option for shared links permissions.
+    共有リンクの権限に対して選択されたオプション。
     </ParamField>
   
   </Expandable>
@@ -1032,95 +1031,95 @@ The permissions selected for shared links for each type.
 </ParamField>
 
 <ParamField body="shared_links_expiration_days" type="object">
-The expiration time for shared links.
+共有リンクの有効期限。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="shared_links_expiration_notification_days" type="object">
-The number of days before expiration to notify users.
+有効期限の何日前にユーザーに通知するかを示す日数。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="sharing_item_type" type="object">
-The selected option for the type of items that sharing is enable for.
+共有が有効になっている項目のタイプに対して選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="tag_creation_restriction" type="object">
-The selected option for tag creation restriction.
+タグの作成制限に対して選択されたオプション。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="string">
-  example: `value of configuration`
+  例: `value of configuration`
   
-  The value of the enterprise configuration as a string.
+  Enterprise構成の値 (文字列)。
   </ParamField>
 
 </Expandable>
 </ParamField>
 
 <ParamField body="trash_auto_clear_time" type="object">
-The time before items are permanently deleted from the trash in seconds.
+ごみ箱から項目が完全に削除されるまでの時間 (秒)。
 
 <Expandable>
   <ParamField body="is_used" type="boolean">
-  example: `true`
+  例: `true`
   
-  Indicates whether a configuration is used for a given enterprise.
+  指定したEnterpriseに構成が使用されているかどうかを示します。
   </ParamField>
 
   <ParamField body="value" type="integer">
-  example: `1234`
+  例: `1234`
   
-  The value of the enterprise configuration as an integer.
+  Enterprise構成の値 (整数)。
   </ParamField>
 
 </Expandable>
