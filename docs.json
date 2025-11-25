@@ -5417,7 +5417,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "My Platform Apps",
+      "label": "My Platform apps",
       "href": "https://account.box.com/developers/console"
     }
   },
