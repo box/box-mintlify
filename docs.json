@@ -2720,7 +2720,7 @@
           {
             "tab": "Home",
             "pages": [
-              "ja/index"
+              "ja/guides/index"
             ]
           },
           {
@@ -2729,7 +2729,6 @@
               {
                 "group": " ",
                 "pages": [
-                  "ja/guides/index",
                   {
                     "group": "はじめに",
                     "pages": [
