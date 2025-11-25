@@ -5438,6 +5438,34 @@
       "x": "https://x.com/box",
       "github": "https://github.com/box-community",
       "linkedin": "https://linkedin.com/company/box"
-    }
+    },
+    "links": [
+      {
+        "title": "Resources",
+        "items": [
+          {
+            "label": "Newsletter unsubscribe",
+            "href": "https://go.box.com/preferences.html"
+          },
+          {
+            "label": "Terms of Use",
+            "href": "https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://www.box.com/en-gb/legal/privacypolicy?url_redirect=direct"
+          },
+          {
+            "label": "Cookie Notification",
+            "href": "https://www.box.com/en-gb/legal/cookie-notification?url_redirect=direct"
+          },
+          {
+            "label": "Unlicense",
+            "href": "https://unlicense.org/"
+          }
+        ]
+      }
+    ],
+    "notice": "©2025 Box. Code samples provided under the Unlicense."
   }
 }
