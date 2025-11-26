@@ -984,7 +984,7 @@
             "tab": "API Reference",
             "groups": [
               {
-                "group": "v2025.0",
+                "group": " ",
                 "pages": [
                   "reference/v2025.0/index",
                   {
@@ -1195,7 +1195,7 @@
                 ]
               },
               {
-                "group": "v2024.0",
+                "group": " ",
                 "pages": [
                   "reference/index",
                   {
@@ -3660,7 +3660,7 @@
             "tab": "APIリファレンス",
             "groups": [
               {
-                "group": "2025.0",
+                "group": " ",
                 "pages": [
                   "ja/reference/v2025.0/index",
                   {
@@ -3870,7 +3870,7 @@
                 ]
               },
               {
-                "group": "2024.0",
+                "group": " ",
                 "pages": [
                   "ja/reference/index",
                   {
