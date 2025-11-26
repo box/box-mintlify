@@ -93,7 +93,7 @@ export const TryDemosJA = () => {
       description: "選択した語調でドキュメントを要約します。",
       icon: "/static/ai-dev-zone/icon-ai.svg",
       badges: ["デモ"],
-      href: "/ai-dev-zone-summary/",
+      href: "/ja/ai-dev-zone-summary/",
     },
     {
       id: "freeform",
@@ -101,7 +101,7 @@ export const TryDemosJA = () => {
       description: "自然言語を使用するか文字列化したデータ構造を渡して、Box AI APIでメタデータを抽出します。",
       icon: "/static/ai-dev-zone/icon-ai.svg",
       badges: ["デモ"],
-      href: "/ai-dev-zone-metadata/",
+      href: "/ja/ai-dev-zone-metadata/",
     },
     {
       id: "structured",
@@ -110,7 +110,7 @@ export const TryDemosJA = () => {
         "ドキュメントのメタデータの候補を抽出します。BoxメタデータテンプレートIDまたはあらかじめ定義されたデータ構造を渡します。",
       icon: "/static/ai-dev-zone/icon-ai.svg",
       badges: ["デモ"],
-      href: "/ai-dev-zone-metadata-structured/",
+      href: "/ja/ai-dev-zone-metadata-structured/",
     },
     {
       id: "enhanced",
