@@ -5482,5 +5482,11 @@
       }
     ],
     "notice": "©2025 Box. Code samples provided under the Unlicense."
+  },
+  "analytics": {
+    "customScripts": [
+      "/scripts/locale-links.js",
+      "/scripts/locale-footer-combined.js"
+    ]
   }
 }
