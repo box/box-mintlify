@@ -99,6 +99,10 @@
     // Add a unique marker to identify this as the cookie preferences link
     cookieLink.setAttribute("data-cookie-preferences", "true");
 
+    // Set the appropriate text based on page language
+    const isJapanese = isJapanesePage();
+    cookieLink.textContent = isJapanese ? "Cookie設定" : "Cookie Preferences";
+
     // Append the cloned link to the footer links container
     linksContainer.appendChild(cookieLink);
 
