@@ -26,7 +26,7 @@ export const RelatedLinks = ({ title, items = [] }) => {
 
     // Map badge types to CSS classes
     const badgeType = badge.toLowerCase().replace(/\s+/g, "-");
-    return `badge-${badgeType}`;
+    return `badge-${badge === "ガイド" ? "guide" : badgeType}`;
   };
 
   if (!items || items.length === 0) {
