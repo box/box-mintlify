@@ -2774,6 +2774,19 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Changelog",
+            "pages": [
+              "changelog/index",
+              "changelog/2025",
+              "changelog/2023",
+              "changelog/2022",
+              "changelog/2021",
+              "changelog/2020",
+              "changelog/2019",
+              "changelog/2018"
+            ]
           }
         ]
       },
@@ -5522,6 +5535,19 @@
                   "/ja/sign/webhooks/index"
                 ]
               }
+            ]
+          },
+          {
+            "tab": "変更ログ",
+            "pages": [
+              "ja/changelog/index",
+              "ja/changelog/2025",
+              "ja/changelog/2023",
+              "ja/changelog/2022",
+              "ja/changelog/2021",
+              "ja/changelog/2020",
+              "ja/changelog/2019",
+              "ja/changelog/2018"
             ]
           }
         ]
