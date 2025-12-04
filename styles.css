@@ -218,3 +218,13 @@ footer div.flex.gap-4.flex-col.md\:flex-row.md\:items-center.md\:gap-8.md\:justi
   color: #cecece;
   background-color: #161616;
 }
+
+/* Target the third child (tag list) - should be 2nd */
+.update > div:first-child > div:nth-child(3) {
+  order: 4;
+}
+
+/* Target the fourth child (description) - add order if needed */
+.update > div:first-child > div:nth-child(4) {
+  order: 3;
+}
