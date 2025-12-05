@@ -7,6 +7,11 @@
     "light": "#f6fafd",
     "dark": "#002947"
   },
+  "seo": {
+    "metatags": {
+      "robots": "noindex"
+    }
+  },
   "api": {
     "examples": {
       "languages": [
