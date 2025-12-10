@@ -239,3 +239,12 @@ div#banner a {
   color: #fff;
   font-weight: 600;
 }
+
+nav ul .navbar-link a,
+nav ul #topbar-cta-button a span {
+  border-radius: 50px !important;
+}
+
+nav ul #topbar-cta-button a span {
+  background-color: #0061d5;
+}
