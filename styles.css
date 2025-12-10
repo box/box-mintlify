@@ -257,3 +257,7 @@ nav ul #topbar-cta-button a span {
 #content-area h6 {
   font-weight: 600 !important;
 }
+
+#content-area h1 {
+  font-size: 32px !important;
+}
