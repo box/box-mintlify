@@ -20,7 +20,13 @@
     }
   },
   "fonts": {
-    "family": "Inter"
+    "heading": {
+      "family": "Inter",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter"
+    }
   },
   "banner": {
     "content": "Welcome to the beta version of the new Box developer documentation site! If you wish to use the previous version, go to [box.dev](https://box.dev/).",

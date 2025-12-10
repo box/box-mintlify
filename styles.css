@@ -248,3 +248,12 @@ nav ul #topbar-cta-button a span {
 nav ul #topbar-cta-button a span {
   background-color: #0061d5;
 }
+
+#content-area h1,
+#content-area h2,
+#content-area h3,
+#content-area h4,
+#content-area h5,
+#content-area h6 {
+  font-weight: 600 !important;
+}
