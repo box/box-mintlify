@@ -107,7 +107,13 @@ The last part of the path is your file ID. For example, the URL might look like 
        ```
     
     To get your Developer Token, go to the Box Developer Console, open your app, and navigate to 
-    the **Configuration** tab. Click **Generate Developer Token** to create a new token.   
+    the **Configuration** tab. Click **Generate Developer Token** to create a new token.  
+
+    <Tip>
+      For simplicity, this quick start uses a short-lived developer token. In production, you 
+      should authenticate using your app’s configured method (for example, Client Credentials Grant) 
+      instead of a developer token.
+    </Tip>
 
   </Step>
   <Step title="Create the extract.py file">
