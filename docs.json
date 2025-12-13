@@ -19,6 +19,11 @@
       ]
     }
   },
+  "integrations": {
+    "gtm": {
+      "tagId": "UA-292868-60"
+    }
+  },
   "fonts": {
     "family": "Inter"
   },
