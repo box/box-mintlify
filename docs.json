@@ -118,7 +118,8 @@
                       {
                         "group": "AI quick starts",
                         "pages": [
-                          "guides/box-ai/quick-start/box-ai-extract"
+                          "guides/box-ai/quick-start/box-ai-extract",
+                          "guides/box-ai/quick-start/box-ai-summary"
                         ]
                       }
                     ]
