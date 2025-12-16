@@ -14,7 +14,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     },
     "version": "2025.0",
-    "x-box-commit-hash": "ff61e4068c"
+    "x-box-commit-hash": "851befaf8c"
   },
   "servers": [
     {
@@ -99,6 +99,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_templates' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>' \\\n     -H 'Content-Type: application/json' \\\n     -D '{\n        \"file\": {\n            \"id\": \"12345678\",\n            \"type\": \"file\"\n        }\n}'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "await client.DocgenTemplate.CreateDocgenTemplateV2025R0Async(requestBody: new DocGenTemplateCreateRequestV2025R0(file: new FileReferenceV2025R0(id: file.Id)));"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "try await client.docgenTemplate.createDocgenTemplateV2025R0(requestBody: DocGenTemplateCreateRequestV2025R0(file: FileReferenceV2025R0(id: file.id)))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "client.getDocgenTemplate().createDocgenTemplateV2025R0(new DocGenTemplateCreateRequestV2025R0(new FileReferenceV2025R0(file.getId())))"
+          },
+          {
+            "lang": "node",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "await client.docgenTemplate.createDocgenTemplateV2025R0({\n  file: new FileReferenceV2025R0({ id: file.id }),\n} satisfies DocGenTemplateCreateRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Doc Genテンプレートを作成",
+            "source": "client.docgen_template.create_docgen_template_v2025_r0(FileReferenceV2025R0(id=file.id))"
+          }
         ]
       },
       "get": {
@@ -177,6 +209,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_templates' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "await client.DocgenTemplate.GetDocgenTemplatesV2025R0Async();"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "try await client.docgenTemplate.getDocgenTemplatesV2025R0()"
+          },
+          {
+            "lang": "java",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "client.getDocgenTemplate().getDocgenTemplatesV2025R0()"
+          },
+          {
+            "lang": "node",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "await client.docgenTemplate.getDocgenTemplatesV2025R0();"
+          },
+          {
+            "lang": "python",
+            "label": "Box Doc Genテンプレートのリストを取得",
+            "source": "client.docgen_template.get_docgen_templates_v2025_r0()"
+          }
         ]
       }
     },
@@ -258,6 +322,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "curl -L -X DELETE 'https://api.box.com/2.0/docgen_templates/12345678' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "await client.DocgenTemplate.DeleteDocgenTemplateByIdV2025R0Async(templateId: NullableUtils.Unwrap(createdDocgenTemplate.File).Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "try await client.docgenTemplate.deleteDocgenTemplateByIdV2025R0(templateId: createdDocgenTemplate.file!.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "client.getDocgenTemplate().deleteDocgenTemplateByIdV2025R0(createdDocgenTemplate.getFile().getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "await client.docgenTemplate.deleteDocgenTemplateByIdV2025R0(\n  createdDocgenTemplate.file!.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Doc Genテンプレートを削除",
+            "source": "client.docgen_template.delete_docgen_template_by_id_v2025_r0(\n    created_docgen_template.file.id\n)"
+          }
         ]
       },
       "get": {
@@ -324,6 +420,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_templates/12345678' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "await client.DocgenTemplate.GetDocgenTemplateByIdV2025R0Async(templateId: NullableUtils.Unwrap(createdDocgenTemplate.File).Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "try await client.docgenTemplate.getDocgenTemplateByIdV2025R0(templateId: createdDocgenTemplate.file!.id)"
+          },
+          {
+            "lang": "java",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "client.getDocgenTemplate().getDocgenTemplateByIdV2025R0(createdDocgenTemplate.getFile().getId())"
+          },
+          {
+            "lang": "node",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "await client.docgenTemplate.getDocgenTemplateByIdV2025R0(\n  createdDocgenTemplate.file!.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "IDを指定してBox Doc Genテンプレートを取得",
+            "source": "client.docgen_template.get_docgen_template_by_id_v2025_r0(\n    created_docgen_template.file.id\n)"
+          }
         ]
       }
     },
@@ -454,6 +582,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_templates/12345678/tags' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "await client.DocgenTemplate.GetDocgenTemplateTagsV2025R0Async(templateId: NullableUtils.Unwrap(fetchedDocgenTemplate.File).Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "try await client.docgenTemplate.getDocgenTemplateTagsV2025R0(templateId: fetchedDocgenTemplate.file!.id)"
+          },
+          {
+            "lang": "java",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "client.getDocgenTemplate().getDocgenTemplateTagsV2025R0(fetchedDocgenTemplate.getFile().getId())"
+          },
+          {
+            "lang": "node",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "await client.docgenTemplate.getDocgenTemplateTagsV2025R0(\n  fetchedDocgenTemplate.file!.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "テンプレート内のすべてのBox Doc Genテンプレートタグのリストを取得",
+            "source": "client.docgen_template.get_docgen_template_tags_v2025_r0(\n    fetched_docgen_template.file.id\n)"
+          }
         ]
       }
     },
@@ -532,6 +692,38 @@
         "x-box-tag": "docgen",
         "tags": [
           "Box Doc Gen"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/docgen_jobs/12345\" \\\n     -H 'box-version: 2025.0' \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "await client.Docgen.GetDocgenJobByIdV2025R0Async(jobId: docgenJobItemFromList.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "try await client.docgen.getDocgenJobByIdV2025R0(jobId: docgenJobItemFromList.id)"
+          },
+          {
+            "lang": "java",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "client.getDocgen().getDocgenJobByIdV2025R0(docgenJobItemFromList.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "await client.docgen.getDocgenJobByIdV2025R0(docgenJobItemFromList.id);"
+          },
+          {
+            "lang": "python",
+            "label": "IDを指定してBox Doc Genジョブを取得",
+            "source": "client.docgen.get_docgen_job_by_id_v2025_r0(docgen_job_item_from_list.id)"
+          }
         ]
       }
     },
@@ -622,6 +814,38 @@
         "x-box-tag": "docgen",
         "tags": [
           "Box Doc Gen"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/docgen_jobs\" \\\n     -H 'box-version: 2025.0' \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "await client.Docgen.GetDocgenJobsV2025R0Async(queryParams: new GetDocgenJobsV2025R0QueryParams() { Limit = 10000 });"
+          },
+          {
+            "lang": "swift",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "try await client.docgen.getDocgenJobsV2025R0(queryParams: GetDocgenJobsV2025R0QueryParams(limit: Int64(10000)))"
+          },
+          {
+            "lang": "java",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "client.getDocgen().getDocgenJobsV2025R0(new GetDocgenJobsV2025R0QueryParams.Builder().limit(10000L).build())"
+          },
+          {
+            "lang": "node",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "await client.docgen.getDocgenJobsV2025R0({\n  limit: 10000,\n} satisfies GetDocgenJobsV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "すべてのBox Doc Genジョブのリストを取得",
+            "source": "client.docgen.get_docgen_jobs_v2025_r0(limit=10000)"
+          }
         ]
       }
     },
@@ -732,6 +956,38 @@
         "x-box-tag": "docgen_template",
         "tags": [
           "Box Doc Genテンプレート"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_template_jobs/12345678' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "await client.DocgenTemplate.GetDocgenTemplateJobByIdV2025R0Async(templateId: NullableUtils.Unwrap(fetchedDocgenTemplate.File).Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "try await client.docgenTemplate.getDocgenTemplateJobByIdV2025R0(templateId: fetchedDocgenTemplate.file!.id)"
+          },
+          {
+            "lang": "java",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "client.getDocgenTemplate().getDocgenTemplateJobByIdV2025R0(fetchedDocgenTemplate.getFile().getId())"
+          },
+          {
+            "lang": "node",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "await client.docgenTemplate.getDocgenTemplateJobByIdV2025R0(\n  fetchedDocgenTemplate.file!.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "テンプレートのすべてのBox Doc Genジョブのリストを取得",
+            "source": "client.docgen_template.get_docgen_template_job_by_id_v2025_r0(\n    fetched_docgen_template.file.id\n)"
+          }
         ]
       }
     },
@@ -842,6 +1098,38 @@
         "x-box-tag": "docgen",
         "tags": [
           "Box Doc Gen"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/docgen_batch_jobs/12345\" \\\n     -H 'box-version: 2025.0' \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "await client.Docgen.GetDocgenBatchJobByIdV2025R0Async(batchId: docgenBatch.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "try await client.docgen.getDocgenBatchJobByIdV2025R0(batchId: docgenBatch.id)"
+          },
+          {
+            "lang": "java",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "client.getDocgen().getDocgenBatchJobByIdV2025R0(docgenBatch.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "await client.docgen.getDocgenBatchJobByIdV2025R0(docgenBatch.id);"
+          },
+          {
+            "lang": "python",
+            "label": "バッチIDを指定してBox Doc Genジョブを取得",
+            "source": "client.docgen.get_docgen_batch_job_by_id_v2025_r0(docgen_batch.id)"
+          }
         ]
       }
     },
@@ -910,6 +1198,38 @@
         "x-box-tag": "docgen",
         "tags": [
           "Box Doc Gen"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "curl -L 'https://api.box.com/2.0/docgen_batches' \\\n     -H 'box-version: 2025.0' \\\n     -H 'Authorization: Bearer <ACCESS_TOKEN>' \\\n     -D '{\n        \"file\": {\n            \"id\": \"12345678\",\n            \"type\": \"file\"\n        },\n        \"input_source\": \"api\",\n        \"destination_folder\": {\n            \"id\": \"12345678\",\n            \"type\": \"folder\"\n        },\n        \"output_type\": \"docx\",\n        \"document_generation_data\": [\n            {\n                \"generated_file_name\": \"Image test\",\n                \"user_input\": {\n                    \"order\": {\n                        \"id\": \"12305\",\n                        \"date\": \"18-08-2023\",\n                        \"country\": \"US\",\n                        \"expiryDate\": \"18-08-2024\",\n                        \"currency\": \"$\",\n                        \"amount\": 5060.5,\n                        \"taxRate\": 10,\n                        \"requester\": \"John\",\n                        \"approver\": \"Smith\",\n                        \"department\": \"Procurement\",\n                        \"paymentTerms\": \"30 days\",\n                        \"deliveryTerms\": \"30 days\",\n                        \"deliveryDate\": \"18-09-2023\",\n                        \"vendor\": {\n                            \"company\": \"Example company\",\n                            \"address\": {\n                                \"street\": \"Example street\",\n                                \"city\": \"Example city\",\n                                \"zip\": \"EX-456\"\n                            }\n                        },\n                        \"products\": [\n                            {\n                                \"id\": 1,\n                                \"name\": \"A4 Papers\",\n                                \"type\": \"non-fragile\",\n                                \"quantity\": 100,\n                                \"price\": 29,\n                                \"amount\": 2900\n                            },\n                            {\n                                \"id\": 2,\n                                \"name\": \"Ink  Cartridge\",\n                                \"type\": \"non-fragile\",\n                                \"quantity\": 40,\n                                \"price\": 39,\n                                \"amount\": 1560\n                            },\n                            {\n                                \"id\": 3,\n                                \"name\": \"Adhesive tape\",\n                                \"type\": \"non-fragile\",\n                                \"quantity\": 20,\n                                \"price\": 30,\n                                \"amount\": 600.5\n                            }\n                        ]\n                    }\n                }\n            }\n        ]`"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "await client.Docgen.CreateDocgenBatchV2025R0Async(requestBody: new DocGenBatchCreateRequestV2025R0(file: new FileReferenceV2025R0(id: uploadedFileDocx.Id), inputSource: \"api\", destinationFolder: new DocGenBatchCreateRequestV2025R0DestinationFolderField(id: folder.Id), outputType: \"pdf\", documentGenerationData: Array.AsReadOnly(new [] {new DocGenDocumentGenerationDataV2025R0(generatedFileName: \"test\", userInput: new Dictionary<string, object>() { { \"abc\", \"xyz\" } })})));"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "try await client.docgen.createDocgenBatchV2025R0(requestBody: DocGenBatchCreateRequestV2025R0(file: FileReferenceV2025R0(id: uploadedFile.id), inputSource: \"api\", destinationFolder: DocGenBatchCreateRequestV2025R0DestinationFolderField(id: folder.id), outputType: \"pdf\", documentGenerationData: [DocGenDocumentGenerationDataV2025R0(generatedFileName: \"test\", userInput: [\"abc\": \"xyz\"])]))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "client.getDocgen().createDocgenBatchV2025R0(new DocGenBatchCreateRequestV2025R0(new FileReferenceV2025R0(uploadedFileDocx.getId()), \"api\", new DocGenBatchCreateRequestV2025R0DestinationFolderField(folder.getId()), \"pdf\", Arrays.asList(new DocGenDocumentGenerationDataV2025R0(\"test\", mapOf(entryOf(\"abc\", \"xyz\"))))))"
+          },
+          {
+            "lang": "node",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "await client.docgen.createDocgenBatchV2025R0({\n  file: new FileReferenceV2025R0({ id: uploadedFile.id }),\n  inputSource: 'api',\n  destinationFolder: new DocGenBatchCreateRequestV2025R0DestinationFolderField({\n    id: folder.id,\n  }),\n  outputType: 'pdf',\n  documentGenerationData: [\n    {\n      generatedFileName: 'test',\n      userInput: { ['abc']: 'xyz' },\n    } satisfies DocGenDocumentGenerationDataV2025R0,\n  ],\n} satisfies DocGenBatchCreateRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
+            "source": "client.docgen.create_docgen_batch_v2025_r0(\n    FileReferenceV2025R0(id=uploaded_file_docx.id),\n    \"api\",\n    CreateDocgenBatchV2025R0DestinationFolder(id=folder.id),\n    \"pdf\",\n    [\n        DocGenDocumentGenerationDataV2025R0(\n            generated_file_name=\"test\", user_input={\"abc\": \"xyz\"}\n        )\n    ],\n)"
+          }
         ]
       }
     },
@@ -974,7 +1294,34 @@
             }
           }
         },
-        "x-box-tag": "enterprise_configurations"
+        "x-box-tag": "enterprise_configurations",
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Enterprise構成を取得",
+            "source": "await adminClient.EnterpriseConfigurations.GetEnterpriseConfigurationByIdV2025R0Async(enterpriseId: enterpriseId, queryParams: new GetEnterpriseConfigurationByIdV2025R0QueryParams(categories: Array.AsReadOnly(new [] {\"user_settings\",\"content_and_sharing\",\"security\",\"shield\"})));"
+          },
+          {
+            "lang": "swift",
+            "label": "Enterprise構成を取得",
+            "source": "try await adminClient.enterpriseConfigurations.getEnterpriseConfigurationByIdV2025R0(enterpriseId: enterpriseId, queryParams: GetEnterpriseConfigurationByIdV2025R0QueryParams(categories: [\"user_settings\", \"content_and_sharing\", \"security\", \"shield\"]))"
+          },
+          {
+            "lang": "java",
+            "label": "Enterprise構成を取得",
+            "source": "adminClient.getEnterpriseConfigurations().getEnterpriseConfigurationByIdV2025R0(enterpriseId, new GetEnterpriseConfigurationByIdV2025R0QueryParams(Arrays.asList(\"user_settings\", \"content_and_sharing\", \"security\", \"shield\")))"
+          },
+          {
+            "lang": "node",
+            "label": "Enterprise構成を取得",
+            "source": "await adminClient.enterpriseConfigurations.getEnterpriseConfigurationByIdV2025R0(\n  enterpriseId,\n  {\n    categories: ['user_settings', 'content_and_sharing', 'security', 'shield'],\n  } satisfies GetEnterpriseConfigurationByIdV2025R0QueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Enterprise構成を取得",
+            "source": "admin_client.enterprise_configurations.get_enterprise_configuration_by_id_v2025_r0(\n    enterprise_id, [\"user_settings\", \"content_and_sharing\", \"security\", \"shield\"]\n)"
+          }
+        ]
       }
     },
     "/hubs": {
@@ -1080,6 +1427,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "すべてのBox Hubのリストを取得",
+            "source": "await client.Hubs.GetHubsV2025R0Async(queryParams: new GetHubsV2025R0QueryParams() { Scope = \"all\", Sort = \"name\", Direction = GetHubsV2025R0QueryParamsDirectionField.Asc });"
+          },
+          {
+            "lang": "swift",
+            "label": "すべてのBox Hubのリストを取得",
+            "source": "try await client.hubs.getHubsV2025R0(queryParams: GetHubsV2025R0QueryParams(scope: \"all\", sort: \"name\", direction: GetHubsV2025R0QueryParamsDirectionField.asc))"
+          },
+          {
+            "lang": "java",
+            "label": "すべてのBox Hubのリストを取得",
+            "source": "client.getHubs().getHubsV2025R0(new GetHubsV2025R0QueryParams.Builder().scope(\"all\").sort(\"name\").direction(GetHubsV2025R0QueryParamsDirectionField.ASC).build())"
+          },
+          {
+            "lang": "node",
+            "label": "すべてのBox Hubのリストを取得",
+            "source": "await client.hubs.getHubsV2025R0({\n  scope: 'all',\n  sort: 'name',\n  direction: 'ASC' as GetHubsV2025R0QueryParamsDirectionField,\n} satisfies GetHubsV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "すべてのBox Hubのリストを取得",
+            "source": "client.hubs.get_hubs_v2025_r0(\n    scope=\"all\", sort=\"name\", direction=GetHubsV2025R0Direction.ASC\n)"
+          }
         ]
       },
       "post": {
@@ -1146,6 +1520,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubを作成",
+            "source": "await client.Hubs.CreateHubV2025R0Async(requestBody: new HubCreateRequestV2025R0(title: hubTitle) { Description = hubDescription });"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubを作成",
+            "source": "try await client.hubs.createHubV2025R0(requestBody: HubCreateRequestV2025R0(title: hubTitle, description: hubDescription))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubを作成",
+            "source": "client.getHubs().createHubV2025R0(new HubCreateRequestV2025R0.Builder(hubTitle).description(hubDescription).build())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubを作成",
+            "source": "await client.hubs.createHubV2025R0({\n  title: hubTitle,\n  description: hubDescription,\n} satisfies HubCreateRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubを作成",
+            "source": "client.hubs.create_hub_v2025_r0(hub_title, description=hub_description)"
+          }
         ]
       }
     },
@@ -1241,6 +1642,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "リクエストしている企業のすべてのBox Hubのリストを取得",
+            "source": "await client.Hubs.GetEnterpriseHubsV2025R0Async(queryParams: new GetEnterpriseHubsV2025R0QueryParams() { Sort = \"name\", Direction = GetEnterpriseHubsV2025R0QueryParamsDirectionField.Asc });"
+          },
+          {
+            "lang": "swift",
+            "label": "リクエストしている企業のすべてのBox Hubのリストを取得",
+            "source": "try await client.hubs.getEnterpriseHubsV2025R0(queryParams: GetEnterpriseHubsV2025R0QueryParams(sort: \"name\", direction: GetEnterpriseHubsV2025R0QueryParamsDirectionField.asc))"
+          },
+          {
+            "lang": "java",
+            "label": "リクエストしている企業のすべてのBox Hubのリストを取得",
+            "source": "client.getHubs().getEnterpriseHubsV2025R0(new GetEnterpriseHubsV2025R0QueryParams.Builder().sort(\"name\").direction(GetEnterpriseHubsV2025R0QueryParamsDirectionField.ASC).build())"
+          },
+          {
+            "lang": "node",
+            "label": "リクエストしている企業のすべてのBox Hubのリストを取得",
+            "source": "await client.hubs.getEnterpriseHubsV2025R0({\n  sort: 'name',\n  direction: 'ASC' as GetEnterpriseHubsV2025R0QueryParamsDirectionField,\n} satisfies GetEnterpriseHubsV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "リクエストしている企業のすべてのBox Hubのリストを取得",
+            "source": "client.hubs.get_enterprise_hubs_v2025_r0(\n    sort=\"name\", direction=GetEnterpriseHubsV2025R0Direction.ASC\n)"
+          }
         ]
       }
     },
@@ -1309,6 +1737,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "IDを指定してBox Hubの情報を取得",
+            "source": "await client.Hubs.GetHubByIdV2025R0Async(hubId: hubId);"
+          },
+          {
+            "lang": "swift",
+            "label": "IDを指定してBox Hubの情報を取得",
+            "source": "try await client.hubs.getHubByIdV2025R0(hubId: hubId)"
+          },
+          {
+            "lang": "java",
+            "label": "IDを指定してBox Hubの情報を取得",
+            "source": "client.getHubs().getHubByIdV2025R0(hubId)"
+          },
+          {
+            "lang": "node",
+            "label": "IDを指定してBox Hubの情報を取得",
+            "source": "await client.hubs.getHubByIdV2025R0(hubId);"
+          },
+          {
+            "lang": "python",
+            "label": "IDを指定してBox Hubの情報を取得",
+            "source": "client.hubs.get_hub_by_id_v2025_r0(hub_id)"
+          }
         ]
       },
       "put": {
@@ -1385,6 +1840,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "IDを指定してBox Hubの情報を更新",
+            "source": "await client.Hubs.UpdateHubByIdV2025R0Async(hubId: hubId, requestBody: new HubUpdateRequestV2025R0() { Title = newHubTitle, Description = newHubDescription });"
+          },
+          {
+            "lang": "swift",
+            "label": "IDを指定してBox Hubの情報を更新",
+            "source": "try await client.hubs.updateHubByIdV2025R0(hubId: hubId, requestBody: HubUpdateRequestV2025R0(title: newHubTitle, description: newHubDescription))"
+          },
+          {
+            "lang": "java",
+            "label": "IDを指定してBox Hubの情報を更新",
+            "source": "client.getHubs().updateHubByIdV2025R0(hubId, new HubUpdateRequestV2025R0.Builder().title(newHubTitle).description(newHubDescription).build())"
+          },
+          {
+            "lang": "node",
+            "label": "IDを指定してBox Hubの情報を更新",
+            "source": "await client.hubs.updateHubByIdV2025R0(hubId, {\n  title: newHubTitle,\n  description: newHubDescription,\n} satisfies HubUpdateRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "IDを指定してBox Hubの情報を更新",
+            "source": "client.hubs.update_hub_by_id_v2025_r0(\n    hub_id, title=new_hub_title, description=new_hub_description\n)"
+          }
         ]
       },
       "delete": {
@@ -1444,6 +1926,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubを削除",
+            "source": "await client.Hubs.DeleteHubByIdV2025R0Async(hubId: hubId);"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubを削除",
+            "source": "try await client.hubs.deleteHubByIdV2025R0(hubId: hubId)"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubを削除",
+            "source": "client.getHubs().deleteHubByIdV2025R0(hubId)"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubを削除",
+            "source": "await client.hubs.deleteHubByIdV2025R0(hubId);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubを削除",
+            "source": "client.hubs.delete_hub_by_id_v2025_r0(hub_id)"
+          }
         ]
       }
     },
@@ -1512,6 +2021,33 @@
         "x-box-tag": "hubs",
         "tags": [
           "Box Hubs"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubをコピー",
+            "source": "await client.Hubs.CopyHubV2025R0Async(hubId: createdHub.Id, requestBody: new HubCopyRequestV2025R0() { Title = copiedHubTitle, Description = copiedHubDescription });"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubをコピー",
+            "source": "try await client.hubs.copyHubV2025R0(hubId: createdHub.id, requestBody: HubCopyRequestV2025R0(title: copiedHubTitle, description: copiedHubDescription))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubをコピー",
+            "source": "client.getHubs().copyHubV2025R0(createdHub.getId(), new HubCopyRequestV2025R0.Builder().title(copiedHubTitle).description(copiedHubDescription).build())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubをコピー",
+            "source": "await client.hubs.copyHubV2025R0(createdHub.id, {\n  title: copiedHubTitle,\n  description: copiedHubDescription,\n} satisfies HubCopyRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubをコピー",
+            "source": "client.hubs.copy_hub_v2025_r0(\n    created_hub.id, title=copied_hub_title, description=copied_hub_description\n)"
+          }
         ]
       }
     },
@@ -1602,6 +2138,33 @@
         "x-box-tag": "hub_collaborations",
         "tags": [
           "Box Hubコラボレーション"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubコラボレーションを取得",
+            "source": "await client.HubCollaborations.GetHubCollaborationsV2025R0Async(queryParams: new GetHubCollaborationsV2025R0QueryParams(hubId: hub.Id));"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubコラボレーションを取得",
+            "source": "try await client.hubCollaborations.getHubCollaborationsV2025R0(queryParams: GetHubCollaborationsV2025R0QueryParams(hubId: hub.id))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubコラボレーションを取得",
+            "source": "client.getHubCollaborations().getHubCollaborationsV2025R0(new GetHubCollaborationsV2025R0QueryParams(hub.getId()))"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubコラボレーションを取得",
+            "source": "await client.hubCollaborations.getHubCollaborationsV2025R0({\n  hubId: hub.id,\n} satisfies GetHubCollaborationsV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubコラボレーションを取得",
+            "source": "client.hub_collaborations.get_hub_collaborations_v2025_r0(hub.id)"
+          }
         ]
       },
       "post": {
@@ -1658,6 +2221,33 @@
         "x-box-tag": "hub_collaborations",
         "tags": [
           "Box Hubコラボレーション"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubコラボレーションを作成",
+            "source": "await client.HubCollaborations.CreateHubCollaborationV2025R0Async(requestBody: new HubCollaborationCreateRequestV2025R0(hub: new HubCollaborationCreateRequestV2025R0HubField(id: hub.Id), accessibleBy: new HubCollaborationCreateRequestV2025R0AccessibleByField(type: \"user\") { Id = user.Id }, role: \"viewer\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubコラボレーションを作成",
+            "source": "try await client.hubCollaborations.createHubCollaborationV2025R0(requestBody: HubCollaborationCreateRequestV2025R0(hub: HubCollaborationCreateRequestV2025R0HubField(id: hub.id), accessibleBy: HubCollaborationCreateRequestV2025R0AccessibleByField(type: \"user\", id: user.id), role: \"viewer\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubコラボレーションを作成",
+            "source": "client.getHubCollaborations().createHubCollaborationV2025R0(new HubCollaborationCreateRequestV2025R0(new HubCollaborationCreateRequestV2025R0HubField(hub.getId()), new HubCollaborationCreateRequestV2025R0AccessibleByField.Builder(\"user\").id(user.getId()).build(), \"viewer\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubコラボレーションを作成",
+            "source": "await client.hubCollaborations.createHubCollaborationV2025R0({\n  hub: new HubCollaborationCreateRequestV2025R0HubField({ id: hub.id }),\n  accessibleBy: {\n    type: 'user',\n    id: user.id,\n  } satisfies HubCollaborationCreateRequestV2025R0AccessibleByField,\n  role: 'viewer',\n} satisfies HubCollaborationCreateRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubコラボレーションを作成",
+            "source": "client.hub_collaborations.create_hub_collaboration_v2025_r0(\n    CreateHubCollaborationV2025R0Hub(id=hub.id),\n    CreateHubCollaborationV2025R0AccessibleBy(type=\"user\", id=user.id),\n    \"viewer\",\n)"
+          }
         ]
       }
     },
@@ -1726,6 +2316,33 @@
         "x-box-tag": "hub_collaborations",
         "tags": [
           "Box Hubコラボレーション"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "コラボレーションIDを指定してBox Hubコラボレーションを取得",
+            "source": "await client.HubCollaborations.GetHubCollaborationByIdV2025R0Async(hubCollaborationId: createdCollaboration.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "コラボレーションIDを指定してBox Hubコラボレーションを取得",
+            "source": "try await client.hubCollaborations.getHubCollaborationByIdV2025R0(hubCollaborationId: createdCollaboration.id)"
+          },
+          {
+            "lang": "java",
+            "label": "コラボレーションIDを指定してBox Hubコラボレーションを取得",
+            "source": "client.getHubCollaborations().getHubCollaborationByIdV2025R0(createdCollaboration.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "コラボレーションIDを指定してBox Hubコラボレーションを取得",
+            "source": "await client.hubCollaborations.getHubCollaborationByIdV2025R0(\n  createdCollaboration.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "コラボレーションIDを指定してBox Hubコラボレーションを取得",
+            "source": "client.hub_collaborations.get_hub_collaboration_by_id_v2025_r0(created_collaboration.id)"
+          }
         ]
       },
       "put": {
@@ -1792,6 +2409,33 @@
         "x-box-tag": "hub_collaborations",
         "tags": [
           "Box Hubコラボレーション"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubコラボレーションを更新",
+            "source": "await client.HubCollaborations.UpdateHubCollaborationByIdV2025R0Async(hubCollaborationId: createdCollaboration.Id, requestBody: new HubCollaborationUpdateRequestV2025R0() { Role = \"editor\" });"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubコラボレーションを更新",
+            "source": "try await client.hubCollaborations.updateHubCollaborationByIdV2025R0(hubCollaborationId: createdCollaboration.id, requestBody: HubCollaborationUpdateRequestV2025R0(role: \"editor\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubコラボレーションを更新",
+            "source": "client.getHubCollaborations().updateHubCollaborationByIdV2025R0(createdCollaboration.getId(), new HubCollaborationUpdateRequestV2025R0.Builder().role(\"editor\").build())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubコラボレーションを更新",
+            "source": "await client.hubCollaborations.updateHubCollaborationByIdV2025R0(\n  createdCollaboration.id,\n  { role: 'editor' } satisfies HubCollaborationUpdateRequestV2025R0,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubコラボレーションを更新",
+            "source": "client.hub_collaborations.update_hub_collaboration_by_id_v2025_r0(\n    created_collaboration.id, role=\"editor\"\n)"
+          }
         ]
       },
       "delete": {
@@ -1841,6 +2485,33 @@
         "x-box-tag": "hub_collaborations",
         "tags": [
           "Box Hubコラボレーション"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubコラボレーションを削除",
+            "source": "await client.HubCollaborations.DeleteHubCollaborationByIdV2025R0Async(hubCollaborationId: createdCollaboration.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubコラボレーションを削除",
+            "source": "try await client.hubCollaborations.deleteHubCollaborationByIdV2025R0(hubCollaborationId: createdCollaboration.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubコラボレーションを削除",
+            "source": "client.getHubCollaborations().deleteHubCollaborationByIdV2025R0(createdCollaboration.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubコラボレーションを削除",
+            "source": "await client.hubCollaborations.deleteHubCollaborationByIdV2025R0(\n  createdCollaboration.id,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubコラボレーションを削除",
+            "source": "client.hub_collaborations.delete_hub_collaboration_by_id_v2025_r0(\n    created_collaboration.id\n)"
+          }
         ]
       }
     },
@@ -1931,6 +2602,33 @@
         "x-box-tag": "hub_items",
         "tags": [
           "Box Hubの項目"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubの項目を取得",
+            "source": "await client.HubItems.GetHubItemsV2025R0Async(queryParams: new GetHubItemsV2025R0QueryParams(hubId: createdHub.Id));"
+          },
+          {
+            "lang": "swift",
+            "label": "Box Hubの項目を取得",
+            "source": "try await client.hubItems.getHubItemsV2025R0(queryParams: GetHubItemsV2025R0QueryParams(hubId: createdHub.id))"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubの項目を取得",
+            "source": "client.getHubItems().getHubItemsV2025R0(new GetHubItemsV2025R0QueryParams(createdHub.getId()))"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubの項目を取得",
+            "source": "await client.hubItems.getHubItemsV2025R0({\n  hubId: createdHub.id,\n} satisfies GetHubItemsV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubの項目を取得",
+            "source": "client.hub_items.get_hub_items_v2025_r0(created_hub.id)"
+          }
         ]
       }
     },
@@ -2009,6 +2707,28 @@
         "x-box-tag": "hub_items",
         "tags": [
           "Box Hubの項目"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Box Hubの項目を管理",
+            "source": "await client.HubItems.ManageHubItemsV2025R0Async(hubId: createdHub.Id, requestBody: new HubItemsManageRequestV2025R0() { Operations = Array.AsReadOnly(new [] {new HubItemOperationV2025R0(action: HubItemOperationV2025R0ActionField.Add, item: new FolderReferenceV2025R0(id: folder.Id))}) });"
+          },
+          {
+            "lang": "java",
+            "label": "Box Hubの項目を管理",
+            "source": "client.getHubItems().manageHubItemsV2025R0(createdHub.getId(), new HubItemsManageRequestV2025R0.Builder().operations(Arrays.asList(new HubItemOperationV2025R0(HubItemOperationV2025R0ActionField.ADD, new FolderReferenceV2025R0(folder.getId())))).build())"
+          },
+          {
+            "lang": "node",
+            "label": "Box Hubの項目を管理",
+            "source": "await client.hubItems.manageHubItemsV2025R0(createdHub.id, {\n  operations: [\n    {\n      action: 'add' as HubItemOperationV2025R0ActionField,\n      item: new FolderReferenceV2025R0({ id: folder.id }),\n    } satisfies HubItemOperationV2025R0,\n  ],\n} satisfies HubItemsManageRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Box Hubの項目を管理",
+            "source": "client.hub_items.manage_hub_items_v2025_r0(\n    created_hub.id,\n    operations=[\n        HubItemOperationV2025R0(\n            action=HubItemOperationV2025R0ActionField.ADD,\n            item=FolderReferenceV2025R0(id=folder.id),\n        )\n    ],\n)"
+          }
         ]
       }
     },
@@ -2037,6 +2757,28 @@
         "x-box-tag": "shield_lists",
         "tags": [
           "Shieldリスト"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "企業のShieldリストを取得",
+            "source": "await client.ShieldLists.GetShieldListsV2025R0Async();"
+          },
+          {
+            "lang": "java",
+            "label": "企業のShieldリストを取得",
+            "source": "client.getShieldLists().getShieldListsV2025R0()"
+          },
+          {
+            "lang": "node",
+            "label": "企業のShieldリストを取得",
+            "source": "await client.shieldLists.getShieldListsV2025R0();"
+          },
+          {
+            "lang": "python",
+            "label": "企業のShieldリストを取得",
+            "source": "client.shield_lists.get_shield_lists_v2025_r0()"
+          }
         ]
       },
       "post": {
@@ -2083,6 +2825,28 @@
         "x-box-tag": "shield_lists",
         "tags": [
           "Shieldリスト"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Shieldリストを作成",
+            "source": "await client.ShieldLists.CreateShieldListV2025R0Async(requestBody: new ShieldListsCreateV2025R0(name: shieldListCountryName, content: new ShieldListContentCountryV2025R0(type: ShieldListContentCountryV2025R0TypeField.Country, countryCodes: Array.AsReadOnly(new [] {\"US\",\"PL\"}))) { Description = \"A list of things that are shielded\" });"
+          },
+          {
+            "lang": "java",
+            "label": "Shieldリストを作成",
+            "source": "client.getShieldLists().createShieldListV2025R0(new ShieldListsCreateV2025R0.Builder(shieldListCountryName, new ShieldListContentCountryV2025R0.Builder(Arrays.asList(\"US\", \"PL\")).type(ShieldListContentCountryV2025R0TypeField.COUNTRY).build()).description(\"A list of things that are shielded\").build())"
+          },
+          {
+            "lang": "node",
+            "label": "Shieldリストを作成",
+            "source": "await client.shieldLists.createShieldListV2025R0({\n  name: shieldListCountryName,\n  description: 'A list of things that are shielded',\n  content: new ShieldListContentCountryV2025R0({\n    type: 'country' as ShieldListContentCountryV2025R0TypeField,\n    countryCodes: ['US', 'PL'],\n  }),\n} satisfies ShieldListsCreateV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Shieldリストを作成",
+            "source": "client.shield_lists.create_shield_list_v2025_r0(\n    shield_list_country_name,\n    ShieldListContentCountryV2025R0(\n        type=ShieldListContentCountryV2025R0TypeField.COUNTRY,\n        country_codes=[\"US\", \"PL\"],\n    ),\n    description=\"A list of things that are shielded\",\n)"
+          }
         ]
       }
     },
@@ -2131,6 +2895,28 @@
         "x-box-tag": "shield_lists",
         "tags": [
           "Shieldリスト"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "ShieldリストIDを指定して1つのShieldリストを取得",
+            "source": "await client.ShieldLists.GetShieldListByIdV2025R0Async(shieldListId: shieldListCountry.Id);"
+          },
+          {
+            "lang": "java",
+            "label": "ShieldリストIDを指定して1つのShieldリストを取得",
+            "source": "client.getShieldLists().getShieldListByIdV2025R0(shieldListCountry.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "ShieldリストIDを指定して1つのShieldリストを取得",
+            "source": "await client.shieldLists.getShieldListByIdV2025R0(shieldListCountry.id);"
+          },
+          {
+            "lang": "python",
+            "label": "ShieldリストIDを指定して1つのShieldリストを取得",
+            "source": "client.shield_lists.get_shield_list_by_id_v2025_r0(shield_list_country.id)"
+          }
         ]
       },
       "delete": {
@@ -2180,6 +2966,28 @@
         "x-box-tag": "shield_lists",
         "tags": [
           "Shieldリスト"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "ShieldリストIDを指定して1つのShieldリストを削除",
+            "source": "await client.ShieldLists.DeleteShieldListByIdV2025R0Async(shieldListId: shieldListCountry.Id);"
+          },
+          {
+            "lang": "java",
+            "label": "ShieldリストIDを指定して1つのShieldリストを削除",
+            "source": "client.getShieldLists().deleteShieldListByIdV2025R0(shieldListCountry.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "ShieldリストIDを指定して1つのShieldリストを削除",
+            "source": "await client.shieldLists.deleteShieldListByIdV2025R0(shieldListCountry.id);"
+          },
+          {
+            "lang": "python",
+            "label": "ShieldリストIDを指定して1つのShieldリストを削除",
+            "source": "client.shield_lists.delete_shield_list_by_id_v2025_r0(shield_list_country.id)"
+          }
         ]
       },
       "put": {
@@ -2245,6 +3053,28 @@
         "x-box-tag": "shield_lists",
         "tags": [
           "Shieldリスト"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Shieldリストを更新",
+            "source": "await client.ShieldLists.UpdateShieldListByIdV2025R0Async(shieldListId: shieldListCountry.Id, requestBody: new ShieldListsUpdateV2025R0(name: shieldListCountryName, content: new ShieldListContentCountryV2025R0(type: ShieldListContentCountryV2025R0TypeField.Country, countryCodes: Array.AsReadOnly(new [] {\"US\"}))) { Description = \"Updated description\" });"
+          },
+          {
+            "lang": "java",
+            "label": "Shieldリストを更新",
+            "source": "client.getShieldLists().updateShieldListByIdV2025R0(shieldListCountry.getId(), new ShieldListsUpdateV2025R0.Builder(shieldListCountryName, new ShieldListContentCountryV2025R0.Builder(Arrays.asList(\"US\")).type(ShieldListContentCountryV2025R0TypeField.COUNTRY).build()).description(\"Updated description\").build())"
+          },
+          {
+            "lang": "node",
+            "label": "Shieldリストを更新",
+            "source": "await client.shieldLists.updateShieldListByIdV2025R0(shieldListCountry.id, {\n  name: shieldListCountryName,\n  description: 'Updated description',\n  content: new ShieldListContentCountryV2025R0({\n    type: 'country' as ShieldListContentCountryV2025R0TypeField,\n    countryCodes: ['US'],\n  }),\n} satisfies ShieldListsUpdateV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "Shieldリストを更新",
+            "source": "client.shield_lists.update_shield_list_by_id_v2025_r0(\n    shield_list_country.id,\n    shield_list_country_name,\n    ShieldListContentCountryV2025R0(\n        type=ShieldListContentCountryV2025R0TypeField.COUNTRY, country_codes=[\"US\"]\n    ),\n    description=\"Updated description\",\n)"
+          }
         ]
       }
     },
@@ -2252,7 +3082,7 @@
       "get": {
         "operationId": "get_archives_v2025.0",
         "summary": "アーカイブのリストを取得",
-        "description": "企業用のアーカイブを取得します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
+        "description": "企業用のアーカイブを取得します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](https://developer.box.com/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2345,12 +3175,44 @@
         "x-box-tag": "archives",
         "tags": [
           "Archives"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "アーカイブのリストを取得",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/archives\" \\\n     -H \"box-version: 2025.0\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "アーカイブのリストを取得",
+            "source": "await client.Archives.GetArchivesV2025R0Async(queryParams: new GetArchivesV2025R0QueryParams() { Limit = 100 });"
+          },
+          {
+            "lang": "swift",
+            "label": "アーカイブのリストを取得",
+            "source": "try await client.archives.getArchivesV2025R0(queryParams: GetArchivesV2025R0QueryParams(limit: Int64(100)))"
+          },
+          {
+            "lang": "java",
+            "label": "アーカイブのリストを取得",
+            "source": "client.getArchives().getArchivesV2025R0(new GetArchivesV2025R0QueryParams.Builder().limit(100L).build())"
+          },
+          {
+            "lang": "node",
+            "label": "アーカイブのリストを取得",
+            "source": "await client.archives.getArchivesV2025R0({\n  limit: 100,\n} satisfies GetArchivesV2025R0QueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "アーカイブのリストを取得",
+            "source": "client.archives.get_archives_v2025_r0(limit=100)"
+          }
         ]
       },
       "post": {
         "operationId": "post_archives_v2025.0",
         "summary": "アーカイブを作成",
-        "description": "アーカイブを作成します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
+        "description": "アーカイブを作成します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](https://developer.box.com/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2461,6 +3323,38 @@
         "x-box-tag": "archives",
         "tags": [
           "Archives"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "アーカイブを作成",
+            "source": "curl -i -X POST \"https://api.box.com/2.0/archives\" \\\n     -H \"box-version: 2025.0\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json\" \\\n     -d '{\n       \"name\": \"Some Archive Name\",\n       \"description\": \"Some Archive Description\"\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "アーカイブを作成",
+            "source": "await client.Archives.CreateArchiveV2025R0Async(requestBody: new CreateArchiveV2025R0RequestBody(name: archiveName) { Description = archiveDescription });"
+          },
+          {
+            "lang": "swift",
+            "label": "アーカイブを作成",
+            "source": "try await client.archives.createArchiveV2025R0(requestBody: CreateArchiveV2025R0RequestBody(name: archiveName, description: archiveDescription))"
+          },
+          {
+            "lang": "java",
+            "label": "アーカイブを作成",
+            "source": "client.getArchives().createArchiveV2025R0(new CreateArchiveV2025R0RequestBody.Builder(archiveName).description(archiveDescription).build())"
+          },
+          {
+            "lang": "node",
+            "label": "アーカイブを作成",
+            "source": "await client.archives.createArchiveV2025R0({\n  name: archiveName,\n  description: archiveDescription,\n} satisfies CreateArchiveV2025R0RequestBody);"
+          },
+          {
+            "lang": "python",
+            "label": "アーカイブを作成",
+            "source": "client.archives.create_archive_v2025_r0(archive_name, description=archive_description)"
+          }
         ]
       }
     },
@@ -2468,7 +3362,7 @@
       "delete": {
         "operationId": "delete_archives_id_v2025.0",
         "summary": "アーカイブを削除",
-        "description": "アーカイブを完全に削除します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
+        "description": "アーカイブを完全に削除します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](https://developer.box.com/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "$ref": "#/components/parameters/BoxVersionHeader"
@@ -2552,12 +3446,44 @@
         "x-box-tag": "archives",
         "tags": [
           "Archives"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "アーカイブを削除",
+            "source": "curl -i -X DELETE \"https://api.box.com/2.0/archives/12345\" \\\n     -H \"box-version: 2025.0\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "アーカイブを削除",
+            "source": "await client.Archives.DeleteArchiveByIdV2025R0Async(archiveId: archive.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "アーカイブを削除",
+            "source": "try await client.archives.deleteArchiveByIdV2025R0(archiveId: archive.id)"
+          },
+          {
+            "lang": "java",
+            "label": "アーカイブを削除",
+            "source": "client.getArchives().deleteArchiveByIdV2025R0(archive.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "アーカイブを削除",
+            "source": "await client.archives.deleteArchiveByIdV2025R0(archive.id);"
+          },
+          {
+            "lang": "python",
+            "label": "アーカイブを削除",
+            "source": "client.archives.delete_archive_by_id_v2025_r0(archive.id)"
+          }
         ]
       },
       "put": {
         "operationId": "put_archives_id_v2025.0",
         "summary": "アーカイブを更新",
-        "description": "アーカイブを更新します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](/ja/guides/archives)を参照してください。",
+        "description": "アーカイブを更新します。\n\nアーカイブのAPIの詳細については、[Archive APIガイド](https://developer.box.com/ja/guides/archives)を参照してください。",
         "parameters": [
           {
             "name": "archive_id",
@@ -2680,6 +3606,38 @@
         "x-box-tag": "archives",
         "tags": [
           "Archives"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "アーカイブを更新",
+            "source": "curl -i -X PUT \"https://api.box.com/2.0/archives/12345\" \\\n     -H \"box-version: 2025.0\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json\" \\\n     -d '{\n       \"name\": \"Some Archive Name\",\n       \"description\": \"Some Archive Description\"\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "アーカイブを更新",
+            "source": "await client.Archives.UpdateArchiveByIdV2025R0Async(archiveId: archive.Id, requestBody: new UpdateArchiveByIdV2025R0RequestBody() { Name = newArchiveName, Description = newArchiveDescription });"
+          },
+          {
+            "lang": "swift",
+            "label": "アーカイブを更新",
+            "source": "try await client.archives.updateArchiveByIdV2025R0(archiveId: archive.id, requestBody: UpdateArchiveByIdV2025R0RequestBody(name: newArchiveName, description: newArchiveDescription))"
+          },
+          {
+            "lang": "java",
+            "label": "アーカイブを更新",
+            "source": "client.getArchives().updateArchiveByIdV2025R0(archive.getId(), new UpdateArchiveByIdV2025R0RequestBody.Builder().name(newArchiveName).description(newArchiveDescription).build())"
+          },
+          {
+            "lang": "node",
+            "label": "アーカイブを更新",
+            "source": "await client.archives.updateArchiveByIdV2025R0(archive.id, {\n  requestBody: {\n    name: newArchiveName,\n    description: newArchiveDescription,\n  } satisfies UpdateArchiveByIdV2025R0RequestBody,\n} satisfies UpdateArchiveByIdV2025R0OptionalsInput);"
+          },
+          {
+            "lang": "python",
+            "label": "アーカイブを更新",
+            "source": "client.archives.update_archive_by_id_v2025_r0(\n    archive.id, name=new_archive_name, description=new_archive_description\n)"
+          }
         ]
       }
     },
@@ -2738,6 +3696,33 @@
         "x-box-tag": "external_users",
         "tags": [
           "外部ユーザー"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "外部ユーザーの削除ジョブを送信",
+            "source": "await client.ExternalUsers.SubmitJobToDeleteExternalUsersV2025R0Async(requestBody: new ExternalUsersSubmitDeleteJobRequestV2025R0(externalUsers: Array.AsReadOnly(new [] {new UserReferenceV2025R0(id: Utils.GetEnvVar(name: \"BOX_EXTERNAL_USER_ID\"))})));"
+          },
+          {
+            "lang": "swift",
+            "label": "外部ユーザーの削除ジョブを送信",
+            "source": "try await client.externalUsers.submitJobToDeleteExternalUsersV2025R0(requestBody: ExternalUsersSubmitDeleteJobRequestV2025R0(externalUsers: [UserReferenceV2025R0(id: Utils.getEnvironmentVariable(name: \"BOX_EXTERNAL_USER_ID\"))]))"
+          },
+          {
+            "lang": "java",
+            "label": "外部ユーザーの削除ジョブを送信",
+            "source": "client.getExternalUsers().submitJobToDeleteExternalUsersV2025R0(new ExternalUsersSubmitDeleteJobRequestV2025R0(Arrays.asList(new UserReferenceV2025R0(getEnvVar(\"BOX_EXTERNAL_USER_ID\")))))"
+          },
+          {
+            "lang": "node",
+            "label": "外部ユーザーの削除ジョブを送信",
+            "source": "await client.externalUsers.submitJobToDeleteExternalUsersV2025R0({\n  externalUsers: [\n    new UserReferenceV2025R0({ id: getEnvVar('BOX_EXTERNAL_USER_ID') }),\n  ],\n} satisfies ExternalUsersSubmitDeleteJobRequestV2025R0);"
+          },
+          {
+            "lang": "python",
+            "label": "外部ユーザーの削除ジョブを送信",
+            "source": "client.external_users.submit_job_to_delete_external_users_v2025_r0(\n    [UserReferenceV2025R0(id=get_env_var(\"BOX_EXTERNAL_USER_ID\"))]\n)"
+          }
         ]
       }
     }
@@ -2747,7 +3732,7 @@
       "BoxVersionHeader": {
         "name": "box-version",
         "in": "header",
-        "description": "バージョンヘッダー。",
+        "description": "Version header.",
         "allowEmptyValue": false,
         "required": true,
         "schema": {
@@ -3195,8 +4180,8 @@
                         "$ref": "#/components/schemas/FileReference"
                       },
                       {
-                        "title": "OpenAPI 3.0 null スキーマタイプ",
-                        "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                        "title": "OpenAPI 3.0 null schema type",
+                        "description": "The definition for a null schema type in OpenAPI `3.0`.",
                         "type": "object",
                         "nullable": true,
                         "additionalProperties": false
@@ -3216,8 +4201,8 @@
                         "$ref": "#/components/schemas/FileVersion--Base"
                       },
                       {
-                        "title": "OpenAPI 3.0 null スキーマタイプ",
-                        "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                        "title": "OpenAPI 3.0 null schema type",
+                        "description": "The definition for a null schema type in OpenAPI `3.0`.",
                         "type": "object",
                         "nullable": true,
                         "additionalProperties": false
@@ -3714,8 +4699,8 @@
                     "$ref": "#/components/schemas/EnterpriseConfigurationSecurity"
                   },
                   {
-                    "title": "OpenAPI 3.0 null スキーマタイプ",
-                    "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                    "title": "OpenAPI 3.0 null schema type",
+                    "description": "The definition for a null schema type in OpenAPI `3.0`.",
                     "type": "object",
                     "nullable": true,
                     "additionalProperties": false
@@ -3735,8 +4720,8 @@
                     "$ref": "#/components/schemas/EnterpriseConfigurationContentAndSharing"
                   },
                   {
-                    "title": "OpenAPI 3.0 null スキーマタイプ",
-                    "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                    "title": "OpenAPI 3.0 null schema type",
+                    "description": "The definition for a null schema type in OpenAPI `3.0`.",
                     "type": "object",
                     "nullable": true,
                     "additionalProperties": false
@@ -3756,8 +4741,8 @@
                     "$ref": "#/components/schemas/EnterpriseConfigurationUserSettings"
                   },
                   {
-                    "title": "OpenAPI 3.0 null スキーマタイプ",
-                    "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                    "title": "OpenAPI 3.0 null schema type",
+                    "description": "The definition for a null schema type in OpenAPI `3.0`.",
                     "type": "object",
                     "nullable": true,
                     "additionalProperties": false
@@ -3777,8 +4762,8 @@
                     "$ref": "#/components/schemas/EnterpriseConfigurationShield"
                   },
                   {
-                    "title": "OpenAPI 3.0 null スキーマタイプ",
-                    "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                    "title": "OpenAPI 3.0 null schema type",
+                    "description": "The definition for a null schema type in OpenAPI `3.0`.",
                     "type": "object",
                     "nullable": true,
                     "additionalProperties": false
@@ -4678,8 +5663,8 @@
                             "$ref": "#/components/schemas/ExternalCollabSecuritySettings"
                           },
                           {
-                            "title": "OpenAPI 3.0 null スキーマタイプ",
-                            "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                            "title": "OpenAPI 3.0 null schema type",
+                            "description": "The definition for a null schema type in OpenAPI `3.0`.",
                             "type": "object",
                             "nullable": true,
                             "additionalProperties": false
@@ -4710,8 +5695,8 @@
                             "$ref": "#/components/schemas/KeysafeSettings"
                           },
                           {
-                            "title": "OpenAPI 3.0 null スキーマタイプ",
-                            "description": "OpenAPI `3.0` の null スキーマ タイプの定義。",
+                            "title": "OpenAPI 3.0 null schema type",
+                            "description": "The definition for a null schema type in OpenAPI `3.0`.",
                             "type": "object",
                             "nullable": true,
                             "additionalProperties": false
@@ -6827,7 +7812,6 @@
     "securitySchemes": {
       "OAuth2Security": {
         "type": "oauth2",
-        "description": "OAuth 2.0 フローで認可サーバーから受信したアクセス トークン。",
         "flows": {
           "authorizationCode": {
             "authorizationUrl": "https://account.box.com/api/oauth2/authorize",
@@ -6896,12 +7880,17 @@
     },
     {
       "name": "Shieldリスト",
-      "description": "Shield List allow an administrator to create a list which will be shared between different Shield Smart Access and Threat Detection rules.",
+      "description": "Shield List allow an administrator to create a list\nwhich will be shared between different\nShield Smart Access and Threat Detection rules.",
       "x-box-tag": "shield_lists"
     }
   ],
   "externalDocs": {
     "description": "Box Developerドキュメント。",
     "url": "https://developer.box.com"
+  },
+  "x-mint": {
+    "mcp": {
+      "enabled": true
+    }
   }
 }
