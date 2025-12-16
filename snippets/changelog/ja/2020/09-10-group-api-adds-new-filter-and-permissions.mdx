@@ -1,5 +1,6 @@
-<Update label="2020-09-10" description="グループAPIで新しいフィルタと権限を追加" tags={["新機能", "API"]}>
-  [`GET /groups`](/ja/reference/get_groups) APIでは、新しい`filter_term`フィールドを使用して、名前でグループにフィルタをかけられるようになりました。
+<Update label="2020-09-10" tags={["新機能", "API"]}>
+## グループAPIで新しいフィルタと権限を追加
+  [`GET /groups`](e://get_groups) APIでは、新しい`filter_term`フィールドを使用して、名前でグループにフィルタをかけられるようになりました。
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/groups?filter_term=Engineering" \
