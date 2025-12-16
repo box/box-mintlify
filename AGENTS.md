@@ -1,4 +1,4 @@
-# Mintlify documentation
+# Box developer documentation
 
 ## Working relationship
 - You can push back on ideas-this can lead to better documentation. Cite sources and explain your reasoning when you do so
@@ -13,7 +13,6 @@
 ## Content strategy
 - Document just enough for user success - not too much, not too little
 - Prioritize accuracy and usability
-- Make content evergreen when possible
 - Search for existing content before adding anything new. Avoid duplication unless it is done for a strategic reason
 - Check existing patterns for consistency
 - Start by making the smallest reasonable changes
