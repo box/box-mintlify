@@ -1213,7 +1213,7 @@
           {
             "lang": "swift",
             "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
-            "source": "try await client.docgen.createDocgenBatchV2025R0(requestBody: DocGenBatchCreateRequestV2025R0(file: FileReferenceV2025R0(id: uploadedFile.id), inputSource: \"api\", destinationFolder: DocGenBatchCreateRequestV2025R0DestinationFolderField(id: folder.id), outputType: \"pdf\", documentGenerationData: [DocGenDocumentGenerationDataV2025R0(generatedFileName: \"test\", userInput: [\"abc\": \"xyz\"])]))"
+            "source": "try await client.docgen.createDocgenBatchV2025R0(requestBody: DocGenBatchCreateRequestV2025R0(file: FileReferenceV2025R0(id: uploadedFileDocx.id), inputSource: \"api\", destinationFolder: DocGenBatchCreateRequestV2025R0DestinationFolderField(id: folder.id), outputType: \"pdf\", documentGenerationData: [DocGenDocumentGenerationDataV2025R0(generatedFileName: \"test\", userInput: [\"abc\": \"xyz\"])]))"
           },
           {
             "lang": "java",
@@ -1223,7 +1223,7 @@
           {
             "lang": "node",
             "label": "Box Doc Genテンプレートを使用してドキュメントを生成",
-            "source": "await client.docgen.createDocgenBatchV2025R0({\n  file: new FileReferenceV2025R0({ id: uploadedFile.id }),\n  inputSource: 'api',\n  destinationFolder: new DocGenBatchCreateRequestV2025R0DestinationFolderField({\n    id: folder.id,\n  }),\n  outputType: 'pdf',\n  documentGenerationData: [\n    {\n      generatedFileName: 'test',\n      userInput: { ['abc']: 'xyz' },\n    } satisfies DocGenDocumentGenerationDataV2025R0,\n  ],\n} satisfies DocGenBatchCreateRequestV2025R0);"
+            "source": "await client.docgen.createDocgenBatchV2025R0({\n  file: new FileReferenceV2025R0({ id: uploadedFileDocx.id }),\n  inputSource: 'api',\n  destinationFolder: new DocGenBatchCreateRequestV2025R0DestinationFolderField({\n    id: folder.id,\n  }),\n  outputType: 'pdf',\n  documentGenerationData: [\n    {\n      generatedFileName: 'test',\n      userInput: { ['abc']: 'xyz' },\n    } satisfies DocGenDocumentGenerationDataV2025R0,\n  ],\n} satisfies DocGenBatchCreateRequestV2025R0);"
           },
           {
             "lang": "python",

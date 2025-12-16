@@ -145,6 +145,11 @@
             "lang": "python",
             "label": "ユーザーを承認",
             "source": "from box_sdk_gen import BoxOAuth, OAuthConfig\n\nauth = BoxOAuth(\n    OAuthConfig(client_id=\"YOUR_CLIENT_ID\", client_secret=\"YOUR_CLIENT_SECRET\")\n)\nauth_url = auth.get_authorize_url()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "ユーザーを承認",
+            "source": "using Box.Sdk.Gen;\n\nvar config = new OAuthConfig(clientId: \"YOUR_CLIENT_ID\", clientSecret: \"YOUR_CLIENT_SECRET\");\nvar auth = new BoxOAuth(config: config);\n\n// the URL to redirect the user to\nvar authorizeUrl = auth.GetAuthorizeUrl();"
           }
         ]
       }
@@ -231,6 +236,11 @@
             "lang": "python",
             "label": "アクセストークンをリクエスト",
             "source": "auth.retrieve_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "アクセストークンをリクエスト",
+            "source": "await auth.RetrieveTokenAsync();"
           }
         ]
       }
@@ -318,6 +328,11 @@
             "lang": "python",
             "label": "アクセストークンを更新",
             "source": "auth.refresh_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "アクセストークンを更新",
+            "source": "await auth.RefreshTokenAsync();"
           }
         ]
       }
@@ -397,6 +412,11 @@
             "lang": "python",
             "label": "アクセストークンを取り消し",
             "source": "client.auth.revoke_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "アクセストークンを取り消し",
+            "source": "await auth.RevokeTokenAsync();"
           }
         ]
       }

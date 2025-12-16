@@ -145,6 +145,11 @@
             "lang": "python",
             "label": "Authorize user",
             "source": "from box_sdk_gen import BoxOAuth, OAuthConfig\n\nauth = BoxOAuth(\n    OAuthConfig(client_id=\"YOUR_CLIENT_ID\", client_secret=\"YOUR_CLIENT_SECRET\")\n)\nauth_url = auth.get_authorize_url()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Authorize user",
+            "source": "using Box.Sdk.Gen;\n\nvar config = new OAuthConfig(clientId: \"YOUR_CLIENT_ID\", clientSecret: \"YOUR_CLIENT_SECRET\");\nvar auth = new BoxOAuth(config: config);\n\n// the URL to redirect the user to\nvar authorizeUrl = auth.GetAuthorizeUrl();"
           }
         ]
       }
@@ -231,6 +236,11 @@
             "lang": "python",
             "label": "Request access token",
             "source": "auth.retrieve_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Request access token",
+            "source": "await auth.RetrieveTokenAsync();"
           }
         ]
       }
@@ -318,6 +328,11 @@
             "lang": "python",
             "label": "Refresh access token",
             "source": "auth.refresh_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Refresh access token",
+            "source": "await auth.RefreshTokenAsync();"
           }
         ]
       }
@@ -397,6 +412,11 @@
             "lang": "python",
             "label": "Revoke access token",
             "source": "client.auth.revoke_token()"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Revoke access token",
+            "source": "await auth.RevokeTokenAsync();"
           }
         ]
       }
