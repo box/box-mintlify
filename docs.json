@@ -5422,6 +5422,11 @@
           "anchor": "Blog",
           "href": "https://blog.box.com/developer",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Box SDKs",
+          "href": "https://github.com/box/sdks",
+          "icon": "code"
         }
       ]
     }
@@ -5433,18 +5438,15 @@
   "navbar": {
     "links": [
       {
-        "label": "Community",
-        "href": "https://community.box.com/box-platform-5"
-      },
-      {
-        "label": "Blog",
-        "href": "https://blog.box.com/developer"
+        "type": "button",
+        "label": "My Platform apps",
+        "href": "https://account.box.com/developers/console"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "My Platform apps",
-      "href": "https://account.box.com/developers/console"
+      "label": "Sign up",
+      "href": "https://account.box.com/signup/developer#ty9l3"
     }
   },
   "contextual": {
