@@ -5010,6 +5010,31 @@
                     ]
                   },
                   {
+                    "group": "Metadata taxonomies",
+                    "pages": [
+                      {
+                        "group": "Endpoints",
+                        "pages": [
+                          "ja/reference/post-metadata-taxonomies",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels:append",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels:trim",
+                          "ja/reference/post-metadata-taxonomies-id-id-nodes",
+                          "ja/reference/get-metadata-taxonomies-id",
+                          "ja/reference/get-metadata-taxonomies-id-id",
+                          "ja/reference/get-metadata-taxonomies-id-id-nodes",
+                          "ja/reference/get-metadata-taxonomies-id-id-nodes-id",
+                          "ja/reference/get-metadata-templates-id-id-fields-id-options",
+                          "ja/reference/delete-metadata-taxonomies-id-id",
+                          "ja/reference/delete-metadata-taxonomies-id-id-nodes-id",
+                          "ja/reference/patch-metadata-taxonomies-id-id",
+                          "ja/reference/patch-metadata-taxonomies-id-id-levels-id",
+                          "ja/reference/patch-metadata-taxonomies-id-id-nodes-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "group": "メタデータカスケードポリシー",
                     "pages": [
                       {
