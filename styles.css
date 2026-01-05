@@ -275,3 +275,7 @@ nav ul #topbar-cta-button a span {
 .homepage_h2 {
   font-size: 28px !important;
 }
+
+#footer > div {
+  z-index: 0;
+}
