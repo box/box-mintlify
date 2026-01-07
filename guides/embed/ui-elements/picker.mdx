@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -29,7 +30,7 @@ content information is then passed to another part of the application.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Authentication
@@ -231,8 +232,8 @@ filePicker.removeAllListeners();
 | `defaultView`         | String          | `files`                                                                                            | Value should either be `files` or `recents`. When set to `recents`, by default you will see recent items instead of the regular file/folder structure.                                                                                                                                                                         |
 | `chooseButtonLabel`   | `String`        |                                                                                                    | String to re-label the Choose button                                                                                                                                                                                                                                                                                           |
 | `cancelButtonLabel`   | `String`        |                                                                                                    | String to re-label the Cancel button                                                                                                                                                                                                                                                                                           |
-| `requestInterceptor`  | `Function`      |                                                                                                    | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                      |
-| `responseInterceptor` | `Function`      |                                                                                                    | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                     |
+| `requestInterceptor`  | `Function`      |                                                                                                    | Function to intercept requests. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                      |
+| `responseInterceptor` | `Function`      |                                                                                                    | Function to intercept responses. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                     |
 
 ### Modal Options
 

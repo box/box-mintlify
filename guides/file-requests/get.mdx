@@ -10,8 +10,9 @@ related_resources:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
-To get details about an existing [file request](/guides/file-requests/template),
+To get details about an existing <Link href="/guides/file-requests/template">file request</Link>,
 all you need is its unique ID.
 
 <CodeGroup>
@@ -63,7 +64,7 @@ client.fileRequests.getById(fileRequestId)
 
 The ID of a file request can be determined by visiting the Box web
 app and inspecting the URL. Please
-[check our guide](/guides/file-requests/template) on setting up a file
+<Link href="/guides/file-requests/template">check our guide</Link> on setting up a file
 request template to learn how to determine a file request ID.
 
 </Note>

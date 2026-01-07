@@ -9,9 +9,11 @@ related_resources:
   - terms_of_service
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Information about the Terms of Service that is in effect for any
-[Collaboration](/reference/resources/collaboration) can be inspected by calling the
-[`GET /collaborations/:id`](/reference/get-collaborations-id) API and passing the query
+<Link href="/reference/resources/collaboration">Collaboration</Link> can be inspected by calling the
+<Link href="/reference/get-collaborations-id">`GET /collaborations/:id`</Link> API and passing the query
 parameter `fields=acceptance_requirements_status`.
 
 ```sh cURL

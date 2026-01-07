@@ -3,6 +3,8 @@ title: "Finding recent shared links"
 related_endpoints:
 required_guides: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 By default, the search API only returns items that are either owned by the user
 or items that the user has been explicitly collaborated on. These search results
 do not include any items that a user might have accessed recently through a
@@ -44,6 +46,6 @@ it in our Java and Windows SDKs is still a work in progress.
 
 Please be very aware that when this parameter has been set to true, the format
 of the response of this API changes to return a list of
-[Search Results with Shared Links](/reference/resources/search-results-with-shared-links)
+<Link href="/reference/resources/search-results-with-shared-links">Search Results with Shared Links</Link>
 
 </Danger>

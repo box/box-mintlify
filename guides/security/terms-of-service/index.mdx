@@ -4,6 +4,8 @@ rank: 1
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 The Box API allows administrators to configure Terms of Services for working on
 Box, and for users to accept & re-accept Terms of Services for custom
 applications.
@@ -41,10 +43,10 @@ Applications that are authenticated as a Box Admin that has the **Edit settings
 for your company** permissions can view, create, and edit Terms of Services for
 their enterprise via the API.
 
-* [`GET /terms_of_services/:id`](/reference/get-terms-of-services-id): To get the information for a specific Terms of Service
-* [`GET /terms_of_services`](/reference/get-terms-of-services): To get a list of all the Terms of Services used within an enterprise, either for managed or external users.
-* [`POST /terms_of_services`](/reference/post-terms-of-services): To create Terms of Service settings for either an external or managed user.
-* [`PUT /terms_of_services/:id`](/reference/put-terms-of-services-id):
+* <Link href="/reference/get-terms-of-services-id">`GET /terms_of_services/:id`</Link>: To get the information for a specific Terms of Service
+* <Link href="/reference/get-terms-of-services">`GET /terms_of_services`</Link>: To get a list of all the Terms of Services used within an enterprise, either for managed or external users.
+* <Link href="/reference/post-terms-of-services">`POST /terms_of_services`</Link>: To create Terms of Service settings for either an external or managed user.
+* <Link href="/reference/put-terms-of-services-id">`PUT /terms_of_services/:id`</Link>:
   To update a specific Terms of Service setting
 
 Additionally, application can view and accept Terms of Services for a regular

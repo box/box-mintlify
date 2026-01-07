@@ -3,6 +3,8 @@ title: "Create a query"
 related_endpoints: []
 required_guides: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 A metadata query is a `POST` request to the ​`/metadata_queries/execute_read`-
 endpoint, in which the body contains all the parts of the metadata query. Most
 important here are the `from` attribute that specifies the template to search
@@ -36,8 +38,8 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 ```
 
 For more details about all the available parameters, check out any of our other
-[metadata query guides](/guides/metadata/queries), or the associated [endpoint
-reference](/reference/post-metadata-queries-execute-read).
+<Link href="/guides/metadata/queries">metadata query guides</Link>, or the associated <Link href="/reference/post-metadata-queries-execute-read">endpoint
+reference</Link>.
 
 <Card href="/guides/metadata/queries/syntax" arrow title="Learn more about the query syntax"/>
 

@@ -9,6 +9,8 @@ alias_paths:
 - /search/full-text-search
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 The Box API provides a way to find content in Box using
 full-text search queries. Support for the Box search API is available
 in all our supported SDKs and the CLI.
@@ -146,14 +148,14 @@ client.search.query(
 </CodeGroup>
 
 <Note>
-  Explore the [reference documentation](/reference/get-search) to learn more
+  Explore the <Link href="/reference/get-search">reference documentation</Link> to learn more
   about all the different features available to the search API.
 </Note>
 
 ## Query operators
 
 The search API supports a few different
-[search operators](/guides/search/query-operators), including
+<Link href="/guides/search/query-operators">search operators</Link>, including
 `AND`, `OR`, `NOT` and `""`. These operators can be used to refine the search
 results to only return items that match a more complicated combination of
 search terms.

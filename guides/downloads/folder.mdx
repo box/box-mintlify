@@ -14,13 +14,14 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every
 file and downloading it accordingly.
 
 <Note>
-To download a ZIP archive, follow [this](/guides/downloads/zip-archive) guide.
+To download a ZIP archive, follow <Link href="/guides/downloads/zip-archive">this</Link> guide.
 </Note>
 
 <CodeGroup>
@@ -241,7 +242,7 @@ function autoPage(iterator) {
   authenticated user does not have access to any of the files or folders, a
   `HTTP 404 Not Found` error will occur.
 
-  Lear more about [User Types](/platform/user-types) in our guides on
+  Lear more about <Link href="/platform/user-types">User Types</Link> in our guides on
   authentication.
 </Warning>
 
