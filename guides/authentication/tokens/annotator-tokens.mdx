@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -146,7 +147,7 @@ $claims = [
 | `box_sub_type` | String | The external user name to tie this annotation to. This will be displayed in the Box UI                  |
 
 Then, convert this claim to an assertion according to the guide and pass this
-assertion to the [`POST /oauth2/token`](/reference/post-oauth2-token)
+assertion to the <Link href="/reference/post-oauth2-token">`POST /oauth2/token`</Link>
 endpoint together with an existing valid Access Token, App Token, or File Token,
 as well as a set of scopes, and the resource for which to create the token.
 

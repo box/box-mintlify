@@ -12,6 +12,7 @@ related_endpoints:
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <ProgressBar pages={[
                           "guides/metadata/quick-start/list-all",
@@ -24,7 +25,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
                         ]} />
 
 To create a custom metadata template for your enterprise you can use
-[our API directly](/reference/post-metadata-templates-schema) or
+<Link href="/reference/post-metadata-templates-schema">our API directly</Link> or
 one of our SDKs to create a new template.
 
 For this `customerInfo` template, we're going to create a template with 3

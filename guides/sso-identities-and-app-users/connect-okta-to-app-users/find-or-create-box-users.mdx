@@ -6,6 +6,7 @@ hide_in_page_nav: true
 ---
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
+import {Link} from "/snippets/Link.jsx";
 
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
@@ -393,7 +394,7 @@ application.
 
 Once an associated Box user is found for the Okta user we're going to generate
 an access token specifically
-[scoped for that user](/guides/authentication/jwt/user-access-tokens) to make Box
+<Link href="/guides/authentication/jwt/user-access-tokens">scoped for that user</Link> to make Box
 API calls, then make a call to get the current user to ensure that everything
 is working and that we have a valid user access token.
 

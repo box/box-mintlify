@@ -12,6 +12,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -26,7 +27,7 @@ comments and tasks) in their desktop or mobile web application.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Authentication
@@ -204,8 +205,8 @@ sidebar.removeAllListeners();
 | `hasMetadata`         | Boolean  | `false`         | Set to true to show box metadata for the file.                                                                                                                                                                                                             |
 | `hasSkills`           | Boolean  | `false`         | Set to true to show the file skills data.                                                                                                                                                                                                                  |
 | `detailsSidebarProps` | Object   | `{}`            | See section below.                                                                                                                                                                                                                                         |
-| `requestInterceptor`  | Function |                 | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).  |
-| `responseInterceptor` | Function |                 | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors). |
+| `requestInterceptor`  | Function |                 | Function to intercept requests. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.  |
+| `responseInterceptor` | Function |                 | Function to intercept responses. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>. |
 
 ### `detailsSidebarProps`
 

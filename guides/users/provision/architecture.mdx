@@ -11,6 +11,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Our first requirement is to copy general files and folders into each individual
 user's root folder on account creation. This problem has been solved within
@@ -20,7 +21,7 @@ Linux, the files and folders within `/etc/skel` are copied to the new user's
 home directory.
 
 When creating a
-[JWT-based Box application](/guides/authentication/jwt/jwt-setup), a
+<Link href="/guides/authentication/jwt/jwt-setup">JWT-based Box application</Link>, a
 [Service Account][sa] is created
 within the Box Enterprise. A Service Account is similar in functionality to a
 co-admin within a Box Enterprise, and most useful to this use case, can own,
@@ -36,7 +37,7 @@ capacity.
   need to enable the following scopes: **Manage users**, **Manage groups**,
   **Perform Actions as Users**, and **Generate User Access Tokens**.
 
-  See [JWT Application Setup](/guides/authentication/jwt/jwt-setup) for
+  See <Link href="/guides/authentication/jwt/jwt-setup">JWT Application Setup</Link> for
   more information on creating a JWT-based Box application and the scopes in a
   Box application.
 </Info>

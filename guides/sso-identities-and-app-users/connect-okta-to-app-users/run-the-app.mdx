@@ -6,6 +6,7 @@ hide_in_page_nav: true
 ---
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
+import {Link} from "/snippets/Link.jsx";
 
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
@@ -35,7 +36,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </Frame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
+of <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta">step 2</Link>.
 <br/>
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -58,7 +59,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </Frame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
+of <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta">step 2</Link>.
 <br/>
 Once signed in, you will see a message stating `New User Created: {{USERNAME}}`
 output to the browser.
@@ -81,7 +82,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </Frame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
+of <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta">step 2</Link>.
 <br/>
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -105,7 +106,7 @@ displayed. Once clicked, the Okta login will be automatically loaded.
 </Frame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta).
+of <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta">step 2</Link>.
 <br/>
 Once signed in, you will see a message in the debug console stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -138,9 +139,9 @@ We recommend the following resource for anyone who wants to learn more about
 more advanced capabilities that may be attached into the user creation and
 access process.
 
-* [User provisioning](/guides/users/provision) best practices for advanced user folder architecture setup.
-* [User deprovisioning](/guides/users/deprovision) best practices cleaning up inactive users and transferring user content to another account.
-* [Uploading content](/guides/uploads) into Box, including running preflight checks and large file (chunked) uploading.
+* <Link href="/guides/users/provision">User provisioning</Link> best practices for advanced user folder architecture setup.
+* <Link href="/guides/users/deprovision">User deprovisioning</Link> best practices cleaning up inactive users and transferring user content to another account.
+* <Link href="/guides/uploads">Uploading content</Link> into Box, including running preflight checks and large file (chunked) uploading.
 
 [step1]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 [step2]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta

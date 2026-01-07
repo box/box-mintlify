@@ -4,12 +4,14 @@ rank: 120
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 The event feed provides a way for an application to subscribe to any actions
 performed by any user, users, or service in an enterprise.
 
 ## User vs Enterprise events
 
-Depending upon the `stream_type`, the [`GET /events`](/reference/get-events) API
+Depending upon the `stream_type`, the <Link href="/reference/get-events">`GET /events`</Link> API
 enables subscribing to live events across the enterprise or for a particular
 user, or querying historical events across the enterprise.
 
