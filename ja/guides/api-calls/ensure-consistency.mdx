@@ -80,13 +80,13 @@ curl https://api.box.com/2.0/files/12345 \
 
 | `if-match`対応のエンドポイント                                          |                     |
 | ------------------------------------------------------------- | ------------------- |
-| [`POST /files/:id/content`](endpoint://post_files_id_content) | 新しいファイルバージョンをアップロード |
-| [`PUT /files/:id`](endpoint://put_files_id)                   | ファイルの情報を更新          |
-| [`DELETE /files/:id`](endpoint://delete_files_id)             | ファイルを削除             |
-| [`PUT /folders/:id`](endpoint://put_folders_id)               | フォルダの情報を更新          |
-| [`DELETE /folders/:id`](endpoint://delete_folders_id)         | フォルダを削除             |
-| [`PUT /web_links/:id`](endpoint://put_web_links_id)           | ウェブリンクの情報を更新        |
-| [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | ウェブリンクを削除           |
+| [`POST /files/:id/content`](/ja/reference/post-files-id-content) | 新しいファイルバージョンをアップロード |
+| [`PUT /files/:id`](/ja/reference/put-files-id)                   | ファイルの情報を更新          |
+| [`DELETE /files/:id`](/ja/reference/delete-files-id)             | ファイルを削除             |
+| [`PUT /folders/:id`](/ja/reference/put-folders-id)               | フォルダの情報を更新          |
+| [`DELETE /folders/:id`](/ja/reference/delete-folders-id)         | フォルダを削除             |
+| [`PUT /web_links/:id`](/ja/reference/put-web-links-id)           | ウェブリンクの情報を更新        |
+| [`DELETE /web_links/:id`](/ja/reference/delete-web-links-id)     | ウェブリンクを削除           |
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
@@ -110,10 +110,10 @@ curl https://api.box.com/2.0/files/12345 \
 
 | `if-none-match`対応のエンドポイント                           |              |
 | --------------------------------------------------- | ------------ |
-| [`GET /files/:id`](endpoint://get_files_id)         | ファイルの情報を取得   |
-| [`GET /folders/:id`](endpoint://get_folder_id)      | フォルダの情報を取得   |
-| [`GET /web_links/:id`](endpoint://get_web_links_id) | ウェブリンクの情報を取得 |
-| [`GET /shared_items`](endpoint://get_shared_items)  | 共有項目の情報を取得   |
+| [`GET /files/:id`](/ja/reference/get-files-id)         | ファイルの情報を取得   |
+| [`GET /folders/:id`](/ja/reference/get-folder-id)      | フォルダの情報を取得   |
+| [`GET /web_links/:id`](/ja/reference/get-web-links-id) | ウェブリンクの情報を取得 |
+| [`GET /shared_items`](/ja/reference/get-shared-items)  | 共有項目の情報を取得   |
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
