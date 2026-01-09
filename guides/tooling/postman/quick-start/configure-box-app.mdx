@@ -45,14 +45,14 @@ extra steps to set up.
   <Choose option='postman.app_type' value='use_existing' color='blue'>
     # Use existing Box app
 
-    If you've already created a Box App that you want to use, then we can use the credentials for that application. 
+    If you've already created a Box App that you want to use, you can use the credentials for that application. 
   </Choose>
 </Grid>
 
 <Choice option='postman.app_type' value='create_new,clicked' color='blue'>
   # Create a Box app
 
-  To use your own Box App you will need to create a new Box App in the **Box Developer Console**. 
+  To use your own Box App you need to create a new Box App in the **Box Developer Console**. 
   The following example uses OAuth2.0 but other authentication methods are available.
 
   1. Go to the [Developer Console][devconsole].
@@ -61,7 +61,7 @@ extra steps to set up.
   4. In the **Configuration** tab, scroll down to the **OAuth 2.0 Redirect URIs** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
   5. Scroll down to the **Application Scopes** section to select your desired [scopes][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
   6. At the top of the page click the button to **Save Changes**.
-  7. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**. We will use these credentials to authenticate your application in the next step.
+  7. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**. These credentials are used to authenticate your application in the next step.
 
 </Choice>
 {/*
@@ -87,7 +87,7 @@ extra steps to set up.
 <Choice option='postman.app_type' value='use_existing' color='blue'>
   # Use existing Box app
 
-  If you have already created a Box App, you can also use that. We require a few settings to be set for this to work. 
+  If you have already created a Box App, you can also use that. There are a few settings which need to be set for this to work. 
   The following example uses OAuth2.0 but other authentication methods are available.
 
   1. Go to the [Developer Console][devconsole].
@@ -97,7 +97,7 @@ extra steps to set up.
   5. Scroll down to the **OAuth 2.0 Redirect URI** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
   6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**.
-  8. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**. We will use these credentials to authenticate your application in the next step.
+  8. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**.  These credentials are used to authenticate your application in the next step.
 
 </Choice>
 {/*

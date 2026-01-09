@@ -28,9 +28,9 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 <Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
   In this step, you use the **Client ID** and **Client Secret** from the
-  previous step to log in and create an **Access Token** for your user.
+  previous step to log in and create an **Access Token** for your user. 
 
-  Before logging in, you should [create a new request][new_request] in Postman, select the GET method, and enter a Box API endpoint.
+Before logging in, you should [create a new request][new_request] in Postman, select the GET method, and enter a Box API endpoint.
 
   ## How to log in
 {/*
@@ -48,15 +48,14 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   The **Client ID** and **Client Secret** credentials allow any program or piece of code to authenticate
   itself to the **Box API**.  
 
-  The next step in the process is to authenticate with [OAuth2.0 in Postman][Postman]:
+The next step in the process is to authenticate with [OAuth2.0 in Postman][Postman]:
   1. Open Postman and go to the **Authorization** tab.
   2. Set the **Type** to **OAuth 2.0**.
-  3. Click **Get New Access Token**.
-  4. Complete the fields, including the **Client ID** and **Client Secret**.
-  5. Click **Request Token**.
+  3. Complete the fields, including the **Client ID** and **Client Secret**.
+  4. Click **Get New Access Token**.
 
-  A browser window will appear where you can log in to your Box account. 
-
+  A browser window appears where you can log in to your Box account. 
+  
   Once the process is complete and approved, Postman will receive your [access token][access_token].
 {/*
   It represents the **Box App** you created but it
