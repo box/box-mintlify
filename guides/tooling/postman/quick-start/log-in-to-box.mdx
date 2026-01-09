@@ -27,10 +27,12 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
                         ]} />
 
 <Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
-  In this step, we will use the **Client ID** and **Client Secret** from the
-  previous step to log you in and create an **Access Token** for your user.
+  In this step, you use the **Client ID** and **Client Secret** from the
+  previous step to log in and create an **Access Token** for your user.
 
-  ## The reason to log in
+  Before logging in, you should [create a new request][new_request] in Postman, select the GET method, and enter a Box API endpoint.
+
+  ## How to log in
 {/*
   Currently you have provided us with the following information.
 
@@ -47,13 +49,15 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   itself to the **Box API**.  
 
   The next step in the process is to authenticate with [OAuth2.0 in Postman][Postman]:
-  1. Open Postman and go to the **Authorization** tab
-  2. Set the **Type** to **OAuth 2.0**
-  3. Click **Get New Access Token**
-  4. Complete the fields, including the **Client ID** and **Client Secret**
-  5. Click **Request Token**
+  1. Open Postman and go to the **Authorization** tab.
+  2. Set the **Type** to **OAuth 2.0**.
+  3. Click **Get New Access Token**.
+  4. Complete the fields, including the **Client ID** and **Client Secret**.
+  5. Click **Request Token**.
 
-  Once the process is complete and approved, Postman will receive your access token[access_token] and refresh token[refresh_token].
+  A browser window will appear where you can log in to your Box account. 
+
+  Once the process is complete and approved, Postman will receive your [access token][access_token].
 {/*
   It represents the **Box App** you created but it
   doesn't tell the API who you, the **User**, is.
@@ -124,7 +128,8 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 ## Summary
 
 * You completed the necessary steps in Postman using your **Client Secret** and **Client ID**
-* You are able to see your account's **Access Token** and **Refresh Token**
+* You granted the **Box App** access to your account
+* You are able to see your account's **Access Token**
 
 </Choice>
 
@@ -149,3 +154,4 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 [Postman]: https://learning.postman.com/docs/sending-requests/authorization/oauth-20/
 [access_token]: https://developer.box.com/guides/tooling/postman/access-token
 [refresh_token]: https://developer.box.com/guides/tooling/postman/refresh
+[new_request]: https://learning.postman.com/docs/sending-requests/create-requests/request-basics/
