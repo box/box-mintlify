@@ -53,7 +53,7 @@ Box APIは[RFC 3339][rfc3339]タイムスタンプをサポートします。リ
 
 {/* Commenting this for now due to issues */}
 
-{/* When making requests, when a timezone is omitted and a time has been provided the Pacific timezone is assumed. In responses, the timezone is based on your enterprise settings. It will be the default user settings set by your admin. Please note that even if a managed user changes their timezone in their account settings, this this will have no affect on the timezone returned by the API. */}
+{/* When making requests, when a timezone is omitted and a time has been provided the Pacific timezone is assumed. In レスポンス, the timezone is based on your enterprise settings. It will be the default user settings set by your admin. Please note that even if a managed user changes their timezone in their account settings, this this will have no affect on the timezone returned by the API. */}
 
 企業のタイムゾーンは経時的に変化するため、タイムゾーンはファイルやフォルダによって異なる場合があります。一般的な例は、夏時間です。標準時に作成された項目のタイムゾーンは、夏時間中に作成された項目とは異なります。このため、APIから返された日付を処理するには、`RFC3339`準拠の日時パーサーを使用することが重要です。
 

@@ -1,0 +1,107 @@
+XLIFF Translation Updates Report
+============================================================
+
+Total translations: 431
+Files updated: 19
+Updates applied: 19
+
+Updated Files:
+------------------------------------------------------------
+  ja/ai-dev-zone-metadata.mdx
+  ja/ai-dev-zone-summary.mdx
+  ja/changelog/index.mdx
+  ja/guides/api-calls/types-and-formats.mdx
+  ja/guides/box-ai/ai-tutorials/default-agent-overrides.mdx
+  ja/guides/box-mcp/remote/index.mdx
+  ja/guides/cli/quick-start/powershell-script-templates.mdx
+  ja/guides/cli/scripts/deprovision-users.mdx
+  ja/guides/comments/create-comment.mdx
+  ja/guides/events/enterprise-events/for-enterprise.mdx
+  ja/guides/events/event-triggers/sign-events.mdx
+  ja/guides/integration-mappings/slack-mappings/setup.mdx
+  ja/guides/integration-mappings/teams-mappings/index.mdx
+  ja/guides/webhooks/triggers.mdx
+  ja/newsletter.mdx
+  ja/platform/support.mdx
+  ja/sdks-and-tools.mdx
+  ja/sign/technical-use-cases/sign-structured-docs.mdx
+  ja/support.mdx
+
+Changes Made:
+------------------------------------------------------------
+
+File: ja/changelog/index.mdx (line 1622)
+Old: Parameter
+New: パラメータ
+
+File: ja/ai-dev-zone-metadata.mdx (line 7)
+Old: No
+New: いいえ
+
+File: ja/ai-dev-zone-summary.mdx (line 7)
+Old: No
+New: いいえ
+
+File: ja/sdks-and-tools.mdx (line 168)
+Old: no
+New: いいえ
+
+File: ja/guides/box-mcp/remote/index.mdx (line 119)
+Old: message
+New: メッセージ
+
+File: ja/guides/comments/create-comment.mdx (line 120)
+Old: message
+New: メッセージ
+
+File: ja/newsletter.mdx (line 61)
+Old: Preview
+New: プレビュー
+
+File: ja/guides/api-calls/types-and-formats.mdx (line 56)
+Old: responses
+New: レスポンス
+
+File: ja/guides/box-ai/ai-tutorials/default-agent-overrides.mdx (line 97)
+Old: Responses
+New: レスポンス
+
+File: ja/guides/integration-mappings/teams-mappings/index.mdx (line 14)
+Old: required
+New: 必須
+
+File: ja/guides/integration-mappings/slack-mappings/setup.mdx (line 14)
+Old: required
+New: 必須
+
+File: ja/guides/cli/quick-start/powershell-script-templates.mdx (line 238)
+Old: The response will be similar to the following:
+New: レスポンスは以下のようになります。
+
+File: ja/guides/cli/scripts/deprovision-users.mdx (line 99)
+Old: where:
+New: この場合
+
+File: ja/guides/events/event-triggers/sign-events.mdx (line 408)
+Old: DOWNLOADED
+New: ダウンロード
+
+File: ja/guides/events/enterprise-events/for-enterprise.mdx (line 225)
+Old: DOWNLOADED
+New: ダウンロード
+
+File: ja/guides/webhooks/triggers.mdx (line 101)
+Old: Downloaded
+New: ダウンロード
+
+File: ja/sign/technical-use-cases/sign-structured-docs.mdx (line 272)
+Old: Create a sign request
+New: 署名リクエストを作成
+
+File: ja/support.mdx (line 32)
+Old: changelog
+New: 変更ログ
+
+File: ja/platform/support.mdx (line 48)
+Old: blog
+New: ブログ
