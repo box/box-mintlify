@@ -20,23 +20,22 @@ import { ProgressBar } from '/snippets/progress-bar.jsx';
                         ]} />
 
 {/* <LoggedIn id='postman_credentials'> */}
-  Now that you are logged in we can fork the **Box Postman Collection** into the
-  **Postman App** that we installed previously. When we fork the Postman
-  Collection we will also automatically load your API credentials as a Postman
-  environment.
+  Now that you are logged in you can fork the **Box Postman Collection** into the
+  **Postman App** that was installed previously. When you fork the Postman
+  Collection you will need to load your API credentials in the Postman
+  environment. More details are available in [Postman Authorization guides][authorization]. 
 
   ## Forking a collection and environment
 
   By clicking the button below you will fork the **Box Postman
-  Collection** into your Postman application. In the same click it will also
-  load your **Access Token**, **Refresh Token**, **Client ID** and **Client
-  Secret** into a Postman environment.
+  Collection** into your Postman application. Load in the **Access Token**, **Refresh Token**, **Client ID** and **Client
+  Secret** into your Postman environment via the [environment selector][environment].
 
   <Trigger option='postman_collection_downloaded' value='true'>
     <Postman env='postman_credentials' />
   </Trigger>
 
-  We recommend to fork the Box Postman Collection - you will be asked if you 
+  It is recommended to fork the Box Postman Collection - you will be asked if you 
   want to update the collection any time Box makes changes to it. You can also
   copy the collection, but you might miss important updates.
 {/* </LoggedIn> */}
@@ -53,7 +52,7 @@ appear within the app in the left-hand sidebar.
   ![Box collection in Postman](./collection-in-postman.png)
 </Frame>
 
-You can click on the collection to open it up and explore our over 170 API
+You can click on the collection to open it and explore our over 170 API
 endpoints.
 
 ## Summary
@@ -62,23 +61,26 @@ endpoints.
 * You additionally loaded your Box Postman environment into Postman
 
 </Choice>
-
+{/*
 <Choice option='postman.app_type' unset color='none'>
-  {/* <LoggedIn reverse> */}
+  {LoggedIn reverse}
     <Danger>
       **Incomplete previous step**
 
       Complete the previous steps to select and log in to a **Box App**.
     </Danger>
-  {/* </LoggedIn> */}
+  {/LoggedIn}
 </Choice>
 
 <Choice option='postman.app_type' value='create_new,use_existing' color='none'>
-  {/* <LoggedIn id='postman_credentials' reverse> */}
+  {LoggedIn id='postman_credentials' reverse}
     <Danger>
       **Incomplete previous step**
 
       Complete the previous steps to select and log in to a **Box App**.
     </Danger>
-  {/* </LoggedIn> */}
+  {/LoggedIn}
 </Choice>
+*/}
+[authorization]: https://learning.postman.com/docs/sending-requests/authorization/specifying-authorization-details/
+[environment]: https://learning.postman.com/docs/sending-requests/variables/managing-environments/

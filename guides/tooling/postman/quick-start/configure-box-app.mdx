@@ -23,7 +23,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
                           "guides/tooling/postman/quick-start/next-steps"
                         ]} />
 
-To use the **Postman Collection** the Postman application needs to authenticate
+To use the **Postman Collection**, the Postman application needs to authenticate
 to the Box API using an **Access Token**. The simplest way to get an Access
 Token is by logging into Box using a **Box App**.
 
@@ -39,26 +39,32 @@ extra steps to set up.
   <Choose option='postman.app_type' value='create_new' color='blue'>
     # Create new Box App
 
-    We can set up a Box App for you right here from the documentation. With a
-    few clicks you will be ready to go.
+    Follow this process if you haven't already created a Box App, or want to create an additional one.  
   </Choose>
 
   <Choose option='postman.app_type' value='use_existing' color='blue'>
     # Use existing Box app
 
-    If you've already created a Box App before that you want to use, then we
-    can use the credentials for that application.
+    If you've already created a Box App that you want to use, you can use the credentials for that application. 
   </Choose>
 </Grid>
 
 <Choice option='postman.app_type' value='create_new,clicked' color='blue'>
   # Create a Box app
 
-  To use your own **Box App** you will need to create a
-  new Box App in the **Box Developer Console**. Click the button below and we
-  will set it up for you. At the end you will have a **Client ID** and
-  **Client Secret**.
+  To use your own Box App you need to create a new Box App in the **Box Developer Console**. 
+  The following example uses OAuth2.0 but other authentication methods are available.
 
+  1. Go to the [Developer Console][devconsole].
+  2. Select **Create Platform App**.
+  3. Enter an **App Name** and select **OAuth 2.0** as the **App Type**.
+  4. In the **Configuration** tab, scroll down to the **OAuth 2.0 Redirect URIs** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
+  5. Scroll down to the **Application Scopes** section to select your desired [scopes][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
+  6. At the top of the page click the button to **Save Changes**.
+  7. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**. These credentials are used to authenticate your application in the next step.
+
+</Choice>
+{/*
   <Trigger option="postman.app_type" value="clicked">
     <AppButton
       id='postman'
@@ -76,24 +82,25 @@ extra steps to set up.
     We will use these credentials to authenticate your application in the next
     step.
   </Observe>
-</Choice>
+*/}
 
 <Choice option='postman.app_type' value='use_existing' color='blue'>
   # Use existing Box app
 
-  If you have already created a Box App before you can use that as well. We
-  require a few settings to be set for this to work.
+  If you have already created a Box App, you can also use that. There are a few settings which need to be set for this to work. 
+  The following example uses OAuth2.0 but other authentication methods are available.
 
-  1. Go to the [Developer Console][devconsole]
-  2. Select your application
-  3. Go to the app's configuration section
-  4. Make sure your application uses **Standard OAuth 2.0** as the authentication method
-  5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
+  1. Go to the [Developer Console][devconsole].
+  2. Select your application.
+  3. Go to the app's **Configuration** tab.
+  4. Make sure your application is using **Standard OAuth 2.0** as the authentication method.
+  5. Scroll down to the **OAuth 2.0 Redirect URI** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
   6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
-  7. At the top of the page click the button to **Save Changes**
+  7. At the top of the page click the button to **Save Changes**.
+  8. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**.  These credentials are used to authenticate your application in the next step.
 
-  Next, copy the values for the Client ID and Client Secret into these 2 fields.
-
+</Choice>
+{/*
   <Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
     Client ID
   </Store>
@@ -104,7 +111,7 @@ extra steps to set up.
 
   We will use these credentials to authenticate your application in the next
   step.
-</Choice>
+
 
 <Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
 
@@ -129,6 +136,12 @@ extra steps to set up.
 * Or you selected to use an **existing Box App**
 
 </Choice>
+*/}
+
+## Summary
+
+* You either selected to create a new **Box App** and followed the steps to get the **Client ID** and **Client Secret**
+* Or you selected to use an **existing Box App** and followed the steps to get the **Client ID** and **Client Secret**
 
 <Observe option='postman.app_type' value='create_new,use_existing,clicked'>
   <Next>I have configured a Box app</Next>
