@@ -2721,64 +2721,7 @@
           {
             "tab": "Quick starts",
             "pages": [
-              {
-                "group": " ",
-                "pages": [
-                  "get-started",
-                  "guides/box-ai/quick-start/box-ai-extract",
-                  "guides/box-ai/quick-start/box-ai-extract-freeform",
-                  "guides/box-ai/quick-start/box-ai-extract-enhanced",
-                  "guides/box-ai/quick-start/box-ai-summarize",
-                  {
-                    "group": "Working with Metadata",
-                      "pages": [
-                        "guides/metadata/quick-start/index",
-                        "guides/metadata/quick-start/list-all",
-                        "guides/metadata/quick-start/create-template",
-                        "guides/metadata/quick-start/create-instance",
-                        "guides/metadata/quick-start/update-instance",
-                        "guides/metadata/quick-start/update-template",
-                        "guides/metadata/quick-start/create-query",
-                        "guides/metadata/quick-start/next-steps"
-                      ]
-                    },
-                    {
-                      "group": "Searching content using Metadata",
-                      "pages": [
-                        "guides/search/quick-start/index",
-                        "guides/search/quick-start/create-metadata-template",
-                        "guides/search/quick-start/locate-template-info",
-                        "guides/search/quick-start/apply-template-to-file",
-                        "guides/search/quick-start/metadata-query-api",
-                        "guides/search/quick-start/next-steps"
-                      ]
-                    },
-                  {
-                    "group": "Using Box CLI with OAuth 2.0",
-                    "pages": [
-                      "guides/cli/quick-start/index",
-                      "guides/cli/quick-start/create-oauth-app",
-                      "guides/cli/quick-start/install-and-configure",
-                      "guides/cli/quick-start/build-commands-help",
-                      "guides/cli/quick-start/options-and-bulk-commands",
-                      "guides/cli/quick-start/powershell-script-templates",
-                      "guides/cli/quick-start/next-steps"
-                    ]
-                  },
-                  {
-                    "group": "Using Postman to make API calls",
-                    "pages": [
-                      "guides/tooling/postman/quick-start/index",
-                      "guides/tooling/postman/quick-start/install-postman",
-                      "guides/tooling/postman/quick-start/configure-box-app",
-                      "guides/tooling/postman/quick-start/log-in-to-box",
-                      "guides/tooling/postman/quick-start/load-postman-collection",
-                      "guides/tooling/postman/quick-start/make-api-call",
-                      "guides/tooling/postman/quick-start/next-steps"
-                    ]
-                  }
-                ]
-              }
+              "/get-started"
             ]
           },
           {
