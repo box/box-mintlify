@@ -5532,6 +5532,9 @@
       "href": "https://account.box.com/developers/console"
     }
   },
+  "styling": {
+    "eyebrows": "none"
+  },
   "contextual": {
     "options": [
       "cursor",
