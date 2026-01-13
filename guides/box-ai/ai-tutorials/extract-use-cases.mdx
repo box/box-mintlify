@@ -1,0 +1,91 @@
+---
+title: "Extract APIs overview and use cases"
+rank: 7
+related_endpoints:
+  - post-ai-extract-structured
+  - post-ai-extract
+related_guides:
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/extract-metadata-structured
+alias_paths:
+  - guides/box-ai/extract-metadata
+---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+
+Data extraction can be challenging because source content varies widely with different layouts, templates, and file types. The Box AI Extract API provides two AI-powered endpoints: structured extraction and freeform extraction that standardize how you extract metadata from files in Box. These endpoints let you:
+
+- Extract specific fields into a consistent schema or Box metadata template (Structured Extraction).
+- Leverage enhanced extraction for more complex use cases and improved accuracy powered by advanced AI models (Structured Extraction).
+- Extract content when the target fields are not known ahead of time (Freeform Extraction).
+- Run extractions without building your own orchestration, permission checks, or throttling logic around the extraction workflow.
+- Extract data from documents in various languages, file formats, scanned documents, or photos.
+
+To illustrate the possibilties of mentioned endpoints take a look at use cases in various industries:
+
+<AccordionGroup>
+    <Accordion title="Sales & finance operations">
+        **Recommended Endpoint:** structured metadata extraction (`POST /2.0/ai/extract_structured`):
+        Ideal for high-volume, standardized documents where you need predictable data types.
+
+        - Enable automated data entry for finance teams. Structured metadata extraction ensures consistent JSON output every time thanks to a preconfigured metadata template.
+        - **Invoices & purchase orders:** extract line items, totals, and dates for AP automation.
+        - **Client contracts:** parse standardized fields like "Effective Date" or "Total Contract Value" to update CRM records.
+    </Accordion>
+
+    <Accordion title="Legal & HR">
+        **Recommended Endpoint:** freeform metadata extraction (`POST /2.0/ai/extract`):
+        Ideal for queries where document structure is not known ahead of time or varies.
+
+        - **Legal discovery:** leverage for queries for finding all clauses related to liability caps or identify the governing law jurisdiction.
+        - **HR onboarding:** extract key personal details from diverse offer letters or candidate resumes.
+        - **Mergers & acquisitions (M&A) due diligence:** rapidly audit thousands of pages to flag risks without reading every page.
+    </Accordion>
+
+    <Accordion title="Industry-specific solutions">
+        Leverage advanced features like Optical Character Recognition (OCR) and enhanced extraction agent for regulated sectors:
+        <AccordionGroup>
+            <Accordion title="Financial services (fintech)">
+                - **Know Your Customer (KYC) documents:** Verify user’s identity by extracting text from scanned passports or driver's licenses.
+                - **Loan Origination:** Automate income verification by pulling data from scanned utility bills or pay stubs.
+                - **Tax Reviews:** Handle complex reasoning, such as calculating totals from multiple subtotals across a tax form.
+            </Accordion>
+
+            <Accordion title="Life Sciences">
+                - **Clinical Trial Enrollment:** Extract patient criteria from medical forms to match candidates with trials.
+                - **Regulatory Submissions:** Organize and validate the data required for FDA or EMA submissions.
+            </Accordion>
+
+            <Accordion title="Public Sector">
+                - **Permit Applications:** Accelerate zoning approvals by validating required documentation.
+                - **Public Records Requests:** Automatically classify and prioritize documents for example for Freedom of Information Act (FOIA) responses.
+            </Accordion>
+        </AccordionGroup>
+    </Accordion>
+</AccordionGroup>
+
+## Core benefits of using the Box AI Extract API
+
+- **Managed scaling:** The Box AI Extract API is designed to handle queues and rate limits, so you can run high-volume processing.
+- **No defensive code:** The Box AI Extract API is model-agnostic enabling you to switch between supported LLMs with minimal code changes and minimizing vendor lock-in.
+- **Security & compliance:** All extracted data inherits the enterprise-grade security and governance policies of the Box platform.
+
+## Next Steps
+
+Get started with Box AI Extract API with practical example-led quick starts guides, API reference pages, and extensive developer guides:
+
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Prerequisites for working with Box AI API", href: "/guides/box-ai/ai-tutorials/prerequisites", badge: "GUIDE" },
+    { label: "Use freeform metadata extraction with Python", href: "/guides/box-ai/quick-start/extract-freeform", badge: "QUICKSTART" },
+    { label: "Use structured metadata extraction in Python", href: "/guides/box-ai/quick-start/extract-structured", badge: "QUICKSTART" },
+    { label: "Use enhanced agent with structured metadataextraction in Python", href: "/guides/box-ai/quick-start/extract-enhanced", badge: "QUICKSTART" },
+    { label: "Extract metadata from file (freeform)", href: "/guides/box-ai/ai-tutorials/extract-metadata", badge: "GUIDE" },
+    { label: "Extract metadata from file (structured)", href: "/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "GUIDE" },
+    { label: "Box metadata templates", href: "/guides/box-ai/ai-tutorials/metadata-templates", badge: "GUIDE" }
+  ]}
+/>
