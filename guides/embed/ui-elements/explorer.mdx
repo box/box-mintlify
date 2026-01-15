@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -34,7 +35,7 @@ on their metadata. The data is then displayed in the embedded view.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Authentication
@@ -182,8 +183,8 @@ contentExplorer.removeAllListeners();
 | `isTouch`              | Boolean  | Defaults to the browser and device's default touch support | Indicates to the Content Explorer that it's is being rendered on a touch enabled device.                                                                                                                                                                                                                                                            |
 | `autoFocus`            | Boolean  | `false`                                                    | When set to `true`, the item grid will get focus on initial load.                                                                                                                                                                                                                                                                                   |
 | `defaultView`          | String   | `files`                                                    | Value can be either be `files`, `recents` or `metadata`. When set to `recents`, by default you will see recent items instead of the regular file/folder structure. `metadata` is required to display the metadata view in Content Explorer. If not provided, you'll get a regular folder view.                                                      |
-| `requestInterceptor`   | Function |                                                            | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                           |
-| `responseInterceptor`  | Function |                                                            | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                          |
+| `requestInterceptor`   | Function |                                                            | Function to intercept requests. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                                           |
+| `responseInterceptor`  | Function |                                                            | Function to intercept responses. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                                          |
 | `ContentOpenWithProps` | Object   | `{ show: false }`                                          | Allows you to show the Open With Element when previewing via the explorer.                                                                                                                                                                                                                                                                          |
 | `token`                | String   |                                                            | Developer token generated in the Developer Console.                                                                                                                                                                                                                                                                                                 |
 | `metadataQuery`        | Object   |                                                            | Metadata query used to get the information for the metadata view.                                                                                                                                                                                                                                                                                   |

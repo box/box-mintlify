@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -35,7 +36,7 @@ supported file types for Box Content Preview [here][filetypes].
 
 ## Browser support
 
-[Learn more about browser support](/guides/embed/ui-elements/browser) for Box UI
+<Link href="/guides/embed/ui-elements/browser">Learn more about browser support</Link> for Box UI
 element.
 
 ## Usage
@@ -78,7 +79,7 @@ and JWT.
 
 If your application requires the end user to only be able to access a subset of
 the Annotations functionality, you can use
-[Downscoping](/guides/authentication/tokens/downscope) to appropriately
+<Link href="/guides/authentication/tokens/downscope">Downscoping</Link> to appropriately
 downscope your Access Token to a resulting token that has the desired set of
 permissions, and can thus, be securely passed to the end user client
 initializing Annotations.
@@ -86,8 +87,8 @@ initializing Annotations.
 Below are a set of new Annotation-specific scopes to go alongside Downscoping.
 These allow developers to enable/disable functionality on Box
 Annotations by configuring the appropriate scopes on the downscoped token. To
-learn more, see [Dedicated scopes for the Box UI
-Elements](/guides/embed/ui-elements/scopes).
+learn more, see <Link href="/guides/embed/ui-elements/scopes">Dedicated scopes for the Box UI
+Elements</Link>.
 
 ## Parameters & Options
 
@@ -165,8 +166,8 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 ## Enabling/Disabling Annotations and Annotation Types
 
 Annotation types can be selectively turned off through preview options. Viewer
-options override global `showAnnotations` value, for that viewer. See [Box
-Content Preview](/guides/embed/ui-elements/preview) for more details on how to
+options override global `showAnnotations` value, for that viewer. See <Link href="/guides/embed/ui-elements/preview">Box
+Content Preview</Link> for more details on how to
 set up the Preview instances that are used with Box Annotations here.
 
 ```js

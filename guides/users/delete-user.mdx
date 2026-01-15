@@ -13,6 +13,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 The process for deleting both app and managed users is the same. To delete a
 user account, supply the user ID for the account that should be
@@ -78,7 +79,7 @@ account:
 <Note>
   The delete user request will fail if the user account still has content in
   it. To resolve this, either
-  [transfer all files or folders](/guides/users/deprovision/transfer-folders)
+  <Link href="/guides/users/deprovision/transfer-folders">transfer all files or folders</Link>
   to another account or use the optional `force` parameter.
 </Note>
 

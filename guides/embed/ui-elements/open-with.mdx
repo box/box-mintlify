@@ -12,6 +12,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -37,12 +38,12 @@ The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](/platform/user-types)
+Currently, the element only supports <Link href="/platform/user-types">App Users</Link>
 for authentication.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Box Edit
@@ -63,7 +64,7 @@ integration. To connect a user's G Suite and Box account, the
 associated with the user's G Suite account.
 
 The `external_app_user_id` of an app user can be updated via the
-[`PUT /users/:id`](/reference/put-users-id) endpoint.
+<Link href="/reference/put-users-id">`PUT /users/:id`</Link> endpoint.
 
 ## Setup
 
@@ -84,7 +85,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](/guides/authorization/platform-app-approval).
+available <Link href="/guides/authorization/platform-app-approval">here</Link>.
 
 ## List available integrations
 
@@ -154,7 +155,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](/platform/user-types/#service-account) Access Token.
+- A valid <Link href="/platform/user-types/#service-account">Service Account</Link> Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
 
@@ -379,8 +380,8 @@ contentOpenWith.removeAllListeners();
 | `boxToolsInstallUrl`  | `String`       | This URL will be used instead of the default Box installation instructions which are linked in the "Install Box Tools to open this file on your desktop" message.                                                                                          |
 | `onExecute`           | `Function`     | A callback that executes when an integration invocation is attempted.                                                                                                                                                                                      |
 | `onError`             | `Function`     | A callback that executes when an error occurs.                                                                                                                                                                                                             |
-| `requestInterceptor`  | `Function`     | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).  |
-| `responseInterceptor` | `Function`     | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors). |
+| `requestInterceptor`  | `Function`     | Function to intercept requests. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.  |
+| `responseInterceptor` | `Function`     | Function to intercept responses. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>. |
 {/* i18n-disable localize-links */}
 
 <Warning>

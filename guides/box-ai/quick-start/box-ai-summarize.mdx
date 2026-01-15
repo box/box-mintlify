@@ -4,7 +4,9 @@ sidebarTitle: Summarizing data
 description: Learn how to use Box AI to automatically extract structured data from documents and store it as searchable metadata using the Box Python SDK.
 ---
 
-[Box AI](/ai-dev-zone) exposes AI capabilities that enable developers to interrogate documents through a single API call. This powerful feature transforms unstructured
+import {Link} from "/snippets/Link.jsx";
+
+<Link href="/ai-dev-zone">Box AI</Link> exposes AI capabilities that enable developers to interrogate documents through a single API call. This powerful feature transforms unstructured
 document content into instant insights without the need to build and maintain complex Retrieval Augmented Generation (RAG) pipelines.
 
 This quick start demonstrates how to configure the Box Python SDK and use Box AI to summarize files in Box.
@@ -13,19 +15,19 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
   <Step title="Create and configure a Box application">
     The first step for any Box Platform integration is to create and configure a Box 
     application. 
-    1. Go to [Box Developer Console](https://app.box.com/developers/console).
+    1. Go to <Link href="https://app.box.com/developers/console">Box Developer Console</Link>.
     2. For this quick start, create an App with the `Client Credentials Grant` 
     application type. 
     3. Once the app is created, enable the following scopes:
         * `Read all files and folders stored in Box`
         * `Manage AI`
 
-    For more information about creating a new Box application, see [Create your first application](/guides/getting-started/first-application#create-your-first-application).
+    For more information about creating a new Box application, see <Link href="/guides/getting-started/first-application#create-your-first-application">Create your first application</Link>.
   </Step>
 
   <Step title="Upload a test file">
     To use Box AI to get insights from documents, you need a file in Box. For this quick start, use this document containing
-    [federal code](/static/quickstarts/summarize/files/ai-summary-document.pdf).
+    <Link href="/static/quickstarts/summarize/files/ai-summary-document.pdf">federal code</Link>.
 
     1. Download the test document, and then drag and drop it into your Box account.
     2. Get the file ID by opening the file in Box and inspecting the URL.
@@ -60,7 +62,7 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
         BOX_FILE_ID=your_box_file_id
        ```
     
-    To get your developer token, go to the [Box Developer Console](https://app.box.com/developers/console), 
+    To get your developer token, go to the <Link href="https://app.box.com/developers/console">Box Developer Console</Link>, 
     open your app, and navigate to the **Configuration** tab. 
     
     6. Click **Generate Developer Token** to create a new token.  
@@ -178,7 +180,7 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
         ```
 
         The SDK handles the API call to Box AI and returns the summary as an
-        [`AiResponseFull`](/reference/resources/ai-response--full) object. In this quick start,
+        <Link href="/reference/resources/ai-response--full">`AiResponseFull`</Link> object. In this quick start,
         the code converts this object to a dictionary and returns the `answer` field that contains the summary.
 
     3. Print out the summary to the console to verify that the operation was successful by running the following command in your terminal:
@@ -205,6 +207,6 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
 </Steps>
 
 ## Resources
-- [Final code](https://github.com/box-community/box-quickstarts/tree/main/box-ai-summarize-quickstart)
-- [Box AI Ask API Reference](/reference/post-ai-ask)
-- [Box Python SDK](https://github.com/box/box-python-sdk/tree/main)
+- <Link href="https://github.com/box-community/box-quickstarts/tree/main/box-ai-summarize-quickstart">Final code</Link>
+- <Link href="/reference/post-ai-ask">Box AI Ask API Reference</Link>
+- <Link href="https://github.com/box/box-python-sdk/tree/main">Box Python SDK</Link>

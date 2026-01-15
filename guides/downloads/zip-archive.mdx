@@ -11,6 +11,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 To download all files in a folder or an entire folder structure, you have to create and download a ZIP archive.
 
@@ -282,7 +283,7 @@ client.files.downloadZip(name, items, stream)
 
 For downloads that take longer, you can monitor the
 download status using the
-[status endpoint](/reference/get-zip-downloads-id-status).
+<Link href="/reference/get-zip-downloads-id-status">status endpoint</Link>.
 This allows you to inspect the progress of the
 download as well as the number of items that might have been skipped.
 
@@ -315,7 +316,7 @@ client.getZipDownloads().getZipDownloadStatus(zipDownload.getStatusUrl())
 
 <Note>
 If you want to use SDKs to download the contents
-of the folder, follow [this](/guides/downloads/folder) guide.
+of the folder, follow <Link href="/guides/downloads/folder">this</Link> guide.
 </Note>
 
 <RelatedLinks
