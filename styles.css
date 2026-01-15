@@ -118,13 +118,15 @@ footer div.flex.gap-4.flex-col.md\:flex-row.md\:items-center.md\:gap-8.md\:justi
 /* Related links badge styles */
 /* Guide badges */
 .badge-guide,
-.badge-tutorial {
+.badge-tutorial,
+.badge-quickstart {
   background-color: #1f2937;
   color: #fff;
 }
 
 .dark .badge-guide,
-.dark .badge-tutorial {
+.dark .badge-tutorial,
+.dark .badge-quickstart {
   background-color: #1f2937;
   color: #fff;
 }
