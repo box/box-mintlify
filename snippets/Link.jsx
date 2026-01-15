@@ -24,56 +24,41 @@
  */
 
 // Use React from global scope (provided by Mintlify)
-const { useState, useEffect } = React;
-
-// List of supported locale prefixes (excluding en-US which has no prefix)
-// Add new locales here as they become available
-const SUPPORTED_LOCALES = [
-  'ja',  // Japanese
-  // Future locales can be added here, e.g.:
-  // 'de',  // German
-  // 'fr',  // French
-  // 'es',  // Spanish
-  // 'zh',  // Chinese
-  // 'ko',  // Korean
-  // 'pt',  // Portuguese
-];
-
-/**
- * Extracts the locale prefix from a URL path if present.
- * @param {string} path - The URL pathname
- * @returns {string|null} The locale prefix (e.g., 'ja') or null if no locale prefix
- */
-const getLocaleFromPath = (path) => {
-  // Match pattern like /ja/ or /ja at the start of the path
-  const match = path.match(/^\/([a-z]{2})(?:\/|$)/);
-  if (match) {
-    const potentialLocale = match[1];
-    // Check if it's a supported locale
-    if (SUPPORTED_LOCALES.includes(potentialLocale)) {
-      return potentialLocale;
-    }
-  }
-  return null;
-};
-
-/**
- * Checks if a URL already has a locale prefix.
- * @param {string} href - The href to check
- * @returns {boolean} True if the href starts with a locale prefix
- */
-const hasLocalePrefix = (href) => {
-  const match = href.match(/^\/([a-z]{2})(?:\/|$)/);
-  if (match) {
-    return SUPPORTED_LOCALES.includes(match[1]);
-  }
-  return false;
-};
+const { useState, useEffect, useMemo } = React;
 
 export const Link = ({ href, children, className, ...props }) => {
   const [localizedHref, setLocalizedHref] = useState(href);
+  const supportedLocales = useMemo(
+    () => [
+      'ja', // Japanese
+      // Future locales can be added here, e.g.:
+      // 'de',  // German
+      // 'fr',  // French
+      // 'es',  // Spanish
+      // 'zh',  // Chinese
+      // 'ko',  // Korean
+      // 'pt',  // Portuguese
+    ],
+    []
+  );
 
   useEffect(() => {
+    const getLocaleFromPath = (path) => {
+      const match = path.match(/^\/([a-z]{2})(?:\/|$)/);
+      if (match) {
+        const potentialLocale = match[1];
+        if (supportedLocales.includes(potentialLocale)) {
+          return potentialLocale;
+        }
+      }
+      return null;
+    };
+
+    const hasLocalePrefix = (path) => {
+      const match = path.match(/^\/([a-z]{2})(?:\/|$)/);
+      return match ? supportedLocales.includes(match[1]) : false;
+    };
+
     // Detect the current locale from the URL path
     const currentPath = window.location.pathname;
     const currentLocale = getLocaleFromPath(currentPath);
@@ -92,7 +77,7 @@ export const Link = ({ href, children, className, ...props }) => {
       // External URL or already has locale prefix
       setLocalizedHref(href);
     }
-  }, [href]);
+  }, [href, supportedLocales]);
 
   return (
     <a href={localizedHref} className={className} {...props}>
