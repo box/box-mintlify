@@ -668,12 +668,12 @@ export const FeatureTilesEN = () => {
         </svg>
       ),
       title: "Visual Configuration",
-      description: "Configure complex AI settings using an intuitive, form-based interface.",
+      description: "Build complex AI configurations with our intuitive form-based interface.",
     },
     {
       icon: <img src="/static/ai-dev-zone/icon-ai.svg" alt="" className="w-14 h-14" />,
-      title: "Real-Time Preview",
-      description: "See real-time updates to the JSON configuration as you make changes.",
+      title: "Real-time preview",
+      description: "See your JSON configuration update in real-time as you make changes.",
     },
     {
       icon: (
@@ -691,8 +691,8 @@ export const FeatureTilesEN = () => {
           />
         </svg>
       ),
-      title: "Export and Share",
-      description: "Copy the configuration and paste it directly into your project.",
+      title: "Export and share",
+      description: "Copy configuration and paste it directly in your project.",
     },
   ];
 
