@@ -1,4 +1,4 @@
-export const AIAgentConfig = () => {
+export const AIAgentConfig = ({ button }) => {
   // Helper function to determine provider from model
   const getProviderFromModel = (model) => {
     if (model.startsWith("openai__") || model.startsWith("azure__openai")) return "openai";
@@ -253,259 +253,314 @@ export const AIAgentConfig = () => {
   };
 
   return (
-    <section className="max-w-[1400px] mx-auto w-full">
-      <div className="grid grid-cols-1 min-[900px]:grid-cols-2 gap-8 w-full">
-        {/* Left Column - Configuration */}
-        <aside className="space-y-6">
-          <div>
-            <h2 className="text-[28px] font-bold text-gray-900 dark:text-white mb-2">Agent configuration</h2>
-            <hr className="border-t border-dashed border-gray-300 dark:border-gray-600 my-3 mb-1" />
-            <p className="text-gray-600 dark:text-gray-400">
-              Configure your AI agent's settings and LLM fine-tune parameters.
-            </p>
-          </div>
+    <>
+      <style>{`
+        .mdx-content, #header {
+          width: 100%;
+          max-width: 1400px;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
 
-          {/* Step 1: Agent Type */}
-          <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
-            <p className=" text-gray-900 dark:text-white text-[19px] font-medium">1. Choose agent type</p>
-            <select
-              value={selectedAgentType}
-              onChange={(e) => setSelectedAgentType(e.target.value)}
-              className="w-full p-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white cursor-pointer relative z-10"
-              style={{
-                appearance: "none",
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right 12px center",
-                backgroundSize: "10px 10px",
-              }}
-            >
-              {agentTypes.map((type) => (
-                <option key={type.value} value={type.value}>
-                  {type.label}
-                </option>
-              ))}
-            </select>
-          </div>
+        @media (min-width: 768px) {
+          .mdx-content, #header {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+        }
 
-          {/* Step 2: Content Types */}
-          <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
-            <p className=" text-gray-900 dark:text-white text-[19px] font-medium">2. Add content types</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {contentTypes.map((ct) => (
-                <button
-                  key={ct.id}
-                  onClick={() => toggleContentType(ct.id)}
-                  className={`p-3 rounded-lg text-left transition-all border ${
-                    selectedContentTypes.includes(ct.id)
-                      ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
-                      : "border-gray-200 dark:border-gray-700 hover:border-blue-300"
-                  }`}
-                >
-                  <h4 className="font-medium text-sm text-gray-900 dark:text-white">{ct.title}</h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{ct.description}</p>
-                </button>
-              ))}
-            </div>
-          </div>
+        @media (min-width: 1440px) {
+          .mdx-content, #header {
+            width: 1000px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
 
-          {/* Step 3: Configure Content Type */}
-          <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
-            <p className=" text-gray-900 dark:text-white text-[19px] font-medium">
-              3. Configure each content type object
-            </p>
+        @media (min-width: 1510px) {
+          .mdx-content, #header {
+            width: 1100px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
 
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
-              {selectedContentTypes.map((ct) => (
-                <button
-                  key={ct}
-                  onClick={() => setActiveTab(ct)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors whitespace-nowrap ${
-                    activeTab === ct
-                      ? "border-b-2 border-blue-500 text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800"
-                      : "text-gray-500 hover:text-gray-700 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}
-                >
-                  {contentTypes.find((c) => c.id === ct)?.title || ct}
-                </button>
-              ))}
+        @media (min-width: 1740px) {
+          .mdx-content, #header {
+            width: 1200px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
+        @media (min-width: 2100px) {
+          .mdx-content, #header {
+            width: 1400px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      `}</style>
+      <section className="max-w-[1400px] mx-auto w-full">
+        <div className="grid grid-cols-1 min-[900px]:grid-cols-2 gap-8 w-full">
+          {/* Left Column - Configuration */}
+          <aside className="space-y-6">
+            <div>
+              <h2 className="text-[28px] font-bold text-gray-900 dark:text-white mb-2">Agent configuration</h2>
+              <hr className="border-t border-dashed border-gray-300 dark:border-gray-600 my-3 mb-1" />
+              <p className="text-gray-600 dark:text-gray-400">
+                Configure your AI agent's settings and LLM fine-tune parameters.
+              </p>
             </div>
 
-            {/* Tab Content */}
-            {config[activeTab] && (
-              <div className="space-y-6 pt-4">
-                {/* Model Selection */}
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-2">3.1 Choose LLM model</h4>
-                  <select
-                    value={config[activeTab].model}
-                    onChange={(e) => handleModelChange(activeTab, e.target.value)}
-                    className="w-full p-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white cursor-pointer relative z-10"
-                    style={{
-                      appearance: "none",
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "right 12px center",
-                      backgroundSize: "10px 10px",
-                    }}
+            {/* Step 1: Agent Type */}
+            <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
+              <p className=" text-gray-900 dark:text-white text-[19px] font-medium">1. Choose agent type</p>
+              <select
+                value={selectedAgentType}
+                onChange={(e) => setSelectedAgentType(e.target.value)}
+                className="w-full p-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white cursor-pointer relative z-10"
+                style={{
+                  appearance: "none",
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right 12px center",
+                  backgroundSize: "10px 10px",
+                }}
+              >
+                {agentTypes.map((type) => (
+                  <option key={type.value} value={type.value}>
+                    {type.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Step 2: Content Types */}
+            <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
+              <p className=" text-gray-900 dark:text-white text-[19px] font-medium">2. Add content types</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {contentTypes.map((ct) => (
+                  <button
+                    key={ct.id}
+                    onClick={() => toggleContentType(ct.id)}
+                    className={`p-3 rounded-lg text-left transition-all border ${
+                      selectedContentTypes.includes(ct.id)
+                        ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                        : "border-gray-200 dark:border-gray-700 hover:border-blue-300"
+                    }`}
                   >
-                    {models.map((m) => (
-                      <option key={m.value} value={m.value}>
-                        {m.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* LLM Parameters - Dynamic based on provider */}
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-3">3.2 Fine-tune LLM parameters</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Dynamic provider-specific params */}
-                    {providerParams[getProviderFromModel(config[activeTab].model)].params.map((param) => (
-                      <div key={param.name}>
-                        {param.type === "text" ? (
-                          <>
-                            <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">{param.label}</label>
-                            <input
-                              type="text"
-                              value={config[activeTab][param.name] || ""}
-                              onChange={(e) => updateConfig(activeTab, param.name, e.target.value)}
-                              placeholder={`Enter ${param.label.toLowerCase()}`}
-                              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-                            />
-                          </>
-                        ) : (
-                          <>
-                            <label className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
-                              <span>{param.label}</span>
-                              <span>{config[activeTab][param.name] ?? param.default}</span>
-                            </label>
-                            <input
-                              type="range"
-                              min={param.min}
-                              max={param.max}
-                              step={param.step}
-                              value={config[activeTab][param.name] ?? param.default}
-                              onChange={(e) => updateConfig(activeTab, param.name, parseFloat(e.target.value))}
-                              className="w-full"
-                            />
-                            <div className="flex justify-between text-xs text-gray-400 mt-1">
-                              <span>{param.min}</span>
-                              <span>{param.max}</span>
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    ))}
-                    {/* Max Tokens - always shown */}
-                    <div>
-                      <label className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
-                        <span>Max Tokens</span>
-                        <span>{config[activeTab].num_tokens_for_completion}</span>
-                      </label>
-                      <input
-                        type="range"
-                        min="100"
-                        max="10000"
-                        step="100"
-                        value={config[activeTab].num_tokens_for_completion}
-                        onChange={(e) => updateConfig(activeTab, "num_tokens_for_completion", parseInt(e.target.value))}
-                        className="w-full"
-                      />
-                      <div className="flex justify-between text-xs text-gray-400 mt-1">
-                        <span>100</span>
-                        <span>10000</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Prompts */}
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-3">3.3 Customize prompts and messages</h4>
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Prompt Template</label>
-                      <textarea
-                        value={config[activeTab].prompt_template}
-                        onChange={(e) => updateConfig(activeTab, "prompt_template", e.target.value)}
-                        placeholder="Enter prompt template"
-                        rows={4}
-                        className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">System Message</label>
-                      <textarea
-                        value={config[activeTab].system_message}
-                        onChange={(e) => updateConfig(activeTab, "system_message", e.target.value)}
-                        placeholder="Enter system message"
-                        rows={3}
-                        className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
+                    <h4 className="font-medium text-sm text-gray-900 dark:text-white">{ct.title}</h4>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{ct.description}</p>
+                  </button>
+                ))}
               </div>
-            )}
-          </div>
-        </aside>
-
-        {/* Right Column - JSON Output */}
-        <nav className="border border-1 dark:border-gray-700 rounded-xl p-5 space-y-4 sticky top-[200px] self-start">
-          <div className="flex flex-wrap justify-between items-center gap-2">
-            <h3 className="font-semibold text-[19px] text-gray-900 dark:text-white whitespace-nowrap">
-              Generated configuration
-            </h3>
-            <div className="flex gap-2">
-              <button
-                onClick={copyToClipboard}
-                className="flex items-center gap-2 px-3 py-1.5 text-sm bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                コピー
-              </button>
-              <button
-                onClick={downloadJSON}
-                className="flex items-center gap-2 px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 ease-in-out"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download configuration
-              </button>
             </div>
-          </div>
 
-          <CodeBlock language="json" wrap className="h-[700px] ai_agent_code">
-            {generateJSON()}
-          </CodeBlock>
-        </nav>
-      </div>
-    </section>
+            {/* Step 3: Configure Content Type */}
+            <div className="space-y-3 border border-1 dark:border-gray-700 rounded-xl p-5">
+              <p className=" text-gray-900 dark:text-white text-[19px] font-medium">
+                3. Configure each content type object
+              </p>
+
+              {/* Tab Navigation */}
+              <div className="flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
+                {selectedContentTypes.map((ct) => (
+                  <button
+                    key={ct}
+                    onClick={() => setActiveTab(ct)}
+                    className={`px-3 py-2 text-sm font-medium transition-colors whitespace-nowrap ${
+                      activeTab === ct
+                        ? "border-b-2 border-blue-500 text-blue-600 dark:text-blue-400 bg-gray-50 dark:bg-gray-800"
+                        : "text-gray-500 hover:text-gray-700 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    }`}
+                  >
+                    {contentTypes.find((c) => c.id === ct)?.title || ct}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tab Content */}
+              {config[activeTab] && (
+                <div className="space-y-6 pt-4">
+                  {/* Model Selection */}
+                  <div>
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-2">3.1 Choose LLM model</h4>
+                    <select
+                      value={config[activeTab].model}
+                      onChange={(e) => handleModelChange(activeTab, e.target.value)}
+                      className="w-full p-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white cursor-pointer relative z-10"
+                      style={{
+                        appearance: "none",
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "right 12px center",
+                        backgroundSize: "10px 10px",
+                      }}
+                    >
+                      {models.map((m) => (
+                        <option key={m.value} value={m.value}>
+                          {m.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* LLM Parameters - Dynamic based on provider */}
+                  <div>
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">3.2 Fine-tune LLM parameters</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Dynamic provider-specific params */}
+                      {providerParams[getProviderFromModel(config[activeTab].model)].params.map((param) => (
+                        <div key={param.name}>
+                          {param.type === "text" ? (
+                            <>
+                              <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                {param.label}
+                              </label>
+                              <input
+                                type="text"
+                                value={config[activeTab][param.name] || ""}
+                                onChange={(e) => updateConfig(activeTab, param.name, e.target.value)}
+                                placeholder={`Enter ${param.label.toLowerCase()}`}
+                                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
+                              />
+                            </>
+                          ) : (
+                            <>
+                              <label className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                <span>{param.label}</span>
+                                <span>{config[activeTab][param.name] ?? param.default}</span>
+                              </label>
+                              <input
+                                type="range"
+                                min={param.min}
+                                max={param.max}
+                                step={param.step}
+                                value={config[activeTab][param.name] ?? param.default}
+                                onChange={(e) => updateConfig(activeTab, param.name, parseFloat(e.target.value))}
+                                className="w-full"
+                              />
+                              <div className="flex justify-between text-xs text-gray-400 mt-1">
+                                <span>{param.min}</span>
+                                <span>{param.max}</span>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      ))}
+                      {/* Max Tokens - always shown */}
+                      <div>
+                        <label className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
+                          <span>Max Tokens</span>
+                          <span>{config[activeTab].num_tokens_for_completion}</span>
+                        </label>
+                        <input
+                          type="range"
+                          min="100"
+                          max="10000"
+                          step="100"
+                          value={config[activeTab].num_tokens_for_completion}
+                          onChange={(e) =>
+                            updateConfig(activeTab, "num_tokens_for_completion", parseInt(e.target.value))
+                          }
+                          className="w-full"
+                        />
+                        <div className="flex justify-between text-xs text-gray-400 mt-1">
+                          <span>100</span>
+                          <span>10000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Prompts */}
+                  <div>
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">
+                      3.3 Customize prompts and messages
+                    </h4>
+                    <div className="space-y-3">
+                      <div>
+                        <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">Prompt Template</label>
+                        <textarea
+                          value={config[activeTab].prompt_template}
+                          onChange={(e) => updateConfig(activeTab, "prompt_template", e.target.value)}
+                          placeholder="Enter prompt template"
+                          rows={4}
+                          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">System Message</label>
+                        <textarea
+                          value={config[activeTab].system_message}
+                          onChange={(e) => updateConfig(activeTab, "system_message", e.target.value)}
+                          placeholder="Enter system message"
+                          rows={3}
+                          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </aside>
+
+          {/* Right Column - JSON Output */}
+          <nav className="border border-1 dark:border-gray-700 rounded-xl p-5 space-y-4 sticky top-[200px] self-start">
+            <div className="flex flex-wrap justify-between items-center gap-2">
+              <h3 className="font-semibold text-[19px] text-gray-900 dark:text-white whitespace-nowrap">
+                Generated configuration
+              </h3>
+              <div className="flex gap-2">
+                <button
+                  onClick={copyToClipboard}
+                  className="flex items-center gap-2 px-3 py-1.5 text-sm bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-all duration-300 ease-in-out"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  {button || "コピー"}
+                </button>
+                <button
+                  onClick={downloadJSON}
+                  className="flex items-center gap-2 px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-all duration-300 ease-in-out"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download configuration
+                </button>
+              </div>
+            </div>
+
+            <CodeBlock language="json" wrap className="h-[700px] ai_agent_code">
+              {generateJSON()}
+            </CodeBlock>
+          </nav>
+        </div>
+      </section>
+    </>
   );
 };
 
@@ -579,7 +634,7 @@ export const FeatureTilesJA = () => {
   ];
 
   return (
-    <section className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto mb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <div
@@ -642,7 +697,7 @@ export const FeatureTilesEN = () => {
   ];
 
   return (
-    <section className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto mb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <div
