@@ -2,19 +2,19 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Box Platform API",
-    "description": "[Box Platform](https://box.dev)では、[Box](https://box.com)内に保存されているコンテンツへのアクセス権限を付与する機能が提供されています。また、ファイルとフォルダの基本操作、会社内のユーザーの管理、リーガルホールドやリテンションポリシーなどの複雑なトピックのためのエンドポイントも提供されています。",
+    "description": "[Box Platform](https://developer.box.com/ja)では、[Box](https://box.com)内に保存されているコンテンツへのアクセス権限を付与する機能が提供されています。また、ファイルとフォルダの基本操作、会社内のユーザーの管理、リーガルホールドやリテンションポリシーなどの複雑なトピックのためのエンドポイントも提供されています。",
     "termsOfService": "https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9",
     "contact": {
       "name": "Box, Inc",
-      "url": "https://box.dev",
+      "url": "https://developer.box.com",
       "email": "devrel@box.com"
     },
     "license": {
       "name": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     "version": "2025.0",
-    "x-box-commit-hash": "2e9c861c73"
+    "x-box-commit-hash": "770a648384"
   },
   "servers": [
     {
@@ -824,7 +824,7 @@
           {
             "lang": "dotnet",
             "label": "すべてのBox Doc Genジョブのリストを取得",
-            "source": "await client.Docgen.GetDocgenJobsV2025R0Async(queryParams: new GetDocgenJobsV2025R0QueryParams() { Limit = 10000 });"
+            "source": "await client.Docgen.GetDocgenJobsV2025R0Async(queryParams: new GetDocgenJobsV2025R0QueryParams() { Limit = 10000L });"
           },
           {
             "lang": "swift",
@@ -3185,7 +3185,7 @@
           {
             "lang": "dotnet",
             "label": "アーカイブのリストを取得",
-            "source": "await client.Archives.GetArchivesV2025R0Async(queryParams: new GetArchivesV2025R0QueryParams() { Limit = 100 });"
+            "source": "await client.Archives.GetArchivesV2025R0Async(queryParams: new GetArchivesV2025R0QueryParams() { Limit = 100L });"
           },
           {
             "lang": "swift",
@@ -3924,7 +3924,7 @@
           "help_url": {
             "description": "このエラーの原因に関する詳細情報にリンクされたURL。",
             "type": "string",
-            "example": "https://developer.box.com/ja/guides/api-calls/permissions-and-errors/common-errors/",
+            "example": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
             "nullable": false
           },
           "request_id": {
