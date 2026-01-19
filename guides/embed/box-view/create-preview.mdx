@@ -12,6 +12,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -50,7 +51,7 @@ directly to the APIs.
 
 <Note>
   When generating the embed URL directly from the APIs, use the
-  [Get File Information endpoint](/reference/get-files-id) and request
+  <Link href="/reference/get-files-id">Get File Information endpoint</Link> and request
   `expiring_embed_link` via the `fields` parameter.
 </Note>
 
@@ -113,7 +114,7 @@ attribute set to generated embed URL.
 ## Customized Previewer (UI Elements)
 
 To leverage advanced preview customization and event handling capabilities, use
-the Box [UI Preview Element](/guides/embed/ui-elements/preview).
+the Box <Link href="/guides/embed/ui-elements/preview">UI Preview Element</Link>.
 
 To set up the Preview Element, start by installing the required components.
 
@@ -139,7 +140,7 @@ Replace the placeholders in the code sample with the following:
   Due to the elevated privileges of the primary access token it's highly
   recommended that you use a downscoped version of the token in the Javascript
   code. See
-  [best practices for downscoping](/guides/embed/box-view/best-practices#use-downscoped-tokens).
+  <Link href="/guides/embed/box-view/best-practices#use-downscoped-tokens">best practices for downscoping</Link>.
 </Warning>
 
 [uie]: /guides/embed/ui-elements

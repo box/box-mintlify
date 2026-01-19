@@ -12,6 +12,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 As part of user account deprovisioning, a common requirement is to transfer all
 files and folders that are stored within the user account to another user
@@ -20,7 +21,7 @@ account.
 
 There are two general methods that are employed to accomplish this within Box:
 
-* Using the direct [transfer owned folders](/reference/put-users-id-folders-0) API, which will move all content from one user directly to another.
+* Using the direct <Link href="/reference/put-users-id-folders-0">transfer owned folders</Link> API, which will move all content from one user directly to another.
 * Using the collaboration transfer method to change ownership of one file or folder at a time from one user to another.
 
 <Note>
@@ -34,7 +35,7 @@ There are two general methods that are employed to accomplish this within Box:
 
 ## Transfer Owned Folders API Method
 
-The [transfer owned folders endpoint](/reference/put-users-id-folders-0) is
+The <Link href="/reference/put-users-id-folders-0">transfer owned folders endpoint</Link> is
 designed to move the entirety of content owned by one user over to another user.
 
 <Note>
@@ -164,7 +165,7 @@ client.enterprise.transferUserContent(sourceUserID, destinationUserID)
 ## Collaboration Transfer Method
 
 The collaboration transfer method is a process that uses the
-[collaboration endpoint](/reference/post-collaborations) to change the
+<Link href="/reference/post-collaborations">collaboration endpoint</Link> to change the
 ownership of a single file or folder from one user to another instantaneously.
 
 <Note>
@@ -183,7 +184,7 @@ The first step is to add the `transfer_to_user` account as a collaborator with
 
 Making the call as the `transfer_from_user` account, add the `transfer_to_user`
 as a co-owner using the
-[add collaboration endpoint](/reference/post-collaborations).
+<Link href="/reference/post-collaborations">add collaboration endpoint</Link>.
 
 <CodeGroup>
 
@@ -320,7 +321,7 @@ returned will include a collaboration ID, which is used for the last step.
 
 Making the call as the `transfer_to_user` account, get the collaboration on the
 file or folder ID being transferred, using the
-[get collaboration endpoint](/reference/get-collaborations-id). Capture the
+<Link href="/reference/get-collaborations-id">get collaboration endpoint</Link>. Capture the
 collaboration ID.
 
 <CodeGroup>
@@ -363,7 +364,7 @@ await client.userCollaborations.getCollaborationById(collaborationId);
 
 The final step is to remove the `transfer_from_user` account as an owner of the
 file or folder, which is accomplished using the
-[delete collaboration endpoint](/reference/delete-collaborations-id).
+<Link href="/reference/delete-collaborations-id">delete collaboration endpoint</Link>.
 
 Making call as the `transfer_to_user` account, remove the `transfer_from_user`
 as a collaborator on the file or folder.

@@ -14,11 +14,12 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Paginating the event stream works through the use of the `stream_position`
 parameter.
 
-First, send a request to the [`GET /events`](/reference/get-events) API without a
+First, send a request to the <Link href="/reference/get-events">`GET /events`</Link> API without a
 `stream_position` query parameter.
 
 ```sh

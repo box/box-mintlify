@@ -7,6 +7,8 @@ required_guides: []
 alias_paths:
   - /docs/scopes
 ---
+import {Link} from "/snippets/Link.jsx";
+
 When an application is created in the Developer Console, the user must configure
 application scopes. Similar to how users have permissions to access files and
 folders within Box, applications have their own set of permissions to
@@ -142,7 +144,7 @@ Additionally, for JWT applications, the application must be configured with
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
-Please review webhook [limitations](/guides/webhooks/v2/limitations-v2). Most
+Please review webhook <Link href="/guides/webhooks/v2/limitations-v2">limitations</Link>. Most
 notably, there is a limit of 1000 webhooks per application, per user.
 
 ### Manage enterprise properties

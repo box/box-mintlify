@@ -3,8 +3,10 @@ title: "Requesting extra fields"
 related_endpoints:
 required_guides: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 By default, the search API returns the **standard** format of a
-[File](/reference/resources/file), [Folder](/reference/resources/folder), or [Web Link](/reference/resources/web-link). Each of
+<Link href="/reference/resources/file">File</Link>, <Link href="/reference/resources/folder">Folder</Link>, or <Link href="/reference/resources/web-link">Web Link</Link>. Each of
 these resources supports additional fields that can be requested through the
 `fields` query parameter.
 
@@ -55,8 +57,8 @@ client.search.query(
 <Info>
 
 For more details on these fields, please check out the
-[full File](/reference/resources/file--full), [full Folder](/reference/resources/folder--full),
-and [full Web Link](/reference/resources/web-link) resources.
+<Link href="/reference/resources/file--full">full File</Link>, <Link href="/reference/resources/folder--full">full Folder</Link>,
+and <Link href="/reference/resources/web-link">full Web Link</Link> resources.
 
 </Info>
 

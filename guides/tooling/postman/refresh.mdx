@@ -7,6 +7,8 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 To authenticate to the Box API the Postman collection will use an **Access
 Token** to identify you, the **User** to the API. Access tokens expire after 1
 hour and therefore need to be refreshed every hour.
@@ -75,7 +77,7 @@ before making your desired API call.
 ## Re-authenticating your Postman collection
 
 In some cases you might need to re-authenticate your Postman collection by going
-through the [Quick Start](/guides/tooling/postman/quick-start) guide again. A common
+through the <Link href="/guides/tooling/postman/quick-start">Quick Start</Link> guide again. A common
 reason for this is because you haven't used the Postman collection in over 60
 days and your `refresh_token` has expired.
 
