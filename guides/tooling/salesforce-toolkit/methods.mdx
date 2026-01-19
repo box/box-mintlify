@@ -8,6 +8,7 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -215,7 +216,7 @@ Returns:
 
 | Parameter        | Type     | Description                                                                                                                                 |
 | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `folderName`     | `string` | Name of the folder to be created. Folder names are subject to some restrictions. [See here for more details.](/reference/post-folders)      |
+| `folderName`     | `string` | Name of the folder to be created. Folder names are subject to some restrictions. <Link href="/reference/post-folders">See here for more details.</Link>      |
 | `parentFolderId` | `string` | Parent Box folder this folder will be created in.                                                                                           |
 | `accessToken`    | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call,; otherwise, the default service account credentials are used. |
 
@@ -399,7 +400,7 @@ Returns:
 
 ### `getBoxMetadataByFolderId`
 
-This method calls the [get metadata instance on folder endpoint][1].
+This method calls the <Link href="/reference/get-folders-id-metadata-id-id">get metadata instance on folder endpoint</Link>.
 
 | Parameter      | Type     | Description                                                                 |
 | -------------- | -------- | --------------------------------------------------------------------------- |
@@ -417,14 +418,14 @@ Returns:
 
 ### `createBoxMetadataByFolderId`
 
-This method calls the [create metadata instance on folder][2] endpoint.
+This method calls the <Link href="/reference/post-folders-id-metadata-id-id">create metadata instance on folder</Link> endpoint.
 
 | Parameter       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                 |
 | --------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`      | `string`             | ID of the Box Folder for which you want to create metadata.                                                                                                                                                                                                                                                                                                 |
 | `scope`         | `string`             | Scope of the metadata template. Value is one of [`global`, `enterprise`].                                                                                                                                                                                                                                                                                   |
 | `template_key`  | `string`             | Name of the metadata template.                                                                                                                                                                                                                                                                                                                              |
-| `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
+| `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the <Link href="/reference/post-folders-id-metadata-id-id">API</Link>. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
 
 Returns:
 
@@ -436,14 +437,14 @@ Returns:
 
 ### `updateBoxMetadataByFolderId`
 
-Calls the [update metadata instance on folder][3] endpoint.
+Calls the <Link href="/reference/put-folders-id-metadata-id-id">update metadata instance on folder</Link> endpoint.
 
 | Parameter      | Type                         | Description                                                                                                                                                                                                                                                                                                           |
 | -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`     | `string`                     | ID of the Box folder for which you want to update metadata.                                                                                                                                                                                                                                                           |
 | `scope`        | `string`                     | The scope of the metadata template. Value is one of [`global`, `enterprise`]                                                                                                                                                                                                                                          |
 | `template_key` | `string`                     | The name of the metadata template.                                                                                                                                                                                                                                                                                    |
-| `mdUpdates`    | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the [API][3]. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
+| `mdUpdates`    | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the <Link href="/reference/put-folders-id-metadata-id-id">API</Link>. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
 
 Returns:
 
@@ -455,7 +456,7 @@ Returns:
 
 ### `deleteBoxMetadataFolderId`
 
-This method call the [delete metadata instance from folder][4] endpoint.
+This method call the <Link href="/reference/delete-folders-id-metadata-id-id">delete metadata instance from folder</Link> endpoint.
 
 | Parameter      | Type     | Description                                                                  |
 | -------------- | -------- | ---------------------------------------------------------------------------- |
@@ -470,7 +471,7 @@ Returns:
 
 ### `getMetadataCascadePolicyById`
 
-This method calls the [get metadata cascade policy from folder][5]
+This method calls the <Link href="/reference/get-metadata-cascade-policies-id">get metadata cascade policy from folder</Link>
 endpoint. As it requires an ID, you need to call the
 `getMetadataCascadePoliciesByFolderId` method first.
 
@@ -489,7 +490,7 @@ Returns:
 ### `getMetadataCascadePoliciesByFolderId`
 
 This method retrieves the cascade policies by providing a folder ID and
-calling the [get metadata cascade policies][6] endpoint.
+calling the <Link href="/reference/get-metadata-cascade-policies">get metadata cascade policies</Link> endpoint.
 
 | Parameter           | Type      | Description                                                                                                             | Required |
 | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- | -------- |
@@ -509,7 +510,7 @@ Returns:
 ### `createMetadataCascadePolicy`
 
 This method creates cascade policies by providing a Box folder ID, scope,
-template key, and by calling the [post metadata cascade policies][7] endpoint.
+template key, and by calling the <Link href="/reference/post-metadata-cascade-policies">post metadata cascade policies</Link> endpoint.
 
 | Parameter      | Type     | Description                                                                        |
 | -------------- | -------- | ---------------------------------------------------------------------------------- |
@@ -528,7 +529,7 @@ Returns:
 ### `deleteMetadataCascadePolicy`
 
 This method deletes the cascade policies by providing a cascade policy
-ID and calling the [delete metadata cascade policies ID][8] endpoint.
+ID and calling the <Link href="/reference/delete-metadata-cascade-policies-id">delete metadata cascade policies ID</Link> endpoint.
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -557,7 +558,7 @@ Returns:
 
 ### `getIntegrationMappings`
 
-This toolkit method calls the [get integration mappings][9] endpoint to get the
+This toolkit method calls the <Link href="/reference/get-integration-mappings-slack">get integration mappings</Link> endpoint to get the
 existing mappings.
 
 | Parameter       | Type   | Description                                                                          |
@@ -572,7 +573,7 @@ Returns:
 
 ### `createIntegrationMapping`
 
-This toolkit method calls the [get integration mappings][9] endpoint to create
+This toolkit method calls the <Link href="/reference/get-integration-mappings-slack">get integration mappings</Link> endpoint to create
 the mappings.
 
 <Note>
@@ -599,7 +600,7 @@ Returns:
 
 ### `deleteIntegrationMapping`
 
-This toolkit method calls the [delete integration mappings][10] endpoint to
+This toolkit method calls the <Link href="/reference/delete-integration-mappings-slack-id">delete integration mappings</Link> endpoint to
 delete a mapping.
 
 | Parameter              | Type   | Description                                    |
@@ -649,7 +650,7 @@ Returns:
 
 ### `setSlackChannelAccessManagementDisabled`
 
-This toolkit method calls the [put integration mappings][11] endpoint to update
+This toolkit method calls the <Link href="/reference/put-integration-mappings-slack-id">put integration mappings</Link> endpoint to update
 the access management deactivated setting.
 
 This method/invocable is used in a flow template provided in the Box
@@ -668,7 +669,7 @@ Returns:
 
 ### `sendSignRequests`
 
-This method calls the [create sign request][15] endpoint to send documents for signature.
+This method calls the <Link href="/reference/post-sign-requests">create sign request</Link> endpoint to send documents for signature.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -691,7 +692,7 @@ List of `BoxSignResponse` objects, one for each request processed. Each response
 
 #### `getHubById`
 
-This method calls the [get hub by ID][16] endpoint to retrieve a specific hub.
+This method calls the <Link href="/reference/get-hubs-id">get hub by ID</Link> endpoint to retrieve a specific hub.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -707,7 +708,7 @@ This method calls the [get hub by ID][16] endpoint to retrieve a specific hub.
 
 #### `getAllHubs`
 
-This method calls the [get all hubs][13] endpoint to retrieve a list of all hubs.
+This method calls the <Link href="/reference/get-hubs">get all hubs</Link> endpoint to retrieve a list of all hubs.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -723,7 +724,7 @@ This method calls the [get all hubs][13] endpoint to retrieve a list of all hubs
 
 #### `getEnterpriseHubs`
 
-This method calls the [get enterprise hubs][14] endpoint to retrieve enterprise-level hubs.
+This method calls the <Link href="/reference/get-enterprise-hubs">get enterprise hubs</Link> endpoint to retrieve enterprise-level hubs.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -739,7 +740,7 @@ This method calls the [get enterprise hubs][14] endpoint to retrieve enterprise-
 
 #### `createHub`
 
-This method calls the [create hub endpoint][17] to create a new hub.
+This method calls the <Link href="/reference/post-hubs">create hub endpoint</Link> to create a new hub.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -757,7 +758,7 @@ This method calls the [create hub endpoint][17] to create a new hub.
 
 #### `updateHub`
 
-This method calls the [update hub endpoint][18] to modify an existing hub.
+This method calls the <Link href="/reference/put-hubs-id">update hub endpoint</Link> to modify an existing hub.
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
@@ -776,7 +777,7 @@ This method calls the [update hub endpoint][18] to modify an existing hub.
 
 #### `copyHub`
 
-This method calls the [copy hub endpoint][19] to create a copy of an existing hub.
+This method calls the <Link href="/reference/post-hubs-id-copy">copy hub endpoint</Link> to create a copy of an existing hub.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -797,7 +798,7 @@ This method calls the [copy hub endpoint][19] to create a copy of an existing hu
 
 #### `createUserCollaboration`
 
-This method calls the [create hub collaboration][20] endpoint to add a user to a hub.
+This method calls the <Link href="/reference/post-hub-collaborations">create hub collaboration</Link> endpoint to add a user to a hub.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -817,7 +818,7 @@ This method calls the [create hub collaboration][20] endpoint to add a user to a
 
 #### `createHubCollaboration`
 
-This method calls the [create hub collaboration][20] endpoint to add a collaboration to a hub.
+This method calls the <Link href="/reference/post-hub-collaborations">create hub collaboration</Link> endpoint to add a collaboration to a hub.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -834,7 +835,7 @@ This method calls the [create hub collaboration][20] endpoint to add a collabora
 
 #### `getHubCollaborations`
 
-This method calls the [get hub collaborations][21] endpoint to retrieve collaborations for a hub.
+This method calls the <Link href="/reference/get-hub-collaborations">get hub collaborations</Link> endpoint to retrieve collaborations for a hub.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -852,7 +853,7 @@ This method calls the [get hub collaborations][21] endpoint to retrieve collabor
 
 #### `updateHubCollaboration`
 
-This method calls the [update hub collaboration][22] endpoint to modify a collaboration.
+This method calls the <Link href="/reference/put-hub-collaborations-id">update hub collaboration</Link> endpoint to modify a collaboration.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -872,7 +873,7 @@ This method calls the [update hub collaboration][22] endpoint to modify a collab
 
 #### `addHubItem`
 
-This method calls the [manage hub items][23] endpoint to add an item to a hub.
+This method calls the <Link href="/reference/post-hubs-id-manage-items">manage hub items</Link> endpoint to add an item to a hub.
 
 **Parameter** | **Type** | **Description**
 | --- | --- | --- |
@@ -890,29 +891,7 @@ This method calls the [manage hub items][23] endpoint to add an item to a hub.
   - access to the hub is missing,
   - API request fails.
 
-[1]: /reference/get-folders-id-metadata-id-id
-[2]: /reference/post-folders-id-metadata-id-id
-[3]: /reference/put-folders-id-metadata-id-id
-[4]: /reference/delete-folders-id-metadata-id-id
-[5]: /reference/get-metadata-cascade-policies-id
-[6]: /reference/get-metadata-cascade-policies
-[7]: /reference/post-metadata-cascade-policies
-[8]: /reference/delete-metadata-cascade-policies-id
-[9]: /reference/get-integration-mappings-slack
-[10]: /reference/delete-integration-mappings-slack-id
-[11]: /reference/put-integration-mappings-slack-id
 [12]: https://support.box.com/hc/articles/360043694554-Creating-and-Managing-Groups
-[13]: /reference/get-hubs
-[14]: /reference/get-enterprise-hubs
-[15]: /reference/post-sign-requests
-[16]: /reference/get-hubs-id
-[17]: /reference/post-hubs
-[18]: /reference/put-hubs-id
-[19]: /reference/post-hubs-id-copy
-[20]: /reference/post-hub-collaborations
-[21]: /reference/get-hub-collaborations
-[22]: /reference/put-hub-collaborations-id
-[23]: /reference/post-hubs-id-manage-items
 
 <RelatedLinks
   title="RELATED GUIDES"

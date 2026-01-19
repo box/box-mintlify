@@ -11,6 +11,7 @@ alias_paths:
   - /guides/events/shield-alert-events
   - /guides/events/shield-alert-events/
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -28,7 +29,7 @@ or `monitoring` mode.
 If an admin creates a Shield access policy that enforces download or print
 restriction and an end user is blocked from downloading or printing a file, an
 event is
-produced within the [enterprise event][events] stream. If the access policy is
+produced within the <Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream. If the access policy is
 set to monitor potential download and print violations,
 events will also be generated
 when a user is viewing a folder with a file restricted from download or print,
@@ -140,7 +141,7 @@ provide the following details:
 ## External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
-within the [enterprise event][events] stream. These events follow
+within the <Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream. These events follow
 the standard event object schema, with the `event_type` value set
 to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
 `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`,
@@ -301,7 +302,7 @@ the following details:
 ```
 
 If a Shield justification is approved, an event is produced within the
-[enterprise event][events] stream. These events follow the
+<Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream. These events follow the
 standard event object schema and the `event_type` value set
 to `SHIELD_JUSTIFICATION_APPROVAL`.
 
@@ -360,7 +361,7 @@ The `additional_details` payload will provide the following details:
 
 If a 3rd-party application, including published platform applications with which
 your organization is integrated, is restricted from downloading a file or a
-folder, an event is produced within the [enterprise event][events] stream.
+folder, an event is produced within the <Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream.
 These events follow the standard event object schema, with the `event_type`
 value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
@@ -429,7 +430,7 @@ following details:
 ## FTP Restriction
 
 If download of a file or folder is restricted via the FTP protocol, an event is
-produced within the [enterprise event][events] stream. These events follow the
+produced within the <Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream. These events follow the
 standard event object schema, with the `event_type` value
 set to `SHIELD_DOWNLOAD_BLOCKED`.
 
@@ -469,7 +470,6 @@ The `additional_details` payload will provide the following details:
 [smartaccess]: https://support.box.com/hc/en-us/articles/7711416297747-About-Smart-Access
 [monitoringmode]: https://support.box.com/hc/en-us/articles/14596333776403-Shield-Access-Policy-Settings
 {/* i18n-disable localize-links */}
-[events]: /guides/events/enterprise-events/for-enterprise
 
 <RelatedLinks
   title="RELATED APIS"

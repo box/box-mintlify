@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
   title="REQUIRED GUIDES"
@@ -69,18 +70,18 @@ This UI Element also allows loading previews of
 multiple files in the same container and exposes
 arrows to navigate between those files.
 It powers Preview in the main Box web application
-as well as the [expiring embed link object][expiredembed].
+as well as the <Link href="/reference/resources/file--full/#param-expiring_embed_link">expiring embed link object</Link>.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Authentication
 
 UI Elements are designed in an authentication-agnostic way so whether
 they will work for Managed Box Users and non-Box users (App Users). The
-reason for this is that UI Elements only expect a [token][token] for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
+reason for this is that UI Elements only expect a <Link href="/guides/authentication/tokens/developer-tokens">token</Link> for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <Card href="/guides/authentication/select" arrow title="Learn about selecting an authentication method"/>
 
@@ -329,7 +330,7 @@ preview.addListener("rotate", (data) => {
 
 ## Annotations
 
-You can enable V4 [annotations][annotationsguide] in content preview. New
+You can enable V4 <Link href="/guides/embed/ui-elements/annotations.md">annotations</Link> in content preview. New
 annotations will sync in real time.
 
 To add V4 annotations to preview:
@@ -437,7 +438,7 @@ Enriched with Box AI features, the Preview UI element brings the following funct
 To enable the Box AI modal in content preview header, follow these steps:
 
 1. Make sure your Node and React versions are `18.x` or higher.
-2. Download the [npm package that contains Box AI for UI Elements][aipackage] or directly from [Box CDN][installation].
+2. Download the [npm package that contains Box AI for UI Elements][aipackage] or directly from <Link href="/guides/embed/ui-elements/installation">Box CDN</Link>.
 3. Install the peer dependencies:
 
    - [`box-ai-content-answers`][box-ai-content-answers]
@@ -545,7 +546,7 @@ You can further customize your apps using the following event listeners for Cont
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Preview functionality, you can use [Downscoping][downscope] to
+the Content Preview functionality, you can use <Link href="/guides/authentication/tokens/downscope">Downscoping</Link> to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Preview.
@@ -553,7 +554,7 @@ client initializing the Content Preview.
 Below is a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Preview by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+more, see <Link href="/guides/api-calls/permissions-and-errors/scopes">Dedicated Scopes for Box UI Elements</Link>.
 
 ### Base Scope
 
@@ -593,16 +594,10 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 {/* i18n-disable localize-links */}
 
-[downscope]: /guides/authentication/tokens/downscope
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 [annotations]: https://github.com/box/box-annotations
 [buie]: https://github.com/box/box-ui-elements/releases/tag/v16.0.0
-[annotationsguide]: /guides/embed/ui-elements/annotations.md
 [previewlib]: https://github.com/box/box-content-preview
-[expiredembed]: /reference/resources/file--full/#param-expiring_embed_link
-[token]: /guides/authentication/tokens/developer-tokens
 [aipackage]: https://www.npmjs.com/package/box-ui-elements/v/22.0.0
-[installation]: /guides/embed/ui-elements/installation
 [blueprint-web]: https://www.npmjs.com/package/@box/blueprint-web
 [box-ai-content-answers]: https://www.npmjs.com/package/@box/box-ai-content-answers
 [blueprint-web-assets]: https://www.npmjs.com/package/@box/blueprint-web-assets

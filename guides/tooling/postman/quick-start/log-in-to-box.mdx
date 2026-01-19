@@ -16,6 +16,7 @@ import { ProgressBar } from '/snippets/progress-bar.jsx';
 import { LoginButton } from '/snippets/login-button.jsx';
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <ProgressBar pages={[
                           "guides/tooling/postman/quick-start/install-postman",
@@ -76,11 +77,11 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   <LoggedIn id='postman_credentials'>
     ## You are now logged in
 
-    We just sent your browser to the [Box Authorization](/reference/get-authorize)
+    We just sent your browser to the <Link href="/reference/get-authorize">Box Authorization</Link>
     screen where you granted your application access to your user account. After
     you granted it access the browser redirected back to this site with a `code`.
 
-    We then [exchanged](/reference/post-oauth2-token) this short-lived `code` for a
+    We then <Link href="/reference/post-oauth2-token">exchanged</Link> this short-lived `code` for a
     longer lived **Access Token** and **Refresh Token**. These tokens represent
     you, the **User**.
 

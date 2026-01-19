@@ -11,19 +11,20 @@ related_guides:
   - box-ai/ai-tutorials/generate-text
   - box-ai/ai-tutorials/default-agent-overrides
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 The `ai_agent` configuration allows you to override the default AI model configuration. It is available for the following endpoints:
 
-* [`POST ai/ask`][ask]
-* [`POST ai/text_gen`][text-gen]
-* [`POST ai/extract`][extract]
-* [`POST ai/extract_structured`][extract-structured]
+* <Link href="/reference/post-ai-ask#param-ai-agent">`POST ai/ask`</Link>
+* <Link href="/reference/post-ai-text-gen#param-ai-agent">`POST ai/text_gen`</Link>
+* <Link href="/reference/post-ai-extract#param-ai-agent">`POST ai/extract`</Link>
+* <Link href="/reference/post-ai-extract-structured#param-ai-agent">`POST ai/extract_structured`</Link>
 
 <Tip>
 
-Use the [`GET ai_agent_default`][agent] endpoint to fetch the default configuration.
+Use the <Link href="/reference/get-ai-agent-default">`GET ai_agent_default`</Link> endpoint to fetch the default configuration.
 
 </Tip>
 
@@ -124,7 +125,7 @@ The set of parameters available for `ask`, `text_gen`, `extract`, `extract_struc
 
 ### LLM endpoint params
 
-The `llm_endpoint_params` configuration options differ depending on the overall AI model being [Google][google-params], [OpenAI][openai-params] or [AWS][aws-params] based.
+The `llm_endpoint_params` configuration options differ depending on the overall AI model being <Link href="/reference/resources/ai-llm-endpoint-params-google">Google</Link>, <Link href="/reference/resources/ai-llm-endpoint-params-openai">OpenAI</Link> or <Link href="/reference/resources/ai-llm-endpoint-params-aws">AWS</Link> based.
 
 For example, both `llm_endpoint_params` objects accept a `temperature` parameter, but the outcome differs depending on the model.
 
@@ -147,17 +148,9 @@ This message is separate from the content you send in, but it can improve the re
 
 The `num_tokens_for_completion` parameter represents the number of [tokens][openai-tokens] Box AI can return. This number can vary based on the model used.
 
-[ask]: /reference/post-ai-ask#param-ai-agent
-[text-gen]: /reference/post-ai-text-gen#param-ai-agent
-[extract]: /reference/post-ai-extract#param-ai-agent
-[extract-structured]: /reference/post-ai-extract-structured#param-ai-agent
-[google-params]: /reference/resources/ai-llm-endpoint-params-google
-[openai-params]: /reference/resources/ai-llm-endpoint-params-openai
 [openai-tokens]: https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them
-[agent]: /reference/get-ai-agent-default
 [google-temp]: https://ai.google.dev/gemini-api/docs/models/generative-models#model-parameters
 [openai-temp]: https://community.openai.com/t/temperature-top-p-and-top-k-for-chatbot-responses/295542
-[aws-params]: /reference/resources/ai-llm-endpoint-params-aws
 
 <RelatedLinks
   title="RELATED APIS"

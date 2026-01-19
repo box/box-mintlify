@@ -9,6 +9,7 @@ related_guides:
 related_resources:
   - metadata_template
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -24,15 +25,15 @@ user can select one item from the list.
 <Note>
 
 An `enum` allows a user to select zero or a single value. To allow a user to select
-multiple values, use the [`multiSelect`][g_multi_select] template field.
+multiple values, use the <Link href="/guides/metadata/fields/multi-select">`multiSelect`</Link> template field.
 
 </Note>
 
 ## Create an `enum` field
 
-An `enum` field can be added to a metadata template either when [creating a
-metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+An `enum` field can be added to a metadata template either when <Link href="/guides/metadata/templates/create">creating a
+metadata template</Link>, or when <Link href="/guides/metadata/templates/update">updating a
+template</Link> with the `addField` operation.
 
 The required attributes for an `enum` field are a `type`, a `displayName`, a
 `key`, and a list of options.
@@ -64,8 +65,8 @@ apps.
 
 ## Update an `enum` field
 
-An `enum` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
+An `enum` template field can be updated by <Link href="/guides/metadata/templates/update">updating the
+template</Link> it belongs to. Updates to templates happen through
 **operations** to ensure that any template that is already assigned to a file or
 folder is updated as well.
 
@@ -255,9 +256,6 @@ to this value will have the value reset to `null`.
 
 </Warning>
 
-[g_create_template]: /guides/metadata/templates/create
-[g_update_template]: /guides/metadata/templates/update
-[g_multi_select]: /guides/metadata/fields/multi-select
 
 <RelatedLinks
   title="RELATED APIS"

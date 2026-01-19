@@ -8,8 +8,10 @@ alias_paths:
 - /docs/android-security-guidelines
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Whether your are a developer getting started with the Box API or a Box Admin
-tasked with [authorizing][auth] applications, it is critical you understand the
+tasked with <Link href="/guides/authorization">authorizing</Link> applications, it is critical you understand the
 security mechanisms in place to protect content stored in Box.
 
 The Box API follows the same security principals and restrictions as the Box web
@@ -19,7 +21,7 @@ leveraging the Box API.
 
 ## Access Tokens
 
-At the core of every Box API call is an [Access Token][at]. Because a username
+At the core of every Box API call is an <Link href="/guides/authentication/tokens">Access Token</Link>. Because a username
 and password cannot be used, the Box servers need a way of validating user
 identity. The full capability of an Access Token encompasses user permissions,
 token permissions, and application settings.
@@ -32,14 +34,14 @@ Access Tokens represent the authenticated user and determine what content a
 user can successfully call. Similar to using the Box Web App, you will only be
 able to successfully interact with content the user, associated with the Access
 Token, either owns or is a collaborator on. This can be further restricted by
-[downscoping][downscope] a token.
+<Link href="/guides/authentication/tokens/downscope">downscoping</Link> a token.
 
-[Access Tokens][at] are only valid for 60 minutes, but can be [revoked][revoked]
+<Link href="/guides/authentication/tokens">Access Tokens</Link> are only valid for 60 minutes, but can be <Link href="/reference/post-oauth2-revoke">revoked</Link>
 earlier if needed. Once an Access Token expires, when using an OAuth 2.0
-application, a [Refresh Token][rt] can be [exchanged][exchange] for another
+application, a <Link href="/guides/authentication/tokens/refresh">Refresh Token</Link> can be <Link href="/reference/post-oauth2-token--refresh">exchanged</Link> for another
 Access Token. Refresh tokens are valid for 60 days or one use. Alternatively,
 when using a server authentication application, the
-[request Access Token endpoint][gettoken] must be called for a new Access Token.
+<Link href="/reference/post-oauth2-token">request Access Token endpoint</Link> must be called for a new Access Token.
 For security reasons we do not allow long-lived access tokens.
 
 <Tip>
@@ -54,7 +56,7 @@ For security reasons we do not allow long-lived access tokens.
 ![Scopes](/images/guides/security/scopes.png)
 </Frame>
 
-[Scopes][scopes] are configured in the [Developer Console][dc] upon application
+<Link href="/guides/api-calls/permissions-and-errors/scopes">Scopes</Link> are configured in the [Developer Console][dc] upon application
 creation. They determine which of the 150+ endpoints Access Tokens of an
 application can successfully call.
 
@@ -77,21 +79,21 @@ appropriate [permissions][coadminperm], can successfully use. As a general rule
 of thumb, if only an Admin or Co-Admin can perform an action via the Box Admin
 Console, an Access Token associated with one of these users is required to
 complete an API call for the same action. This is called out in our API
-[reference][reference] documentation for a given endpoint if it is required.
+<Link href="/reference">reference</Link> documentation for a given endpoint if it is required.
 
 Some Admin-restricted endpoints include:
 
-- Creating, deleting, or getting information about [users][users]
-- Creating, deleting, or modifying [groups][groups]
-- Viewing user or enterprise [events][events]
+- Creating, deleting, or getting information about <Link href="/reference/resources/user">users</Link>
+- Creating, deleting, or modifying <Link href="/reference/resources/group">groups</Link>
+- Viewing user or enterprise <Link href="/reference/resources/event">events</Link>
 
 Other endpoints can only be used by an Admin user's Access Token if the
 enterprise has purchased add-on products such as Box Governance or Box Shield.
 Some of these endpoints include:
 
-- Interacting with [security classifications][sc]
-- Interacting with [legal hold policies][lh] and [assignments][lha]
-- Interacting with [retention policies][retention] and [assignments][rassign]
+- Interacting with <Link href="/reference/resources/classification">security classifications</Link>
+- Interacting with <Link href="/reference/resources/legal-hold-policy">legal hold policies</Link> and <Link href="/reference/resources/legal-hold-policy-assignment">assignments</Link>
+- Interacting with <Link href="/reference/resources/retention-policies">retention policies</Link> and <Link href="/reference/resources/retention-policy-assignment">assignments</Link>
 
 ## Application Access
 
@@ -100,23 +102,23 @@ Some of these endpoints include:
 </Frame>
 
 Application access is only configured in the [Developer Console][dc] for
-applications leveraging Server Authentication with [JWT)][jwt] or
-[Client Credentials Grant][ccg]. This setting determines the
-[types of users][usertypes] that can be used with the application. The two
+applications leveraging Server Authentication with <Link href="/guides/authentication/jwt">JWT)</Link> or
+<Link href="/guides/authentication/client-credentials">Client Credentials Grant</Link>. This setting determines the
+<Link href="/platform/user-types">types of users</Link> that can be used with the application. The two
 options are **app access only** or **app + enterprise access**.
 
-Upon [authorizing][auth] one of these applications in the Box Admin Console, a
-[Service Account][serviceaccount] (`AutomationUser_xxxx_@boxdevedition.com`)
+Upon <Link href="/guides/authorization">authorizing</Link> one of these applications in the Box Admin Console, a
+<Link href="/platform/user-types/#service-account">Service Account</Link> (`AutomationUser_xxxx_@boxdevedition.com`)
 representing the application is automatically generated. This account is an
 Admin-like user that can only be accessed via the API and can then be used to
-create user’s of the application called [App Users][appusers]. If an application
+create user’s of the application called <Link href="/platform/user-types/#app-user">App Users</Link>. If an application
 only needs to interact with the Service Account and App Users,
 **app only access** must be selected. If an application needs to interact with
-[managed users][mu] and their existing Box content, app + enterprise access must
+<Link href="/platform/user-types/#managed-users">managed users</Link> and their existing Box content, app + enterprise access must
 be selected.
 
 As an example, take a JWT application that has the read/write scopes,
-app only access, and is properly [authorized][auth] in the Admin console. If a
+app only access, and is properly <Link href="/guides/authorization">authorized</Link> in the Admin console. If a
 managed user obtains an Access Token and makes an API call to a folder they own,
 that call would receive a 400 error with the message “Cannot obtain token based
 on the enterprise configuration for your app”. Even though the user has access
@@ -136,7 +138,7 @@ Platform applications fall into two categories: published and unpublished.
 Published applications are found in the [Box Integrations][appcenter]. Box
 Admins decide whether published and unpublished application are enabled by
 default and therefore can be used without approval. The status of these settings
-determines what actions are necessary to successfully [authorize][auth] an
+determines what actions are necessary to successfully <Link href="/guides/authorization">authorize</Link> an
 application for use.
 
 <Frame center shadow border>
@@ -144,15 +146,15 @@ application for use.
 </Frame>
 
 Regardless of the settings above, in order for an application leveraging
-[JWT][jwt] or [Client Credentials Grant][ccg] to be used by an enterprise, an
-Admin must explicitly [authorize][auth] it via the Box Admin console. The
+<Link href="/guides/authentication/jwt">JWT</Link> or <Link href="/guides/authentication/client-credentials">Client Credentials Grant</Link> to be used by an enterprise, an
+Admin must explicitly <Link href="/guides/authorization">authorize</Link> it via the Box Admin console. The
 authorization is a snapshot in time.  This means that if a developer revisits
 the Developer Console and changes the configuration, the Admin must re-authorize
 the application in order for generated Access Tokens to reflect the changes.
 
 If the setting **Disable unpublished apps by default** is turned on, an Admin
-must also explicitly [enable][auth] any application leveraging
-[OAuth 2.0][oauth] as the authentication method.
+must also explicitly <Link href="/guides/authorization">enable</Link> any application leveraging
+<Link href="/guides/authentication/oauth2">OAuth 2.0</Link> as the authentication method.
 
 Additionally, if this setting is turned on, Server Authenticated apps will also
 require enablement.
@@ -161,36 +163,11 @@ require enablement.
 [perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
 {/* i18n-disable localize-links */}
-[downscope]: /guides/authentication/tokens/downscope
-[at]: /guides/authentication/tokens
-[revoked]: /reference/post-oauth2-revoke
-[rt]: /guides/authentication/tokens/refresh
-[gettoken]: /reference/post-oauth2-token
-[exchange]: /reference/post-oauth2-token--refresh
 {/* i18n-enable localize-links */}
 [coadminperm]: https://support.box.com/hc/en-us/articles/360044194393-Granting-And-Modifying-Co-Admin-Permissions
-[reference]: /reference
 [dc]: https://app.box.com/developers/console
 {/* i18n-disable localize-links */}
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
-[users]: /reference/resources/user
-[groups]: /reference/resources/group
-[events]: /reference/resources/event
-[sc]: /reference/resources/classification
-[lh]: /reference/resources/legal-hold-policy
-[lha]: /reference/resources/legal-hold-policy-assignment
-[retention]: /reference/resources/retention-policies
-[rassign]: /reference/resources/retention-policy-assignment
-[jwt]: /guides/authentication/jwt
-[usertypes]: /platform/user-types
-[serviceaccount]: /platform/user-types/#service-account
-[appusers]: /platform/user-types/#app-user
-[mu]: /platform/user-types/#managed-users
-[auth]: /guides/authorization/platform-app-approval
-[oauth]: /guides/authentication/oauth2
-[jwt]: /guides/authentication/jwt
-[ccg]: /guides/authentication/client-credentials
+/platform-app-approval
 {/* i18n-enable localize-links */}
 [appcenter]: https://app.box.com/services
 {/* i18n-disable localize-links */}
-[auth]: /guides/authorization

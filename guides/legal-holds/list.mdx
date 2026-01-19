@@ -10,11 +10,12 @@ related_resources:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 To list all Legal Hold Policies that have been created in an enterprise, call
-the [`GET /legal_hold_policies`][legal_holds] API endpoint.
+the <Link href="/reference/get-legal-hold-policies">`GET /legal_hold_policies`</Link> API endpoint.
 
 <CodeGroup>
 
@@ -84,11 +85,9 @@ client.legalHoldPolicies.getAll({policy_name: 'Important'})
 
 {/* i18n-enable localize-links */}
 Before using any of the Legal Hold APIs, an application must have the right
-scopes enabled. See [Required Scopes][scopes] for more details.
+scopes enabled. See <Link href="/guides/legal-holds#required-scopes">Required Scopes</Link> for more details.
 {/* i18n-disable localize-links */}
 
-[legal_holds]: /reference/get-legal-hold-policies
-[scopes]: /guides/legal-holds#required-scopes
 
 <RelatedLinks
   title="RELATED APIS"

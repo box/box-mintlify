@@ -7,6 +7,7 @@ related_endpoints:
 related_guides:
   - box-sign/create-sign-request
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -118,10 +119,10 @@ List the templates to find the `template_id`.
 The response is similar to the following one
 (abbreviated for guide purposes).
 For the full response example, see
-[Box Sign template API][template].
+<Link href="/reference/get-sign-templates#response-example">Box Sign template API</Link>.
 
 You can also learn more about the specific
-parameters in the [Create Sign Request][signrequest] guide.
+parameters in the <Link href="/reference/post-sign-requests">Create Sign Request</Link> guide.
 
 ```json
 "entries": [
@@ -208,7 +209,7 @@ parameters in the [Create Sign Request][signrequest] guide.
 
 ## Create the sign request
 
-Follow these steps to [create sign request][signrequest] using a template:
+Follow these steps to <Link href="/reference/post-sign-requests">create sign request</Link> using a template:
 
 1. In the request body, provide the `template_id`:
 
@@ -347,11 +348,9 @@ Follow these steps to [create sign request][signrequest] using a template:
     }
     ```
 
-[signrequest]: /reference/post-sign-requests
 [docuprep]: https://support.box.com/hc/en-us/articles/4404094944915-Creating-templates
 [parentfolder]: /guides/box-sign/create-sign-request#parent-folder
 [signers]: /guides/box-sign/create-sign-request#signers
-[template]: /reference/get-sign-templates#response-example
 
 <RelatedLinks
   title="RELATED APIS"

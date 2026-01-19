@@ -12,24 +12,21 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 To add content to an archive, you need to create it first. If you
-have not done this yet, use the [Create Archive][Create Archive] endpoint.
+have not done this yet, use the <Link href="/reference/v2025.0/post-archives/">Create Archive</Link> endpoint.
 
 ## Add file or folder to archive
 
-Use the [`PUT /files/:id`][Update file] API endpoint to add a file to an archive, or the [`PUT /folders/:id`][Update folder] endpoint to add a folder.
+Use the <Link href="/reference/put-files-id">`PUT /files/:id`</Link> API endpoint to add a file to an archive, or the <Link href="/reference/put-folders-id">`PUT /folders/:id`</Link> endpoint to add a folder.
 The `id` parameter is the ID of the file/folder you want to add to the archive.
-To specify the destination, use the `parent.id` [parameter][Update parent id of folder] in the request body.
+To specify the destination, use the `parent.id` <Link href="/reference/put-folders-id/#param-parent-id">parameter</Link> in the request body.
 This can be either an ID of an archive or the ID of a folder that is inside an archive.
 
-[Create Archive]: /reference/v2025.0/post-archives/
-[Update file]: /reference/put-files-id
 [Update parent id of file]: /reference/put-files-id/#param-parent-id
-[Update folder]: /reference/put-folders-id
-[Update parent id of folder]: /reference/put-folders-id/#param-parent-id
 
 <RelatedLinks
   title="RELATED APIS"

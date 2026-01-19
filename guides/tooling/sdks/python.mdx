@@ -11,6 +11,7 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -29,14 +30,13 @@ pip install boxsdk
 
 ## JWT application
 
-When working with a Box App that uses server-side [JWT authentication][jwt], install the following additional module:
+When working with a Box App that uses server-side <Link href="/guides/authentication/jwt">JWT authentication</Link>, install the following additional module:
 
 ```shell
 pip install "boxsdk[jwt]"
 ```
 
 [pip]: https://pypi.org/project/pip/
-[jwt]: /guides/authentication/jwt
 [versioning]: /guides/tooling/sdks/sdk-versioning
 
 <RelatedLinks

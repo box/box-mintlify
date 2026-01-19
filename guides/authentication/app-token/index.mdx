@@ -13,6 +13,7 @@ related_resources:
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -26,8 +27,8 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 />
 Server-side authentication using App Tokens is an alternative way to
 authenticate to the Box API with fixed, long-lived Access Tokens that are
-restricted to the application's [Service Account][sa]. App Token Auth is
-intended to be used by applications leveraging [Box View][box-view].
+restricted to the application's <Link href="/platform/user-types/#service-account">Service Account</Link>. App Token Auth is
+intended to be used by applications leveraging <Link href="/guides/embed/box-view">Box View</Link>.
 
 ## App Token Restrictions
 
@@ -42,14 +43,12 @@ application.
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- Want to leverage Box's preview services via [Box View][box-view]
+- Want to leverage Box's preview services via <Link href="/guides/embed/box-view">Box View</Link>
 - Work in an environment that either has no user model, or has users that don't have Box accounts
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data in the application's Service Account and not a user's account
 
-[sa]: /platform/user-types/#service-account
-[box-view]: /guides/embed/box-view
 
 <RelatedLinks
   title="RELATED GUIDES"

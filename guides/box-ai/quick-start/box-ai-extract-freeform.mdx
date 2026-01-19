@@ -4,7 +4,9 @@ sidebarTitle: Extracting freeform data
 description: Learn how to use Box AI to automatically extract data from documents with natural language prompts using the Box Python SDK.
 ---
 
-[Box AI](/ai-dev-zone) exposes intelligent extraction capabilities that enable developers to automatically extract
+import {Link} from "/snippets/Link.jsx";
+
+<Link href="/ai-dev-zone">Box AI</Link> exposes intelligent extraction capabilities that enable developers to automatically extract
 key-value pairs from documents through a single API call. This powerful feature transforms unstructured
 document content into actionable metadata without manual data entry, streamlining document processing
 workflows for invoices, forms, contracts, and other business documents.
@@ -15,7 +17,7 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
   <Step title="Create and configure a Box application">
     The first step for any Box Platform integration is to create and configure a Box 
     application. 
-    1. Go to [Box Developer Console](https://app.box.com/developers/console).
+    1. Go to <Link href="https://app.box.com/developers/console">Box Developer Console</Link>.
     2. For this quick start, create an App with the `Client Credentials Grant` 
     application type. 
     3. Once the app is created, enable the following scopes:
@@ -23,11 +25,11 @@ This quick start demonstrates how to configure the Box Python SDK and use Box AI
         * `Write all files and folders stored in Box`
         * `Manage AI`
 
-    For more information about creating a new Box application, see [Create your first application](/guides/getting-started/first-application#create-your-first-application).
+    For more information about creating a new Box application, see <Link href="/guides/getting-started/first-application#create-your-first-application">Create your first application</Link>.
   </Step>
   <Step title="Upload a test file">
     After preparing the template, select a file to test. For this quick start, use this
-    [sample W-2](/static/quickstarts/extract/files/freeform-extract-file.pdf).
+    <Link href="/static/quickstarts/extract/files/freeform-extract-file.pdf">sample W-2</Link>.
 
 1. Download the test document, and then drag and drop it into your Box account.
 2. Get the file ID by opening the file in Box and inspecting the URL.
@@ -176,7 +178,7 @@ The last part of the path is your file ID. For example, the URL might look like 
     ```
 
     The SDK handles the API call to Box AI and returns the extracted metadata as an
-    [`AiExtractResponse`](/reference/resources/ai-extract-response) object. In this quick start,
+    <Link href="/reference/resources/ai-extract-response">`AiExtractResponse`</Link> object. In this quick start,
     the code converts this object to a dictionary and returns the `answer` field that contains the extracted
     key/value pairs.
 
@@ -199,6 +201,6 @@ The last part of the path is your file ID. For example, the URL might look like 
 </Steps>
 
 ## Resources
-- [Final code](https://github.com/box-community/box-quickstarts/tree/main/box-ai-freeform-extract-quickstart)
-- [Extract Freeform Metadata API Reference](/reference/post-ai-extract)
-- [Box Python SDK](https://github.com/box/box-python-sdk/tree/main)
+- <Link href="https://github.com/box-community/box-quickstarts/tree/main/box-ai-freeform-extract-quickstart">Final code</Link>
+- <Link href="/reference/post-ai-extract">Extract Freeform Metadata API Reference</Link>
+- <Link href="https://github.com/box/box-python-sdk/tree/main">Box Python SDK</Link>

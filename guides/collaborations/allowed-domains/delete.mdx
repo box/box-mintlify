@@ -13,6 +13,7 @@ related_resources: []
 alias_paths:
   - /guides/collaboration-whitelists/delete-whitelist
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -21,8 +22,8 @@ ability for collaborations to be created between your enterprise and users in
 that domain.
 
 To remove a domain from the allowed list, supply the ID of the list entry to
-the delete request. This ID is returned when [allowing a new domain][create]
-or [listing the allowed domains in the enterprise][list];
+the delete request. This ID is returned when <Link href="/guides/collaborations/allowed-domains/create">allowing a new domain</Link>
+or <Link href="/guides/collaborations/allowed-domains/list">listing the allowed domains in the enterprise</Link>;
 
 <CodeGroup>
 
@@ -66,8 +67,6 @@ client.collaborationAllowlist.removeDomain('12345', callback);
 
 </CodeGroup>
 
-[create]: /guides/collaborations/allowed-domains/create
-[list]: /guides/collaborations/allowed-domains/list
 
 <RelatedLinks
   title="RELATED APIS"

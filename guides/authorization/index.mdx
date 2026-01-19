@@ -4,23 +4,25 @@ rank: 25
 required_guides: None
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Some applications require explicit Admin authorization before use with an
 enterprise. The steps an Admin needs to take are dependent on the
 developer-selected authentication method and enabled enterprise settings.
 
 ## Authentication methods
 
-The following [authentication methods][auth] always require explicit Admin
+The following <Link href="/guides/authentication/select">authentication methods</Link> always require explicit Admin
 authorization:
 
-- [Server Authentication (with JWT)][jwt]
-- [Server Authentication (with Client Credentials Grant)][cc]
+- <Link href="/guides/authentication/jwt">Server Authentication (with JWT)</Link>
+- <Link href="/guides/authentication/client-credentials">Server Authentication (with Client Credentials Grant)</Link>
 
-These authentication methods automatically generate a [Service Account][sa].
-With the right [scopes][scopes] enabled, a Service Account can perform many
+These authentication methods automatically generate a <Link href="/platform/user-types/#service-account">Service Account</Link>.
+With the right <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link> enabled, a Service Account can perform many
 Admin actions, thus requiring Admin authorization before use.
 
-[OAuth 2.0][oauth] and [App Token][apptoken] apps may also require explicit
+<Link href="/guides/authentication/oauth2">OAuth 2.0</Link> and <Link href="/guides/authentication/app-token">App Token</Link> apps may also require explicit
 Admin authorization based on enabled enterprise settings.
 
 ## Enterprise settings
@@ -50,40 +52,32 @@ scenarios.
 
 | Authentication Method                            | Enabled                                     | Disabled
 | ------------------------------------------------ | ------------------------------------------- | -------------- |
-|[OAuth 2.0][standauth]                            | Set to available in individual app controls | Ready for use  |
-|[Server Authentication (with JWT)][jwt]           | N/A                                         | N/A            |
-|[Server Authentication (client credentials)][cc]  | N/A                                         | N/A            |
-|[App Token Authentication][apptoken]              | N/A                                         | N/A            |
+|<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>                            | Set to available in individual app controls | Ready for use  |
+|<Link href="/guides/authentication/jwt">Server Authentication (with JWT)</Link>           | N/A                                         | N/A            |
+|<Link href="/guides/authentication/client-credentials">Server Authentication (client credentials)</Link>  | N/A                                         | N/A            |
+|<Link href="/guides/authentication/app-token">App Token Authentication</Link>              | N/A                                         | N/A            |
 
 **Disable unpublished apps by default**:
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Enable in **Integrations** > **Platform Apps Manager** > **User Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app. |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app.| Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
+|<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>                            | Enable in **Integrations** > **Platform Apps Manager** > **User Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
+|<Link href="/guides/authentication/jwt">Server Authentication (with JWT)</Link>           | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app. |
+|<Link href="/guides/authentication/client-credentials">Server Authentication (client credentials)</Link>  | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to authorize the app.| Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. |
+|<Link href="/guides/authentication/app-token">App Token Authentication</Link>              | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > Select Platform App > Use **More** menu to enable the app. | Ready for use                           |
 
 **Require manual Admin authorization for Limited Access Apps**:
 
 | Authentication Method                            | Enabled                                                                  | Disabled                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
-|[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
-|[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
-|[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
-|[App Token Authentication][apptoken]              | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Automatically authorized and enabled upon creation   |
+|<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>                            | N/A                                                                      | N/A                                                  |
+|<Link href="/guides/authentication/jwt">Server Authentication (with JWT)</Link>           | N/A                                                                      | N/A                                                  |
+|<Link href="/guides/authentication/client-credentials">Server Authentication (client credentials)</Link>  | N/A                                                                      | N/A                                                  |
+|<Link href="/guides/authentication/app-token">App Token Authentication</Link>              | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** Select Platform App > Use **More** menu to authorize the app. | Automatically authorized and enabled upon creation   |
 
 {/* alex enable */}
 
-[auth]: /guides/authentication/select
 {/* i18n-enable localize-links */}
 [setting]: https://support.box.com/hc/en-us/articles/360044196653-Managing-custom-apps
 {/* i18n-disable localize-links */}
-[sa]: /platform/user-types/#service-account
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 [ag]: /guides/applications/integrations
-[standauth]: /guides/authentication/oauth2
-[jwt]: /guides/authentication/jwt
-[cc]: /guides/authentication/client-credentials
-[apptoken]: /guides/authentication/app-token
-[oauth]: /guides/authentication/oauth2

@@ -9,11 +9,12 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 When a metadata template has been applied to a folder, a metadata cascade policy
-can be created by calling the  [`POST /metadata_cascade_policies`][e_post] API
+can be created by calling the  <Link href="/reference/post-metadata-cascade-policies">`POST /metadata_cascade_policies`</Link> API
 endpoint with the `folder_id` of the folder to apply the policy to, and the
 `scope` and `templateKey` of metadata template to.
 
@@ -94,8 +95,8 @@ client.metadata.createCascadePolicy('enterprise', 'testTemplate', folderID)
 <Info>
 
   To get the `scope` and `templateKey` for a template, either
-  [list all metadata templates][g_list_templates], or
-  [list all instances on an file][g_list_instances_item].
+  <Link href="/guides/metadata/templates/list">list all metadata templates</Link>, or
+  <Link href="/guides/metadata/instances/list">list all instances on an file</Link>.
 
 </Info>
 
@@ -104,9 +105,6 @@ client.metadata.createCascadePolicy('enterprise', 'testTemplate', folderID)
   applied to the folder with the given `scope` and `templateKey`.
 </Warning>
 
-[e_post]: /reference/post-metadata-cascade-policies
-[g_list_templates]: /guides/metadata/templates/list
-[g_list_instances_item]: /guides/metadata/instances/list
 
 <RelatedLinks
   title="RELATED APIS"

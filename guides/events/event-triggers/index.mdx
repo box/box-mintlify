@@ -7,15 +7,17 @@ required_guides:
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Events appear in the event stream based on upon actions committed by users,
-items, or other resources. The response of the [`GET /events`](/reference/get-events) 
+items, or other resources. The response of the <Link href="/reference/get-events">`GET /events`</Link> 
 endpoint changes based upon the event that triggered the event.
 
 
 ## User Source Object
 
 If a user triggers an event, the source object will be the standard
-representation of the [user resource](/reference/resources/user).
+representation of the <Link href="/reference/resources/user">user resource</Link>.
 
 ```json
 {
@@ -47,7 +49,7 @@ representation of the [user resource](/reference/resources/user).
 ## Item Source Object
 
 If an item triggers an event, the source object will be the
-[event source resource](/reference/resources/event-source).
+<Link href="/reference/resources/event-source">event source resource</Link>.
 
 <Note>
   The below example contains a `classification` object. This does not appear if

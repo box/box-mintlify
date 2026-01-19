@@ -7,6 +7,9 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 Before starting work with Integration Mappings API, perform
 the following steps.
 
@@ -20,15 +23,15 @@ Make sure you have an Admin or a Co-admin role.
 2. Enable the [Box as Content Layer for Slack][2].
 3. Make sure the service account you are using is a collaborator on the folder that will be mapped. To do so, use the `Invite People` folder option to invite the service account as a collaborator.
 
-If you encounter any errors, see the [troubleshooting guide][3].
+If you encounter any errors, see the <Link href="/guides/integration-mappings/slack-mappings/troubleshooting">troubleshooting guide</Link>.
 
 ## Create Box application
 
-1. Create a [platform app with OAuth authentication][4] in the [Box developer console][5]
+1. Create a <Link href="/guides/authentication/oauth2/oauth2-setup">platform app with OAuth authentication</Link> in the [Box developer console][5]
 2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Required Access Scopes**.
 
 <Info>
-  For Slack-side channel validation, the [Integration Mappings API][6]
+  For Slack-side channel validation, the <Link href="/reference/get-integration-mappings-slack">Integration Mappings API</Link>
   is calling the Slack API.
 </Info>
 
@@ -36,8 +39,8 @@ If you encounter any errors, see the [troubleshooting guide][3].
 
 To authorize your Integration Mappings requests:
 
-1. Navigate to the [platform app][7] that you have created as one of the prerequisites.
-2. Generate a [developer token][8] and add it to the HTTP header of each request:
+1. Navigate to the <Link href="/guides/applications/app-types/platform-apps">platform app</Link> that you have created as one of the prerequisites.
+2. Generate a <Link href="/guides/authentication/tokens/developer-tokens">developer token</Link> and add it to the HTTP header of each request:
 
 ```bash
 Authorization: Bearer {developer_token}
@@ -50,9 +53,8 @@ Authorization: Bearer {developer_token}
 
 [1]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
 [2]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
-[3]: /guides/integration-mappings/slack-mappings/troubleshooting
-[4]: /guides/authentication/oauth2/oauth2-setup
+
+
 [5]: https://app.box.com/developers/console
-[6]: /reference/get-integration-mappings-slack
-[7]: /guides/applications/app-types/platform-apps
-[8]: /guides/authentication/tokens/developer-tokens
+
+

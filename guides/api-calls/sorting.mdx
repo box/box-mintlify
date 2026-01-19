@@ -7,6 +7,7 @@ related_guides: []
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -34,7 +35,7 @@ endpoint's documentation for the possible options for this value.
 
 <Note>
   In some APIs the `sort` field is the second criteria by which the items are
-  sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]
+  sorted. For example for the <Link href="/reference/get-folders-id-items">`GET /folders/:id/items`</Link>
   endpoint the results are always sorted by their type first before any other
   criteria.
 </Note>
@@ -44,7 +45,6 @@ endpoint's documentation for the possible options for this value.
 The sorting direction supports two values, either `ASC` for ascending order, or
 `DESC` for the reverse.
 
-[get_folders_id_items]: /reference/get-folders-id-items
 
 <RelatedLinks
   title="RELATED APIS"

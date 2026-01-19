@@ -11,6 +11,7 @@ required_guides:
 related_resources:
   - metadata_templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,7 +23,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   ]}
 />
 To create a metadata template, pass a `scope`, `displayName` and an optional set
-of `fields` to the [`POST /metadata_templates/schema`][e_create_template] API.
+of `fields` to the <Link href="/reference/post-metadata-templates-schema">`POST /metadata_templates/schema`</Link> API.
 
 <CodeGroup>
 ```sh cURL
@@ -381,7 +382,6 @@ This template key is then used when making any API requests to get the
 template's information or assign it to an item.
 
 [user-types]: /platform/user-types
-[e_create_template]: /reference/post-metadata-templates-schema
 
 <RelatedLinks
   title="RELATED APIS"

@@ -10,6 +10,7 @@ related_guides:
   - docgen/docgen-getting-started
   - docgen/generate-document
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -17,7 +18,7 @@ Box Doc Gen API allows you to retrieve information related to Box Doc Gen templa
 
 ## Prerequisites
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a platform app and a Box Doc Gen template.
+Before you start using Box Doc Gen API, follow the steps listed in the <Link href="/guides/docgen/docgen-getting-started">get started with Box Doc Gen</Link> guide to create a platform app and a Box Doc Gen template.
 
 ## List Box Doc Gen templates
 
@@ -139,7 +140,6 @@ client.getDocgenTemplate().getDocgenTemplateJobByIdV2025R0(fetchedDocgenTemplate
 The response will contain a list of Box Doc Gen jobs that were run to generate
 documents.
 
-[docgen-prerequisites]: /guides/docgen/docgen-getting-started
 
 <RelatedLinks
   title="RELATED GUIDES"

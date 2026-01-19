@@ -11,11 +11,12 @@ alias_paths:
   - /guides/events/sign-events
   - /guides/events/sign-events/
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 Audit Box Sign events using the enterprise events stream. To learn more about
-Box Sign, visit our [guide][sign-guide].
+Box Sign, visit our <Link href="/guides/box-sign">guide</Link>.
 
 <Warning>
   The status provided below in each `additional_details` payload may differ
@@ -626,7 +627,6 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-[sign-guide]: /guides/box-sign
 
 <RelatedLinks
   title="RELATED APIS"

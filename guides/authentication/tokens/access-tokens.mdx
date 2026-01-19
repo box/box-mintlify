@@ -7,6 +7,9 @@ required_guides: []
 related_resources: []
 alias_paths:
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 Instead of a user name and password, Access Tokens are the credentials used to
 represent the authenticated user to the Box servers.
 
@@ -59,6 +62,5 @@ curl --location --request POST 'https://api.box.com/oauth2/token' \
 
 Within this object we can see the token string (`access_token`).
 Because a Refresh Token is not returned, you must request a new token when the
-Access Token expires (`expires_in`) using the [token endpoint][token].
+Access Token expires (`expires_in`) using the <Link href="/reference/post-oauth2-token">token endpoint</Link>.
 
-[token]: /reference/post-oauth2-token

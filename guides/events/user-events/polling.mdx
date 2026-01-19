@@ -14,9 +14,10 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 To get real-time notification of activity in a Box account you can use the long
-poll feature of the [`OPTIONS /events`](/reference/options-events) API.
+poll feature of the <Link href="/reference/options-events">`OPTIONS /events`</Link> API.
 
 <CodeGroup>
 
@@ -83,7 +84,7 @@ updated responses.
 ### Long Poll URL
 
 To use long polling, first send an request to the
-[`OPTIONS /events`](/reference/options-events) API to retrieve the long poll URL.
+<Link href="/reference/options-events">`OPTIONS /events`</Link> API to retrieve the long poll URL.
 
 ```sh
 curl -X OPTIONS https://api.box.com/2.0/events \

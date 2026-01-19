@@ -12,6 +12,7 @@ required_guides:
   - representations/download-a-representation
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -31,14 +32,14 @@ a link that downloads or previews the file.
 <Info>
 
 The preferred way to get a thumbnail for a file is using the
-[representations API][thumb_representations].
+<Link href="/guides/representations/thumbnail-representation">representations API</Link>.
 
 </Info>
 
 ## Requesting
 
-To request a file thumbnail use the [`GET
-/files/:id/thumbnail.:extension`][get_files_id_thumbnail_id]
+To request a file thumbnail use the <Link href="/reference/get-files-id-thumbnail-id">`GET
+/files/:id/thumbnail.:extension`</Link>
 endpoint.
 
 <CodeGroup>
@@ -128,8 +129,6 @@ At this time the following file types are supported.
 | Audio     | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
 | Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `mts`, `ogg`, `qt`, `wmv`                                                        |
 
-[get_files_id_thumbnail_id]: /reference/get-files-id-thumbnail-id
-[thumb_representations]: /guides/representations/thumbnail-representation
 
 <RelatedLinks
   title="RELATED APIS"

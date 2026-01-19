@@ -15,6 +15,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -36,14 +37,14 @@ manually complete the OAuth 2.0 flow.
 4. Redirect the user back to the application
 5. Exchange the authorization code for an Access Token
 
-At the end of this flow, the application has an [Access Token][tokens], which
+At the end of this flow, the application has an <Link href="/guides/authentication/tokens/access-tokens">Access Token</Link>, which
 can be used to make API calls on behalf of the user.
 
 <Note>
   The Access Token acquired through the OAuth 2.0 flow is inherently tied to the
   user who authorized the application.
 
-It is possible to [act as another user](/guides/authentication/oauth2/as-user)
+It is possible to <Link href="/guides/authentication/oauth2/as-user">act as another user</Link>
 using the `as-user` header.
 </Note>
 
@@ -57,14 +58,14 @@ Before continuing you will need to complete the following steps:
 
 ## 1. Build authorization URL
 
-An [authorization URL][auth] is comprised of the following parameters:
+An <Link href="/reference/get-authorize">authorization URL</Link> is comprised of the following parameters:
 
 | Parameter             | Status      | Description                                                                                            |
 | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------ |
-| [`CLIENT_ID`][ci]     | Required    | Obtained from the configuration tab of the Developer Console                                           |
-| [`REDIRECT_URI`][re]  | Optional    | Configured in the Developer Console and where the user is sent once granting access to the application |
-| [`RESPONSE_TYPE`][co] | Required    | Always set to `code`                                                                                   |
-| [`STATE`][st]         | Recommended | Protects against cross-site request forgery                                                            |
+| <Link href="/reference/get-authorize/#param-client_id">`CLIENT_ID`</Link>     | Required    | Obtained from the configuration tab of the Developer Console                                           |
+| <Link href="/reference/get-authorize/#param-redirect_uri">`REDIRECT_URI`</Link>  | Optional    | Configured in the Developer Console and where the user is sent once granting access to the application |
+| <Link href="/reference/get-authorize/#param-response_type">`RESPONSE_TYPE`</Link> | Required    | Always set to `code`                                                                                   |
+| <Link href="/reference/get-authorize/#param-state">`STATE`</Link>         | Recommended | Protects against cross-site request forgery                                                            |
 
 <Warning>
 If you configured multiple redirect URIs for the application, the authorization
@@ -185,8 +186,8 @@ https://your.domain.com/path?code=1234567
 
 ## 4. Exchange code
 
-The provided authorization code is [valid for 30 seconds][thirty] and must be
-exchanged for an [Access Token][at] before expiration.
+The provided authorization code is <Link href="/guides/api-calls/permissions-and-errors/expiration">valid for 30 seconds</Link> and must be
+exchanged for an <Link href="/reference/post-oauth2-token">Access Token</Link> before expiration.
 
 <CodeGroup>
 
@@ -279,9 +280,8 @@ let accessToken = await axios
 ```
 </CodeGroup>
 
-To learn how to use an Access Token visit our guide on [Making API calls][apic].
+To learn how to use an Access Token visit our guide on <Link href="/guides/api-calls">Making API calls</Link>.
 
-[tokens]: /guides/authentication/tokens/access-tokens
 
 {/* i18n-enable localize-links */}
 
@@ -289,14 +289,6 @@ To learn how to use an Access Token visit our guide on [Making API calls][apic].
 
 {/* i18n-disable localize-links */}
 
-[auth]: /reference/get-authorize
-[ci]: /reference/get-authorize/#param-client_id
-[re]: /reference/get-authorize/#param-redirect_uri
-[co]: /reference/get-authorize/#param-response_type
-[st]: /reference/get-authorize/#param-state
-[thirty]: /guides/api-calls/permissions-and-errors/expiration
-[at]: /reference/post-oauth2-token
-[apic]: /guides/api-calls
 
 <RelatedLinks
   title="RELATED APIS"

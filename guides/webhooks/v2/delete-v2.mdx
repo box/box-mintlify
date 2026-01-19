@@ -12,6 +12,7 @@ required_guides:
 alias_paths:
   - /webhooks/manage/delete
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -37,8 +38,8 @@ To delete a webhook follow the steps below.
 ## API
 
 To remove a webhook from a file or folder, you need to use the
-[remove webhook endpoint][delete] with the ID of the webhook. You can
-get this value using the [list all webhooks endpoint][list].
+<Link href="/reference/delete-webhooks-id">remove webhook endpoint</Link> with the ID of the webhook. You can
+get this value using the <Link href="/reference/get-webhooks">list all webhooks endpoint</Link>.
 
 <CodeGroup>
 ```sh cURL
@@ -85,7 +86,7 @@ client.webhooks.delete('1234')
 
 ## Automatic webhook deletion
 
-Using [this][delete] endpoint is not the only way a webhook can be deleted.
+Using <Link href="/reference/delete-webhooks-id">this</Link> endpoint is not the only way a webhook can be deleted.
 
 The following reasons can cause webhooks to be deleted.
 
@@ -119,8 +120,6 @@ includes the following additional information.
 }
 ```
 
-[delete]: /reference/delete-webhooks-id
-[list]: /reference/get-webhooks
 [console]: https://app.box.com/developers/console
 
 <RelatedLinks

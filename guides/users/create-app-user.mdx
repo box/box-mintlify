@@ -15,9 +15,10 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 App Users are programmatic user accounts that may only be created by apps that
-are using [JWT authentication](/guides/authentication/jwt/jwt-setup).
+are using <Link href="/guides/authentication/jwt/jwt-setup">JWT authentication</Link>.
 They are designed to allow for users, groups, or processes to be represented
 behind the scenes in an application without the need for the user to have a Box
 account to log in.
@@ -61,7 +62,7 @@ BoxUser newUser = await client.UsersManager.CreateEnterpriseUserAsync(userParams
 </CodeGroup>
 
 To see all available optional parameters that may be set when creating an app
-user, see the [create user endpoint](/reference/post-users).
+user, see the <Link href="/reference/post-users">create user endpoint</Link>.
 
 <Note>
 Before you can make any changes to the newly created account, you need to

@@ -9,6 +9,7 @@ required_guides:
   - embed/ui-elements/installation
 related_resources: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -20,7 +21,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   ]}
 />
 
-The metadata view of [Content Explorer][content-explorer] allows you to display files and folders based on their metadata.
+The metadata view of <Link href="/guides/embed/ui-elements/explorer/">Content Explorer</Link> allows you to display files and folders based on their metadata.
 
 ## Overview
 
@@ -36,8 +37,8 @@ Before implementing the metadata view `v2` of Content Explorer, ensure you have:
 
 - The `box-ui-elements` package `v24.0.0`+, React `v18.0.0`, and `Node.js` `v18.0.0`+
 - The Box Platform app with proper CORS settings
-- A valid [developer token][developer-token]
-- A configured metadata template applied to target folder or files. See [creating templates with API][creating-templates-api] or [with the Admin Console][creating-templates-ui].
+- A valid <Link href="/guides/authentication/tokens/developer-tokens/">developer token</Link>
+- A configured metadata template applied to target folder or files. See <Link href="/guides/metadata/templates/create">creating templates with API</Link> or [with the Admin Console][creating-templates-ui].
 
 <Tip>
  Make sure you enable the cascade policy. For detailed instructions, see
@@ -62,11 +63,11 @@ To display the metadata view of Content Explorer, you need the following propert
 | `title` | The title of the whole component, if not defined, defaults to the folder name specified in the `ancestor_folder_id`. |
 | `defaultView` | Must be set to `metadata`. |
 | `features.contentExplorer.metadataViewV2` | Must be set to true to enable the metadata view (v2). |
-| `metadataQuery` | Metadata query request body matching the [Metadata Query API][md-queries] schema. |
+| `metadataQuery` | Metadata query request body matching the <Link href="/reference/post-metadata-queries-execute-read/">Metadata Query API</Link> schema. |
 | `metadataViewProps` | Component configuration. For configuration details, see `metadataViewProps` object. |
 | `columns` | Defines the structure and behavior of your metadata table columns. See Columns for details. |
 
-Depending on your needs and setup, Box UI Elements can be used with Vanilla JavaScript or React. You can learn more about installation from the [Installation][installation] guide. 
+Depending on your needs and setup, Box UI Elements can be used with Vanilla JavaScript or React. You can learn more about installation from the <Link href="/guides/embed/ui-elements/installation">Installation</Link> guide. 
 
 <Note>
   **Capitalized strings need to be replaced with your custom values.**
@@ -235,7 +236,7 @@ This behavior is enabled by default; no additional properties are required to ac
 
 ### Filtering metadata
 
-Filter items by the file type, filter folders, or filter by metadata field values specified in the Box [metadata templates][metadata-guides].
+Filter items by the file type, filter folders, or filter by metadata field values specified in the Box <Link href="/guides/metadata/templates/">metadata templates</Link>.
 
 Filter chips are enabled by default. To disable the **All Filters** chip, set the `isAllFiltersDisabled` to `true` in the `actionBarProps` object:
 
@@ -357,15 +358,9 @@ const columns = [
 
 4. Optionally, configure additional features described in this guide.
 
-[content-explorer]: /guides/embed/ui-elements/explorer/
 [terminology]: /guides/metadata/#metadata-terminology
-[creating-templates-api]: /guides/metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
-[developer-token]: /guides/authentication/tokens/developer-tokens/
-[metadata-guides]: /guides/metadata/templates/
-[md-queries]: /reference/post-metadata-queries-execute-read/
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
-[installation]: /guides/embed/ui-elements/installation
 
 <RelatedLinks
   title="RELATED APIS"

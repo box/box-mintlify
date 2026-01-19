@@ -12,6 +12,7 @@ related_guides:
 alias_paths:
   - guides/box-ai/ask-questions
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -29,7 +30,7 @@ you can ask Box AI to summarize the content.
 
 ## Before you start
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a platform app and authenticate.
+Make sure you followed the steps listed in <Link href="/guides/box-ai/ai-tutorials/prerequisites">getting started with Box AI</Link> to create a platform app and authenticate.
 
 ## Send a request
 
@@ -194,7 +195,7 @@ Mandatory parameters are in **bold**.
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item. Usually it is the text representation.  |     |  `An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...`    |
-|`ai_agent` | The AI agent used to override the default agent configuration. You can use this parameter replace the default LLM with a custom one using the [`model`][model-param] parameter for shorter and longer texts, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request. For specific use cases, see the [AI model overrides tutorial][overrides]. ||
+|`ai_agent` | The AI agent used to override the default agent configuration. You can use this parameter replace the default LLM with a custom one using the <Link href="/reference/resources/ai_agent_ask#param_basic_text_model">`model`</Link> parameter for shorter and longer texts, tweak the base <Link href="/reference/ai_agent_ask#param_basic_text_prompt_template">`prompt`</Link> to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the <Link href="/reference/get-ai-agent-default">`GET 2.0/ai_agent_default`</Link> request. For specific use cases, see the <Link href="/guides/box-ai/ai-agents/ai-agent-overrides">AI model overrides tutorial</Link>. ||
 
 ## Use cases
 
@@ -316,11 +317,6 @@ The resulting answer includes the source file and direct content citations.
 }
 ```
 
-[prereq]: /guides/box-ai/ai-tutorials/prerequisites
-[agent]: /reference/get-ai-agent-default
-[model-param]: /reference/resources/ai_agent_ask#param_basic_text_model
-[prompt-param]: /reference/ai_agent_ask#param_basic_text_prompt_template
-[overrides]: /guides/box-ai/ai-agents/ai-agent-overrides
 
 <RelatedLinks
   title="RELATED APIS"

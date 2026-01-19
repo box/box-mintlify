@@ -7,14 +7,16 @@ required_guides: []
 alias_paths:
   - /docs/scopes
 ---
+import {Link} from "/snippets/Link.jsx";
+
 When an application is created in the Developer Console, the user must configure
 application scopes. Similar to how users have permissions to access files and
 folders within Box, applications have their own set of permissions to
 perform certain actions on behalf of a Box user or a Box enterprise. The name
 for a set of permissions for an application is a "scope". In short, an
-application's scopes determine which [endpoints][reference] an application can
+application's scopes determine which <Link href="/reference">endpoints</Link> an application can
 successfully call and are reflected in the access provided by
-[Access Tokens][at] of the application.
+<Link href="/guides/authentication/tokens">Access Tokens</Link> of the application.
 
 ## User permissions and scopes
 
@@ -27,7 +29,7 @@ authenticated user does need to have permission to read the file you are
 trying to access.
 
 To learn more about how scopes, token permissions, and user permissions work
-together, see our [security guide][security].
+together, see our <Link href="/guides/security">security guide</Link>.
 
 ## Scopes & OAuth 2 authorization
 
@@ -65,9 +67,9 @@ authenticated user.
 Although this gives an application the permission to read files and folders, the
 user making the API call does need to have access to the items being accessed.
 
-In the case of a [JWT][jwt] application accessing a [Managed User's][mu]
+In the case of a <Link href="/guides/authentication/jwt">JWT</Link> application accessing a <Link href="/platform/user-types/#managed-users">Managed User's</Link>
 items, the Service Account's Token will need to either use the `as-user`
-[header][au] or create a [User Access Token][uat] to directly authenticate as
+<Link href="/guides/authentication/jwt/as-user">header</Link> or create a <Link href="/guides/authentication/jwt/user-access-tokens">User Access Token</Link> to directly authenticate as
 the user who has access to the content.
 
 ### Read and write all files and folders
@@ -93,7 +95,7 @@ The manage users scope in the Developer Console maps to two OAuth scopes.
 | **OAuth Scope**       | `manage_managed_users` |
 | **Application Scope** | Manage users           |
 
-Gives an application permission to manage [Managed Users][mu]. It
+Gives an application permission to manage <Link href="/platform/user-types/#managed-users">Managed Users</Link>. It
 allows the app to change the user's primary login, reset their password, and
 change roles for managed users.
 
@@ -103,7 +105,7 @@ the Access Token used must be associated with an Admin or Co-Admin with the
 correct permissions.
 
 Additionally, for JWT applications, the application must be configured with
-**App Access + Enterprise Access** [application access][appaccess].
+**App Access + Enterprise Access** <Link href="/guides/authentication/jwt/jwt-setup/#application-access">application access</Link>.
 </Note>
 
 |                       |                    |
@@ -111,7 +113,7 @@ Additionally, for JWT applications, the application must be configured with
 | **OAuth Scope**       | `manage_app_users` |
 | **Application Scope** | Manage users       |
 
-Gives an application permission to manage [App Users][appu], which means this
+Gives an application permission to manage <Link href="/platform/user-types/#app-user">App Users</Link>, which means this
 scope only applies to server-side authenticated (JWT) applications.
 
 ### Manage groups
@@ -131,7 +133,7 @@ the Access Token used must be associated with an Admin Co-Admin with the
 correct permissions.
 
 Additionally, for JWT applications, the application must be configured with
-**App Access + Enterprise Access** [application access][appaccess].
+**App Access + Enterprise Access** <Link href="/guides/authentication/jwt/jwt-setup/#application-access">application access</Link>.
 </Note>
 
 ### Manage webhooks
@@ -142,7 +144,7 @@ Additionally, for JWT applications, the application must be configured with
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
-Please review webhook [limitations](/guides/webhooks/v2/limitations-v2). Most
+Please review webhook <Link href="/guides/webhooks/v2/limitations-v2">limitations</Link>. Most
 notably, there is a limit of 1000 webhooks per application, per user.
 
 ### Manage enterprise properties
@@ -250,7 +252,7 @@ Governance.
 | --------------------- | ----------------------------------------------- |
 | **Application Scope** | Can suppress email notifications from API calls |
 
-Allows some types of [email notifications][suppress] to be suppressed when API
+Allows some types of <Link href="/guides/api-calls/suppress-notifications">email notifications</Link> to be suppressed when API
 calls are made.
 
 ### Global Content Manager (GCM)
@@ -260,7 +262,7 @@ calls are made.
 | **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
-Allows Admins, [Co-Admins][ca], and [Service Accounts][sa] to retrieve any content
+Allows Admins, [Co-Admins][ca], and <Link href="/platform/user-types/#service-account">Service Accounts</Link> to retrieve any content
 they do not own or are not collaborators on within their enterprise, based on
 their enterprise settings. 
 
@@ -279,14 +281,14 @@ For this reason, this scope will not be provisioned unless absolutely necessary.
 
 ## Scopes for downscoping
 
-In some cases an Access Token needs to be [downscoped][ds] to a more strict
+In some cases an Access Token needs to be <Link href="/guides/authentication/tokens/downscope">downscoped</Link> to a more strict
 permission level, especially when a token needs to be exposed to a client-side,
 public environment like a browser. The primary example for this is when using
 [Box UI Elements][ui-elements], which require an Access Token in the user's
 browser.
 
 The following is a list of **additional** scopes that can be used with the
-[`POST /oauth2/token`](/reference/post-oauth2-token) endpoint to downscope an
+<Link href="/reference/post-oauth2-token">`POST /oauth2/token`</Link> endpoint to downscope an
 existing access token.
 
 | OAuth Scope            | UI Element affected | Description                                                                         |
@@ -323,20 +325,20 @@ The standard OAuth scopes are also supported when downscoping.
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
-[reference]: /reference
+
 {/* i18n-disable localize-links */}
-[at]: /guides/authentication/tokens
-[security]: /guides/security
-[jwt]: /guides/authentication/jwt
-[mu]: /platform/user-types/#managed-users
-[au]: /guides/authentication/jwt/as-user
-[uat]: /guides/authentication/jwt/user-access-tokens
-[appaccess]: /guides/authentication/jwt/jwt-setup/#application-access
-[appu]: /platform/user-types/#app-user
+
+
+
+
+
+
+
+
 {/* i18n-enable localize-links */}
 [governance]: https://www.box.com/security/governance-and-compliance
 {/* i18n-disable localize-links */}
-[suppress]: /guides/api-calls/suppress-notifications
-[ds]: /guides/authentication/tokens/downscope
-[sa]: /platform/user-types/#service-account
+
+
+
 [ca]: https://support.box.com/hc/en-us/articles/1500005433721-Users-Groups-Settings#h_01GSE1DYJKTY9EXEWJEDKFHCNV

@@ -13,18 +13,19 @@ related_guides:
   - authentication/jwt
   - authentication/client-credentials
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 Platform App typically presents Box functionality to a user through a
 custom interface. Box offers pre-built, customizable user interface components,
-known as [UI Elements][uie], for functionalities like browsing, searching, and
+known as <Link href="/guides/embed/ui-elements">UI Elements</Link>, for functionalities like browsing, searching, and
 previewing content.
 
 ## Authentication methods
 
-Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
-[Client Credentials Grant][cc] authentication methods.
+Platform Apps support <Link href="/guides/authentication/oauth2">OAuth 2.0</Link>, <Link href="/guides/authentication/jwt">JWT</Link>, and
+<Link href="/guides/authentication/client-credentials">Client Credentials Grant</Link> authentication methods.
 
 <Card href="/guides/authentication/select" arrow title="Learn more about authentication methods"/>
 
@@ -32,9 +33,9 @@ Platform Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 
 Use a Platform App when you want to:
 
-- Use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication.
+- Use <Link href="/guides/authentication/oauth2">OAuth 2.0</Link>, <Link href="/guides/authentication/jwt">JWT</Link> or <Link href="/guides/authentication/client-credentials">Client Credentials Grant</Link> for authentication.
 - Upload and download files
-- Access both your own files and files owned by [managed or external users][users].
+- Access both your own files and files owned by <Link href="/platform/user-types/#managed-users/">managed or external users</Link>.
 - List the application in the Box Integrations
 - Provide integration into the Box Web App
 
@@ -60,11 +61,6 @@ Platform Apps may require approval before use.
 
 <Card href="/guides/authorization/platform-app-approval" arrow title="Learn how to approve Platform Apps"/>
 
-[oauth2]: /guides/authentication/oauth2
-[jwt]: /guides/authentication/jwt
-[cc]: /guides/authentication/client-credentials
-[uie]: /guides/embed/ui-elements
-[users]: /platform/user-types/#managed-users/
 
 <RelatedLinks
   title="RELATED GUIDES"

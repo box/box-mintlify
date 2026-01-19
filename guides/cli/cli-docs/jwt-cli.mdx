@@ -14,6 +14,7 @@ alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
   - /guides/tooling/cli/jwt-cli
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -24,7 +25,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Setup with JWT", href: "/guides/authentication/jwt/jwt-setup", badge: "GUIDE" }
   ]}
 />
-Previously, our [Box CLI Quick Start Guide][qs], followed the JWT or server
+Previously, our <Link href="/guides/cli/quick-start">Box CLI Quick Start Guide</Link>, followed the JWT or server
 authentication application setup flow. Since we released a new OAuth 2.0
 version of the Box CLI, we updated it to use the new feature. We migrated
 the original JWT setup instructions here, in case you would still like
@@ -56,22 +57,22 @@ This will bring you to the application’s configuration page where you need to
 choose its access and permissions. Again, keep in mind that because of the
 application’s authentication type, it will require Admin approval.
 
-At a minimum, you will need the following [scopes][scopes]:
+At a minimum, you will need the following <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link>:
 
 - Read all files and folders stored in Box
 - Write all files and folders stored in Box
 
 You can choose either App Access Only or App + Enterprise Access as the
-[application access][aa].
+<Link href="/guides/authentication/jwt/jwt-setup/#application-access">application access</Link>.
 
 ## Authorize the application
 
 All applications leveraging Server Authentication must be authorized in the
 Admin Console before making successful API calls. This is because all JWT
-applications have a [Service Account][sa], which, based on the applications
-[scopes][scopes], may be able to perform Admin actions.
+applications have a <Link href="/platform/user-types/#service-account">Service Account</Link>, which, based on the applications
+<Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link>, may be able to perform Admin actions.
 
-Steps for developers and Admins can be found in our [authorization guide][ag].
+Steps for developers and Admins can be found in our <Link href="/guides/authorization/platform-app-approval">authorization guide</Link>.
 
 If you would like more information on how scopes, application access, tokens,
 and permissions work together, please see our article on understanding
@@ -98,7 +99,7 @@ To download the configuration file, visit the **Configuration** tab in the
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
 configuration file for your application. For more information see
-our [guide][keypair].
+our <Link href="/guides/authentication/jwt/jwt-setup/#public-and-private-key-pair">guide</Link>.
 
 <Warning>
   For security reasons 2FA must be enabled on your Box account to successfully
@@ -170,8 +171,8 @@ For example:
 
 To confirm successful configuration, use the command `box users:get`.
 
-A successful response will provide details about the [Service Account][sa] user
-associated with your [Access Token][at]:
+A successful response will provide details about the <Link href="/platform/user-types/#service-account">Service Account</Link> user
+associated with your <Link href="/guides/authentication/tokens">Access Token</Link>:
 
 ```json
 Type: user
@@ -202,29 +203,20 @@ Notification Email: []
 ## Next Steps
 
 - You can checkout the [commands][commands] page on GitHub for example code.
-- You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
+- You can also go to the second part of the <Link href="/guides/cli/quick-start/build-commands-help">OAuth 2.0 Quick Start</Link> for a tutorial on how to use the commands.
 
 [cli]: https://github.com/box/boxcli
 [auth]: /guides/authentication/jwt/without-sdk
-[at]: /guides/authentication/tokens
 {/* i18n-enable localize-links */}
 [dc]: https://account.box.com/developers/console
 {/* i18n-disable localize-links */}
-[keypair]: /guides/authentication/jwt/jwt-setup/#public-and-private-key-pair
-[sa]: /platform/user-types/#service-account
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
-[ag]: /guides/authorization/platform-app-approval
 {/* i18n-enable localize-links */}
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
 {/* i18n-disable localize-links */}
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
-[aa]: /guides/authentication/jwt/jwt-setup/#application-access
-[three]: /guides/cli/quick-start/build-commands-help
 [four]: /guides/cli/quick-start/options-and-bulk-commands
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
-[qs]: /guides/cli/quick-start
 
 <RelatedLinks
   title="RELATED GUIDES"

@@ -10,6 +10,7 @@ related_guides:
 related_resources:
   - metadata_templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -19,15 +20,15 @@ and scope, or the template's identifier.
 <Info>
 
   The authenticated user can only get Information about metadata templates
-  [scoped][scopes] within the `global` scope or the `enterprise_:id` scope where
+  <Link href="/guides/metadata/scopes">scoped</Link> within the `global` scope or the `enterprise_:id` scope where
   `:id` is  the ID of their enterprise.
 
 </Info>
 
 ## Get a metadata template by name
 
-To get a metadata template by name, call the [`GET
-/metadata_templates/:scope/:templateKey/schema`][e_by_name] API endpoint with the
+To get a metadata template by name, call the <Link href="/reference/get-metadata-templates-id-id-schema">`GET
+/metadata_templates/:scope/:templateKey/schema`</Link> API endpoint with the
 template's `scope` and `templateKey`.
 
 <CodeGroup>
@@ -109,16 +110,16 @@ client.metadata.getTemplateSchema('enterprise', 'vcontract')
 <Info>
 
   To get the `scope` and `templateKey` for a template, either
-  [list all metadata templates][g_list_templates], or
-  [list all instances on an item][g_list_instances_item].
+  <Link href="/guides/metadata/templates/list">list all metadata templates</Link>, or
+  <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
 
 </Info>
 
 ## Get a metadata template by ID
 
 To get a metadata template by ID, you will need to pass the template's
-`id` to the [`GET
-/metadata_templates/:id`][e_by_id] API endpoint.
+`id` to the <Link href="/reference/get-metadata-templates-id">`GET
+/metadata_templates/:id`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -194,16 +195,11 @@ client.metadata.getTemplateByID('17f2d715-6acb-45f2-b96a-28b15efc9faa')
 <Info>
 
   To get the `id` for a template, either
-  [list all metadata templates][g_list_templates], or
-  [list all instances on an item][g_list_instances_item].
+  <Link href="/guides/metadata/templates/list">list all metadata templates</Link>, or
+  <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
   
 </Info>
 
-[e_by_name]: /reference/get-metadata-templates-id-id-schema
-[e_by_id]: /reference/get-metadata-templates-id
-[scopes]: /guides/metadata/scopes
-[g_list_templates]: /guides/metadata/templates/list
-[g_list_instances_item]: /guides/metadata/instances/list
 
 <RelatedLinks
   title="RELATED APIS"

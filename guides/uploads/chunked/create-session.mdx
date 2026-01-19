@@ -13,18 +13,19 @@ related_resources:
   - upload_session
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 To create an upload session, call the
-[`POST /files/upload_sessions`][createsession] API with the desired `file_name`
+<Link href="/reference/post_files_upload_sessions">`POST /files/upload_sessions`</Link> API with the desired `file_name`
 and `folder_id` to put the file in, as well as the `file_size` of the file to be
 uploaded.
 
 {/* <Samples sample='post_files_upload_sessions' /> */}
 
 To create a session for a new version of an existing file, call the
-[`POST /files/:id/upload_sessions`][createsessionversion] API instead. In this
+<Link href="/reference/post_files_id_upload_sessions">`POST /files/:id/upload_sessions`</Link> API instead. In this
 case, the `file_name` and `folder_id` are only required when renaming or moving
 the file in the process.
 
@@ -32,13 +33,13 @@ the file in the process.
 
 ## Pre-flight Check
 
-Creating an upload session also performs a [preflight check][check], making it
+Creating an upload session also performs a <Link href="/guides/uploads/check">preflight check</Link>, making it
 unnecessary to do so separately when working with chunked uploads.
 
 ## Response
 
-When a session is created successfully the response includes an [Upload
-Session][uploadsession] that includes a session ID, the number of parts, the
+When a session is created successfully the response includes an <Link href="/reference/resources/upload_session">Upload
+Session</Link> that includes a session ID, the number of parts, the
 part sizes, as well as links to the relevant next API endpoints to use.
 
 ```json
@@ -63,10 +64,6 @@ part sizes, as well as links to the relevant next API endpoints to use.
 The upload session defines the size of the parts to use when uploading the
 individual parts.
 
-[createsession]: /reference/post_files_upload_sessions
-[createsessionversion]: /reference/post_files_id_upload_sessions
-[check]: /guides/uploads/check
-[uploadsession]: /reference/resources/upload_session
 
 <RelatedLinks
   title="RELATED APIS"

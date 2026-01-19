@@ -9,6 +9,7 @@ required_guides: []
 alias_paths:
   - /webhooks/limitations
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -26,7 +27,7 @@ named `CleanupApp`. At that point, no second webhook can
 be added to the `Junk` folder by the `CleanupApp` by `John Doe`, even if it
 is to trigger for an `FILE.DOWNLOADED` event.
 
-To listen to another event, [update][update] the existing webhook or create a
+To listen to another event, <Link href="/guides/webhooks/v2/update-v2">update</Link> the existing webhook or create a
 new application.
 
 ## 1000 webhooks limit
@@ -34,7 +35,7 @@ new application.
 There is a limit of 1000 webhooks for each application and each user.
 
 To create more webhooks for a user, create another application or
-[update existing webhooks][update] to apply to higher levels in the folder tree.
+<Link href="/guides/webhooks/v2/update-v2">update existing webhooks</Link> to apply to higher levels in the folder tree.
 
 ## Notification URL restrictions
 
@@ -52,7 +53,7 @@ The supported TLS protocol versions are `TLS 1.2` and `TLS 1.3` with FIPS-compli
 ## No webhooks on root folder
 
 V2 webhooks cannot be created on the root folder, which is the folder with ID
-`0`. Instead, you will need to use a [v1 webhook][v1].
+`0`. Instead, you will need to use a <Link href="/guides/webhooks/v1">v1 webhook</Link>.
 
 <Note>
   When the permissions on an item prevent an action from occurring,
@@ -101,8 +102,6 @@ includes the following additional information.
 }
 ```
 
-[v1]: /guides/webhooks/v1
-[update]: /guides/webhooks/v2/update-v2
 [app authorization]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 
 <RelatedLinks

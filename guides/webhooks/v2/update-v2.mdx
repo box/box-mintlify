@@ -14,6 +14,7 @@ related_resources:
 alias_paths:
   - /webhooks/manage/update
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -44,9 +45,9 @@ To update a webhook in the [Developer Console][console], follow the steps below.
 
 ## API
 
-To update a webhook, use the [update webhook][2] endpoint,
+To update a webhook, use the <Link href="/reference/put-webhooks-id">update webhook</Link> endpoint,
 which requires the webhook ID. To find the ID of the webhook, use the
-[list all webhooks][1] endpoint.
+<Link href="/guides/webhooks/v2/list-v2">list all webhooks</Link> endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -131,8 +132,6 @@ client.webhooks.update('678901', {address: "https://example.com/webhooks/fileAct
 ```
 </CodeGroup>
 
-[1]: /guides/webhooks/v2/list-v2
-[2]: /reference/put-webhooks-id
 [console]: https://app.box.com/developers/console
 
 <RelatedLinks

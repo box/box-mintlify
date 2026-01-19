@@ -9,20 +9,21 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-tutorials/extract-metadata
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 Box AI Studio is available only for Enterprise Advanced accounts.
 
 
-The `POST /2.0/ai_agents` endpoint allows you to create a new, custom [AI agent][agents]. 
+The `POST /2.0/ai_agents` endpoint allows you to create a new, custom <Link href="/guides/box-ai/ai-agents/index">AI agent</Link>. 
 
 ## Send a request
 
 To send a request, use the `POST /2.0/ai_agents` endpoint.
 
 Make sure you have generated the developer token
-to authorize your app. See [getting started with Box AI][prereq]
+to authorize your app. See <Link href="/guides/ai-studio/getting-started-ai-studio">getting started with Box AI</Link>
 for details.
 
 <CodeGroup>
@@ -76,8 +77,6 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 {/* alex enable */}
 
-[agents]: /guides/box-ai/ai-agents/index
-[prereq]: /guides/ai-studio/getting-started-ai-studio
 
 <RelatedLinks
   title="RELATED GUIDES"

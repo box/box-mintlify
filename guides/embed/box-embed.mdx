@@ -8,6 +8,9 @@ related_resources: []
 alias_paths:
   - /docs/box-embed
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 
 
 Box Embed is a HTML-based framework that allows embedding the entire
@@ -37,7 +40,7 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 3. Click **Embed Hub**.
 
 <Note>
-You can also embed only the AI chat interface from a hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the [Box Hubs AI Chat embedding][6] section.
+You can also embed only the AI chat interface from a hub. Users can ask questions and get AI-powered answers based on the hub's files, without accessing navigation or file browsing features. For more information, see the <Link href="/guides/embed/box-embed/#box-hubs-ai-chat-embedding">Box Hubs AI Chat embedding</Link> section.
 </Note>
 
 ### Notes
@@ -113,10 +116,10 @@ using the Box web app.
 </Frame>
 
 Another way is to create a shared link with API using the
-[`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
+<Link href="/reference/put-files-id--add-shared-link">`PUT /files/:file_id`</Link> or <Link href="/reference/put-folders-id--add-shared-link">`PUT /files/:file_id`</Link>.
 
 Then you can find this shared link value using the
-[`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the
+<Link href="/reference/get-files-id">`GET /files/:id`</Link> or <Link href="/reference/get-folders-id">`GET /folders/:id`</Link> endpoint and passing in the
 query parameter `fields=shared_link`.
 
 ```curl
@@ -191,8 +194,8 @@ To access a hub embedded in AI Chat mode:
 4. Select the **Hub AI Chat** tab.
 5. Select chat mode:
 
-    * [Chat button][7]
-    * [Chat widget][8]
+    * <Link href="/guides/embed/box-embed/#chat-button">Chat button</Link>
+    * <Link href="/guides/embed/box-embed/#chat-widget">Chat widget</Link>
 
 6. Copy the embed code.
 
@@ -245,7 +248,7 @@ In **Chat widget** mode, the AI chat widget is embedded directly on the page usi
 |-----------|-------------|
 | `hubId` | The ID of the hub that powers the chatbot. |
 | `sharedLink` | The shared link hash for hub access. If not provided, the chat loads only for users who are collaborators on the hub. |
-| `showCloseButton` | Whether to show the [X (close) button][9] in the chat interface. When set to `true`, the close button is displayed. When a user clicks this button, Box generates an event that is sent to the parent web application, enabling you to implement custom closing logic based on the user interaction. |
+| `showCloseButton` | Whether to show the <Link href="/guides/embed/box-embed/#using-the-close-button">X (close) button</Link> in the chat interface. When set to `true`, the close button is displayed. When a user clicks this button, Box generates an event that is sent to the parent web application, enabling you to implement custom closing logic based on the user interaction. |
 
 The following example shows a fully configured chat widget with all available parameters:
 
@@ -300,7 +303,7 @@ window.addEventListener('message', (event) => {
 
 ## Expiring embed links
 
-For files, another option is to call the [`GET /files/:id`][1]
+For files, another option is to call the <Link href="/reference/get-files-id">`GET /files/:id`</Link>
 and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
@@ -409,13 +412,12 @@ and **print** options might not show in mobile browsers.
 [logo]: https://support.box.com/hc/en-us/articles/360044193633-Customize-Your-Account-s-Branding
 {/* i18n-enable localize-links */}
 
-[1]: /reference/get-files-id
-[2]: /reference/get-folders-id
-[3]: /reference/put-files-id--add-shared-link
-[4]: /reference/put-folders-id--add-shared-link
+
+
+
+
 [5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [cloud-game]: https://support.box.com/hc/en-us/articles/360043691034-How-Does-Box-Prevent-Clickjacking
-[6]: /guides/embed/box-embed/#box-hubs-ai-chat-embedding
-[7]: /guides/embed/box-embed/#chat-button
-[8]: /guides/embed/box-embed/#chat-widget
-[9]: /guides/embed/box-embed/#using-the-close-button
+
+
+

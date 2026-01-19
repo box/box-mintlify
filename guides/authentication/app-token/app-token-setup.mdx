@@ -15,6 +15,7 @@ related_resources: []
 alias_paths:
   - /guides/applications/app-types/custom-apps/app-token-setup
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -26,7 +27,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Platform App", href: "/guides/applications/app-types/platform-apps", badge: "GUIDE" }
   ]}
 />
-A Limited Access App can be set up to use server-side [App Tokens][app-token]
+A Limited Access App can be set up to use server-side <Link href="/guides/authentication/app-token">App Tokens</Link>
 for authentication.
 
 <Card href="/guides/authentication/app-token" arrow title="Learn how App Token authentication works"/>
@@ -76,7 +77,7 @@ section.
 
 Click **Submit and Review** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
-[authorization guide][auth].
+<Link href="/guides/authorization">authorization guide</Link>.
 
 ## Basic configuration
 
@@ -85,8 +86,8 @@ required.
 
 ### Primary and Secondary App Tokens
 
-Authentication with Limited Access Apps is done through preconfigured [App
-Tokens][app-token]. To configure an app token, navigate to the **Configuration**
+Authentication with Limited Access Apps is done through preconfigured <Link href="/guides/authentication/app-token">App
+Tokens</Link>. To configure an app token, navigate to the **Configuration**
 tab for your application within the [Developer Console][devconsole].
 
 Scroll down to the **Primary Access Token** section and click the
@@ -97,7 +98,7 @@ Scroll down to the **Primary Access Token** section and click the
 </Frame>
 
 App tokens can be configured to automatically expire or be valid indefinitely.
-After creation, the key can be used to make [API calls][api-calls].
+After creation, the key can be used to make <Link href="/guides/api-calls">API calls</Link>.
 
 <Warning>
   **App authorization**
@@ -127,9 +128,6 @@ section at the bottom of the **Configuration** tab in the
 [devtoken]: /guides/authentication/tokens/developer-tokens
 [scopes]: /guides/api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[app-token]: /guides/authentication/app-token
-[api-calls]: /guides/api-calls
-[auth]: /guides/authorization
 
 <RelatedLinks
   title="RELATED GUIDES"

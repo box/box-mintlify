@@ -13,6 +13,7 @@ related_guides:
   - metadata/instances/create
   - metadata/scopes
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -29,7 +30,7 @@ and `scope`.
 
 <Info>
 
-  Metadata [scopes][scopes] can be either `global` for templates available to
+  Metadata <Link href="/guides/metadata/scopes">scopes</Link> can be either `global` for templates available to
   all enterprises, `enterprise` for templates available to the current
   enterprise, or the `enterprise_:id` for templates belonging to an enterprise
   whose ID is the `:id` value in the scope name.
@@ -39,7 +40,7 @@ and `scope`.
 ## Remove metadata from a file
 
 To delete an instance of a metadata template from a file, call
-the [`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] API endpoint.
+the <Link href="/reference/delete-files-id-metadata-id-id">`DELETE /files/:file_id/metadata/:templateKey/schema`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -100,7 +101,7 @@ the instance has been successfully removed from the file.
 ## Remove metadata from a folder
 
 To delete an instance of a metadata template, call
-the [`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder]
+the <Link href="/reference/delete-folders-id-metadata-id-id">`DELETE /folders/:folder_id/metadata/:templateKey/schema`</Link>
 API endpoint.
 
 <CodeGroup>
@@ -159,9 +160,6 @@ client.folders.deleteMetadata('67890', client.metadata.scopes.GLOBAL, client.met
 This API returns a `204 No Content` API response with no response body when
 the instance has been successfully removed from the folder.
 
-[e_on_file]: /reference/delete-files-id-metadata-id-id
-[e_on_folder]: /reference/delete-folders-id-metadata-id-id
-[scopes]: /guides/metadata/scopes
 
 <RelatedLinks
   title="RELATED APIS"

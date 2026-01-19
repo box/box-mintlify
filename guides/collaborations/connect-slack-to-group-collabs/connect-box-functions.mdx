@@ -4,6 +4,7 @@ sidebarTitle: 5. Connect Bot to Box
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
 
@@ -47,14 +48,14 @@ const client = sdk.getAppAuthClient("enterprise");
 ```
 
 The `boxConfig` assignment line will use the `boxConfig.json` file you
-downloaded from your Box app at the end of [step 2][step2]. The sample above is
+downloaded from your Box app at the end of <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-box">step 2</Link>. The sample above is
 assuming that you have it stored in the same folder as `process.js`. If that's
 not the case, change the path to point to where your `boxConfig.json` file is,
 and what it may be named.
 
 The last `client` assignment line is creating a Box client object which may be
 used to make API calls. At this point it is scoped to the
-[service account][service-account] of the application, and not a specific user.
+<Link href="/platform/user-types/#service-account/">service account</Link> of the application, and not a specific user.
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -69,14 +70,14 @@ this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxCon
 ```
 
 The `boxConfig` assignment line will use the `boxConfig.json` file you
-downloaded from your Box app at the end of [step 2][step2]. The sample above is
+downloaded from your Box app at the end of <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-box">step 2</Link>. The sample above is
 assuming that you have it stored at the root of the Java project. If that's
 not the case, change the path in the `fileReader` assignment to point to where
 your `boxConfig.json` file is, and what it may be named.
 
 The last `boxAPI` assignment line is creating a Box client object which may be
 used to make API calls. At this point it is scoped to the
-[service account][service-account] of the application, and not a specific user.
+<Link href="/platform/user-types/#service-account/">service account</Link> of the application, and not a specific user.
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -160,9 +161,9 @@ is made to add that user to the channel group. The group was created when the
 bot was first added.
 
 <Tip>
-  The Box [Get User](/reference/get-users-id) endpoint only permits user lookup
+  The Box <Link href="/reference/get-users-id">Get User</Link> endpoint only permits user lookup
   by user ID. To lookup a user by email address, use the
-  [List Enterprise Users](/reference/get-users) endpoint and set the
+  <Link href="/reference/get-users">List Enterprise Users</Link> endpoint and set the
   `filter_term` option to the email address you're searching for.
 </Tip>
 
@@ -422,5 +423,3 @@ Lastly, we make a call to collaborate content with the group via the group ID.
   <Next>I've set up my Box functions</Next>
 </Observe>
 
-[step2]: /guides/collaborations/connect-slack-to-group-collabs/configure-box
-[service-account]: /platform/user-types/#service-account/

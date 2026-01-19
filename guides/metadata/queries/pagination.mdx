@@ -3,6 +3,8 @@ title: "Paginate and sort"
 related_endpoints: []
 required_guides: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 By default only 20 query results are returned per page and the order of these
 results is not guaranteed and may change. Pagination and sorting allow for
 getting more results and defining the order of the results.
@@ -65,7 +67,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 Results can be ordered by any of the supported metadata field types. These only
 supported types currently are `float`, `date`, and `string`
-[fields][metadata-fields]. Ordering by `enum` or `multiSelect` value is
+<Link href="/guides/metadata/fields">fields</Link>. Ordering by `enum` or `multiSelect` value is
 currently not supported.
 
 To order result, provide one or more field keys to sort by, as well as a
@@ -89,4 +91,3 @@ direction.
   words, for each `field_key` the `direction` must be the same.
 </Warning>
 
-[metadata-fields]: /guides/metadata/fields
