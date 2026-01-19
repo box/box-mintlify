@@ -6,12 +6,13 @@ related_endpoints:
 related_guides:
   - box-sign/create-sign-request
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 ## All
 
-The [get sign requests endpoint][get_all] can be used to view a list of all Box 
+The <Link href="/reference/get-sign-requests">get sign requests endpoint</Link> can be used to view a list of all Box 
 Sign requests created by the user associated with the passed Access Token.
 
 <CodeGroup>
@@ -67,11 +68,11 @@ console.log(`There are ${result.count} sign requests`);
 
 ## By ID
 
-The [get sign requests by ID endpoint][get_by_id] can be used to view
+The <Link href="/reference/get-sign-requests-id">get sign requests by ID endpoint</Link> can be used to view
 information about a specific Box Sign request. This endpoint requires the sign
 request's ID, which can be obtained by using the
-[get all Box Sign requests endpoint][get_all] or in the response when
-[creating a Box Sign request][create].
+<Link href="/reference/get-sign-requests">get all Box Sign requests endpoint</Link> or in the response when
+<Link href="/reference/post-sign-requests">creating a Box Sign request</Link>.
 
 <CodeGroup>
 
@@ -128,9 +129,6 @@ console.log(
 
 </CodeGroup>
 
-[get_all]: /reference/get-sign-requests
-[get_by_id]: /reference/get-sign-requests-id
-[create]: /reference/post-sign-requests
 
 <RelatedLinks
   title="RELATED APIS"

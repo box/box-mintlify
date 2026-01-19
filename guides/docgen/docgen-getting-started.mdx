@@ -10,6 +10,7 @@ related_guides:
   - docgen/docgen-jobs
   - docgen/docgen-templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -35,7 +36,7 @@ To use Box Doc Gen API to generate documents, a Box Doc Gen template must alread
 First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating platform apps][createapps].
+on <Link href="/guides/applications/app-types/platform-apps">creating platform apps</Link>.
 
 ## Generate a developer token
 
@@ -60,18 +61,18 @@ and generate the token.
 A developer token is only valid for one hour.
 </Note>
 
-For additional details, see [developer token][token].
+For additional details, see <Link href="/guides/authentication/tokens/developer-tokens">developer token</Link>.
 After you generate the token, you can use it in cURL
-or other clients, such as [Postman][postman], to make
+or other clients, such as <Link href="/guides/tooling/postman">Postman</Link>, to make
 calls.
 
 ## Use webhooks 
 
 You can create webhooks to monitor Doc Gen events and automate your business process or workflow.
 
-Follow the instructions for [adding webhooks][webhooks]. Your content type is your Doc Gen template file or folder.
+Follow the instructions for <Link href="/guides/webhooks/v2/create-v2/">adding webhooks</Link>. Your content type is your Doc Gen template file or folder.
 
-The supported [events][events] are:
+The supported <Link href="/guides/webhooks/triggers">events</Link> are:
 
 * `DOCGEN_DOCUMENT_GENERATION_STARTED`
 * `DOCGEN_DOCUMENT_GENERATION_SUCCEEDED` 
@@ -93,15 +94,10 @@ Information that is posted in a notification:
 * Output type (DOCX or PDF).
 * Reason (if the document generation process fails).
 
-[token]: /guides/authentication/tokens/developer-tokens
-[createapps]: /guides/applications/app-types/platform-apps
-[postman]: /guides/tooling/postman
 [settings]: https://support.box.com/hc/en-us/articles/4404822772755-Enterprise-Settings-Content-Sharing-Tab#h_01FYQGK5RW42T07GV985MQ9E9A
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
-[webhooks]: /guides/webhooks/v2/create-v2/
-[events]: /guides/webhooks/triggers
 
 <RelatedLinks
   title="RELATED GUIDES"

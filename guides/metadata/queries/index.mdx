@@ -4,6 +4,7 @@ related_endpoints:
 required_guides:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 A metadata query provides a way to find files and
 folders by searching for the metadata attached to them.
@@ -15,7 +16,5 @@ it and a value of `id = :id`, where `:id` would be the value of the invoice.
 ## Authentication
 
 The metadata query API can be used by applications that have been authenticated
-using traditional [OAuth 2.0][oauth] or [JWT][jwt].
+using traditional <Link href="/guides/authentication/oauth2">OAuth 2.0</Link> or <Link href="/guides/authentication/jwt">JWT</Link>.
 
-[oauth]: /guides/authentication/oauth2
-[jwt]: /guides/authentication/jwt

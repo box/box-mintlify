@@ -7,6 +7,9 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 ## Client secret security
 
 Your client secret is confidential and needs to be protected. Because this is
@@ -52,7 +55,7 @@ to refresh the token.
 ## Downscope tokens
 
 It is important to follow the principle of least privilege when thinking about
-Access Tokens. This can be accomplished through [downscoping][downscope], where
+Access Tokens. This can be accomplished through <Link href="/guides/authentication/tokens/downscope">downscoping</Link>, where
 a fully scoped Access Token is exchanged for a more restricted Access Token that
 can then be deployed to client-side code, mobile environments, or UI tools.
 
@@ -72,7 +75,7 @@ ScopedToken downscopedToken =
 
 ## Revoke tokens
 
-Both fully scoped Access Tokens and Downscoped Tokens can be [revoked][revoke].
+Both fully scoped Access Tokens and Downscoped Tokens can be <Link href="/guides/authentication/tokens/revoke">revoked</Link>.
 This allows you to manage the lifespan of a token to reduce exposure when a user
 logs out , there is suspicious activity, or when you need to push new security
 enhancements.
@@ -82,5 +85,5 @@ enhancements.
 Developer Tokens should only be used for development or testing purposes and
 never in production.
 
-[downscope]: /guides/authentication/tokens/downscope
-[revoke]: /guides/authentication/tokens/revoke
+
+

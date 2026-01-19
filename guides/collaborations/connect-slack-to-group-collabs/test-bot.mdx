@@ -4,6 +4,7 @@ sidebarTitle: 6. Test the bot
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 <ProgressBar pages={[
@@ -34,7 +35,7 @@ When a bot is first added to a channel, there are a number of expectations.
 * A new group is created with a name that matches the Slack channel ID.
 * All people currently in the channel are added to the group, as long as their Slack email address matches an enterprise account with the same email.
 
-When the Slack bot was configured in [step 1][step1], we installed it within
+When the Slack bot was configured in <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-slack">step 1</Link>, we installed it within
 the Slack workspace. To test group creation we need to add it to a channel.
 
 From any Slack channel, invite the Slack bot, either through the Slack UI or
@@ -117,16 +118,11 @@ With our minima bot deployed we can now think about ways to improve the
 experience on top of what we've created so far. Next steps in this
 journey may include any number of different expansion areas.
 
-* Add new slash commands for [creating shared links][next-steps-shared-link] for the files and folders shared with the group, allowing you to share the content with others who are not in the group and people outside your enterprise.
-* [Creating retention policies][next-steps-retention-policy] and [assigning them][next-steps-policy-assign] to any content shared with the group, allowing you to control the lifespan and governance of shared content.
-* Adding new slash commands for allowing people in the channel to [comment on the files][next-steps-comment] that are shared with the group.
+* Add new slash commands for <Link href="/guides/shared-links/create-or-update">creating shared links</Link> for the files and folders shared with the group, allowing you to share the content with others who are not in the group and people outside your enterprise.
+* <Link href="/reference/post-retention-policies">Creating retention policies</Link> and <Link href="/reference/post-retention-policy-assignments">assigning them</Link> to any content shared with the group, allowing you to control the lifespan and governance of shared content.
+* Adding new slash commands for allowing people in the channel to <Link href="/reference/post-comments">comment on the files</Link> that are shared with the group.
 
-[step1]: /guides/collaborations/connect-slack-to-group-collabs/configure-slack
 [box-users-groups]: https://app.box.com/master/groups
-[next-steps-shared-link]: /guides/shared-links/create-or-update
-[next-steps-retention-policy]: /reference/post-retention-policies
-[next-steps-policy-assign]: /reference/post-retention-policy-assignments
-[next-steps-comment]: /reference/post-comments
 {/* i18n-enable localize-links */}
 [box]: https://box.com
 {/* i18n-disable localize-links */}

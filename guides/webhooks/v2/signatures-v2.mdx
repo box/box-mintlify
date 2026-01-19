@@ -8,6 +8,7 @@ alias_paths:
   - /guides/webhooks/handle/verify-signatures
   - /guides/webhooks/handle/rotate-signatures
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -44,7 +45,7 @@ it to verify the webhook payloads. Every webhook will now include a
 ## Signature verification with SDKs
 
 Although it is possible to verify signatures manually, methods are provided for
-your convenience in the [official Box SDKs][sdks].
+your convenience in the <Link href="/guides/tooling/sdks">official Box SDKs</Link>.
 
 {/* <Samples id='x_webhooks' variant='validate_signatures' /> */}
 
@@ -250,7 +251,6 @@ without any conflicts.
 4. Update your application with the new primary key. Your application can still receive notifications with the old primary key, but your webhooks should be processed correctly since the secondary key is still valid.
 5. Once you are confident that no webhooks with the old primary key are in-flight, you can update the secondary key using the same process.
 
-[sdks]: /guides/tooling/sdks
 [console]: https://app.box.com/developers/console
 
 <RelatedLinks

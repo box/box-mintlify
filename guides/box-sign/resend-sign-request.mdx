@@ -8,13 +8,14 @@ related_guides:
   - box-sign/cancel-sign-request
   - box-sign/sign-templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-The [resend a Box sign request endpoint][resend] can be used to resend request
+The <Link href="/reference/post-sign-requests-id-resend">resend a Box sign request endpoint</Link> can be used to resend request
 emails to any remaining signers.
 
-A Box Sign request cannot be resent if the [status][status] is: `signed`,
+A Box Sign request cannot be resent if the <Link href="/guides/box-sign/create-sign-request/#request-status">status</Link> is: `signed`,
 `cancelled`, `declined`, `expired`, `error_sending`, or `error_converting`.
 
 If a Box Sign request was recently sent, you will need to wait 10 minutes before
@@ -56,8 +57,6 @@ console.log(`Sign request id ${sr.id} resent`);
 
 </CodeGroup>
 
-[resend]: /reference/post-sign-requests-id-resend
-[status]: /guides/box-sign/create-sign-request/#request-status
 
 <RelatedLinks
   title="RELATED APIS"

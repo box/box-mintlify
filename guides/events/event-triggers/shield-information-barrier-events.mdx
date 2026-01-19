@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,7 +23,7 @@ content restricted to specific groups.
 ## Events triggered when information barrier is configured
 
 Configuring information barrier produces
-events in the [enterprise event][events] stream. For example,
+events in the <Link href="/guides/events/enterprise-events/for-enterprise/">enterprise event</Link> stream. For example,
 activating or deactivating the barrier triggers an event.
 
 These events follow
@@ -479,7 +480,6 @@ be set as the new owner.
 }
 ```
 
-[events]: /guides/events/enterprise-events/for-enterprise/
 
 <RelatedLinks
   title="RELATED APIS"

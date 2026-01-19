@@ -29,7 +29,7 @@ renders the content in a folder view, similar to the main Box web application.
 Users can then navigate through the folder hierarchy and perform file operations
 like rename, delete, and share.
 
-Content Explorer comes with a [metadata view][explorer-metadata] that uses
+Content Explorer comes with a <Link href="/guides/embed/ui-elements/explorer-metadata-v2">metadata view</Link> that uses
 metadata query to find files and folders based
 on their metadata. The data is then displayed in the embedded view.
 
@@ -232,7 +232,7 @@ applicable and allowed.
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
+the Content Explorer functionality, you can use <Link href="/guides/authentication/tokens/downscope">Downscoping</Link> to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Explorer.
@@ -240,7 +240,7 @@ client initializing the Content Explorer.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Explorer by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+more, see <Link href="/guides/api-calls/permissions-and-errors/scopes">Dedicated Scopes for Box UI Elements</Link>.
 
 ### Base Scope
 
@@ -313,8 +313,6 @@ allowfullscreen="true"
 style={{width: "100%"}}
 ></iframe>
 
-[downscope]: /guides/authentication/tokens/downscope
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 [box-app]: /guides/applications/app-types
 [token]: /guides/authentication/tokens/developer-tokens
 [templates]: /guides/metadata/templates
@@ -325,7 +323,6 @@ style={{width: "100%"}}
 [creating-templates-api]: /guides/metadata/templates/create
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
-[explorer-metadata]: /guides/embed/ui-elements/explorer-metadata-v2
 
 <RelatedLinks
   title="RELATED GUIDES"

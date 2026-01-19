@@ -7,10 +7,11 @@ related_guides:
   - tasks/get
   - tasks/update
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-To create a task, you will need to provide the [`POST /tasks`][post_tasks] API
+To create a task, you will need to provide the <Link href="/reference/post-tasks">`POST /tasks`</Link> API
 with the `action` for the task, as well as an `item` to represent the file to
 add the task to.
 
@@ -151,7 +152,6 @@ a task has a `completion_rule` that can be used to define if all users who've
 been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
 need to complete the task.
 
-[post_tasks]: /reference/post-tasks
 
 <RelatedLinks
   title="RELATED APIS"

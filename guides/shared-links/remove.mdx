@@ -13,13 +13,14 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 A shared link may be removed from a resource by calling the
-[update file](/reference/put-files-id) or
-[update folder](/reference/put-folders-id) or
-[update weblink](/reference/put-web-links-id) endpoint and setting the
+<Link href="/reference/put-files-id">update file</Link> or
+<Link href="/reference/put-folders-id">update folder</Link> or
+<Link href="/reference/put-web-links-id">update weblink</Link> endpoint and setting the
 `shared_link` value to `null`.
 
 <Warning>

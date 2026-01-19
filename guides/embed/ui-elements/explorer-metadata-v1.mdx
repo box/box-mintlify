@@ -12,6 +12,7 @@ alias_paths:
   - /docs/box-content-explorer
   - /docs/content-explorer
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -27,7 +28,7 @@ The `v1` of the metadata view Content Explorer has reached end of support. While
 </Note>
 
 With Content Explorer you can display files and folders based on their metadata.
-The metadata view uses [metadata template][template] and [metadata query][metadata-query] to find the data you want to display.
+The metadata view uses <Link href="/reference/resources/get-metadata-templates-id">metadata template</Link> and <Link href="/guides/metadata/queries">metadata query</Link> to find the data you want to display.
 
 <Frame>
 ![Metadata view](/images/guides/embed/ui-elements/explorer-view.png)
@@ -35,21 +36,21 @@ The metadata view uses [metadata template][template] and [metadata query][metada
 
 ## Prerequisites
 
-* Read the [Content Explorer][explorer] guide.
-* Check the [metadata terminology][terminology].
-* Check the information on [metadata queries][metadata-query].
+* Read the <Link href="/guides/embed/ui-elements/explorer">Content Explorer</Link> guide.
+* Check the <Link href="/guides/metadata/#metadata-terminology">metadata terminology</Link>.
+* Check the information on <Link href="/guides/metadata/queries">metadata queries</Link>.
 
 ## Create and configure an app
 
-1. [Create a Box app][box-app].
+1. <Link href="/guides/applications/app-types">Create a Box app</Link>.
 2. Add the local development address in the CORS Domains: ![CORS Domains](/images/guides/embed/ui-elements/box-app-cors.png)
-3. Generate a [developer token][token].
+3. Generate a <Link href="/guides/authentication/tokens/developer-tokens">developer token</Link>.
 
 ## Create a metadata template
 
 The next step is to create a metadata template.
 
-1. Use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to create the template.
+1. Use <Link href="/guides/metadata/templates/create">Metadata API</Link> or [Admin Console][creating-templates-ui] to create the template.
 2. Apply an already created template to a Box folder. Make sure you enable the
 cascade policy. For detailed instructions, see
 [instructions on customizing and applying templates][apply-templates].
@@ -82,10 +83,10 @@ To make things easier, you can use a [sample project][metadata-project] based on
 
         | Parameter | Description |
         | --- | --- |
-        | `DEVELOPER_TOKEN` | [Developer token][token] generated in the the Developer Console. |
+        | `DEVELOPER_TOKEN` | <Link href="/guides/authentication/tokens/developer-tokens">Developer token</Link> generated in the the Developer Console. |
         | `ENTERPRISE_ID` | Enterprise ID copied from the **General Settings** tab of your Box application. |
-        | `METADATA_TEMPLATE_NAME`| `templateKey` of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](/images/guides/embed/ui-elements/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the one you provided at the beginning. |
-        | `METADATA_SOURCE` | Source of your [metadata][source]. It's a string that combines the scope, enterprise ID, and metadata key. |
+        | `METADATA_TEMPLATE_NAME`| `templateKey` of your already created metadata template. **Note**: To make sure you provided the proper name, use the <Link href="/reference/metadata/templates/get/#get-a-metadata-template-by-name">metadata API</Link> to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](/images/guides/embed/ui-elements/metadata-template-name.png) If you decide to change the template name in the UI, you change the display name only. The name to use in the component is always the one you provided at the beginning. |
+        | `METADATA_SOURCE` | Source of your <Link href="/guides/metadata/scopes">metadata</Link>. It's a string that combines the scope, enterprise ID, and metadata key. |
         | `ROOTFOLDER_ID` | ID of a Box folder to which you want to apply the metadata query and display filtered files. |
 
         The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already
@@ -95,7 +96,7 @@ To make things easier, you can use a [sample project][metadata-project] based on
         | --- | --- |
         | `defaultView` | A required prop to paint the metadata view. If it's not provided, you get the regular file view. |
         | `fieldsToShow` | Add or hide specific metadata columns to display in the Content Explorer. |
-        |`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see [this guide][metadata-query]. |
+        |`metadataQuery` | Provides a way to find files and folders by searching for the metadata attached to them. For additional information on metadata queries, see <Link href="/guides/metadata/queries">this guide</Link>. |
 
 3. Pass the required parameters to the Content Explorer component.
 
@@ -160,7 +161,7 @@ export default App;
 ## Metadata keys
 
 To decide which fields to show, the Content Explorer uses metadata
-[field keys][field-key], not the [display names][display-name]. You can see the
+<Link href="/reference/post-metadata-templates-schema/#param-fields-key">field keys</Link>, not the <Link href="/reference/post-metadata-templates-schema/#param-fields-displayName">display names</Link>. You can see the
 display names in the Admin Console and user view, but you can obtain the field
 keys through the API.
 
@@ -170,7 +171,7 @@ metadata in UI view.
 
 ### Metadata keys sanitization
 
-[Keys][field-key] are restricted to alphanumeric characters only:
+<Link href="/reference/post-metadata-templates-schema/#param-fields-key">Keys</Link> are restricted to alphanumeric characters only:
 
 * No hyphens `-` or underscores `_` are permitted.
 * Only letters (`a-z, A-Z`) and numbers (`0-9`) are allowed.
@@ -189,23 +190,12 @@ Keys are based on the display names.
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Note>
 
-[terminology]: /guides/metadata/#metadata-terminology
-[template]: /reference/resources/get-metadata-templates-id
-[explorer]: /guides/embed/ui-elements/explorer
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
-[creating-templates-api]: /guides/metadata/templates/create
 [creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
-[box-app]: /guides/applications/app-types
-[token]: /guides/authentication/tokens/developer-tokens
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
-[get-template]: /reference/metadata/templates/get/#get-a-metadata-template-by-name
-[metadata-query]: /guides/metadata/queries
 [get-id]: /reference/get-metadata-templates-id-id-schema/
-[field-key]: /reference/post-metadata-templates-schema/#param-fields-key
-[display-name]: /reference/post-metadata-templates-schema/#param-fields-displayName
-[source]: /guides/metadata/scopes
 
 <RelatedLinks
   title="RELATED APIS"

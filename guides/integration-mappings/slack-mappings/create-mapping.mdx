@@ -7,6 +7,8 @@ required_guides:
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Use the `POST integration_mappings/slack/:integration_mapping_id`
 call to create a mapping. To make it work,
 you need `box_item` and `partner_item` parameters,
@@ -16,7 +18,7 @@ which refer to a Box folder and a Slack channel, respectively.
 Remember that before the mapping can be created,
 this service account must be set as a co-owner
 role on the folder that is being mapped.
-If you encounter any errors, see the [troubleshooting guide][1].
+If you encounter any errors, see the <Link href="/guides/integration-mappings/slack-mappings/troubleshooting">troubleshooting guide</Link>.
 </Info>
 
 <CodeGroup>
@@ -174,4 +176,3 @@ module.exports = { createSlackIntegrationMapping }
   `serviceAccountId`.
 </Note>
 
-[1]: /guides/integration-mappings/slack-mappings/troubleshooting

@@ -278,7 +278,7 @@ applicable and allowed.
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Picker functionality, you can use [Downscoping][downscope] to
+the Content Picker functionality, you can use <Link href="/guides/authentication/tokens/downscope">Downscoping</Link> to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Picker.
@@ -286,7 +286,7 @@ client initializing the Content Picker.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Picker by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+more, see <Link href="/guides/api-calls/permissions-and-errors/scopes">Dedicated Scopes for Box UI Elements</Link>.
 
 | Scope Name    | Permissions granted                                                              |
 | ------------- | -------------------------------------------------------------------------------- |
@@ -353,8 +353,6 @@ allowfullscreen="true"
 style={{width: "100%"}}
 ></iframe>
 
-[downscope]: /guides/authentication/tokens/downscope
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 
 <RelatedLinks
   title="RELATED GUIDES"

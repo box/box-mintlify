@@ -11,6 +11,7 @@ related_guides:
   - metadata/instances/create
   - metadata/instances/update
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -19,7 +20,7 @@ Metadata instances can be listed for either a file or a folder.
 ## List metadata on a file
 
 To list all metadata instances on a file, call the 
-[`GET /files/:file_id/metadata`][get_metadata_file] API endpoint.
+<Link href="/reference/get-files-id-metadata">`GET /files/:file_id/metadata`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -112,7 +113,7 @@ client.files.getAllMetadata('11111')
 ## List metadata on a folder
 
 To list all metadata instances on any folder (except for the root folder), call
-the [`GET /folders/:file_id/metadata`][get_metadata_file] API endpoint.
+the <Link href="/reference/get-files-id-metadata">`GET /folders/:file_id/metadata`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -202,7 +203,6 @@ client.folders.getAllMetadata('11111')
   instances for this file. This API can not be used on the root folder with ID `0`.
 </Warning>
 
-[get_metadata_file]: /reference/get-files-id-metadata
 [get_metadata_folder]: /reference/get-folders-id-metadata
 
 <RelatedLinks

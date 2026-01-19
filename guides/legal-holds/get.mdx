@@ -10,11 +10,12 @@ related_resources:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 To get the information for a specific Legal Hold policy that has been created in
-an enterprise, call the [`GET /legal_hold_policies/:id`][legal_hold] API
+an enterprise, call the <Link href="/reference/get-legal-hold-policies-id">`GET /legal_hold_policies/:id`</Link> API
 endpoint with the `id` of the policy.
 
 <CodeGroup>
@@ -87,10 +88,8 @@ client.legalHoldPolicies.get('11111')
 ## Required Scopes
 
 Before using any of the Legal Hold APIs, an application must have the right
-scopes enabled. See [Required Scopes][scopes] for more details.
+scopes enabled. See <Link href="/guides/legal-holds#required-scopes">Required Scopes</Link> for more details.
 
-[legal_hold]: /reference/get-legal-hold-policies-id
-[scopes]: /guides/legal-holds#required-scopes
 
 <RelatedLinks
   title="RELATED APIS"

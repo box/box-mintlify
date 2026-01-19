@@ -9,6 +9,7 @@ related_endpoints:
   - post_docgen_batches_v2025.0
   - post_docgen_templates_v2025.0
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -16,7 +17,7 @@ You can mark an existing document as a Box Doc Gen template and use it to genera
 
 ## Before you start
 
-Before you start using Box Doc Gen API, follow the steps listed in the [get started with Box Doc Gen][docgen-prerequisites] guide to create a platform app and a Box Doc Gen template.
+Before you start using Box Doc Gen API, follow the steps listed in the <Link href="/guides/docgen/docgen-getting-started">get started with Box Doc Gen</Link> guide to create a platform app and a Box Doc Gen template.
 
 ## Send a request
 
@@ -122,7 +123,6 @@ client.getDocgenTemplate().deleteDocgenTemplateByIdV2025R0(createdDocgenTemplate
 
 </CodeGroup>
 
-[docgen-prerequisites]: /guides/docgen/docgen-getting-started
 
 <RelatedLinks
   title="RELATED GUIDES"

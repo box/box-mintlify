@@ -8,17 +8,18 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 The Box for Salesforce managed package offers the following
-[UI Elements][1] as Lightning Components: [content picker][2],
-[explorer][3], [preview][4], and [uploader][5]. You can use them on
+<Link href="/guides/embed/ui-elements">UI Elements</Link> as Lightning Components: <Link href="/guides/embed/ui-elements/picker">content picker</Link>,
+<Link href="/guides/embed/ui-elements/explorer">explorer</Link>, <Link href="/guides/embed/ui-elements/preview">preview</Link>, and <Link href="/guides/embed/ui-elements/uploader">uploader</Link>. You can use them on
 Lightning Pages, or in Flows.
 
 ## Content picker
 
-[Options][6] available in picker with Box for Salesforce are:
+<Link href="/guides/embed/ui-elements/picker/#options">Options</Link> available in picker with Box for Salesforce are:
 
 - `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `chooseButtonLabel`
@@ -30,7 +31,7 @@ Lightning Pages, or in Flows.
 
 ## Content explorer
 
-[Options][7] available in explorer with Box for Salesforce are:
+<Link href="/guides/embed/ui-elements/explorer/#options">Options</Link> available in explorer with Box for Salesforce are:
 
 - `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `canSetShareAccess`
@@ -44,28 +45,18 @@ Lightning Pages, or in Flows.
 
 ## Content preview
 
-[Options][8] available in preview with Box for Salesforce are:
+<Link href="/guides/embed/ui-elements/preview/#options">Options</Link> available in preview with Box for Salesforce are:
 
-- `fileId` ([find your file ID][9])
+- `fileId` (<Link href="/guides/files/get">find your file ID</Link>)
 - **File Id API Field Name** - Salesforce specific; on a record page, you can use an API field name that holds the file ID to be displayed
 
 ## Content uploader
 
-[Options][10] available in uploader with Box for Salesforce are:
+<Link href="/guides/embed/ui-elements/uploader/#options">Options</Link> available in uploader with Box for Salesforce are:
 
 - `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `fileLimit`
 
-[1]: /guides/embed/ui-elements
-[2]: /guides/embed/ui-elements/picker
-[3]: /guides/embed/ui-elements/explorer
-[4]: /guides/embed/ui-elements/preview
-[5]: /guides/embed/ui-elements/uploader
-[6]: /guides/embed/ui-elements/picker/#options
-[7]: /guides/embed/ui-elements/explorer/#options
-[8]: /guides/embed/ui-elements/preview/#options
-[9]: /guides/files/get
-[10]: /guides/embed/ui-elements/uploader/#options
 
 <RelatedLinks
   title="RELATED GUIDES"

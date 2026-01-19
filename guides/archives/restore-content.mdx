@@ -11,6 +11,7 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -18,20 +19,16 @@ This guide describes how to restore content that you archived by mistake.
 
 ## Restore file or folder from archive
 
-Use the [`PUT /files/:id`][Update file] API endpoint to restore a file from an archive, or the [`PUT /folders/:id`][Update folder] endpoint to restore a folder from an archive.
+Use the <Link href="/reference/put-files-id">`PUT /files/:id`</Link> API endpoint to restore a file from an archive, or the <Link href="/reference/put-folders-id">`PUT /folders/:id`</Link> endpoint to restore a folder from an archive.
 The `id` parameter is the ID of the file/folder you want to restore from an archive.
-To specify the destination, use the `parent.id` [parameter][Update parent id of folder] in the request body.
+To specify the destination, use the `parent.id` <Link href="/reference/put-folders-id/#param-parent-id">parameter</Link> in the request body.
 This is the ID of a folder (can be owned by any user) where you want to restore the file/folder.
 
 To restore a file/folder to user's root folder, use `0` as the `parent.id` value. Additionally, pass the ID of the user in the
-`parent.user_id` [parameter][Update parent user id of folder] in the request body.
+`parent.user_id` <Link href="/reference/put-folders-id/#param-parent-user_id">parameter</Link> in the request body.
 
-[Update file]: /reference/put-files-id
 [Update parent id of file]: /reference/put-files-id/#param-parent-id
 [Update parent user id of file]: /reference/put-files-id/#param-parent-user_id
-[Update folder]: /reference/put-folders-id
-[Update parent id of folder]: /reference/put-folders-id/#param-parent-id
-[Update parent user id of folder]: /reference/put-folders-id/#param-parent-user_id
 
 <RelatedLinks
   title="RELATED APIS"

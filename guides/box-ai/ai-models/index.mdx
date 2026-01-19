@@ -5,6 +5,9 @@ related_guides: None
 alias_paths: None
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
   
 import { CustomCard } from "/snippets/custom-card.jsx";
 
@@ -38,12 +41,12 @@ A model can be both customer-enabled and premium, or core and standard. In other
 
 How to use the supported AI models:
 
-- get the [default AI agent configuration][agent],
-- override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
+- get the <Link href="/reference/get-ai-agent-default">default AI agent configuration</Link>,
+- override the AI agent configuration used in <Link href="/reference/post-ai-ask">`POST 2.0/ai/ask`</Link>, <Link href="/reference/post-ai-text-gen">`POST 2.0/ai/text_gen`</Link>, <Link href="/reference/post-ai-extract">`POST 2.0/ai/extract`</Link>, <Link href="/reference/post-ai-extract-structured">`POST 2.0/ai/extract_structured`</Link> endpoints.
 
 When using the `model` parameter your API calls, use the **API Name** visible on each CustomCard and model card.
 
-For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `azure__openai__gpt_4o_mini` API name. Make sure you use **two underscores** after the provider name.
+For example, to get the AI agent configuration for a specific model, use the <Link href="/reference/get-ai-agent-default#param-model">model</Link> parameter and provide the `azure__openai__gpt_4o_mini` API name. Make sure you use **two underscores** after the provider name.
 
 <Note>
 The list may change depending on the model availability.
@@ -522,17 +525,17 @@ Certain Box AI customers may enable additional AI models upon their request and/
 	</CustomCard>
 </Columns>
 
-[ask]: /reference/post-ai-ask
-[text-gen]: /reference/post-ai-text-gen
-[extract]: /reference/post-ai-extract
-[extract-structured]: /reference/post-ai-extract-structured
-[agent]: /reference/get-ai-agent-default
+
+
+
+
+
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
 [vertex-text-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
-[ai-model]: /reference/get-ai-agent-default#param-model
+
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 [aws-titan]: https://aws.amazon.com/bedrock/titan/
 [subprocessors]: https://www.box.com/legal/subprocessors

@@ -8,10 +8,11 @@ related_guides:
   - box-sign/cancel-sign-request
   - box-sign/sign-templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-At minimum, to [create Box Sign request][create] you need
+At minimum, to <Link href="/reference/post-sign-requests">create Box Sign request</Link> you need
 the a file you want to be signed, a destination folder for the signed
 document/[signing log][log], and signers.
 
@@ -257,7 +258,7 @@ the API.
 ## Files
 
 Each Box Sign request begins with a file that needs to be signed. If the file
-does not already exist in Box, it must be [uploaded][upload], in a separate
+does not already exist in Box, it must be <Link href="/reference/post-files-content">uploaded</Link>, in a separate
 API call, prior to creating the request. Multiple files can be signed in one
 request. File ID of the first file in a request is specified in the
 `source_files` body parameter.
@@ -269,8 +270,8 @@ our [collaboration levels][collab] to ensure this requirement is met.
 
 Supported file types include:
 
-- All [documents][documents]
-- All [presentations][presentations]
+- All <Link href="/guides/representations/supported-file-types/#documents">documents</Link>
+- All <Link href="/guides/representations/supported-file-types/#presentations">presentations</Link>
 - Images: `png`, `jpg`, `jpeg`, `tiff` only
 - Text-based files: `.csv`, `.txt` only
 
@@ -281,7 +282,7 @@ the original file type. As each signer completes the request, Box Sign will
 automatically add a new file version.
 
 File size limits are determined by your account type. Please see our
-[uploads guide][uploads] for more information.
+<Link href="/guides/uploads/direct">uploads guide</Link> for more information.
 
 ## Parent folder
 
@@ -323,7 +324,7 @@ pass when creating a sign request.
 
 You can create a sign request using a template.
 To do so, you must provide the `template_id` parameter.
-See [this guide][templates] to learn more about using templates
+See <Link href="/guides/box-sign/sign-templates">this guide</Link> to learn more about using templates
 when creating sign requests.
 
 ## Redirects
@@ -396,11 +397,6 @@ Encountering an error status requires creating a new sign request to retry.
 </div>
 </Frame>
 
-[upload]: /reference/post-files-content
-[documents]: /guides/representations/supported-file-types/#documents
-[presentations]: /guides/representations/supported-file-types/#presentations
-[uploads]: /guides/uploads/direct
-[create]: /reference/post-sign-requests
 {/* i18n-enable localize-links */}
 [tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags
 [log]: https://support.box.com/hc/en-us/articles/4404095202579-Viewing-the-signing-log
@@ -412,7 +408,6 @@ Encountering an error status requires creating a new sign request to retry.
 [signrequest]: /reference/post-sign-requests
 [externalid]: /reference/post-sign-requests#param-signers-embed_url_external_user_id
 [cloudgame]: /guides/embed/box-embed#cloud-game
-[templates]: /guides/box-sign/sign-templates
 [CFR]: https://support.box.com/hc/en-us/articles/24169443030163
 
 <RelatedLinks

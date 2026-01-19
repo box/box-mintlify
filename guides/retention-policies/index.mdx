@@ -4,6 +4,8 @@ rank: 200
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 A retention policy blocks permanent deletion of content for a specified amount
 of time. Admins can create retention policies and then assign them to
 specific folders or their entire enterprise. Retention policies can be used to
@@ -20,14 +22,14 @@ permanently when the data can no longer be legally held.
 Working with Retention Policies requires a developer to work with three
 distinct resources.
 
-* **Policies:**  A [Retention Policy][policy] describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A [Retention Policy Assignment][assignment] is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
-* **Retentions**: A [File Version Retention][retention] represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
+* **Policies:**  A <Link href="/reference/resources/retention_policy">Retention Policy</Link> describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
+* **Assignments:** A <Link href="/reference/resources/retention_policy_assignment">Retention Policy Assignment</Link> is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
+* **Retentions**: A <Link href="/reference/resources/file_version_retention">File Version Retention</Link> represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
 
 <Warning>
-  The [file version retention][retention] section of the Box API
-  is now deprecated. Instead, you can use [files under retention][files-under] or
-  [file versions under retention][file-versions-under] endpoints.
+  The <Link href="/reference/resources/file_version_retention">file version retention</Link> section of the Box API
+  is now deprecated. Instead, you can use <Link href="/reference/get-retention-policy-assignments-id-files-under-retention">files under retention</Link> or
+  <Link href="/reference/get-retention-policy-assignments-id-file-versions-under-retention">file versions under retention</Link> endpoints.
 </Warning>
 
 ## File Deletion with Retention Policies
@@ -40,22 +42,15 @@ removed.
 ## Extend Retention for a File
 
 Files under retention can have their retention date extended by
-[updating][extend-retention] the `disposition_at` field's value with a future
+<Link href="/reference/put-files-id/#param-disposition_at">updating</Link> the `disposition_at` field's value with a future
 date. Once the date has been extended, it cannot be reverted or changed to be
 prior to the new date.
 
 ## Required Scopes
 
-Before using any of the Retention Policy APIs, an application must have the [GCM
-and Manage Retention Policies scopes][scopes] enabled. These are not available
+Before using any of the Retention Policy APIs, an application must have the <Link href="/guides/api-calls/permissions-and-errors/scopes">GCM
+and Manage Retention Policies scopes</Link> enabled. These are not available
 in the Developer Console and need to instead be enabled by contacting customer
 support.
 
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
-[policy]: /reference/resources/retention_policy
-[assignment]: /reference/resources/retention_policy_assignment
-[retention]: /reference/resources/file_version_retention
 [governance]: https://www.box.com/security/governance-and-compliance
-[files-under]: /reference/get-retention-policy-assignments-id-files-under-retention
-[file-versions-under]: /reference/get-retention-policy-assignments-id-file-versions-under-retention
-[extend-retention]: /reference/put-files-id/#param-disposition_at

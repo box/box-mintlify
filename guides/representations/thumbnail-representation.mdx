@@ -12,6 +12,7 @@ required_guides:
   - representations/download-a-representation
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -34,7 +35,7 @@ generated upon uploading the source file to Box.
 <Warning>
 
 An deprecated way to get a thumbnail for a file is using the
-[thumbnail API][thumbnail_api].
+<Link href="/guides/representations/thumbnail">thumbnail API</Link>.
 
 </Warning>
 
@@ -42,9 +43,9 @@ An deprecated way to get a thumbnail for a file is using the
 
 To get a thumbnail representation follow the following steps
 
-- [List all representations][list-all-representations]
-- [Request a thumbnail][request-a-representation] by passing the `x-rep-hints`-header for the desired thumbnail format and size, for example `[jpg?dimensions=32x32]`.
-- [Download the thumbnail][download-a-representation] by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
+- <Link href="/guides/representations/list-all-representations">List all representations</Link>
+- <Link href="/guides/representations/request-a-representation">Request a thumbnail</Link> by passing the `x-rep-hints`-header for the desired thumbnail format and size, for example `[jpg?dimensions=32x32]`.
+- <Link href="/guides/representations/download-a-representation">Download the thumbnail</Link> by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
 
 <Warning>
 
@@ -126,10 +127,6 @@ icon and not an actual thumbnail.
 
 </Warning>
 
-[list-all-representations]: /guides/representations/list-all-representations
-[request-a-representation]: /guides/representations/request-a-representation
-[download-a-representation]: /guides/representations/download-a-representation
-[thumbnail_api]: /guides/representations/thumbnail
 
 <RelatedLinks
   title="RELATED APIS"

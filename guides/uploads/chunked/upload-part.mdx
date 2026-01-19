@@ -12,6 +12,7 @@ related_resources:
   - upload_part
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -28,7 +29,7 @@ upload them using the Upload Part API.
 
 ## Create Upload Session
 
-First, [create an upload session][createsession]. The resulting
+First, <Link href="/guides/uploads/chunked/create-session">create an upload session</Link>. The resulting
 object defines the size of each part and the number of parts to upload.
 
 ```json
@@ -225,7 +226,7 @@ the `ID` and `SHA` of the part uploaded.
 
 <Warning>
   Keep all the JSON responses from all part
-  uploads as they are needed to [commit the session][commit].
+  uploads as they are needed to <Link href="/guides/uploads/chunked/commit-session">commit the session</Link>.
 </Warning>
 
 ## Range Overlap
@@ -247,8 +248,6 @@ The recommended approach is to upload 3 to 5 parts in parallel from a queue
 of parts, ordered by byte offset. If a part upload fails, retry it
 before you upload further parts.
 
-[commit]: /guides/uploads/chunked/commit-session
-[createsession]: /guides/uploads/chunked/create-session
 
 <RelatedLinks
   title="RELATED APIS"

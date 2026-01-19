@@ -10,6 +10,7 @@ required_guides:
   - representations/list-all-representations
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -20,8 +21,8 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "List All Representations for File", href: "/guides/representations/list-all-representations", badge: "GUIDE" }
   ]}
 />
-To select a specific representation call the [`GET /files/:id`][get_files_id]
-endpoint with a [`x-rep-hints`][x-rep-hints]-header defining the
+To select a specific representation call the <Link href="/reference/get-files-id">`GET /files/:id`</Link>
+endpoint with a <Link href="/reference/get-files-id#param-x-rep-hints">`x-rep-hints`</Link>-header defining the
 required representation format.
 
 ```sh
@@ -89,8 +90,6 @@ value that includes a `{+asset_path}` value.
   except for the presence of the `{+asset_path}` variable.
 </Note>
 
-[get_files_id]: /reference/get-files-id
-[x-rep-hints]: /reference/get-files-id#param-x-rep-hints
 
 <RelatedLinks
   title="RELATED APIS"

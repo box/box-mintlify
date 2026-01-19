@@ -8,10 +8,12 @@ related_resources:
 alias_paths: None
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 At the core of every Box API call is an Access Token.
 Similar to using the Box Web App, you will only be able to successfully interact
 with content the user associated with the Access Token either a collaborator on
-or owns. This can be further restricted by [downscoping][ds] a token.
+or owns. This can be further restricted by <Link href="/guides/authentication/tokens/downscope">downscoping</Link> a token.
 
 <Warning>
   Required access scopes, application access, enabled advanced settings, user
@@ -25,9 +27,9 @@ or owns. This can be further restricted by [downscoping][ds] a token.
 
 | Type                     | Duration           |
 | ------------------------ | ------------------ |
-| [Access Token][at]       | 60 minutes         |
-| [Refresh Token][rt]      | 60 days or one use |
-| [Developer Token][dt]    | 60 minutes         |
+| <Link href="/guides/authentication/tokens/access-tokens">Access Token</Link>       | 60 minutes         |
+| <Link href="/guides/authentication/tokens/refresh">Refresh Token</Link>      | 60 days or one use |
+| <Link href="/guides/authentication/tokens/developer-tokens">Developer Token</Link>    | 60 minutes         |
 
 ## Application Types & Access Tokens
 
@@ -36,17 +38,10 @@ Token.
 
 | Box Application Type                  | How to get Access Token                          |
 | ------------------------------------- | ------------------------------------------------ |
-| Platform App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
-| Platform App + JWT                      | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Platform App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
+| Platform App + OAuth 2.0                | <Link href="/guides/authentication/oauth2/without-sdk">Explicit user grant</Link>           |
+| Platform App + JWT                      | <Link href="/guides/authentication/oauth2/without-sdk">Exchange a JWT assertion</Link>         |
+| Platform App + Client Credentials Grant | <Link href="/guides/authentication/client-credentials">Use client ID and client secret</Link>    |
 | Limited Access App + App Token        | Configure token in [Developer Console][devcon]   |
 | Custom Skill                          | Access Token in event payload                    |
 
-[jwt-with-sdk]: /guides/authentication/oauth2/without-sdk
-[oauth2-with-sdk]: /guides/authentication/oauth2/without-sdk
 [devcon]: https://app.box.com/developers/console
-[clientcred]: /guides/authentication/client-credentials
-[ds]: /guides/authentication/tokens/downscope
-[at]: /guides/authentication/tokens/access-tokens
-[rt]: /guides/authentication/tokens/refresh
-[dt]: /guides/authentication/tokens/developer-tokens

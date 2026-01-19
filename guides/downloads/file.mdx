@@ -9,10 +9,11 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-To download a file, pass the [`GET /files/:id/content`][api] the ID of the file
+To download a file, pass the <Link href="/reference/get-files-id-content">`GET /files/:id/content`</Link> the ID of the file
 to get the content for.
 
 <CodeGroup>
@@ -104,7 +105,7 @@ redirect.
   In our SDKs this will result in the binary data to be downloaded. In the API
   this will result in a download URL being returned via the `location` header.
 
-  It is possible to [get the download URL][downloadurl] via the SDKs as well.
+  It is possible to <Link href="/guides/downloads/get-url">get the download URL</Link> via the SDKs as well.
 </Info>
 
 ## Download URL expiry
@@ -122,8 +123,6 @@ for the client to download.
 This response can occur when the file was uploaded immediately before the
 download request.
 
-[api]: /reference/get-files-id-content
-[downloadurl]: /guides/downloads/get-url
 
 <RelatedLinks
   title="RELATED APIS"

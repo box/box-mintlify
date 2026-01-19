@@ -11,6 +11,7 @@ related_resources: []
 alias_paths:
   - /docs/download-all-files-from-a-folder-1
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -23,8 +24,8 @@ example would be when working with an audio player.
 </audio>
 ```
 
-In this case, using the regular [download URL][durl] does not work because the
-`dl.boxcloud.com` domain does not support [Cross Origin Resource Sharing][cors].
+In this case, using the regular <Link href="/guides/downloads/get-url">download URL</Link> does not work because the
+`dl.boxcloud.com` domain does not support <Link href="/guides/security/cors">Cross Origin Resource Sharing</Link>.
 
 Instead an application can use the following format.
 
@@ -36,8 +37,8 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
   **CORS**
 
   For this to work the application needs to have the domain of the web site
-  hosting this file added to the list of allowed domains in the [CORS
-  settings][cors].
+  hosting this file added to the list of allowed domains in the <Link href="/guides/security/cors">CORS
+  settings</Link>.
 </Warning>
 
 <Warning>
@@ -45,12 +46,9 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
   Using this method would expose the Access Token to the end user, allowing them
   to potentially use this token to do more than intended. For this reason we
-  recommend [downscoping][downscoping] this token accordingly.
+  recommend <Link href="/guides/authentication/tokens/downscope">downscoping</Link> this token accordingly.
 </Warning>
 
-[durl]: /guides/downloads/get-url
-[cors]: /guides/security/cors
-[downscoping]: /guides/authentication/tokens/downscope
 
 <RelatedLinks
   title="RELATED APIS"

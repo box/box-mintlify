@@ -4,17 +4,19 @@ rank: 260
 alias_paths:
 sidebarTitle: Overview
 ---
-The Box API supports two distinct methods of file upload. The [direct file
-upload API][direct] supports files up to 50MB in size and sends all the binary
+import {Link} from "/snippets/Link.jsx";
+
+The Box API supports two distinct methods of file upload. The <Link href="/guides/uploads/direct">direct file
+upload API</Link> supports files up to 50MB in size and sends all the binary
 data to the Box API in 1 API request.
 
-The [chunked upload APIs][chunked] support files from 20MB in size and allow an
+The <Link href="/guides/uploads/chunked">chunked upload APIs</Link> support files from 20MB in size and allow an
 application to upload the file in parts, allowing for more control to catch any
 errors and retry parts individually.
 
 <Tip>
-To upload files to the Archive folder, you need to first enable the [Global
-Content Manager][GCM] (GCM) scope in the Developer Console.
+To upload files to the Archive folder, you need to first enable the <Link href="/guides/api-calls/permissions-and-errors/scopes">Global
+Content Manager</Link> (GCM) scope in the Developer Console.
 </Tip>
 
 ## Upload limits
@@ -36,9 +38,6 @@ Uploads to Box happen via a different domain (`upload.box.com`) than regular API
 calls. This is something to keep in mind when writing your own upload code. All
 the Box SDKs will take care of choosing the right domain for the right API call.
 
-[direct]: /guides/uploads/direct
-[chunked]: /guides/uploads/chunked
-[GCM]: /guides/api-calls/permissions-and-errors/scopes
 {/* i18n-enable localize-links */}
 [fsizes]: https://support.box.com/hc/en-us/articles/360043697314-Understand-the-Maximum-File-Size-You-Can-Upload-to-Box
 {/* i18n-disable localize-links */}

@@ -7,6 +7,9 @@ required_guides: []
 alias_paths:
   - /docs/object-model
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 The following sections explain some basic concepts about the types and formats
 that can be encountered within the Box APIs.
 
@@ -15,8 +18,8 @@ that can be encountered within the Box APIs.
 The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
-- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens and as per the OAuth 2.0 specification it accepts the body to be sent with a content type of `application/x-www-form-urlencoded`.
-- Most of the APIs that are used to upload binary data, like the [`POST /files/content`][post-files-content] endpoint, expect data to be sent as form data with a content type of `multipart/form-data`.
+- The <Link href="/reference/post-oauth2-token">`POST /oauth2/token`</Link> is used to request access tokens and as per the OAuth 2.0 specification it accepts the body to be sent with a content type of `application/x-www-form-urlencoded`.
+- Most of the APIs that are used to upload binary data, like the <Link href="/reference/post-files-content">`POST /files/content`</Link> endpoint, expect data to be sent as form data with a content type of `multipart/form-data`.
 
 <Note>
   Although not required, we highly recommend passing a header with each API
@@ -185,7 +188,7 @@ number.
 In these cases these numbers are returned in [IEEE754][numbers] format for
 example `1.2318237429383e+31`.
 
-[post-oauth2-token]: /reference/post-oauth2-token
-[post-files-content]: /reference/post-files-content
+
+
 [numbers]: https://en.wikipedia.org/wiki/IEEE_754
 [rfc3339]: https://www.ietf.org/rfc/rfc3339.txt

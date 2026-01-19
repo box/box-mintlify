@@ -12,6 +12,7 @@ related_guides:
 - box-ai/ai-agents/ai-agent-overrides
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -19,17 +20,15 @@ Box updates the default models across the endpoints on a regular basis to stay u
 
 If your implementation is based on Box AI, a new default model might alter the results in a way that could break or change a downstream process. Switching to a specific version may prevent encountering any issues.
 
-Selecting a specific model may also bring better results to your use case. This is why, you can switch to any model included in the [supported models][models] list.
+Selecting a specific model may also bring better results to your use case. This is why, you can switch to any model included in the <Link href="/guides/box-ai/ai-models">supported models</Link> list.
 
 Apart from switching models, you can pass options to further customize the agents used in Box AI implementation and get the responses that suit your use case.
 
-To see specific use cases, check the [overrides tutorial][overrides].
+To see specific use cases, check the <Link href="/guides/box-ai/ai-agents/ai-agent-overrides">overrides tutorial</Link>.
 
 [ask]: /reference/post-ai-ask#param-ai-agent
 [text-gen]: /reference/post-ai-text-gen#param-ai-agent
 [agent-default]: /guides/box-ai/ai-agents/get-agent-default-config
-[overrides]: /guides/box-ai/ai-agents/ai-agent-overrides
-[models]: /guides/box-ai/ai-models
 
 <RelatedLinks
   title="RELATED APIS"

@@ -9,12 +9,13 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 When a metadata cascade policy already exists on a folder, the metadata instance
 can be force-applied to all items in a folder by calling the
-[`POST /metadata_cascade_policies/:id/apply`][e_post] API endpoint with the
+<Link href="/reference/post-metadata-cascade-policies-id-apply">`POST /metadata_cascade_policies/:id/apply`</Link> API endpoint with the
 `id` of the metadata cascade policy.
 
 <CodeGroup>
@@ -88,7 +89,7 @@ client.metadata.forceApplyCascadePolicy(policyID, client.metadata.cascadeResolut
 <Info>
 
   To get the `id` of the policy,
-  [list all policies][g_list_policies] for the folder.
+  <Link href="/guides/metadata/cascades/list">list all policies</Link> for the folder.
 
 </Info>
 
@@ -110,8 +111,6 @@ preserve the existing value on any items. When the value is set to `overwrite`,
 it will force-apply the value of the template attached to the cascade policy
 over any existing value.
 
-[e_post]: /reference/post-metadata-cascade-policies-id-apply
-[g_list_policies]: /guides/metadata/cascades/list
 
 <RelatedLinks
   title="RELATED APIS"

@@ -6,6 +6,7 @@ hide_in_page_nav: true
 related_guides:
   - applications/app-types/platform-apps
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
 import { Store } from '/snippets/store.jsx';
@@ -59,7 +60,7 @@ extra steps to set up.
   2. Select **Create Platform App**.
   3. Enter an **App Name** and select **OAuth 2.0** as the **App Type**.
   4. In the **Configuration** tab, scroll down to the **OAuth 2.0 Redirect URIs** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
-  5. Scroll down to the **Application Scopes** section to select your desired [scopes][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
+  5. Scroll down to the **Application Scopes** section to select your desired <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link>. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
   6. At the top of the page click the button to **Save Changes**.
   7. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**. These credentials are used to authenticate your application in the next step.
 
@@ -95,7 +96,7 @@ extra steps to set up.
   3. Go to the app's **Configuration** tab.
   4. Make sure your application is using **Standard OAuth 2.0** as the authentication method.
   5. Scroll down to the **OAuth 2.0 Redirect URI** section and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
-  6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
+  6. Scroll down to the **Application Scopes** section to select your desired <Link href="/guides/api-calls/permissions-and-errors/scopes">permissions</Link>. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**.
   8. From the **OAuth 2.0 Credentials** section, copy the values for the **Client ID** and **Client Secret**.  These credentials are used to authenticate your application in the next step.
 
@@ -149,7 +150,6 @@ extra steps to set up.
 
 [devconsole]: https://cloud.app.box.com/developers/console
 [signup]: https://account.box.com/signup/n/developer
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 
 <RelatedLinks
   title="RELATED GUIDES"

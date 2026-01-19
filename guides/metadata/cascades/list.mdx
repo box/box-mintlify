@@ -8,11 +8,12 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 Metadata cascade policies can be listed for a folder by calling the
-[`GET /metadata_cascade_policies`][get_policies] API endpoint with a `folder_id`.
+<Link href="/reference/get-metadata-cascade-policies">`GET /metadata_cascade_policies`</Link> API endpoint with a `folder_id`.
 
 <CodeGroup>
 ```sh cURL
@@ -94,12 +95,10 @@ client.metadata.getCascadePolicies(folderID)
 
 ## Pagination
 
-This API uses [marker-based pagination][pagination] and can return a
+This API uses <Link href="/guides/api-calls/pagination/marker-based">marker-based pagination</Link> and can return a
 `next_marker` value in the response body to indicate that more templates might
 be available.
 
-[get_policies]: /reference/get-metadata-cascade-policies
-[pagination]: /guides/api-calls/pagination/marker-based
 
 <RelatedLinks
   title="RELATED APIS"

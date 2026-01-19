@@ -10,6 +10,7 @@ alias_paths:
   - /docs/use-case-recipes
   - /v2/docs/box-api-recipes
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -38,7 +39,7 @@ After you create a Platform App, the settings screen is displayed.
 - **App Description** - provide a description for your app (optional).
 - **Contact Email** - this is set to the developer of the application by default. 
 Keep in mind that once you publish your app, this email is publicly visible to Box users
-who view your app in the [Integrations][integrations]. We recommend to change it to a
+who view your app in the <Link href="/guides/applications/integrations">Integrations</Link>. We recommend to change it to a
 support email address, so that users can reach out to support in case of any issues with
 the integration.
 
@@ -64,13 +65,11 @@ Depending on the authentication method you choose, you need to specify further d
 |**Client Credentials Grant**| Specify the client ID and client secret. Choose the app access level. |
 
 - **Developer Token** - a developer token is created automatically when you create a Platform App.
-- **Application Scopes** - choose the scopes you want to grant to your app. See the [scopes guide][scopes] for detailed information on each option.
+- **Application Scopes** - choose the scopes you want to grant to your app. See the <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes guide</Link> for detailed information on each option.
 - **Advanced Features** - enable the advanced features your application requires.
 - **CORS Domains** - add the domains you want to allow requests from.
 
 [dev-console]: https://app.box.com/developers/console
-[integrations]: /guides/applications/integrations
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 
 <RelatedLinks
   title="RELATED GUIDES"

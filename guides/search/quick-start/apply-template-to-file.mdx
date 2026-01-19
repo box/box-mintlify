@@ -4,6 +4,7 @@ sidebarTitle: 3. Add Metadata Template to a File
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 <ProgressBar pages={[
@@ -32,7 +33,7 @@ created in step 1 and select a value. Ensure you click **Save**.
 ## API 
 
 To add a metadata template to a file you will need to use the 
-[create metadata instance on a file endpoint][add-metadata]. You will also 
+<Link href="/reference/post-files-id-metadata-id-id/">create metadata instance on a file endpoint</Link>. You will also 
 need the `scope` and `templateKey` template values from the previous step.
 Below is an example of what the API call looks like to apply the same metadata
 shown in the UI above.
@@ -48,4 +49,3 @@ is applied to more than 10,000 files or folders.
 
 <Next>I applied my template to at least one file</Next>
 
-[add-metadata]: /reference/post-files-id-metadata-id-id/

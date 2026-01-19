@@ -122,8 +122,8 @@ client.files.preflightUploadNewFileVersion('87646', {size: 300000000}, null, cal
 
 ## Checks & Chunk Uploads
 
-When performing a [chunked upload][chunked], performing a preflight check is not
-required as [creating an Upload Session][chunkedsession] also performs a
+When performing a <Link href="/guides/uploads/chunked">chunked upload</Link>, performing a preflight check is not
+required as <Link href="/guides/uploads/chunked/create-session">creating an Upload Session</Link> also performs a
 preflight check.
 
 ## Response codes
@@ -149,8 +149,6 @@ detected, the application can use the `SHA-1` that is returned in the error
 response to check if the existing file is identical to the one it is trying to
 upload.
 
-[chunked]: /guides/uploads/chunked
-[chunkedsession]: /guides/uploads/chunked/create-session
 
 {/* Note: The reference-style links above use markdown syntax and need to be kept as-is for compatibility */}
 

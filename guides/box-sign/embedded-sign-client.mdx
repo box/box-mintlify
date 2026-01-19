@@ -7,7 +7,10 @@ required_guides: []
 related_resources: []
 alias_paths:
 ---
-[Box Embed][embed] allows you to embed Box Sign
+import {Link} from "/snippets/Link.jsx";
+
+
+<Link href="/guides/embed/box-embed">Box Embed</Link> allows you to embed Box Sign
 features into your own website. This way, users
 don't have to leave the website, go to Box Sign
 to sign the document, and then come back to finish
@@ -27,7 +30,7 @@ A sample `iframable_embed_url` looks as follows:
 https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
 ```
 
-To get the `iframeable_embed_url` pass the [`embed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint.
+To get the `iframeable_embed_url` pass the <Link href="/reference/post-sign-requests#param-signers-embed_url_external_user_id">`embed_url_external_user_id`</Link> parameter for each signer when calling the <Link href="/reference/post-sign-requests">create sign request</Link> endpoint.
 The returned response will contain a unique `iframeable_embed_url` for that signer.
 
 To embed Sign features and make them
@@ -47,18 +50,17 @@ use the URL within the `iframe` tag:
 ```
 
 <Info>
-For details on working with Box Embed, see [this guide][embedguide].
+For details on working with Box Embed, see <Link href="/guides/embed/box-embed#programmatically">this guide</Link>.
 </Info>
 
-Box Embed uses the [Cloud Game][cloudgame] widget to
+Box Embed uses the <Link href="/guides/embed/box-embed#cloud-game">Cloud Game</Link> widget to
 prevent clickjacking.
 In this case, when the user wants to sign
 a document, they will have to interact
 with the widget and drag a cloud to the correct
 location before proceeding to document signing.
 
-[embed]: /guides/embed/box-embed
-[embedguide]: /guides/embed/box-embed#programmatically
-[signrequest]: /reference/post-sign-requests
-[externalid]: /reference/post-sign-requests#param-signers-embed_url_external_user_id
-[cloudgame]: /guides/embed/box-embed#cloud-game
+
+
+
+

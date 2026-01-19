@@ -3,15 +3,17 @@ title: "Comparison to regular search"
 related_endpoints: []
 required_guides: []
 ---
-At the surface the [Metadata Query API][mdq_api] seems very similar to the
-[Search for content API][search], but there are several important
+import {Link} from "/snippets/Link.jsx";
+
+At the surface the <Link href="/reference/post-metadata-queries-execute-read">Metadata Query API</Link> seems very similar to the
+<Link href="/reference/get-search">Search for content API</Link>, but there are several important
 differences in how they operate. At a high level the Metadata Query API is
 optimized for exactness and throughput, while regular search is optimized for
 relevance to a human user.
 
 ## Deep comparison
 
-|                   | [Metadata Query API][mdq_api]                                                                                                                                                                                                                                                                                       | [Search API][search]                                                                                                                                                                                                                                                                                                                                    |
+|                   | <Link href="/reference/post-metadata-queries-execute-read">Metadata Query API</Link>                                                                                                                                                                                                                                                                                       | <Link href="/reference/get-search">Search API</Link>                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | What is indexed?  | This API only returns files/folders based on the values in the metadata templates that are searched.                                                                                                                                                                                                                  | This API returns files, folders and web links based on values in the item names, descriptions, contents (up to the first 10,000 bytes) as well as the associated metadata template instances.                                                                                                                                                            |
 | Indexing time     | This API returns accurate results as soon as metadata has been added, removed, updated or deleted for a file or folder.                                                                                                                                                                                          | This API is subject to a search indexing delay, which is typically 10 minutes, yet may be longer in some cases. This means that items may not be returned for more than 10 minutes after metadata has been updated.                                                                                                                                        |
@@ -38,7 +40,7 @@ The following are some example scenarios that may help you decide what API to us
 You want to find all content in an enterprise with content or metadata that
 matches the keyword `Guarantee`.
 
-In this case the [Search API][search] is recommended. This API matches terms
+In this case the <Link href="/reference/get-search">Search API</Link> is recommended. This API matches terms
 in both content and metadata, and can be scoped to find all content in the
 entire enterprise.
 
@@ -48,7 +50,7 @@ You want to find all documents with the metadata template `​Contract​` havin
 value greater than $100,000, a renewal date in 2019, and which are ​not​ associated
 with account number `​1234`.
 
-In this case the [Metadata Query API][mdq_api] is recommended. With a metadata
+In this case the <Link href="/reference/post-metadata-queries-execute-read">Metadata Query API</Link> is recommended. With a metadata
 query you can write boolean expressions that evaluate multiple fields in
 a metadata template, such as a number, a date, and a string.
 
@@ -63,5 +65,3 @@ This scenarios is currently **not supported**. At the moment neither of the APIs
 supports mixing both fuzzy search (searching for "Sale") and the boolean
 expression matching metadata fields.
 
-[mdq_api]: /reference/post-metadata-queries-execute-read
-[search]: /reference/get-search

@@ -13,6 +13,7 @@ alias_paths:
   - /docs/setting-up-an-oauth-app
   - /docs/oauth-20
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -24,7 +25,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Platform App", href: "/guides/applications/app-types/platform-apps", badge: "GUIDE" }
   ]}
 />
-A Platform App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+A Platform App can be set up to use client-side <Link href="/guides/authentication/oauth2">OAuth 2.0</Link> authentication.
 
 <Card href="/guides/authentication/oauth2" arrow title="Learn how OAuth 2.0 authentication works"/>
 
@@ -89,7 +90,7 @@ During the OAuth 2.0 flow, users are redirected to their browser to
 authenticate and then authorize the application to take actions on their behalf.
 
 Prior to redirecting the user, Box verifies that the `redirect_uri` parameter
-passed into the [authorization URL][url-redirect] matches one of the redirect
+passed into the <Link href="/reference/get-authorize/#param-redirect_uri">authorization URL</Link> matches one of the redirect
 URIs configured for the application. This will be an exact match check, meaning
 the URIs must be exactly the same. Localhost and loopback address redirect URIs
 will be permitted redirect to any port, but the scheme, domain, path and query
@@ -124,7 +125,7 @@ permit duplicate URIs to be saved.
 ### Application Scopes
 
 Scopes define what permissions your application has in order to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+the <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes guide</Link> for detailed information on each option.
 
 <Frame>
 ![App name form](/images/guides/authentication/app-scopes.png)
@@ -149,10 +150,7 @@ section at the bottom of the **Configuration** tab in the
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
 [devtoken]: /guides/authentication/tokens/developer-tokens
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[oauth2]: /guides/authentication/oauth2
-[url-redirect]: /reference/get-authorize/#param-redirect_uri
 
 <RelatedLinks
   title="RELATED GUIDES"

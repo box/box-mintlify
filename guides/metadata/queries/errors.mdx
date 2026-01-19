@@ -3,8 +3,10 @@ title: "Common errors"
 related_endpoints: []
 required_guides: []
 ---
-Metadata query API errors mostly are [similar to errors returned by other
-APIs][errors], however at this time some incorrect client requests may result in
+import {Link} from "/snippets/Link.jsx";
+
+Metadata query API errors mostly are <Link href="/guides/api-calls/permissions-and-errors/common-errors">similar to errors returned by other
+APIs</Link>, however at this time some incorrect client requests may result in
 a server-side error with a HTTP status code in the `5XX` range rather than an
 appropriate `400 Bad Request` error.
 
@@ -29,7 +31,7 @@ exist, or when the key is used within the wrong enterprise were the key does not
 exist.
 
 <Note>
-  The [List all metadata templates for enterprise endpoint][get-templates]
+  The <Link href="/reference/get-metadata-templates-enterprise">List all metadata templates for enterprise endpoint</Link>
   can be used to list all templates available in your enterprise,
   including their `scope` and `templateKey`.
 </Note>
@@ -70,5 +72,3 @@ Without the `ancestor_folder_id` value the API does not know what folder to
 search for results in. When in doubt a value of `0` can be used for the user's
 root folder.
 
-[errors]: /guides/api-calls/permissions-and-errors/common-errors
-[get-templates]: /reference/get-metadata-templates-enterprise

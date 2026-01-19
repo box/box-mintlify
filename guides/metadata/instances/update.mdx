@@ -12,6 +12,7 @@ required_guides:
   - metadata/instances/create
   - metadata/templates/list
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -31,7 +32,7 @@ operations to manipulate the data on the template instance.
 ## Update metadata on a file
 
 To update the metadata to a file, call the
-[`PUT /files/:file_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
+<Link href="/reference/put-files-id-metadata-id-id">`PUT /files/:file_id/metadata/:scope/:templateKey`</Link> API endpoint
 with the file's `file_id`, the template's `scope` and `templateKey`, set of JSON
 operations to manipulate the data on the template instance.
 
@@ -285,7 +286,7 @@ client.files.updateMetadata('11111', client.metadata.scopes.ENTERPRISE, "marketi
 ## Update metadata on a folder
 
 To update the metadata to a folder, call the
-[`PUT /folders/:folder_id/metadata/:scope/:templateKey`][e_on_folder] API
+<Link href="/reference/put-folders-id-metadata-id-id">`PUT /folders/:folder_id/metadata/:scope/:templateKey`</Link> API
 endpoint with the folder's `folder_id`, the template's `scope` and
 `templateKey`, set of JSON operations to manipulate the data on the template instance.
 
@@ -788,8 +789,6 @@ metadata instance are as expected before any operations are performed. The Box
 API either performs all changes or none, and therefore a failing test is very
 useful to ensure all values are expected before any transformation is applied.
 
-[e_on_file]: /reference/put-files-id-metadata-id-id
-[e_on_folder]: /reference/put-folders-id-metadata-id-id
 [jsonpatch]: https://tools.ietf.org/html/rfc6902
 [pointer]: https://tools.ietf.org/html/rfc6901
 

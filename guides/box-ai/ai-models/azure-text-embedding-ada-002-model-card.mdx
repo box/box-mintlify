@@ -8,6 +8,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -19,7 +20,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 |-----------|----------|----------|
 |Model name|**text-embedding-ada-002**| The name of the model. |
 | Model category | Standard | The category of the model - standard or premium. |
-|API model name|`azure__openai__text_embedding_ada_002`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
+|API model name|`azure__openai__text_embedding_ada_002`| The name of the model that is used in the <Link href="/guides/box-ai/ai-agents/ai-agent-overrides">Box AI API for model overrides</Link>. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**Microsoft Azure**| The organization that provides this model. |
 |Release date|**December 2022** | The release date for the model.|
@@ -34,7 +35,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 For additional information, see [official Azure Embeddings models documentation][azure-ai-embeddings].
 
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
-[overrides]: /guides/box-ai/ai-agents/ai-agent-overrides
 
 <RelatedLinks
   title="RELATED GUIDES"

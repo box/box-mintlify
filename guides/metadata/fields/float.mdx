@@ -9,6 +9,7 @@ related_guides:
 related_resources:
   - metadata_template
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -23,9 +24,9 @@ that only accepts numeric input.
 
 ## Create a float field
 
-A `float` field can be added to a metadata template either when [creating a
-metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+A `float` field can be added to a metadata template either when <Link href="/guides/metadata/templates/create">creating a
+metadata template</Link>, or when <Link href="/guides/metadata/templates/update">updating a
+template</Link> with the `addField` operation.
 
 The required attributes for a `float` field are a `type`, a `displayName`, and a
 `key`.
@@ -52,8 +53,8 @@ apps.
 
 ## Update a float field
 
-A `float` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
+A `float` template field can be updated by <Link href="/guides/metadata/templates/update">updating the
+template</Link> it belongs to. Updates to templates happen through
 **operations** to ensure that any template that is already assigned to a file or
 folder is updated as well.
 
@@ -82,8 +83,6 @@ This will affect existing instances of this template.
 
 </Warning>
 
-[g_create_template]: /guides/metadata/templates/create
-[g_update_template]: /guides/metadata/templates/update
 
 <RelatedLinks
   title="RELATED APIS"

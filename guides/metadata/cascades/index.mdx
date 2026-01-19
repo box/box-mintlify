@@ -2,9 +2,10 @@
 title: Metadata cascade policies
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
-A metadata cascade policy describes how [metadata
-instances][instance] applied to a folder should be applied to any item
+A metadata cascade policy describes how <Link href="/guides/metadata/instances">metadata
+instances</Link> applied to a folder should be applied to any item
 within that folder. For example, a user might assign the same `invoiceData`
 metadata template to a project folder allowing it to automatically apply to all
 the files and folders within that project folder.
@@ -28,4 +29,3 @@ much depends on the number of items in a folder. Metadata cascade operations
 are performed asynchronously and there is currently no way to check when all
 metadata has been cascaded to all files.
 
-[instance]: /guides/metadata/instances

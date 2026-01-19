@@ -195,12 +195,12 @@ to get the issue resolved.
 ## Comparison to Metadata Queries
 
 At the surface the search API seems very similar
-to the [Metadata Query API][mdq], but there are several important differences
+to the <Link href="/guides/metadata/queries">Metadata Query API</Link>, but there are several important differences
 in how they operate. At a high level the Metadata Queries are
 optimized for exactness and throughput, while regular search is optimized
 for relevance to a human user.
 
-|                   | [Metadata Query API][mdq_api]                                                                                                                                                                                                                                                                                       | [Search API][search]                                                                                                                                                                                                                                                                                                                                    |
+|                   | <Link href="/reference/post-metadata-queries-execute_read">Metadata Query API</Link>                                                                                                                                                                                                                                                                                       | <Link href="/reference/get-search">Search API</Link>                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | What is indexed?  | This API only return files/folders based on the values in the metadata templates that are searched                                                                                                                                                                                                                  | This API returns files, folders and web links based on values in the item names, descriptions, contents (up to the first 10,000 bytes) as well as the associated metadata template instances                                                                                                                                                            |
 | Indexing time     | This API will return accurate results as soon as metadata has been added, removed, updated or deleted for a file or folder                                                                                                                                                                                          | This API is subject to a search indexing delay, which is typically 10 minutes yet may be longer in some cases. This means that items may not be returned for more than 10 minutes after metadata has been updated                                                                                                                                       |
@@ -213,8 +213,5 @@ for relevance to a human user.
 
 <Card href="/guides/metadata/queries/comparison" arrow title="Learn more about the metadata query API"/>
 
-[mdq]: /guides/metadata/queries
-[mdq_api]: /reference/post-metadata-queries-execute_read
-[search]: /reference/get-search
 [support]: https://developer.box.com/support
 [keysafe]: https://www.box.com/security/keysafe

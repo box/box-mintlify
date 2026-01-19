@@ -11,6 +11,7 @@ required_guides:
   - authentication/oauth2/oauth2-setup
 related_resources: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -65,7 +66,7 @@ If you encounter issues make sure you installed both
 
 To use the script, you will need the Box CLI
 installed and configured. You can get this done by going through
-our [quick start guide][quickstart]. The user you use to login with should
+our <Link href="/guides/cli/quick-start/create-oauth-app">quick start guide</Link>. The user you use to login with should
 be the main Box admin or co-admin.
 
 ## Configure the script
@@ -178,7 +179,6 @@ You have access to these log files:
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[quickstart]: /guides/cli/quick-start/create-oauth-app
 [console]: https://app.box.com/developers/console
 [auth]: /guides/authentication/oauth2/oauth2-setup
 [examples]:https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning

@@ -4,6 +4,7 @@ sidebarTitle: 1. Configure a Box App
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
 
@@ -83,7 +84,7 @@ extra steps to set up.
   3. Go to the application’s **Configuration** section
   4. Make sure your application uses **Standard OAuth 2.0** as the authentication method
   5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `http://localhost:3000/callback`.
-  6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** read all files and folders stored in Box, read and write all files and folders in Box.
+  6. Scroll down to the **Application Scopes** section to select your desired <Link href="/guides/api-calls/permissions-and-errors/scopes">permissions</Link>. **Your application must have at least one or more** **of the following scopes:** read all files and folders stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
@@ -130,4 +131,3 @@ extra steps to set up.
 
 [devconsole]: https://cloud.app.box.com/developers/console
 [signup]: https://account.box.com/signup/n/developer
-[scopes]: /guides/api-calls/permissions-and-errors/scopes

@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -36,7 +37,7 @@ events will not be missed. Events can be deduplicated between `admin_logs` and
 
 ### Similarities between `admin_logs` and `admin_logs_streaming`
 
-- Shares the same [`GET /events`][events-api] API endpoint
+- Shares the same <Link href="/reference/events">`GET /events`</Link> API endpoint
 - Returns the same events payload (events can be deduplicated across the two stream types by event ID)
 - Enables filtering by `event_type`
 - Allows paginating through events via a `stream_position`
@@ -83,7 +84,6 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ![Stream Migration Flow](/images/guides/events/enterprise-events/migrate_to_stream.png)
 </Frame>
 
-[events-api]: /reference/events
 
 <RelatedLinks
   title="RELATED APIS"

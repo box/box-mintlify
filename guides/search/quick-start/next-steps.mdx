@@ -4,6 +4,7 @@ sidebarTitle: 5. Next Steps
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 <ProgressBar pages={[
@@ -17,18 +18,18 @@ import { ProgressBar } from '/snippets/progress-bar.jsx';
 You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
-1. [Created a metadata template][stepone]
-2. [Located information about the metadata template][stepthree] from step 1 via API
-3. [Added a metadata template][steptwo] to at least one file
-4. [Used the metadata query API][stepfour] to locate the file(s) from step 3
+1. <Link href="/guides/search/quick-start/create-metadata-template">Created a metadata template</Link>
+2. <Link href="/guides/search/quick-start/locate-template-info">Located information about the metadata template</Link> from step 1 via API
+3. <Link href="/guides/search/quick-start/apply-template-to-file">Added a metadata template</Link> to at least one file
+4. <Link href="/guides/search/quick-start/metadata-query-api">Used the metadata query API</Link> to locate the file(s) from step 3
 
 ## Next Steps
 
 We recommend the following resources to learn more:
 
-* [Metadata query guide][mqg]
-* Review [common errors][ce] and [limitations][lims]
-* Reference documentation for the [metadata query][mq] API
+* <Link href="/guides/metadata/queries">Metadata query guide</Link>
+* Review <Link href="/guides/metadata/queries/errors">common errors</Link> and <Link href="/guides/metadata/queries/limitations">limitations</Link>
+* Reference documentation for the <Link href="/reference/post-metadata-queries-execute-read">metadata query</Link> API
 
 Our SDKs that support the metadata query API:
 
@@ -38,14 +39,6 @@ Our SDKs that support the metadata query API:
 * [Java SDK][java]
 * [Node][node]
 
-[stepone]: /guides/search/quick-start/create-metadata-template
-[steptwo]: /guides/search/quick-start/apply-template-to-file
-[stepthree]: /guides/search/quick-start/locate-template-info
-[stepfour]: /guides/search/quick-start/metadata-query-api
-[mq]: /reference/post-metadata-queries-execute-read
-[mqg]: /guides/metadata/queries
-[ce]: /guides/metadata/queries/errors
-[lims]: /guides/metadata/queries/limitations
 [node]: https://github.com/box/box-node-sdk/blob/3fcc0d8bbd1ca11f1a3a78d741e4572718af53f0/docs/metadata.md#query
 [python]: https://github.com/box/box-python-sdk/blob/legacy/docs/usage/search.md#metadata-query
 [ios]: https://github.com/box/box-ios-sdk/blob/c5ff8396e28c31fcf3c433f1b9e8f2f0d7a0e0db/docs/usage/search.md#metadata-search

@@ -2,7 +2,9 @@
 title: "Get Workflows"
 rank: 1
 ---
-The [get workflows][get] endpoint can be used to grab all workflows on a 
+import {Link} from "/snippets/Link.jsx";
+
+The <Link href="/reference/get-workflows">get workflows</Link> endpoint can be used to grab all workflows on a 
 particular folder. It will return all workflows regardless of if there is a 
 flow of type `WORKFLOW_MANUAL_START`.
 
@@ -42,7 +44,6 @@ adminClient.getWorkflows().getWorkflows(new GetWorkflowsQueryParams(workflowFold
 
 </CodeGroup>
 
-[get]: /reference/get-workflows
 {/* i18n-enable localize-links */}
 [blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
 {/* i18n-disable localize-links */}

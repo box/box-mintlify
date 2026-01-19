@@ -3,6 +3,9 @@ title: "Create your first application"
 rank: 2
 related_guides:
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 Once you have your Developer Enterprise set up, you can start creating applications.
 
 Click the [Dev Console][console] button once you're logged in to
@@ -17,9 +20,9 @@ use this type for their integrations.
 
 ## Choose the authentication method
 
-After you choose the **Platform App**, you need to [select an authentication
-method][auth] that your app will use. In this guide we use the
-[**User Authentication (OAuth 2.0)**][oauth2] option, as most of our partners
+After you choose the **Platform App**, you need to <Link href="/guides/authentication/select">select an authentication
+method</Link> that your app will use. In this guide we use the
+<Link href="/guides/authentication/oauth2">**User Authentication (OAuth 2.0)**</Link> option, as most of our partners
 use this type for their integrations.
 
 ## Name the app
@@ -38,7 +41,7 @@ Begin with the most basic settings. Open the **General Settings** tab
 and check or fill in below fields:
 
 - **App Name** - the name you set up during the app creation, you can change it here if needed;
-- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [Integrations][integrations]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
+- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the <Link href="/guides/applications/integrations">Integrations</Link>. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
 - **Collaborators** - add other developers that can work on this integration, so that they can access the developer interface in case they need to adjust any settings.
 
 <Note>
@@ -57,7 +60,7 @@ features, and add CORS domains.
 
 In the next tabs you can create webhooks, web app integrations,
 submit app for enablement for access to the Enterprise, submit your app
-to the [Box Integrations][integrations], and generate a report to view this application’s
+to the <Link href="/guides/applications/integrations">Box Integrations</Link>, and generate a report to view this application’s
 activity.
 
 ## Test your app
@@ -65,7 +68,7 @@ activity.
 You can now make some API calls to test your app and get to know the
 response format in Box.
 
-Use the [developer token][dev-token] authenticated to your current developer account.
+Use the <Link href="/guides/authentication/tokens/developer-tokens/#create-developer-token">developer token</Link> authenticated to your current developer account.
 
 <Warning>
 
@@ -73,18 +76,18 @@ This token is valid for an hour from being generated.
 
 </Warning>
 
-Start with the [Postman collection][postman-collection] to check
+Start with the <Link href="/guides/tooling/postman">Postman collection</Link> to check
 specific calls and see what responses they return.
-To see example API calls, browse our [API reference documentation][api-ref].
+To see example API calls, browse our <Link href="/reference">API reference documentation</Link>.
 You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 
 [console]: https://cloud.app.box.com/developers/console
-[auth]: /guides/authentication/select
-[oauth2]: /guides/authentication/oauth2
-[integrations]: /guides/applications/integrations
+
+
+
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
 [integrations]: https://cloud.app.box.com/integrations
-[dev-token]: /guides/authentication/tokens/developer-tokens/#create-developer-token
-[postman-collection]: /guides/tooling/postman
-[api-ref]: /reference
+
+
+
 [box-cli]: https://github.com/box/boxcli

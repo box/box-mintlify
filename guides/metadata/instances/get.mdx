@@ -12,6 +12,7 @@ related_guides:
   - metadata/scopes
   - metadata/templates/list
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -21,7 +22,7 @@ and `scope`.
 
 <Info>
 
-  Metadata [scopes][scopes] can be either `global` for templates available to
+  Metadata <Link href="/guides/metadata/scopes">scopes</Link> can be either `global` for templates available to
   all enterprises, `enterprise` for templates available to the current
   enterprise, or the `enterprise_:id` for templates belonging to an enterprise
   whose ID is the `:id` value in the scope name.
@@ -31,7 +32,7 @@ and `scope`.
 ## Get metadata instance on file
 
 To get an instance of a metadata template on a file, call the
-[`GET /files/:file_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
+<Link href="/reference/get-files-id-metadata-id-id">`GET /files/:file_id/metadata/:scope/:templateKey`</Link> API endpoint
 with the file's `file_id` and the template's `scope` and `templateKey`.
 
 <CodeGroup>
@@ -122,15 +123,15 @@ client.files.getMetadata('11111', client.metadata.scopes.ENTERPRISE, 'marketingC
 <Info>
 
   To get the `scope` and `templateKey` for a template, either
-  [list all metadata templates][g_list_templates], or
-  [list all instances on an file][g_list_instances_item].
+  <Link href="/guides/metadata/templates/list">list all metadata templates</Link>, or
+  <Link href="/guides/metadata/instances/list">list all instances on an file</Link>.
 
 </Info>
 
 ## Get metadata instance on folder
 
 To get an instance of a metadata template on a folder, call the
-[`GET /folders/:folder_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
+<Link href="/reference/get-files-id-metadata-id-id">`GET /folders/:folder_id/metadata/:scope/:templateKey`</Link> API endpoint
 with the folder's `folder_id` and the template's `scope` and `templateKey`.
 
 <CodeGroup>
@@ -217,16 +218,12 @@ client.folders.getMetadata('11111', client.metadata.scopes.ENTERPRISE, 'marketin
 <Info>
 
   To get the `scope` and `templateKey` for a template, either
-  [list all metadata templates][g_list_templates], or
-  [list all instances on an folder][g_list_instances_item].
+  <Link href="/guides/metadata/templates/list">list all metadata templates</Link>, or
+  <Link href="/guides/metadata/instances/list">list all instances on an folder</Link>.
 
 </Info>
 
-[e_on_file]: /reference/get-files-id-metadata-id-id
 [e_on_folder]: /reference/get-folders-id-metadata-id-id
-[scopes]: /guides/metadata/scopes
-[g_list_templates]: /guides/metadata/templates/list
-[g_list_instances_item]: /guides/metadata/instances/list
 
 <RelatedLinks
   title="RELATED APIS"

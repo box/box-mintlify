@@ -12,6 +12,7 @@ related_guides:
 - box-ai/ai-tutorials/extract-metadata
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -35,7 +36,7 @@ or generate text you can use in your documents.
 You can also use Box AI to extract metadata from the
 provided input, such as a schema or metadata template.
 
-The [Box AI for UI Elements][boxaielement] functionality
+The <Link href="/guides/embed/ui-elements/preview#box-ai-ui-element">Box AI for UI Elements</Link> functionality
 allows embedding Box AI in your apps.
 
 ### Ask questions to Box AI
@@ -77,7 +78,7 @@ For details, see [Box AI for Notes][boxainotes].
 
 ### Metadata extraction
 
-The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
+The <Link href="/reference/post-ai-extract">`POST /2.0/ai/extract`</Link> and <Link href="/reference/post-ai-extract-structured">`POST /2.0/ai/extract_structured`</Link> endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
 
 * Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields. Use it for shorter documents
 * Use the Enhanced Extract Agent for long, complex documents
@@ -87,7 +88,7 @@ The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][ex
 
 The Enhanced Extract Agent is designed to extract key-value pairs from complex documents. It converts the unstructured content into metadata for easier discovery and search. 
 
-You can [use the agent][eea-tutorial] through the Box AI API and turn unstructured data into structured output to use in production databases, third party systems, or analytics.
+You can <Link href="/guides/box-ai/ai-tutorials/extract-metadata-structured#">use the agent</Link> through the Box AI API and turn unstructured data into structured output to use in production databases, third party systems, or analytics.
 
 The Enhanced Extract Agent uses Gemini 2.5 Pro to provide a chain-of-thought reasoning and returns both the extracted values and a reasoning behind
 its answer.
@@ -96,14 +97,14 @@ its answer.
 
 You can use the `ai_agent` parameter available in the Box AI API requests to override the default agent configuration and introduce your own custom settings.
 
-For details, see [AI agent default configuration][agent-default].
+For details, see <Link href="/guides/box-ai/ai-agents/get-agent-default-config">AI agent default configuration</Link>.
 
 ### Box AI for UI Elements
 
 Box AI for UI Elements is available in Content Preview
 allows asking questions about documents directly
 within platform applications.
-Check out how to use the [Box AI for UI Elements][boxaielement]
+Check out how to use the <Link href="/guides/embed/ui-elements/preview#box-ai-ui-element">Box AI for UI Elements</Link>
 to embed Box AI functionality in your projects.
 
 {/* alex ignore */}
@@ -136,12 +137,7 @@ better results for this language.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
-[boxaielement]: /guides/embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
-[agent-default]: /guides/box-ai/ai-agents/get-agent-default-config
-[extract]: /reference/post-ai-extract
-[extract-structured]: /reference/post-ai-extract-structured
-[eea-tutorial]: /guides/box-ai/ai-tutorials/extract-metadata-structured#
 
 <RelatedLinks
   title="RELATED APIS"
