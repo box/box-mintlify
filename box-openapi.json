@@ -24937,7 +24937,7 @@
                           "folder",
                           "user",
                           "ownership",
-                          "interaction"
+                          "interactions"
                         ]
                       },
                       "id": {
@@ -42719,7 +42719,7 @@
                 ]
               },
               "assignment_counts": {
-                "description": "Counts of assignments within this a legal hold policy by item type.",
+                "description": "Counts of assignments within this legal hold policy by item type.",
                 "type": "object",
                 "properties": {
                   "user": {
@@ -42745,6 +42745,18 @@
                     "type": "integer",
                     "format": "int64",
                     "example": 4
+                  },
+                  "ownership": {
+                    "description": "The number of owned items this policy is applied to.",
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 5
+                    },
+                  "interactions": {
+                    "description": "The number of items this policy is applied to based on interactions.",
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 6
                   }
                 }
               },
