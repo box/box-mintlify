@@ -5013,10 +5013,21 @@
                     ]
                   },
                   {
-                    "group": "Metadata taxonomies",
+                    "group": "メタデータ階層",
                     "pages": [
                       {
-                        "group": "Endpoints",
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/resources/metadata-taxonomies",
+                          "ja/reference/resources/metadata-taxonomy",
+                          "ja/reference/resources/metadata-taxonomy-level",
+                          "ja/reference/resources/metadata-taxonomy-levels",
+                          "ja/reference/resources/metadata-taxonomy-node",
+                          "ja/reference/resources/metadata-taxonomy-nodes"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
                         "pages": [
                           "ja/reference/post-metadata-taxonomies",
                           "ja/reference/post-metadata-taxonomies-id-id-levels",
