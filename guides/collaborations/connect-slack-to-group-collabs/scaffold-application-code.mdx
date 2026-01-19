@@ -4,6 +4,7 @@ sidebarTitle: 3. Scaffold application code
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
 
@@ -35,7 +36,7 @@ run the application.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-* Either create a new local directory for your application or load the existing code created for the Slack event URL challenge from [step 1][step1].
+* Either create a new local directory for your application or load the existing code created for the Slack event URL challenge from <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-slack">step 1</Link>.
 * Create a new `package.json` file, or update the existing one, inside the local directory, open it in your preferred editor, copy / paste the following into it, and save / exit the file.
 
 ```json
@@ -330,4 +331,3 @@ functions are:
   <Next>I have my local application set up</Next>
 </Observe>
 
-[step1]: /guides/collaborations/connect-slack-to-group-collabs/configure-slack

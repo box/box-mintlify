@@ -4,6 +4,7 @@ sidebarTitle: 4. Using Options and Bulk Commands
 type: quick-start
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {YouTube} from "/snippets/youtube.jsx";
 
@@ -34,7 +35,7 @@ will see a list of options to use with this command, such as `--recursive` or
 
 ## As-User Header
 
-To use the [as-user header][asuser], add the `--as-user=USERID` option to the
+To use the <Link href="/guides/authentication/jwt/as-user">as-user header</Link>, add the `--as-user=USERID` option to the
 end of the command.
 
 For example, the following command will create a folder called `Example_Folder`
@@ -93,7 +94,7 @@ instead of using the `--role=editor` option in the command itself, it can be a
 column called `role`. The command itself becomes:
 `box folders:collaborations:create --bulk-file-path=pathtocsv`
 
-For more details on bulk commands read [this document][bulk].
+For more details on bulk commands read <Link href="/guides/cli/cli-docs/bulk-commands">this document</Link>.
 
 ## Summary
 
@@ -103,6 +104,4 @@ For more details on bulk commands read [this document][bulk].
 
 [github]: https://github.com/box/boxcli#command-topics
 [df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
-[asuser]: /guides/authentication/jwt/as-user
 [csv]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/folders/folders-create.csv
-[bulk]: /guides/cli/cli-docs/bulk-commands

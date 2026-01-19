@@ -11,6 +11,7 @@ required_guides:
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,7 +23,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   ]}
 />
 To upload a new version of a file to Box via direct upload, make an API call to
-the [`POST /files/:id/content`][upload] API with the content of the file, the
+the <Link href="/reference/post-files-id-content">`POST /files/:id/content`</Link> API with the content of the file, the
 desired file name, and the folder ID.
 
 <CodeGroup>
@@ -149,7 +150,7 @@ client.files.uploadNewFileVersion('11111', stream)
   **Preflight check**
 
   To prevent wasting time and bandwidth uploading a file that is going to be
-  rejected it is recommended to perform a [pre-flight check][preflight] before
+  rejected it is recommended to perform a <Link href="/guides/uploads/check">pre-flight check</Link> before
   uploading the file.
 </Info>
 
@@ -195,27 +196,23 @@ Test file text.
 ## Options
 
 To learn more about all the parameters available when uploading files, head over
-to the [reference documentation for this API call][upload]. These parameters
+to the <Link href="/reference/post-files-id-content">reference documentation for this API call</Link>. These parameters
 include a `content-md5` that can be set to ensure a file is not corrupted in
 transit, and the ability to explicitly specify the file creation time at a
 different time than the upload time.
 
-For file versions an additional [`if-match` header][consistency] can be passed
+For file versions an additional <Link href="/guides/api-calls/ensure-consistency">`if-match` header</Link> can be passed
 along to prevent overwriting a file that has already been updated since the
 application last inspected the content.
 
 ## Restrictions
 
 Direct uploads are limited to a maximum file size of 50MB. For larger files,
-please use the [chunked upload APIs][chunked].
+please use the <Link href="/guides/uploads/chunked">chunked upload APIs</Link>.
 
 Upload limits are dictated by the type of account of the authenticated user.
 More information can be found [in our community article on this topic][fsizes].
 
-[preflight]: /guides/uploads/check
-[chunked]: /guides/uploads/chunked
-[upload]: /reference/post-files-id-content
-[consistency]: /guides/api-calls/ensure-consistency
 {/* i18n-enable localize-links */}
 [fsizes]: https://support.box.com/hc/en-us/articles/360043697314-Understand-the-Maximum-File-Size-You-Can-Upload-to-Box
 {/* i18n-disable localize-links */}

@@ -12,6 +12,7 @@ required_guides:
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,12 +23,12 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Find Item from Shared Link", href: "/guides/shared-links/find-for-item", badge: "GUIDE" }
   ]}
 />
-To download the file for a [Shared Link][shared-link], first [determine the
-file][get-file] for the link.
+To download the file for a <Link href="/guides/shared-links">Shared Link</Link>, first <Link href="/guides/shared-links/find-for-item">determine the
+file</Link> for the link.
 
 <Note>
-You cannot use the shared link to download folders. [Create and download
-the ZIP archive][zip-archive-download] instead.
+You cannot use the shared link to download folders. <Link href="/guides/downloads/zip-archive">Create and download
+the ZIP archive</Link> instead.
 </Note>
 
 Once the file ID has been determined, the file can be downloaded by passing the
@@ -40,9 +41,6 @@ Once the file ID has been determined, the file can be downloaded by passing the
   access to the item.
 </Warning>
 
-[shared-link]: /guides/shared-links
-[get-file]: /guides/shared-links/find-for-item
-[zip-archive-download]: /guides/downloads/zip-archive
 
 <RelatedLinks
   title="RELATED APIS"

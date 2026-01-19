@@ -15,6 +15,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
   title="REQUIRED GUIDES"
@@ -28,8 +29,8 @@ This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
 directly with the Box API.
 
-To learn how to use this token visit our guide on [making API
-calls](/guides/api-calls).
+To learn how to use this token visit our guide on <Link href="/guides/api-calls">making API
+calls</Link>.
 
 <Note>
   By default, the Access Token acquired with JWT is tied to the Service
@@ -37,9 +38,9 @@ calls](/guides/api-calls).
   from the application. This account does not have access to any existing files
   or folders until the application's Service Account is added as a collaborator.
 
-It is possible to [act as another user](/guides/authentication/oauth2/as-user)
+It is possible to <Link href="/guides/authentication/oauth2/as-user">act as another user</Link>
 using the `as-user` header or by requesting a
-[User Access Token](/guides/authentication/jwt/user-access-tokens).
+<Link href="/guides/authentication/jwt/user-access-tokens">User Access Token</Link>.
 
 </Note>
 
@@ -52,7 +53,7 @@ using a public and private key pair.
 
 - A Platform Application using JWT authentication within the [Developer Console][devconsole]
 - A private key configuration file named `config.json`, which can be downloaded from the configuration tab of the [Developer Console][devconsole]
-- Ensure your application is [authorized][auth] within the Box Admin Console
+- Ensure your application is <Link href="/guides/authorization">authorized</Link> within the Box Admin Console
 
 ### 1. Read JSON configuration
 
@@ -527,7 +528,7 @@ For the header the following parameters are supported.
 
 Signing your own JWT can be a complicated and painful process. Luckily, the
 hard work has already been done for you and libraries exist in pretty much
-every language. Head over to [JWT.io](https://jwt.io/) for an overview.
+every language. Head over to <Link href="https://jwt.io/">JWT.io</Link> for an overview.
 </Info>
 
 ### 4. Request Access Token
@@ -688,7 +689,6 @@ The code in this guide is available on [GitHub][samples].
 [devconsole]: https://app.box.com/developers/console
 [configfile]: /guides/authentication/jwt/jwt-setup/#jwt-keypair
 [ccg]: /guides/authentication/jwt/without-sdk/#client-credentials-grant
-[auth]: /guides/authorization
 
 <RelatedLinks
   title="RELATED APIS"

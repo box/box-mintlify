@@ -12,6 +12,7 @@ related_guides:
 related_resources:
   - metadata_templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,13 +23,13 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Metadata template scopes", href: "/guides/metadata/scopes", badge: "GUIDE" }
   ]}
 />
-Metadata templates can be listed for either the [enterprise or the global
-scope][scopes].
+Metadata templates can be listed for either the <Link href="/guides/metadata/scopes">enterprise or the global
+scope</Link>.
 
 ## List global templates
 
-To list all global metadata templates, call the [`GET
-/metadata_templates/global`][get_global] API endpoint.
+To list all global metadata templates, call the <Link href="/reference/get-metadata-templates-global">`GET
+/metadata_templates/global`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -90,7 +91,7 @@ client.metadata.getTemplates('global')
 ## List current enterprise's templates
 
 To list all metadata templates created for usage within the current
-enterprise, call the [`GET  /metadata_templates/enterprise`][get_enterprise] API
+enterprise, call the <Link href="/reference/get-metadata-templates-enterprise">`GET  /metadata_templates/enterprise`</Link> API
 endpoint.
 
 <CodeGroup>
@@ -216,14 +217,10 @@ client.metadata.getTemplates('enterprise')
 
 ## Pagination
 
-This API uses [marker-based pagination][pagination] and can return a
+This API uses <Link href="/guides/api-calls/pagination/marker-based">marker-based pagination</Link> and can return a
 `next_marker` value in the response body to indicate that more templates might
 be available.
 
-[scopes]: /guides/metadata/scopes
-[get_global]: /reference/get-metadata-templates-global
-[get_enterprise]: /reference/get-metadata-templates-enterprise
-[pagination]: /guides/api-calls/pagination/marker-based
 
 <RelatedLinks
   title="RELATED APIS"

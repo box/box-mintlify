@@ -10,6 +10,7 @@ related_guides:
 alias_paths:
   - guides/box-ai/prerequisites 
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -31,12 +32,12 @@ from the Box AI team using [this form][form].
 First you need to create a platform application
 you will use to make calls. To create
 an application, follow the guide
-on [creating platform apps][createapps].
+on <Link href="/guides/applications/app-types/platform-apps">creating platform apps</Link>.
 
 ## Enable Box AI API access
 
 To interact with Box AI API,
-you need the `ai.readwrite` [scope][scope]
+you need the `ai.readwrite` <Link href="/guides/api-calls/permissions-and-errors/scopes">scope</Link>
 added for your application.
 Before you add the scope,
 make sure that the Box Admin has granted you
@@ -54,7 +55,7 @@ To add a scope:
     ![box ai scopes](/images/guides/box-ai/box-ai-app-scopes.png)
     </Frame>
 
-4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI API for an existing application, you must [re-authorize][reauthorization] it.
+4. Submit your app for <Link href="/guides/authorization">authorization or enablement</Link>. If you want to enable Box AI API for an existing application, you must <Link href="/guides/authorization/platform-app-approval#re-authorization-on-changes">re-authorize</Link> it.
 
 ## Generate a developer token
 
@@ -79,19 +80,13 @@ and generate the token.
 A developer token is only valid for one hour.
 </Note>
 
-For additional details, see [developer token][token].
+For additional details, see <Link href="/guides/authentication/tokens/developer-tokens">developer token</Link>.
 After you generate the token, you can use it in cURL
-or other clients, such as [Postman][postman], to make
+or other clients, such as <Link href="/guides/tooling/postman">Postman</Link>, to make
 calls.
 
-[token]: /guides/authentication/tokens/developer-tokens
-[scope]: /guides/api-calls/permissions-and-errors/scopes
 [oauthscopes]: /guides/api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
-[createapps]: /guides/applications/app-types/platform-apps
-[postman]: /guides/tooling/postman
 [form]: https://forms.gle/Nsh3TwM3W8qg4U35A
-[authorization]: /guides/authorization
-[reauthorization]: /guides/authorization/platform-app-approval#re-authorization-on-changes
 
 <RelatedLinks
   title="RELATED GUIDES"

@@ -12,6 +12,7 @@ required_guides:
   - authentication/jwt/jwt-setup
 related_resources: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -72,7 +73,7 @@ If you encounter issues make sure you installed both
 
 ### Set up application with JWT authentication
 
-To use the script, you will need the [Box CLI with JWT authentication][jwtapp]
+To use the script, you will need the <Link href="/guides/cli/cli-docs/jwt-cli">Box CLI with JWT authentication</Link>
 installed and configured.
 
 When creating the app, use the **Configuration** tab
@@ -175,7 +176,6 @@ You have access to these log files:
 [script]: https://github.com/box/boxcli/tree/main/examples/Mass%20Update%20User%20Zones
 [zonespage]: https://www.box.com/zones
 [zonestable]: https://github.com/box/boxcli/blob/main/examples/Mass%20Update%20User%20Zones/Mass_Update_User_Zones.ps1#L23
-[jwtapp]: /guides/cli/cli-docs/jwt-cli
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 [console]: https://app.box.com/developers/console

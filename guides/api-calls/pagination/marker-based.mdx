@@ -21,6 +21,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 APIs that use marker-based paging use the `marker` and `limit` query parameters
 to paginate through items in a collection.
@@ -90,11 +91,11 @@ results as an array, as well as some information about the current page of resul
 
 Some endpoints that support marker-based pagination are:
 
-- [List items for a folder](/reference/get-folders-id-items)
-- [List a file's collaborations](/reference/get-files-id-collaborations)
-- [List all webhooks for a user](/reference/get-webhooks)
-- [List all users in an enterprise](/reference/get-users)
-- [List all items in the trash](/reference/get-folders-trash-items)
+- <Link href="/reference/get-folders-id-items">List items for a folder</Link>
+- <Link href="/reference/get-files-id-collaborations">List a file's collaborations</Link>
+- <Link href="/reference/get-webhooks">List all webhooks for a user</Link>
+- <Link href="/reference/get-users">List all users in an enterprise</Link>
+- <Link href="/reference/get-folders-trash-items">List all items in the trash</Link>
 
 <RelatedLinks
   title="RELATED APIS"

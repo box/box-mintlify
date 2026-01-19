@@ -7,6 +7,8 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 ## Unable to retrieve service of enterprise app authorization
 
 <Frame border>
@@ -33,11 +35,10 @@ privileges in order to successfully authorize an application.
 {/* alex enable */} 
 
 This error indicates that not all authorization requirements are satisfied.
-Please review our [authorization guide][ag] to confirm the necessary steps for
+Please review our <Link href="/guides/authorization">authorization guide</Link> to confirm the necessary steps for
 a given application. 
 
 <Frame border>
   ![Admin error](/images/guides/authorization/admin_error.png)
 </Frame>
 
-[ag]: /guides/authorization

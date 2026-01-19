@@ -15,6 +15,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -57,9 +58,9 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 | Parameter            | Description                                                                                                                                                                                                                                |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                                                          |
-| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes for Box UI elements][scopes_down] is available                                      |
+| `scope`              | A space-delimited list of <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link> to limit the new token to. Any valid scope for the application can be used, though a special set of <Link href="/guides/api-calls/permissions-and-errors/scopes/#scopes-for-downscoping">scopes for Box UI elements</Link> is available                                      |
 | `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                                                                                   |
-| `box_shared_link`    | An optional [shared link](/guides/shared-links) URL for a file or folder on Box. Password protected links are not supported. This option cannot be used in addition to the `resource` option nor can it be a shared link created on a weblink. |
+| `box_shared_link`    | An optional <Link href="/guides/shared-links">shared link</Link> URL for a file or folder on Box. Password protected links are not supported. This option cannot be used in addition to the `resource` option nor can it be a shared link created on a weblink. |
 | `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                                                              |
 | `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                                                            |
 
@@ -98,8 +99,6 @@ each combination of `object` and `scope` that the new token has the permissions 
   downscoped token.
 </Warning>
 
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
-[scopes_down]: /guides/api-calls/permissions-and-errors/scopes/#scopes-for-downscoping
 
 <RelatedLinks
   title="RELATED APIS"

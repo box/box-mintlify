@@ -7,6 +7,9 @@ required_guides: []
 related_resources:
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 In general, applications use Terms of Services as follows.
 
 When an application, authenticated as a user, tries to access an item in Box that
@@ -29,7 +32,7 @@ requires the user to have accepted the relevant Terms of Service it receives a
 ```
 
 The application requests the Terms of Service's information by calling
-[`GET /terms_of_services/:id`][get_tos_id].
+<Link href="/reference/get-terms-of-services-id">`GET /terms_of_services/:id`</Link>.
 
 ```json
 {
@@ -51,10 +54,10 @@ The application requests the Terms of Service's information by calling
 The application can then show the text from the Terms of Service to the user.
 
 When the user accepts or rejects the terms, it makes a call to either
-[`PUT /terms_of_service_user_statuses/:id`][put_tosus] or
-[`POST /terms_of_service_user_statuses`][post_tosus] depending on if the initial
+<Link href="/reference/put-terms-of-service-user-statuses-id">`PUT /terms_of_service_user_statuses/:id`</Link> or
+<Link href="/reference/post-terms-of-service-user-statuses">`POST /terms_of_service_user_statuses`</Link> depending on if the initial
 error returned a `tos_user_status_id` in the response.
 
-[put_tosus]: /reference/put-terms-of-service-user-statuses-id
-[post_tosus]: /reference/post-terms-of-service-user-statuses
-[get_tos_id]: /reference/get-terms-of-services-id
+
+
+

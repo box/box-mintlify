@@ -6,11 +6,14 @@ related_guides: []
 required_guides:
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 Webhooks created using the [Developer Console][console] monitor changes to all
 files and folders within a user's account. When creating one of these webhooks
 it is not possible specify a specific object to bind the webhook to. To create
 a webhook for a specific file or folder, you will need to leverage
-[v2 webhooks][v2].
+<Link href="/guides/webhooks/v2">v2 webhooks</Link>.
 
 <Warning>
   Webhooks created through this process will not show when listing all
@@ -20,5 +23,5 @@ a webhook for a specific file or folder, you will need to leverage
 
 [devconsole]: https://app.box.com/developers/console
 [list_webhooks]: /guides/webhooks/v2/list-v2
-[v2]: /guides/webhooks/v2
+
 [console]: https://app.box.com/developers/console

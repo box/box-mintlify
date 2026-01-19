@@ -13,6 +13,7 @@ alias_paths:
   - /webhooks/handle/retries
   - /webhooks/handle/payload
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -44,8 +45,8 @@ The payload sent by a webhook has the following Box-specific headers.
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BOX-DELIVERY-ID`         | A unique ID assigned by Box that identifies the delivered webhook payload. When Box retries a webhook this ID will change, while the ID in the payload body remains the same. |
 | `BOX-DELIVERY-TIMESTAMP`  | An RFC-3339 timestamp that identifies when the payload was sent.                                                                                                         |
-| `BOX-SIGNATURE-PRIMARY`   | A [signature][verify_sigs] created using the primary signature key configured for this webhook.                                                                                                     |
-| `BOX-SIGNATURE-SECONDARY` | A [signature][verify_sigs] created using the secondary signature key configured for this webhook.                                                                                                   |
+| `BOX-SIGNATURE-PRIMARY`   | A <Link href="/guides/webhooks/v2/signatures-v2">signature</Link> created using the primary signature key configured for this webhook.                                                                                                     |
+| `BOX-SIGNATURE-SECONDARY` | A <Link href="/guides/webhooks/v2/signatures-v2">signature</Link> created using the secondary signature key configured for this webhook.                                                                                                   |
 | `BOX-SIGNATURE-VERSION`   | Value is always `1`.                                                                                                                                                                 |
 | `BOX-SIGNATURE-ALGORITHM` | Value is always `HmacSHA256` .                                                                                                                                                       |
 
@@ -62,7 +63,7 @@ USER-AGENT:               Box-WH-Client/0.1
 ```
 
 <Note>
-  We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs]
+  We recommend <Link href="/guides/webhooks/v2/signatures-v2">setting up</Link> and <Link href="/guides/webhooks/v2/signatures-v2">verifying signatures</Link>
   of the webhook payloads.
 </Note>
 
@@ -203,8 +204,6 @@ payload.
   These numbers could be subject to change.
 </Note>
 
-[setup_sigs]: /guides/webhooks/v2/signatures-v2
-[verify_sigs]: /guides/webhooks/v2/signatures-v2
 
 <RelatedLinks
   title="RELATED APIS"

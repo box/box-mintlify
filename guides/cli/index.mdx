@@ -21,6 +21,7 @@ alias_paths:
 - /guides/tooling/cli
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -37,12 +38,12 @@ Box APIs from your terminal window or command prompt.
 
 ## Quick start
 
-[Get started using the Box CLI with OAuth 2.0][qs].
+<Link href="/guides/cli/quick-start">Get started using the Box CLI with OAuth 2.0</Link>.
 
 ## CLI setup and use
 
-- To use [server authentication][jwt] method, check out [this][jwt-page] guide.
-- To use [CCG authentication][ccg] method, check out [this][ccg-page] guide.
+- To use <Link href="/guides/authentication/jwt">server authentication</Link> method, check out <Link href="/guides/cli/cli-docs/jwt-cli">this</Link> guide.
+- To use <Link href="/guides/authentication/client-credentials">CCG authentication</Link> method, check out [this][ccg-page] guide.
 - To perform bulk actions using CLI commands, check out [this][bulk] guide.
 
 ## Sample scripts
@@ -51,7 +52,7 @@ Using the Box CLI is great by itself, but it becomes even more powerful when
 combined with a Powershell script. We've created a [library][scripts]
 of script templates for you to get started automating repetitive tasks.
 
-- [Explore sample scripts][scripts-docs]
+- <Link href="/guides/cli/scripts/index">Explore sample scripts</Link>
 
 ## Advanced
 
@@ -67,13 +68,8 @@ advanced CLI user.
 [cli-autocomplete]: https://github.com/box/boxcli/blob/main/docs/autocomplete.md
 [cli-switch]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsswitch-user-userid
 [cli-add-config]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsadd-path
-[qs]: /guides/cli/quick-start
 [cache]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsupdate-name
-[jwt]: /guides/authentication/jwt
-[jwt-page]: /guides/cli/cli-docs/jwt-cli
 [scripts]: https://github.com/box/boxcli/tree/main/examples
-[scripts-docs]: /guides/cli/scripts/index
-[ccg]: /guides/authentication/client-credentials
 [ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
 [bulk]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/README.md
 

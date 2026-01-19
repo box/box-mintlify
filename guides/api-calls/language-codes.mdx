@@ -7,9 +7,12 @@ required_guides: []
 alias_paths:
   - /docs/api-language-codes
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 The Box API uses a modified version of the **ISO 639-1 Language Code** to specify a user's language.
 
-The following is a list of language codes used when [creating][create_user] or [updating][update_user].
+The following is a list of language codes used when <Link href="/reference/post-users#param-language">creating</Link> or <Link href="/reference/put-users-id#param-language">updating</Link>.
 
 | Language                | Code |
 |-------------------------|------|
@@ -39,5 +42,5 @@ The following is a list of language codes used when [creating][create_user] or [
 | Chinese (Simplified)    | `zh` |
 | Chinese (Traditional)   | `zt` |
 
-[create_user]: /reference/post-users#param-language
-[update_user]: /reference/put-users-id#param-language
+
+

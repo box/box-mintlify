@@ -6,17 +6,19 @@ related_guides:
 required_guides:
 alias_paths:
 ---
-Server authentication applications using [JWT][jwt] or
-[Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
+import {Link} from "/snippets/Link.jsx";
 
-Unpublished applications using [OAuth 2.0][oauth] authentication may
-require enablement by a Box Admin if they are [inactive by default][upa].
+Server authentication applications using <Link href="/guides/authentication/jwt">JWT</Link> or
+<Link href="/guides/authentication/client-credentials">Client Credentials Grant</Link> must be authorized by a Box Admin before use.
+
+Unpublished applications using <Link href="/guides/authentication/oauth2">OAuth 2.0</Link> authentication may
+require enablement by a Box Admin if they are <Link href="/guides/security/#enterprise-settings-and-authorization">inactive by default</Link>.
 
 A Box Admin needs an application's Client ID in order to properly
 authorize or enable it in the Admin Console.
 
 <Info>
-You can use [My Platform Apps][apps] view to quickly look up
+You can use <Link href="/guides/applications">My Platform Apps</Link> view to quickly look up
 the authorization and enablement status of your application.
 </Info>
 
@@ -59,7 +61,7 @@ application.
 2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
 
 Alternatively, hover over the application in the
-[My Platform Apps][apps] view to look up the **ClientID** and then
+<Link href="/guides/applications">My Platform Apps</Link> view to look up the **ClientID** and then
 copy it using the `copy` button.
 
 <Info>
@@ -110,16 +112,11 @@ of the application name to **Reauthorize App**.
 {/* i18n-enable localize-links */}
 [devconsole]: https://app.box.com/developers/console
 {/* i18n-disable localize-links */}
-[ccg]: /guides/authentication/client-credentials
 {/* i18n-enable localize-links */}
 [settings]: https://app.box.com/account
 [adminconsole]: https://app.box.com/master/settings/custom
 {/* i18n-disable localize-links */}
-[jwt]: /guides/authentication/jwt
 [app-token]: /guides/authentication/app-token
-[oauth]: /guides/authentication/oauth2
-[upa]: /guides/security/#enterprise-settings-and-authorization
 {/* i18n-enable localize-links */}
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 {/* i18n-enable localize-links */}
-[apps]: /guides/applications

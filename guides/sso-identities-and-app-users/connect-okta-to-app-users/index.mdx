@@ -5,6 +5,7 @@ type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
 
 [Okta][okta] is a popular access management and identity platform used by
 companies to provide a unified method for managing and authenticating into
@@ -28,12 +29,12 @@ the Okta user, then make Box API calls on behalf of that user.
 
 This will take you through the following steps.
 
-1. [Scaffold your application code][step1] so that we have a web application that we can log in to.
-2. [Setup and configure your Okta application][step2] and create a first user that we can use to log into the web app with, and eventually create a Box account for.
-3. [Setup and configure your Box application][step3] so that we can connect your web application to Box.
-4. [Create a log in flow for your application][step4], allowing the Okta user to log in to your web application.
-5. [Find an existing Box user, and optionally create a Box user][step5] the first time that Okta user logs into your web application.
-6. [And finally, run the application][step6] and the see the complete flow in action.
+1. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code">Scaffold your application code</Link> so that we have a web application that we can log in to.
+2. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta">Setup and configure your Okta application</Link> and create a first user that we can use to log into the web app with, and eventually create a Box account for.
+3. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-box">Setup and configure your Box application</Link> so that we can connect your web application to Box.
+4. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app">Create a log in flow for your application</Link>, allowing the Okta user to log in to your web application.
+5. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users">Find an existing Box user, and optionally create a Box user</Link> the first time that Okta user logs into your web application.
+6. <Link href="/guides/sso-identities-and-app-users/connect-okta-to-app-users/run-the-app">And finally, run the application</Link> and the see the complete flow in action.
 
 At the end of the tutorial we will output a single message to the browser. If
 this is the first time an Okta user logs in to Box via the application, an
@@ -51,9 +52,3 @@ stating `Hello {{USERNAME}}` will now be output to the browser.
 
 [okta]: https://www.okta.com/
 [okta-dev]: https://developer.okta.com/
-[step1]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
-[step2]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
-[step3]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/configure-box
-[step4]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
-[step5]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
-[step6]: /guides/sso-identities-and-app-users/connect-okta-to-app-users/run-the-app

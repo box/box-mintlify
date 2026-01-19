@@ -13,8 +13,9 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
-The [find item for shared link](/reference/get-shared-items) API is designed to
+The <Link href="/reference/get-shared-items">find item for shared link</Link> API is designed to
 accept a shared link as an input using a `BoxApi` header and return the file or
 folder object that the shared link is set for.
 
@@ -92,9 +93,9 @@ client.sharedItems.get(
   API does not include the list of nested items within that folder.
 
   To further traverse the items in the folder, use the same `BoxApi` header to
-  [get a nested folder's information](/reference/get-folders-id), [list the items in
-  those folders](/reference/get-folders-id-items), [get a nested file's
-  information](/reference/get-files-id), or [download a file](/reference/get-files-id-content)
+  <Link href="/reference/get-folders-id">get a nested folder's information</Link>, <Link href="/reference/get-folders-id-items">list the items in
+  those folders</Link>, <Link href="/reference/get-files-id">get a nested file's
+  information</Link>, or <Link href="/reference/get-files-id-content">download a file</Link>
 </Info>
 
 <RelatedLinks

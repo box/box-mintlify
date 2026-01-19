@@ -12,6 +12,7 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
   - box-ai/ai-tutorials/extract-metadata-structured
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -30,9 +31,9 @@ AI agent configuration versioning adopts the following principles:
 
 ## Historical AI agent configuration
 
-The values in the [default agent configuration][default-config] used by the LLM gateway often change to achieve the best possible answer quality. 
+The values in the <Link href="/guides/box-ai/ai-agents/get-agent-default-config">default agent configuration</Link> used by the LLM gateway often change to achieve the best possible answer quality. 
 
-To make sure your configurations are not affected in a negative way, you can use the historical AI agent configuration provided below to [override the default one][overrides].
+To make sure your configurations are not affected in a negative way, you can use the historical AI agent configuration provided below to <Link href="/guides/box-ai/ai-agents/ai-agent-overrides">override the default one</Link>.
 
 ```json
 {
@@ -209,8 +210,6 @@ To make sure your configurations are not affected in a negative way, you can use
 }
 ```
 
-[default-config]: /guides/box-ai/ai-agents/get-agent-default-config
-[overrides]: /guides/box-ai/ai-agents/ai-agent-overrides
 
 <RelatedLinks
   title="RELATED APIS"

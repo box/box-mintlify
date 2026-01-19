@@ -13,6 +13,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -23,7 +24,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   ]}
 />
 It is possible for a JWT application to create an Access Token for a specific
-user instead of for the [Service Account][sa].
+user instead of for the <Link href="/platform/user-types/#service-account">Service Account</Link>.
 
 ## Preconditions
 
@@ -37,12 +38,12 @@ This setting can be found in the **Configuration** tab of the
 
 Additionally, the authenticated user needs to be a user with Admin permissions,
 meaning either an Admin, Co-Admin, or Service Account. See our guide on
-[User Types](/platform/user-types) for more details.
+<Link href="/platform/user-types">User Types</Link> for more details.
 
 ## User Access Tokens with SDKs
 
 To create a Box SDK client that authenticates as a specific user, follow the
-steps described in the [JWT with SDK guide](/guides/authentication/jwt/with-sdk),
+steps described in the <Link href="/guides/authentication/jwt/with-sdk">JWT with SDK guide</Link>,
 but create a user client instead of an "Enterprise" client.
 
 <CodeGroup>
@@ -85,7 +86,7 @@ var client = sdk.getAppAuthClient('user', '12345');
 
 To create a user Access Token that authenticates as a specific user, follow the
 steps as described in the
-[JWT without SDK guide](/guides/authentication/jwt/without-sdk) but instead of creating
+<Link href="/guides/authentication/jwt/without-sdk">JWT without SDK guide</Link> but instead of creating
 a claim for the enterprise, create one for a specific user ID.
 
 <CodeGroup>
@@ -166,7 +167,6 @@ $claims = [
 <Card href="/guides/authentication/jwt/with-sdk" arrow title="Learn more about manually using JWT authentication"/>
 
 [devconsole]: https://app.box.com/developers/console
-[sa]: /platform/user-types/#service-account
 
 <RelatedLinks
   title="RELATED GUIDES"

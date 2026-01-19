@@ -12,6 +12,7 @@ related_endpoints:
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <ProgressBar pages={[
                           "guides/metadata/quick-start/list-all",
@@ -34,7 +35,7 @@ is available to everyone (`global`) or only to your enterprise (`enterprise`).
 
 ## Listing templates
 
-A few [global templates](/reference/get-metadata-templates-global) are available to all
+A few <Link href="/reference/get-metadata-templates-global">global templates</Link> are available to all
 customers.
 
 <CodeGroup>
@@ -90,8 +91,8 @@ client.metadata.getTemplates('global')
 </CodeGroup>
 
 Many of these templates are for Box's internal use, yet your application can use
-and apply these. More useful are templates [created by applications and admins
-within your enterprise](/reference/get-metadata-templates-enterprise) to hold data
+and apply these. More useful are templates <Link href="/reference/get-metadata-templates-enterprise">created by applications and admins
+within your enterprise</Link> to hold data
 specific to your enterprise's needs.
 
 <CodeGroup>
@@ -212,7 +213,7 @@ client.metadata.getTemplates('enterprise')
 
 ## A metadata template
 
-A [metadata template][template] describes a set of key/value
+A <Link href="/guides/metadata/templates">metadata template</Link> describes a set of key/value
 pairs that can be assigned to a file or folder.
 
 For example, a `customerInfo` template might hold data about a customer,
@@ -253,7 +254,6 @@ having a field for the customer name as well as the customer's industry.
 
 <Next>I've listed the templates available to me</Next>
 
-[template]: /guides/metadata/templates
 
 <RelatedLinks
   title="RELATED APIS"

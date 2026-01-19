@@ -12,6 +12,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -47,17 +48,17 @@ The application must be configured to perform actions as users in the
 
 Additionally, the authenticated user needs to be a user with Admin permissions,
 meaning either an Admin or Co-Admin. See our guide on
-[User Types](/platform/user-types) for more details.
+<Link href="/platform/user-types">User Types</Link> for more details.
 
 <Info>
 You cannot use the `user_id` of
-[Service Accounts](/platform/user-types/#service-account)
+<Link href="/platform/user-types/#service-account">Service Accounts</Link>
 in the as-user header.
 </Info>
 
 ## as-user using SDKs
 
-All of the [official Box SDKs][sdk] support acting on behalf of a user using the
+All of the <Link href="/guides/tooling/sdks">official Box SDKs</Link> support acting on behalf of a user using the
 `as-user` header.
 
 <CodeGroup>
@@ -86,7 +87,6 @@ client.asUser('[USER_ID]');
 </Warning>
 
 [devconsole]: https://app.box.com/developers/console
-[sdk]: /guides/tooling/sdks
 
 <RelatedLinks
   title="RELATED GUIDES"

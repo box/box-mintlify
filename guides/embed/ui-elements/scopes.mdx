@@ -10,6 +10,7 @@ related_resources: []
 alias_paths:
   - /docs/special-scopes-for-box-ui-elements
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -24,7 +25,7 @@ When working with Box UI Elements many developers have shown interest in being
 able to implement their own permission model, different from [Access
 Levels][acl] defined by Box.
 
-[Downscoping][downscoping], also known as Token Exchange, is our mechanism by
+<Link href="/guides/authentication/tokens/downscope">Downscoping</Link>, also known as Token Exchange, is our mechanism by
 which developers can restrict the permissions on the Access Token to a more
 granular level, allowing them to build out their own permissions model on Box
 Platform.
@@ -84,7 +85,6 @@ scopes.
 {/* i18n-enable localize-links */}
 [acl]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 {/* i18n-disable localize-links */}
-[downscoping]: /guides/authentication/tokens/downscope
 
 <RelatedLinks
   title="RELATED GUIDES"

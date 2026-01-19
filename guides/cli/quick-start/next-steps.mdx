@@ -3,6 +3,7 @@ title: "Next steps"
 type: quick-start
 hide_step_number: true
 ---
+import {Link} from "/snippets/Link.jsx";
 import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 <ProgressBar pages={[
@@ -18,25 +19,19 @@ You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
   {/* alex ignore executed */}
-1. [Created and configured][one]  an OAuth 2.0 application.
-2. [Installed and configured][two] the CLI
-3. [Built and executed CLI commands][three]
-4. Learned about [options and bulk commands][four]
-5. Explored using the CLI to [run a Powershell script][five]
+1. <Link href="/guides/cli/quick-start/create-oauth-app">Created and configured</Link>  an OAuth 2.0 application.
+2. <Link href="/guides/cli/quick-start/install-and-configure">Installed and configured</Link> the CLI
+3. <Link href="/guides/cli/quick-start/build-commands-help">Built and executed CLI commands</Link>
+4. Learned about <Link href="/guides/cli/quick-start/options-and-bulk-commands">options and bulk commands</Link>
+5. Explored using the CLI to <Link href="/guides/cli/quick-start/powershell-script-templates">run a Powershell script</Link>
 
 To take the next step, the following resources are recommended:
 
 1. Review all [commands][commands].
 2. Review [token cache][cache] settings.
 3. Review [autocomplete][ac] settings.
-4. Review all of the [CLI sample scripts][sample-scripts].
+4. Review all of the <Link href="/guides/cli/scripts">CLI sample scripts</Link>.
 
-[one]: /guides/cli/quick-start/create-oauth-app
-[two]: /guides/cli/quick-start/install-and-configure
-[three]: /guides/cli/quick-start/build-commands-help
-[four]: /guides/cli/quick-start/options-and-bulk-commands
-[five]: /guides/cli/quick-start/powershell-script-templates
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
-[sample-scripts]: /guides/cli/scripts

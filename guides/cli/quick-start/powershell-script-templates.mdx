@@ -5,6 +5,7 @@ hide_in_page_nav: true
 alias_paths:
   - /guides/tooling/cli/quick-start/powershell-script-templates
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {YouTube} from "/snippets/youtube.jsx";
 
@@ -70,10 +71,10 @@ If you encounter issues make sure you installed both
 ### Box CLI
 
 To use the script, you will need the Box CLI
-installed and configured. If you haven't done so yet, see [step 1][step 1] of
+installed and configured. If you haven't done so yet, see <Link href="/guides/cli/quick-start/create-oauth-app">step 1</Link> of
 this quick start guide.
 Alternatively, go to your [developer console][console], and follow the guide
-[Setup with OAuth 2.0][auth].
+<Link href="/guides/authentication/oauth2/oauth2-setup">Setup with OAuth 2.0</Link>.
 
 ### Create a personal folder parent folder
 
@@ -312,7 +313,7 @@ You explored automation using a PowerShell script with the
 Box CLI to provision users
 and create an initial folder structure.
 
-Make sure to explore our other [sample scripts][samples] for more use cases.
+Make sure to explore our other <Link href="/guides/cli/scripts">sample scripts</Link> for more use cases.
 
 <Next>I know how to use the sample scripts to automate repetitive tasks</Next>
 
@@ -320,7 +321,4 @@ Make sure to explore our other [sample scripts][samples] for more use cases.
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
 [jwt-cli]: /guides/cli/cli-docs/jwt-cli
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[step 1]: /guides/cli/quick-start/create-oauth-app
 [console]: https://app.box.com/developers/console
-[auth]: /guides/authentication/oauth2/oauth2-setup
-[samples]: /guides/cli/scripts

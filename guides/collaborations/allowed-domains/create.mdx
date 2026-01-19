@@ -15,6 +15,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 An enterprise that normally restricts creating collaborations can
 add domains, such as `example.com`, to a list for which collaborations may be
@@ -72,7 +73,7 @@ client.collaborationAllowlist.addDomain('test.com', client.collaborationAllowlis
 </CodeGroup>
 
 The
-[endpoint](/reference/post-collaboration-whitelist-entries)
+<Link href="/reference/post-collaboration-whitelist-entries">endpoint</Link>
 will require the `domain` to allow the collaborations between, and a
 `direction`, which may be set to:
 

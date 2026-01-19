@@ -10,6 +10,7 @@ related_resources:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Currently, the API only allows the creation of new file requests by copying an
 existing file request associated to another folder. Please check our below
@@ -22,13 +23,13 @@ request to. This can be any folder really, but we recommend using a
 folder that is only used for this purpose.
 
 A folder can be created through the Box web or mobile interface, or through the
-[`POST /folders`](/reference/post-folders) API.
+<Link href="/reference/post-folders">`POST /folders`</Link> API.
 
 <Note>
 
 When using server-side JWT authentication, we recommend creating folder that
 is owned by the application's
-[Service Account](/platform/user-types/#service-account). This way,
+<Link href="/platform/user-types/#service-account">Service Account</Link>. This way,
 the folder can't be accidentally deleted by a regular Box user.
 
 </Note>
@@ -68,7 +69,7 @@ https://*.app.box.com/filerequest/2338423584
 <Warning>
 
 If your template folder belongs to a JWT user, you will need to
-[invite](/reference/post-collaborations) a managed Box user to the folder before
+<Link href="/reference/post-collaborations">invite</Link> a managed Box user to the folder before
 it can be seen in the web app. Invite yourself to the folder to allow yourself
 to add a file request to the folder via the app.
 
@@ -77,10 +78,10 @@ to add a file request to the folder via the app.
 ## 3. Using a template
 
 A template file request can be used to create new copies using the
-[`POST /file-requests/:id/copy`](/reference/post-file-requests-id-copy)
+<Link href="/reference/post-file-requests-id-copy">`POST /file-requests/:id/copy`</Link>
 API. With the ID of a new folder in hand, you can copy the existing
 request, including its title, description and form-configuration
-to a new folder [with one API call](/guides/file-requests/copy).
+to a new folder <Link href="/guides/file-requests/copy">with one API call</Link>.
 
 <RelatedLinks
   title="RELATED APIS"

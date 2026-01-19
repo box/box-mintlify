@@ -10,6 +10,7 @@ required_guides:
   - authentication/oauth2/oauth2-setup
 related_resources: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -48,7 +49,7 @@ Predefined CSV templates help you to structure the data you want to manage in bu
 To use bulk commands, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
 go to your [Developer Console][console], and follow the guide
-[Setup with OAuth 2.0][auth].
+<Link href="/guides/authentication/oauth2/oauth2-setup">Setup with OAuth 2.0</Link>.
 
 ## Set up and use bulk commands
 
@@ -67,7 +68,6 @@ go to your [Developer Console][console], and follow the guide
     ```
 
 [console]: https://app.box.com/developers/console
-[auth]: /guides/authentication/oauth2/oauth2-setup
 [bulkactions]: https://github.com/box/boxcli/tree/main/docs/Bulk%20actions
 [folderstemplate]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/folders/folders-create.csv
 

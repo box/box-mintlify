@@ -15,6 +15,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -37,19 +38,18 @@ the first time.
 
 To get a PDF representation follow the following steps
 
-- [List all representations](/guides/representations/list-all-representations)
-- [Request a PDF](/guides/representations/request-a-representation) by passing the `x-rep-hints`-header for the desired file type `[pdf]`.
-- [Download the PDF](/guides/representations/download-a-representation) by calling the `url_template`, replacing the `{+asset_path}` with an the page of the PDF to request, for example `1.pdf`.
+- <Link href="/guides/representations/list-all-representations">List all representations</Link>
+- <Link href="/guides/representations/request-a-representation">Request a PDF</Link> by passing the `x-rep-hints`-header for the desired file type `[pdf]`.
+- <Link href="/guides/representations/download-a-representation">Download the PDF</Link> by calling the `url_template`, replacing the `{+asset_path}` with an the page of the PDF to request, for example `1.pdf`.
 
 ## Watermarked PDFs
 
 To retrieve a watermarked PDF the underlying file itself needs to be
 watermarked in Box. You can watermark a file either via the Box web application
-or using the [`PUT /files/:id/watermark/`][put_files_id_watermark] API.
+or using the <Link href="/reference/put-files-id-watermark">`PUT /files/:id/watermark/`</Link> API.
 
 Once watermarked, a watermarked PDF representation of the file is generated.
 
-[put_files_id_watermark]: /reference/put-files-id-watermark
 
 <RelatedLinks
   title="RELATED APIS"

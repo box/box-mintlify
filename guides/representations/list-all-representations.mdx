@@ -9,12 +9,13 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 To see what representations are available for a file you can call the
-[`GET /files/:id`][get_files_id] endpoint while requesting the
-[`representations`][file_representations] field.
+<Link href="/reference/get-files-id">`GET /files/:id`</Link> endpoint while requesting the
+<Link href="/reference/resources/file#param-representations">`representations`</Link> field.
 
 ```sh
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -50,8 +51,6 @@ representation.
 
 * The optional `thumb` field specifies if this representation is suitable as a file thumbnail.
 
-[get_files_id]: /reference/get-files-id
-[file_representations]: /reference/resources/file#param-representations
 
 <RelatedLinks
   title="RELATED APIS"

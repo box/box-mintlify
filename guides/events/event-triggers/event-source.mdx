@@ -13,14 +13,15 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 If a user or item triggers an event, The response of the
-[`GET /events`](/reference/get-events) endpoint contains an event source object.
+<Link href="/reference/get-events">`GET /events`</Link> endpoint contains an event source object.
 
 ## User Source Object
 
 If a user triggers an event, the source object will be the standard
-representation of the [user resource](/reference/resources/user).
+representation of the <Link href="/reference/resources/user">user resource</Link>.
 
 ```json
 {
@@ -52,7 +53,7 @@ representation of the [user resource](/reference/resources/user).
 ## Item Source Object
 
 If an item triggers an event, the source object will be the
-[event source resource](/reference/resources/event-source).
+<Link href="/reference/resources/event-source">event source resource</Link>.
 
 <Note>
   The below example contains a `classification` object. This does not appear if

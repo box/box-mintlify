@@ -4,6 +4,8 @@ rank: 2
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 The Chunked Upload API provides a way to reliably upload large files to Box by
 chunking them into a sequence of parts that can be uploaded individually.
 
@@ -19,12 +21,12 @@ in parallel, allowing for a potential performance improvement.
 
 Chunked uploads require a sequence of API calls to be made.
 
-1. **[Create an upload session][newsession]**: The application creates an upload session for a new file or new version of a file. The session defines the (new) name  of the file, its size, and the parent folder.
-2. **[Upload parts][uploadparts]**: The application uploads the separate parts of the file as chunks.
-3. **[Commit session][commit]**: The application commits the session, at which moment the integrity of the file is checked before it is placed in the location specified when the session was created.
+1. **<Link href="/guides/uploads/chunked/create-session">Create an upload session</Link>**: The application creates an upload session for a new file or new version of a file. The session defines the (new) name  of the file, its size, and the parent folder.
+2. **<Link href="/guides/uploads/chunked/upload-part">Upload parts</Link>**: The application uploads the separate parts of the file as chunks.
+3. **<Link href="/guides/uploads/chunked/commit-session">Commit session</Link>**: The application commits the session, at which moment the integrity of the file is checked before it is placed in the location specified when the session was created.
 
 <Info>
-  Most of [the Box SDKs support chunked uploads][sdks] out of the Box, removing
+  Most of <Link href="/guides/uploads/chunked/with-sdks">the Box SDKs support chunked uploads</Link> out of the Box, removing
   the complexity from the application code.
 </Info>
 
@@ -44,7 +46,3 @@ To avoid wasting resources, and avoid potential data corruption, client should
 make sure that the underlying file has not been changed on disk since beginning
 the upload.
 
-[newsession]: /guides/uploads/chunked/create-session
-[uploadparts]: /guides/uploads/chunked/upload-part
-[commit]: /guides/uploads/chunked/commit-session
-[sdks]: /guides/uploads/chunked/with-sdks

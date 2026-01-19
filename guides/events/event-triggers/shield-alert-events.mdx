@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -31,7 +32,7 @@ The possible alerts produced by Shield are for:
 5. Ransomware activity (part of Shield Pro)
 
 All Shield threat detection alert events are produced within the
-[enterprise event][events] stream. These events follow the
+<Link href="/guides/events/enterprise-events/for-enterprise">enterprise event</Link> stream. These events follow the
 standard event object schema and the `event_type` value is set to
 `SHIELD_ALERT`.
 
@@ -417,7 +418,6 @@ The `additional_details` payload will provide the following details:
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
 [monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
 {/* i18n-disable localize-links */}
-[events]: /guides/events/enterprise-events/for-enterprise
 
 <RelatedLinks
   title="RELATED APIS"

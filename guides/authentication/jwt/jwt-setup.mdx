@@ -16,6 +16,7 @@ alias_paths:
   - /guides/applications/app-types/custom-apps/jwt-setup/
   - /guides/applications/app-types/custom-apps/jwt-setup/#generate-a-keypair-recommended
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -29,7 +30,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   ]}
 />
 A Platform App can be set up to use server-side authentication with
-[JWT][jwt].
+<Link href="/guides/authentication/jwt">JWT</Link>.
 
 <Card href="/guides/authentication/jwt" arrow title="Learn how JWT authentication works"/>
 
@@ -73,7 +74,7 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 ### Select application authentication
 
 Select **Server Authentication (with JWT)** if you would like to verify
-application identity [with a key pair][kp] and confirm with **Create Platform App**.
+application identity <Link href="/guides/authentication/jwt/without-sdk/#public-and-private-key-pair">with a key pair</Link> and confirm with **Create Platform App**.
 
 <Warning>
 Once you make a selection, you will not be able to change to a different
@@ -175,7 +176,7 @@ approval. More information on this process is available in our
 
 An application's access level determines which users and content your app may
 access. By default, an application can only successfully interact with the
-content of its [Service Account][sa] and any [App Users][user-types].
+content of its <Link href="/platform/user-types/#service-account">Service Account</Link> and any <Link href="/platform/user-types">App Users</Link>.
 To access existing Managed Users of an
 enterprise and groups that were not created by
 the app itself, navigate to the **Application Access**
@@ -191,7 +192,7 @@ Managed Users and groups will be blocked.
 ### Application Scopes
 
 An application's scopes determine which endpoints and resources an application
-can successfully call. See the [scopes guide][scopes] for detailed information
+can successfully call. See the <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes guide</Link> for detailed information
 on each option.
 
 <Frame>
@@ -219,21 +220,16 @@ section at the bottom of the **Configuration** tab in the
 [devaccount]: https://account.box.com/signup/n/developer
 {/* i18n-disable localize-links */}
 [devtoken]: /guides/authentication/tokens/developer-tokens
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 {/* i18n-enable localize-links */}
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 {/* i18n-disable localize-links */}
-[user-types]: /platform/user-types
-[sa]: /platform/user-types/#service-account
 {/* i18n-enable localize-links */}
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 {/* i18n-disable localize-links */}
-[jwt]: /guides/authentication/jwt
 {/* i18n-enable localize-links */}
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
 {/* i18n-disable localize-links */}
-[kp]: /guides/authentication/jwt/without-sdk/#public-and-private-key-pair
 [ccg]: /guides/authentication/jwt/without-sdk/#client-credentials-grant
 
 <RelatedLinks

@@ -4,9 +4,11 @@ rank: 1
 alias_paths:
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
+
 The most straightforward way to upload a file to Box is using a direct upload.
 Direct uploads allow an application to upload a file in one request. For file
-sizes over 50MB we recommend using the [chunked upload endpoint][cu].
+sizes over 50MB we recommend using the <Link href="/guides/uploads/chunked">chunked upload endpoint</Link>.
 
 The maximum file size limit for uploads to Box varies depending on your account
 type. For more details, please refer to our [pricing comparison page][pcp].
@@ -34,5 +36,4 @@ Uploads to Box happen via a different domain (`upload.box.com`) than regular API
 calls. This is something to keep in mind when writing your own upload code. All
 official Box SDKs will take care of choosing the right domain for each API call.
 
-[cu]: /guides/uploads/chunked
 [pcp]: https://www.box.com/pricing

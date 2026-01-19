@@ -13,6 +13,7 @@ alias_paths:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -29,7 +30,7 @@ content information is then passed to another part of the application.
 
 ## Installation
 
-[Learn how to install](/guides/embed/ui-elements/installation) Box UI elements
+<Link href="/guides/embed/ui-elements/installation">Learn how to install</Link> Box UI elements
 either through NPM or the Box CDN.
 
 ## Authentication
@@ -231,8 +232,8 @@ filePicker.removeAllListeners();
 | `defaultView`         | String          | `files`                                                                                            | Value should either be `files` or `recents`. When set to `recents`, by default you will see recent items instead of the regular file/folder structure.                                                                                                                                                                         |
 | `chooseButtonLabel`   | `String`        |                                                                                                    | String to re-label the Choose button                                                                                                                                                                                                                                                                                           |
 | `cancelButtonLabel`   | `String`        |                                                                                                    | String to re-label the Cancel button                                                                                                                                                                                                                                                                                           |
-| `requestInterceptor`  | `Function`      |                                                                                                    | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                      |
-| `responseInterceptor` | `Function`      |                                                                                                    | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                     |
+| `requestInterceptor`  | `Function`      |                                                                                                    | Function to intercept requests. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                      |
+| `responseInterceptor` | `Function`      |                                                                                                    | Function to intercept responses. For an example see <Link href="https://codepen.io/box-platform/pen/jLdxEv">this CodePen</Link>. Our underlying XHR library is `axios.js` and we follow a <Link href="https://github.com/axios/axios#interceptors">similar approach for interceptors</Link>.                                                                     |
 
 ### Modal Options
 
@@ -277,7 +278,7 @@ applicable and allowed.
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Picker functionality, you can use [Downscoping][downscope] to
+the Content Picker functionality, you can use <Link href="/guides/authentication/tokens/downscope">Downscoping</Link> to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Picker.
@@ -285,7 +286,7 @@ client initializing the Content Picker.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Picker by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+more, see <Link href="/guides/api-calls/permissions-and-errors/scopes">Dedicated Scopes for Box UI Elements</Link>.
 
 | Scope Name    | Permissions granted                                                              |
 | ------------- | -------------------------------------------------------------------------------- |
@@ -352,8 +353,6 @@ allowfullscreen="true"
 style={{width: "100%"}}
 ></iframe>
 
-[downscope]: /guides/authentication/tokens/downscope
-[scopes]: /guides/api-calls/permissions-and-errors/scopes
 
 <RelatedLinks
   title="RELATED GUIDES"

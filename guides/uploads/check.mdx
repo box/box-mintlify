@@ -16,6 +16,7 @@ alias_paths: []
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 The Pre-flight check API allows an application to verify that a file will be
 accepted by Box before it uploads any bytes. It can both be used for new files,
@@ -35,7 +36,7 @@ actually uploaded including:
 ## Check for new file
 
 To perform a check for a new file, call the
-[`OPTIONS /files/content`](/reference/options-files-content) API with the same
+<Link href="/reference/options-files-content">`OPTIONS /files/content`</Link> API with the same
 parameters (except for the binary content) as if uploading an actual file.
 
 <CodeGroup>
@@ -100,7 +101,7 @@ client.files.preflightUploadFile(
 ## Check for new file version
 
 To perform a check for a new version of a file, call the
-[`OPTIONS /files/:id/content`](/reference/options-files-content) API with the same
+<Link href="/reference/options-files-content">`OPTIONS /files/:id/content`</Link> API with the same
 parameters (except for the binary content) as if uploading an actual file.
 
 <CodeGroup>
@@ -121,8 +122,8 @@ client.files.preflightUploadNewFileVersion('87646', {size: 300000000}, null, cal
 
 ## Checks & Chunk Uploads
 
-When performing a [chunked upload][chunked], performing a preflight check is not
-required as [creating an Upload Session][chunkedsession] also performs a
+When performing a <Link href="/guides/uploads/chunked">chunked upload</Link>, performing a preflight check is not
+required as <Link href="/guides/uploads/chunked/create-session">creating an Upload Session</Link> also performs a
 preflight check.
 
 ## Response codes
@@ -148,8 +149,8 @@ detected, the application can use the `SHA-1` that is returned in the error
 response to check if the existing file is identical to the one it is trying to
 upload.
 
-[chunked]: /guides/uploads/chunked
-[chunkedsession]: /guides/uploads/chunked/create-session
+
+{/* Note: The reference-style links above use markdown syntax and need to be kept as-is for compatibility */}
 
 <RelatedLinks
   title="RELATED APIS"

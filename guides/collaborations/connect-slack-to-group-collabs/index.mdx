@@ -5,6 +5,8 @@ type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Slack is a popular communication and productivity tool, allowing for real-time
 coordination when working with individuals or groups in and outside of the
 company.
@@ -33,11 +35,11 @@ fie or folder with the entire group of users in the channel.
 
 This guide will take you through the following steps.
 
-1. [Setup and configure your Slack app][step1] to handle the event notification and Slash command structures.
-2. [Setup and configure your Box application][step2] to connect the web application to Box.
-3. [Listen for Slack events and commands][step3] when users join and leave channels, or share a Box file or folder with the group.
-4. [Structure Box groups and file / folder collaborations][step4] based on the Slack events or slash commands.
-5. [And finally, deploy the application to your workspace][step5] and invite the Slack app bot to your channels to begin listening for events.
+1. <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-slack">Setup and configure your Slack app</Link> to handle the event notification and Slash command structures.
+2. <Link href="/guides/collaborations/connect-slack-to-group-collabs/configure-box">Setup and configure your Box application</Link> to connect the web application to Box.
+3. <Link href="/guides/collaborations/connect-slack-to-group-collabs/scaffold-application-code">Listen for Slack events and commands</Link> when users join and leave channels, or share a Box file or folder with the group.
+4. <Link href="/guides/collaborations/connect-slack-to-group-collabs/handle-slack-events">Structure Box groups and file / folder collaborations</Link> based on the Slack events or slash commands.
+5. <Link href="/guides/collaborations/connect-slack-to-group-collabs/connect-box-functions">And finally, deploy the application to your workspace</Link> and invite the Slack app bot to your channels to begin listening for events.
 
 ## Requirements
 
@@ -52,11 +54,6 @@ This quick start guide has two requirements that are worth noting before we proc
 
 [slack-slash-commands]: https://api.slack.com/apps/A0155185TT3/slash-commands
 [slack-event-api]: https://api.slack.com/events-api
-[step1]: /guides/collaborations/connect-slack-to-group-collabs/configure-slack
-[step2]: /guides/collaborations/connect-slack-to-group-collabs/configure-box
-[step3]: /guides/collaborations/connect-slack-to-group-collabs/scaffold-application-code
-[step4]: /guides/collaborations/connect-slack-to-group-collabs/handle-slack-events
-[step5]: /guides/collaborations/connect-slack-to-group-collabs/connect-box-functions
 [step6]: /guides/collaborations/connect-slack-to-group-collabs/test-bot
 [heroku]: https://heroku.com/
 [aws-lambda]: https://aws.amazon.com/lambda/

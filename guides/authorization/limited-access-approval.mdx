@@ -7,6 +7,8 @@ required_guides:
 related_resources: []
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Limited Access Integrations are automatically authorized for use in an enterprise upon
 creation. 
 
@@ -41,7 +43,7 @@ application.
 2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
 
 Alternatively, hover over the application in the
-[My Platform Apps][apps] view to look up the **ClientID** and then
+<Link href="/guides/applications">My Platform Apps</Link> view to look up the **ClientID** and then
 copy it using the `copy` button.
 
 <Info>
@@ -91,4 +93,3 @@ of the application name to **Reauthorize App**.
 {/* i18n-enable localize-links */}
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 {/* i18n-disable localize-links */}
-[apps]: /guides/applications

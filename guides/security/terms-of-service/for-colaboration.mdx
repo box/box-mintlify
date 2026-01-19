@@ -9,9 +9,11 @@ related_resources:
   - terms_of_service
 alias_paths: []
 ---
+import {Link} from "/snippets/Link.jsx";
+
 Information about the Terms of Service that is in effect for any
-[Collaboration](/reference/resources/collaboration) can be inspected by calling the
-[`GET /collaborations/:id`](/reference/get-collaborations-id) API and passing the query
+<Link href="/reference/resources/collaboration">Collaboration</Link> can be inspected by calling the
+<Link href="/reference/get-collaborations-id">`GET /collaborations/:id`</Link> API and passing the query
 parameter `fields=acceptance_requirements_status`.
 
 ```sh cURL
@@ -38,7 +40,7 @@ includes a mini `terms_of_service` object.
 <Info>
   This information is only returned if the Terms of Service for external users is
   enabled for the enterprise, and the user making the request has the
-  [permission][permissions] to see the Terms of Service. This holds true for
+  <Link href="/guides/security/terms-of-service/permissions">permission</Link> to see the Terms of Service. This holds true for
   both admin and end users, even though admins can generally view Terms of User
   information via the API even if the specific Terms of Service type is
   turned off.
@@ -62,4 +64,4 @@ result.
   `acceptance_requirements` even if they have already been accepted by the user.
 </Info>
 
-[permissions]: /guides/security/terms-of-service/permissions
+

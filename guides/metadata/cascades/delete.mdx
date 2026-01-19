@@ -8,11 +8,12 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 A metadata cascade policy can be deleted by calling the
-[`DELETE /metadata_cascade_policies/:id`][e_delete] API endpoint with the
+<Link href="/reference/delete-metadata-cascade-policies-id">`DELETE /metadata_cascade_policies/:id`</Link> API endpoint with the
 `id` of the policy to remove.
 
 <CodeGroup>
@@ -66,12 +67,10 @@ client.metadata.deleteCascadePolicy(policyID)
 <Info>
 
   To get the `id` of the policy,
-  [list all policies][g_list_policies] for the folder.
+  <Link href="/guides/metadata/cascades/list">list all policies</Link> for the folder.
 
 </Info>
 
-[e_delete]: /reference/delete-metadata-cascade-policies-id
-[g_list_policies]: /guides/metadata/cascades/list
 
 <RelatedLinks
   title="RELATED APIS"

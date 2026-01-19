@@ -15,6 +15,7 @@ related_endpoints:
 - post_docgen_templates_v2025.0
 sidebarTitle: Overview
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -57,7 +58,7 @@ Box Doc Gen API allows you to:
 
 Box Doc Gen API was released in Box API version `2025.0`. All API requests to Box Doc Gen API endpoints must specify a valid API version by setting the `box-version` header to `2025.0`.
 
-For more details, see [Box API versioning][api-versioning].
+For more details, see <Link href="/guides/api-calls/api-versioning-strategy">Box API versioning</Link>.
 
 ## Box Doc Gen workflow
 
@@ -72,15 +73,13 @@ For more details, see [Box API versioning][api-versioning].
 2. [Add the template to Box][upload-template] using the Box Doc Gen UI. At this point, you can:
 	* Mark an existing file In Box as Doc Gen template.
 	* Create or Upload a document and mark it as a Box Doc Gen template.
-3. [Generate the document][generate-document] using Box Doc Gen API.
+3. <Link href="/guides/docgen/generate-document">Generate the document</Link> using Box Doc Gen API.
 
 [template-addin]: https://support.box.com/hc/en-us/articles/36587535449747-Installing-Box-Doc-Gen-Add-in
 [template-tags]: https://support.box.com/hc/en-us/articles/36151895655059-Creating-A-Box-Doc-Gen-Template-Manually
 [json-template]: https://support.box.com/hc/en-us/articles/36148012877843-Creating-a-Box-Doc-Gen-Template-using-JSON-data
 [tagging-script]: https://support.box.com/hc/en-us/articles/36149723736723-Template-tags-reference
 [upload-template]: https://support.box.com/hc/en-us/articles/36587432368275-Managing-Box-Doc-Gen-Templates-in-Relay
-[generate-document]: /guides/docgen/generate-document
-[api-versioning]:/guides/api-calls/api-versioning-strategy
 
 <RelatedLinks
   title="RELATED GUIDES"

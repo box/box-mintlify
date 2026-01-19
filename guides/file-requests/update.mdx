@@ -11,6 +11,7 @@ related_resources:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 To update some of the basic details for an existing 
 file request, all you need is its unique ID.
@@ -94,13 +95,13 @@ client.fileRequests.update(fileRequestId, {
 
 For more details on the different fields that can be updated when creating
 a template, please see the reference documentation for the
-[`POST /file-requests/:id/update`](/reference/put-file-requests-id) API.
+<Link href="/reference/put-file-requests-id">`POST /file-requests/:id/update`</Link> API.
 
 <Note>
 
 The ID of a file request can be determined by visiting the Box web
 app and inspecting the URL. Please 
-[check our guide](/guides/file-requests/template) on setting up a file
+<Link href="/guides/file-requests/template">check our guide</Link> on setting up a file
 request template to learn how to determine a file request ID.
 
 </Note>

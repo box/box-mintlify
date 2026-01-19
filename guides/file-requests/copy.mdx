@@ -10,6 +10,7 @@ related_resources:
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 
 <RelatedLinks
@@ -18,7 +19,7 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     { label: "Create a template File Request", href: "/guides/file-requests/template", badge: "GUIDE" }
   ]}
 />
-To create a copy of an existing [template](/guides/file-requests/template) file
+To create a copy of an existing <Link href="/guides/file-requests/template">template</Link> file
 request, all you need is its unique ID, and the ID of the folder to apply the
 new file request to.
 
@@ -121,7 +122,7 @@ app and inspecting the URL.
 The folder ID is the number at the end of the URL when visiting a folder, for
 example `app.box.com/folder/123` is the URL for the folder with ID `123`.
 
-For a file request, please [check our guide](/guides/file-requests/template)
+For a file request, please <Link href="/guides/file-requests/template">check our guide</Link>
 on setting up a file request template to learn how to determine a file request
 ID.
 
@@ -152,7 +153,7 @@ curl -i -X POST "https://api.box.com/2.0/file_requests/2342235/copy" \
 
 For more details on the different fields that can be updated when creating
 a template, please see the reference documentation for the
-[`POST /file-requests/:id/copy`](/reference/post-file-requests-id-copy) API.
+<Link href="/reference/post-file-requests-id-copy">`POST /file-requests/:id/copy`</Link> API.
 
 </Note>
 

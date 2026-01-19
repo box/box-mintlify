@@ -12,6 +12,7 @@ related_resources:
 required_guides: []
 alias_paths:
 ---
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -23,7 +24,7 @@ created in the [Developer Console][console] and with API.
 <Warning>
   V2 webhooks can be created only when the scope **Manage Webhooks**
   is selected and the application is authorized. See more about
-  [Required Access Scopes][1] and [authorization][2].
+  <Link href="/guides/applications">Required Access Scopes</Link> and <Link href="/guides/authorization">authorization</Link>.
 </Warning>
 
 To create a webhook follow the steps below.
@@ -49,9 +50,9 @@ To create a webhook follow the steps below.
   This API requires the application to have the **Manage Webhooks** scope enabled.
 </Warning>
 
-To attach a webhook to a folder, call the [create webhook][3] endpoint with the
+To attach a webhook to a folder, call the <Link href="/reference/post-webhooks">create webhook</Link> endpoint with the
 type of `folder`, the ID of the folder, a URL to send webhook notifications to,
-and a list of [triggers][4].
+and a list of <Link href="/guides/webhooks/triggers">triggers</Link>.
 
 <CodeGroup>
 ```sh cURL
@@ -167,7 +168,7 @@ client.webhooks.create(
 ## Ownership
 
 It is best practice and strongly recommended to create webhooks with a
-[Service Account][sa], or user that will not be deleted, to avoid potential
+<Link href="/platform/user-types/#service-account">Service Account</Link>, or user that will not be deleted, to avoid potential
 issues with webhook delivery due to loss of access to content.
 
 Similar to files and folders, webhooks are owned by a user. If a user who owns a
@@ -191,13 +192,8 @@ The triggers are a list of strings that specify the events which cause the
 webhook to fire. For example, if you want the webhook to be triggered
 when a user uploads a file, use `FILE.UPLOADED`.
 
-You can find a list of available triggers [in this guide][4].
+You can find a list of available triggers <Link href="/guides/webhooks/triggers">in this guide</Link>.
 
-[1]: /guides/applications
-[2]: /guides/authorization
-[3]: /reference/post-webhooks
-[4]: /guides/webhooks/triggers
-[sa]: /platform/user-types/#service-account
 [console]: https://app.box.com/developers/console
 
 <RelatedLinks

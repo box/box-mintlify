@@ -8,6 +8,9 @@ related_resources: []
 alias_paths:
   - /docs/authentication-types-and-security
 ---
+import {Link} from "/snippets/Link.jsx";
+
+
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
@@ -17,9 +20,9 @@ The following authorization methods are available to each Box application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
-| [Platform App][custom-app]     | Yes                 | Yes  | Yes                 | No         | 
-| [Limited Access App][la-app] | No                  | No  | No                  | Yes        |
-| [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
+| <Link href="/guides/applications/app-types/platform-apps">Platform App</Link>     | Yes                 | Yes  | Yes                 | No         | 
+| <Link href="/guides/applications/app-types/limited-access-apps">Limited Access App</Link> | No                  | No  | No                  | Yes        |
+| <Link href="/guides/applications/app-types/custom-skills">Custom Skill</Link> | No                  | No   | No                  | No         |
 
 ## Client-side
 
@@ -145,6 +148,6 @@ authentication the token defaults to the application's Service Account.
 
 </Info>
 
-[custom-app]: /guides/applications/app-types/platform-apps
-[custom-skill]: /guides/applications/app-types/custom-skills
-[la-app]: /guides/applications/app-types/limited-access-apps
+
+
+
