@@ -1,33 +1,21 @@
 ---
-title: "分類"
-category_id: metadata
-subcategory_id: null
-is_index: false
-id: metadata/classifications
-type: guide
-total_steps: 2
-sibling_id: metadata
-parent_id: metadata
-next_page_id: metadata
-previous_page_id: metadata/scopes
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/classifications.md
+title: 分類
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Boxを使用すると、ユーザーおよびアプリケーションは、セキュリティ分類ラベルをファイルを適用したり、分類ラベルをフォルダとそのコンテンツにカスケードしたりできます。分類は、BoxのGovernanceおよびShield製品から不注意でアクセスされないよう、共有した機密性の高いコンテンツを保護するのに役立ちます。
 
 分類APIを使用すると、新しい分類ラベルを作成したり、分類をファイルやフォルダに割り当てたりすることができます。
 
 <Frame border center>
-
-![文字列フィールド](./classification-example.png)
-
+  ![文字列フィールド](./classification-example.png)
 </Frame>
 
-分類では、[メタデータAPI](/ja/guides/metadata)を使用して、分類ラベルを作成したり、分類をファイルやフォルダに割り当てたりします。メタデータテンプレートとメタデータインスタンスの詳細については、[メタデータ](/ja/guides/metadata)に関するガイドを参照してください。
+分類では、<Link href="/guides/metadata">メタデータAPI</Link>を使用して、分類ラベルを作成したり、分類をファイルやフォルダに割り当てたりします。メタデータテンプレートとメタデータインスタンスの詳細については、<Link href="/guides/metadata">メタデータ</Link>に関するガイドを参照してください。
 
 ## 分類とメタデータ
 
@@ -39,7 +27,7 @@ Boxを使用すると、ユーザーおよびアプリケーションは、セ�
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Add classification to file", href: "/ja/reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo", badge: "POST" },
-    { label: "Add classification to folder", href: "/ja/reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo", badge: "POST" }
-  ]}
+  { label: "Add classification to file", href: "/reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo", badge: "POST" },
+  { label: "Add classification to folder", href: "/reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo", badge: "POST" }
+]}
 />

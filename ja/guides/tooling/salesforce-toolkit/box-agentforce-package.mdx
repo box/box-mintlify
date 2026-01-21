@@ -1,28 +1,19 @@
 ---
-title: "Box for Agentforce拡張パッケージ"
-alias_paths: []
-category_id: tooling
-subcategory_id: tooling/salesforce-toolkit
-is_index: false
-id: tooling/salesforce-toolkit/box-agentforce-package
-type: guide
-total_steps: 5
-sibling_id: tooling/salesforce-toolkit
-parent_id: tooling/salesforce-toolkit
-next_page_id: ''
-previous_page_id: tooling/salesforce-toolkit/ui-elements
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/box-agentforce-package.md
+alias_paths: {}
+title: Box for Agentforce拡張パッケージ
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-[Box for Agentforce拡張パッケージ][agentforce]は、Box for Salesforce管理パッケージの拡張機能です。この拡張機能は、Salesforce内でワークフローを自動化したり、インテリジェントなエージェントベースのプロセスを強化したりするのに役立つ、再利用可能なAgentforce[アクション][actions]を提供します。これは、Box for Salesforceパッケージのコア機能を基に作成されており、グローバルで呼び出し可能なApexメソッドを使用して機能性を高めます。Box for Agentforce拡張パッケージでは、Agentforceアクション内でBoxの名前空間を使用することでメソッドを参照します。
+[Box for Agentforce拡張パッケージ][agentforce]は、Box for Salesforce管理パッケージの拡張機能です。この拡張機能は、Salesforce内でワークフローを自動化したり、インテリジェントなエージェントベースのプロセスを強化したりするのに役立つ、再利用可能なAgentforce<Link href="/guides/tooling/salesforce-toolkit/flow-actions">アクション</Link>を提供します。これは、Box for Salesforceパッケージのコア機能を基に作成されており、グローバルで呼び出し可能なApexメソッドを使用して機能性を高めます。Box for Agentforce拡張パッケージでは、Agentforceアクション内でBoxの名前空間を使用することでメソッドを参照します。
 
 ## Agentforceフローのメソッド
 
-以下のリストには、Agentforceで呼び出し可能な[メソッド][methods]の例を示しています。
+以下のリストには、Agentforceで呼び出し可能な<Link href="/guides/tooling/salesforce-toolkit/methods">メソッド</Link>の例を示しています。
 
 ### フォルダとファイルの管理
 
@@ -76,17 +67,14 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 * メタデータカスケードポリシーを削除
 * Slackチャンネルマッピングを作成
 * Slackチャンネルアクセス管理を無効に設定
-  {/* alex enable */}
+
+{/* alex enable */}
 
 [agentforce]: https://support.box.com/hc/en-us/articles/40370228349331-Installing-Box-for-Agentforce
-
-[methods]: /ja/guides/tooling/salesforce-toolkit/methods
-
-[actions]: /ja/guides/tooling/salesforce-toolkit/flow-actions
 
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Salesforce SDKのインストール", href: "/ja/guides/tooling/sdks/salesforce", badge: "ガイド" }
-  ]}
+  { label: "Install Salesforce SDK", href: "/guides/tooling/sdks/salesforce", badge: "GUIDE" }
+]}
 />

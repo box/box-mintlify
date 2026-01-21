@@ -1,21 +1,12 @@
 ---
-title: "制限"
 alias_paths:
-  - /webhooks/limitations
-category_id: webhooks
-subcategory_id: webhooks/v2
-is_index: false
-id: webhooks/v2/limitations-v2
-type: guide
-total_steps: 6
-sibling_id: webhooks/v2
-parent_id: webhooks/v2
-next_page_id: ''
-previous_page_id: webhooks/v2/signatures-v2
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/limitations-v2.md
+  0: /webhooks/limitations
+title: 制限事項
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -27,13 +18,13 @@ Webhookは、1つの項目 (ファイルまたはフォルダ)、1つのアプ�
 
 例: `CleanupApp`というアプリケーションに関する`Junk`というフォルダ内の`FILE.UPLOADED`イベントを監視するように、`John Doe`によってWebhookが1つ設定されると、その時点で、`FILE.DOWNLOADED`イベントに対してトリガーされるものであっても、`John Doe`によって`CleanupApp`が`Junk`フォルダに2つ目のWebhookを追加することはできません。
 
-別のイベントをリッスンするには、既存のWebhookを[更新][update]するか、新しいアプリケーションを作成します。
+別のイベントをリッスンするには、既存のWebhookを<Link href="/guides/webhooks/v2/update-v2">更新</Link>するか、新しいアプリケーションを作成します。
 
 ## Webhookの上限は1000個
 
 各アプリケーションおよび各ユーザーのWebhookの数は1000個までという制限があります。
 
-1人のユーザーにさらにWebhookを作成するには、別のアプリケーションを作成するか、フォルダツリーでより上位に適用するよう[既存のWebhookを更新][update]します。
+1人のユーザーにさらにWebhookを作成するには、別のアプリケーションを作成するか、フォルダツリーでより上位に適用するよう<Link href="/guides/webhooks/v2/update-v2">既存のWebhookを更新</Link>します。
 
 ## 通知URLに関する制約事項
 
@@ -45,12 +36,10 @@ Webhookの通知URL (`address`) は、有効なIPアドレスに解決される�
 
 ## Webhookはルートフォルダに追加不可
 
-V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成することはできません。代わりに[V1 Webhook][v1]を使用する必要があります。
+V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成することはできません。代わりに<Link href="/guides/webhooks/v1">V1 Webhook</Link>を使用する必要があります。
 
 <Note>
-
-項目の権限が原因でアクションを実行できない場合、試行されたアクションについての通知は送信されません。
-
+  項目の権限が原因でアクションを実行できない場合、試行されたアクションについての通知は送信されません。
 </Note>
 
 ## `NO_ACTIVE_SESSION`はWebhookペイロードで設定
@@ -83,19 +72,14 @@ Webhookは以下の理由で削除される可能性があります。
 "additional_info": {
   "reason": "auto_cleanup"
 }
-
 ```
-
-[v1]: /ja/guides/webhooks/v1
-
-[update]: /ja/guides/webhooks/v2/update-v2
 
 [app authorization]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Webhookの作成", href: "/ja/guides/webhooks/v2/create-v2", badge: "ガイド" },
-    { label: "Webhookの更新", href: "/ja/guides/webhooks/v2/update-v2", badge: "ガイド" }
-  ]}
+  { label: "Create Webhooks", href: "/guides/webhooks/v2/create-v2", badge: "GUIDE" },
+  { label: "Update Webhooks", href: "/guides/webhooks/v2/update-v2", badge: "GUIDE" }
+]}
 />

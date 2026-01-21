@@ -1,21 +1,13 @@
 ---
-title: "分割アップロード"
+alias_paths: ""
 sidebarTitle: 概要
-alias_paths: []
-category_id: uploads
-subcategory_id: uploads/chunked
-is_index: true
-id: uploads/chunked
-type: guide
-total_steps: 5
-sibling_id: uploads
-parent_id: uploads
-next_page_id: uploads/chunked/with-sdks
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/index.md
+title: 分割アップロード
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
+
 大きなファイルでも、分割アップロードAPIを使用して一連のパーツに分割して個別にアップロードすることで、Boxに確実にアップロードできます。
 
 {/* alex ignore failed */}
@@ -28,14 +20,12 @@ fullyTranslated: true
 
 分割アップロードでは、以下の一連のAPIコールを行う必要があります。
 
-1. **[アップロードセッションを作成する][newsession]**: アプリケーションが新しいファイルまたはファイルの新しいバージョンのアップロードセッションを作成します。このセッションにより、ファイルの (新しい) 名前、サイズ、および親フォルダを定義します。
-2. **[パーツをアップロードする][uploadparts]**: アプリケーションがファイルの個々のパーツをチャンクとしてアップロードします。
-3. **[セッションをコミットする][commit]**: アプリケーションがセッションをコミットします。このときにファイルの整合性がチェックされた後、セッションが作成されたときに指定された場所にファイルが配置されます。
+1. **<Link href="/guides/uploads/chunked/create-session">アップロードセッションを作成する</Link>**: アプリケーションが新しいファイルまたはファイルの新しいバージョンのアップロードセッションを作成します。このセッションにより、ファイルの (新しい) 名前、サイズ、および親フォルダを定義します。
+2. **<Link href="/guides/uploads/chunked/upload-part">パーツをアップロードする</Link>**: アプリケーションがファイルの個々のパーツをチャンクとしてアップロードします。
+3. **<Link href="/guides/uploads/chunked/commit-session">セッションをコミットする</Link>**: アプリケーションがセッションをコミットします。このときにファイルの整合性がチェックされた後、セッションが作成されたときに指定された場所にファイルが配置されます。
 
 <Info>
-
-ほとんどの[Box SDKではBoxからの分割アップロードがサポートされている][sdks]ため、アプリケーションコードの複雑さが解消されます。
-
+  ほとんどの<Link href="/guides/uploads/chunked/with-sdks">Box SDKではBoxからの分割アップロードがサポートされている</Link>ため、アプリケーションコードの複雑さが解消されます。
 </Info>
 
 ## 制約事項
@@ -49,11 +39,3 @@ fullyTranslated: true
 {/* alex ignore corruption */}
 
 リソースの浪費やデータ破損を避けるために、クライアントは、アップロードの開始以降、ディスク上の基になるファイルが変更されていないことを確認する必要があります。
-
-[newsession]: /ja/guides/uploads/chunked/create-session
-
-[uploadparts]: /ja/guides/uploads/chunked/upload-part
-
-[commit]: /ja/guides/uploads/chunked/commit-session
-
-[sdks]: /ja/guides/uploads/chunked/with-sdks

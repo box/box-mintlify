@@ -1,20 +1,11 @@
 ---
-title: "レスポンスの並べ替え"
-alias_paths: []
-category_id: api-calls
-subcategory_id: null
-is_index: false
-id: api-calls/sorting
-type: guide
-total_steps: 9
-sibling_id: api-calls
-parent_id: api-calls
-next_page_id: api-calls/request-extra-fields
-previous_page_id: api-calls/status-codes
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/sorting.md
+alias_paths: {}
+title: レスポンスの並べ替え
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -25,13 +16,10 @@ APIから項目のコレクションが返される場合は、APIレスポン�
 ```sh
 curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 <Warning>
-
-コレクションを返すすべてのAPIエンドポイントが並べ替えをサポートしているわけではありません。特にマーカーベースのページネーションを使用するエンドポイントでは、結果の並べ替えがサポートされないことがよくあります。
-
+  コレクションを返すすべてのAPIエンドポイントが並べ替えをサポートしているわけではありません。特にマーカーベースのページネーションを使用するエンドポイントでは、結果の並べ替えがサポートされないことがよくあります。
 </Warning>
 
 ## 並べ替え基準
@@ -39,20 +27,16 @@ curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
 並べ替えの基準となるフィールドは`sort`クエリパラメータによって定義されます。この値に使用できるオプションについては、APIエンドポイントのドキュメントを確認してください。
 
 <Note>
-
-一部のAPIでは、`sort`フィールドが項目の並べ替えの2番目の基準になっています。たとえば、[`GET /folders/:id/items`][get_folders_id_items]エンドポイントの場合、結果は常に、まずその種類で並べ替えられてから、他の基準で並べ替えられます。
-
+  一部のAPIでは、`sort`フィールドが項目の並べ替えの2番目の基準になっています。たとえば、<Link href="/reference/get-folders-id-items">`GET /folders/:id/items`</Link>エンドポイントの場合、結果は常に、まずその種類で並べ替えられてから、他の基準で並べ替えられます。
 </Note>
 
 ## 並べ替えの方向
 
 並べ替えの方向では、`ASC` (昇順の場合) と`DESC` (降順の場合) という2つの値がサポートされます。
 
-[get_folders_id_items]: /ja/reference/get-folders-id-items
-
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "List items in folder", href: "/ja/reference/get-folders-id-items", badge: "GET" }
-  ]}
+  { label: "List items in folder", href: "/reference/get-folders-id-items", badge: "GET" }
+]}
 />

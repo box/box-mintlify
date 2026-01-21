@@ -1,43 +1,33 @@
 ---
-title: "Content Picker"
 alias_paths:
-  - /docs/box-content-picker
-  - /docs/content-picker
-category_id: embed
-subcategory_id: embed/ui-elements
-is_index: false
-id: embed/ui-elements/picker
-type: guide
-total_steps: 18
-sibling_id: embed/ui-elements
-parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/preview
-previous_page_id: embed/ui-elements/explorer-metadata-v1
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/picker.md
+  0: /docs/box-content-picker
+  1: /docs/content-picker
+title: Content Picker
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
-
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "インストール", href: "/ja/guides/embed/ui-elements/installation", badge: "ガイド" }
-  ]}
+  { label: "Installation", href: "/guides/embed/ui-elements/installation", badge: "GUIDE" }
+]}
 />
+
 Box Content Picker UI Elementを使用すると、開発者は、デスクトップまたはモバイルウェブアプリでBoxからファイルやフォルダを選択するためのサポートを追加できます。ライブラリは、指定されたフォルダに関する情報をBox APIを介して取得し、そのコンテンツをフォルダビューにレンダリングします。ユーザーはファイルまたはフォルダを選択でき、その後、このコンテンツ情報がアプリケーションの別の部分に渡されます。
 
 ## インストール
 
-NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](/ja/guides/embed/ui-elements/installation)を参照してください。
+NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、<Link href="/guides/embed/ui-elements/installation">こちら</Link>を参照してください。
 
 ## 認証
 
 UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
 
-<Card href="/ja/guides/authentication/select" title="認証方法の選択について確認する"/>
+<Card href="/guides/authentication/select" arrow title="認証方法の選択について確認する" />
 
 ## サンプルHTML
 
@@ -68,40 +58,30 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     </script>
   </body>
 </html>
-
 ```
 
 ## デモ
 
 ### ファイル選択のデモ
 
-<iframe height="560" scrolling="no" title="Box File Picker" src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="560" scrolling="no" title="Box File Picker" src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ### フォルダ選択のデモ
 
-<iframe height="560" scrolling="no" title="Boxのフォルダ選択機能" src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="560" scrolling="no" title="Boxのフォルダ選択機能" src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ### ファイル選択とプレビューのデモ
 
-<iframe height="560" scrolling="no" title="Box File PickerとBoxプレビュー" src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="560" scrolling="no" title="Box File PickerとBoxプレビュー" src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ### ポップアップ形式でのファイル選択
 
-<iframe height="560" scrolling="no" title="ポップアップ形式のBox File Pickerとアップローダー" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="560" scrolling="no" title="ポップアップ形式のBox File Pickerとアップローダー" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 <Info>
-**アクセストークン**
+  **アクセストークン**
 
-上記のデモは、有効なアクセストークンを指定しなければ、完全に動作しない可能性があります。テスト目的の場合は、一時的な開発者トークンを使用できます。このトークンは、デモにある \[JS] タブで更新する必要があります。
-
+  上記のデモは、有効なアクセストークンを指定しなければ、完全に動作しない可能性があります。テスト目的の場合は、一時的な開発者トークンを使用できます。このトークンは、デモにある \[JS] タブで更新する必要があります。
 </Info>
 
 ## API
@@ -166,7 +146,6 @@ filePicker.removeListener(eventName, listener);
  * @return {void}
  */
 filePicker.removeAllListeners();
-
 ```
 
 ### パラメータ
@@ -179,28 +158,28 @@ filePicker.removeAllListeners();
 
 ### オプション
 
-| パラメータ                 | 型               | デフォルト                                   | 説明                                                                                                                                                                                                           |   |
-| --------------------- | --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| `container`           | `String`        | `document.body`                         | Content Pickerが配置されるコンテナのCSSセレクタ。hide() を呼び出すと、このコンテナは空になります。                                                                                                                                                |   |
-| `sortBy`              | `String`        | `name`                                  | コンテンツリストの最初の並べ替え基準オプション。値は名前または`date`になります。                                                                                                                                                                  |   |
-| `sortDirection`       | `String`        | `ASC`                                   | コンテンツリストの最初の並べ替え方向オプション。値は`ASC`または`DESC`になります。                                                                                                                                                               |   |
-| `logoUrl`             | `String`        |                                         | ヘッダーに表示するカスタムロゴのURL。この値が「box」という文字列の場合は、Boxのロゴが表示されます。                                                                                                                                                       |   |
-| `extensions`          | `Array<string>` | `[]`                                    | 選択対象として許可するファイル拡張子の配列 (例: `['doc', 'ppt']`)。ファイル選択機能のみに適用され、フォルダ選択機能には適用されません。拡張子が指定されている場合は、その拡張子のみを選択できます。空の配列の場合は、すべてのファイル拡張子が選択対象として許可されることを示します。                                                        |   |
-| `maxSelectable`       | `Number`        | `Infinity`                              | 選択可能なファイルまたはフォルダの数。ファイルまたはフォルダが1つだけ選択されるようにする場合は1を指定します。                                                                                                                                                     |   |
-| `canUpload`           | `Boolean`       | `true`                                  | これを`false`に設定すると、アップロードオプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、現在のフォルダに対する権限でも`can_upload`を`false`に設定する必要があります。フォルダに対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                         |   |
-| `canSetShareAccess`   | `Boolean`       | `true`                                  | `false`に設定すると、共有ドロップダウン選択が非表示になります。この選択のドロップダウンを非表示にするだけでは共有権限の変更を防ぐことはできず、フォルダ項目に対する権限でも`can_set_share_access`を`false`に設定する必要があります。フォルダ項目に対する権限`can_set_share_access`が`false`に設定されている場合、このオプションによる効果はありません。 |   |
-| `canCreateNewFolder`  | `Boolean`       | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`がfalseに設定されている場合、このオプションによる効果はありません。                                     |   |
-| `sharedLink`          | `String`        |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                             |   |
-| `sharedLinkPassword`  | `String`        |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                      |   |
-| `modal`               | `Object`        |                                         | ウィンドウ属性を指定すると、Content Pickerは所定の位置に作成されません。代わりに、コンテナ内にボタンが作成され、そのボタンをクリックすると、ウィンドウポップアップでContent Pickerが起動します。                                                                                               |   |
-| `size`                | `String`        | `undefined`                             | Content Pickerが、幅が`small`または`large`のコンテナに合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動でsmallの幅とlargeの幅が切り替わります。                                                     |   |
-| `isTouch`             | Boolean         | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | コンテンツエクスプローラがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                                     |   |
-| `autoFocus`           | `Boolean`       | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                       |   |
-| `defaultView`         | String          | `files`                                 | 値は`files`または`recents`になります。`recents`に設定すると、デフォルトで、通常のファイル/フォルダ構造ではなく最近使用した項目が表示されます。                                                                                                                         |   |
-| `chooseButtonLabel`   | `String`        |                                         | \[選択] ボタンのラベルに置き換わる文字列                                                                                                                                                                                       |   |
-| `cancelButtonLabel`   | `String`        |                                         | \[キャンセル] ボタンのラベルに置き換わる文字列                                                                                                                                                                                    |   |
-| `requestInterceptor`  | `Function`      |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                 |   |
-| `responseInterceptor` | `Function`      |                                         | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                 |   |
+| パラメータ                 | 型               | デフォルト                                   | 説明                                                                                                                                                                                                                             |   |
+| --------------------- | --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
+| `container`           | `String`        | `document.body`                         | Content Pickerが配置されるコンテナのCSSセレクタ。hide() を呼び出すと、このコンテナは空になります。                                                                                                                                                                  |   |
+| `sortBy`              | `String`        | `name`                                  | コンテンツリストの最初の並べ替え基準オプション。値は名前または`date`になります。                                                                                                                                                                                    |   |
+| `sortDirection`       | `String`        | `ASC`                                   | コンテンツリストの最初の並べ替え方向オプション。値は`ASC`または`DESC`になります。                                                                                                                                                                                 |   |
+| `logoUrl`             | `String`        |                                         | ヘッダーに表示するカスタムロゴのURL。この値が「box」という文字列の場合は、Boxのロゴが表示されます。                                                                                                                                                                         |   |
+| `extensions`          | `Array<string>` | `[]`                                    | 選択対象として許可するファイル拡張子の配列 (例: `['doc', 'ppt']`)。ファイル選択機能のみに適用され、フォルダ選択機能には適用されません。拡張子が指定されている場合は、その拡張子のみを選択できます。空の配列の場合は、すべてのファイル拡張子が選択対象として許可されることを示します。                                                                          |   |
+| `maxSelectable`       | `Number`        | `Infinity`                              | 選択可能なファイルまたはフォルダの数。ファイルまたはフォルダが1つだけ選択されるようにする場合は1を指定します。                                                                                                                                                                       |   |
+| `canUpload`           | `Boolean`       | `true`                                  | これを`false`に設定すると、アップロードオプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、現在のフォルダに対する権限でも`can_upload`を`false`に設定する必要があります。フォルダに対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                           |   |
+| `canSetShareAccess`   | `Boolean`       | `true`                                  | `false`に設定すると、共有ドロップダウン選択が非表示になります。この選択のドロップダウンを非表示にするだけでは共有権限の変更を防ぐことはできず、フォルダ項目に対する権限でも`can_set_share_access`を`false`に設定する必要があります。フォルダ項目に対する権限`can_set_share_access`が`false`に設定されている場合、このオプションによる効果はありません。                   |   |
+| `canCreateNewFolder`  | `Boolean`       | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`がfalseに設定されている場合、このオプションによる効果はありません。                                                       |   |
+| `sharedLink`          | `String`        |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                                               |   |
+| `sharedLinkPassword`  | `String`        |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                                        |   |
+| `modal`               | `Object`        |                                         | ウィンドウ属性を指定すると、Content Pickerは所定の位置に作成されません。代わりに、コンテナ内にボタンが作成され、そのボタンをクリックすると、ウィンドウポップアップでContent Pickerが起動します。                                                                                                                 |   |
+| `size`                | `String`        | `undefined`                             | Content Pickerが、幅が`small`または`large`のコンテナに合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動でsmallの幅とlargeの幅が切り替わります。                                                                       |   |
+| `isTouch`             | Boolean         | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | コンテンツエクスプローラがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                                                       |   |
+| `autoFocus`           | `Boolean`       | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                                         |   |
+| `defaultView`         | String          | `files`                                 | 値は`files`または`recents`になります。`recents`に設定すると、デフォルトで、通常のファイル/フォルダ構造ではなく最近使用した項目が表示されます。                                                                                                                                           |   |
+| `chooseButtonLabel`   | `String`        |                                         | \[選択] ボタンのラベルに置き換わる文字列                                                                                                                                                                                                         |   |
+| `cancelButtonLabel`   | `String`        |                                         | \[キャンセル] ボタンのラベルに置き換わる文字列                                                                                                                                                                                                      |   |
+| `requestInterceptor`  | `Function`      |                                         | リクエストをインターセプトする関数。例については、<Link href="https://codepen.io/box-platform/pen/jLdxEv">このCodePen</Link>を参照してください。基盤となるXHRライブラリは`axios.js`で、<Link href="https://github.com/axios/axios#interceptors">インターセプタでは同様のアプローチ</Link>に従っています。 |   |
+| `responseInterceptor` | `Function`      |                                         | レスポンスをインターセプトする関数。例については、<Link href="https://codepen.io/box-platform/pen/jLdxEv">このCodePen</Link>を参照してください。基盤となるXHRライブラリは`axios.js`で、<Link href="https://github.com/axios/axios#interceptors">インターセプタでは同様のアプローチ</Link>に従っています。 |   |
 
 ### ウィンドウオプション
 
@@ -239,11 +218,11 @@ filePicker.removeAllListeners();
 | `g then c`              | 選択                  |
 | `g then r`              | 最近使用した項目            |
 
-##  スコープ 
+## &#x20;スコープ&#x20;
 
-アプリケーションで、エンドユーザーがContent Picker機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Pickerを初期化するエンドユーザークライアントに安全に渡すことができます。
+アプリケーションで、エンドユーザーがContent Picker機能のサブセットのみにアクセスできるようにする必要がある場合は、<Link href="/guides/authentication/tokens/downscope">ダウンスコープ</Link>を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Pickerを初期化するエンドユーザークライアントに安全に渡すことができます。
 
-以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content PickerのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
+以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content PickerのUIコントロールを有効/無効にすることができます。詳細については、<Link href="/guides/api-calls/permissions-and-errors/scopes">Box UI Elementsの専用スコープ</Link>を参照してください。
 
 | スコープ名         | 付与される権限                                            |
 | ------------- | -------------------------------------------------- |
@@ -276,7 +255,6 @@ contentExplorer.show(configData.FOLDER_ID, configData.ACCESS_TOKEN, {
     container: ".container",
     itemActions: customActions,
 });
-
 ```
 
 この配列には、複数の操作を含めることができます。操作オブジェクトには、`label`、`onAction`コールバック関数を含める必要があります。`file`または`folder`の値を渡すことで、特定の項目の`type`のみに表示されるようカスタム操作にフィルタをかけることができます。`filter`値は、特定のファイル拡張子など、高度なフィルタに使用します。
@@ -298,22 +276,15 @@ const customActions = [
         filter: (item) => item.extension?.toLowerCase() === 'pdf',
     },
 ];
-
 ```
 
 CodePenで実装例を確認してください。
 
-<iframe height="560" scrolling="no" title="Boxのカスタムアイコン" src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
-
-[downscope]: /ja/guides/authentication/tokens/downscope
-
-[scopes]: /ja/guides/api-calls/permissions-and-errors/scopes
+<iframe height="560" scrolling="no" title="Boxのカスタムアイコン" src="https://codepen.io/box-platform/embed/EaaMMKQ?default-tab=html%2Cresult" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "UI Element", href: "/ja/guides/embed/ui-elements/index", badge: "ガイド" }
-  ]}
+  { label: "UI Elements", href: "/guides/embed/ui-elements/index", badge: "GUIDE" }
+]}
 />

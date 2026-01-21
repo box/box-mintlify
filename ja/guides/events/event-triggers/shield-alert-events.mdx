@@ -1,20 +1,11 @@
 ---
-title: "Shieldアラートイベント"
-alias_paths: []
-category_id: events
-subcategory_id: events/event-triggers
-is_index: false
-id: events/event-triggers/shield-alert-events
-type: guide
-total_steps: 5
-sibling_id: events/event-triggers
-parent_id: events/event-triggers
-next_page_id: events/event-triggers/shield-information-barrier-events
-previous_page_id: events/event-triggers
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-alert-events.md
+alias_paths: {}
+title: Shieldアラートイベント
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -32,7 +23,7 @@ Shieldによって生成される可能性があるアラートは以下のと�
 4. 悪意のあるコンテンツ
 5. ランサムウェアアクティビティ (Shield Proの一部)
 
-Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][events] Stream内で生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_ALERT`に設定されます。
+Shieldの脅威検出アラートイベントはすべて、<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内で生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_ALERT`に設定されます。
 
 ```json
 {
@@ -54,7 +45,6 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
     "..."
   }
 }
-
 ```
 
 `additional_details`オブジェクトは、イベントをトリガーした特定の種類のShieldアラートに関する情報を提供します。
@@ -112,7 +102,6 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
     "created_at": "2019-12-20T11:37:15-08:00"
   }
 }
-
 ```
 
 ### 不審なセッションに関するアラート
@@ -191,7 +180,6 @@ Sessions`値によって識別できます。
     "created_at": "2019-12-20T11:38:16-08:00"
   }
 }
-
 ```
 
 ### 異常なダウンロードに関するアラート
@@ -245,7 +233,6 @@ Sessions`値によって識別できます。
     "created_at": "2019-12-20T11:38:16-08:00"
   }
 }
-
 ```
 
 ### 悪意のあるコンテンツに関するアラート
@@ -413,18 +400,17 @@ Sessions`値によって識別できます。
 
 {/* i18n-disable localize-links */}
 
-[events]: /ja/guides/events/enterprise-events/for-enterprise
-
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "List user and enterprise events", href: "/ja/reference/get-events", badge: "GET" },
-    { label: "Get events long poll endpoint", href: "/ja/reference/options-events", badge: "OPTIONS" }
-  ]}
+  { label: "List user and enterprise events", href: "/reference/get-events", badge: "GET" },
+  { label: "Get events long poll endpoint", href: "/reference/options-events", badge: "OPTIONS" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Enterprise Eventの取得", href: "/ja/guides/events/enterprise-events/for-enterprise", badge: "ガイド" }
-  ]}
+  { label: "Get Enterprise Events", href: "/guides/events/enterprise-events/for-enterprise", badge: "GUIDE" }
+]}
 />

@@ -1,33 +1,22 @@
 ---
-title: "ストリーム位置のページネーション"
 alias_paths:
-  - /guides/events/pagination
-  - /guides/events/pagination/
-category_id: events
-subcategory_id: events/parameters
-is_index: false
-id: events/parameters/pagination
-type: guide
-total_steps: 2
-sibling_id: events/parameters
-parent_id: events/parameters
-next_page_id: ''
-previous_page_id: events/parameters/stream-types
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/pagination.md
+  0: /guides/events/pagination
+  1: /guides/events/pagination/
+title: ストリーム位置のページネーション
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 イベントストリームのページネーションは、`stream_position`パラメータの使用によって機能します。
 
-最初に、`stream_position`クエリパラメータを指定せずにリクエストを[`GET /events`](/ja/reference/get-events) APIに送信します。
+最初に、`stream_position`クエリパラメータを指定せずにリクエストを<Link href="/reference/get-events">`GET /events`</Link> APIに送信します。
 
 ```sh
 curl https://api.box.com/2.0/events \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 このAPIにより、使用可能なすべてのイベントが古い方から順に返されます。レスポンスには`next_stream_position`値も含まれており、これを使用して、ストリーム内の次の位置に対する次のAPIコールを実行できます。
@@ -35,7 +24,6 @@ curl https://api.box.com/2.0/events \
 ```sh
 curl https://api.box.com/2.0/events?stream_position=388720462721 \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 `stream_position`は、最も近いストリーム位置が返されるよう`now`に設定することもできます。
@@ -43,7 +31,6 @@ curl https://api.box.com/2.0/events?stream_position=388720462721 \
 ```sh
 curl https://api.box.com/2.0/events?stream_position=now \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 この場合、APIによって空のリストと、次の呼び出しに使用できる`next_stream_position`が返されます。
@@ -51,14 +38,15 @@ curl https://api.box.com/2.0/events?stream_position=now \
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "List user and enterprise events", href: "/ja/reference/get-events", badge: "GET" },
-    { label: "Get events long poll endpoint", href: "/ja/reference/options-events", badge: "OPTIONS" }
-  ]}
+  { label: "List user and enterprise events", href: "/reference/get-events", badge: "GET" },
+  { label: "Get events long poll endpoint", href: "/reference/options-events", badge: "OPTIONS" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Enterprise Eventの取得", href: "/ja/guides/events/enterprise-events/for-enterprise", badge: "ガイド" },
-    { label: "User Eventの取得", href: "/ja/guides/events/user-events/for-user", badge: "ガイド" }
-  ]}
+  { label: "Get Enterprise Events", href: "/guides/events/enterprise-events/for-enterprise", badge: "GUIDE" },
+  { label: "Get User Events", href: "/guides/events/user-events/for-user", badge: "GUIDE" }
+]}
 />

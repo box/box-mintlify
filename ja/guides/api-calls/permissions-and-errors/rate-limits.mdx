@@ -1,22 +1,12 @@
 ---
-title: "レート制限"
-alias_paths: []
-category_id: api-calls
-subcategory_id: api-calls/permissions-and-errors
-is_index: false
-id: api-calls/permissions-and-errors/rate-limits
-type: guide
-total_steps: 6
-sibling_id: api-calls/permissions-and-errors
-parent_id: api-calls/permissions-and-errors
-next_page_id: api-calls/permissions-and-errors/scopes
-previous_page_id: api-calls/permissions-and-errors/common-errors
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/rate-limits.md
+alias_paths: {}
+title: レート制限
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 APIコールのレート制限には一般的に3種類あります。Boxは独自の判断でこの制限を使用して、ネットワークリソースの保護やカスタマーエクスペリエンスの品質維持をうまく実現することができます。
 
@@ -30,7 +20,7 @@ APIコールのレート制限には一般的に3種類あります。Boxは独�
 
 ## ライセンスベース
 
-すべてのBox Businessプランでは、1か月あたり1社ごとに許可されるAPIコールの数がライセンスされています。このライセンスベースのレート制限は、ネットワークリソースの過剰供給や乱用を防ぐことを目的としています。顧客が使用するツールや顧客のために使用されるツールがその顧客のAPIライセンス割り当てを超過しているか、ネットワーク管理を回避しようとしていることがBoxのインフラストラクチャで検出されると、さらに対象を絞ったレート制限が課せられる場合があります。Boxの[価格ページ][pricing]では、特定のアカウントレベルでライセンスされているデフォルトのAPI割り当てを確認できますが、割り当てを増やすためにPlatform APIの価格プランを購入する顧客もいることに注意してください。
+すべてのBox Businessプランでは、1か月あたり1社ごとに許可されるAPIコールの数がライセンスされています。このライセンスベースのレート制限は、ネットワークリソースの過剰供給や乱用を防ぐことを目的としています。顧客が使用するツールや顧客のために使用されるツールがその顧客のAPIライセンス割り当てを超過しているか、ネットワーク管理を回避しようとしていることがBoxのインフラストラクチャで検出されると、さらに対象を絞ったレート制限が課せられる場合があります。Boxの[価格ページ][pricing]では、特定のアカウントレベルでライセンスされているデフォルトのAPI割り当てを確認できますが、割り当てを増やすためにPlatform APIの価格プランを購入する顧客もいることに注意してください。 
 
 ## APIごとのレート制限
 
@@ -41,7 +31,7 @@ APIコールのレート制限には一般的に3種類あります。Boxは独�
 * アップロード
   * 1ユーザーあたりのファイルアップロードリクエストは240件/分
 * 検索
-  * [検索エンドポイント][search]に対して、1ユーザーあたりの検索数は6件/秒
+  * <Link href="/reference/get-search">検索エンドポイント</Link>に対して、1ユーザーあたりの検索数は6件/秒
   * 基本のレート制限に加えてさらに2つの制限が適用
     * 1ユーザーあたりの検索数は60件/分
     * 会社あたりの検索数は12件/秒
@@ -57,7 +47,6 @@ APIコールのレート制限には一般的に3種類あります。Boxは独�
 
 ```yaml
 retry-after: 100
-
 ```
 
 ```json
@@ -69,30 +58,26 @@ retry-after: 100
   "message": "Request rate limit exceeded, please try again later",
   "request_id": "abcdef123456"
 }
-
 ```
 
-詳細については、[クライアントエラーのリソース](/ja/reference/resources/client-error)を参照してください。
+詳細については、<Link href="/reference/resources/client-error">クライアントエラーのリソース</Link>を参照してください。
 
 <Note>
-
-`retry-after`ヘッダーでは、次のAPIコールが再試行可能になるまで待機する秒数を指示します。一般的には、APIコールの再試行に指数バックオフ戦略を使用することをお勧めします。
-
+  `retry-after`ヘッダーでは、次のAPIコールが再試行可能になるまで待機する秒数を指示します。一般的には、APIコールの再試行に指数バックオフ戦略を使用することをお勧めします。
 </Note>
-
-[search]: /ja/reference/get-search
 
 [pricing]: https://www.box.com/pricing
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Search for content", href: "/ja/reference/get-search", badge: "GET" }
-  ]}
+  { label: "Search for content", href: "/reference/get-search", badge: "GET" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "エラー", href: "/ja/guides/api-calls/permissions-and-errors/common-errors", badge: "ガイド" }
-  ]}
+  { label: "Errors", href: "/guides/api-calls/permissions-and-errors/common-errors", badge: "GUIDE" }
+]}
 />

@@ -1,22 +1,12 @@
 ---
-title: "マーカーベースのページネーション"
-alias_paths: []
-category_id: api-calls
-subcategory_id: api-calls/pagination
-is_index: false
-id: api-calls/pagination/marker-based
-type: guide
-total_steps: 2
-sibling_id: api-calls/pagination
-parent_id: api-calls/pagination
-next_page_id: ''
-previous_page_id: api-calls/pagination
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/pagination/marker-based.md
+alias_paths: {}
+title: マーカーベースのページネーション
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 マーカーベースのページングを使用するAPIは、`marker`および`limit`クエリパラメータを使用してコレクション内の項目のページ割りを行います。
 
@@ -27,15 +17,12 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 コレクション内のエントリの最初のページを取得するには、APIを`marker`パラメータを指定せずに呼び出すか、`marker`を`0`に設定して呼び出す必要があります。`limit`パラメータは省略可能です。
 
 ```sh
-curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
+curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true&marker= \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 <Note>
-
-オフセットベースのページネーションとマーカーベースのページネーションの両方をサポートするAPIでは、マーカーベースのページネーションが使用されるように`usemarker`クエリパラメータを`true`に設定する必要があります。
-
+  オフセットベースのページネーションとマーカーベースのページネーションの両方をサポートするAPIでは、マーカーベースのページネーションが使用されるように`usemarker`クエリパラメータを`true`に設定する必要があります。
 </Note>
 
 エントリの次のページを取得するには、APIレスポンスで受け取った`next_marker`値の値に等しい`marker`パラメータを指定して、APIを呼び出す必要があります。
@@ -43,15 +30,12 @@ curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
 ```sh
 curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker=true \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 次の`next_marker`値がレスポンスオブジェクト内で`null`になっている場合、項目の最終ページはリクエスト済みです。この時点では、これ以上取得する項目がありません。
 
 <Note>
-
-マーカーベースのページングを使用する場合、コレクション内のエントリの合計数を確認するには、エントリをすべて取得するしかありません。マーカーの内部実装は今後変更される可能性があるため、アプリケーションでは`next_marker`値を長期にわたって保持しないでください。
-
+  マーカーベースのページングを使用する場合、コレクション内のエントリの合計数を確認するには、エントリをすべて取得するしかありません。マーカーの内部実装は今後変更される可能性があるため、アプリケーションでは`next_marker`値を長期にわたって保持しないでください。
 </Note>
 
 ## マーカーと制限
@@ -78,32 +62,33 @@ curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker
 
 以下は、マーカーベースのページネーションをサポートするエンドポイントの例です。
 
-* [フォルダ内の項目を取得](/ja/reference/get-folders-id-items)
-* [ファイルのコラボレーションのリストを取得](/ja/reference/get-files-id-collaborations)
-* [ユーザーのすべてのWebhookのリストを取得](/ja/reference/get-webhooks)
-* [社内のすべてのユーザーのリストを取得](/ja/reference/get-users)
-* [ごみ箱にあるすべての項目のリストを取得](/ja/reference/get-folders-trash-items)
+* <Link href="/reference/get-folders-id-items">フォルダ内の項目を取得</Link>
+* <Link href="/reference/get-files-id-collaborations">ファイルのコラボレーションのリストを取得</Link>
+* <Link href="/reference/get-webhooks">ユーザーのすべてのWebhookのリストを取得</Link>
+* <Link href="/reference/get-users">社内のすべてのユーザーのリストを取得</Link>
+* <Link href="/reference/get-folders-trash-items">ごみ箱にあるすべての項目のリストを取得</Link>
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "List items in folder", href: "/ja/reference/get-folders-id-items", badge: "GET" },
-    { label: "List file collaborations", href: "/ja/reference/get-files-id-collaborations", badge: "GET" },
-    { label: "List folder collaborations", href: "/ja/reference/get-folders-id-collaborations", badge: "GET" },
-    { label: "List all webhooks", href: "/ja/reference/get-webhooks", badge: "GET" },
-    { label: "List all metadata templates for enterprise", href: "/ja/reference/get-metadata-templates-enterprise", badge: "GET" },
-    { label: "List recently accessed items", href: "/ja/reference/get-recent-items", badge: "GET" },
-    { label: "List all legal hold policies", href: "/ja/reference/get-legal-hold-policies", badge: "GET" },
-    { label: "List enterprise device pins", href: "/ja/reference/get-enterprises-id-device-pinners", badge: "GET" },
-    { label: "List enterprise users", href: "/ja/reference/get-users", badge: "GET" },
-    { label: "List trashed items", href: "/ja/reference/get-folders-trash-items", badge: "GET" },
-    { label: "List enterprise users", href: "/ja/reference/get-users", badge: "GET" }
-  ]}
+  { label: "List items in folder", href: "/reference/get-folders-id-items", badge: "GET" },
+  { label: "List file collaborations", href: "/reference/get-files-id-collaborations", badge: "GET" },
+  { label: "List folder collaborations", href: "/reference/get-folders-id-collaborations", badge: "GET" },
+  { label: "List all webhooks", href: "/reference/get-webhooks", badge: "GET" },
+  { label: "List all metadata templates for enterprise", href: "/reference/get-metadata-templates-enterprise", badge: "GET" },
+  { label: "List recently accessed items", href: "/reference/get-recent-items", badge: "GET" },
+  { label: "List all legal hold policies", href: "/reference/get-legal-hold-policies", badge: "GET" },
+  { label: "List enterprise device pins", href: "/reference/get-enterprises-id-device-pinners", badge: "GET" },
+  { label: "List enterprise users", href: "/reference/get-users", badge: "GET" },
+  { label: "List trashed items", href: "/reference/get-folders-trash-items", badge: "GET" },
+  { label: "List enterprise users", href: "/reference/get-users", badge: "GET" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "レスポンスの並べ替え", href: "/ja/guides/api-calls/sorting", badge: "ガイド" },
-    { label: "オフセットベースのページネーション", href: "/ja/guides/api-calls/pagination/offset-based", badge: "ガイド" }
-  ]}
+  { label: "Sorting responses", href: "/guides/api-calls/sorting", badge: "GUIDE" },
+  { label: "Offset-based Pagination", href: "/guides/api-calls/pagination/offset-based", badge: "GUIDE" }
+]}
 />

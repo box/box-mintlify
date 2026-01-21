@@ -1,20 +1,11 @@
 ---
-title: "AIモデルの上書き"
 sidebarTitle: 概要
-category_id: box-ai
-subcategory_id: box-ai/ai-agents
-is_index: true
-id: box-ai/ai-agents
-type: guide
-total_steps: 3
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/ai-agents/get-agent-default-config
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
+title: AIモデルの上書き
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -22,36 +13,33 @@ Boxでは、常に最先端のオプションに対応するため、定期的�
 
 Box AIに基づいた実装の場合、新しいデフォルトモデルによって、ダウンストリームプロセスを中断または変更するように結果が変更される可能性があります。特定のバージョンに切り替えることで、問題の発生を防止できる場合があります。
 
-また、特定のモデルを選択すると、ユースケースに対してより適切な結果が得られる場合もあります。このような理由で、[サポートされているモデル][models]のリストに含まれる任意のモデルに切り替えることが可能です。
+また、特定のモデルを選択すると、ユースケースに対してより適切な結果が得られる場合もあります。このような理由で、<Link href="/guides/box-ai/ai-models">サポートされているモデル</Link>のリストに含まれる任意のモデルに切り替えることが可能です。
 
 モデルの切り替えとは別に、オプションを渡すことで、Box AIの実装で使用されるエージェントをさらにカスタマイズし、ユースケースに合ったレスポンスを取得することもできます。
 
-具体的なユースケースを確認するには、[上書きに関するチュートリアル][overrides]を参照してください。
+具体的なユースケースを確認するには、<Link href="/guides/box-ai/ai-agents/ai-agent-overrides">上書きに関するチュートリアル</Link>を参照してください。
 
-[ask]: /ja/reference/post-ai-ask#param-ai-agent
+[ask]: /reference/post-ai-ask#param-ai-agent
 
-[text-gen]: /ja/reference/post-ai-text-gen#param-ai-agent
+[text-gen]: /reference/post-ai-text-gen#param-ai-agent
 
-[agent-default]: /ja/guides/box-ai/ai-agents/get-agent-default-config
-
-[overrides]: /ja/guides/box-ai/ai-agents/ai-agent-overrides
-
-[models]: /ja/guides/box-ai/ai-models
+[agent-default]: /guides/box-ai/ai-agents/get-agent-default-config
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Get AI agent default configuration", href: "/ja/reference/get-ai-agent-default", badge: "GET" },
-    { label: "Generate text", href: "/ja/reference/post-ai-text-gen", badge: "POST" },
-    { label: "Ask question", href: "/ja/reference/post-ai-ask", badge: "POST" },
-    { label: "Extract metadata (freeform)", href: "/ja/reference/post-ai-extract", badge: "POST" },
-    { label: "Extract metadata (structured)", href: "/ja/reference/post-ai-extract-structured", badge: "POST" }
-  ]}
+  { label: "Get AI agent default configuration", href: "/reference/get-ai-agent-default", badge: "GET" },
+  { label: "Generate text", href: "/reference/post-ai-text-gen", badge: "POST" },
+  { label: "Ask question", href: "/reference/post-ai-ask", badge: "POST" },
+  { label: "Extract metadata (freeform)", href: "/reference/post-ai-extract", badge: "POST" },
+  { label: "Extract metadata (structured)", href: "/reference/post-ai-extract-structured", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "AIエージェントのデフォルト構成を取得する", href: "/ja/guides/box-ai/ai-agents/get-agent-default-config", badge: "ガイド" },
-    { label: "AIモデルの構成の上書き", href: "/ja/guides/box-ai/ai-agents/ai-agent-overrides", badge: "ガイド" }
-  ]}
+  { label: "Get default AI agent configuration", href: "/guides/box-ai/ai-agents/get-agent-default-config", badge: "GUIDE" },
+  { label: "Override AI model configuration", href: "/guides/box-ai/ai-agents/ai-agent-overrides", badge: "GUIDE" }
+]}
 />
