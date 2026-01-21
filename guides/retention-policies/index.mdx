@@ -1,6 +1,5 @@
 ---
 title: Retention Policies
-rank: 200
 alias_paths:
 sidebarTitle: Overview
 ---
@@ -22,12 +21,12 @@ permanently when the data can no longer be legally held.
 Working with Retention Policies requires a developer to work with three
 distinct resources.
 
-* **Policies:**  A <Link href="/reference/resources/retention_policy">Retention Policy</Link> describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A <Link href="/reference/resources/retention_policy_assignment">Retention Policy Assignment</Link> is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
-* **Retentions**: A <Link href="/reference/resources/file_version_retention">File Version Retention</Link> represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
+* **Policies:**  A <Link href="/reference/resources/retention-policy">Retention Policy</Link> describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
+* **Assignments:** A <Link href="/reference/resources/retention-policy-assignment">Retention Policy Assignment</Link> is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
+* **Retentions**: A <Link href="/reference/resources/file-version-retention">File Version Retention</Link> represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
 
 <Warning>
-  The <Link href="/reference/resources/file_version_retention">file version retention</Link> section of the Box API
+  The <Link href="/reference/resources/file-version-retention">file version retention</Link> section of the Box API
   is now deprecated. Instead, you can use <Link href="/reference/get-retention-policy-assignments-id-files-under-retention">files under retention</Link> or
   <Link href="/reference/get-retention-policy-assignments-id-file-versions-under-retention">file versions under retention</Link> endpoints.
 </Warning>
@@ -48,9 +47,9 @@ prior to the new date.
 
 ## Required Scopes
 
-Before using any of the Retention Policy APIs, an application must have the <Link href="/guides/api-calls/permissions-and-errors/scopes">GCM
-and Manage Retention Policies scopes</Link> enabled. These are not available
-in the Developer Console and need to instead be enabled by contacting customer
-support.
+Before using any of the Retention Policy APIs, an application must have the following <Link href="/guides/api-calls/permissions-and-errors/scopes">scopes</Link> enabled: 
+* <Link href="/guides/api-calls/permissions-and-errors/scopes#manage-retention-policies">Manage Retention Policies</Link>, available in the Developer Console under **Configuration** > **Application Scopes**
+* <Link href="/guides/api-calls/permissions-and-errors/scopes#global-content-manager-gcm">Global Content Manager (GCM)</Link>, enabled by contacting customer support
+
 
 [governance]: https://www.box.com/security/governance-and-compliance
