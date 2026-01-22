@@ -80,27 +80,46 @@ npm run add-mint-config -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\
 
 **Note:** The script reads configuration from `.github/scripts/openapi-mint-config.json` and deep merges it into the OpenAPI files, preserving existing properties.
 
-## Workflow
+### Clean Description Fields
 
-The typical workflow for updating API documentation is:
+Clean newlines in OpenAPI description fields by removing single newlines within paragraphs while preserving markdown structure:
 
-1. Generate API pages from OpenAPI files using `create-api-pages`
-2. Update the navigation structure in `docs.json` using `update-docs-json`
-
-**Example: Update English documentation**
 ```bash
-# Step 1: Generate API pages
-npm run create-api-pages -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$" --reference-dir "../../reference"
-
-# Step 2: Update docs.json
-npm run update-docs-json -- --directory "../.."  --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$" --docs-json "../../docs.json"
+npm run clean-descriptions -- --directory <directory> --pattern <pattern> [--output <output-dir>]
 ```
 
-**Example: Update Japanese documentation**
-```bash
-# Step 1: Generate API pages
-npm run create-api-pages -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$" --reference-dir "../../ja/reference" --locale ja
+**Arguments:**
+- `--directory` - Path to directory containing OpenAPI JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--output` - Output directory for modified files (default: same as `--directory`)
 
-# Step 2: Update docs.json
-npm run update-docs-json -- --directory "../.."  --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$" --docs-json "../../ja/docs.json" --locale ja
+**What it does:**
+- Removes single newlines within paragraphs (replaces with spaces)
+- Preserves paragraph breaks (double newlines)
+- Maintains markdown structure: lists, code blocks, blockquotes, tables, headings
+- Uses Prettier with markdown parser for markdown-aware processing
+
+**Examples:**
+```bash
+# Clean all OpenAPI files in place
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi.*\\.json$"
+
+# Clean English OpenAPI files
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$"
+
+# Clean Japanese OpenAPI files
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$"
+
+# Clean to a different output directory
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi\\.json$" --output "../../cleaned"
+```
+
+**Before:**
+```
+"description": "Specifies the validation rules.\nIf set, this validation is mandatory."
+```
+
+**After:**
+```
+"description": "Specifies the validation rules. If set, this validation is mandatory."
 ```
