@@ -6046,6 +6046,490 @@
     {
       "source": "/docs/developer-newsletter",
       "destination": "/newsletter"
+    },
+    {
+      "source": "/ja/guides/extract-metadata",
+      "destination": "/ja/guides/box-ai/ai-tutorials/extract-metadata-structured"
+    },
+    {
+      "source": "/ja/webhooks/manage/update",
+      "destination": "/ja/guides/webhooks/v2/update-v2"
+    },
+    {
+      "source": "/ja/guides/webhooks/handle/setup-signatures",
+      "destination": "/ja/guides/webhooks/v2/signatures-v2"
+    },
+    {
+      "source": "/ja/webhooks/manage/list-all",
+      "destination": "/ja/guides/webhooks/v2/list-v2"
+    },
+    {
+      "source": "/ja/docs/domain-whitelisting",
+      "destination": "/ja/guides/api-calls/allowing-domain-access"
+    },
+    {
+      "source": "/ja/guides/api-calls/domain-whitelisting",
+      "destination": "/ja/guides/api-calls/allowing-domain-access"
+    },
+    {
+      "source": "/ja/docs/api-language-codes",
+      "destination": "/ja/guides/api-calls/language-codes"
+    },
+    {
+      "source": "/ja/docs/error-codes",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/common-errors"
+    },
+    {
+      "source": "/ja/docs/detailed-error-messages",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/common-errors"
+    },
+    {
+      "source": "/ja/docs",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/common-errors"
+    },
+    {
+      "source": "/ja/docs/errors",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/common-errors"
+    },
+    {
+      "source": "/ja/docs/#errors",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/common-errors"
+    },
+    {
+      "source": "/ja/docs/scopes",
+      "destination": "/ja/guides/api-calls/permissions-and-errors/scopes"
+    },
+    {
+      "source": "/ja/docs/object-model",
+      "destination": "/ja/guides/api-calls/types-and-formats"
+    },
+    {
+      "source": "/ja/docs/publishing-your-application",
+      "destination": "/ja/guides/applications/integrations"
+    },
+    {
+      "source": "/ja/guides/applications/app-gallery",
+      "destination": "/ja/guides/applications/integrations"
+    },
+    {
+      "source": "/ja/guides/applications/app-gallery/",
+      "destination": "/ja/guides/applications/integrations"
+    },
+    {
+      "source": "/ja/docs/web-application-integrations",
+      "destination": "/ja/guides/applications/web-app-integrations"
+    },
+    {
+      "source": "/ja/docs/box-web-application-integrations",
+      "destination": "/ja/guides/applications/web-app-integrations"
+    },
+    {
+      "source": "/ja/guides/applications/app-types/custom-apps/app-token-setup",
+      "destination": "/ja/guides/authentication/app-token/app-token-setup"
+    },
+    {
+      "source": "/ja/docs/construct-jwt-claim-manually",
+      "destination": "/ja/guides/authentication/client-credentials/client-credentials-setup"
+    },
+    {
+      "source": "/ja/docs/setting-up-a-jwt-app",
+      "destination": "/ja/guides/authentication/jwt/jwt-setup"
+    },
+    {
+      "source": "/ja/docs/authentication-with-jwt",
+      "destination": "/ja/guides/authentication/jwt/jwt-setup"
+    },
+    {
+      "source": "/ja/docs/app-auth",
+      "destination": "/ja/guides/authentication/jwt/jwt-setup"
+    },
+    {
+      "source": "/ja/guides/applications/app-types/custom-apps/jwt-setup/",
+      "destination": "/ja/guides/authentication/jwt/jwt-setup"
+    },
+    {
+      "source": "/ja/guides/applications/app-types/custom-apps/jwt-setup/#generate-a-keypair-recommended",
+      "destination": "/ja/guides/authentication/jwt/jwt-setup"
+    },
+    {
+      "source": "/ja/docs/authenticate-with-oauth-2",
+      "destination": "/ja/guides/authentication/oauth2"
+    },
+    {
+      "source": "/ja/docs/setting-up-an-oauth-app",
+      "destination": "/ja/guides/authentication/oauth2/oauth2-setup"
+    },
+    {
+      "source": "/ja/docs/oauth-20",
+      "destination": "/ja/guides/authentication/oauth2/oauth2-setup"
+    },
+    {
+      "source": "/ja/docs/how-to-get-an-api-key",
+      "destination": "/ja/guides/authentication/tokens/api-calls"
+    },
+    {
+      "source": "/ja/authentication/access-tokens/api-calls",
+      "destination": "/ja/guides/authentication/tokens/api-calls"
+    },
+    {
+      "source": "/ja/docs/authenticate-with-developer-token",
+      "destination": "/ja/guides/authentication/tokens/developer-tokens"
+    },
+    {
+      "source": "/ja/authentication/access-tokens/developer-tokens",
+      "destination": "/ja/guides/authentication/tokens/developer-tokens"
+    },
+    {
+      "source": "/ja/docs/downscope-tokens",
+      "destination": "/ja/guides/authentication/tokens/downscope"
+    },
+    {
+      "source": "/ja/guides/authentication/access-tokens/downscope",
+      "destination": "/ja/guides/authentication/tokens/downscope"
+    },
+    {
+      "source": "/ja/guides/box-ai/ask-questions",
+      "destination": "/ja/guides/box-ai/ai-tutorials/ask-questions"
+    },
+    {
+      "source": "/ja/guides/box-ai/ai-agent-overrides",
+      "destination": "/ja/guides/box-ai/ai-tutorials/default-agent-overrides"
+    },
+    {
+      "source": "/ja/guides/box-ai/extract-metadata-structured",
+      "destination": "/ja/guides/box-ai/ai-tutorials/extract-metadata-structured"
+    },
+    {
+      "source": "/ja/guides/box-ai/extract-metadata",
+      "destination": "/ja/guides/box-ai/ai-tutorials/extract-metadata"
+    },
+    {
+      "source": "/ja/guides/box-ai/generate-text",
+      "destination": "/ja/guides/box-ai/ai-tutorials/generate-text"
+    },
+    {
+      "source": "/ja/guides/box-ai/prerequisites",
+      "destination": "/ja/guides/box-ai/ai-tutorials/prerequisites"
+    },
+    {
+      "source": "/ja/docs/box-cli",
+      "destination": "/ja/guides/cli/cli-docs"
+    },
+    {
+      "source": "/ja/docs/installation-and-setup",
+      "destination": "/ja/guides/cli/cli-docs"
+    },
+    {
+      "source": "/ja/docs/commands-and-actions",
+      "destination": "/ja/guides/cli/cli-docs"
+    },
+    {
+      "source": "/ja/docs/command-line-interface-cli",
+      "destination": "/ja/guides/cli/cli-docs"
+    },
+    {
+      "source": "/ja/guides/tooling/quick-start/create-jwt-app/",
+      "destination": "/ja/guides/cli/cli-docs/jwt-cli"
+    },
+    {
+      "source": "/ja/guides/tooling/cli/jwt-cli",
+      "destination": "/ja/guides/cli/cli-docs/jwt-cli"
+    },
+    {
+      "source": "/ja/guides/tooling/sdks/cli/",
+      "destination": "/ja/guides/cli/quick-start"
+    },
+    {
+      "source": "/ja/guides/tooling/cli/quick-start/",
+      "destination": "/ja/guides/cli/quick-start"
+    },
+    {
+      "source": "/ja/guides/tooling/cli/quick-start/powershell-script-templates",
+      "destination": "/ja/guides/cli/quick-start/powershell-script-templates"
+    },
+    {
+      "source": "/ja/guides/collaboration-whitelists/create-whitelist",
+      "destination": "/ja/guides/collaborations/allowed-domains/create"
+    },
+    {
+      "source": "/ja/guides/collaboration-whitelists/delete-whitelist",
+      "destination": "/ja/guides/collaborations/allowed-domains/delete"
+    },
+    {
+      "source": "/ja/guides/collaboration-whitelists",
+      "destination": "/ja/guides/collaborations/allowed-domains"
+    },
+    {
+      "source": "/ja/guides/collaboration-whitelists/list-whitelists",
+      "destination": "/ja/guides/collaborations/allowed-domains/list"
+    },
+    {
+      "source": "/ja/docs/download-all-files-from-a-folder-1",
+      "destination": "/ja/guides/downloads/folder"
+    },
+    {
+      "source": "/ja/docs/get-all-files",
+      "destination": "/ja/guides/downloads/folder"
+    },
+    {
+      "source": "/ja/docs/download-all-files-from-a-folder-1",
+      "destination": "/ja/guides/downloads/in-browser"
+    },
+    {
+      "source": "/ja/docs/box-embed",
+      "destination": "/ja/guides/embed/box-embed"
+    },
+    {
+      "source": "/ja/docs/box-view-faqs",
+      "destination": "/ja/guides/embed/box-view/faq"
+    },
+    {
+      "source": "/ja/docs/box-view-faq",
+      "destination": "/ja/guides/embed/box-view/faq"
+    },
+    {
+      "source": "/ja/docs/getting-started-box-view",
+      "destination": "/ja/guides/embed/box-view/setup"
+    },
+    {
+      "source": "/ja/docs/customizing-access-for-box-ui-elements",
+      "destination": "/ja/guides/embed/ui-elements/access"
+    },
+    {
+      "source": "/ja/docs/annotations",
+      "destination": "/ja/guides/embed/ui-elements/annotations"
+    },
+    {
+      "source": "/ja/annotations-beta",
+      "destination": "/ja/guides/embed/ui-elements/annotations"
+    },
+    {
+      "source": "/ja/docs/setting-up-box-tools-to-work-with-custom-domains",
+      "destination": "/ja/guides/embed/ui-elements/custom-domains"
+    },
+    {
+      "source": "/ja/docs/box-content-explorer",
+      "destination": "/ja/guides/embed/ui-elements/explorer-metadata-v1"
+    },
+    {
+      "source": "/ja/docs/content-explorer",
+      "destination": "/ja/guides/embed/ui-elements/explorer-metadata-v1"
+    },
+    {
+      "source": "/ja/docs/box-content-explorer",
+      "destination": "/ja/guides/embed/ui-elements/explorer"
+    },
+    {
+      "source": "/ja/docs/content-explorer",
+      "destination": "/ja/guides/embed/ui-elements/explorer"
+    },
+    {
+      "source": "/ja/docs/specifying-a-logo-for-box-ui-elements",
+      "destination": "/ja/guides/embed/ui-elements/logo"
+    },
+    {
+      "source": "/ja/docs/box-content-open-with",
+      "destination": "/ja/guides/embed/ui-elements/open-with"
+    },
+    {
+      "source": "/ja/docs/box-content-picker",
+      "destination": "/ja/guides/embed/ui-elements/picker"
+    },
+    {
+      "source": "/ja/docs/content-picker",
+      "destination": "/ja/guides/embed/ui-elements/picker"
+    },
+    {
+      "source": "/ja/docs/box-content-preview",
+      "destination": "/ja/guides/embed/ui-elements/preview"
+    },
+    {
+      "source": "/ja/docs/content-preview",
+      "destination": "/ja/guides/embed/ui-elements/preview"
+    },
+    {
+      "source": "/ja/docs/special-scopes-for-box-ui-elements",
+      "destination": "/ja/guides/embed/ui-elements/scopes"
+    },
+    {
+      "source": "/ja/docs/box-content-sidebar",
+      "destination": "/ja/guides/embed/ui-elements/sidebar"
+    },
+    {
+      "source": "/ja/docs/box-content-uploader",
+      "destination": "/ja/guides/embed/ui-elements/uploader"
+    },
+    {
+      "source": "/ja/docs/content-uploader",
+      "destination": "/ja/guides/embed/ui-elements/uploader"
+    },
+    {
+      "source": "/ja/docs/file-types-events",
+      "destination": "/ja/guides/embed/ui-elements/viewers-and-events"
+    },
+    {
+      "source": "/ja/guides/events/for-enterprise",
+      "destination": "/ja/guides/events/enterprise-events/for-enterprise"
+    },
+    {
+      "source": "/ja/guides/events/for-enterprise/",
+      "destination": "/ja/guides/events/enterprise-events/for-enterprise"
+    },
+    {
+      "source": "/ja/guides/events/event-triggers",
+      "destination": "/ja/guides/events/event-triggers/event-source"
+    },
+    {
+      "source": "/ja/guides/events/event-triggers/",
+      "destination": "/ja/guides/events/event-triggers/event-source"
+    },
+    {
+      "source": "/ja/guides/events/shield-alert-events",
+      "destination": "/ja/guides/events/event-triggers/shield-smart-access-events"
+    },
+    {
+      "source": "/ja/guides/events/shield-alert-events/",
+      "destination": "/ja/guides/events/event-triggers/shield-smart-access-events"
+    },
+    {
+      "source": "/ja/guides/events/sign-events",
+      "destination": "/ja/guides/events/event-triggers/sign-events"
+    },
+    {
+      "source": "/ja/guides/events/sign-events/",
+      "destination": "/ja/guides/events/event-triggers/sign-events"
+    },
+    {
+      "source": "/ja/guides/events/pagination",
+      "destination": "/ja/guides/events/parameters/pagination"
+    },
+    {
+      "source": "/ja/guides/events/pagination/",
+      "destination": "/ja/guides/events/parameters/pagination"
+    },
+    {
+      "source": "/ja/guides/events/for-user",
+      "destination": "/ja/guides/events/user-events/for-user"
+    },
+    {
+      "source": "/ja/guides/events/for-user/",
+      "destination": "/ja/guides/events/user-events/for-user"
+    },
+    {
+      "source": "/ja/guides/events/polling",
+      "destination": "/ja/guides/events/user-events/polling"
+    },
+    {
+      "source": "/ja/guides/events/polling/",
+      "destination": "/ja/guides/events/user-events/polling"
+    },
+    {
+      "source": "/ja/docs/build-a-folder-tree",
+      "destination": "/ja/guides/folders/bulk/build-folder-tree"
+    },
+    {
+      "source": "/ja/docs/work-with-metadata",
+      "destination": "/ja/guides/metadata"
+    },
+    {
+      "source": "/ja/docs/deep-linking",
+      "destination": "/ja/guides/mobile/mobile-deep-linking"
+    },
+    {
+      "source": "/ja/docs/deep-linking-to-box-mobile-apps",
+      "destination": "/ja/guides/mobile/mobile-deep-linking"
+    },
+    {
+      "source": "/ja/best-practices/mobile-deep-linking",
+      "destination": "/ja/guides/mobile/mobile-deep-linking"
+    },
+    {
+      "source": "/ja/docs/branding-guidelines",
+      "destination": "/ja/guides/security/cors"
+    },
+    {
+      "source": "/ja/best-practices/cors",
+      "destination": "/ja/guides/security/cors"
+    },
+    {
+      "source": "/ja/guides/security/fedramp-high/",
+      "destination": "/ja/guides/security/fedramp"
+    },
+    {
+      "source": "/ja/shared-links/create",
+      "destination": "/ja/guides/shared-links/create-or-update"
+    },
+    {
+      "source": "/ja/shared-links/update",
+      "destination": "/ja/guides/shared-links/create-or-update"
+    },
+    {
+      "source": "/ja/sdks",
+      "destination": "/ja/guides/tooling"
+    },
+    {
+      "source": "/ja/docs/box-postman-collection",
+      "destination": "/ja/guides/tooling/postman"
+    },
+    {
+      "source": "/ja/guides/tooling/postman/legacy",
+      "destination": "/ja/guides/tooling/postman"
+    },
+    {
+      "source": "/ja/docs/box-for-salesforce-developer-toolkit",
+      "destination": "/ja/guides/tooling/salesforce-toolkit"
+    },
+    {
+      "source": "/ja/docs/install-the-sdk",
+      "destination": "/ja/guides/tooling/sdks"
+    },
+    {
+      "source": "/ja/docs/open-source-projects",
+      "destination": "/ja/guides/tooling/sdks"
+    },
+    {
+      "source": "/ja/docs/community-supported-projects",
+      "destination": "/ja/guides/tooling/sdks"
+    },
+    {
+      "source": "/ja/docs/box-for-salesforce-developer-toolkit",
+      "destination": "/ja/guides/tooling/sdks/salesforce"
+    },
+    {
+      "source": "/ja/docs/upload-all-files-from-a-folder",
+      "destination": "/ja/guides/uploads/chunked/folder"
+    },
+    {
+      "source": "/ja/webhooks/manage/manually",
+      "destination": "/ja/guides/webhooks/v1/create-v1"
+    },
+    {
+      "source": "/ja/webhooks/manage/delete",
+      "destination": "/ja/guides/webhooks/v2/delete-v2"
+    },
+    {
+      "source": "/ja/webhooks/handle/retries",
+      "destination": "/ja/guides/webhooks/v2"
+    },
+    {
+      "source": "/ja/webhooks/handle/payload",
+      "destination": "/ja/guides/webhooks/v2"
+    },
+    {
+      "source": "/ja/webhooks/limitations",
+      "destination": "/ja/guides/webhooks/v2/limitations-v2"
+    },
+    {
+      "source": "/ja/guides/webhooks/handle/verify-signatures",
+      "destination": "/ja/guides/webhooks/v2/signatures-v2"
+    },
+    {
+      "source": "/ja/guides/webhooks/handle/rotate-signatures",
+      "destination": "/ja/guides/webhooks/v2/signatures-v2"
+    },
+    {
+      "source": "/ja/docs/developer-newsletter",
+      "destination": "/ja/newsletter"
     }
   ],
   "footer": {
@@ -6081,7 +6565,7 @@
         ]
       }
     ],
-    "notice": "©2025 Box. Code samples provided under the Unlicense."
+    "notice": "©2026 Box. Code samples provided under the Unlicense."
   },
   "analytics": {
     "customScripts": [
