@@ -17,15 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Verify workflow is running on main branch
-        run: |
-          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
-            echo "Error: This workflow must be triggered from the main branch"
-            echo "Current branch: ${{ github.ref }}"
-            exit 1
-          fi
-          echo "✓ Running on main branch"
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -76,7 +67,7 @@ jobs:
       - name: Configure git
         run: |
           git config user.name "box-apimgmt"
-          git config user.email "box-apimgmt@box.com"
+          git config user.email "apimgmt@box.com"
 
       - name: Create branch and commit changes
         id: commit
@@ -89,8 +80,9 @@ jobs:
           # Create and checkout new branch
           git checkout -b "$BRANCH_NAME"
 
-          # Add all changes
+          # Add all changes except .github directory
           git add .
+          git reset -- .github/
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
