@@ -6042,6 +6042,10 @@
     {
       "source": "/guides/webhooks/handle/rotate-signatures",
       "destination": "/guides/webhooks/v2/signatures-v2"
+    },
+    {
+      "source": "/docs/developer-newsletter",
+      "destination": "/newsletter"
     }
   ],
   "footer": {
