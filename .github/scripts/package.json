@@ -5,13 +5,17 @@
   "scripts": {
     "create-api-pages": "ts-node create-api-pages.ts",
     "update-docs-json": "ts-node update-docs-json.ts",
-    "add-mint-config": "ts-node add-mint-config.ts"
+    "add-mint-config": "ts-node add-mint-config.ts",
+    "clean-descriptions": "ts-node clean-descriptions.ts",
+    "add-code-samples": "ts-node add-code-samples.ts",
+    "replace-links": "ts-node replace-links.ts"
   },
   "devDependencies": {
     "@types/node": "20.10.0",
+    "commander": "14.0.2",
+    "prettier": "3.2.5",
     "simple-git": "3.21.0",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3",
-    "commander": "14.0.2"
+    "typescript": "5.3.3"
   }
 }

@@ -80,27 +80,106 @@ npm run add-mint-config -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\
 
 **Note:** The script reads configuration from `.github/scripts/openapi-mint-config.json` and deep merges it into the OpenAPI files, preserving existing properties.
 
-## Workflow
+### Clean Description Fields
 
-The typical workflow for updating API documentation is:
+Clean newlines in OpenAPI description fields by removing single newlines within paragraphs while preserving markdown structure:
 
-1. Generate API pages from OpenAPI files using `create-api-pages`
-2. Update the navigation structure in `docs.json` using `update-docs-json`
-
-**Example: Update English documentation**
 ```bash
-# Step 1: Generate API pages
-npm run create-api-pages -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$" --reference-dir "../../reference"
-
-# Step 2: Update docs.json
-npm run update-docs-json -- --directory "../.."  --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$" --docs-json "../../docs.json"
+npm run clean-descriptions -- --directory <directory> --pattern <pattern> [--output <output-dir>]
 ```
 
-**Example: Update Japanese documentation**
-```bash
-# Step 1: Generate API pages
-npm run create-api-pages -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$" --reference-dir "../../ja/reference" --locale ja
+**Arguments:**
+- `--directory` - Path to directory containing OpenAPI JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--output` - Output directory for modified files (default: same as `--directory`)
 
-# Step 2: Update docs.json
-npm run update-docs-json -- --directory "../.."  --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$" --docs-json "../../ja/docs.json" --locale ja
+**What it does:**
+- Removes single newlines within paragraphs (replaces with spaces)
+- Preserves paragraph breaks (double newlines)
+- Maintains markdown structure: lists, code blocks, blockquotes, tables, headings
+- Uses Prettier with markdown parser for markdown-aware processing
+
+**Examples:**
+```bash
+# Clean all OpenAPI files in place
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi.*\\.json$"
+
+# Clean English OpenAPI files
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$"
+
+# Clean Japanese OpenAPI files
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?-jp\\.json$"
+
+# Clean to a different output directory
+npm run clean-descriptions -- --directory "../.." --pattern "box-openapi\\.json$" --output "../../cleaned"
+```
+
+**Before:**
+```
+"description": "Specifies the validation rules.\nIf set, this validation is mandatory."
+```
+
+**After:**
+```
+"description": "Specifies the validation rules. If set, this validation is mandatory."
+```
+
+### Add Code Samples from SDK Repositories
+
+Extract code samples from SDK repositories and merge them into OpenAPI specification files:
+
+```bash
+npm run add-code-samples -- --directory <directory> --pattern <pattern> [--output <output-dir>]
+```
+
+**Arguments:**
+- `--directory` - Path to directory containing OpenAPI JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--output` - Output directory for modified files (default: save in place)
+
+**What it does:**
+- Clones SDK repositories (cURL, .NET, Swift, Java, Node, Python)
+- Extracts code samples from markdown documentation using `<!-- sample operationId -->` markers
+- Merges samples into OpenAPI files as `x-codeSamples`
+- Supports operation variants (e.g., `<!-- sample put_files_id add_shared_link -->`)
+- Only one sample per language per operation (replaces existing samples)
+
+**Examples:**
+```bash
+# Add code samples to all OpenAPI files in place
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi.*\\.json$"
+
+# Add code samples to English OpenAPI files
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$"
+
+# Add code samples with custom output directory
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi.*\\.json$" --output "../../output"
+```
+
+**Note:** This script clones SDK repositories temporarily to extract code samples. The cloned repositories are automatically cleaned up after execution.
+
+### Replace Links in Descriptions
+
+Replace URL links in OpenAPI specification description fields (useful for localization):
+
+```bash
+npm run replace-links -- --directory <directory> --pattern <pattern> --old-url <url> --new-url <url> [--output <output-dir>]
+```
+
+**Arguments:**
+- `--directory` - Path to directory containing JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--old-url` - URL to replace
+- `--new-url` - Replacement URL
+- `--output` - Output directory for modified files (default: save in place)
+
+**What it does:**
+- Recursively searches all `description` fields in OpenAPI files
+- Replaces all occurrences of the old URL with the new URL
+- Reports the number of replacements made per file
+
+**Examples:**
+```bash
+# Replace links in Japanese OpenAPI files with custom output
+npm run replace-links -- --directory "../.." --pattern "box-openapi.*-jp\\.json$" --old-url "https://developer.box.com/" --new-url "https://developer.box.com/ja/" --output "../../output"
 ```
