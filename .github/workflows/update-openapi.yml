@@ -17,15 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Verify workflow is running on main branch
-        run: |
-          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
-            echo "Error: This workflow must be triggered from the main branch"
-            echo "Current branch: ${{ github.ref }}"
-            exit 1
-          fi
-          echo "✓ Running on main branch"
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
