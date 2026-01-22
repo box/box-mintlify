@@ -17,6 +17,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Verify workflow is running on main branch
+        run: |
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo "Error: This workflow must be triggered from the main branch"
+            echo "Current branch: ${{ github.ref }}"
+            exit 1
+          fi
+          echo "✓ Running on main branch"
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -74,7 +83,7 @@ jobs:
         run: |
           LOCALE="${{ github.event.inputs.locale }}"
           SHORT_HASH="${{ steps.get-hash.outputs.short_hash }}"
-          BRANCH_NAME="openapi-$SHORT_HASH"
+          BRANCH_NAME="openapi-$LOCALE-$SHORT_HASH-run${{ github.run_number }}"
           COMMIT_MSG="Update $LOCALE openapi to output generated at $SHORT_HASH"
 
           # Create and checkout new branch
@@ -104,7 +113,22 @@ jobs:
         if: steps.commit.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_LOCALE: ${{ github.event.inputs.locale }}
+          PR_SHORT_HASH: ${{ steps.get-hash.outputs.short_hash }}
+          PR_FULL_HASH: ${{ steps.get-hash.outputs.full_hash }}
         run: |
+          PR_BODY="## Summary
+
+          This PR updates the OpenAPI documentation for the ${PR_LOCALE} locale.
+
+          **Source commit:** [${PR_SHORT_HASH}](https://github.com/box/box-openapi/commit/${PR_FULL_HASH}) from [box-openapi](https://github.com/box/box-openapi)
+
+          ## Changes
+
+          - Updated OpenAPI specification files
+          - Regenerated API reference documentation
+          - Updated related configuration files"
+
           gh pr create \
             --title "${{ steps.commit.outputs.commit_message }}" \
-            --body "$(cat <<'EOF'
+            --body "$PR_BODY"
