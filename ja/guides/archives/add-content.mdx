@@ -1,56 +1,41 @@
 ---
-title: "Box Archiveへのコンテンツの追加"
-alias_paths: []
-category_id: archives
-subcategory_id: null
-is_index: false
-id: archives/add-content
-type: guide
-total_steps: 3
-sibling_id: archives
-parent_id: archives
-next_page_id: archives/restore-content
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/archives/add-content.md
+alias_paths: {}
+title: Box Archiveへのコンテンツの追加
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-アーカイブにコンテンツを追加するには、まず、アーカイブを作成する必要があります。まだ作成していない場合は、[アーカイブを作成][Create Archive]エンドポイントを使用します。
+アーカイブにコンテンツを追加するには、まず、アーカイブを作成する必要があります。まだ作成していない場合は、<Link href="/reference/v2025.0/post-archives/">アーカイブを作成</Link>エンドポイントを使用します。
 
 ## アーカイブへのファイルまたはフォルダの追加
 
-[`PUT /files/:id`][Update file] APIエンドポイントを使用してアーカイブにファイルを追加するか、[`PUT /folders/:id`][Update folder]エンドポイントを使用してフォルダを追加します。`id`パラメータは、アーカイブに追加するファイル/フォルダのIDです。追加先を指定するには、リクエスト本文内で`parent.id`[パラメータ][Update parent id of folder]を使用します。これには、アーカイブのID、またはアーカイブ内にあるフォルダのIDを指定できます。
+<Link href="/reference/put-files-id">`PUT /files/:id`</Link> APIエンドポイントを使用してアーカイブにファイルを追加するか、<Link href="/reference/put-folders-id">`PUT /folders/:id`</Link>エンドポイントを使用してフォルダを追加します。`id`パラメータは、アーカイブに追加するファイル/フォルダのIDです。追加先を指定するには、リクエスト本文内で`parent.id`<Link href="/reference/put-folders-id/#param-parent-id">パラメータ</Link>を使用します。これには、アーカイブのID、またはアーカイブ内にあるフォルダのIDを指定できます。
 
-[Create Archive]: /ja/reference/v2025.0/post-archives/
-
-[Update file]: /ja/reference/put-files-id
-
-[Update parent id of file]: /ja/reference/put-files-id/#param-parent-id
-
-[Update folder]: /ja/reference/put-folders-id
-
-[Update parent id of folder]: /ja/reference/put-folders-id/#param-parent-id
+[Update parent id of file]: /reference/put-files-id/#param-parent-id
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Create archive", href: "/ja/reference/v2025.0/post-archives", badge: "POST" },
-    { label: "Update file", href: "/ja/reference/put-files-id", badge: "PUT" },
-    { label: "Update folder", href: "/ja/reference/put-folders-id", badge: "PUT" }
-  ]}
+  { label: "Create archive", href: "/reference/v2025.0/post-archives", badge: "POST" },
+  { label: "Update file", href: "/reference/put-files-id", badge: "PUT" },
+  { label: "Update folder", href: "/reference/put-folders-id", badge: "PUT" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Box Archiveからのコンテンツの復元", href: "/ja/guides/archives/restore-content", badge: "ガイド" }
-  ]}
+  { label: "Restore content from Box Archive", href: "/guides/archives/restore-content", badge: "GUIDE" }
+]}
 />
+
 <RelatedLinks
-  title="RELATED RESOURCES"
+  title="関連するリソース"
   items={[
-    { label: "Archive", href: "/ja/reference/v2025.0/resources/archive", badge: "REFERENCE" }
-  ]}
+  { label: "Archive", href: "/reference/v2025.0/resources/archive", badge: "REFERENCE" }
+]}
 />

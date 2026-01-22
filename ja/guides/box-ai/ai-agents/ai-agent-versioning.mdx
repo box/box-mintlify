@@ -1,26 +1,15 @@
 ---
-title: "AIエージェントの構成のバージョン管理"
-category_id: box-ai
-subcategory_id: box-ai/ai-agents
-is_index: false
-id: box-ai/ai-agents/ai-agent-versioning
-type: guide
-total_steps: 3
-sibling_id: box-ai/ai-agents
-parent_id: box-ai/ai-agents
-next_page_id: ''
-previous_page_id: box-ai/ai-agents/get-agent-default-config
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/ai-agent-versioning.md
+title: AIエージェントの構成のバージョン管理
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 <Note>
-
-Boxでは、常に最先端のオプションに対応するため、定期的にデフォルトモデルをエンドポイント全体で更新しています。デフォルトモデルが更新されると、開発者向け変更ログに掲載されます。
-
+  Boxでは、常に最先端のオプションに対応するため、定期的にデフォルトモデルをエンドポイント全体で更新しています。デフォルトモデルが更新されると、開発者向け変更ログに掲載されます。
 </Note>
 
 AIエージェントの構成のバージョン管理により、開発者はAIエージェントのバージョン管理をより詳細に制御できるようになり、レスポンスの一貫性が確保されます。
@@ -33,11 +22,11 @@ AIエージェントの構成のバージョン管理には、以下の原則が
 
 ## AIエージェントの構成の履歴
 
-LLMゲートウェイで使用される[デフォルトのエージェント構成][default-config]の値は、可能な限り高品質の回答を得られるように変更されることがよくあります。
+LLMゲートウェイで使用される<Link href="/guides/box-ai/ai-agents/get-agent-default-config">デフォルトのエージェント構成</Link>の値は、可能な限り高品質の回答を得られるように変更されることがよくあります。
 
-使用中の構成への悪影響を避けるために、以下に示すAIエージェントの構成の履歴を使用して[デフォルト構成を上書きする][overrides]ことができます。
+使用中の構成への悪影響を避けるために、以下に示すAIエージェントの構成の履歴を使用して<Link href="/guides/box-ai/ai-agents/ai-agent-overrides">デフォルト構成を上書きする</Link>ことができます。
 
-```json
+``````json
 {
     "ask": {
         "type": "ai_agent_ask",
@@ -210,27 +199,24 @@ LLMゲートウェイで使用される[デフォルトのエージェント構�
         }
     }
 }
-```
-
-[default-config]: /ja/guides/box-ai/ai-agents/get-agent-default-config
-
-[overrides]: /ja/guides/box-ai/ai-agents/ai-agent-overrides
+``````
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Get AI agent default configuration", href: "/ja/reference/get-ai-agent-default", badge: "GET" },
-    { label: "Generate text", href: "/ja/reference/post-ai-text-gen", badge: "POST" },
-    { label: "Ask question", href: "/ja/reference/post-ai-ask", badge: "POST" }
-  ]}
+  { label: "Get AI agent default configuration", href: "/reference/get-ai-agent-default", badge: "GET" },
+  { label: "Generate text", href: "/reference/post-ai-text-gen", badge: "POST" },
+  { label: "Ask question", href: "/reference/post-ai-ask", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Box AIの使い方", href: "/ja/guides/box-ai/ai-tutorials/prerequisites", badge: "ガイド" },
-    { label: "Box AIに質問する", href: "/ja/guides/box-ai/ai-tutorials/ask-questions", badge: "ガイド" },
-    { label: "Box AIを使用してテキストを生成する", href: "/ja/guides/box-ai/ai-tutorials/generate-text", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (自由形式)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (構造化)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "ガイド" }
-  ]}
+  { label: "Get started with Box AI", href: "/guides/box-ai/ai-tutorials/prerequisites", badge: "GUIDE" },
+  { label: "Ask questions to Box AI", href: "/guides/box-ai/ai-tutorials/ask-questions", badge: "GUIDE" },
+  { label: "Generate text with Box AI", href: "/guides/box-ai/ai-tutorials/generate-text", badge: "GUIDE" },
+  { label: "Extract metadata from file (freeform)", href: "/guides/box-ai/ai-tutorials/extract-metadata", badge: "GUIDE" },
+  { label: "Extract metadata from file (structured)", href: "/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "GUIDE" }
+]}
 />

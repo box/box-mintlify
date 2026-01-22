@@ -1,0 +1,84 @@
+---
+alias_paths:
+  0: guides/box-ai/extract-metadata
+title: Extract APIの概要とユースケース
+
+fullyTranslated: true
+---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+
+ソースコンテンツはさまざまなレイアウト、テンプレート、ファイルの種類によって大きく異なるため、データ抽出は困難な場合があります。Box AI Extract APIには、Box内のファイルからメタデータを抽出する方法を標準化する、抽出 (構造化) と抽出 (自由形式) というAIを活用した2つのエンドポイントが用意されています。これらのエンドポイントを使用すると、以下の操作が可能になります。
+
+* 特定のフィールドを一貫したスキーマまたはBoxメタデータテンプレートに抽出する (抽出 (構造化))。
+* 高度なAIモデルを利用した強化された抽出を使用して、より複雑なユースケースに対応し、精度を向上させる (抽出 (構造化))。
+* 対象フィールドが事前にわからない場合にコンテンツを抽出する (抽出 (自由形式))。
+* 抽出ワークフローに関する独自のオーケストレーション、権限チェック、調整ロジックを作成せずに抽出を実行する。
+* さまざまな言語やファイル形式のドキュメント、スキャンしたドキュメント、または写真からデータを抽出する。
+
+これらのエンドポイントの可能性を探るために、さまざまな業界におけるユースケースをご確認ください。
+
+<AccordionGroup>
+  <Accordion title="営業および経理業務">
+    **推奨されるエンドポイント:** 構造化メタデータの抽出 (`POST /2.0/ai/extract_structured`)
+
+    大量の標準化されたドキュメントで、予測可能なデータ型が必要な場合に最適です。
+
+    * **自動化されたデータ入力:** 構造化メタデータの抽出では、あらかじめ構成されたメタデータテンプレートにより、毎回一環したJSONレスポンスが確保されます。
+    * **請求書と発注書:** 明細項目、総額、日付を抽出します。
+    * **顧客との契約:** 「発効日」や「合計契約金額」などの標準化されたフィールドを解析して、CRMレコードを更新します。
+  </Accordion>
+
+  <Accordion title="法務および人事">
+    **推奨されるエンドポイント:** 自由形式のメタデータ抽出 (`POST /2.0/ai/extract`)
+
+    ドキュメントの構造が事前にわからない場合や変化する場合のクエリに最適です。
+
+    * **人事のオンボーディング:** 多様な内定通知書や候補者の履歴書から主要な個人情報を抽出します。
+    * **NDA条項:** 法的なドキュメントから特定のNDA条項を抽出します。
+  </Accordion>
+
+  <Accordion title="業界固有のソリューション">
+    規制対象の分野向けに、光学式文字認識 (OCR) や抽出エージェント (強化) などの高度な機能を使用します。
+
+    <AccordionGroup>
+      <Accordion title="金融サービス">
+        * **本人確認 (KYC) ドキュメント:** スキャンしたパスポートや運転免許証からテキストを抽出して、ユーザーの本人確認を行います。
+        * **ローンオリジネーション:** スキャンした公共料金請求書や給与明細書からデータを取り込んで、所得の証明を自動化します。
+      </Accordion>
+
+      <Accordion title="ライフサイエンス">
+        * **臨床試験への登録:** 医療関係の書類から患者の基準を抽出して、候補者と試験をマッチさせます。
+        * **申請書類:** FDAやEMAなどの申請に必要なデータを整理し、検証します。
+      </Accordion>
+
+      <Accordion title="公共機関">
+        * **許可申請:** 必要なドキュメントを検証することで、区域指定の承認を迅速化します。
+        * **公文書開示請求:** 情報公開法 (FOIA) などの公的請求の対象となるドキュメントを自動的に分類、優先順位付けします。
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
+</AccordionGroup>
+
+## Core benefits of using the Box Extract API
+
+* **Managed scaling:** The Box Extract API is designed to handle queues and rate limits, so you can run high-volume processing.
+* **No defensive code:** The Box Extract API is model-agnostic, which enables switching between supported LLMs with minimal code changes and minimizing vendor lock-in.
+* **セキュリティとコンプライアンス:** 抽出されたすべてのデータは、Box Platformのエンタープライズグレードのセキュリティとガバナンスポリシーを継承します。
+
+## 次の手順
+
+Get started with the Box Extract API with practical example-led quick starts guides, API reference pages, and extensive developer guides:
+
+<RelatedLinks
+  title="関連するガイド"
+  items={[
+  { label: "Prerequisites for working in Box AI API", href: "/guides/box-ai/ai-tutorials/prerequisites", badge: "GUIDE" },
+  { label: "Use freeform metadata extraction with Box Python SDK", href: "/guides/box-ai/quick-start/box-ai-extract-freeform", badge: "QUICKSTART" },
+  { label: "Use structured metadata extraction with Box Python SDK", href: "/guides/box-ai/quick-start/box-ai-extract", badge: "QUICKSTART" },
+  { label: "Use enhanced agent with structured metadata extraction with Box Python SDK", href: "/guides/box-ai/quick-start/box-ai-extract-enhanced", badge: "QUICKSTART" },
+  { label: "Extract metadata from file (freeform)", href: "/guides/box-ai/ai-tutorials/extract-metadata", badge: "GUIDE" },
+  { label: "Extract metadata from file (structured)", href: "/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "GUIDE" },
+  { label: "Learn about Box metadata", href: "/guides/metadata/quick-start", badge: "QUICKSTART" }
+]}
+/>

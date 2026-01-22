@@ -1,20 +1,11 @@
 ---
-title: "ヘッダーによる一貫性の確保"
-alias_paths: []
-category_id: api-calls
-subcategory_id: null
-is_index: false
-id: api-calls/ensure-consistency
-type: guide
-total_steps: 9
-sibling_id: api-calls
-parent_id: api-calls
-next_page_id: api-calls/allowing-domain-access
-previous_page_id: api-calls/request-extra-fields
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/ensure-consistency.md
+alias_paths: {}
+title: ヘッダーによる一貫性の確保
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -29,7 +20,6 @@ APIを介してリクエスト可能なファイルシステムの項目 (ファ
 ```sh
 curl https://api.box.com/2.0/files/12345 \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 ```json
@@ -41,7 +31,6 @@ curl https://api.box.com/2.0/files/12345 \
   "name": "Contract.pdf",
   ...
 }
-
 ```
 
 この`etag`を`if-match`または`if-none-match`ヘッダーの値として使用できるのは、`etag`値が受信されてからリソースが変更されていないことを確認するためか、または変更されていない項目を不必要にダウンロードしないようにするためです。
@@ -52,7 +41,6 @@ curl https://api.box.com/2.0/files/12345 \
 curl https://api.box.com/2.0/files/12345 \
     -H "authorization: Bearer ACCESS_TOKEN" \
     -H "if-none-match: 1"
-
 ```
 
 ファイルが変更されていない場合、このAPIコールでは空のレスポンスが返されます。
@@ -63,15 +51,15 @@ curl https://api.box.com/2.0/files/12345 \
 
 このヘッダーは、以下のエンドポイントでサポートされます。
 
-| `if-match`対応のエンドポイント                                          |                     |
-| ------------------------------------------------------------- | ------------------- |
-| [`POST /files/:id/content`](/ja/reference/post-files-id-content) | 新しいファイルバージョンをアップロード |
-| [`PUT /files/:id`](/ja/reference/put-files-id)                   | ファイルの情報を更新          |
-| [`DELETE /files/:id`](/ja/reference/delete-files-id)             | ファイルを削除             |
-| [`PUT /folders/:id`](/ja/reference/put-folders-id)               | フォルダの情報を更新          |
-| [`DELETE /folders/:id`](/ja/reference/delete-folders-id)         | フォルダを削除             |
-| [`PUT /web_links/:id`](/ja/reference/put-web-links-id)           | ウェブリンクの情報を更新        |
-| [`DELETE /web_links/:id`](/ja/reference/delete-web-links-id)     | ウェブリンクを削除           |
+| `if-match`対応のエンドポイント                                                           |                     |
+| ------------------------------------------------------------------------------ | ------------------- |
+| <Link href="/reference/post-files-id-content">`POST /files/:id/content`</Link> | 新しいファイルバージョンをアップロード |
+| <Link href="/reference/put-files-id">`PUT /files/:id`</Link>                   | ファイルの情報を更新          |
+| <Link href="/reference/delete-files-id">`DELETE /files/:id`</Link>             | ファイルを削除             |
+| <Link href="/reference/put-folders-id">`PUT /folders/:id`</Link>               | フォルダの情報を更新          |
+| <Link href="/reference/delete-folders-id">`DELETE /folders/:id`</Link>         | フォルダを削除             |
+| <Link href="/reference/put-web-links-id">`PUT /web_links/:id`</Link>           | ウェブリンクの情報を更新        |
+| <Link href="/reference/delete-web-links-id">`DELETE /web_links/:id`</Link>     | ウェブリンクを削除           |
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
@@ -83,22 +71,21 @@ curl https://api.box.com/2.0/files/12345 \
 | いいえ     | いいえ         | 404       |
 
 <Warning>
-**項目の移動**
+  **項目の移動**
 
-`if-match`ヘッダーを使用してファイル、フォルダ、またはウェブリンクの移動を防ぐことはできません。Boxでは、必ず最新の項目が新しい場所に移動されます。
-
+  `if-match`ヘッダーを使用してファイル、フォルダ、またはウェブリンクの移動を防ぐことはできません。Boxでは、必ず最新の項目が新しい場所に移動されます。
 </Warning>
 
 ## リクエストによる不要なダウンロードの防止
 
 `if-none-match`ヘッダーを使用すると、アプリケーションは、最後に調べてから変更されていない項目の情報がダウンロードされないようにすることができます。これにより、不要な情報がダウンロードされなくなるため、アプリケーションの速度が向上し、帯域幅が節約されます。
 
-| `if-none-match`対応のエンドポイント                           |              |
-| --------------------------------------------------- | ------------ |
-| [`GET /files/:id`](/ja/reference/get-files-id)         | ファイルの情報を取得   |
-| [`GET /folders/:id`](/ja/reference/get-folder-id)      | フォルダの情報を取得   |
-| [`GET /web_links/:id`](/ja/reference/get-web-links-id) | ウェブリンクの情報を取得 |
-| [`GET /shared_items`](/ja/reference/get-shared-items)  | 共有項目の情報を取得   |
+| `if-none-match`対応のエンドポイント                                            |              |
+| -------------------------------------------------------------------- | ------------ |
+| <Link href="/reference/get-files-id">`GET /files/:id`</Link>         | ファイルの情報を取得   |
+| <Link href="/reference/get-folder-id">`GET /folders/:id`</Link>      | フォルダの情報を取得   |
+| <Link href="/reference/get-web-links-id">`GET /web_links/:id`</Link> | ウェブリンクの情報を取得 |
+| <Link href="/reference/get-shared-items">`GET /shared_items`</Link>  | 共有項目の情報を取得   |
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
@@ -112,16 +99,16 @@ curl https://api.box.com/2.0/files/12345 \
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Upload file version", href: "/ja/reference/post-files-id-content", badge: "POST" },
-    { label: "Update file", href: "/ja/reference/put-files-id", badge: "PUT" },
-    { label: "Delete file", href: "/ja/reference/delete-files-id", badge: "DELETE" },
-    { label: "Update folder", href: "/ja/reference/put-folders-id", badge: "PUT" },
-    { label: "Delete folder", href: "/ja/reference/delete-folders-id", badge: "DELETE" },
-    { label: "Update web link", href: "/ja/reference/put-web-links-id", badge: "PUT" },
-    { label: "Remove web link", href: "/ja/reference/delete-web-links-id", badge: "DELETE" },
-    { label: "Get file information", href: "/ja/reference/get-files-id", badge: "GET" },
-    { label: "Get folder information", href: "/ja/reference/get-folders-id", badge: "GET" },
-    { label: "Get web link", href: "/ja/reference/get-web-links-id", badge: "GET" },
-    { label: "Find file for shared link", href: "/ja/reference/get-shared-items", badge: "GET" }
-  ]}
+  { label: "Upload file version", href: "/reference/post-files-id-content", badge: "POST" },
+  { label: "Update file", href: "/reference/put-files-id", badge: "PUT" },
+  { label: "Delete file", href: "/reference/delete-files-id", badge: "DELETE" },
+  { label: "Update folder", href: "/reference/put-folders-id", badge: "PUT" },
+  { label: "Delete folder", href: "/reference/delete-folders-id", badge: "DELETE" },
+  { label: "Update web link", href: "/reference/put-web-links-id", badge: "PUT" },
+  { label: "Remove web link", href: "/reference/delete-web-links-id", badge: "DELETE" },
+  { label: "Get file information", href: "/reference/get-files-id", badge: "GET" },
+  { label: "Get folder information", href: "/reference/get-folders-id", badge: "GET" },
+  { label: "Get web link", href: "/reference/get-web-links-id", badge: "GET" },
+  { label: "Find file for shared link", href: "/reference/get-shared-items", badge: "GET" }
+]}
 />

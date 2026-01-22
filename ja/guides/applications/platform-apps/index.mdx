@@ -1,0 +1,61 @@
+---
+alias_paths:
+  0: /docs/custom-applications
+  1: /docs/custom-integrations
+  2: /docs/partner-integrations
+  3: /docs/getting-started-box-platform
+  4: /docs/box-platform
+  5: /guides/applications/custom-apps
+title: Platformアプリ
+
+fullyTranslated: true
+---
+
+import {Link} from "/snippets/Link.jsx";
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+
+Platformアプリは、通常、カスタムインターフェースでBox機能をユーザーに表示します。Boxには、コンテンツの閲覧、検索、プレビューなどの機能のために、<Link href="/guides/embed/ui-elements">UI Elements</Link>と呼ばれる、組み込みのカスタマイズ可能なユーザーインターフェースコンポーネントが用意されています。
+
+## 認証方法
+
+Platformアプリでは、認証方法として<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>、<Link href="/guides/authentication/jwt">JWT</Link>、および<Link href="/guides/authentication/client-credentials">クライアント資格情報許可</Link>がサポートされています。
+
+<Card href="/guides/authentication/select" arrow title="認証方法の詳細を確認する" />
+
+## 使用するタイミング
+
+以下の場合にPlatformアプリを使用します。
+
+* 認証に<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>、<Link href="/guides/authentication/jwt">JWT</Link>、または<Link href="/guides/authentication/client-credentials">クライアント資格情報許可</Link>を使用する
+* ファイルをアップロードおよびダウンロードする
+* 自分が所有するファイルにも、<Link href="/platform/user-types/#managed-users/">管理対象ユーザーまたは外部ユーザー</Link>が所有するファイルにもアクセスする
+* Box統合にアプリケーションを掲載する
+* Boxウェブアプリとの統合を可能にする
+
+## ユースケース
+
+ユースケースの例を以下に示します。
+
+* アプリケーション内のファイル保存場所。これにより、エンドユーザーが自分と共有されているファイルにアクセスできると同時に、従業員にもBoxウェブアプリを介して同じファイルへのアクセス権限が提供されます。
+
+  この一例として、ファイナンシャルアドバイザは、Platformアプリケーション内で閲覧またはコメントが可能な取引明細書や投資目論見書を投資家と共有します。
+
+* アプリケーションのファイルアップロード機能。これにより、エンドユーザーは、独自に構築したアプリケーション内からBoxにファイルを送信したりアップロードしたりできます。その後、これらのアップロードにより、Boxウェブアプリを使用したビジネスプロセスが開始されます。
+
+  この一例として、志願者が採用ポータルに送信した経歴書のPDFは、審査のため適切な従業員に転送されます。
+
+## 承認
+
+Platformアプリは、使用前に承認が必要になる場合があります。
+
+<Card href="/guides/authorization/platform-app-approval" arrow title="Platformアプリの承認方法を確認する" />
+
+<RelatedLinks
+  title="関連するガイド"
+  items={[
+  { label: "OAuth 2.0 Auth", href: "/guides/authentication/oauth2/index", badge: "GUIDE" },
+  { label: "JWT Auth", href: "/guides/authentication/jwt/index", badge: "GUIDE" },
+  { label: "Client Credentials Grant", href: "/guides/authentication/client-credentials/index", badge: "GUIDE" }
+]}
+/>

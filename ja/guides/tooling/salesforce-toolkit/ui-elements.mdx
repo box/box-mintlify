@@ -1,28 +1,19 @@
 ---
-title: "SalesforceのUI Elements"
-alias_paths: []
-category_id: tooling
-subcategory_id: tooling/salesforce-toolkit
-is_index: false
-id: tooling/salesforce-toolkit/ui-elements
-type: guide
-total_steps: 5
-sibling_id: tooling/salesforce-toolkit
-parent_id: tooling/salesforce-toolkit
-next_page_id: tooling/salesforce-toolkit/box-agentforce-package
-previous_page_id: tooling/salesforce-toolkit/flow-actions
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/ui-elements.md
+alias_paths: {}
+title: SalesforceのUI Elements
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-Box for Salesforce管理パッケージでは、[Content Picker][2]、[エクスプローラ][3]、[プレビュー][4]、[アップローダー][5]の[UI Elements][1]がLightningコンポーネントとして提供されます。これらのUI ElementsはLightningページまたはLightningフローで使用できます。
+Box for Salesforce管理パッケージでは、<Link href="/guides/embed/ui-elements/picker">Content Picker</Link>、<Link href="/guides/embed/ui-elements/explorer">エクスプローラ</Link>、<Link href="/guides/embed/ui-elements/preview">プレビュー</Link>、<Link href="/guides/embed/ui-elements/uploader">アップローダー</Link>の<Link href="/guides/embed/ui-elements">UI Elements</Link>がLightningコンポーネントとして提供されます。これらのUI ElementsはLightningページまたはLightningフローで使用できます。
 
 ## Content Picker
 
-Box for SalesforceのPickerで使用できる[オプション][6]は以下のとおりです。
+Box for SalesforceのPickerで使用できる<Link href="/guides/embed/ui-elements/picker/#options">オプション</Link>は以下のとおりです。
 
 * `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `chooseButtonLabel`
@@ -34,7 +25,7 @@ Box for SalesforceのPickerで使用できる[オプション][6]は以下のと
 
 ## コンテンツエクスプローラ
 
-Box for Salesforceのエクスプローラで使用できる[オプション][7]は以下のとおりです。
+Box for Salesforceのエクスプローラで使用できる<Link href="/guides/embed/ui-elements/explorer/#options">オプション</Link>は以下のとおりです。
 
 * `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `canSetShareAccess`
@@ -48,41 +39,21 @@ Box for Salesforceのエクスプローラで使用できる[オプション][7]
 
 ## コンテンツプレビュー
 
-Box for Salesforceのプレビューで使用できる[オプション][8]は以下のとおりです。
+Box for Salesforceのプレビューで使用できる<Link href="/guides/embed/ui-elements/preview/#options">オプション</Link>は以下のとおりです。
 
-* `fileId` ([ファイルIDの確認][9])
+* `fileId` (<Link href="/guides/files/get">ファイルIDの確認</Link>)
 * **ファイルIDのAPIフィールド名** - Salesforce固有。レコードページでは、表示するファイルIDを保持するAPIフィールド名を使用できます
 
 ## コンテンツアップローダー
 
-Box for Salesforceのアップローダーで使用できる[オプション][10]は以下のとおりです。
+Box for Salesforceのアップローダーで使用できる<Link href="/guides/embed/ui-elements/uploader/#options">オプション</Link>は以下のとおりです。
 
 * `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `fileLimit`
 
-[1]: /ja/guides/embed/ui-elements
-
-[2]: /ja/guides/embed/ui-elements/picker
-
-[3]: /ja/guides/embed/ui-elements/explorer
-
-[4]: /ja/guides/embed/ui-elements/preview
-
-[5]: /ja/guides/embed/ui-elements/uploader
-
-[6]: /ja/guides/embed/ui-elements/picker/#options
-
-[7]: /ja/guides/embed/ui-elements/explorer/#options
-
-[8]: /ja/guides/embed/ui-elements/preview/#options
-
-[9]: /ja/guides/files/get
-
-[10]: /ja/guides/embed/ui-elements/uploader/#options
-
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Salesforce SDKのインストール", href: "/ja/guides/tooling/sdks/salesforce", badge: "ガイド" }
-  ]}
+  { label: "Install Salesforce SDK", href: "/guides/tooling/sdks/salesforce", badge: "GUIDE" }
+]}
 />

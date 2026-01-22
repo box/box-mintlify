@@ -1,231 +1,218 @@
 ---
-title: "Box AIを使用してテキストを生成する"
 alias_paths:
-  - guides/box-ai/generate-text
-category_id: box-ai
-subcategory_id: box-ai/ai-tutorials
-is_index: false
-id: box-ai/ai-tutorials/generate-text
-type: guide
-total_steps: 6
-sibling_id: box-ai/ai-tutorials
-parent_id: box-ai/ai-tutorials
-next_page_id: box-ai/ai-tutorials/default-agent-overrides
-previous_page_id: box-ai/ai-tutorials/ask-questions
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/generate-text.md
+  0: guides/box-ai/generate-text
+title: Box AIを使用してテキストを生成する
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 <Note>
-
-Box AI APIは、Business以上をご利用のすべてのお客様が利用できます。
-
+  Box AI APIは、Business以上をご利用のすべてのお客様が利用できます。
 </Note>
 
 Box AIを使用すると、提供されたコンテンツに基づいてテキストを生成できます。たとえば、Box Notesで参照または作成したコンテンツに基づいてテンプレートを生成するようBox AIに求めることができます。その後、生成されたテキストを直接ドキュメントに埋め込むことができます。
 
 ## 開始する前に
 
-Platformアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。
+Platformアプリを作成して認証するには、<Link href="/guides/box-ai/ai-tutorials/prerequisites">Box AIの使い方</Link>に記載されている手順に従っていることを確認してください。
 
 ## リクエストの送信
 
 リクエストを送信するには、`POST /2.0/ai/text_gen`エンドポイントを使用します。
 
 <CodeGroup>
+  ```sh cURL
+  curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
+       -H "content-type: application/json" \
+       -H "authorization: Bearer <ACCESS_TOKEN>" \
+       -d '{
+            "prompt": "Write a social media post about protein powder.",
+            "items": [
+           {
+              "id": "12345678",
+              "type": "file",
+              "content": "More information about protein powders"
+          },
+          ],
+            "dialogue_history": [
+              {
+                  "prompt": "Can you add some more information?",
+                  "answer": "Public API schemas provide necessary information to integrate with APIs...",
+                  "created_at": "2013-12-12T11:20:43-08:00"
+              }
+          ],
+            "ai_agent": {
+              "type": "ai_agent_text_gen",
+              "basic_gen": {
+                "model": "azure__openai__gpt_4o_mini"
+              }
+           }
+       }'
+  ```
 
-```sh cURL
-curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
-     -H "content-type: application/json" \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -d '{
-          "prompt": "Write a social media post about protein powder.",
-          "items": [
-         {
-            "id": "12345678",
-            "type": "file",
-            "content": "More information about protein powders"
-        },
-        ],
-          "dialogue_history": [
-            {
-                "prompt": "Can you add some more information?",
-                "answer": "Public API schemas provide necessary information to integrate with APIs...",
-                "created_at": "2013-12-12T11:20:43-08:00"
-            }
-        ],
-          "ai_agent": {
-            "type": "ai_agent_text_gen",
-            "basic_gen": {
-              "model": "azure__openai__gpt_4o_mini"
-            }
-         }
-     }'
-```
-
-```typescript Node/TypeScript v10
-await client.ai.createAiTextGen({
-  prompt: 'Parapharse the document.s',
-  items: [
-    new AiTextGenItemsField({
-      id: fileToAsk.id,
-      type: 'file' as AiTextGenItemsTypeField,
-      content:
-        'The Earth goes around the sun. Sun rises in the East in the morning.',
-    }),
-  ],
-  dialogueHistory: [
-    {
-      prompt: 'What does the earth go around?',
-      answer: 'The sun',
-      createdAt: dateTimeFromString('2021-01-01T00:00:00Z'),
-    } satisfies AiDialogueHistory,
-    {
-      prompt: 'On Earth, where does the sun rise?',
-      answer: 'East',
-      createdAt: dateTimeFromString('2021-01-01T00:00:00Z'),
-    } satisfies AiDialogueHistory,
-  ],
-  aiAgent: aiTextGenAgentConfig,
-} satisfies AiTextGen);
-```
-
-```python Python v10
-client.ai.create_ai_text_gen(
-    "Parapharse the document.s",
-    [
-        CreateAiTextGenItems(
-            id=file_to_ask.id,
-            type=CreateAiTextGenItemsTypeField.FILE,
-            content="The Earth goes around the sun. Sun rises in the East in the morning.",
-        )
+  ```typescript Node/TypeScript v10
+  await client.ai.createAiTextGen({
+    prompt: 'Parapharse the document.s',
+    items: [
+      new AiTextGenItemsField({
+        id: fileToAsk.id,
+        type: 'file' as AiTextGenItemsTypeField,
+        content:
+          'The Earth goes around the sun. Sun rises in the East in the morning.',
+      }),
     ],
-    dialogue_history=[
-        AiDialogueHistory(
-            prompt="What does the earth go around?",
-            answer="The sun",
-            created_at=date_time_from_string("2021-01-01T00:00:00Z"),
-        ),
-        AiDialogueHistory(
-            prompt="On Earth, where does the sun rise?",
-            answer="East",
-            created_at=date_time_from_string("2021-01-01T00:00:00Z"),
-        ),
+    dialogueHistory: [
+      {
+        prompt: 'What does the earth go around?',
+        answer: 'The sun',
+        createdAt: dateTimeFromString('2021-01-01T00:00:00Z'),
+      } satisfies AiDialogueHistory,
+      {
+        prompt: 'On Earth, where does the sun rise?',
+        answer: 'East',
+        createdAt: dateTimeFromString('2021-01-01T00:00:00Z'),
+      } satisfies AiDialogueHistory,
     ],
-    ai_agent=ai_text_gen_agent_config,
-)
-```
+    aiAgent: aiTextGenAgentConfig,
+  } satisfies AiTextGen);
+  ```
 
-```cs .NET v10
-await client.Ai.CreateAiTextGenAsync(requestBody: new AiTextGen(prompt: "Parapharse the document.s", items: Array.AsReadOnly(new [] {new AiTextGenItemsField(id: fileToAsk.Id, type: AiTextGenItemsTypeField.File) { Content = "The Earth goes around the sun. Sun rises in the East in the morning." }})) { DialogueHistory = Array.AsReadOnly(new [] {new AiDialogueHistory() { Prompt = "What does the earth go around?", Answer = "The sun", CreatedAt = Utils.DateTimeFromString(dateTime: "2021-01-01T00:00:00Z") },new AiDialogueHistory() { Prompt = "On Earth, where does the sun rise?", Answer = "East", CreatedAt = Utils.DateTimeFromString(dateTime: "2021-01-01T00:00:00Z") }}) });
-```
+  ```python Python v10
+  client.ai.create_ai_text_gen(
+      "Parapharse the document.s",
+      [
+          CreateAiTextGenItems(
+              id=file_to_ask.id,
+              type=CreateAiTextGenItemsTypeField.FILE,
+              content="The Earth goes around the sun. Sun rises in the East in the morning.",
+          )
+      ],
+      dialogue_history=[
+          AiDialogueHistory(
+              prompt="What does the earth go around?",
+              answer="The sun",
+              created_at=date_time_from_string("2021-01-01T00:00:00Z"),
+          ),
+          AiDialogueHistory(
+              prompt="On Earth, where does the sun rise?",
+              answer="East",
+              created_at=date_time_from_string("2021-01-01T00:00:00Z"),
+          ),
+      ],
+      ai_agent=ai_text_gen_agent_config,
+  )
+  ```
 
-```swift Swift v10
-try await client.ai.createAiTextGen(requestBody: AiTextGen(prompt: "Parapharse the document.s", items: [AiTextGenItemsField(id: fileToAsk.id, type: AiTextGenItemsTypeField.file, content: "The Earth goes around the sun. Sun rises in the East in the morning.")], dialogueHistory: [AiDialogueHistory(prompt: "What does the earth go around?", answer: "The sun", createdAt: try Utils.Dates.dateTimeFromString(dateTime: "2021-01-01T00:00:00Z")), AiDialogueHistory(prompt: "On Earth, where does the sun rise?", answer: "East", createdAt: try Utils.Dates.dateTimeFromString(dateTime: "2021-01-01T00:00:00Z"))]))
-```
+  ```cs .NET v10
+  await client.Ai.CreateAiTextGenAsync(requestBody: new AiTextGen(prompt: "Parapharse the document.s", items: Array.AsReadOnly(new [] {new AiTextGenItemsField(id: fileToAsk.Id, type: AiTextGenItemsTypeField.File) { Content = "The Earth goes around the sun. Sun rises in the East in the morning." }})) { DialogueHistory = Array.AsReadOnly(new [] {new AiDialogueHistory() { Prompt = "What does the earth go around?", Answer = "The sun", CreatedAt = Utils.DateTimeFromString(dateTime: "2021-01-01T00:00:00Z") },new AiDialogueHistory() { Prompt = "On Earth, where does the sun rise?", Answer = "East", CreatedAt = Utils.DateTimeFromString(dateTime: "2021-01-01T00:00:00Z") }}) });
+  ```
 
-```java Java v10
-client.getAi().createAiTextGen(new AiTextGen.Builder("Parapharse the document.s", Arrays.asList(new AiTextGenItemsField.Builder(fileToAsk.getId()).type(AiTextGenItemsTypeField.FILE).content("The Earth goes around the sun. Sun rises in the East in the morning.").build())).dialogueHistory(Arrays.asList(new AiDialogueHistory.Builder().prompt("What does the earth go around?").answer("The sun").createdAt(dateTimeFromString("2021-01-01T00:00:00Z")).build(), new AiDialogueHistory.Builder().prompt("On Earth, where does the sun rise?").answer("East").createdAt(dateTimeFromString("2021-01-01T00:00:00Z")).build())).aiAgent(aiTextGenAgentConfig).build())
-```
+  ```swift Swift v10
+  try await client.ai.createAiTextGen(requestBody: AiTextGen(prompt: "Parapharse the document.s", items: [AiTextGenItemsField(id: fileToAsk.id, type: AiTextGenItemsTypeField.file, content: "The Earth goes around the sun. Sun rises in the East in the morning.")], dialogueHistory: [AiDialogueHistory(prompt: "What does the earth go around?", answer: "The sun", createdAt: try Utils.Dates.dateTimeFromString(dateTime: "2021-01-01T00:00:00Z")), AiDialogueHistory(prompt: "On Earth, where does the sun rise?", answer: "East", createdAt: try Utils.Dates.dateTimeFromString(dateTime: "2021-01-01T00:00:00Z"))]))
+  ```
 
-```java Java v5
-List<BoxAIDialogueEntry> dialogueHistory = new ArrayList<>();
-dialogueHistory.add(
-        new BoxAIDialogueEntry(
-            "Make my email about public APIs sound more professional",
-            "Here is the first draft of your professional email about public APIs.",
-            BoxDateFormat.parse("2013-05-16T15:26:57-07:00")
-        )
-    );
-BoxAIResponse response = BoxAI.sendAITextGenRequest(
-    api,
-    "Write an email to a client about the importance of public APIs.",
-    Collections.singletonList(new BoxAIItem("123456", BoxAIItem.Type.FILE)),
-    dialogueHistory
-);
-```
+  ```java Java v10
+  client.getAi().createAiTextGen(new AiTextGen.Builder("Parapharse the document.s", Arrays.asList(new AiTextGenItemsField.Builder(fileToAsk.getId()).type(AiTextGenItemsTypeField.FILE).content("The Earth goes around the sun. Sun rises in the East in the morning.").build())).dialogueHistory(Arrays.asList(new AiDialogueHistory.Builder().prompt("What does the earth go around?").answer("The sun").createdAt(dateTimeFromString("2021-01-01T00:00:00Z")).build(), new AiDialogueHistory.Builder().prompt("On Earth, where does the sun rise?").answer("East").createdAt(dateTimeFromString("2021-01-01T00:00:00Z")).build())).aiAgent(aiTextGenAgentConfig).build())
+  ```
 
-```python Python v4
-items = [{
-    "id": "1582915952443",
-    "type": "file",
-    "content": "More information about public APIs"
-}]
-dialogue_history = [{
-        "prompt": "Make my email about public APIs sound more professional",
-        "answer": "Here is the first draft of your professional email about public APIs",
-        "created_at": "2013-12-12T10:53:43-08:00"
-    },
-    {
-        "prompt": "Can you add some more information?",
-        "answer": "Public API schemas provide necessary information to integrate with APIs...",
-        "created_at": "2013-12-12T11:20:43-08:00"
-}]
-ai_agent = {
-    'type': 'ai_agent_text_gen',
-    'basic_gen': {
-        'model': 'openai__gpt_3_5_turbo_16k'
-    }
-}
-answer = client.send_ai_text_gen(
-    dialogue_history=dialogue_history,
-    items=items,
-    prompt="Write an email to a client about the importance of public APIs.",
-    ai_agent=ai_agent
-)
-print(answer)
-```
+  ```java Java v5
+  List<BoxAIDialogueEntry> dialogueHistory = new ArrayList<>();
+  dialogueHistory.add(
+          new BoxAIDialogueEntry(
+              "Make my email about public APIs sound more professional",
+              "Here is the first draft of your professional email about public APIs.",
+              BoxDateFormat.parse("2013-05-16T15:26:57-07:00")
+          )
+      );
+  BoxAIResponse response = BoxAI.sendAITextGenRequest(
+      api,
+      "Write an email to a client about the importance of public APIs.",
+      Collections.singletonList(new BoxAIItem("123456", BoxAIItem.Type.FILE)),
+      dialogueHistory
+  );
+  ```
 
-```cs .NET v6
-BoxAIResponse response = await client.BoxAIManager.SendAITextGenRequestAsync(
-    new BoxAITextGenRequest
-    {
-        Prompt = "What is the name of the file?",
-        Items = new List<BoxAITextGenItem>() { new BoxAITextGenItem() { Id = "12345" } },
-        DialogueHistory = new List<BoxAIDialogueHistory>()
-        {
-            new BoxAIDialogueHistory() { Prompt = "What is the name of the file?", Answer = "MyFile", CreatedAt = DateTimeOffset.Parse("2024-05-16T15:26:57-07:00") }
-            new BoxAIDialogueHistory() { Prompt = "What is the size of the file?", Answer = "10kb", CreatedAt =  DateTimeOffset.Parse("2024-05-16T15:26:57-07:00") }
-        }
-    };
-);
-```
+  ```python Python v4
+  items = [{
+      "id": "1582915952443",
+      "type": "file",
+      "content": "More information about public APIs"
+  }]
+  dialogue_history = [{
+          "prompt": "Make my email about public APIs sound more professional",
+          "answer": "Here is the first draft of your professional email about public APIs",
+          "created_at": "2013-12-12T10:53:43-08:00"
+      },
+      {
+          "prompt": "Can you add some more information?",
+          "answer": "Public API schemas provide necessary information to integrate with APIs...",
+          "created_at": "2013-12-12T11:20:43-08:00"
+  }]
+  ai_agent = {
+      'type': 'ai_agent_text_gen',
+      'basic_gen': {
+          'model': 'openai__gpt_3_5_turbo_16k'
+      }
+  }
+  answer = client.send_ai_text_gen(
+      dialogue_history=dialogue_history,
+      items=items,
+      prompt="Write an email to a client about the importance of public APIs.",
+      ai_agent=ai_agent
+  )
+  print(answer)
+  ```
 
-```javascript Node v4
-client.ai.textGen(
-    {
-        prompt: 'What is the capital of France?',
-        items: [
-            {
-                type: 'file',
-                id: '12345'
-            }
-        ],
-        dialogue_history: [
-            {
-                prompt: 'What is the capital of France?',
-                answer: 'Paris',
-                created_at: '2021-10-01T00:00:00Z'
-            },
-            {
-                prompt: 'What is the capital of Germany?',
-                answer: 'Berlin',
-                created_at: '2021-10-01T00:00:00Z'
-            }
-        ]
-    })
-    .then(response => {
-        /* response -> {
-            "answer": "The capital of France is Paris.",
-            "created_at": "2021-10-01T00:00:00Z",
-            "completion_reason": "done"
-        } */
-    });
-```
+  ```cs .NET v6
+  BoxAIResponse response = await client.BoxAIManager.SendAITextGenRequestAsync(
+      new BoxAITextGenRequest
+      {
+          Prompt = "What is the name of the file?",
+          Items = new List<BoxAITextGenItem>() { new BoxAITextGenItem() { Id = "12345" } },
+          DialogueHistory = new List<BoxAIDialogueHistory>()
+          {
+              new BoxAIDialogueHistory() { Prompt = "What is the name of the file?", Answer = "MyFile", CreatedAt = DateTimeOffset.Parse("2024-05-16T15:26:57-07:00") }
+              new BoxAIDialogueHistory() { Prompt = "What is the size of the file?", Answer = "10kb", CreatedAt =  DateTimeOffset.Parse("2024-05-16T15:26:57-07:00") }
+          }
+      };
+  );
+  ```
 
+  ```javascript Node v4
+  client.ai.textGen(
+      {
+          prompt: 'What is the capital of France?',
+          items: [
+              {
+                  type: 'file',
+                  id: '12345'
+              }
+          ],
+          dialogue_history: [
+              {
+                  prompt: 'What is the capital of France?',
+                  answer: 'Paris',
+                  created_at: '2021-10-01T00:00:00Z'
+              },
+              {
+                  prompt: 'What is the capital of Germany?',
+                  answer: 'Berlin',
+                  created_at: '2021-10-01T00:00:00Z'
+              }
+          ]
+      })
+      .then(response => {
+          /* response -> {
+              "answer": "The capital of France is Paris.",
+              "created_at": "2021-10-01T00:00:00Z",
+              "completion_reason": "done"
+          } */
+      });
+  ```
 </CodeGroup>
 
 ### パラメータ
@@ -234,16 +221,16 @@ client.ai.textGen(
 
 **注**: `items`配列に含めることができる要素は1つだけです。
 
-| パラメータ                         | 説明                                                                                                                                                                                                                                                                                                                                                                                        | 例                                                               |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| **`prompt`**                  | Box AIに対するテキストの生成またはリファインのリクエスト。プロンプトの長さは10000文字以内にする必要があります。                                                                                                                                                                                                                                                                                                                             | 週1回の営業会議のアジェンダを作成してください。                                        |
-| **`items.id`**                | ドキュメントのBoxファイルID。                                                                                                                                                                                                                                                                                                                                                                         | `1233039227512`                                                 |
-| **`items.type`**              | 指定した入力データのタイプ。                                                                                                                                                                                                                                                                                                                                                                            | `file`                                                          |
-| `items.content`               | 項目のコンテンツ (多くの場合はテキストレプリゼンテーション)。                                                                                                                                                                                                                                                                                                                                                          | `This article is about Box AI`.                                 |
-| `dialogue_history.prompt`     | 以前にクライアントによって提供され、大規模言語モデル (LLM) が回答したプロンプト。                                                                                                                                                                                                                                                                                                                                              | `Make my email about public APIs sound more professional`       |
-| `dialogue_history.answer`     | 以前にLLMから提供された回答。                                                                                                                                                                                                                                                                                                                                                                          | `Here is a draft of your professional email about public APIs.` |
-| `dialogue_history.created_at` | プロンプトに対する前回の回答が作成された時点のISO日付形式のタイムスタンプ。                                                                                                                                                                                                                                                                                                                                                   | `2012-12-12T10:53:43-08:00`                                     |
-| `ai_agent`                    | デフォルトのエージェント構成を上書きするために使用されるAIエージェント。このパラメータを使用すると、たとえば、[`model`][model-param]パラメータを使用してデフォルトのLLMをカスタムのLLMに置き換えたり、よりカスタマイズされたユーザーエクスペリエンスを実現できるようにベースとなる[`prompt`][prompt-param]を微調整したり、`temperature`などのLLMパラメータを変更して結果の創造性を調整したりすることができます。`ai_agent`パラメータを使用する前に、[`GET 2.0/ai_agent_default`][agent]リクエストを使用してデフォルト構成を取得できます。具体的なユースケースについては、[AIモデルの上書きに関するチュートリアル][overrides]を参照してください。 |                                                                 |
+| パラメータ                         | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | 例                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| **`prompt`**                  | Box AIに対するテキストの生成またはリファインのリクエスト。プロンプトの長さは10000文字以内にする必要があります。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 週1回の営業会議のアジェンダを作成してください。                                        |
+| **`items.id`**                | ドキュメントのBoxファイルID。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | `1233039227512`                                                 |
+| **`items.type`**              | 指定した入力データのタイプ。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | `file`                                                          |
+| `items.content`               | 項目のコンテンツ (多くの場合はテキストレプリゼンテーション)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | `This article is about Box AI`.                                 |
+| `dialogue_history.prompt`     | 以前にクライアントによって提供され、大規模言語モデル (LLM) が回答したプロンプト。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `Make my email about public APIs sound more professional`       |
+| `dialogue_history.answer`     | 以前にLLMから提供された回答。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | `Here is a draft of your professional email about public APIs.` |
+| `dialogue_history.created_at` | プロンプトに対する前回の回答が作成された時点のISO日付形式のタイムスタンプ。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `2012-12-12T10:53:43-08:00`                                     |
+| `ai_agent`                    | デフォルトのエージェント構成を上書きするために使用されるAIエージェント。このパラメータを使用すると、たとえば、<Link href="/reference/resources/ai_agent_text_gen#param_basic_gen_model">`model`</Link>パラメータを使用してデフォルトのLLMをカスタムのLLMに置き換えたり、よりカスタマイズされたユーザーエクスペリエンスを実現できるようにベースとなる<Link href="/reference/resources/ai_agent_text_gen#param_basic_gen_prompt_template">`prompt`</Link>を微調整したり、`temperature`などのLLMパラメータを変更して結果の創造性を調整したりすることができます。`ai_agent`パラメータを使用する前に、<Link href="/reference/get-ai-agent-default">`GET 2.0/ai_agent_default`</Link>リクエストを使用してデフォルト構成を取得できます。具体的なユースケースについては、<Link href="/guides/box-ai/ai-agents/ai-agent-overrides">AIモデルの上書きに関するチュートリアル</Link>を参照してください。 |                                                                 |
 
 ## ユースケース
 
@@ -262,7 +249,6 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
     ],
     "prompt": "Create a short blog post that provides information on Box AI for Documents and focuses on best practices for asking questions. You can add emoticons, but not too many."
 }'
-
 ```
 
 結果は次のようになります。
@@ -273,32 +259,15 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
     "created_at": "2024-11-04T02:46:23.459-08:00",
     "completion_reason": "done"
 }
-
 ```
 
-[prereq]: /ja/guides/box-ai/ai-tutorials/prerequisites
-
-[agent]: /ja/reference/get-ai-agent-default
-
-[model-param]: /ja/reference/resources/ai_agent_text_gen#param_basic_gen_model
-
-[prompt-param]: /ja/reference/resources/ai_agent_text_gen#param_basic_gen_prompt_template
-
-[overrides]: /ja/guides/box-ai/ai-agents/ai-agent-overrides
-
-<RelatedLinks
-  title="関連するAPI"
-  items={[
-    { label: "Generate text", href: "/ja/reference/post-ai-text-gen", badge: "POST" }
-  ]}
-/>
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Box AIの使い方", href: "/ja/guides/box-ai/ai-tutorials/prerequisites", badge: "ガイド" },
-    { label: "AIモデルの構成の上書き", href: "/ja/guides/box-ai/ai-tutorials/default-agent-overrides", badge: "ガイド" },
-    { label: "Box AIに質問する", href: "/ja/guides/box-ai/ai-tutorials/ask-questions", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (自由形式)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (構造化)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "ガイド" }
-  ]}
+  { label: "Get started with Box AI", href: "/guides/box-ai/ai-tutorials/prerequisites", badge: "GUIDE" },
+  { label: "Override AI model configuration", href: "/guides/box-ai/ai-tutorials/default-agent-overrides", badge: "GUIDE" },
+  { label: "Ask questions to Box AI", href: "/guides/box-ai/ai-tutorials/ask-questions", badge: "GUIDE" },
+  { label: "Extract metadata from file (freeform)", href: "/guides/box-ai/ai-tutorials/extract-metadata", badge: "GUIDE" },
+  { label: "Extract metadata from file (structured)", href: "/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "GUIDE" }
+]}
 />

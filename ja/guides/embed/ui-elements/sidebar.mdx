@@ -1,42 +1,32 @@
 ---
-title: "Content Sidebar"
 alias_paths:
-  - /docs/box-content-sidebar
-category_id: embed
-subcategory_id: embed/ui-elements
-is_index: false
-id: embed/ui-elements/sidebar
-type: guide
-total_steps: 18
-sibling_id: embed/ui-elements
-parent_id: embed/ui-elements
-next_page_id: embed/ui-elements/uploader
-previous_page_id: embed/ui-elements/preview
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/sidebar.md
+  0: /docs/box-content-sidebar
+title: Content Sidebar
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
-
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "インストール", href: "/ja/guides/embed/ui-elements/installation", badge: "ガイド" }
-  ]}
+  { label: "Installation", href: "/guides/embed/ui-elements/installation", badge: "GUIDE" }
+]}
 />
-Box Content Sidebar UI Elementを使用すると、開発者は、ファイル関連のメタデータ とアクティビティフィード (バージョン、コメント、タスクを含む) を表示するためのサポートをデスクトップまたはモバイルウェブアプリで追加できます。
+
+Box Content Sidebar UI Elementを使用すると、開発者は、ファイル関連のメタデータとアクティビティフィード (バージョン、コメント、タスクを含む) を表示するためのサポートをデスクトップまたはモバイルウェブアプリで追加できます。
 
 ## インストール
 
-NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](/ja/guides/embed/ui-elements/installation)を参照してください。
+NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、<Link href="/guides/embed/ui-elements/installation">こちら</Link>を参照してください。
 
 ## 認証
 
 UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
 
-<Card href="/ja/guides/authentication/select" title="認証方法の選択について確認する"/>
+<Card href="/guides/authentication/select" arrow title="認証方法の選択について確認する" />
 
 ## サンプルHTML
 
@@ -78,28 +68,21 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     </script>
   </body>
 </html>
-
 ```
 
 ## デモ
 
 ### スタンドアロンサイドバー
 
-<iframe height="800" scrolling="no" title="Box Content Sidebar" src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="800" scrolling="no" title="Box Content Sidebar" src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ### コンテンツプレビューを使用したサイドバー
 
-<iframe height="800" scrolling="no" title="Box Content Previewとサイドバー" src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="800" scrolling="no" title="Box Content Previewとサイドバー" src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ### コンテンツエクスプローラを使用したサイドバー
 
-<iframe height="800" scrolling="no" title="Box Content Explorerとサイドバー" src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style={{width: "100%"}}>
-
-</iframe>
+<iframe height="800" scrolling="no" title="Box Content Explorerとサイドバー" src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style={{width: "100%"}} />
 
 ## API
 
@@ -163,7 +146,6 @@ sidebar.removeListener(eventName, listener);
  * @return {void}
  */
 sidebar.removeAllListeners();
-
 ```
 
 ### パラメータ
@@ -176,15 +158,15 @@ sidebar.removeAllListeners();
 
 ### オプション
 
-| パラメータ                 | 型        | デフォルト           | 説明                                                                                                                                                                                           |
-| --------------------- | -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `container`           | String   | `document.body` | Content Sidebarが配置されるコンテナのCSSセレクタ。`hide()`を呼び出すと、このコンテナは空になります。                                                                                                                              |
-| `hasActivityFeed`     | Boolean  | `false`         | trueに設定すると、バージョン、コメント、およびタスクを含むアクティビティフィードが表示されます。                                                                                                                                           |
-| `hasMetadata`         | Boolean  | `false`         | trueに設定すると、ファイルのBoxメタデータが表示されます。                                                                                                                                                             |
-| `hasSkills`           | Boolean  | `false`         | trueに設定すると、ファイルのスキルデータが表示されます。                                                                                                                                                               |
-| `detailsSidebarProps` | Object   | `{}`            | 以下のセクションを参照してください。                                                                                                                                                                           |
-| `requestInterceptor`  | Function |                 | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |
-| `responseInterceptor` | Function |                 | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |
+| パラメータ                 | 型        | デフォルト           | 説明                                                                                                                                                                                                                             |
+| --------------------- | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `container`           | String   | `document.body` | Content Sidebarが配置されるコンテナのCSSセレクタ。`hide()`を呼び出すと、このコンテナは空になります。                                                                                                                                                                |
+| `hasActivityFeed`     | Boolean  | `false`         | trueに設定すると、バージョン、コメント、およびタスクを含むアクティビティフィードが表示されます。                                                                                                                                                                             |
+| `hasMetadata`         | Boolean  | `false`         | trueに設定すると、ファイルのBoxメタデータが表示されます。                                                                                                                                                                                               |
+| `hasSkills`           | Boolean  | `false`         | trueに設定すると、ファイルのスキルデータが表示されます。                                                                                                                                                                                                 |
+| `detailsSidebarProps` | Object   | `{}`            | 以下のセクションを参照してください。                                                                                                                                                                                                             |
+| `requestInterceptor`  | Function |                 | リクエストをインターセプトする関数。例については、<Link href="https://codepen.io/box-platform/pen/jLdxEv">このCodePen</Link>を参照してください。基盤となるXHRライブラリは`axios.js`で、<Link href="https://github.com/axios/axios#interceptors">インターセプタでは同様のアプローチ</Link>に従っています。 |
+| `responseInterceptor` | Function |                 | レスポンスをインターセプトする関数。例については、<Link href="https://codepen.io/box-platform/pen/jLdxEv">このCodePen</Link>を参照してください。基盤となるXHRライブラリは`axios.js`で、<Link href="https://github.com/axios/axios#interceptors">インターセプタでは同様のアプローチ</Link>に従っています。 |
 
 ### `detailsSidebarProps`
 
@@ -195,11 +177,11 @@ sidebar.removeAllListeners();
 | `hasVersions`    | Boolean | `false` | trueに設定すると、詳細サイドバーにファイルのバージョンが表示されます。    |
 | `hasNotices`     | Boolean | `false` | trueに設定すると、詳細サイドバーにファイル関連の通知が表示されます。     |
 
-##  スコープ 
+## &#x20;スコープ&#x20;
 
-アプリケーションで、エンドユーザーがContent Sidebar機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Sidebarを初期化するエンドユーザークライアントに安全に渡すことができます。
+アプリケーションで、エンドユーザーがContent Sidebar機能のサブセットのみにアクセスできるようにする必要がある場合は、<Link href="/guides/authentication/tokens/downscope">ダウンスコープ</Link>を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Sidebarを初期化するエンドユーザークライアントに安全に渡すことができます。
 
-以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content SidebarのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
+以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content SidebarのUIコントロールを有効/無効にすることができます。詳細については、<Link href="/guides/api-calls/permissions-and-errors/scopes">Box UI Elementsの専用スコープ</Link>を参照してください。
 
 ### 基本スコープ
 
@@ -216,13 +198,9 @@ sidebar.removeAllListeners();
 | `item_upload`  | ファイルメタデータの編集を許可します。 |
 | `item_task`    | タスクの作成と解決を許可します。    |
 
-[downscope]: /ja/guides/authentication/tokens/downscope
-
-[scopes]: /ja/guides/api-calls/permissions-and-errors/scopes
-
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "UI Element", href: "/ja/guides/embed/ui-elements/index", badge: "ガイド" }
-  ]}
+  { label: "UI Elements", href: "/guides/embed/ui-elements/index", badge: "GUIDE" }
+]}
 />
