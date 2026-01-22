@@ -1,24 +1,4 @@
 ---
 title: "セッション終了メッセージ"
+openapi-schema: "/box-openapi-jp.json SessionTerminationMessage"
 ---
-
-APIバージョン 2024.0
-
-終了ジョブステータスについて通知するメッセージ。
-
-<ParamField body="message" type="string">
-例 `Request is successful, please check the admin
-events for the status of the job`
-
-終了ジョブステータスの一意の識別子。
-</ParamField>
-
-<ResponseExample>
-
-```json レスポンスの例
-{
-  "message": "Request is successful, please check the admin\nevents for the status of the job"
-}
-```
-
-</ResponseExample>

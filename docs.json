@@ -3735,6 +3735,7 @@
                         "pages": [
                           "ja/reference/v2025.0/get-archives",
                           "ja/reference/v2025.0/post-archives",
+                          "ja/reference/v2025.0/put-archives-id",
                           "ja/reference/v2025.0/delete-archives-id"
                         ]
                       }
@@ -3746,20 +3747,20 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/v2025.0/resources/docgen-batch--base",
                           "ja/reference/v2025.0/resources/docgen-job",
+                          "ja/reference/v2025.0/resources/docgen-jobs",
                           "ja/reference/v2025.0/resources/docgen-job--base",
                           "ja/reference/v2025.0/resources/docgen-job--full",
-                          "ja/reference/v2025.0/resources/docgen-jobs",
-                          "ja/reference/v2025.0/resources/docgen-jobs--full"
+                          "ja/reference/v2025.0/resources/docgen-jobs--full",
+                          "ja/reference/v2025.0/resources/docgen-batch--base"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/v2025.0/get-docgen-batch-jobs-id",
                           "ja/reference/v2025.0/get-docgen-jobs-id",
                           "ja/reference/v2025.0/get-docgen-jobs",
+                          "ja/reference/v2025.0/get-docgen-batch-jobs-id",
                           "ja/reference/v2025.0/post-docgen-batches"
                         ]
                       }
@@ -3771,20 +3772,20 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/v2025.0/resources/docgen-tag",
-                          "ja/reference/v2025.0/resources/docgen-tags-processing-message",
                           "ja/reference/v2025.0/resources/docgen-tags",
+                          "ja/reference/v2025.0/resources/docgen-tags-processing-message",
                           "ja/reference/v2025.0/resources/docgen-template",
-                          "ja/reference/v2025.0/resources/docgen-templates"
+                          "ja/reference/v2025.0/resources/docgen-templates",
+                          "ja/reference/v2025.0/resources/docgen-tag"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
+                          "ja/reference/v2025.0/get-docgen-templates",
+                          "ja/reference/v2025.0/get-docgen-templates-id",
                           "ja/reference/v2025.0/get-docgen-template-jobs-id",
                           "ja/reference/v2025.0/get-docgen-templates-id-tags",
-                          "ja/reference/v2025.0/get-docgen-templates-id",
-                          "ja/reference/v2025.0/get-docgen-templates",
                           "ja/reference/v2025.0/post-docgen-templates",
                           "ja/reference/v2025.0/delete-docgen-templates-id"
                         ]
@@ -3797,7 +3798,6 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/v2025.0/resources/hub",
                           "ja/reference/v2025.0/resources/hub--base",
                           "ja/reference/v2025.0/resources/hubs"
                         ]
@@ -3805,9 +3805,9 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/v2025.0/get-enterprise-hubs",
                           "ja/reference/v2025.0/get-hubs-id",
                           "ja/reference/v2025.0/get-hubs",
+                          "ja/reference/v2025.0/get-enterprise-hubs",
                           "ja/reference/v2025.0/post-hubs-id-copy",
                           "ja/reference/v2025.0/post-hubs",
                           "ja/reference/v2025.0/put-hubs-id",
@@ -3829,8 +3829,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/v2025.0/get-hub-collaborations-id",
                           "ja/reference/v2025.0/get-hub-collaborations",
+                          "ja/reference/v2025.0/get-hub-collaborations-id",
                           "ja/reference/v2025.0/post-hub-collaborations",
                           "ja/reference/v2025.0/put-hub-collaborations-id",
                           "ja/reference/v2025.0/delete-hub-collaborations-id"
@@ -3845,8 +3845,8 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/v2025.0/resources/hub-item",
-                          "ja/reference/v2025.0/resources/hub-items-manage-response",
-                          "ja/reference/v2025.0/resources/hub-items"
+                          "ja/reference/v2025.0/resources/hub-items",
+                          "ja/reference/v2025.0/resources/hub-items-manage-response"
                         ]
                       },
                       {
@@ -3859,18 +3859,39 @@
                     ]
                   },
                   {
+                    "group": "Enterprise構成",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/v2025.0/resources/enterprise-configuration",
+                          "ja/reference/v2025.0/resources/enterprise-configuration-shield",
+                          "ja/reference/v2025.0/resources/enterprise-configuration-content-and-sharing",
+                          "ja/reference/v2025.0/resources/enterprise-configuration-security",
+                          "ja/reference/v2025.0/resources/enterprise-configuration-user-settings"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/v2025.0/get-enterprise-configurations-id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "group": "Shieldリスト",
                     "pages": [
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/v2025.0/resources/shield-list-content--country",
-                          "ja/reference/v2025.0/resources/shield-list-content--domains",
-                          "ja/reference/v2025.0/resources/shield-list-content--email",
-                          "ja/reference/v2025.0/resources/shield-list-content--integration",
-                          "ja/reference/v2025.0/resources/shield-list-content--ip",
                           "ja/reference/v2025.0/resources/shield-list",
                           "ja/reference/v2025.0/resources/shield-list--mini",
+                          "ja/reference/v2025.0/resources/shield-list-content--ip",
+                          "ja/reference/v2025.0/resources/shield-list-content--domains",
+                          "ja/reference/v2025.0/resources/shield-list-content--email",
+                          "ja/reference/v2025.0/resources/shield-list-content--country",
+                          "ja/reference/v2025.0/resources/shield-list-content--integration",
                           "ja/reference/v2025.0/resources/shield-lists"
                         ]
                       },
@@ -3882,27 +3903,6 @@
                           "ja/reference/v2025.0/post-shield-lists",
                           "ja/reference/v2025.0/put-shield-lists-id",
                           "ja/reference/v2025.0/delete-shield-lists-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Enterprise構成",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/v2025.0/resources/enterprise-configuration",
-                          "ja/reference/v2025.0/resources/enterprise-configuration-content-and-sharing",
-                          "ja/reference/v2025.0/resources/enterprise-configuration-security",
-                          "ja/reference/v2025.0/resources/enterprise-configuration-shield",
-                          "ja/reference/v2025.0/resources/enterprise-configuration-user-settings"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/v2025.0/get-enterprise-configurations-id"
                         ]
                       }
                     ]
@@ -3936,25 +3936,25 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/ai-agent-ask",
-                          "ja/reference/resources/ai-agent-extract",
-                          "ja/reference/resources/ai-agent-extract-structured",
                           "ja/reference/resources/ai-agent-reference",
-                          "ja/reference/resources/ai-agent-text-gen",
-                          "ja/reference/resources/ai-extract-response",
                           "ja/reference/resources/ai-extract-structured-response",
+                          "ja/reference/resources/ai-extract-response",
                           "ja/reference/resources/ai-response",
-                          "ja/reference/resources/ai-response--full"
+                          "ja/reference/resources/ai-response--full",
+                          "ja/reference/resources/ai-agent-text-gen",
+                          "ja/reference/resources/ai-agent-ask",
+                          "ja/reference/resources/ai-agent-extract-structured",
+                          "ja/reference/resources/ai-agent-extract"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
                           "ja/reference/get-ai-agent-default",
-                          "ja/reference/post-ai-ask",
-                          "ja/reference/post-ai-extract",
+                          "ja/reference/post-ai-text-gen",
                           "ja/reference/post-ai-extract-structured",
-                          "ja/reference/post-ai-text-gen"
+                          "ja/reference/post-ai-extract",
+                          "ja/reference/post-ai-ask"
                         ]
                       }
                     ]
@@ -3965,15 +3965,15 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/ai-multiple-agent-response",
                           "ja/reference/resources/ai-single-agent-response",
                           "ja/reference/resources/ai-single-agent-response--full",
-                          "ja/reference/resources/ai-studio-agent-ask",
-                          "ja/reference/resources/ai-studio-agent-ask-response",
-                          "ja/reference/resources/ai-studio-agent-extract",
-                          "ja/reference/resources/ai-studio-agent-extract-response",
+                          "ja/reference/resources/ai-multiple-agent-response",
+                          "ja/reference/resources/ai-studio-agent-text-gen-response",
                           "ja/reference/resources/ai-studio-agent-text-gen",
-                          "ja/reference/resources/ai-studio-agent-text-gen-response"
+                          "ja/reference/resources/ai-studio-agent-ask-response",
+                          "ja/reference/resources/ai-studio-agent-ask",
+                          "ja/reference/resources/ai-studio-agent-extract-response",
+                          "ja/reference/resources/ai-studio-agent-extract"
                         ]
                       },
                       {
@@ -4014,8 +4014,8 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/resources/sign-request",
-                          "ja/reference/resources/sign-request--base",
-                          "ja/reference/resources/sign-requests"
+                          "ja/reference/resources/sign-requests",
+                          "ja/reference/resources/sign-request--base"
                         ]
                       },
                       {
@@ -4023,9 +4023,9 @@
                         "pages": [
                           "ja/reference/get-sign-requests",
                           "ja/reference/get-sign-requests-id",
-                          "ja/reference/post-sign-requests",
                           "ja/reference/post-sign-requests-id-cancel",
-                          "ja/reference/post-sign-requests-id-resend"
+                          "ja/reference/post-sign-requests-id-resend",
+                          "ja/reference/post-sign-requests"
                         ]
                       }
                     ]
@@ -4045,8 +4045,8 @@
                         "pages": [
                           "ja/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema",
                           "ja/reference/post-metadata-templates-schema--classifications",
-                          "ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add",
-                          "ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--update"
+                          "ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--update",
+                          "ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add"
                         ]
                       }
                     ]
@@ -4086,9 +4086,9 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-collections",
                           "ja/reference/get-collections-id",
-                          "ja/reference/get-collections-id-items"
+                          "ja/reference/get-collections-id-items",
+                          "ja/reference/get-collections"
                         ]
                       }
                     ]
@@ -4099,10 +4099,8 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/comment",
-                          "ja/reference/resources/comment--base",
-                          "ja/reference/resources/comment--full",
-                          "ja/reference/resources/comments"
+                          "ja/reference/resources/comments",
+                          "ja/reference/resources/comment--base"
                         ]
                       },
                       {
@@ -4163,18 +4161,15 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/file",
-                          "ja/reference/resources/file--base",
-                          "ja/reference/resources/file--full",
-                          "ja/reference/resources/file--mini",
-                          "ja/reference/resources/files"
+                          "ja/reference/resources/files",
+                          "ja/reference/resources/file--base"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-files-id",
                           "ja/reference/get-files-id-thumbnail-id",
+                          "ja/reference/get-files-id",
                           "ja/reference/post-files-id-copy",
                           "ja/reference/put-files-id",
                           "ja/reference/delete-files-id"
@@ -4188,12 +4183,9 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/folder",
-                          "ja/reference/resources/folder--base",
-                          "ja/reference/resources/folder--full",
-                          "ja/reference/resources/folder--mini",
                           "ja/reference/resources/items",
-                          "ja/reference/resources/items-offset-paginated"
+                          "ja/reference/resources/items-offset-paginated",
+                          "ja/reference/resources/folder--base"
                         ]
                       },
                       {
@@ -4201,8 +4193,8 @@
                         "pages": [
                           "ja/reference/get-folders-id",
                           "ja/reference/get-folders-id-items",
-                          "ja/reference/post-folders",
                           "ja/reference/post-folders-id-copy",
+                          "ja/reference/post-folders",
                           "ja/reference/put-folders-id",
                           "ja/reference/delete-folders-id"
                         ]
@@ -4215,18 +4207,15 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/group",
-                          "ja/reference/resources/group--base",
-                          "ja/reference/resources/group--full",
-                          "ja/reference/resources/group--mini",
-                          "ja/reference/resources/groups"
+                          "ja/reference/resources/groups",
+                          "ja/reference/resources/group--base"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-groups",
                           "ja/reference/get-groups-id",
+                          "ja/reference/get-groups",
                           "ja/reference/post-groups",
                           "ja/reference/put-groups-id",
                           "ja/reference/delete-groups-id"
@@ -4311,8 +4300,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-shield-information-barrier-segment-members",
                           "ja/reference/get-shield-information-barrier-segment-members-id",
+                          "ja/reference/get-shield-information-barrier-segment-members",
                           "ja/reference/post-shield-information-barrier-segment-members",
                           "ja/reference/delete-shield-information-barrier-segment-members-id"
                         ]
@@ -4334,8 +4323,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-shield-information-barrier-segment-restrictions",
                           "ja/reference/get-shield-information-barrier-segment-restrictions-id",
+                          "ja/reference/get-shield-information-barrier-segment-restrictions",
                           "ja/reference/post-shield-information-barrier-segment-restrictions",
                           "ja/reference/delete-shield-information-barrier-segment-restrictions-id"
                         ]
@@ -4348,18 +4337,18 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/shield-information-barrier-reference",
                           "ja/reference/resources/shield-information-barrier-report",
                           "ja/reference/resources/shield-information-barrier-report--base",
+                          "ja/reference/resources/shield-information-barrier-reports",
                           "ja/reference/resources/shield-information-barrier-report-details",
-                          "ja/reference/resources/shield-information-barrier-reports"
+                          "ja/reference/resources/shield-information-barrier-reference"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-shield-information-barrier-reports",
                           "ja/reference/get-shield-information-barrier-reports-id",
+                          "ja/reference/get-shield-information-barrier-reports",
                           "ja/reference/post-shield-information-barrier-reports"
                         ]
                       }
@@ -4371,8 +4360,8 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/keyword-skill-card",
                           "ja/reference/resources/skill-cards-metadata",
+                          "ja/reference/resources/keyword-skill-card",
                           "ja/reference/resources/status-skill-card",
                           "ja/reference/resources/timeline-skill-card",
                           "ja/reference/resources/transcript-skill-card"
@@ -4403,8 +4392,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-files-id-tasks",
                           "ja/reference/get-tasks-id",
+                          "ja/reference/get-files-id-tasks",
                           "ja/reference/post-tasks",
                           "ja/reference/put-tasks-id",
                           "ja/reference/delete-tasks-id"
@@ -4418,20 +4407,16 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/user",
+                          "ja/reference/resources/users",
                           "ja/reference/resources/user--base",
-                          "ja/reference/resources/user--full",
-                          "ja/reference/resources/user--mini",
-                          "ja/reference/resources/user-collaborations",
-                          "ja/reference/resources/user-integration-mappings-reference",
-                          "ja/reference/resources/users"
+                          "ja/reference/resources/user-integration-mappings-reference"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-users",
                           "ja/reference/get-users-id",
+                          "ja/reference/get-users",
                           "ja/reference/get-users-me",
                           "ja/reference/post-users",
                           "ja/reference/put-users-id",
@@ -4454,8 +4439,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-webhooks",
                           "ja/reference/get-webhooks-id",
+                          "ja/reference/get-webhooks",
                           "ja/reference/post-webhooks",
                           "ja/reference/put-webhooks-id",
                           "ja/reference/delete-webhooks-id"
@@ -4489,16 +4474,16 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/conflict-error",
-                          "ja/reference/resources/upload-url"
+                          "ja/reference/resources/upload-url",
+                          "ja/reference/resources/conflict-error"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/options-files-content",
+                          "ja/reference/post-files-id-content",
                           "ja/reference/post-files-content",
-                          "ja/reference/post-files-id-content"
+                          "ja/reference/options-files-content"
                         ]
                       }
                     ]
@@ -4509,11 +4494,10 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/upload-part",
-                          "ja/reference/resources/upload-part--mini",
                           "ja/reference/resources/upload-parts",
+                          "ja/reference/resources/uploaded-part",
                           "ja/reference/resources/upload-session",
-                          "ja/reference/resources/uploaded-part"
+                          "ja/reference/resources/upload-part--mini"
                         ]
                       },
                       {
@@ -4521,9 +4505,9 @@
                         "pages": [
                           "ja/reference/get-files-upload-sessions-id",
                           "ja/reference/get-files-upload-sessions-id-parts",
-                          "ja/reference/post-files-id-upload-sessions",
-                          "ja/reference/post-files-upload-sessions",
                           "ja/reference/post-files-upload-sessions-id-commit",
+                          "ja/reference/post-files-upload-sessions",
+                          "ja/reference/post-files-id-upload-sessions",
                           "ja/reference/put-files-upload-sessions-id",
                           "ja/reference/delete-files-upload-sessions-id"
                         ]
@@ -4556,9 +4540,7 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/web-link",
-                          "ja/reference/resources/web-link--base",
-                          "ja/reference/resources/web-link--mini"
+                          "ja/reference/resources/web-link--base"
                         ]
                       },
                       {
@@ -4585,8 +4567,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-group-memberships-id",
                           "ja/reference/get-groups-id-memberships",
+                          "ja/reference/get-group-memberships-id",
                           "ja/reference/get-users-id-memberships",
                           "ja/reference/post-group-memberships",
                           "ja/reference/put-group-memberships-id",
@@ -4672,10 +4654,10 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-collaborations",
+                          "ja/reference/get-groups-id-collaborations",
                           "ja/reference/get-files-id-collaborations",
                           "ja/reference/get-folders-id-collaborations",
-                          "ja/reference/get-groups-id-collaborations"
+                          "ja/reference/get-collaborations"
                         ]
                       }
                     ]
@@ -4707,9 +4689,8 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/terms-of-service",
-                          "ja/reference/resources/terms-of-service--base",
-                          "ja/reference/resources/terms-of-services"
+                          "ja/reference/resources/terms-of-services",
+                          "ja/reference/resources/terms-of-service--base"
                         ]
                       },
                       {
@@ -4785,8 +4766,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-task-assignments-id",
                           "ja/reference/get-tasks-id-assignments",
+                          "ja/reference/get-task-assignments-id",
                           "ja/reference/post-task-assignments",
                           "ja/reference/put-task-assignments-id",
                           "ja/reference/delete-task-assignments-id"
@@ -4882,8 +4863,8 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-file-version-retentions",
-                          "ja/reference/get-file-version-retentions-id"
+                          "ja/reference/get-file-version-retentions-id",
+                          "ja/reference/get-file-version-retentions"
                         ]
                       }
                     ]
@@ -4980,9 +4961,8 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/resources/metadata",
-                          "ja/reference/resources/metadata--base",
-                          "ja/reference/resources/metadata--full",
-                          "ja/reference/resources/metadatas"
+                          "ja/reference/resources/metadatas",
+                          "ja/reference/resources/metadata--base"
                         ]
                       },
                       {
@@ -5013,42 +4993,6 @@
                     ]
                   },
                   {
-                    "group": "メタデータ階層",
-                    "pages": [
-                      {
-                        "group": "リソースの一覧",
-                        "pages": [
-                          "ja/reference/resources/metadata-taxonomies",
-                          "ja/reference/resources/metadata-taxonomy",
-                          "ja/reference/resources/metadata-taxonomy-level",
-                          "ja/reference/resources/metadata-taxonomy-levels",
-                          "ja/reference/resources/metadata-taxonomy-node",
-                          "ja/reference/resources/metadata-taxonomy-nodes"
-                        ]
-                      },
-                      {
-                        "group": "エンドポイント",
-                        "pages": [
-                          "ja/reference/post-metadata-taxonomies",
-                          "ja/reference/post-metadata-taxonomies-id-id-levels",
-                          "ja/reference/post-metadata-taxonomies-id-id-levels:append",
-                          "ja/reference/post-metadata-taxonomies-id-id-levels:trim",
-                          "ja/reference/post-metadata-taxonomies-id-id-nodes",
-                          "ja/reference/get-metadata-taxonomies-id",
-                          "ja/reference/get-metadata-taxonomies-id-id",
-                          "ja/reference/get-metadata-taxonomies-id-id-nodes",
-                          "ja/reference/get-metadata-taxonomies-id-id-nodes-id",
-                          "ja/reference/get-metadata-templates-id-id-fields-id-options",
-                          "ja/reference/delete-metadata-taxonomies-id-id",
-                          "ja/reference/delete-metadata-taxonomies-id-id-nodes-id",
-                          "ja/reference/patch-metadata-taxonomies-id-id",
-                          "ja/reference/patch-metadata-taxonomies-id-id-levels-id",
-                          "ja/reference/patch-metadata-taxonomies-id-id-nodes-id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "group": "メタデータカスケードポリシー",
                     "pages": [
                       {
@@ -5063,8 +5007,8 @@
                         "pages": [
                           "ja/reference/get-metadata-cascade-policies",
                           "ja/reference/get-metadata-cascade-policies-id",
-                          "ja/reference/post-metadata-cascade-policies",
                           "ja/reference/post-metadata-cascade-policies-id-apply",
+                          "ja/reference/post-metadata-cascade-policies",
                           "ja/reference/delete-metadata-cascade-policies-id"
                         ]
                       }
@@ -5083,14 +5027,50 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-metadata-templates",
-                          "ja/reference/get-metadata-templates-enterprise",
-                          "ja/reference/get-metadata-templates-global",
                           "ja/reference/get-metadata-templates-id",
+                          "ja/reference/get-metadata-templates",
+                          "ja/reference/get-metadata-templates-global",
+                          "ja/reference/get-metadata-templates-enterprise",
                           "ja/reference/get-metadata-templates-id-id-schema",
                           "ja/reference/post-metadata-templates-schema",
                           "ja/reference/put-metadata-templates-id-id-schema",
                           "ja/reference/delete-metadata-templates-id-id-schema"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "メタデータ階層",
+                    "pages": [
+                      {
+                        "group": "リソースの一覧",
+                        "pages": [
+                          "ja/reference/resources/metadata-taxonomies",
+                          "ja/reference/resources/metadata-taxonomy",
+                          "ja/reference/resources/metadata-taxonomy-node",
+                          "ja/reference/resources/metadata-taxonomy-nodes",
+                          "ja/reference/resources/metadata-taxonomy-level",
+                          "ja/reference/resources/metadata-taxonomy-levels"
+                        ]
+                      },
+                      {
+                        "group": "エンドポイント",
+                        "pages": [
+                          "ja/reference/get-metadata-taxonomies-id-id-nodes-id",
+                          "ja/reference/get-metadata-templates-id-id-fields-id-options",
+                          "ja/reference/get-metadata-taxonomies-id-id",
+                          "ja/reference/get-metadata-taxonomies-id-id-nodes",
+                          "ja/reference/get-metadata-taxonomies-id",
+                          "ja/reference/post-metadata-taxonomies-id-id-nodes",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels:trim",
+                          "ja/reference/post-metadata-taxonomies-id-id-levels:append",
+                          "ja/reference/post-metadata-taxonomies",
+                          "ja/reference/patch-metadata-taxonomies-id-id-nodes-id",
+                          "ja/reference/patch-metadata-taxonomies-id-id-levels-id",
+                          "ja/reference/patch-metadata-taxonomies-id-id",
+                          "ja/reference/delete-metadata-taxonomies-id-id-nodes-id",
+                          "ja/reference/delete-metadata-taxonomies-id-id"
                         ]
                       }
                     ]
@@ -5121,7 +5101,6 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/resources/legal-hold-policies",
-                          "ja/reference/resources/legal-hold-policy",
                           "ja/reference/resources/legal-hold-policy--mini"
                         ]
                       },
@@ -5143,20 +5122,20 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/file-versions-on-hold",
                           "ja/reference/resources/files-on-hold",
+                          "ja/reference/resources/file-versions-on-hold",
                           "ja/reference/resources/legal-hold-policy-assignment",
-                          "ja/reference/resources/legal-hold-policy-assignment--base",
-                          "ja/reference/resources/legal-hold-policy-assignments"
+                          "ja/reference/resources/legal-hold-policy-assignments",
+                          "ja/reference/resources/legal-hold-policy-assignment--base"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-legal-hold-policy-assignments",
-                          "ja/reference/get-legal-hold-policy-assignments-id",
                           "ja/reference/get-legal-hold-policy-assignments-id-file-versions-on-hold",
                           "ja/reference/get-legal-hold-policy-assignments-id-files-on-hold",
+                          "ja/reference/get-legal-hold-policy-assignments",
+                          "ja/reference/get-legal-hold-policy-assignments-id",
                           "ja/reference/post-legal-hold-policy-assignments",
                           "ja/reference/delete-legal-hold-policy-assignments-id"
                         ]
@@ -5171,8 +5150,7 @@
                         "pages": [
                           "ja/reference/resources/retention-policies",
                           "ja/reference/resources/retention-policy",
-                          "ja/reference/resources/retention-policy--base",
-                          "ja/reference/resources/retention-policy--mini"
+                          "ja/reference/resources/retention-policy--base"
                         ]
                       },
                       {
@@ -5201,10 +5179,10 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-retention-policies-id-assignments",
-                          "ja/reference/get-retention-policy-assignments-id",
                           "ja/reference/get-retention-policy-assignments-id-file-versions-under-retention",
                           "ja/reference/get-retention-policy-assignments-id-files-under-retention",
+                          "ja/reference/get-retention-policies-id-assignments",
+                          "ja/reference/get-retention-policy-assignments-id",
                           "ja/reference/post-retention-policy-assignments",
                           "ja/reference/delete-retention-policy-assignments-id"
                         ]
@@ -5217,7 +5195,6 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/workflow",
                           "ja/reference/resources/workflow--mini",
                           "ja/reference/resources/workflows"
                         ]
@@ -5248,10 +5225,10 @@
                       {
                         "group": "エンドポイント",
                         "pages": [
-                          "ja/reference/get-shared-items--web-links",
                           "ja/reference/get-web-links-id--get-shared-link",
-                          "ja/reference/put-web-links-id--add-shared-link",
+                          "ja/reference/get-shared-items--web-links",
                           "ja/reference/put-web-links-id--remove-shared-link",
+                          "ja/reference/put-web-links-id--add-shared-link",
                           "ja/reference/put-web-links-id--update-shared-link"
                         ]
                       }
@@ -5265,8 +5242,8 @@
                         "pages": [
                           "ja/reference/get-files-id--get-shared-link",
                           "ja/reference/get-shared-items",
-                          "ja/reference/put-files-id--add-shared-link",
                           "ja/reference/put-files-id--remove-shared-link",
+                          "ja/reference/put-files-id--add-shared-link",
                           "ja/reference/put-files-id--update-shared-link"
                         ]
                       }
@@ -5280,8 +5257,8 @@
                         "pages": [
                           "ja/reference/get-folders-id--get-shared-link",
                           "ja/reference/get-shared-items--folders",
-                          "ja/reference/put-folders-id--add-shared-link",
                           "ja/reference/put-folders-id--remove-shared-link",
+                          "ja/reference/put-folders-id--add-shared-link",
                           "ja/reference/put-folders-id--update-shared-link"
                         ]
                       }
@@ -5293,10 +5270,10 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/metadata-filter",
                           "ja/reference/resources/metadata-query-results",
-                          "ja/reference/resources/search-result-with-shared-link",
+                          "ja/reference/resources/metadata-filter",
                           "ja/reference/resources/search-results",
+                          "ja/reference/resources/search-result-with-shared-link",
                           "ja/reference/resources/search-results-with-shared-links"
                         ]
                       },
@@ -5332,17 +5309,17 @@
                       {
                         "group": "リソースの一覧",
                         "pages": [
-                          "ja/reference/resources/access-token",
-                          "ja/reference/resources/oauth2-error"
+                          "ja/reference/resources/oauth2-error",
+                          "ja/reference/resources/access-token"
                         ]
                       },
                       {
                         "group": "エンドポイント",
                         "pages": [
                           "ja/reference/get-authorize",
-                          "ja/reference/post-oauth2-revoke",
                           "ja/reference/post-oauth2-token",
-                          "ja/reference/post-oauth2-token--refresh"
+                          "ja/reference/post-oauth2-token--refresh",
+                          "ja/reference/post-oauth2-revoke"
                         ]
                       }
                     ]
@@ -5386,8 +5363,8 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/resources/integration-mapping-slack",
-                          "ja/reference/resources/integration-mapping-teams",
                           "ja/reference/resources/integration-mappings-slack",
+                          "ja/reference/resources/integration-mapping-teams",
                           "ja/reference/resources/integration-mappings-teams"
                         ]
                       },
@@ -5413,7 +5390,6 @@
                         "group": "リソースの一覧",
                         "pages": [
                           "ja/reference/resources/storage-policies",
-                          "ja/reference/resources/storage-policy",
                           "ja/reference/resources/storage-policy--mini"
                         ]
                       },
