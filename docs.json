@@ -5716,10 +5716,6 @@
       "destination": "/guides/box-ai/ai-tutorials/extract-metadata"
     },
     {
-      "source": "/guides/box-ai/extract-metadata",
-      "destination": "/guides/box-ai/ai-tutorials/extract-use-cases"
-    },
-    {
       "source": "/guides/box-ai/generate-text",
       "destination": "/guides/box-ai/ai-tutorials/generate-text"
     },
@@ -5788,10 +5784,6 @@
       "destination": "/guides/downloads/folder"
     },
     {
-      "source": "/docs/download-all-files-from-a-folder-1",
-      "destination": "/guides/downloads/in-browser"
-    },
-    {
       "source": "/docs/box-embed",
       "destination": "/guides/embed/box-embed"
     },
@@ -5822,14 +5814,6 @@
     {
       "source": "/docs/setting-up-box-tools-to-work-with-custom-domains",
       "destination": "/guides/embed/ui-elements/custom-domains"
-    },
-    {
-      "source": "/docs/box-content-explorer",
-      "destination": "/guides/embed/ui-elements/explorer-metadata-v1"
-    },
-    {
-      "source": "/docs/content-explorer",
-      "destination": "/guides/embed/ui-elements/explorer-metadata-v1"
     },
     {
       "source": "/docs/box-content-explorer",
@@ -6006,10 +5990,6 @@
     {
       "source": "/docs/community-supported-projects",
       "destination": "/guides/tooling/sdks"
-    },
-    {
-      "source": "/docs/box-for-salesforce-developer-toolkit",
-      "destination": "/guides/tooling/sdks/salesforce"
     },
     {
       "source": "/docs/upload-all-files-from-a-folder",
@@ -6272,10 +6252,6 @@
       "destination": "/ja/guides/downloads/folder"
     },
     {
-      "source": "/ja/docs/download-all-files-from-a-folder-1",
-      "destination": "/ja/guides/downloads/in-browser"
-    },
-    {
       "source": "/ja/docs/box-embed",
       "destination": "/ja/guides/embed/box-embed"
     },
@@ -6306,14 +6282,6 @@
     {
       "source": "/ja/docs/setting-up-box-tools-to-work-with-custom-domains",
       "destination": "/ja/guides/embed/ui-elements/custom-domains"
-    },
-    {
-      "source": "/ja/docs/box-content-explorer",
-      "destination": "/ja/guides/embed/ui-elements/explorer-metadata-v1"
-    },
-    {
-      "source": "/ja/docs/content-explorer",
-      "destination": "/ja/guides/embed/ui-elements/explorer-metadata-v1"
     },
     {
       "source": "/ja/docs/box-content-explorer",
@@ -6490,10 +6458,6 @@
     {
       "source": "/ja/docs/community-supported-projects",
       "destination": "/ja/guides/tooling/sdks"
-    },
-    {
-      "source": "/ja/docs/box-for-salesforce-developer-toolkit",
-      "destination": "/ja/guides/tooling/sdks/salesforce"
     },
     {
       "source": "/ja/docs/upload-all-files-from-a-folder",
