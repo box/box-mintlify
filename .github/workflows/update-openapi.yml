@@ -1,0 +1,110 @@
+name: Update OpenAPI Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      locale:
+        description: 'Locale to update (en or jp)'
+        required: true
+        default: 'en'
+        type: choice
+        options:
+          - en
+          - jp
+
+jobs:
+  update-openapi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: '.github/scripts/package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          cd .github/scripts
+          npm ci
+
+      - name: Get box-openapi commit hash
+        id: get-hash
+        run: |
+          # Clone box-openapi repo to get the latest commit hash
+          LOCALE="${{ github.event.inputs.locale }}"
+          TEMP_DIR=$(mktemp -d)
+          git clone --depth 1 --branch "$LOCALE" https://github.com/box/box-openapi "$TEMP_DIR"
+          cd "$TEMP_DIR"
+          FULL_HASH=$(git rev-parse HEAD)
+          SHORT_HASH=$(git rev-parse --short HEAD)
+          echo "full_hash=$FULL_HASH" >> $GITHUB_OUTPUT
+          echo "short_hash=$SHORT_HASH" >> $GITHUB_OUTPUT
+          echo "Box OpenAPI commit hash: $SHORT_HASH (full: $FULL_HASH)"
+          rm -rf "$TEMP_DIR"
+
+      - name: Run fetch and process OpenAPI script
+        run: |
+          cd .github/scripts
+          bash fetch-and-process-openapi.sh ${{ github.event.inputs.locale }} ${{ steps.get-hash.outputs.full_hash }}
+
+      - name: Replace links (JP only on main branch)
+        if: github.event.inputs.locale == 'jp' && github.ref == 'refs/heads/main'
+        run: |
+          cd .github/scripts
+          npm run replace-links -- \
+            --directory "../.." \
+            --pattern "box-openapi.*-jp\\.json$" \
+            --old-url "https://developer.box.com/" \
+            --new-url "https://developer.box.com/ja/"
+
+      - name: Configure git
+        run: |
+          git config user.name "box-apimgmt"
+          git config user.email "box-apimgmt@box.com"
+
+      - name: Create branch and commit changes
+        id: commit
+        run: |
+          LOCALE="${{ github.event.inputs.locale }}"
+          SHORT_HASH="${{ steps.get-hash.outputs.short_hash }}"
+          BRANCH_NAME="openapi-$SHORT_HASH"
+          COMMIT_MSG="Update $LOCALE openapi to output generated at $SHORT_HASH"
+
+          # Create and checkout new branch
+          git checkout -b "$BRANCH_NAME"
+
+          # Add all changes
+          git add .
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            # Commit changes
+            git commit -m "$COMMIT_MSG"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+            echo "commit_message=$COMMIT_MSG" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Push changes
+        if: steps.commit.outputs.has_changes == 'true'
+        run: |
+          git push -u origin ${{ steps.commit.outputs.branch_name }}
+
+      - name: Create Pull Request
+        if: steps.commit.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --title "${{ steps.commit.outputs.commit_message }}" \
+            --body "$(cat <<'EOF'
