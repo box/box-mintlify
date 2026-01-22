@@ -123,3 +123,63 @@ npm run clean-descriptions -- --directory "../.." --pattern "box-openapi\\.json$
 ```
 "description": "Specifies the validation rules. If set, this validation is mandatory."
 ```
+
+### Add Code Samples from SDK Repositories
+
+Extract code samples from SDK repositories and merge them into OpenAPI specification files:
+
+```bash
+npm run add-code-samples -- --directory <directory> --pattern <pattern> [--output <output-dir>]
+```
+
+**Arguments:**
+- `--directory` - Path to directory containing OpenAPI JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--output` - Output directory for modified files (default: save in place)
+
+**What it does:**
+- Clones SDK repositories (cURL, .NET, Swift, Java, Node, Python)
+- Extracts code samples from markdown documentation using `<!-- sample operationId -->` markers
+- Merges samples into OpenAPI files as `x-codeSamples`
+- Supports operation variants (e.g., `<!-- sample put_files_id add_shared_link -->`)
+- Only one sample per language per operation (replaces existing samples)
+
+**Examples:**
+```bash
+# Add code samples to all OpenAPI files in place
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi.*\\.json$"
+
+# Add code samples to English OpenAPI files
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi(-v[0-9]+\\.[0-9]+)?\\.json$"
+
+# Add code samples with custom output directory
+npm run add-code-samples -- --directory "../.." --pattern "box-openapi.*\\.json$" --output "../../output"
+```
+
+**Note:** This script clones SDK repositories temporarily to extract code samples. The cloned repositories are automatically cleaned up after execution.
+
+### Replace Links in Descriptions
+
+Replace URL links in OpenAPI specification description fields (useful for localization):
+
+```bash
+npm run replace-links -- --directory <directory> --pattern <pattern> --old-url <url> --new-url <url> [--output <output-dir>]
+```
+
+**Arguments:**
+- `--directory` - Path to directory containing JSON files
+- `--pattern` - Regex pattern to match filenames
+- `--old-url` - URL to replace
+- `--new-url` - Replacement URL
+- `--output` - Output directory for modified files (default: save in place)
+
+**What it does:**
+- Recursively searches all `description` fields in OpenAPI files
+- Replaces all occurrences of the old URL with the new URL
+- Reports the number of replacements made per file
+
+**Examples:**
+```bash
+# Replace links in Japanese OpenAPI files with custom output
+npm run replace-links -- --directory "../.." --pattern "box-openapi.*-jp\\.json$" --old-url "https://developer.box.com/" --new-url "https://developer.box.com/ja/" --output "../../output"
+```
