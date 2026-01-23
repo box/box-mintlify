@@ -1010,10 +1010,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-archives",
-                          "reference/v2025.0/delete-archives-id",
                           "reference/v2025.0/get-archives",
-                          "reference/v2025.0/put-archives-id"
+                          "reference/v2025.0/post-archives",
+                          "reference/v2025.0/put-archives-id",
+                          "reference/v2025.0/delete-archives-id"
                         ]
                       }
                     ]
@@ -1035,10 +1035,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-docgen-batches",
                           "reference/v2025.0/get-docgen-jobs-id",
                           "reference/v2025.0/get-docgen-batch-jobs-id",
-                          "reference/v2025.0/get-docgen-jobs"
+                          "reference/v2025.0/get-docgen-jobs",
+                          "reference/v2025.0/post-docgen-batches"
                         ]
                       }
                     ]
@@ -1059,12 +1059,12 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-docgen-templates",
-                          "reference/v2025.0/delete-docgen-templates-id",
                           "reference/v2025.0/get-docgen-templates-id",
                           "reference/v2025.0/get-docgen-template-jobs-id",
                           "reference/v2025.0/get-docgen-templates-id-tags",
-                          "reference/v2025.0/get-docgen-templates"
+                          "reference/v2025.0/get-docgen-templates",
+                          "reference/v2025.0/post-docgen-templates",
+                          "reference/v2025.0/delete-docgen-templates-id"
                         ]
                       }
                     ]
@@ -1082,11 +1082,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-hub-collaborations",
                           "reference/v2025.0/get-hub-collaborations-id",
                           "reference/v2025.0/get-hub-collaborations",
-                          "reference/v2025.0/delete-hub-collaborations-id",
-                          "reference/v2025.0/put-hub-collaborations-id"
+                          "reference/v2025.0/post-hub-collaborations",
+                          "reference/v2025.0/put-hub-collaborations-id",
+                          "reference/v2025.0/delete-hub-collaborations-id"
                         ]
                       }
                     ]
@@ -1125,13 +1125,13 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-hubs-id-copy",
-                          "reference/v2025.0/post-hubs",
-                          "reference/v2025.0/delete-hubs-id",
                           "reference/v2025.0/get-hubs-id",
                           "reference/v2025.0/get-hubs",
                           "reference/v2025.0/get-enterprise-hubs",
-                          "reference/v2025.0/put-hubs-id"
+                          "reference/v2025.0/post-hubs-id-copy",
+                          "reference/v2025.0/post-hubs",
+                          "reference/v2025.0/put-hubs-id",
+                          "reference/v2025.0/delete-hubs-id"
                         ]
                       }
                     ]
@@ -1193,11 +1193,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/v2025.0/post-shield-lists",
-                          "reference/v2025.0/delete-shield-lists-id",
                           "reference/v2025.0/get-shield-lists",
                           "reference/v2025.0/get-shield-lists-id",
-                          "reference/v2025.0/put-shield-lists-id"
+                          "reference/v2025.0/post-shield-lists",
+                          "reference/v2025.0/put-shield-lists-id",
+                          "reference/v2025.0/delete-shield-lists-id"
                         ]
                       }
                     ]
@@ -1228,11 +1228,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
+                          "reference/get-ai-agent-default",
                           "reference/post-ai-ask",
                           "reference/post-ai-extract",
                           "reference/post-ai-extract-structured",
-                          "reference/post-ai-text-gen",
-                          "reference/get-ai-agent-default"
+                          "reference/post-ai-text-gen"
                         ]
                       }
                     ]
@@ -1257,11 +1257,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-ai-agents",
-                          "reference/delete-ai-agents-id",
                           "reference/get-ai-agents-id",
                           "reference/get-ai-agents",
-                          "reference/put-ai-agents-id"
+                          "reference/post-ai-agents",
+                          "reference/put-ai-agents-id",
+                          "reference/delete-ai-agents-id"
                         ]
                       }
                     ]
@@ -1314,17 +1314,16 @@
                         "group": "Resources",
                         "pages": [
                           "reference/resources/sign-request",
-                          "reference/resources/sign-requests",
-                          "reference/resources/sign-request--base"
+                          "reference/resources/sign-requests"
                         ]
                       },
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-sign-requests-id-cancel",
-                          "reference/post-sign-requests",
                           "reference/get-sign-requests-id",
                           "reference/get-sign-requests",
+                          "reference/post-sign-requests-id-cancel",
+                          "reference/post-sign-requests",
                           "reference/post-sign-requests-id-resend"
                         ]
                       }
@@ -1362,9 +1361,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add",
-                          "reference/post-metadata-templates-schema--classifications",
                           "reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema",
+                          "reference/post-metadata-templates-schema--classifications",
+                          "reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add",
                           "reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--update"
                         ]
                       }
@@ -1376,10 +1375,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo",
                           "reference/get-files-id-metadata-enterprise-securityClassification-6VMVochwUWo",
-                          "reference/delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo",
-                          "reference/put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+                          "reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo",
+                          "reference/put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo",
+                          "reference/delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
                         ]
                       }
                     ]
@@ -1390,10 +1389,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo",
                           "reference/get-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo",
-                          "reference/delete-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo",
-                          "reference/put-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+                          "reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo",
+                          "reference/put-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo",
+                          "reference/delete-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
                         ]
                       }
                     ]
@@ -1412,10 +1411,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-collaborations",
                           "reference/get-collaborations-id",
-                          "reference/delete-collaborations-id",
-                          "reference/put-collaborations-id"
+                          "reference/post-collaborations",
+                          "reference/put-collaborations-id",
+                          "reference/delete-collaborations-id"
                         ]
                       }
                     ]
@@ -1469,11 +1468,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-comments",
                           "reference/get-comments-id",
                           "reference/get-files-id-comments",
-                          "reference/delete-comments-id",
-                          "reference/put-comments-id"
+                          "reference/post-comments",
+                          "reference/put-comments-id",
+                          "reference/delete-comments-id"
                         ]
                       }
                     ]
@@ -1511,9 +1510,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-collaboration-whitelist-exempt-targets",
                           "reference/get-collaboration-whitelist-exempt-targets-id",
                           "reference/get-collaboration-whitelist-exempt-targets",
+                          "reference/post-collaboration-whitelist-exempt-targets",
                           "reference/delete-collaboration-whitelist-exempt-targets-id"
                         ]
                       }
@@ -1532,9 +1531,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-collaboration-whitelist-entries",
                           "reference/get-collaboration-whitelist-entries-id",
                           "reference/get-collaboration-whitelist-entries",
+                          "reference/post-collaboration-whitelist-entries",
                           "reference/delete-collaboration-whitelist-entries-id"
                         ]
                       }
@@ -1564,8 +1563,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-users-id-email-aliases",
                           "reference/get-users-id-email-aliases",
+                          "reference/post-users-id-email-aliases",
                           "reference/delete-users-id-email-aliases-id"
                         ]
                       }
@@ -1585,8 +1584,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/options-events",
-                          "reference/get-events"
+                          "reference/get-events",
+                          "reference/options-events"
                         ]
                       }
                     ]
@@ -1603,10 +1602,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-file-requests-id-copy",
-                          "reference/delete-file-requests-id",
                           "reference/get-file-requests-id",
-                          "reference/put-file-requests-id"
+                          "reference/post-file-requests-id-copy",
+                          "reference/put-file-requests-id",
+                          "reference/delete-file-requests-id"
                         ]
                       }
                     ]
@@ -1664,8 +1663,8 @@
                           "reference/get-files-id-versions-id",
                           "reference/get-files-id-versions",
                           "reference/post-files-id-versions-current",
-                          "reference/delete-files-id-versions-id",
-                          "reference/put-files-id-versions-id"
+                          "reference/put-files-id-versions-id",
+                          "reference/delete-files-id-versions-id"
                         ]
                       }
                     ]
@@ -1686,11 +1685,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-files-id-copy",
-                          "reference/delete-files-id",
                           "reference/get-files-id",
                           "reference/get-files-id-thumbnail-id",
-                          "reference/put-files-id"
+                          "reference/post-files-id-copy",
+                          "reference/put-files-id",
+                          "reference/delete-files-id"
                         ]
                       }
                     ]
@@ -1708,9 +1707,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
+                          "reference/get-folder-locks",
                           "reference/post-folder-locks",
-                          "reference/delete-folder-locks-id",
-                          "reference/get-folder-locks"
+                          "reference/delete-folder-locks-id"
                         ]
                       }
                     ]
@@ -1732,12 +1731,12 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-folders-id-copy",
-                          "reference/post-folders",
-                          "reference/delete-folders-id",
                           "reference/get-folders-id",
                           "reference/get-folders-id-items",
-                          "reference/put-folders-id"
+                          "reference/post-folders-id-copy",
+                          "reference/post-folders",
+                          "reference/put-folders-id",
+                          "reference/delete-folders-id"
                         ]
                       }
                     ]
@@ -1755,12 +1754,12 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-group-memberships",
                           "reference/get-group-memberships-id",
                           "reference/get-groups-id-memberships",
                           "reference/get-users-id-memberships",
-                          "reference/delete-group-memberships-id",
-                          "reference/put-group-memberships-id"
+                          "reference/post-group-memberships",
+                          "reference/put-group-memberships-id",
+                          "reference/delete-group-memberships-id"
                         ]
                       }
                     ]
@@ -1781,11 +1780,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-groups",
                           "reference/get-groups-id",
                           "reference/get-groups",
-                          "reference/delete-groups-id",
-                          "reference/put-groups-id"
+                          "reference/post-groups",
+                          "reference/put-groups-id",
+                          "reference/delete-groups-id"
                         ]
                       }
                     ]
@@ -1805,14 +1804,14 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-integration-mappings-slack",
-                          "reference/post-integration-mappings-teams",
-                          "reference/delete-integration-mappings-slack-id",
-                          "reference/delete-integration-mappings-teams-id",
                           "reference/get-integration-mappings-slack",
                           "reference/get-integration-mappings-teams",
+                          "reference/post-integration-mappings-slack",
+                          "reference/post-integration-mappings-teams",
                           "reference/put-integration-mappings-slack-id",
-                          "reference/put-integration-mappings-teams-id"
+                          "reference/put-integration-mappings-teams-id",
+                          "reference/delete-integration-mappings-slack-id",
+                          "reference/delete-integration-mappings-teams-id"
                         ]
                       }
                     ]
@@ -1829,8 +1828,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-invites",
-                          "reference/get-invites-id"
+                          "reference/get-invites-id",
+                          "reference/post-invites"
                         ]
                       }
                     ]
@@ -1849,11 +1848,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-legal-hold-policies",
                           "reference/get-legal-hold-policies-id",
                           "reference/get-legal-hold-policies",
-                          "reference/delete-legal-hold-policies-id",
-                          "reference/put-legal-hold-policies-id"
+                          "reference/post-legal-hold-policies",
+                          "reference/put-legal-hold-policies-id",
+                          "reference/delete-legal-hold-policies-id"
                         ]
                       }
                     ]
@@ -1874,11 +1873,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-legal-hold-policy-assignments",
                           "reference/get-legal-hold-policy-assignments-id",
                           "reference/get-legal-hold-policy-assignments-id-files-on-hold",
                           "reference/get-legal-hold-policy-assignments",
                           "reference/get-legal-hold-policy-assignments-id-file-versions-on-hold",
+                          "reference/post-legal-hold-policy-assignments",
                           "reference/delete-legal-hold-policy-assignments-id"
                         ]
                       }
@@ -1897,10 +1896,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-metadata-cascade-policies",
-                          "reference/post-metadata-cascade-policies-id-apply",
                           "reference/get-metadata-cascade-policies-id",
                           "reference/get-metadata-cascade-policies",
+                          "reference/post-metadata-cascade-policies",
+                          "reference/post-metadata-cascade-policies-id-apply",
                           "reference/delete-metadata-cascade-policies-id"
                         ]
                       }
@@ -1921,11 +1920,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-files-id-metadata-id-id",
                           "reference/get-files-id-metadata-id-id",
                           "reference/get-files-id-metadata",
-                          "reference/delete-files-id-metadata-id-id",
-                          "reference/put-files-id-metadata-id-id"
+                          "reference/post-files-id-metadata-id-id",
+                          "reference/put-files-id-metadata-id-id",
+                          "reference/delete-files-id-metadata-id-id"
                         ]
                       }
                     ]
@@ -1936,11 +1935,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-folders-id-metadata-id-id",
                           "reference/get-folders-id-metadata-id-id",
                           "reference/get-folders-id-metadata",
-                          "reference/delete-folders-id-metadata-id-id",
-                          "reference/put-folders-id-metadata-id-id"
+                          "reference/post-folders-id-metadata-id-id",
+                          "reference/put-folders-id-metadata-id-id",
+                          "reference/delete-folders-id-metadata-id-id"
                         ]
                       }
                     ]
@@ -1994,14 +1993,14 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-metadata-templates-schema",
                           "reference/get-metadata-templates",
                           "reference/get-metadata-templates-id",
                           "reference/get-metadata-templates-id-id-schema",
                           "reference/get-metadata-templates-global",
                           "reference/get-metadata-templates-enterprise",
-                          "reference/delete-metadata-templates-id-id-schema",
-                          "reference/put-metadata-templates-id-id-schema"
+                          "reference/post-metadata-templates-schema",
+                          "reference/put-metadata-templates-id-id-schema",
+                          "reference/delete-metadata-templates-id-id-schema"
                         ]
                       }
                     ]
@@ -2038,11 +2037,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-retention-policies",
-                          "reference/delete-retention-policies-id",
                           "reference/get-retention-policies-id",
                           "reference/get-retention-policies",
-                          "reference/put-retention-policies-id"
+                          "reference/post-retention-policies",
+                          "reference/put-retention-policies-id",
+                          "reference/delete-retention-policies-id"
                         ]
                       }
                     ]
@@ -2061,11 +2060,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-retention-policy-assignments",
                           "reference/get-retention-policy-assignments-id-file-versions-under-retention",
                           "reference/get-retention-policy-assignments-id-files-under-retention",
                           "reference/get-retention-policy-assignments-id",
                           "reference/get-retention-policies-id-assignments",
+                          "reference/post-retention-policy-assignments",
                           "reference/delete-retention-policy-assignments-id"
                         ]
                       }
@@ -2087,8 +2086,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-metadata-queries-execute-read",
-                          "reference/get-search"
+                          "reference/get-search",
+                          "reference/post-metadata-queries-execute-read"
                         ]
                       }
                     ]
@@ -2128,9 +2127,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-files-id--add-shared-link",
                           "reference/get-shared-items",
                           "reference/get-files-id--get-shared-link",
+                          "reference/put-files-id--add-shared-link",
                           "reference/put-files-id--remove-shared-link",
                           "reference/put-files-id--update-shared-link"
                         ]
@@ -2143,9 +2142,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-folders-id--add-shared-link",
                           "reference/get-shared-items--folders",
                           "reference/get-folders-id--get-shared-link",
+                          "reference/put-folders-id--add-shared-link",
                           "reference/put-folders-id--remove-shared-link",
                           "reference/put-folders-id--update-shared-link"
                         ]
@@ -2158,9 +2157,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-web-links-id--add-shared-link",
                           "reference/get-shared-items--web-links",
                           "reference/get-web-links-id--get-shared-link",
+                          "reference/put-web-links-id--add-shared-link",
                           "reference/put-web-links-id--remove-shared-link",
                           "reference/put-web-links-id--update-shared-link"
                         ]
@@ -2183,9 +2182,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-shield-information-barrier-reports",
                           "reference/get-shield-information-barrier-reports-id",
-                          "reference/get-shield-information-barrier-reports"
+                          "reference/get-shield-information-barrier-reports",
+                          "reference/post-shield-information-barrier-reports"
                         ]
                       }
                     ]
@@ -2205,10 +2204,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-shield-information-barrier-segment-members",
-                          "reference/delete-shield-information-barrier-segment-members-id",
                           "reference/get-shield-information-barrier-segment-members-id",
-                          "reference/get-shield-information-barrier-segment-members"
+                          "reference/get-shield-information-barrier-segment-members",
+                          "reference/post-shield-information-barrier-segment-members",
+                          "reference/delete-shield-information-barrier-segment-members-id"
                         ]
                       }
                     ]
@@ -2228,10 +2227,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-shield-information-barrier-segment-restrictions",
-                          "reference/delete-shield-information-barrier-segment-restrictions-id",
                           "reference/get-shield-information-barrier-segment-restrictions-id",
-                          "reference/get-shield-information-barrier-segment-restrictions"
+                          "reference/get-shield-information-barrier-segment-restrictions",
+                          "reference/post-shield-information-barrier-segment-restrictions",
+                          "reference/delete-shield-information-barrier-segment-restrictions-id"
                         ]
                       }
                     ]
@@ -2249,11 +2248,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-shield-information-barrier-segments",
-                          "reference/delete-shield-information-barrier-segments-id",
                           "reference/get-shield-information-barrier-segments-id",
                           "reference/get-shield-information-barrier-segments",
-                          "reference/put-shield-information-barrier-segments-id"
+                          "reference/post-shield-information-barrier-segments",
+                          "reference/put-shield-information-barrier-segments-id",
+                          "reference/delete-shield-information-barrier-segments-id"
                         ]
                       }
                     ]
@@ -2272,10 +2271,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-shield-information-barriers-change-status",
-                          "reference/post-shield-information-barriers",
                           "reference/get-shield-information-barriers-id",
-                          "reference/get-shield-information-barriers"
+                          "reference/get-shield-information-barriers",
+                          "reference/post-shield-information-barriers-change-status",
+                          "reference/post-shield-information-barriers"
                         ]
                       }
                     ]
@@ -2296,11 +2295,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-files-id-metadata-global-boxSkillsCards",
                           "reference/get-files-id-metadata-global-boxSkillsCards",
-                          "reference/delete-files-id-metadata-global-boxSkillsCards",
+                          "reference/post-files-id-metadata-global-boxSkillsCards",
                           "reference/put-skill-invocations-id",
-                          "reference/put-files-id-metadata-global-boxSkillsCards"
+                          "reference/put-files-id-metadata-global-boxSkillsCards",
+                          "reference/delete-files-id-metadata-global-boxSkillsCards"
                         ]
                       }
                     ]
@@ -2338,11 +2337,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-storage-policy-assignments",
                           "reference/get-storage-policy-assignments-id",
                           "reference/get-storage-policy-assignments",
-                          "reference/delete-storage-policy-assignments-id",
-                          "reference/put-storage-policy-assignments-id"
+                          "reference/post-storage-policy-assignments",
+                          "reference/put-storage-policy-assignments-id",
+                          "reference/delete-storage-policy-assignments-id"
                         ]
                       }
                     ]
@@ -2360,11 +2359,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-task-assignments",
                           "reference/get-task-assignments-id",
                           "reference/get-tasks-id-assignments",
-                          "reference/delete-task-assignments-id",
-                          "reference/put-task-assignments-id"
+                          "reference/post-task-assignments",
+                          "reference/put-task-assignments-id",
+                          "reference/delete-task-assignments-id"
                         ]
                       }
                     ]
@@ -2382,11 +2381,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-tasks",
                           "reference/get-tasks-id",
                           "reference/get-files-id-tasks",
-                          "reference/delete-tasks-id",
-                          "reference/put-tasks-id"
+                          "reference/post-tasks",
+                          "reference/put-tasks-id",
+                          "reference/delete-tasks-id"
                         ]
                       }
                     ]
@@ -2405,9 +2404,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-terms-of-services",
                           "reference/get-terms-of-services-id",
                           "reference/get-terms-of-services",
+                          "reference/post-terms-of-services",
                           "reference/put-terms-of-services-id"
                         ]
                       }
@@ -2426,8 +2425,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-terms-of-service-user-statuses",
                           "reference/get-terms-of-service-user-statuses",
+                          "reference/post-terms-of-service-user-statuses",
                           "reference/put-terms-of-service-user-statuses-id"
                         ]
                       }
@@ -2458,8 +2457,8 @@
                         "group": "Endpoints",
                         "pages": [
                           "reference/get-files-id-trash",
-                          "reference/delete-files-id-trash",
-                          "reference/post-files-id"
+                          "reference/post-files-id",
+                          "reference/delete-files-id-trash"
                         ]
                       }
                     ]
@@ -2478,8 +2477,8 @@
                         "group": "Endpoints",
                         "pages": [
                           "reference/get-folders-id-trash",
-                          "reference/delete-folders-id-trash",
-                          "reference/post-folders-id"
+                          "reference/post-folders-id",
+                          "reference/delete-folders-id-trash"
                         ]
                       }
                     ]
@@ -2509,8 +2508,8 @@
                         "group": "Endpoints",
                         "pages": [
                           "reference/get-web-links-id-trash",
-                          "reference/delete-web-links-id-trash",
-                          "reference/post-web-links-id"
+                          "reference/post-web-links-id",
+                          "reference/delete-web-links-id-trash"
                         ]
                       }
                     ]
@@ -2528,9 +2527,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/options-files-content",
                           "reference/post-files-content",
-                          "reference/post-files-id-content"
+                          "reference/post-files-id-content",
+                          "reference/options-files-content"
                         ]
                       }
                     ]
@@ -2551,13 +2550,13 @@
                       {
                         "group": "Endpoints",
                         "pages": [
+                          "reference/get-files-upload-sessions-id",
+                          "reference/get-files-upload-sessions-id-parts",
                           "reference/post-files-upload-sessions-id-commit",
                           "reference/post-files-upload-sessions",
                           "reference/post-files-id-upload-sessions",
-                          "reference/get-files-upload-sessions-id",
-                          "reference/get-files-upload-sessions-id-parts",
-                          "reference/delete-files-upload-sessions-id",
-                          "reference/put-files-upload-sessions-id"
+                          "reference/put-files-upload-sessions-id",
+                          "reference/delete-files-upload-sessions-id"
                         ]
                       }
                     ]
@@ -2574,9 +2573,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
+                          "reference/get-users-id-avatar",
                           "reference/post-users-id-avatar",
-                          "reference/delete-users-id-avatar",
-                          "reference/get-users-id-avatar"
+                          "reference/delete-users-id-avatar"
                         ]
                       }
                     ]
@@ -2599,12 +2598,12 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-users",
-                          "reference/delete-users-id",
                           "reference/get-users-me",
                           "reference/get-users-id",
                           "reference/get-users",
-                          "reference/put-users-id"
+                          "reference/post-users",
+                          "reference/put-users-id",
+                          "reference/delete-users-id"
                         ]
                       }
                     ]
@@ -2621,8 +2620,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-files-id-watermark",
                           "reference/get-files-id-watermark",
+                          "reference/put-files-id-watermark",
                           "reference/delete-files-id-watermark"
                         ]
                       }
@@ -2634,8 +2633,8 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/put-folders-id-watermark",
                           "reference/get-folders-id-watermark",
+                          "reference/put-folders-id-watermark",
                           "reference/delete-folders-id-watermark"
                         ]
                       }
@@ -2655,10 +2654,10 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-web-links",
                           "reference/get-web-links-id",
-                          "reference/delete-web-links-id",
-                          "reference/put-web-links-id"
+                          "reference/post-web-links",
+                          "reference/put-web-links-id",
+                          "reference/delete-web-links-id"
                         ]
                       }
                     ]
@@ -2677,11 +2676,11 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-webhooks",
                           "reference/get-webhooks-id",
                           "reference/get-webhooks",
-                          "reference/delete-webhooks-id",
-                          "reference/put-webhooks-id"
+                          "reference/post-webhooks",
+                          "reference/put-webhooks-id",
+                          "reference/delete-webhooks-id"
                         ]
                       }
                     ]
@@ -2719,9 +2718,9 @@
                       {
                         "group": "Endpoints",
                         "pages": [
-                          "reference/post-zip-downloads",
                           "reference/get-zip-downloads-id-content",
-                          "reference/get-zip-downloads-id-status"
+                          "reference/get-zip-downloads-id-status",
+                          "reference/post-zip-downloads"
                         ]
                       }
                     ]
