@@ -109,14 +109,14 @@ limitations.
 
 A high score indicates that the extracted field value is likely to be correct, but errors 
 can still happen. Even a very high score doesn't guarantee that the extraction is correct. 
-Make sure to validate the critical data regardles of the confidence score.
+Make sure to validate the critical data regardless of the confidence score.
 
 ### Context is important
 
 Confidence score is based on the model's understanding of the data, but it doesn't consider
 businees-specific details that a human reviewer can identify.
 
-For example:
+**For example:**
 
 You create a field called `company_name` for an invoice extraction. The model can struggle to
 recognize if you mean the vendor or the customer, and it can lower the confidence score accordingly.
@@ -156,7 +156,7 @@ Confidence estimation currently works with Google Gemini models:
 - `gemini-2.5-flash`
 - `gemini-2.5-pro`
 
-The model used depends on your configuration, and you can verify whichvmodel processed your 
+The model used depends on your configuration, and you can verify which model processed your 
 request by checking `ai_agent_info.models` in the response.
 
 <RelatedLinks
