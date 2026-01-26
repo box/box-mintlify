@@ -2,7 +2,7 @@
 title: "Metadata confidence level"
 ---
 
-Metadata confidence level is a measure of the confidence in the accuracy of the Box's AI—powered
+Metadata confidence level is a measure of confidence in the accuracy of the Box's AI—powered
 metadata extraction. Confidence score is a number between 0 and 1 that estimates how likely the 
 extracted field value is correct.
 The higher the confidence score, the more likely the extracted field value is correct.
@@ -114,19 +114,19 @@ Make sure to validate the critical data regardless of the confidence score.
 ### Context is important
 
 Confidence score is based on the model's understanding of the data, but it doesn't consider
-businees-specific details that a human reviewer can identify.
+business-specific details that a human reviewer can identify.
 
 **For example:**
 
 You create a field called `company_name` for an invoice extraction. The model can struggle to
 recognize if you mean the vendor or the customer, and it can lower the confidence score accordingly.
 
-It's crucial to provide clear, specifc field descriptions. The more context you provide, the 
+It's crucial to provide clear, specifc field descriptions. The more context you provide, 
 the better it can assess the extracted data.
 
 ## Implementing human review workflows
 
-A human-in-the-loop workflows are a necessary to ensure the accuracy of the extracted data. 
+Human-in-the-loop workflows are necessary to ensure the accuracy of the extracted data. 
 Instead of trusting all extractions or reviewing all scores manually, you can programmatically 
 route low-confidence fields for human verification.
 
