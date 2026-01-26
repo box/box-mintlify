@@ -4391,6 +4391,38 @@
         "x-box-tag": "file_classifications",
         "tags": [
           "Classifications on files"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Get classification on file",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/files/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Get classification on file",
+            "source": "await client.FileClassifications.GetClassificationOnFileAsync(fileId: file.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Get classification on file",
+            "source": "try await client.fileClassifications.getClassificationOnFile(fileId: file.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Get classification on file",
+            "source": "client.getFileClassifications().getClassificationOnFile(file.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Get classification on file",
+            "source": "await client.fileClassifications.getClassificationOnFile(file.id);"
+          },
+          {
+            "lang": "python",
+            "label": "Get classification on file",
+            "source": "client.file_classifications.get_classification_on_file(file.id)"
+          }
         ]
       },
       "post": {
@@ -4480,6 +4512,38 @@
         "x-box-tag": "file_classifications",
         "tags": [
           "Classifications on files"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Add classification to file",
+            "source": "curl -i -X POST \"https://api.box.com/2.0/files/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json\" \\\n     -d '{\n       \"Box__Security__Classification__Key\": \"Sensitive\"\n\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add classification to file",
+            "source": "await client.FileClassifications.AddClassificationToFileAsync(fileId: file.Id, requestBody: new AddClassificationToFileRequestBody() { BoxSecurityClassificationKey = classification.Key });"
+          },
+          {
+            "lang": "swift",
+            "label": "Add classification to file",
+            "source": "try await client.fileClassifications.addClassificationToFile(fileId: file.id, requestBody: AddClassificationToFileRequestBody(boxSecurityClassificationKey: classification.key))"
+          },
+          {
+            "lang": "java",
+            "label": "Add classification to file",
+            "source": "client.getFileClassifications().addClassificationToFile(file.getId(), new AddClassificationToFileRequestBody.Builder().boxSecurityClassificationKey(classification.getKey()).build())"
+          },
+          {
+            "lang": "node",
+            "label": "Add classification to file",
+            "source": "await client.fileClassifications.addClassificationToFile(file.id, {\n  requestBody: {\n    boxSecurityClassificationKey: classification.key,\n  } satisfies AddClassificationToFileRequestBody,\n} satisfies AddClassificationToFileOptionalsInput);"
+          },
+          {
+            "lang": "python",
+            "label": "Add classification to file",
+            "source": "client.file_classifications.add_classification_to_file(\n    file.id, box_security_classification_key=classification.key\n)"
+          }
         ]
       },
       "put": {
@@ -4588,6 +4652,38 @@
         "x-box-tag": "file_classifications",
         "tags": [
           "Classifications on files"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Update classification on file",
+            "source": "curl -i -X PUT \"https://api.box.com/2.0/files/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json-patch+json\" \\\n     -d '[{\n       \"op\": \"replace\",\n       \"path\": \"/Box__Security__Classification__Key\",\n       \"value\": \"Internal\"\n     }]'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update classification on file",
+            "source": "await client.FileClassifications.UpdateClassificationOnFileAsync(fileId: file.Id, requestBody: Array.AsReadOnly(new [] {new UpdateClassificationOnFileRequestBody(value: secondClassification.Key)}));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update classification on file",
+            "source": "try await client.fileClassifications.updateClassificationOnFile(fileId: file.id, requestBody: [UpdateClassificationOnFileRequestBody(value: secondClassification.key)])"
+          },
+          {
+            "lang": "java",
+            "label": "Update classification on file",
+            "source": "client.getFileClassifications().updateClassificationOnFile(file.getId(), Arrays.asList(new UpdateClassificationOnFileRequestBody(secondClassification.getKey())))"
+          },
+          {
+            "lang": "node",
+            "label": "Update classification on file",
+            "source": "await client.fileClassifications.updateClassificationOnFile(file.id, [\n  new UpdateClassificationOnFileRequestBody({\n    value: secondClassification.key,\n  }),\n]);"
+          },
+          {
+            "lang": "python",
+            "label": "Update classification on file",
+            "source": "client.file_classifications.update_classification_on_file(\n    file.id, [UpdateClassificationOnFileRequestBody(value=second_classification.key)]\n)"
+          }
         ]
       },
       "delete": {
@@ -4654,6 +4750,38 @@
         "x-box-tag": "file_classifications",
         "tags": [
           "Classifications on files"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Remove classification from file",
+            "source": "curl -i -X DELETE \"https://api.box.com/2.0/files/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Remove classification from file",
+            "source": "await client.FileClassifications.DeleteClassificationFromFileAsync(fileId: file.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Remove classification from file",
+            "source": "try await client.fileClassifications.deleteClassificationFromFile(fileId: file.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Remove classification from file",
+            "source": "client.getFileClassifications().deleteClassificationFromFile(file.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Remove classification from file",
+            "source": "await client.fileClassifications.deleteClassificationFromFile(file.id);"
+          },
+          {
+            "lang": "python",
+            "label": "Remove classification from file",
+            "source": "client.file_classifications.delete_classification_from_file(file.id)"
+          }
         ]
       }
     },
@@ -8408,6 +8536,38 @@
         "x-box-tag": "folder_classifications",
         "tags": [
           "Classifications on folders"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Get classification on folder",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/folders/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Get classification on folder",
+            "source": "await client.FolderClassifications.GetClassificationOnFolderAsync(folderId: folder.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Get classification on folder",
+            "source": "try await client.folderClassifications.getClassificationOnFolder(folderId: folder.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Get classification on folder",
+            "source": "client.getFolderClassifications().getClassificationOnFolder(folder.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Get classification on folder",
+            "source": "await client.folderClassifications.getClassificationOnFolder(folder.id);"
+          },
+          {
+            "lang": "python",
+            "label": "Get classification on folder",
+            "source": "client.folder_classifications.get_classification_on_folder(folder.id)"
+          }
         ]
       },
       "post": {
@@ -8498,6 +8658,38 @@
         "x-box-tag": "folder_classifications",
         "tags": [
           "Classifications on folders"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Add classification to folder",
+            "source": "curl -i -X POST \"https://api.box.com/2.0/folders/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json\" \\\n     -d '{\n       \"Box__Security__Classification__Key\": \"Sensitive\"\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add classification to folder",
+            "source": "await client.FolderClassifications.AddClassificationToFolderAsync(folderId: folder.Id, requestBody: new AddClassificationToFolderRequestBody() { BoxSecurityClassificationKey = classification.Key });"
+          },
+          {
+            "lang": "swift",
+            "label": "Add classification to folder",
+            "source": "try await client.folderClassifications.addClassificationToFolder(folderId: folder.id, requestBody: AddClassificationToFolderRequestBody(boxSecurityClassificationKey: classification.key))"
+          },
+          {
+            "lang": "java",
+            "label": "Add classification to folder",
+            "source": "client.getFolderClassifications().addClassificationToFolder(folder.getId(), new AddClassificationToFolderRequestBody.Builder().boxSecurityClassificationKey(classification.getKey()).build())"
+          },
+          {
+            "lang": "node",
+            "label": "Add classification to folder",
+            "source": "await client.folderClassifications.addClassificationToFolder(folder.id, {\n  requestBody: {\n    boxSecurityClassificationKey: classification.key,\n  } satisfies AddClassificationToFolderRequestBody,\n} satisfies AddClassificationToFolderOptionalsInput);"
+          },
+          {
+            "lang": "python",
+            "label": "Add classification to folder",
+            "source": "client.folder_classifications.add_classification_to_folder(\n    folder.id, box_security_classification_key=classification.key\n)"
+          }
         ]
       },
       "put": {
@@ -8607,6 +8799,38 @@
         "x-box-tag": "folder_classifications",
         "tags": [
           "Classifications on folders"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Update classification on folder",
+            "source": "curl -i -X PUT \"https://api.box.com/2.0/folders/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json-patch+json\" \\\n     -d '[{\n       \"op\": \"replace\",\n       \"path\": \"/Box__Security__Classification__Key\",\n       \"value\": \"Internal\"\n     }]'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update classification on folder",
+            "source": "await client.FolderClassifications.UpdateClassificationOnFolderAsync(folderId: folder.Id, requestBody: Array.AsReadOnly(new [] {new UpdateClassificationOnFolderRequestBody(value: secondClassification.Key)}));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update classification on folder",
+            "source": "try await client.folderClassifications.updateClassificationOnFolder(folderId: folder.id, requestBody: [UpdateClassificationOnFolderRequestBody(value: secondClassification.key)])"
+          },
+          {
+            "lang": "java",
+            "label": "Update classification on folder",
+            "source": "client.getFolderClassifications().updateClassificationOnFolder(folder.getId(), Arrays.asList(new UpdateClassificationOnFolderRequestBody(secondClassification.getKey())))"
+          },
+          {
+            "lang": "node",
+            "label": "Update classification on folder",
+            "source": "await client.folderClassifications.updateClassificationOnFolder(folder.id, [\n  new UpdateClassificationOnFolderRequestBody({\n    value: secondClassification.key,\n  }),\n]);"
+          },
+          {
+            "lang": "python",
+            "label": "Update classification on folder",
+            "source": "client.folder_classifications.update_classification_on_folder(\n    folder.id,\n    [UpdateClassificationOnFolderRequestBody(value=second_classification.key)],\n)"
+          }
         ]
       },
       "delete": {
@@ -8674,6 +8898,38 @@
         "x-box-tag": "folder_classifications",
         "tags": [
           "Classifications on folders"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Remove classification from folder",
+            "source": "curl -i -X DELETE \"https://api.box.com/2.0/folders/12345/metadata/enterprise/securityClassification-6VMVochwUWo\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Remove classification from folder",
+            "source": "await client.FolderClassifications.DeleteClassificationFromFolderAsync(folderId: folder.Id);"
+          },
+          {
+            "lang": "swift",
+            "label": "Remove classification from folder",
+            "source": "try await client.folderClassifications.deleteClassificationFromFolder(folderId: folder.id)"
+          },
+          {
+            "lang": "java",
+            "label": "Remove classification from folder",
+            "source": "client.getFolderClassifications().deleteClassificationFromFolder(folder.getId())"
+          },
+          {
+            "lang": "node",
+            "label": "Remove classification from folder",
+            "source": "await client.folderClassifications.deleteClassificationFromFolder(folder.id);"
+          },
+          {
+            "lang": "python",
+            "label": "Remove classification from folder",
+            "source": "client.folder_classifications.delete_classification_from_folder(folder.id)"
+          }
         ]
       }
     },
@@ -10189,6 +10445,38 @@
         "x-box-tag": "classifications",
         "tags": [
           "Classifications"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "List all classifications",
+            "source": "curl -i -X GET \"https://api.box.com/2.0/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "List all classifications",
+            "source": "await client.Classifications.GetClassificationTemplateAsync();"
+          },
+          {
+            "lang": "swift",
+            "label": "List all classifications",
+            "source": "try await client.classifications.getClassificationTemplate()"
+          },
+          {
+            "lang": "java",
+            "label": "List all classifications",
+            "source": "client.getClassifications().getClassificationTemplate()"
+          },
+          {
+            "lang": "node",
+            "label": "List all classifications",
+            "source": "await client.classifications.getClassificationTemplate();"
+          },
+          {
+            "lang": "python",
+            "label": "List all classifications",
+            "source": "client.classifications.get_classification_template()"
+          }
         ]
       }
     },
@@ -10319,6 +10607,38 @@
         "x-box-tag": "classifications",
         "tags": [
           "Classifications"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Add classification",
+            "source": "curl -i -X PUT \"https://api.box.com/2.0/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json-patch+json\" \\\n     -d '[{\n       \"op\": \"addEnumOption\",\n       \"fieldKey\": \"Box__Security__Classification__Key\",\n       \"data\": {\n         \"key\": \"Sensitive\",\n         \"staticConfig\":{\n          \"classification\": {\n            \"classificationDefinition\": \"Sensitive information that must not be shared.\",\n            \"colorID\": 4\n            }\n         }\n       }\n     }]'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add classification",
+            "source": "await client.Classifications.AddClassificationAsync(requestBody: Array.AsReadOnly(new [] {new AddClassificationRequestBody(data: new AddClassificationRequestBodyDataField(key: Utils.GetUUID()) { StaticConfig = new AddClassificationRequestBodyDataStaticConfigField() { Classification = new AddClassificationRequestBodyDataStaticConfigClassificationField() { ColorId = 4L, ClassificationDefinition = \"Other description\" } } })}));"
+          },
+          {
+            "lang": "swift",
+            "label": "Add classification",
+            "source": "try await client.classifications.addClassification(requestBody: [AddClassificationRequestBody(data: AddClassificationRequestBodyDataField(key: Utils.getUUID(), staticConfig: AddClassificationRequestBodyDataStaticConfigField(classification: AddClassificationRequestBodyDataStaticConfigClassificationField(colorId: Int64(4), classificationDefinition: \"Other description\"))))])"
+          },
+          {
+            "lang": "java",
+            "label": "Add classification",
+            "source": "client.getClassifications().addClassification(Arrays.asList(new AddClassificationRequestBody(new AddClassificationRequestBodyDataField.Builder(getUuid()).staticConfig(new AddClassificationRequestBodyDataStaticConfigField.Builder().classification(new AddClassificationRequestBodyDataStaticConfigClassificationField.Builder().classificationDefinition(\"Other description\").colorId(4L).build()).build()).build())))"
+          },
+          {
+            "lang": "node",
+            "label": "Add classification",
+            "source": "await client.classifications.addClassification([\n  new AddClassificationRequestBody({\n    data: {\n      key: getUuid(),\n      staticConfig: {\n        classification: {\n          colorId: 4,\n          classificationDefinition: 'Other description',\n        } satisfies AddClassificationRequestBodyDataStaticConfigClassificationField,\n      } satisfies AddClassificationRequestBodyDataStaticConfigField,\n    } satisfies AddClassificationRequestBodyDataField,\n  }),\n]);"
+          },
+          {
+            "lang": "python",
+            "label": "Add classification",
+            "source": "client.classifications.add_classification(\n    [\n        AddClassificationRequestBody(\n            data=AddClassificationRequestBodyDataField(\n                key=get_uuid(),\n                static_config=AddClassificationRequestBodyDataStaticConfigField(\n                    classification=AddClassificationRequestBodyDataStaticConfigClassificationField(\n                        color_id=4, classification_definition=\"Other description\"\n                    )\n                ),\n            )\n        )\n    ]\n)"
+          }
         ]
       }
     },
@@ -10455,6 +10775,38 @@
         "x-box-tag": "classifications",
         "tags": [
           "Classifications"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "curl",
+            "label": "Update classification",
+            "source": "curl -i -X PUT \"https://api.box.com/2.0/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"content-type: application/json-patch+json\" \\\n     -d '[{\n       \"op\": \"editEnumOption\",\n       \"fieldKey\": \"Box__Security__Classification__Key\",\n       \"enumOptionKey\": \"Sensitive\",\n       \"data\": {\n         \"key\": \"Very Sensitive\",\n         \"staticConfig\": {\n           \"classification\": {\n            \"classificationDefinition\": \"Sensitive information that must not be shared.\",\n            \"colorID\": 4\n           }\n         }\n       }\n     }]'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update classification",
+            "source": "await client.Classifications.UpdateClassificationAsync(requestBody: Array.AsReadOnly(new [] {new UpdateClassificationRequestBody(enumOptionKey: classification.Key, data: new UpdateClassificationRequestBodyDataField(key: updatedClassificationName) { StaticConfig = new UpdateClassificationRequestBodyDataStaticConfigField() { Classification = new UpdateClassificationRequestBodyDataStaticConfigClassificationField() { ColorId = 2L, ClassificationDefinition = updatedClassificationDescription } } })}));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update classification",
+            "source": "try await client.classifications.updateClassification(requestBody: [UpdateClassificationRequestBody(enumOptionKey: classification.key, data: UpdateClassificationRequestBodyDataField(key: updatedClassificationName, staticConfig: UpdateClassificationRequestBodyDataStaticConfigField(classification: UpdateClassificationRequestBodyDataStaticConfigClassificationField(colorId: Int64(2), classificationDefinition: updatedClassificationDescription))))])"
+          },
+          {
+            "lang": "java",
+            "label": "Update classification",
+            "source": "client.getClassifications().updateClassification(Arrays.asList(new UpdateClassificationRequestBody(classification.getKey(), new UpdateClassificationRequestBodyDataField.Builder(updatedClassificationName).staticConfig(new UpdateClassificationRequestBodyDataStaticConfigField.Builder().classification(new UpdateClassificationRequestBodyDataStaticConfigClassificationField.Builder().classificationDefinition(updatedClassificationDescription).colorId(2L).build()).build()).build())))"
+          },
+          {
+            "lang": "node",
+            "label": "Update classification",
+            "source": "await client.classifications.updateClassification([\n  new UpdateClassificationRequestBody({\n    enumOptionKey: classification.key,\n    data: {\n      key: updatedClassificationName,\n      staticConfig: {\n        classification: {\n          colorId: 2,\n          classificationDefinition: updatedClassificationDescription,\n        } satisfies UpdateClassificationRequestBodyDataStaticConfigClassificationField,\n      } satisfies UpdateClassificationRequestBodyDataStaticConfigField,\n    } satisfies UpdateClassificationRequestBodyDataField,\n  }),\n]);"
+          },
+          {
+            "lang": "python",
+            "label": "Update classification",
+            "source": "client.classifications.update_classification(\n    [\n        UpdateClassificationRequestBody(\n            enum_option_key=classification.key,\n            data=UpdateClassificationRequestBodyDataField(\n                key=updated_classification_name,\n                static_config=UpdateClassificationRequestBodyDataStaticConfigField(\n                    classification=UpdateClassificationRequestBodyDataStaticConfigClassificationField(\n                        color_id=2,\n                        classification_definition=updated_classification_description,\n                    )\n                ),\n            ),\n        )\n    ]\n)"
+          }
         ]
       }
     },
@@ -14938,6 +15290,31 @@
             "lang": "curl",
             "label": "Get shared link for file",
             "source": "curl -i -X GET \"https://api.box.com/2.0/files/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Get shared link for file",
+            "source": "await client.SharedLinksFiles.GetSharedLinkForFileAsync(fileId: fileId, queryParams: new GetSharedLinkForFileQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Get shared link for file",
+            "source": "try await client.sharedLinksFiles.getSharedLinkForFile(fileId: fileId, queryParams: GetSharedLinkForFileQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Get shared link for file",
+            "source": "client.getSharedLinksFiles().getSharedLinkForFile(fileId, new GetSharedLinkForFileQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Get shared link for file",
+            "source": "await client.sharedLinksFiles.getSharedLinkForFile(fileId, {\n  fields: 'shared_link',\n} satisfies GetSharedLinkForFileQueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "Get shared link for file",
+            "source": "client.shared_links_files.get_shared_link_for_file(file_id, \"shared_link\")"
           }
         ]
       }
@@ -15152,6 +15529,31 @@
             "lang": "curl",
             "label": "Add shared link to file",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/files/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add shared link to file",
+            "source": "await client.SharedLinksFiles.AddShareLinkToFileAsync(fileId: fileId, requestBody: new AddShareLinkToFileRequestBody() { SharedLink = new AddShareLinkToFileRequestBodySharedLinkField() { Access = AddShareLinkToFileRequestBodySharedLinkAccessField.Open, Password = \"Secret123@\" } }, queryParams: new AddShareLinkToFileQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Add shared link to file",
+            "source": "try await client.sharedLinksFiles.addShareLinkToFile(fileId: fileId, requestBody: AddShareLinkToFileRequestBody(sharedLink: AddShareLinkToFileRequestBodySharedLinkField(access: AddShareLinkToFileRequestBodySharedLinkAccessField.open, password: \"Secret123@\")), queryParams: AddShareLinkToFileQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Add shared link to file",
+            "source": "client.getSharedLinksFiles().addShareLinkToFile(fileId, new AddShareLinkToFileRequestBody.Builder().sharedLink(new AddShareLinkToFileRequestBodySharedLinkField.Builder().access(AddShareLinkToFileRequestBodySharedLinkAccessField.OPEN).password(\"Secret123@\").build()).build(), new AddShareLinkToFileQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Add shared link to file",
+            "source": "await client.sharedLinksFiles.addShareLinkToFile(\n  fileId,\n  {\n    sharedLink: {\n      access: 'open' as AddShareLinkToFileRequestBodySharedLinkAccessField,\n      password: 'Secret123@',\n    } satisfies AddShareLinkToFileRequestBodySharedLinkField,\n  } satisfies AddShareLinkToFileRequestBody,\n  { fields: 'shared_link' } satisfies AddShareLinkToFileQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Add shared link to file",
+            "source": "client.shared_links_files.add_share_link_to_file(\n    file_id,\n    \"shared_link\",\n    shared_link=AddShareLinkToFileSharedLink(\n        access=AddShareLinkToFileSharedLinkAccessField.OPEN, password=\"Secret123@\"\n    ),\n)"
           }
         ]
       }
@@ -15366,6 +15768,31 @@
             "lang": "curl",
             "label": "Update shared link on file",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/files/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update shared link on file",
+            "source": "await client.SharedLinksFiles.UpdateSharedLinkOnFileAsync(fileId: fileId, requestBody: new UpdateSharedLinkOnFileRequestBody() { SharedLink = new UpdateSharedLinkOnFileRequestBodySharedLinkField() { Access = UpdateSharedLinkOnFileRequestBodySharedLinkAccessField.Collaborators } }, queryParams: new UpdateSharedLinkOnFileQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update shared link on file",
+            "source": "try await client.sharedLinksFiles.updateSharedLinkOnFile(fileId: fileId, requestBody: UpdateSharedLinkOnFileRequestBody(sharedLink: UpdateSharedLinkOnFileRequestBodySharedLinkField(access: UpdateSharedLinkOnFileRequestBodySharedLinkAccessField.collaborators)), queryParams: UpdateSharedLinkOnFileQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Update shared link on file",
+            "source": "client.getSharedLinksFiles().updateSharedLinkOnFile(fileId, new UpdateSharedLinkOnFileRequestBody.Builder().sharedLink(new UpdateSharedLinkOnFileRequestBodySharedLinkField.Builder().access(UpdateSharedLinkOnFileRequestBodySharedLinkAccessField.COLLABORATORS).build()).build(), new UpdateSharedLinkOnFileQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Update shared link on file",
+            "source": "await client.sharedLinksFiles.updateSharedLinkOnFile(\n  fileId,\n  {\n    sharedLink: {\n      access:\n        'collaborators' as UpdateSharedLinkOnFileRequestBodySharedLinkAccessField,\n    } satisfies UpdateSharedLinkOnFileRequestBodySharedLinkField,\n  } satisfies UpdateSharedLinkOnFileRequestBody,\n  { fields: 'shared_link' } satisfies UpdateSharedLinkOnFileQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Update shared link on file",
+            "source": "client.shared_links_files.update_shared_link_on_file(\n    file_id,\n    \"shared_link\",\n    shared_link=UpdateSharedLinkOnFileSharedLink(\n        access=UpdateSharedLinkOnFileSharedLinkAccessField.COLLABORATORS\n    ),\n)"
           }
         ]
       }
@@ -15505,6 +15932,26 @@
             "lang": "curl",
             "label": "Remove shared link from file",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/files/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": null\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Remove shared link from file",
+            "source": "await client.SharedLinksFiles.RemoveSharedLinkFromFileAsync(fileId: fileId, requestBody: new RemoveSharedLinkFromFileRequestBody() { SharedLink = null }, queryParams: new RemoveSharedLinkFromFileQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "java",
+            "label": "Remove shared link from file",
+            "source": "client.getSharedLinksFiles().removeSharedLinkFromFile(fileId, new RemoveSharedLinkFromFileRequestBody.Builder().sharedLink(null).build(), new RemoveSharedLinkFromFileQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Remove shared link from file",
+            "source": "await client.sharedLinksFiles.removeSharedLinkFromFile(\n  fileId,\n  { sharedLink: createNull() } satisfies RemoveSharedLinkFromFileRequestBody,\n  { fields: 'shared_link' } satisfies RemoveSharedLinkFromFileQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Remove shared link from file",
+            "source": "client.shared_links_files.remove_shared_link_from_file(\n    file_id, \"shared_link\", shared_link=create_null()\n)"
           }
         ]
       }
@@ -15588,6 +16035,31 @@
             "lang": "curl",
             "label": "Find folder for shared link",
             "source": "curl -i -X GET \"https://api.box.com/2.0/shared_items\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -H \"boxapi: shared_link=https://app.box.com/s/jsasdsd8sad24&shared_link_password=letmein\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Find folder for shared link",
+            "source": "await userClient.SharedLinksFolders.FindFolderForSharedLinkAsync(queryParams: new FindFolderForSharedLinkQueryParams(), headers: new FindFolderForSharedLinkHeaders(boxapi: string.Concat(\"shared_link=\", NullableUtils.Unwrap(folderFromApi.SharedLink).Url, \"&shared_link_password=Secret123@\")));"
+          },
+          {
+            "lang": "swift",
+            "label": "Find folder for shared link",
+            "source": "try await userClient.sharedLinksFolders.findFolderForSharedLink(queryParams: FindFolderForSharedLinkQueryParams(), headers: FindFolderForSharedLinkHeaders(boxapi: \"\\(\"shared_link=\")\\(folderFromApi.sharedLink!.url)\\(\"&shared_link_password=Secret123@\")\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Find folder for shared link",
+            "source": "userClient.getSharedLinksFolders().findFolderForSharedLink(new FindFolderForSharedLinkQueryParams(), new FindFolderForSharedLinkHeaders(String.join(\"\", \"shared_link=\", folderFromApi.getSharedLink().getUrl(), \"&shared_link_password=Secret123@\")))"
+          },
+          {
+            "lang": "node",
+            "label": "Find folder for shared link",
+            "source": "await userClient.sharedLinksFolders.findFolderForSharedLink(\n  {} satisfies FindFolderForSharedLinkQueryParams,\n  {\n    boxapi: ''.concat(\n      'shared_link=',\n      folderFromApi.sharedLink!.url,\n      '&shared_link_password=Secret123@',\n    ) as string,\n  } satisfies FindFolderForSharedLinkHeadersInput,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Find folder for shared link",
+            "source": "user_client.shared_links_folders.find_folder_for_shared_link(\n    \"\".join(\n        [\n            \"shared_link=\",\n            folder_from_api.shared_link.url,\n            \"&shared_link_password=Secret123@\",\n        ]\n    )\n)"
           }
         ]
       }
@@ -15708,6 +16180,31 @@
             "lang": "curl",
             "label": "Get shared link for folder",
             "source": "curl -i -X GET \"https://api.box.com/2.0/folders/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Get shared link for folder",
+            "source": "await client.SharedLinksFolders.GetSharedLinkForFolderAsync(folderId: folder.Id, queryParams: new GetSharedLinkForFolderQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Get shared link for folder",
+            "source": "try await client.sharedLinksFolders.getSharedLinkForFolder(folderId: folder.id, queryParams: GetSharedLinkForFolderQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Get shared link for folder",
+            "source": "client.getSharedLinksFolders().getSharedLinkForFolder(folder.getId(), new GetSharedLinkForFolderQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Get shared link for folder",
+            "source": "await client.sharedLinksFolders.getSharedLinkForFolder(folder.id, {\n  fields: 'shared_link',\n} satisfies GetSharedLinkForFolderQueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "Get shared link for folder",
+            "source": "client.shared_links_folders.get_shared_link_for_folder(folder.id, \"shared_link\")"
           }
         ]
       }
@@ -15923,6 +16420,31 @@
             "lang": "curl",
             "label": "Add shared link to folder",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/folders/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add shared link to folder",
+            "source": "await client.SharedLinksFolders.AddShareLinkToFolderAsync(folderId: folder.Id, requestBody: new AddShareLinkToFolderRequestBody() { SharedLink = new AddShareLinkToFolderRequestBodySharedLinkField() { Access = AddShareLinkToFolderRequestBodySharedLinkAccessField.Open, Password = \"Secret123@\" } }, queryParams: new AddShareLinkToFolderQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Add shared link to folder",
+            "source": "try await client.sharedLinksFolders.addShareLinkToFolder(folderId: folder.id, requestBody: AddShareLinkToFolderRequestBody(sharedLink: AddShareLinkToFolderRequestBodySharedLinkField(access: AddShareLinkToFolderRequestBodySharedLinkAccessField.open, password: \"Secret123@\")), queryParams: AddShareLinkToFolderQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Add shared link to folder",
+            "source": "client.getSharedLinksFolders().addShareLinkToFolder(folder.getId(), new AddShareLinkToFolderRequestBody.Builder().sharedLink(new AddShareLinkToFolderRequestBodySharedLinkField.Builder().access(AddShareLinkToFolderRequestBodySharedLinkAccessField.OPEN).password(\"Secret123@\").build()).build(), new AddShareLinkToFolderQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Add shared link to folder",
+            "source": "await client.sharedLinksFolders.addShareLinkToFolder(\n  folder.id,\n  {\n    sharedLink: {\n      access: 'open' as AddShareLinkToFolderRequestBodySharedLinkAccessField,\n      password: 'Secret123@',\n    } satisfies AddShareLinkToFolderRequestBodySharedLinkField,\n  } satisfies AddShareLinkToFolderRequestBody,\n  { fields: 'shared_link' } satisfies AddShareLinkToFolderQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Add shared link to folder",
+            "source": "client.shared_links_folders.add_share_link_to_folder(\n    folder.id,\n    \"shared_link\",\n    shared_link=AddShareLinkToFolderSharedLink(\n        access=AddShareLinkToFolderSharedLinkAccessField.OPEN, password=\"Secret123@\"\n    ),\n)"
           }
         ]
       }
@@ -16137,6 +16659,31 @@
             "lang": "curl",
             "label": "Update shared link on folder",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/folders/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update shared link on folder",
+            "source": "await client.SharedLinksFolders.UpdateSharedLinkOnFolderAsync(folderId: folder.Id, requestBody: new UpdateSharedLinkOnFolderRequestBody() { SharedLink = new UpdateSharedLinkOnFolderRequestBodySharedLinkField() { Access = UpdateSharedLinkOnFolderRequestBodySharedLinkAccessField.Collaborators } }, queryParams: new UpdateSharedLinkOnFolderQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update shared link on folder",
+            "source": "try await client.sharedLinksFolders.updateSharedLinkOnFolder(folderId: folder.id, requestBody: UpdateSharedLinkOnFolderRequestBody(sharedLink: UpdateSharedLinkOnFolderRequestBodySharedLinkField(access: UpdateSharedLinkOnFolderRequestBodySharedLinkAccessField.collaborators)), queryParams: UpdateSharedLinkOnFolderQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Update shared link on folder",
+            "source": "client.getSharedLinksFolders().updateSharedLinkOnFolder(folder.getId(), new UpdateSharedLinkOnFolderRequestBody.Builder().sharedLink(new UpdateSharedLinkOnFolderRequestBodySharedLinkField.Builder().access(UpdateSharedLinkOnFolderRequestBodySharedLinkAccessField.COLLABORATORS).build()).build(), new UpdateSharedLinkOnFolderQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Update shared link on folder",
+            "source": "await client.sharedLinksFolders.updateSharedLinkOnFolder(\n  folder.id,\n  {\n    sharedLink: {\n      access:\n        'collaborators' as UpdateSharedLinkOnFolderRequestBodySharedLinkAccessField,\n    } satisfies UpdateSharedLinkOnFolderRequestBodySharedLinkField,\n  } satisfies UpdateSharedLinkOnFolderRequestBody,\n  { fields: 'shared_link' } satisfies UpdateSharedLinkOnFolderQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Update shared link on folder",
+            "source": "client.shared_links_folders.update_shared_link_on_folder(\n    folder.id,\n    \"shared_link\",\n    shared_link=UpdateSharedLinkOnFolderSharedLink(\n        access=UpdateSharedLinkOnFolderSharedLinkAccessField.COLLABORATORS\n    ),\n)"
           }
         ]
       }
@@ -16277,6 +16824,26 @@
             "lang": "curl",
             "label": "Remove shared link from folder",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/folders/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": null\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Remove shared link from folder",
+            "source": "await client.SharedLinksFolders.RemoveSharedLinkFromFolderAsync(folderId: folder.Id, requestBody: new RemoveSharedLinkFromFolderRequestBody() { SharedLink = null }, queryParams: new RemoveSharedLinkFromFolderQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "java",
+            "label": "Remove shared link from folder",
+            "source": "client.getSharedLinksFolders().removeSharedLinkFromFolder(folder.getId(), new RemoveSharedLinkFromFolderRequestBody.Builder().sharedLink(null).build(), new RemoveSharedLinkFromFolderQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Remove shared link from folder",
+            "source": "await client.sharedLinksFolders.removeSharedLinkFromFolder(\n  folder.id,\n  { sharedLink: createNull() } satisfies RemoveSharedLinkFromFolderRequestBody,\n  { fields: 'shared_link' } satisfies RemoveSharedLinkFromFolderQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Remove shared link from folder",
+            "source": "client.shared_links_folders.remove_shared_link_from_folder(\n    folder.id, \"shared_link\", shared_link=create_null()\n)"
           }
         ]
       }
@@ -17116,6 +17683,33 @@
         "x-box-tag": "shared_links_web_links",
         "tags": [
           "Shared links (Web Links)"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Find web link for shared link",
+            "source": "await userClient.SharedLinksWebLinks.FindWebLinkForSharedLinkAsync(queryParams: new FindWebLinkForSharedLinkQueryParams(), headers: new FindWebLinkForSharedLinkHeaders(boxapi: string.Concat(\"shared_link=\", NullableUtils.Unwrap(webLinkFromApi.SharedLink).Url, \"&shared_link_password=Secret123@\")));"
+          },
+          {
+            "lang": "swift",
+            "label": "Find web link for shared link",
+            "source": "try await userClient.sharedLinksWebLinks.findWebLinkForSharedLink(queryParams: FindWebLinkForSharedLinkQueryParams(), headers: FindWebLinkForSharedLinkHeaders(boxapi: \"\\(\"shared_link=\")\\(webLinkFromApi.sharedLink!.url)\\(\"&shared_link_password=Secret123@\")\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Find web link for shared link",
+            "source": "userClient.getSharedLinksWebLinks().findWebLinkForSharedLink(new FindWebLinkForSharedLinkQueryParams(), new FindWebLinkForSharedLinkHeaders(String.join(\"\", \"shared_link=\", webLinkFromApi.getSharedLink().getUrl(), \"&shared_link_password=Secret123@\")))"
+          },
+          {
+            "lang": "node",
+            "label": "Find web link for shared link",
+            "source": "await userClient.sharedLinksWebLinks.findWebLinkForSharedLink(\n  {} satisfies FindWebLinkForSharedLinkQueryParams,\n  {\n    boxapi: ''.concat(\n      'shared_link=',\n      webLinkFromApi.sharedLink!.url,\n      '&shared_link_password=Secret123@',\n    ) as string,\n  } satisfies FindWebLinkForSharedLinkHeadersInput,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Find web link for shared link",
+            "source": "user_client.shared_links_web_links.find_web_link_for_shared_link(\n    \"\".join(\n        [\n            \"shared_link=\",\n            web_link_from_api.shared_link.url,\n            \"&shared_link_password=Secret123@\",\n        ]\n    )\n)"
+          }
         ]
       }
     },
@@ -17234,6 +17828,31 @@
             "lang": "curl",
             "label": "Get shared link for web link",
             "source": "curl -i -X GET \"https://api.box.com/2.0/web_links/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\""
+          },
+          {
+            "lang": "dotnet",
+            "label": "Get shared link for web link",
+            "source": "await client.SharedLinksWebLinks.GetSharedLinkForWebLinkAsync(webLinkId: webLinkId, queryParams: new GetSharedLinkForWebLinkQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Get shared link for web link",
+            "source": "try await client.sharedLinksWebLinks.getSharedLinkForWebLink(webLinkId: webLinkId, queryParams: GetSharedLinkForWebLinkQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Get shared link for web link",
+            "source": "client.getSharedLinksWebLinks().getSharedLinkForWebLink(webLinkId, new GetSharedLinkForWebLinkQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Get shared link for web link",
+            "source": "await client.sharedLinksWebLinks.getSharedLinkForWebLink(webLinkId, {\n  fields: 'shared_link',\n} satisfies GetSharedLinkForWebLinkQueryParams);"
+          },
+          {
+            "lang": "python",
+            "label": "Get shared link for web link",
+            "source": "client.shared_links_web_links.get_shared_link_for_web_link(web_link_id, \"shared_link\")"
           }
         ]
       }
@@ -17448,6 +18067,31 @@
             "lang": "curl",
             "label": "Add shared link to web link",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/web_links/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Add shared link to web link",
+            "source": "await client.SharedLinksWebLinks.AddShareLinkToWebLinkAsync(webLinkId: webLinkId, requestBody: new AddShareLinkToWebLinkRequestBody() { SharedLink = new AddShareLinkToWebLinkRequestBodySharedLinkField() { Access = AddShareLinkToWebLinkRequestBodySharedLinkAccessField.Open, Password = \"Secret123@\" } }, queryParams: new AddShareLinkToWebLinkQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Add shared link to web link",
+            "source": "try await client.sharedLinksWebLinks.addShareLinkToWebLink(webLinkId: webLinkId, requestBody: AddShareLinkToWebLinkRequestBody(sharedLink: AddShareLinkToWebLinkRequestBodySharedLinkField(access: AddShareLinkToWebLinkRequestBodySharedLinkAccessField.open, password: \"Secret123@\")), queryParams: AddShareLinkToWebLinkQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Add shared link to web link",
+            "source": "client.getSharedLinksWebLinks().addShareLinkToWebLink(webLinkId, new AddShareLinkToWebLinkRequestBody.Builder().sharedLink(new AddShareLinkToWebLinkRequestBodySharedLinkField.Builder().access(AddShareLinkToWebLinkRequestBodySharedLinkAccessField.OPEN).password(\"Secret123@\").build()).build(), new AddShareLinkToWebLinkQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Add shared link to web link",
+            "source": "await client.sharedLinksWebLinks.addShareLinkToWebLink(\n  webLinkId,\n  {\n    sharedLink: {\n      access: 'open' as AddShareLinkToWebLinkRequestBodySharedLinkAccessField,\n      password: 'Secret123@',\n    } satisfies AddShareLinkToWebLinkRequestBodySharedLinkField,\n  } satisfies AddShareLinkToWebLinkRequestBody,\n  { fields: 'shared_link' } satisfies AddShareLinkToWebLinkQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Add shared link to web link",
+            "source": "client.shared_links_web_links.add_share_link_to_web_link(\n    web_link_id,\n    \"shared_link\",\n    shared_link=AddShareLinkToWebLinkSharedLink(\n        access=AddShareLinkToWebLinkSharedLinkAccessField.OPEN, password=\"Secret123@\"\n    ),\n)"
           }
         ]
       }
@@ -17662,6 +18306,31 @@
             "lang": "curl",
             "label": "Update shared link on web link",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/web_links/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": {\n         \"access\": \"open\",\n         \"password\": \"mypassword\",\n         \"unshared_at\": \"2012-12-12T10:53:43-08:00\",\n         \"permissions\": {\n           \"can_download\": false\n         }\n       }\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Update shared link on web link",
+            "source": "await client.SharedLinksWebLinks.UpdateSharedLinkOnWebLinkAsync(webLinkId: webLinkId, requestBody: new UpdateSharedLinkOnWebLinkRequestBody() { SharedLink = new UpdateSharedLinkOnWebLinkRequestBodySharedLinkField() { Access = UpdateSharedLinkOnWebLinkRequestBodySharedLinkAccessField.Collaborators } }, queryParams: new UpdateSharedLinkOnWebLinkQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "swift",
+            "label": "Update shared link on web link",
+            "source": "try await client.sharedLinksWebLinks.updateSharedLinkOnWebLink(webLinkId: webLinkId, requestBody: UpdateSharedLinkOnWebLinkRequestBody(sharedLink: UpdateSharedLinkOnWebLinkRequestBodySharedLinkField(access: UpdateSharedLinkOnWebLinkRequestBodySharedLinkAccessField.collaborators)), queryParams: UpdateSharedLinkOnWebLinkQueryParams(fields: \"shared_link\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Update shared link on web link",
+            "source": "client.getSharedLinksWebLinks().updateSharedLinkOnWebLink(webLinkId, new UpdateSharedLinkOnWebLinkRequestBody.Builder().sharedLink(new UpdateSharedLinkOnWebLinkRequestBodySharedLinkField.Builder().access(UpdateSharedLinkOnWebLinkRequestBodySharedLinkAccessField.COLLABORATORS).build()).build(), new UpdateSharedLinkOnWebLinkQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Update shared link on web link",
+            "source": "await client.sharedLinksWebLinks.updateSharedLinkOnWebLink(\n  webLinkId,\n  {\n    sharedLink: {\n      access:\n        'collaborators' as UpdateSharedLinkOnWebLinkRequestBodySharedLinkAccessField,\n    } satisfies UpdateSharedLinkOnWebLinkRequestBodySharedLinkField,\n  } satisfies UpdateSharedLinkOnWebLinkRequestBody,\n  { fields: 'shared_link' } satisfies UpdateSharedLinkOnWebLinkQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Update shared link on web link",
+            "source": "client.shared_links_web_links.update_shared_link_on_web_link(\n    web_link_id,\n    \"shared_link\",\n    shared_link=UpdateSharedLinkOnWebLinkSharedLink(\n        access=UpdateSharedLinkOnWebLinkSharedLinkAccessField.COLLABORATORS\n    ),\n)"
           }
         ]
       }
@@ -17801,6 +18470,26 @@
             "lang": "curl",
             "label": "Remove shared link from web link",
             "source": "curl -i -X PUT \"https://api.box.com/2.0/web_links/32423234?fields=shared_link\" \\\n     -H \"authorization: Bearer <ACCESS_TOKEN>\" \\\n     -d '{\n       \"shared_link\": null\n     }'"
+          },
+          {
+            "lang": "dotnet",
+            "label": "Remove shared link from web link",
+            "source": "await client.SharedLinksWebLinks.RemoveSharedLinkFromWebLinkAsync(webLinkId: webLinkId, requestBody: new RemoveSharedLinkFromWebLinkRequestBody() { SharedLink = null }, queryParams: new RemoveSharedLinkFromWebLinkQueryParams(fields: \"shared_link\"));"
+          },
+          {
+            "lang": "java",
+            "label": "Remove shared link from web link",
+            "source": "client.getSharedLinksWebLinks().removeSharedLinkFromWebLink(webLinkId, new RemoveSharedLinkFromWebLinkRequestBody.Builder().sharedLink(null).build(), new RemoveSharedLinkFromWebLinkQueryParams(\"shared_link\"))"
+          },
+          {
+            "lang": "node",
+            "label": "Remove shared link from web link",
+            "source": "await client.sharedLinksWebLinks.removeSharedLinkFromWebLink(\n  webLinkId,\n  { sharedLink: createNull() } satisfies RemoveSharedLinkFromWebLinkRequestBody,\n  { fields: 'shared_link' } satisfies RemoveSharedLinkFromWebLinkQueryParams,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Remove shared link from web link",
+            "source": "client.shared_links_web_links.remove_shared_link_from_web_link(\n    web_link_id, \"shared_link\", shared_link=create_null()\n)"
           }
         ]
       }
@@ -17847,6 +18536,33 @@
         "x-box-tag": "shared_links_app_items",
         "tags": [
           "Shared links (App Items)"
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Find app item for shared link",
+            "source": "await client.SharedLinksAppItems.FindAppItemForSharedLinkAsync(headers: new FindAppItemForSharedLinkHeaders(boxapi: string.Concat(\"shared_link=\", appItemSharedLink)));"
+          },
+          {
+            "lang": "swift",
+            "label": "Find app item for shared link",
+            "source": "try await client.sharedLinksAppItems.findAppItemForSharedLink(headers: FindAppItemForSharedLinkHeaders(boxapi: \"\\(\"shared_link=\")\\(appItemSharedLink)\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Find app item for shared link",
+            "source": "client.getSharedLinksAppItems().findAppItemForSharedLink(new FindAppItemForSharedLinkHeaders(String.join(\"\", \"shared_link=\", appItemSharedLink)))"
+          },
+          {
+            "lang": "node",
+            "label": "Find app item for shared link",
+            "source": "await client.sharedLinksAppItems.findAppItemForSharedLink({\n  boxapi: ''.concat('shared_link=', appItemSharedLink) as string,\n} satisfies FindAppItemForSharedLinkHeadersInput);"
+          },
+          {
+            "lang": "python",
+            "label": "Find app item for shared link",
+            "source": "client.shared_links_app_items.find_app_item_for_shared_link(\n    \"\".join([\"shared_link=\", app_item_shared_link])\n)"
+          }
         ]
       }
     },
@@ -33931,7 +34647,34 @@
         "tags": [
           "Metadata taxonomies"
         ],
-        "x-box-requires-admin": true
+        "x-box-requires-admin": true,
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Add metadata taxonomy level",
+            "source": "await client.MetadataTaxonomies.AddMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new AddMetadataTaxonomyLevelRequestBody(displayName: \"Region\") { Description = \"Region Description\" });"
+          },
+          {
+            "lang": "swift",
+            "label": "Add metadata taxonomy level",
+            "source": "try await client.metadataTaxonomies.addMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: AddMetadataTaxonomyLevelRequestBody(displayName: \"Region\", description: \"Region Description\"))"
+          },
+          {
+            "lang": "java",
+            "label": "Add metadata taxonomy level",
+            "source": "client.getMetadataTaxonomies().addMetadataTaxonomyLevel(namespace, taxonomyKey, new AddMetadataTaxonomyLevelRequestBody.Builder(\"Region\").description(\"Region Description\").build())"
+          },
+          {
+            "lang": "node",
+            "label": "Add metadata taxonomy level",
+            "source": "await client.metadataTaxonomies.addMetadataTaxonomyLevel(\n  namespace,\n  taxonomyKey,\n  {\n    displayName: 'Region',\n    description: 'Region Description',\n  } satisfies AddMetadataTaxonomyLevelRequestBody,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Add metadata taxonomy level",
+            "source": "client.metadata_taxonomies.add_metadata_taxonomy_level(\n    namespace, taxonomy_key, \"Region\", description=\"Region Description\"\n)"
+          }
+        ]
       }
     },
     "/metadata_taxonomies/{namespace}/{taxonomy_key}/levels:trim": {
@@ -34007,7 +34750,34 @@
         "tags": [
           "Metadata taxonomies"
         ],
-        "x-box-requires-admin": true
+        "x-box-requires-admin": true,
+        "x-codeSamples": [
+          {
+            "lang": "dotnet",
+            "label": "Delete metadata taxonomy level",
+            "source": "await client.MetadataTaxonomies.DeleteMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey);"
+          },
+          {
+            "lang": "swift",
+            "label": "Delete metadata taxonomy level",
+            "source": "try await client.metadataTaxonomies.deleteMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey)"
+          },
+          {
+            "lang": "java",
+            "label": "Delete metadata taxonomy level",
+            "source": "client.getMetadataTaxonomies().deleteMetadataTaxonomyLevel(namespace, taxonomyKey)"
+          },
+          {
+            "lang": "node",
+            "label": "Delete metadata taxonomy level",
+            "source": "await client.metadataTaxonomies.deleteMetadataTaxonomyLevel(\n  namespace,\n  taxonomyKey,\n);"
+          },
+          {
+            "lang": "python",
+            "label": "Delete metadata taxonomy level",
+            "source": "client.metadata_taxonomies.delete_metadata_taxonomy_level(namespace, taxonomy_key)"
+          }
+        ]
       }
     },
     "/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes": {
