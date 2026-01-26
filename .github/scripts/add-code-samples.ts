@@ -168,10 +168,9 @@ function parseSamplesFromContent(content: string, lang: string): SampleData[] {
 
   // Match <!-- sample operationId [variant] --> followed by code block
   // Allows flexible whitespace between comment and code block
+  // Allows any non-whitespace characters in operationId
   // Captures optional second identifier (variant) after space
-  // Allows dots in operationId for version suffixes (e.g., v2025.0)
-  // Allows any non-whitespace characters in language identifier (e.g., dotnet, c#, c++, objective-c)
-  const samplePattern = /<!--\s*sample\s+([a-zA-Z0-9_.]+)(?:\s+([a-zA-Z0-9_.]+))?\s*-->\s*```\S*\s*\n([\s\S]*?)```/g;
+  const samplePattern = /<!--\s*sample\s+(\S+)(?:\s+(\S+))?\s*-->\s*```\S*\s*\n([\s\S]*?)```/g;
 
   let match;
   while ((match = samplePattern.exec(content)) !== null) {

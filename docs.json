@@ -9,6 +9,7 @@
   },
   "api": {
     "examples": {
+      "autogenerate": false,
       "languages": [
         "curl",
         "python",
