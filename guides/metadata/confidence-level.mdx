@@ -7,18 +7,18 @@ metadata extraction. Confidence score is a number between 0 and 1 that estimates
 extracted field value is correct.
 The higher the confidence score, the more likely the extracted field value is correct.
 
-<Important>
+<Warning>
 
 Confidence scores are not saved or logged. They exist only in the API response. If
 you need to audit or track these scores, you need to capture and store them yourself.
 The feature is currently limited to the `/ai/extract_structured` endpoint.
 
-</Important>
+</Warning>
 
 To use the confidence scores, add `"include_confidence_score": true` to your extract structured request.
 
 ```bash
-curl -L 'https://api.box.com/2.0/ai/extract_structured'> \
+curl -L 'https://api.box.com/2.0/ai/extract_structured' \
   -H 'content-type: application/json' \
   -H "authorization: Bearer $BOX_TOKEN" \
   -d '{
