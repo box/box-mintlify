@@ -1,39 +1,26 @@
 ---
-title: "列挙型メタデータフィールド"
-category_id: metadata
-subcategory_id: metadata/3-fields
-is_index: false
-id: metadata/fields/enum
-type: guide
-total_steps: 5
-sibling_id: metadata/fields
-parent_id: metadata/fields
-next_page_id: metadata/fields/multi-select
-previous_page_id: metadata/fields
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/3-fields/4-enum.md
+title: 列挙型メタデータフィールド
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 `enum`タイプのメタデータフィールドは、ドロップダウンリストとしてユーザーに表示されます。ユーザーはリストから項目を1つ選択できます。
 
 <Frame border center shadow width="400">
-
-![文字列フィールド](./metadata-field-enum.png)
-
+  ![文字列フィールド](./metadata-field-enum.png)
 </Frame>
 
 <Note>
-
-`enum`を使用すると、ユーザーは0個または1個の値を選択できます。ユーザーが複数の値を選択できるようにするには、[`multiSelect`][g_multi_select]テンプレートフィールドを使用します。
-
+  `enum`を使用すると、ユーザーは0個または1個の値を選択できます。ユーザーが複数の値を選択できるようにするには、<Link href="/guides/metadata/fields/multi-select">`multiSelect`</Link>テンプレートフィールドを使用します。
 </Note>
 
 ## `enum`フィールドの作成
 
-`enum`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
+`enum`フィールドは、<Link href="/guides/metadata/templates/create">メタデータテンプレートの作成</Link>時、または`addField`操作による<Link href="/guides/metadata/templates/update">テンプレートの更新</Link>時にメタデータテンプレートに追加できます。
 
 `enum`フィールドの必須属性は、`type`、`displayName`、`key`、およびオプションのリストです。
 
@@ -56,14 +43,13 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   ]
 }
-
 ```
 
 必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
 ## `enum`フィールドの更新
 
-`enum`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
+`enum`テンプレートフィールドは、このフィールドが属する<Link href="/guides/metadata/templates/update">テンプレートを更新</Link>することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
 ### 基本的なフィールド値の変更
 
@@ -80,19 +66,14 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   }
 ]
-
 ```
 
 <Info>
-
-ここにある`fieldKey`は、変更するフィールドの元のキーを表します。`data.key`フィールドはフィールドの新しいキーです。
-
+  ここにある`fieldKey`は、変更するフィールドの元のキーを表します。`data.key`フィールドはフィールドの新しいキーです。
 </Info>
 
 <Warning>
-
-これは、このテンプレートの既存のインスタンスに影響します。
-
+  これは、このテンプレートの既存のインスタンスに影響します。
 </Warning>
 
 ### オプションの追加
@@ -109,7 +90,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   }
 ]
-
 ```
 
 オプションのリストは次のようになります。
@@ -123,13 +103,10 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   {"key": "AR"}
 ]
 ...
-
 ```
 
 <Warning>
-
-これは、このテンプレートの既存のインスタンスに影響します。
-
+  これは、このテンプレートの既存のインスタンスに影響します。
 </Warning>
 
 ### オプションの並べ替え
@@ -149,7 +126,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     ]
   }
 ]
-
 ```
 
 オプションのリストは次のようになります。
@@ -163,13 +139,10 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   {"key": "N/A"}
 ]
 ...
-
 ```
 
 <Warning>
-
-この操作では、新しいオプションを追加することはできません。これは、このテンプレートの既存のインスタンスに影響します。
-
+  この操作では、新しいオプションを追加することはできません。これは、このテンプレートの既存のインスタンスに影響します。
 </Warning>
 
 ### オプションの編集
@@ -187,7 +160,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   }
 ]
-
 ```
 
 オプションのリストは次のようになります。
@@ -201,13 +173,10 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   {"key": "Outside USA"}
 ]
 ...
-
 ```
 
 <Warning>
-
-これは、このテンプレートの既存のインスタンスに影響します。
-
+  これは、このテンプレートの既存のインスタンスに影響します。
 </Warning>
 
 ### オプションの削除
@@ -222,7 +191,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     "enumOptionKey": "AL"
   }
 ]
-
 ```
 
 オプションのリストは次のようになります。
@@ -235,31 +203,23 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
   {"key": "Outside USA"}
 ]
 ...
-
 ```
 
 <Warning>
-
-これは、このテンプレートの既存のインスタンスに影響します。この値に設定されたすべてのフィールドでは、値が`null`にリセットされます。
-
+  これは、このテンプレートの既存のインスタンスに影響します。この値に設定されたすべてのフィールドでは、値が`null`にリセットされます。
 </Warning>
-
-[g_create_template]: /ja/guides/metadata/templates/create
-
-[g_update_template]: /ja/guides/metadata/templates/update
-
-[g_multi_select]: /ja/guides/metadata/fields/multi-select
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Update metadata template", href: "/ja/reference/put-metadata-templates-id-id-schema", badge: "PUT" }
-  ]}
+  { label: "Update metadata template", href: "/reference/put-metadata-templates-id-id-schema", badge: "PUT" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "メタデータテンプレートの作成", href: "/ja/guides/metadata/templates/create", badge: "ガイド" },
-    { label: "メタデータテンプレートの更新", href: "/ja/guides/metadata/templates/update", badge: "ガイド" }
-  ]}
+  { label: "Create a metadata template", href: "/guides/metadata/templates/create", badge: "GUIDE" },
+  { label: "Update a metadata template", href: "/guides/metadata/templates/update", badge: "GUIDE" }
+]}
 />

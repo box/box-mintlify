@@ -1,22 +1,11 @@
 ---
-title: "はじめに"
 sidebarTitle: 概要
-category_id: getting-started
-subcategory_id: null
-is_index: true
-id: getting-started
-type: guide
-total_steps: 3
-sibling_id: guides
-parent_id: guides
-next_page_id: getting-started/first-application
-previous_page_id: ""
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
+title: はじめに
+
 fullyTranslated: true
 ---
 
-import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Boxのドキュメントは、主に以下の5つのセクションに分かれています。
 
@@ -26,53 +15,29 @@ Boxのドキュメントは、主に以下の5つのセクションに分かれ�
 * **SDKとツール**: Box公式SDKとツールのリスト。
 * **サンプルコードカタログ**: 複数のコードリポジトリが一元管理されているリスト。
 
-Box APIを使用する開発が初めての方は、まずは[Box Platformについて][learn]セクションのコンテンツを熟読してください。
+Box APIを使用する開発が初めての方は、まずは<Link href="/platform">Box Platformについて</Link>セクションのコンテンツを熟読してください。
 
 このセクションの内容は以下のとおりです。
 
-* [Box Platformの概念][box-platform-101]を学ぶ
-* 自分の[ユースケース][use-case]がBoxに適しているかどうかを評価する
-* さまざまな[Boxユーザーの種類][user-types]を理解する
-* 適切な[アプリケーションの種類][application-types]を選択する
-* 利用可能な[認証方法][authentication]を確認し、自分のユースケースに最適なものを選択する
-* どこで[サポート][support]を受けられるかを確認する
-* Boxでのアプリケーション開発に必要な[ツール][tooling]を確認する
+* <Link href="/platform/box-platform-101">Box Platformの概念</Link>を学ぶ
+* 自分の<Link href="/platform/use-cases">ユースケース</Link>がBoxに適しているかどうかを評価する
+* さまざまな<Link href="/platform/user-types">Boxユーザーの種類</Link>を理解する
+* 適切な<Link href="/platform/application-types">アプリケーションの種類</Link>を選択する
+* 利用可能な<Link href="/platform/authentication-methods">認証方法</Link>を確認し、自分のユースケースに最適なものを選択する
+* どこで<Link href="/platform/support">サポート</Link>を受けられるかを確認する
+* Boxでのアプリケーション開発に必要な<Link href="/platform/tools">ツール</Link>を確認する
 
 基礎を学んだら、以下の手順に従うことをお勧めします。
 
-1. 最初の[Boxアプリケーション][box-app]を作成します。
+1. 最初の<Link href="/guides/getting-started/first-application">Boxアプリケーション</Link>を作成します。
 2. アプリケーションを構成します。
-3. [エンドポイント][endpoints]を調べて、[一般的な値][cv]を使用してAPIコールを実行します。
-4. アプリケーションを[公開][publish-app]します。
+3. <Link href="/reference">エンドポイント</Link>を調べて、<Link href="/platform/appendix/locating-values">一般的な値</Link>を使用してAPIコールを実行します。
+4. アプリケーションを<Link href="/guides/getting-started/publish-app">公開</Link>します。
 
 不明な点がある場合は、Boxの[フォーラム][forum-link]を確認してください。
 
-
-[learn]: /ja/platform
-
 {/* i18n-enable localize-links */}
-
-[box-platform-101]: /ja/platform/box-platform-101
-[use-case]: /ja/platform/use-cases
-[user-types]: /ja/platform/user-types
-[application-types]: /ja/platform/application-types
-[authentication]: /ja/platform/authentication-methods
-[support]: /ja/platform/support
-[tooling]: /ja/platform/tools
-[box-app]: /ja/guides/getting-started/first-application
-[endpoints]: https://ja.developer.box.com/reference
-[cv]: /ja/platform/appendix/locating-values
-[publish-app]: /ja/guides/getting-started/publish-app
 
 {/* i18n-disable localize-links */}
 
 [forum-link]: https://forum.box.com
-
-<RelatedLinks
-  title="関連するガイド"
-  items={[
-    { label: "認証", href: "/ja/guides/authentication/index", badge: "ガイド" },
-    { label: "承認", href: "/ja/guides/authorization/index", badge: "ガイド" },
-    { label: "APIコール", href: "/ja/guides/api-calls/index", badge: "ガイド" }
-  ]}
-/>

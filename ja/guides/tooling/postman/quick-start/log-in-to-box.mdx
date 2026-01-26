@@ -1,19 +1,9 @@
 ---
-title: "Boxへのログイン"
-sidebarTitle: 3. Boxへのログイン
-type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/postman
-is_index: false
-id: tooling/postman/quick-start/log-in-to-box
-total_steps: 6
-sibling_id: tooling/postman/quick-start
-parent_id: tooling/postman/quick-start
-next_page_id: tooling/postman/quick-start/load-postman-collection
-previous_page_id: tooling/postman/quick-start/configure-box-app
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/3-log-in-to-box.md
+sidebarTitle: 3. Log in to Box
+title: Boxへのログイン
+type: quick-start
+
 fullyTranslated: true
 ---
 
@@ -23,128 +13,148 @@ import { ProgressBar } from '/snippets/progress-bar.jsx';
 import { LoginButton } from '/snippets/login-button.jsx';
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
-<ProgressBar pages={[
-                          "ja/guides/tooling/postman/quick-start/install-postman",
-                          "ja/guides/tooling/postman/quick-start/configure-box-app",
-                          "ja/guides/tooling/postman/quick-start/log-in-to-box",
-                          "ja/guides/tooling/postman/quick-start/load-postman-collection",
-                          "ja/guides/tooling/postman/quick-start/make-api-call",
-                          "ja/guides/tooling/postman/quick-start/next-steps"
-                        ]} />
+<ProgressBar
+  pages={[
+                        "guides/tooling/postman/quick-start/install-postman",
+                        "guides/tooling/postman/quick-start/configure-box-app",
+                        "guides/tooling/postman/quick-start/log-in-to-box",
+                        "guides/tooling/postman/quick-start/load-postman-collection",
+                        "guides/tooling/postman/quick-start/make-api-call",
+                        "guides/tooling/postman/quick-start/next-steps"
+                      ]}
+/>
 
 <Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
+  この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
-この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
+  ログインする前に、Postmanで[新しいリクエストを作成][new_request]し、GETメソッドを選択して、Box APIエンドポイントを入力します。
 
-## ログインする理由
+  ## ログイン方法
 
-現時点では、以下の情報が提示されています。
+  {/*
+    Currently you have provided us with the following information.
 
-<Store disabled inline id="postman_credentials.client_id">
+    <Store disabled inline id='postman_credentials.client_id'>
+      Client ID
+    </Store>
 
-クライアントID
+    <Store disabled inline obscured id='postman_credentials.client_secret'>
+      Client Secret
+    </Store>
+    */}
 
-</Store>
+  任意のプログラムやコードは、**クライアントID**と**クライアントシークレット**という資格情報を使用することで、**Box API**から認証を受けることができます。
 
-<Store disabled inline obscured id="postman_credentials.client_secret">
+  このプロセスの次の手順では、[PostmanでOAuth2.0を使用した認証][Postman]を行います。
 
-クライアントシークレット
+  1. Postmanを開き、\[**Authorization (承認)**] タブに移動します。
+  2. \[**Type (タイプ)**] を \[**OAuth 2.0**] に設定します。
+  3. \[**Client ID (クライアントID)**] や \[**Client Secret (クライアントシークレット)**] などのフィールドに入力します。
+  4. \[**Get New Access Token (新しいアクセストークンを取得)**] をクリックします。
 
-</Store>
+  ブラウザウィンドウが表示されたら、そこで自分のBoxアカウントにログインできます。
 
-任意のプログラムやコードは、これらの**資格情報**を使用することで、**Box API**から認証を受けることができます。これは、作成した**Boxアプリ**を表しますが、**ユーザー**に関する情報をAPIに伝えることはありません。<br/><br/>
+  この処理が完了し、承認されると、Postmanに[アクセストークン][access_token]が届きます。
 
-ユーザー自身が認証を受けるには、ブラウザでBoxのログイン画面を開き、自分の**ユーザー**アカウントへのアクセスを**Boxアプリ**に承認する必要があります。<br/><br/>
+  {/*
+    It represents the **Box App** you created but it
+    doesn't tell the API who you, the **User**, is.
 
-このフローの設定は難しい場合があるため、簡単に行えるように下のボタンを用意しました。
+    To authenticate yourself you need to send your browser to the Box login
+    screen to authorize your **Box App** to access your **User** account. 
 
-## Boxアプリへのログイン
+    Setting this flow up can be hard, which is why we have made this
+    straightforward for you with the button below.
 
-<Trigger option="postman.login" value="clicked">
+    ## Log into your Box app
 
-<LoginButton id="postman_credentials">ログイン</LoginButton>
+    <Trigger option='postman.login' value='clicked'>
+      <LoginButton id='postman_credentials' />
+    </Trigger>
 
-</Trigger>
+    <LoggedIn id='postman_credentials'>
+      ## You are now logged in
 
-<LoggedIn id="postman_credentials">
+      We just sent your browser to the <Link href="/reference/get-authorize">Box Authorization</Link>
+      screen where you granted your application access to your user account. After
+      you granted it access the browser redirected back to this site with a `code`.
 
-## ログインしました
+      We then <Link href="/reference/post-oauth2-token">exchanged</Link> this short-lived `code` for a
+      longer lived **Access Token** and **Refresh Token**. These tokens represent
+      you, the **User**.
 
-ブラウザで[Boxの承認](/ja/reference/get-authorize)画面が開かれ、そこで、アプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`によりこのサイトにリダイレクトされました。
+      <Store disabled inline id='postman_credentials' field='name'>
+        Your name
+      </Store>
 
-その後、この有効期間が短い`code`が有効期間が長い**アクセストークン**と**更新トークン**に[交換されました](/ja/reference/post-oauth2-token)。これらのトークンは**ユーザー**を表します。
+      <Store disabled inline obscured id='postman_credentials' field='access_token'>
+        Access Token
+      </Store>
 
-<Store disabled inline id="postman_credentials" field="name">
+      <Store disabled inline obscured id='postman_credentials' field='refresh_token'>
+        Refresh Token
+      </Store>
 
-名前
+      <Danger>
+        **Security notice**
 
-</Store>
+        Your API credentials are now stored in the browser cache. We highly
+        recommend clearing out this storage by clicking the **Reset** button
+        later in this guide.
+      </Danger>
+    </LoggedIn>
+    </Choice>
 
-<Store disabled inline obscured id="postman_credentials" field="access_token">
+    <Choice option='postman.app_type' unset color='none'>
+    <Danger>
+      **Incomplete previous step**
 
-アクセストークン
+      Please complete the previous step to set up the **Box App** you want
+      to use.
+    </Danger>
+    </Choice>
 
-</Store>
+    <Choice option='postman.login' value='clicked' color='none'>
 
-<Store disabled inline obscured id="postman_credentials" field="refresh_token">
+    ## Summary
 
-更新トークン
+    * You logged into your **Box account** using your own **Box App** or our preconfigured app
+    * You granted the **Box App** access to your account
+    * You are able to see your account's **Access Token** and **Refresh Token** on this page
+    */}
 
-</Store>
+  ## まとめ
 
-<Danger>
-**セキュリティに関する注意**
-
-API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
-
-</Danger>
-
-</LoggedIn>
-
-</Choice>
-
-<Choice option="postman.app_type" unset color="none">
-
-<Danger>
-**前の手順が完了していません**
-
-前の手順を完了し、使用する**Boxアプリ**をセットアップしてください。
-
-</Danger>
-
-</Choice>
-
-<Choice option="postman.login" value="clicked" color="none">
-
-## まとめ
-
-* 独自の**Boxアプリ**またはあらかじめ設定されているアプリを使用して**Boxアカウント**にログインしました
-* **Boxアプリ**にユーザーアカウントへのアクセスを許可しました
-* このページでユーザーアカウントの**アクセストークン**と**更新トークン**を参照できるようになりました
-
+  * 自分の**クライアントシークレット**と**クライアントID**を使用して、Postmanで必要な手順を完了しました
+  * **Boxアプリ**にユーザーアカウントへのアクセスを許可しました
+  * 自分のアカウントの**アクセストークン**を参照できるようになりました
 </Choice>
 
 <Observe option="postman.login" value="clicked">
-
-<Next>
-
-Boxへのログインが完了しました
-
-</Next>
-
+  <Next>Boxへのログインが完了しました</Next>
 </Observe>
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Authorize user", href: "/ja/reference/get-authorize", badge: "GET" },
-    { label: "Request access token", href: "/ja/reference/post-oauth2-token", badge: "POST" }
-  ]}
+  { label: "Authorize user", href: "/reference/get-authorize", badge: "GET" },
+  { label: "Request access token", href: "/reference/post-oauth2-token", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "OAuth 2.0認証", href: "/ja/guides/authentication/oauth2/index", badge: "ガイド" }
-  ]}
+  { label: "OAuth 2.0 Auth", href: "/guides/authentication/oauth2/index", badge: "GUIDE" }
+]}
 />
+
+[Postman]: https://learning.postman.com/docs/sending-requests/authorization/oauth-20/
+
+[access_token]: https://developer.box.com/guides/tooling/postman/access-token
+
+[refresh_token]: https://developer.box.com/guides/tooling/postman/refresh
+
+[new_request]: https://learning.postman.com/docs/sending-requests/create-requests/request-basics/
