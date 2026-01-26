@@ -1,0 +1,176 @@
+---
+title: "Metadata confidence level"
+---
+
+Metadata confidence level is a measure of confidence in the accuracy of the Box's AI—powered
+metadata extraction. Confidence score is a number between 0 and 1 that estimates how likely the 
+extracted field value is correct.
+The higher the confidence score, the more likely the extracted field value is correct.
+
+<Warning>
+
+Confidence scores are not saved or logged. They exist only in the API response. If
+you need to audit or track these scores, you need to capture and store them yourself.
+The feature is currently limited to the `/ai/extract_structured` endpoint.
+
+</Warning>
+
+To use the confidence scores, add `"include_confidence_score": true` to your extract structured request.
+
+```bash
+curl -L 'https://api.box.com/2.0/ai/extract_structured' \
+  -H 'content-type: application/json' \
+  -H "authorization: Bearer $BOX_TOKEN" \
+  -d '{
+    "items": [
+      {
+        "type": "file",
+        "id": "16550157147"
+      }
+    ],
+    "fields": [
+      {"key": "document_title"},
+      {"key": "document_type"}
+    ],
+    "include_confidence_score": true
+  }'
+```
+
+Response:
+
+```json
+{
+  "answer": {
+    "document_title": "Albert Einstein",
+    "document_type": "Resume"
+  },
+  "ai_agent_info": {
+    "processor": "basic_text",
+    "models": [
+      {
+        "name": "google__gemini_2_5_flash",
+        "provider": "google"
+      }
+    ]
+  },
+  "created_at": "2025-11-26T02:04:33.194-08:00",
+  "completion_reason": "done",
+  "confidence_score": {
+    "document_title": {
+      "level": "MEDIUM",
+      "score": 0.875
+    },
+    "document_type": {
+      "level": "LOW",
+      "score": 0.5
+    }
+  }
+}
+```
+
+The `confidence_score` object contains the confidence level for each field.
+It includes the `level` and `score` values.
+
+The `score` is a value between 0 and 1, and the `level` is one of the following:
+- `LOW`
+- `MEDIUM`
+- `HIGH`
+
+## Confidence level evaluation
+
+Box provides the following suggested thresholds:
+
+| Score range | Confidence level | Recommended action |
+|-------------|------------------|--------------------|
+| >= 0.90     | High             | Accept the response |
+| 0.70 - 0.89 | Medium           | Verify the response |
+| < 0.70      | Low              | Review the response |
+
+Your evaluation needs to consider your risk tolerance, the criticality of the use case, and 
+degree to which you have tested and validated the extractions. 
+
+For example, a 0.70 score can be accepted for tagging documents in a content library where
+some errors are tolerable, but the same score is not acceptable for extracting financial data 
+from an invoice.
+
+<Note>
+
+The suggested thresholds are not strict and they can evolve over time as more testing data
+becomes available.
+
+</Note>
+
+## Limitations
+
+The confidence level is not a guarantee of the accuracy of the extracted field value and has some 
+limitations.
+
+### Confidence score is not a guarantee
+
+A high score indicates that the extracted field value is likely to be correct, but errors 
+can still happen. Even a very high score doesn't guarantee that the extraction is correct. 
+Make sure to validate the critical data regardless of the confidence score.
+
+### Context is important
+
+Confidence score is based on the model's understanding of the data, but it doesn't consider
+business-specific details that a human reviewer can identify.
+
+**For example:**
+
+You create a field called `company_name` for an invoice extraction. The model can struggle to
+recognize if you mean the vendor or the customer, and it can lower the confidence score accordingly.
+
+It's crucial to provide clear, specifc field descriptions. The more context you provide, 
+the better it can assess the extracted data.
+
+## Implementing human review workflows
+
+Human-in-the-loop workflows are necessary to ensure the accuracy of the extracted data. 
+Instead of trusting all extractions or reviewing all scores manually, you can programmatically 
+route low-confidence fields for human verification.
+
+Such workflows require custom implementation. You need to:
+
+1. Parse the `confidence_score` object from the response.
+2. Compare each field's score against the thresholds.
+3. Route low-confidence extractions to a review queue.
+4. Implement a mechanism for humans to correct and confirm values.
+
+Common use cases include:
+- Using confidence scores to prioritize review queues (handle low-confidence extractions first).
+- Filter data sets (exclude extractions below a certain threshold from automated processing).
+- Create conditional workflows (automatically approve high-confidence extractions while flagging low-confidence ones for manual review).
+
+## Best practices
+
+- Provide clear field descriptions. 
+- Be specific about what you're asking for and include context about where the data typically appears.
+- Test and iterate. Monitor confidence patterns across your specific document types and use cases.
+- Track how often high-confidence extractions are actually correct, and adjust your thresholds based on the accuracy of the data from your workflows.
+- Use scores to prioritize, not replace, human judgment. 
+
+## Model support
+
+Confidence estimation currently works with Google Gemini models:
+- `gemini-2.5-flash`
+- `gemini-2.5-pro`
+
+The model used depends on your configuration, and you can verify which model processed your 
+request by checking `ai_agent_info.models` in the response.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Extract metadata (structured)", href: "/reference/post-ai-extract-structured", badge: "POST" },
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Google Gemini 2.5 Flash", href: "/guides/box-ai/ai-models/google-gemini-2-5-flash-model-card", badge: "GUIDE" },
+    { label: "Google Gemini 2.5 Pro", href: "/guides/box-ai/ai-models/google-gemini-2-5-pro-model-card", badge: "GUIDE" }
+  ]}
+/>
+
+
