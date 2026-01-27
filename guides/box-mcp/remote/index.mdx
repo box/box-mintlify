@@ -53,59 +53,6 @@ To connect to Box from the AI Agent platform, you need to:
   )
 ```
 
-### ChatGPT
-
-To add the remote Box MCP server in ChatGPT, follow these steps:
-
-1. Go to **Box** > **Admin Console** > **Integrations** and find **Box MCP Server** - either by using the MCP Category filter, or by using the search bar at the top of the page.  
-2. Go to **Configuration**. 
-3. Click the **Add Integration Credentials** button to generate new credentials. 
-4. In **Redirect URIs**, change the Box redirect URIs to: https://chatgpt.com/connector_platform_oauth_redirect
-
-  The **Client ID** and **Client Secret** are displayed. These will be required later for ChatGPT to make the authorization connection. 
-
-5. Check the **Access** scopes: 
-      * Read all files and folders stored in Box. 
-      * Read and write all files and folders stored in Box. 
-      * Manage AI Requests. 
-6. Click **Save**. 
-7. On the ChatGPT side, as a ChatGPT Workspace admin, click the profile in the bottom-left corner. 
-8. Click **Settings** > **Apps & Connectors** > **Advanced Settings**. 
-9. Toggle the **Developer mode** on. 
-This enables you to add custom connectors. 
-10. Go back to **Apps & Connectors**. 
-11. Click **Create** at the top-right corner of the modal. 
-12. Fill in the data: 
-      * **Name**: For example, `Box MCP Server Connector`. 
-      * **MCP Server URL**: https://mcp.box.com
-      * **OAuth Client ID**: Found in Box **Admin Console** > **Integrations** > **Box MCP Server** > **Configuration**. 
-      * **OAuth Client Secret**: Found in Box **Admin Console** > **Integrations** > **Box MCP Server** > **Configuration**. 
-13. Select the `I understand and want to continue` checkbox and click **Create**. 
-14. Authorize the Box user. 
-
-<Note>
-  If an error displays, such as `Something went wrong with setting up the connection`, you can continue to click through. The setup should work even if this displays. 
-</Note>
-
-15. Test the setup by going to the chat, clicking the **+** icon, then hovering over **More** and selecting the newly added connector. Make sure that the other, built by OpenAI Box connector, is turned off or disconnected, so the answer is provided by the custom connector. 
-16. If you want to add this connector for the whole workspace, you can publish it within [ChatGPT Workspace](https://help.openai.com/en/articles/12584461-developer-mode-and-full-mcp-connectors-in-chatgpt-beta#:~:text=Publish%20connector,settings%20in%20ChatGPT). 
-
-### Claude
-
-To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click *Connectors*. Within this view click *Browse connectors* and choose Box. Ensure to grant Claude access to Box.
-
-See a demo video that showcases how to connect Box MCP with the Claude desktop app.
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-### Copilot Studio
-
-To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
-
-### Azure API Center
-
-To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
-
 ### Amazon Quick Suite
 
 To add the remote Box MCP server in Amazon Quick Suite, follow these steps:
@@ -136,13 +83,65 @@ Watch a video that features a demo project, a React based chat bot that leverage
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/Rcn8p-nLJtI?si=dWsMnE6reTE-aKQw" title="Box remote MCP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Mistral AI’s Le Chat
+### Azure API Center
 
-To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
+To add the remote Box MCP server in Azure API Center's Enterprise Registry, follow the instructions provided by Azure. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Azure API Center's Enterprise Registry](https://learn.microsoft.com/en-us/azure/api-center/register-discover-mcp-server).
 
-<Frame noborder center>
-  ![MCP](./img/mistral.gif)
-</Frame>
+### ChatGPT
+
+To add the remote Box MCP server in ChatGPT, follow these steps:
+
+#### Step 1: Configure Box integration
+
+1. Go to **Box** > **Admin Console** > **Integrations** and find **Box MCP Server** either by using the MCP Category filter, or by using the search bar at the top of the page.  
+2. Go to **Configuration** > **Add Integration Credentials** to generate new credentials. 
+3. In **Redirect URIs**, change the Box redirect URIs to: https://chatgpt.com/connector_platform_oauth_redirect. 
+4. Copy the **Client ID** and **Client Secret** for later use. These are required later for ChatGPT to make the authorization connection. 
+4. Check the **Access** scopes: 
+      * Read all files and folders stored in Box. 
+      * Read and write all files and folders stored in Box. 
+      * Manage AI Requests. 
+6. Click **Save**. 
+
+#### Step 2: Enable developer mode in ChatGPT
+
+1. In ChatGPT, as a ChatGPT Workspace admin, click the profile in the bottom-left corner. 
+2. Click **Settings** > **Apps & Connectors** > **Advanced Settings**. 
+3. Toggle the **Developer mode** on. This enables you to add custom connectors. 
+
+#### Step 3: Create the connector
+
+1. Go back to **Apps & Connectors**. 
+2. Click **Create** at the top-right corner of the modal. 
+3. Fill in the data: 
+      * **Name**: For example, `Box MCP Server Connector`. 
+      * **MCP Server URL**: https://mcp.box.com
+      * **OAuth Client ID**: Found in Box **Admin Console** > **Integrations** > **Box MCP Server** > **Configuration**. 
+      * **OAuth Client Secret**: Found in Box **Admin Console** > **Integrations** > **Box MCP Server** > **Configuration**. 
+4. Select the `I understand and want to continue` checkbox and click **Create**. 
+5. Authorize the Box user. 
+
+<Note>
+  If an error displays, such as `Something went wrong with setting up the connection`, you can continue to click through. The setup should work even if this displays. 
+</Note>
+
+#### Step 4: Test and deploy
+
+1. In the chat, select the **+** icon, then hover over **More** and select the newly added connector. 
+2. Make sure that the default OpenAI Box connector is turned off or disconnected, so the answer is provided by the custom connector. 
+3. If you want to add this connector for the whole workspace, you can publish it within [ChatGPT Workspace](https://help.openai.com/en/articles/12584461-developer-mode-and-full-mcp-connectors-in-chatgpt-beta#:~:text=Publish%20connector,settings%20in%20ChatGPT). 
+
+### Claude
+
+To start using the remote Box MCP server in [Claude](https://claude.ai/directory), go to Claude app settings and click *Connectors*. Within this view click *Browse connectors* and choose Box. Ensure to grant Claude access to Box.
+
+See a demo video that showcases how to connect Box MCP with the Claude desktop app.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/OJVjXZkPd54?si=PSiV6aKkUnL7CXoG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Copilot Studio
+
+To add the remote Box MCP server, follow the instructions provided by the Copilot Studio side. Detailed steps and guidance are available in the official Microsoft documentation: [Add an MCP Server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp#add-tools-from-an-existing-mcp-connector-to-an-agent).
 
 ### GitHub Copilot
 
@@ -157,6 +156,12 @@ https://vscode.dev/redirect
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/Y1a16jhCVPc?si=MOutZC3_tGtpcJ7c" title="Box remote MCP with Github Copilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Groq
+
+To integrate Box MCP server with Groq, follow the tutorial available in the [Groq API Cookbook](https://github.com/groq/groq-api-cookbook/tree/main/tutorials/03-mcp/mcp-box). This tutorial provides step-by-step instructions for setting up and using Box MCP with Groq.
+
+Watch a [video demonstration](https://groq.enterprise.slack.com/files/U089GJTGFFA/F09QXEZ3V17/groq_box_mcp_tutorial__1.mp4) of the Groq and Box MCP integration.
+
 ### LangSmith Agent Builder
 
 The video below shows how to use the Box MCP server with [LangChain Agent Builder](https://docs.langchain.com/langsmith/agent-builder-remote-mcp-servers) to build a reusable intake review agent. The agent securely connects to Box, analyzes files with Box AI, extracts structured data, and saves a review packet back to the source folder.
@@ -170,6 +175,32 @@ In this guide, you will:
 - Generate a durable review artifact saved back into Box
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/KZUcueJ73-Q?si=uDK9isZP8H10ptWc" title="Box remote MCP with LangChain Agent Builder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Microsoft Foundry Tools
+
+Box is available in the Microsoft Foundry Tools catalog. To add the remote Box MCP server, refer to the official Microsoft documentation: [Discover tools in the Microsoft Foundry Tools](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry).
+
+### Mistral AI’s Le Chat
+
+To enable Box MCP for [Mistral AI’s Le Chat](https://chat.mistral.ai/chat), visit [connectors page](https://chat.mistral.ai/connections), click *Connect* and grant access to Box. Alternatively, directly form the chat view, click *Tools* and choose Box.
+
+<Frame noborder center>
+  ![MCP](./img/mistral.gif)
+</Frame>
+
+### OpenAI AgentKit
+
+Box enables agentic enterprise support with OpenAI AgentKit. For more information and a demonstration, see the [Box blog post](https://blog.box.com/box-enables-agentic-enterprise-support-openais-new-agentkit).
+
+### Windows
+
+Box MCP server is available for Windows. For more information, visit the [Windows Agentic](https://developer.microsoft.com/en-us/windows/agentic/) and [MCP servers on Windows overview](https://learn.microsoft.com/en-us/windows/ai/mcp/servers/mcp-server-overview) pages.
+
+<Message type='notice'>
+
+This integration is currently in preview and the customer experience may change.
+
+</Message>
 
 ### Using Box AI Features with the MCP Server
 
@@ -251,3 +282,7 @@ Create and manage Box Hubs for organizing collaborative content and resources ar
 | `get_hub_items` | Gets items (files and folders) associated with a specific hub. |
 | `list_hubs` | Lists all hubs accessible to the authenticated user. |
 | `update_hub` | Updates the title and description of a specific hub. |
+
+## Feedback
+
+To share feedback or ask questions about Box MCP server, visit the [Box AI API thread](https://community.box.com/box-ai-api-8) of the Box Developer Community forum.
