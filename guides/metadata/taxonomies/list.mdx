@@ -1,0 +1,90 @@
+---
+
+title: "List metadata taxonomies"
+
+---
+
+
+Retrieve all metadata taxonomies defined within a given namespace, such as an enterprise. This lets you discover which taxonomies are available before working with a specific one.
+
+To list taxonomies, call the `GET /metadata_taxonomies/ {namespace}` API endpoint.
+
+
+<CodeGroup>
+```sh cURL
+
+curl --request GET \
+
+--url https://api.box.com/2.0/metadata_taxonomies/{namespace} \
+
+--header 'Authorization: Bearer <token>'
+```
+
+```python
+client.metadata_taxonomies.get_metadata_taxonomies(namespace)
+```
+
+```Node.js
+await client.metadataTaxonomies.getMetadataTaxonomies(namespace);
+```
+
+```swift
+try await client.metadataTaxonomies.getMetadataTaxonomies(namespace: namespace)
+```
+
+```Java
+client.getMetadataTaxonomies().getMetadataTaxonomies(namespace)
+```
+
+```.NET
+await client.MetadataTaxonomies.GetMetadataTaxonomiesAsync(namespaceParam: namespaceParam);
+```
+</CodeGroup>
+
+
+
+<info>
+To get the `namespace` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
+</info>
+
+
+
+<RelatedLinks
+
+title="RELATED APIS"
+
+items={[
+
+ { label: "Get metadata taxonomies for namespace", href: "https://developer.box.com/reference/get-metadata-taxonomies-id", badge: "GET" },
+
+ ]}
+
+/>
+
+<RelatedLinks
+
+title="RELATED GUIDES"
+
+items={[
+
+ { label: "Get metadata on item", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+
+ { label: "Apply metadata to an item", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
+
+ { label: "Update metadata on an item", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" }
+
+ ]}
+
+/>
+
+<RelatedLinks
+
+title="RELATED RESOURCES"
+
+items={[
+
+ { label: "Metadata", href: "/guides/metadata/index", badge: "GUIDE" }
+
+ ]}
+
+/>

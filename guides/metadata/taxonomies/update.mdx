@@ -1,0 +1,221 @@
+---
+
+title: "Update metadata taxonomies"
+
+---
+
+Update metadata taxonomy elements such as `displayNames`, `descriptions`, and other attributes of an existing taxonomy structure. 
+
+## Update a metadata taxonomy 
+
+Use this endpoint to update top-level attributes of an existing taxonomy, such as changing its `displayName`. 
+
+Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}` API endpoint. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request PATCH \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"display_name": "UPDATED DISPLAY NAME" 
+
+}'
+```
+
+```python
+client.metadata_taxonomies.update_metadata_taxonomy(
+    namespace, taxonomy_key, updated_display_name
+)
+```
+
+```Node.js
+await client.metadataTaxonomies.updateMetadataTaxonomy(namespace, taxonomyKey, {
+  displayName: updatedDisplayName,
+} satisfies UpdateMetadataTaxonomyRequestBody);
+```
+
+```swift
+try await client.metadataTaxonomies.updateMetadataTaxonomy(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: UpdateMetadataTaxonomyRequestBody(displayName: updatedDisplayName))
+```
+
+```Java
+client.getMetadataTaxonomies().updateMetadataTaxonomy(namespace, taxonomyKey, new UpdateMetadataTaxonomyRequestBody(updatedDisplayName))
+```
+
+```.NET
+await client.MetadataTaxonomies.UpdateMetadataTaxonomyAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new UpdateMetadataTaxonomyRequestBody(displayName: updatedDisplayName));
+```
+</CodeGroup>
+
+<info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
+</info>
+
+## Update a taxonomy level
+
+Update the display name and description of an existing level within a taxonomy. The level index identifies which level to update. 
+
+Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/levels/{level_index}` API endpoint with the `displayName` and `description`. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request PATCH \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/levels/1" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"display_name": "Continent UPDATED", 
+
+"description": "Continent Level UPDATED" 
+
+}'
+```
+
+```python
+client.metadata_taxonomies.update_metadata_taxonomy_level_by_id(
+    namespace,
+    taxonomy_key,
+    1,
+    "Continent UPDATED",
+    description="Continent Level UPDATED",
+)
+```
+
+```Node.js
+await client.metadataTaxonomies.updateMetadataTaxonomyLevelById(
+  namespace,
+  taxonomyKey,
+  1,
+  {
+    displayName: 'Continent UPDATED',
+    description: 'Continent Level UPDATED',
+  } satisfies UpdateMetadataTaxonomyLevelByIdRequestBody,
+);
+```
+
+```swift
+try await client.metadataTaxonomies.updateMetadataTaxonomyLevelById(namespace: namespace, taxonomyKey: taxonomyKey, levelIndex: Int64(1), requestBody: UpdateMetadataTaxonomyLevelByIdRequestBody(displayName: "Continent UPDATED", description: "Continent Level UPDATED"))
+```
+
+```Java
+client.getMetadataTaxonomies().updateMetadataTaxonomyLevelById(namespace, taxonomyKey, 1L, new UpdateMetadataTaxonomyLevelByIdRequestBody.Builder("Continent UPDATED").description("Continent Level UPDATED").build())
+```
+
+```.NET
+await client.MetadataTaxonomies.UpdateMetadataTaxonomyLevelByIdAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, levelIndex: 1L, requestBody: new UpdateMetadataTaxonomyLevelByIdRequestBody(displayName: "Continent UPDATED") { Description = "Continent Level UPDATED" });
+```
+</CodeGroup>
+
+<info>
+To get the `namespace`, `taxonomy_key`, and `level_index` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
+</info>
+
+## Update a taxonomy node
+
+Use this endpoint to modify the display name or relationship attributes of an existing node in a taxonomy - for example, renaming **Paris** to **Paris City**. 
+
+Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint with the taxonomy’s `displayName`.
+
+<CodeGroup>
+```sh cURL
+
+curl --request PATCH \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"display_name": "Poland UPDATED" 
+
+}'
+```
+
+```python
+client.metadata_taxonomies.update_metadata_taxonomy_node(
+    namespace, taxonomy_key, country_node.id, display_name="Poland UPDATED"
+)
+```
+
+```Node.js
+await client.metadataTaxonomies.updateMetadataTaxonomyNode(
+  namespace,
+  taxonomyKey,
+  countryNode.id,
+  {
+    requestBody: {
+      displayName: 'Poland UPDATED',
+    } satisfies UpdateMetadataTaxonomyNodeRequestBody,
+  } satisfies UpdateMetadataTaxonomyNodeOptionalsInput,
+);
+```
+
+```swift
+try await client.metadataTaxonomies.updateMetadataTaxonomyNode(namespace: namespace, taxonomyKey: taxonomyKey, nodeId: countryNode.id, requestBody: UpdateMetadataTaxonomyNodeRequestBody(displayName: "Poland UPDATED"))
+```
+
+```Java
+client.getMetadataTaxonomies().updateMetadataTaxonomyNode(namespace, taxonomyKey, countryNode.getId(), new UpdateMetadataTaxonomyNodeRequestBody.Builder().displayName("Poland UPDATED").build())
+```
+
+```.NET
+await client.MetadataTaxonomies.UpdateMetadataTaxonomyNodeAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, nodeId: countryNode.Id, requestBody: new UpdateMetadataTaxonomyNodeRequestBody() { DisplayName = "Poland UPDATED" });
+```
+</CodeGroup>
+
+<info>
+To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
+</info>
+
+<RelatedLinks
+
+title="RELATED APIS"
+  items={[
+    { label: "Update metadata taxonomy", href: "https://developer.box.com/reference/patch-metadata-taxonomies-id-id", badge: "PATCH" },
+    { label: "Update metadata taxonomy level", href: "https://developer.box.com/reference/patch-metadata-taxonomies-id-id-levels-id", badge: "PATCH" },
+    { label: "Update metadata taxonomy node", href: "https://developer.box.com/reference/patch-metadata-taxonomies-id-id-nodes-id", badge: "PATCH" }
+  ]}
+/>
+
+<RelatedLinks
+
+title="RELATED GUIDES"
+
+items={[
+
+ { label: "Get metadata on item", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+ { label: "Apply metadata to an item", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
+ { label: "Update metadata on an item", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" }
+
+ ]}
+
+/>
+
+<RelatedLinks
+
+title="RELATED RESOURCES"
+
+items={[
+
+ { label: "Metadata", href: "/guides/metadata/index", badge: "GUIDE" }
+
+ ]}
+
+/>
