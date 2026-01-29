@@ -44,14 +44,14 @@ Request the file’s available representations, specifying a Markdown representa
 <CodeGroup>
 ```sh cURL
 curl -X GET \ 
-  'https://api.box.com/2.0/files/1993799099215?fields=id%2Cname%2Crepresentations' \ 
+  'https://api.box.com/2.0/files/12345?fields=id%2Cname%2Crepresentations' \ 
   -H 'X-Rep-Hints: [markdown]' \ 
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
 ```typescript Node/TypeScript v10
 await client.files.getFileById(
-  "1993799099215",
+  "12345",
   {
     queryParams: {
       fields: ["id", "name", "representations"],
@@ -65,7 +65,7 @@ await client.files.getFileById(
 
 ```python Python v10
 client.files.get_file_by_id(
-    "1993799099215",
+    "12345",
     fields=["id", "name", "representations"],
     x_rep_hints="[markdown]",
 )
@@ -73,7 +73,7 @@ client.files.get_file_by_id(
 
 ```cs .NET v10
 await client.Files.GetFileByIdAsync(
-    fileId: "1993799099215",
+    fileId: "12345",
     queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"id", "name", "representations"}) },
     headers: new GetFileByIdHeaders(xRepHints: "[markdown]")
 );
@@ -81,7 +81,7 @@ await client.Files.GetFileByIdAsync(
 
 ```swift Swift v10
 try await client.files.getFileById(
-    fileId: "1993799099215",
+    fileId: "12345",
     queryParams: GetFileByIdQueryParams(fields: ["id", "name", "representations"]),
     headers: GetFileByIdHeaders(xRepHints: "[markdown]")
 )
@@ -89,12 +89,14 @@ try await client.files.getFileById(
 
 ```java Java v10
 client.getFiles().getFileById(
-    "1993799099215",
+    "12345",
     new GetFileByIdQueryParams.Builder().fields(Arrays.asList("id", "name", "representations")).build(),
     new GetFileByIdHeaders("[markdown]")
 )
 ```
 </CodeGroup>
+
+## Response example
 
 <div style={{
   backgroundColor: "#f3f4f6",
@@ -113,13 +115,13 @@ If the state is `none`, request the info URL to begin generating the Markdown re
 <CodeGroup>
 ```sh cURL
 curl -X GET \ 
-  'https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown' \ 
+  'https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown' \ 
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
 ```typescript Node/TypeScript v10
 await fetch(
-  "https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown",
+  "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown",
   {
     headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
   },
@@ -128,7 +130,7 @@ await fetch(
 
 ```python Python v10
 requests.get(
-    "https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown",
+    "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown",
     headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
 )
 ```
@@ -136,11 +138,11 @@ requests.get(
 ```cs .NET v10
 using var httpClient = new HttpClient();
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
-await httpClient.GetAsync("https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown");
+await httpClient.GetAsync("https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown");
 ```
 
 ```swift Swift v10
-var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown")!)
+var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown")!)
 request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
 _ = try await URLSession.shared.data(for: request)
 ```
@@ -148,7 +150,7 @@ _ = try await URLSession.shared.data(for: request)
 ```java Java v10
 HttpClient httpClient = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.box.com/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown"))
+    .uri(URI.create("https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown"))
     .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
     .GET()
     .build();
@@ -163,14 +165,14 @@ Re-query the file to check the current status of the Markdown representation.
 <CodeGroup>
 ```sh cURL
 curl -X GET \ 
-  'https://api.box.com/2.0/files/1993799099215?fields=id%2Cname%2Crepresentations' \ 
+  'https://api.box.com/2.0/files/12345?fields=id%2Cname%2Crepresentations' \ 
   -H 'X-Rep-Hints: [markdown]' \ 
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
 ```typescript Node/TypeScript v10
 await client.files.getFileById(
-  "1993799099215",
+  "12345",
   {
     queryParams: {
       fields: ["id", "name", "representations"],
@@ -184,7 +186,7 @@ await client.files.getFileById(
 
 ```python Python v10
 client.files.get_file_by_id(
-    "1993799099215",
+    "12345",
     fields=["id", "name", "representations"],
     x_rep_hints="[markdown]",
 )
@@ -192,7 +194,7 @@ client.files.get_file_by_id(
 
 ```cs .NET v10
 await client.Files.GetFileByIdAsync(
-    fileId: "1993799099215",
+    fileId: "12345",
     queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"id", "name", "representations"}) },
     headers: new GetFileByIdHeaders(xRepHints: "[markdown]")
 );
@@ -200,7 +202,7 @@ await client.Files.GetFileByIdAsync(
 
 ```swift Swift v10
 try await client.files.getFileById(
-    fileId: "1993799099215",
+    fileId: "12345",
     queryParams: GetFileByIdQueryParams(fields: ["id", "name", "representations"]),
     headers: GetFileByIdHeaders(xRepHints: "[markdown]")
 )
@@ -208,7 +210,7 @@ try await client.files.getFileById(
 
 ```java Java v10
 client.getFiles().getFileById(
-    "1993799099215",
+    "12345",
     new GetFileByIdQueryParams.Builder().fields(Arrays.asList("id", "name", "representations")).build(),
     new GetFileByIdHeaders("[markdown]")
 )
@@ -229,7 +231,7 @@ curl -L \
 
 ```typescript Node/TypeScript v10
 await fetch(
-  "https://dl.boxcloud.com/api/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown/content/",
+  "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/",
   {
     headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
   },
@@ -238,7 +240,7 @@ await fetch(
 
 ```python Python v10
 requests.get(
-    "https://dl.boxcloud.com/api/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown/content/",
+    "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/",
     headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
 )
 ```
@@ -246,11 +248,11 @@ requests.get(
 ```cs .NET v10
 using var httpClient = new HttpClient();
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
-await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown/content/");
+await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/");
 ```
 
 ```swift Swift v10
-var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown/content/")!)
+var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/")!)
 request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
 _ = try await URLSession.shared.data(for: request)
 ```
@@ -260,7 +262,7 @@ HttpClient httpClient = HttpClient.newBuilder()
     .followRedirects(HttpClient.Redirect.NORMAL)
     .build();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/1993799099215/versions/2200612360399/representations/markdown/content/"))
+    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/"))
     .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
     .GET()
     .build();

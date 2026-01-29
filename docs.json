@@ -790,12 +790,12 @@
                     "group": "Representations",
                     "pages": [
                       "guides/representations/index",
-                      "guides/representations/markdown",
                       "guides/representations/list-all-representations",
                       "guides/representations/request-a-representation",
                       "guides/representations/download-a-representation",
                       "guides/representations/thumbnail-representation",
                       "guides/representations/thumbnail",
+                      "guides/representations/markdown",
                       "guides/representations/text",
                       "guides/representations/pdf",
                       "guides/representations/supported-file-types"

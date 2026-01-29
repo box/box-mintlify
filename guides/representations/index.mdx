@@ -24,14 +24,14 @@ The <Link href="https://github.com/box/box-python-sdk"> Box Python SDK</Link> pr
 <CodeGroup>
 ```sh cURL
 curl -X GET \  
-  https://api.box.com/2.0/files/1294096083753?fields=representations \  
+  https://api.box.com/2.0/files/12345?fields=representations \  
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \  
   -H "X-Rep-Hints: [extracted_text]" 
 ```
 
 ```typescript Node/TypeScript v10
 await client.files.getFileById(
-  "1294096083753",
+  "12345",
   {
     queryParams: {
       fields: ["representations"],
@@ -45,7 +45,7 @@ await client.files.getFileById(
 
 ```python Python v10
 client.files.get_file_by_id(
-    "1294096083753",
+    "12345",
     fields=["representations"],
     x_rep_hints="[extracted_text]",
 )
@@ -53,7 +53,7 @@ client.files.get_file_by_id(
 
 ```cs .NET v10
 await client.Files.GetFileByIdAsync(
-    fileId: "1294096083753",
+    fileId: "12345",
     queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"representations"}) },
     headers: new GetFileByIdHeaders(xRepHints: "[extracted_text]")
 );
@@ -61,7 +61,7 @@ await client.Files.GetFileByIdAsync(
 
 ```swift Swift v10
 try await client.files.getFileById(
-    fileId: "1294096083753",
+    fileId: "12345",
     queryParams: GetFileByIdQueryParams(fields: ["representations"]),
     headers: GetFileByIdHeaders(xRepHints: "[extracted_text]")
 )
@@ -69,7 +69,7 @@ try await client.files.getFileById(
 
 ```java Java v10
 client.getFiles().getFileById(
-    "1294096083753",
+    "12345",
     new GetFileByIdQueryParams.Builder().fields(Arrays.asList("representations")).build(),
     new GetFileByIdHeaders("[extracted_text]")
 )
@@ -89,7 +89,7 @@ curl -X GET \
 
 ```typescript Node/TypeScript v10
 await fetch(
-  "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text",
+  "https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text",
   {
     headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
   },
@@ -98,7 +98,7 @@ await fetch(
 
 ```python Python v10
 requests.get(
-    "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text",
+    "https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text",
     headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
 )
 ```
@@ -106,11 +106,11 @@ requests.get(
 ```cs .NET v10
 using var httpClient = new HttpClient();
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
-await httpClient.GetAsync("https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text");
+await httpClient.GetAsync("https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text");
 ```
 
 ```swift Swift v10
-var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text")!)
+var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text")!)
 request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
 _ = try await URLSession.shared.data(for: request)
 ```
@@ -118,7 +118,7 @@ _ = try await URLSession.shared.data(for: request)
 ```java Java v10
 HttpClient httpClient = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text"))
+    .uri(URI.create("https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text"))
     .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
     .GET()
     .build();
@@ -133,14 +133,14 @@ This triggers generation of the representation on Box’s backend.
 <CodeGroup>
 ```sh cURL
 curl -X GET \  
-  https://api.box.com/2.0/files/1294096083753?fields=representations \  
+  https://api.box.com/2.0/files/12345?fields=representations \  
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \  
   -H "X-Rep-Hints: [extracted_text]"   
 ```
 
 ```typescript Node/TypeScript v10
 await client.files.getFileById(
-  "1294096083753",
+  "12345",
   {
     queryParams: {
       fields: ["representations"],
@@ -154,7 +154,7 @@ await client.files.getFileById(
 
 ```python Python v10
 client.files.get_file_by_id(
-    "1294096083753",
+    "12345",
     fields=["representations"],
     x_rep_hints="[extracted_text]",
 )
@@ -162,7 +162,7 @@ client.files.get_file_by_id(
 
 ```cs .NET v10
 await client.Files.GetFileByIdAsync(
-    fileId: "1294096083753",
+    fileId: "12345",
     queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"representations"}) },
     headers: new GetFileByIdHeaders(xRepHints: "[extracted_text]")
 );
@@ -170,7 +170,7 @@ await client.Files.GetFileByIdAsync(
 
 ```swift Swift v10
 try await client.files.getFileById(
-    fileId: "1294096083753",
+    fileId: "12345",
     queryParams: GetFileByIdQueryParams(fields: ["representations"]),
     headers: GetFileByIdHeaders(xRepHints: "[extracted_text]")
 )
@@ -178,7 +178,7 @@ try await client.files.getFileById(
 
 ```java Java v10
 client.getFiles().getFileById(
-    "1294096083753",
+    "12345",
     new GetFileByIdQueryParams.Builder().fields(Arrays.asList("representations")).build(),
     new GetFileByIdHeaders("[extracted_text]")
 )
@@ -199,7 +199,7 @@ curl -L \
 
 ```typescript Node/TypeScript v10
 await fetch(
-  "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/",
+  "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text/content/",
   {
     headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
   },
@@ -208,7 +208,7 @@ await fetch(
 
 ```python Python v10
 requests.get(
-    "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/",
+    "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text/content/",
     headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
 )
 ```
@@ -216,11 +216,11 @@ requests.get(
 ```cs .NET v10
 using var httpClient = new HttpClient();
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
-await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/");
+await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text/content/");
 ```
 
 ```swift Swift v10
-var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/")!)
+var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text/content/")!)
 request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
 _ = try await URLSession.shared.data(for: request)
 ```
@@ -230,7 +230,7 @@ HttpClient httpClient = HttpClient.newBuilder()
     .followRedirects(HttpClient.Redirect.NORMAL)
     .build();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/"))
+    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text/content/"))
     .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
     .GET()
     .build();
