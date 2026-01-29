@@ -3,10 +3,237 @@ title: Representations
 sidebarTitle: Overview
 ---
 A representation is an alternative asset for a file stored in Box. These assets
-can be PDFs, thumbnails, or text extractions.
+can be PDFs, thumbnails, or text extractions. Representations allow you to access content in different formats without manually converting files, such as by extracting text from documents to send to language models for processing.
 
 Representations are automatically generated for the supported file types, either
 when uploading to Box or when requesting the asset.
 
 These representations are exposed through the `GET /files/:id` endpoint by using
 the `fields=representations` query parameter and the `x-rep-hints` header.
+
+The workflow involves: 
+
+1. Getting the list of available representations for a file.
+2. Checking a specific representation's status and retrieving its `url_template`.
+3. Downloading the representation if available.  
+
+The <Link href="https://github.com/box/box-python-sdk"> Box Python SDK</Link> provides the `file.get_representation_info(rep_hints)` method to access these capabilities.
+
+## List text representations
+
+<CodeGroup>
+```sh cURL
+curl -X GET \  
+  https://api.box.com/2.0/files/1294096083753?fields=representations \  
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \  
+  -H "X-Rep-Hints: [extracted_text]" 
+```
+
+```typescript Node/TypeScript v10
+await client.files.getFileById(
+  "1294096083753",
+  {
+    queryParams: {
+      fields: ["representations"],
+    } satisfies GetFileByIdQueryParams,
+    headers: {
+      xRepHints: "[extracted_text]",
+    } satisfies GetFileByIdHeadersInput,
+  } satisfies GetFileByIdOptionalsInput,
+);
+```
+
+```python Python v10
+client.files.get_file_by_id(
+    "1294096083753",
+    fields=["representations"],
+    x_rep_hints="[extracted_text]",
+)
+```
+
+```cs .NET v10
+await client.Files.GetFileByIdAsync(
+    fileId: "1294096083753",
+    queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"representations"}) },
+    headers: new GetFileByIdHeaders(xRepHints: "[extracted_text]")
+);
+```
+
+```swift Swift v10
+try await client.files.getFileById(
+    fileId: "1294096083753",
+    queryParams: GetFileByIdQueryParams(fields: ["representations"]),
+    headers: GetFileByIdHeaders(xRepHints: "[extracted_text]")
+)
+```
+
+```java Java v10
+client.getFiles().getFileById(
+    "1294096083753",
+    new GetFileByIdQueryParams.Builder().fields(Arrays.asList("representations")).build(),
+    new GetFileByIdHeaders("[extracted_text]")
+)
+```
+</CodeGroup>
+
+## Generate the representation
+
+To start generation, perform a GET request to the `info URL` from the previous response.
+
+<CodeGroup>
+```sh cURL
+curl -X GET \  
+  "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text" \  
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"  
+```
+
+```typescript Node/TypeScript v10
+await fetch(
+  "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text",
+  {
+    headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
+  },
+);
+```
+
+```python Python v10
+requests.get(
+    "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text",
+    headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
+)
+```
+
+```cs .NET v10
+using var httpClient = new HttpClient();
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
+await httpClient.GetAsync("https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text");
+```
+
+```swift Swift v10
+var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text")!)
+request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
+_ = try await URLSession.shared.data(for: request)
+```
+
+```java Java v10
+HttpClient httpClient = HttpClient.newHttpClient();
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text"))
+    .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
+    .GET()
+    .build();
+httpClient.send(request, HttpResponse.BodyHandlers.discarding());
+```
+</CodeGroup>
+
+This triggers generation of the representation on Box’s backend.  
+
+## Check representation status
+
+<CodeGroup>
+```sh cURL
+curl -X GET \  
+  https://api.box.com/2.0/files/1294096083753?fields=representations \  
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \  
+  -H "X-Rep-Hints: [extracted_text]"   
+```
+
+```typescript Node/TypeScript v10
+await client.files.getFileById(
+  "1294096083753",
+  {
+    queryParams: {
+      fields: ["representations"],
+    } satisfies GetFileByIdQueryParams,
+    headers: {
+      xRepHints: "[extracted_text]",
+    } satisfies GetFileByIdHeadersInput,
+  } satisfies GetFileByIdOptionalsInput,
+);
+```
+
+```python Python v10
+client.files.get_file_by_id(
+    "1294096083753",
+    fields=["representations"],
+    x_rep_hints="[extracted_text]",
+)
+```
+
+```cs .NET v10
+await client.Files.GetFileByIdAsync(
+    fileId: "1294096083753",
+    queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"representations"}) },
+    headers: new GetFileByIdHeaders(xRepHints: "[extracted_text]")
+);
+```
+
+```swift Swift v10
+try await client.files.getFileById(
+    fileId: "1294096083753",
+    queryParams: GetFileByIdQueryParams(fields: ["representations"]),
+    headers: GetFileByIdHeaders(xRepHints: "[extracted_text]")
+)
+```
+
+```java Java v10
+client.getFiles().getFileById(
+    "1294096083753",
+    new GetFileByIdQueryParams.Builder().fields(Arrays.asList("representations")).build(),
+    new GetFileByIdHeaders("[extracted_text]")
+)
+```
+</CodeGroup>
+
+When the status changes from `pending` to `success`, the representation is ready to download. The status indicates if the representation is available. Available options are `success`, `viewable`, `pending`, or `none`. `Success` means you can immediately download the representation, while `none` indicates the representation can be generated. 
+
+## Download the representation
+
+Once ready, use the `content/url_template` to download the file.  
+
+<CodeGroup>
+```sh cURL
+curl -L \  
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \   
+```
+
+```typescript Node/TypeScript v10
+await fetch(
+  "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/",
+  {
+    headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
+  },
+);
+```
+
+```python Python v10
+requests.get(
+    "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/",
+    headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
+)
+```
+
+```cs .NET v10
+using var httpClient = new HttpClient();
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
+await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/");
+```
+
+```swift Swift v10
+var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/")!)
+request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
+_ = try await URLSession.shared.data(for: request)
+```
+
+```java Java v10
+HttpClient httpClient = HttpClient.newBuilder()
+    .followRedirects(HttpClient.Redirect.NORMAL)
+    .build();
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text/content/"))
+    .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
+    .GET()
+    .build();
+httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
+```
+</CodeGroup>
