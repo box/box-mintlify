@@ -1,13 +1,17 @@
 ---
 title: "Get Markdown Representation"
+description: "Generate and download Markdown representations using the Box API."
 ---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
   title="REQUIRED GUIDES"
   items={[
-    { label: "List All Representations for File", href: "https://developer.box.com/guides/representations/list-all-representations", badge: "GUIDE" },
-    { label: "Request Desired Representation", href: "https://developer.box.com/guides/representations/request-a-representation", badge: "GUIDE" },
-    { label: "Download File Representation", href: "https://developer.box.com/guides/representations/download-a-representation", badge: "GUIDE" }
+    { label: "List All Representations for File", href: "/guides/representations/list-all-representations", badge: "GUIDE" },
+    { label: "Request Desired Representation", href: "/guides/representations/request-a-representation", badge: "GUIDE" },
+    { label: "Download File Representation", href: "/guides/representations/download-a-representation", badge: "GUIDE" }
   ]}
 />
 A markdown representation provides a way to extract text from a document while retaining structures such as headers, tables, lists, and formatting cues. Markdown conversion speeds depend on file size and content. 
@@ -27,9 +31,9 @@ This process describes how to generate and download a Markdown representation of
 
 To first create a markdown representation: 
 
-- <Link href="https://developer.box.com/guides/representations/list-all-representations">Get the list of representations available for a file</Link>
-- <Link href="https://developer.box.com/guides/representations/request-a-representation">Request a markdown representation</Link> by passing the `x-rep-hints`-header with the value `[markdown]`.
-- <Link href="https://developer.box.com/guides/representations/download-a-representation">Download the markdown</Link> by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
+- <Link href="/guides/representations/list-all-representations">Get the list of representations available for a file</Link>
+- <Link href="/guides/representations/request-a-representation">Request a markdown representation</Link> by passing the `x-rep-hints`-header with the value `[markdown]`.
+- <Link href="/guides/representations/download-a-representation">Download the markdown</Link> by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
 
 Generated representations are cached by Box for subsequent requests.
 
@@ -267,12 +271,12 @@ httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
 <RelatedLinks
   title="RELATED APIS"
   items={[
-    { label: "Get file information", href: "https://developer.box.com/reference/get-files-id", badge: "GET" }
+    { label: "Get file information", href: "/reference/get-files-id", badge: "GET" }
   ]}
 />
 <RelatedLinks
   title="RELATED GUIDES"
   items={[
-    { label: "Supported File Types", href: "https://developer.box.com/guides/representations/supported-file-types", badge: "GUIDE" }
+    { label: "Supported File Types", href: "/guides/representations/supported-file-types", badge: "GUIDE" }
   ]}
 />
