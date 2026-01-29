@@ -13,9 +13,9 @@ the `fields=representations` query parameter and the `x-rep-hints` header.
 
 The workflow involves: 
 
-1. Getting the list of available representations for a file.
-2. Checking a specific representation's status and retrieving its `url_template`.
-3. Downloading the representation if available.  
+1. <Link href="/guides/representations/list-all-representations">Getting the list of available representations for a file.</Link>
+2. <Link href="/guides/representations/request-a-representation">Checking a specific representation's status and retrieving its `url_template`.</Link>
+3. <Link href="/guides/representations/download-a-representation">Downloading the representation if available.</Link>
 
 The <Link href="https://github.com/box/box-python-sdk"> Box Python SDK</Link> provides the `file.get_representation_info(rep_hints)` method to access these capabilities.
 
@@ -193,8 +193,8 @@ Once ready, use the `content/url_template` to download the file.
 
 <CodeGroup>
 ```sh cURL
-'https://dl.boxcloud.com/api/2.0/internal_files/<FILE_ID>/versions/<VERSION_ID>/representations/<REP_TYPE>/content/{+asset_path}' \
 curl -L \  
+'https://dl.boxcloud.com/api/2.0/internal_files/<FILE_ID>/versions/<VERSION_ID>/representations/<REP_TYPE>/content/{+asset_path}' \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \   
 ```
 
