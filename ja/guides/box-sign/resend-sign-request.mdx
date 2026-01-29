@@ -1,80 +1,64 @@
 ---
-title: "Box Signのリクエストの再送信"
-category_id: box-sign
-subcategory_id: null
-is_index: false
-id: box-sign/resend-sign-request
-type: guide
-total_steps: 7
-sibling_id: box-sign
-parent_id: box-sign
-next_page_id: box-sign/cancel-sign-request
-previous_page_id: box-sign/create-sign-request
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/resend-sign-request.md
+title: Box Signのリクエストの再送信
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-[Box Signのリクエストを再送信エンドポイント][resend]を使用すると、残りの署名者全員にリクエストのメールを再送信できます。
+<Link href="/reference/post-sign-requests-id-resend">Box Signのリクエストを再送信エンドポイント</Link>を使用すると、残りの署名者全員にリクエストのメールを再送信できます。
 
-[ステータス][status]が`signed`、`cancelled`、`declined`、`expired`、`error_sending`、または`error_converting`の場合は、Box Signのリクエストを再送信できません。
+<Link href="/guides/box-sign/create-sign-request/#request-status">ステータス</Link>が`signed`、`cancelled`、`declined`、`expired`、`error_sending`、または`error_converting`の場合は、Box Signのリクエストを再送信できません。
 
 Box Signのリクエストが最近送信された場合は、再送信する前に10分間待つ必要があります。この時間が経過する前に再送信しようとすると、400エラーが返されます。
 
 <Tip>
-
-リクエストを再送信せずに済むように、Box Signのリクエスト作成時にリマインダメールを有効にすることができます。
-
+  リクエストを再送信せずに済むように、Box Signのリクエスト作成時にリマインダメールを有効にすることができます。
 </Tip>
 
 <CodeGroup>
+  ```sh cURL
+  curl -i -X POST "https://api.box.com/2.0/sign_requests/<SIGN_REQUEST_ID>/resend" \
+       -H "authorization: Bearer <ACCESS_TOKEN>"
+  ```
 
-```sh cURL
-curl -i -X POST "https://api.box.com/2.0/sign_requests/<SIGN_REQUEST_ID>/resend" \
-     -H "authorization: Bearer <ACCESS_TOKEN>"
-```
+  ```java Java v5
+  BoxSignRequest signRequest = new BoxSignRequest(api, id);
+  BoxSignRequest.Info signRequestInfo = signRequest.getInfo();
 
-```java Java v5
-BoxSignRequest signRequest = new BoxSignRequest(api, id);
-BoxSignRequest.Info signRequestInfo = signRequest.getInfo();
+  signRequestInfo.resend();
+  ```
 
-signRequestInfo.resend();
-```
+  ```python Python v4
+  sign_request = client.sign_request(sign_request_id='12345')
+  sign_request.resend()
+  ```
 
-```python Python v4
-sign_request = client.sign_request(sign_request_id='12345')
-sign_request.resend()
-```
+  ```cs .NET v6
+  await client.SignRequestsManager.ResendSignRequestAsync("12345");
+  ```
 
-```cs .NET v6
-await client.SignRequestsManager.ResendSignRequestAsync("12345");
-```
-
-```javascript Node v4
-const id = 12345;
-await client.signRequests.resendById({ sign_request_id: id });
-console.log(`Sign request id ${sr.id} resent`);
-```
-
+  ```javascript Node v4
+  const id = 12345;
+  await client.signRequests.resendById({ sign_request_id: id });
+  console.log(`Sign request id ${sr.id} resent`);
+  ```
 </CodeGroup>
-
-[resend]: /ja/reference/post-sign-requests-id-resend
-
-[status]: /ja/guides/box-sign/create-sign-request/#request-status
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Resend Box Sign request", href: "/ja/reference/post-sign-requests-id-resend", badge: "POST" }
-  ]}
+  { label: "Resend Box Sign request", href: "/reference/post-sign-requests-id-resend", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Box Signのリクエストの作成", href: "/ja/guides/box-sign/create-sign-request", badge: "ガイド" },
-    { label: "Box Signのリクエストのキャンセル", href: "/ja/guides/box-sign/cancel-sign-request", badge: "ガイド" },
-    { label: "Signテンプレートを使用した署名リクエストの作成", href: "/ja/guides/box-sign/sign-templates", badge: "ガイド" }
-  ]}
+  { label: "Create Box Sign Request", href: "/guides/box-sign/create-sign-request", badge: "GUIDE" },
+  { label: "Cancel Box Sign Request", href: "/guides/box-sign/cancel-sign-request", badge: "GUIDE" },
+  { label: "Create Sign Request with Sign Template", href: "/guides/box-sign/sign-templates", badge: "GUIDE" }
+]}
 />
