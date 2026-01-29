@@ -1,20 +1,10 @@
 ---
-title: "追加フィールドのリクエスト"
-alias_paths: []
-category_id: api-calls
-subcategory_id: null
-is_index: false
-id: api-calls/request-extra-fields
-type: guide
-total_steps: 9
-sibling_id: api-calls
-parent_id: api-calls
-next_page_id: api-calls/ensure-consistency
-previous_page_id: api-calls/sorting
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/request-extra-fields.md
+title: 追加フィールドのリクエスト
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -27,7 +17,6 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 ```sh
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 ```json
@@ -38,13 +27,10 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
   "lock": null,
   "type": "file"
 }
-
 ```
 
 <Note>
-
-特定のフィールドがリクエストされると、リクエストされたフィールドとフィールドの**基本**セット以外のフィールドが返されない点に注意してください。ファイルの場合、この基本セットは`etag`、`id`、および`type`値で構成されます。
-
+  特定のフィールドがリクエストされると、リクエストされたフィールドとフィールドの**基本**セット以外のフィールドが返されない点に注意してください。ファイルの場合、この基本セットは`etag`、`id`、および`type`値で構成されます。
 </Note>
 
 ## リソースバリアント
@@ -53,12 +39,11 @@ Box APIでは、以下のリソースバリアントを使用できます。
 
 ### 標準
 
-APIレスポンスで返されるデフォルトのフィールドセットです。Standardバリアントは、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、[`GET /files/:id`](/ja/reference/get-files-id)エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
+APIレスポンスで返されるデフォルトのフィールドセットです。Standardバリアントは、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、<Link href="/reference/get-files-id">`GET /files/:id`</Link>エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
 
 ```sh
 curl https://api.box.com/2.0/files/12345 \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 ```json
@@ -85,19 +70,17 @@ curl https://api.box.com/2.0/files/12345 \
     "trashed_at": null,
     "type": "file"
 }
-
 ```
 
 ### Mini
 
 別のレスポンスのネストされた部分としてリソースが返される場合は、サイズが縮小され、重要なフィールドの一部のみが返されることがよくあります。このバリアントは、一般にMiniリソースバリアントと呼ばれます。
 
-たとえば、[`GET /folders/:id/items`](/ja/reference/get-folders-id-items)エンドポイントをリクエストすると、APIは`item_collection`内でネストされたファイルとフォルダの簡易バリエーションを返します。
+たとえば、<Link href="/reference/get-folders-id-items">`GET /folders/:id/items`</Link>エンドポイントをリクエストすると、APIは`item_collection`内でネストされたファイルとフォルダの簡易バリエーションを返します。
 
 ```sh
 curl https://api.box.com/2.0/files/12345 \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 ```json
@@ -125,27 +108,23 @@ curl https://api.box.com/2.0/files/12345 \
   }
   ...
 }
-
 ```
 
 <Note>
+  ネストされたリソースの詳細をリクエストするには、そのリソースに対してAPIを呼び出して、IDでそのリソースをリクエストすることをお勧めします。その際、オプションで`field`クエリパラメータを渡すこともできます。
 
-ネストされたリソースの詳細をリクエストするには、そのリソースに対してAPIを呼び出して、IDでそのリソースをリクエストすることをお勧めします。その際、オプションで`field`クエリパラメータを渡すこともできます。
-
-たとえば、フォルダ内の項目のリストを取得するときに返されるファイルの所有者を取得する場合は、クエリパラメータ`field=owned_by`を指定して、IDでそのファイルをリクエストします。
-
+  たとえば、フォルダ内の項目のリストを取得するときに返されるファイルの所有者を取得する場合は、クエリパラメータ`field=owned_by`を指定して、IDでそのファイルをリクエストします。
 </Note>
 
 ### Full
 
 APIレスポンスで返すことができるフィールドセット全体です。Fullバリアントは、リソースに対して使用できるメインのAPIを介し、`fields`クエリパラメータを追加してそのリソースをリクエストしたときに返されます。
 
-たとえば、`fields=is_package,lock`パラメータを指定して[`GET /files/:id`](/ja/reference/get-files-id)エンドポイントをリクエストすると、APIは、指定されたフィールドに加えて、そのファイルの基本的なフィールドを返します。
+たとえば、`fields=is_package,lock`パラメータを指定して<Link href="/reference/get-files-id">`GET /files/:id`</Link>エンドポイントをリクエストすると、APIは、指定されたフィールドに加えて、そのファイルの基本的なフィールドを返します。
 
 ```sh
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
     -H "authorization: Bearer ACCESS_TOKEN"
-
 ```
 
 ```json
@@ -156,15 +135,14 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
   "lock": null,
   "type": "file"
 }
-
 ```
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Get file information", href: "/ja/reference/get-files-id", badge: "GET" },
-    { label: "Get folder information", href: "/ja/reference/get-folders-id", badge: "GET" },
-    { label: "List items in folder", href: "/ja/reference/get-folders-id-items", badge: "GET" },
-    { label: "Get user", href: "/ja/reference/get-users-id", badge: "GET" }
-  ]}
+  { label: "Get file information", href: "/reference/get-files-id", badge: "GET" },
+  { label: "Get folder information", href: "/reference/get-folders-id", badge: "GET" },
+  { label: "List items in folder", href: "/reference/get-folders-id-items", badge: "GET" },
+  { label: "Get user", href: "/reference/get-users-id", badge: "GET" }
+]}
 />

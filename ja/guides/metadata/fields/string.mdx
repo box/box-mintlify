@@ -1,33 +1,22 @@
 ---
-title: "文字列メタデータフィールド"
-category_id: metadata
-subcategory_id: metadata/3-fields
-is_index: false
-id: metadata/fields/string
-type: guide
-total_steps: 5
-sibling_id: metadata/fields
-parent_id: metadata/fields
-next_page_id: metadata/fields/float
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/3-fields/1-string.md
+title: 文字列メタデータフィールド
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 `string`タイプのメタデータフィールドは、標準のテキストフィールドとしてユーザーに表示されます。
 
 <Frame border center shadow width="400">
-
-![文字列フィールド](./metadata-field-string.png)
-
+  ![文字列フィールド](./metadata-field-string.png)
 </Frame>
 
 ## 文字列フィールドの作成
 
-`string`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
+`string`フィールドは、<Link href="/guides/metadata/templates/create">メタデータテンプレートの作成</Link>時、または`addField`操作による<Link href="/guides/metadata/templates/update">テンプレートの更新</Link>時にメタデータテンプレートに追加できます。
 
 `string`フィールドの必須属性は、`type`、`displayName`、および`key`です。
 
@@ -45,14 +34,13 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   ]
 }
-
 ```
 
 必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
 ## 文字列フィールドの更新
 
-`string`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
+`string`テンプレートフィールドは、このフィールドが属する<Link href="/guides/metadata/templates/update">テンプレートを更新</Link>することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
 `string`メタデータフィールドを更新する際、関連する操作は、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作のみです。
 
@@ -69,29 +57,23 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     }
   }
 ]
-
 ```
 
 <Warning>
-
-これは、このテンプレートの既存のインスタンスに影響します。
-
+  これは、このテンプレートの既存のインスタンスに影響します。
 </Warning>
-
-[g_create_template]: /ja/guides/metadata/templates/create
-
-[g_update_template]: /ja/guides/metadata/templates/update
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Update metadata template", href: "/ja/reference/put-metadata-templates-id-id-schema", badge: "PUT" }
-  ]}
+  { label: "Update metadata template", href: "/reference/put-metadata-templates-id-id-schema", badge: "PUT" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "メタデータテンプレートの作成", href: "/ja/guides/metadata/templates/create", badge: "ガイド" },
-    { label: "メタデータテンプレートの更新", href: "/ja/guides/metadata/templates/update", badge: "ガイド" }
-  ]}
+  { label: "Create a metadata template", href: "/guides/metadata/templates/create", badge: "GUIDE" },
+  { label: "Update a metadata template", href: "/guides/metadata/templates/update", badge: "GUIDE" }
+]}
 />

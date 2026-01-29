@@ -1,32 +1,21 @@
 ---
-title: "PDFレプリゼンテーションの取得"
-alias_paths: []
-category_id: representations
-subcategory_id: null
-is_index: false
-id: representations/pdf
-type: guide
-total_steps: 8
-sibling_id: representations
-parent_id: representations
-next_page_id: representations/text
-previous_page_id: representations/thumbnail
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/representations/pdf.md
+title: PDFレプリゼンテーションの取得
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
-
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "ファイルのすべてのレプリゼンテーションのリストの取得", href: "/ja/guides/representations/list-all-representations", badge: "ガイド" },
-    { label: "目的のレプリゼンテーションのリクエスト", href: "/ja/guides/representations/request-a-representation", badge: "ガイド" },
-    { label: "ファイルレプリゼンテーションのダウンロード", href: "/ja/guides/representations/download-a-representation", badge: "ガイド" }
-  ]}
+  { label: "List All Representations for File", href: "/guides/representations/list-all-representations", badge: "GUIDE" },
+  { label: "Request Desired Representation", href: "/guides/representations/request-a-representation", badge: "GUIDE" },
+  { label: "Download File Representation", href: "/guides/representations/download-a-representation", badge: "GUIDE" }
+]}
 />
+
 PDFレプリゼンテーションでは、予測しやすい方法でモバイルアプリとウェブアプリにドキュメントを埋め込むことができます。PDFレプリゼンテーションでは、元のファイルに電子すかしが適用されている場合に電子すかしがサポートされます。
 
 PDFレプリゼンテーションは、元のファイルをBoxにアップロードしたときに生成されますが、電子すかし付きPDFは、電子すかし付きファイルを初めて取得したときに生成されます。
@@ -35,29 +24,28 @@ PDFレプリゼンテーションは、元のファイルをBoxにアップロ�
 
 PDFレプリゼンテーションを取得するには、以下の手順に従います。
 
-* [すべてのレプリゼンテーションのリストを取得する](/ja/guides/representations/list-all-representations)
-* 目的のファイルタイプ`[pdf]`を表す`x-rep-hints`ヘッダーを渡して、[PDFをリクエスト](/ja/guides/representations/request-a-representation)する
-* `url_template`を呼び出して[PDFをダウンロード](/ja/guides/representations/download-a-representation)する。その際、`{+asset_path}`は、リクエストするPDFのページ (`1.pdf`など) に置き換えます。
+* <Link href="/guides/representations/list-all-representations">すべてのレプリゼンテーションのリストを取得する</Link>
+* 目的のファイルタイプ`[pdf]`を表す`x-rep-hints`ヘッダーを渡して、<Link href="/guides/representations/request-a-representation">PDFをリクエスト</Link>する
+* `url_template`を呼び出して<Link href="/guides/representations/download-a-representation">PDFをダウンロード</Link>する。その際、`{+asset_path}`は、リクエストするPDFのページ (`1.pdf`など) に置き換えます。
 
 ## 電子すかし付きPDF
 
-電子すかし付きPDFを取得するには、Boxで元のファイル自体に電子すかしを適用する必要があります。ファイルに電子すかしを適用するには、Boxウェブアプリまたは[`PUT /files/:id/watermark/`][put_files_id_watermark] APIを使用します。
+電子すかし付きPDFを取得するには、Boxで元のファイル自体に電子すかしを適用する必要があります。ファイルに電子すかしを適用するには、Boxウェブアプリまたは<Link href="/reference/put-files-id-watermark">`PUT /files/:id/watermark/`</Link> APIを使用します。
 
 電子すかしが適用されると、そのファイルの電子すかし付きPDFレプリゼンテーションが生成されます。
-
-[put_files_id_watermark]: /ja/reference/put-files-id-watermark
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Get file information", href: "/ja/reference/get-files-id", badge: "GET" },
-    { label: "Apply watermark to file", href: "/ja/reference/put-files-id-watermark", badge: "PUT" }
-  ]}
+  { label: "Get file information", href: "/reference/get-files-id", badge: "GET" },
+  { label: "Apply watermark to file", href: "/reference/put-files-id-watermark", badge: "PUT" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "テキストレプリゼンテーションの取得", href: "/ja/guides/representations/text", badge: "ガイド" },
-    { label: "サポートされているファイルの種類", href: "/ja/guides/representations/supported-file-types", badge: "ガイド" }
-  ]}
+  { label: "Get Text Representation", href: "/guides/representations/text", badge: "GUIDE" },
+  { label: "Supported File Types", href: "/guides/representations/supported-file-types", badge: "GUIDE" }
+]}
 />

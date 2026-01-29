@@ -1,43 +1,20 @@
 ---
-alias_paths:
-  - /sdks
-  - /docs/sdks-and-tools
-  - /docs/sdks
-  - /docs/box-sdks
-  - /docs/mobile-sdks
-  - /page/sdks
-  - /docs/box-sdk-license
-centered: true
-category_id: sdks-and-tools
-subcategory_id: null
-is_index: true
-id: sdks-and-tools
-type: page
-total_steps: 0
-sibling_id: pages
-parent_id: pages
-next_page_id: ''
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sdks-and-tools/index.md
-fullyTranslated: true
-title: SDKとツール
----
+description: The following SDKs and tools are developed and supported by Box
+title: Box SDKs & tools
 
-Boxで開発およびサポートされているSDKおよびツールは以下のとおりです。
+fullyTranslated: true
+---
 
 ## SDK
 
 アプリケーションの作成に使用できるSDKの一覧を以下に示します。
 
 <Note>
+  下の表には、SDKが、プロジェクトがメンテナンスされるかどうかとAPIパリティが備わっているかどうかを示す追加情報とともに記載されています。
 
-下の表には、SDKが、プロジェクトがメンテナンスされるかどうかとAPIパリティが備わっているかどうかを示す追加情報とともに記載されています。
+  **ステータス**: 現在のプロジェクトのステータスを説明します。ステータスの詳細については、[Box Open Sourceウェブサイト][badges]を参照してください。Boxでは、アクティブなプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[Developer Forum][forum]を参照してください。
 
-**ステータス**: 現在のプロジェクトのステータスを説明します。ステータスの詳細については、[Box Open Sourceウェブサイト][badges]を参照してください。Boxでは、アクティブなプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[Developer Forum][forum]を参照してください。
-
-**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
-
+  **APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
 </Note>
 
 ### SDK
@@ -51,28 +28,24 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 | [.NET SDK][dotnetsdk]             | アクティブ | Full    |
 | [Python SDK][pythonsdk]           | アクティブ | Full    |
 | [Node SDK][nodesdk]               | アクティブ | Full    |
-| [Android Content SDK][androidsdk] | 廃止    | 部分的     |
+| [Android Content SDK][androidsdk] | 非推奨   | 部分的     |
 
 <Warning>
+  日本時間2023年6月1日をもって、Android SDKのサポートは終了しました。既存のAndroid SDKアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-日本時間2023年6月1日をもって、Android SDKのサポートは終了しました。既存のAndroid SDKアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
-
-最新のAndroid機能を引き続きご利用いただくために、Java SDKを使用してAndroid版アプリを作成することをお勧めします。詳細については、[こちら][android-docs]のドキュメントを参照してください。
-
+  最新のAndroid機能を引き続きご利用いただくために、Java SDKを使用してAndroid版アプリを作成することをお勧めします。詳細については、[こちら][android-docs]のドキュメントを参照してください。
 </Warning>
 
 ### 次世代のSDK
 
 <Warning>
+  日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
 
-日本時間2025年9月18日をもって、Boxの次世代SDKは、個別のアーティファクトとしてサポートされなくなりました。
+  既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-既存のコードは、変更しなくても引き続き動作します。Boxの次世代SDKをベースにしたアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
+  **新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。**
 
-**新機能や更新を含む、今後の開発はすべて、BoxコアSDKを通じて提供されます。スタンドアロンの生成されたアーティファクトは、BoxコアSDKのバージョン`v10`で導入されました。**
-
-詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
-
+  詳細については、[SDKのバージョン戦略に関するドキュメント][versioning]を参照してください。
 </Warning>
 
 `v10`に実装予定の機能を以下に示します。
@@ -96,24 +69,20 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 
 Postmanの使用を開始するには、Postmanクイックスタートガイドを使用するのが最も簡単な方法です。
 
-<Card title="Box Postmanコレクションの使い方" href="/ja/guides/tooling/postman/quick-start"/>
+<Card title="Box Postmanコレクションの使い方" href="/guides/tooling/postman/quick-start" arrow />
 
 ## Salesforce Developer Toolkit
 
 Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動作をプログラムによりカスタマイズできます。このツールキットに含まれる複数のグローバルAPEXメソッドを使用して、デフォルトの動作をトリガーしたり、拡張したりできます。このグローバルメソッドにより、内部のSalesforceレコードとBoxフォルダのマッピングを更新し、権限の管理を処理できます。
 
 <Note>
-
-この機能は最新のBox for [Salesforceパッケージ][sf-package]に含まれています。
-
+  この機能は最新のBox for [Salesforceパッケージ][sf-package]に含まれています。
 </Note>
 
 <Warning>
+  **このツールキットに含まれない機能**
 
-**このツールキットに含まれない機能**
-
-このツールキットは、BOX Content API用のフル機能を備えたAPEXラッパーではありません。このようなラッパーをお求めの場合は、[Box SDK for Salesforce][sf-sdk]を参照してください。
-
+  このツールキットは、BOX Content API用のフル機能を備えたAPEXラッパーではありません。このようなラッパーをお求めの場合は、[Box SDK for Salesforce][sf-sdk]を参照してください。
 </Warning>
 
 ## Box CLI
@@ -138,7 +107,7 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | iOS        | [Browse SDK][iosbrowsesdk]、[Share SDK][iossharesdk]、[Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk)、[Share SDK](https://github.com/box/box-android-share-sdk)、[Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| JavaScript | [Box UI Elements](/ja/guides/embed/ui-elements)                                                                                                                                            |
+| JavaScript | [Box UI Elements](/guides/embed/ui-elements)                                                                                                                                        |
 
 ## 非公式およびコミュニティツール
 
@@ -151,11 +120,9 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 | [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
 
 <Note>
+  **メンテナンス:** メンテナンスが限定されているプロジェクトについては、コミュニティとBoxが協力して更新を実施します。セキュリティ更新は不定期に提供されます。プレミアムサポートプランをご利用の場合、このようなツールに関する緊急の機能リクエストについてはカスタマーサービスにお問い合わせください。このようなプロジェクトに関するその他のサポートクエリについては、GitHubまたは[Developer Forum][forum]を参照してください。
 
-**メンテナンス:** メンテナンスが限定されているプロジェクトについては、コミュニティとBoxが協力して更新を実施します。セキュリティ更新は不定期に提供されます。プレミアムサポートプランをご利用の場合、このようなツールに関する緊急の機能リクエストについてはカスタマーサービスにお問い合わせください。このようなプロジェクトに関するその他のサポートクエリについては、GitHubまたは[Developer Forum][forum]を参照してください。
-
-**APIパリティ:** APIパリティが限定されているプロジェクトでは、Box Platformに公開されたときに新しい機能が自動的に導入されないため、一部の機能を使用できない場合があります。プレミアムサポートプランをご利用の場合、このようなツールに関する緊急の機能リクエストについてはカスタマーサービスにお問い合わせください。
-
+  **APIパリティ:** APIパリティが限定されているプロジェクトでは、Box Platformに公開されたときに新しい機能が自動的に導入されないため、一部の機能を使用できない場合があります。プレミアムサポートプランをご利用の場合、このようなツールに関する緊急の機能リクエストについてはカスタマーサービスにお問い合わせください。
 </Note>
 
 [javasdk]: https://github.com/box/box-java-sdk
@@ -198,7 +165,7 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 
 [badges]: https://opensource.box.com/badges/
 
-[versioning]: /ja/guides/tooling/sdks/sdk-versioning
+[versioning]: /guides/tooling/sdks/sdk-versioning
 
 {/* i18n-enable localize-links */}
 

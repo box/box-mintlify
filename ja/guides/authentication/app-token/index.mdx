@@ -1,33 +1,23 @@
 ---
-title: "アプリトークン認証"
 sidebarTitle: 概要
-alias_paths: []
-category_id: authentication
-subcategory_id: authentication/app-token
-is_index: true
-id: authentication/app-token
-type: guide
-total_steps: 5
-sibling_id: authentication
-parent_id: authentication
-next_page_id: ""
-previous_page_id: authentication/app-token/endpoints
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/index.md
+title: アプリトークン認証
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "アプリトークン認証を使用した設定", href: "/ja/guides/authentication/app-token/app-token-setup", badge: "ガイド" },
-    { label: "認証方法の選択", href: "/ja/guides/authentication/select", badge: "ガイド" }
-  ]}
+  { label: "Setup with App Token Auth", href: "/guides/authentication/app-token/app-token-setup", badge: "GUIDE" },
+  { label: "Select Auth Method", href: "/guides/authentication/select", badge: "GUIDE" }
+]}
 />
-アプリトークンを使用するサーバー側認証は、Box API に対する代替の認証方法で、アプリケーションの[サービスアカウント][sa]に制限されている、有効期間の長い固定のアクセストークンを使用します。アプリトークン認証は、[Box View][box-view]を利用するアプリケーションによる使用を目的としています。
+
+アプリトークンを使用するサーバー側認証は、Box APIに対する代替の認証方法で、アプリケーションの<Link href="/platform/user-types/#service-account">サービスアカウント</Link>に制限されている、有効期間の長い固定のアクセストークンを使用します。アプリトークン認証は、<Link href="/guides/embed/box-view">Box View</Link>を利用するアプリケーションによる使用を目的としています。
 
 ## アプリトークンの制限
 
@@ -37,19 +27,16 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-- [Box View][box-view]を介して Box のプレビューサービスを利用する
-- ユーザーモデルがない環境、または Box アカウントを持たないユーザーがいる環境で使用する
-- 独自の ID システムを使用する
-- ユーザーに Box を使用していることを認識させたくない
-- ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
-
-[sa]: /ja/platform/user-types/#service-account
-[box-view]: /ja/guides/embed/box-view
+* <Link href="/guides/embed/box-view">Box View</Link>を介してBoxのプレビューサービスを利用する
+* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
 
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "アプリの種類の選択", href: "/ja/guides/applications/app-types/select", badge: "ガイド" },
-    { label: "認証方法の選択", href: "/ja/guides/authentication/select", badge: "ガイド" }
-  ]}
+  { label: "Select App Type", href: "/guides/applications/app-types/select", badge: "GUIDE" },
+  { label: "Select Auth Method", href: "/guides/authentication/select", badge: "GUIDE" }
+]}
 />

@@ -1,37 +1,31 @@
 ---
-title: "Boxアプリの設定"
-sidebarTitle: 2. Boxアプリの設定
-type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/postman
-is_index: false
-id: tooling/postman/quick-start/configure-box-app
-total_steps: 6
-sibling_id: tooling/postman/quick-start
-parent_id: tooling/postman/quick-start
-next_page_id: tooling/postman/quick-start/log-in-to-box
-previous_page_id: tooling/postman/quick-start/install-postman
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/2-configure-box-app.md
+sidebarTitle: 2. Configure a Box App
+title: Boxアプリの設定
+type: quick-start
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import { Choose, Choice, Grid, Trigger, Observe, ChoiceDebug } from '/snippets/choose-choice-components.jsx';
 import { Store } from '/snippets/store.jsx';
-import { ProgressBar } from '/snippets/progress-bar.jsx';
 import { AppButton } from '/snippets/app-button.jsx';
+import { ProgressBar } from '/snippets/progress-bar.jsx';
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-<ProgressBar pages={[
-                          "ja/guides/tooling/postman/quick-start/install-postman",
-                          "ja/guides/tooling/postman/quick-start/configure-box-app",
-                          "ja/guides/tooling/postman/quick-start/log-in-to-box",
-                          "ja/guides/tooling/postman/quick-start/load-postman-collection",
-                          "ja/guides/tooling/postman/quick-start/make-api-call",
-                          "ja/guides/tooling/postman/quick-start/next-steps"
-                        ]} />
+<ProgressBar
+  pages={[
+                        "guides/tooling/postman/quick-start/install-postman",
+                        "guides/tooling/postman/quick-start/configure-box-app",
+                        "guides/tooling/postman/quick-start/log-in-to-box",
+                        "guides/tooling/postman/quick-start/load-postman-collection",
+                        "guides/tooling/postman/quick-start/make-api-call",
+                        "guides/tooling/postman/quick-start/next-steps"
+                      ]}
+/>
 
 **Postmanコレクション**を使用するために、Postmanアプリケーションは**アクセストークン**を使用してBox APIから認証を受ける必要があります。アクセストークンを取得するには、**Boxアプリ**を使用してBoxにログインする方法が最も簡単です。
 
@@ -40,32 +34,35 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 ## 使用するBoxアプリの選択
 
 <Grid columns="2">
+  <Choose option="postman.app_type" value="create_new" color="blue">
+    # 新しいBoxアプリを作成する
 
-<Choose option="postman.app_type" value="create_new" color="blue">
+    まだBoxアプリを作成していない場合や追加のアプリを作成したい場合は、この手順に従います。
+  </Choose>
 
-# 新しいBoxアプリを作成する
+  <Choose option="postman.app_type" value="use_existing" color="blue">
+    # 既存のアプリを使用する
 
-ここからBoxアプリをセットアップできます。数回クリックするだけで準備できます。
-
-</Choose>
-
-<Choose option="postman.app_type" value="use_existing" color="blue">
-
-# 既存のアプリを使用する
-
-使用したいBoxアプリをすでに作成済みの場合は、そのアプリケーションの資格情報を使用できます。
-
-</Choose>
-
+    使用したいBoxアプリをすでに作成済みの場合は、そのアプリケーションの資格情報を使用できます。
+  </Choose>
 </Grid>
 
 <Choice option="postman.app_type" value="create_new,clicked" color="blue">
+  # Boxアプリの作成
 
-# Boxアプリの作成
+  独自のBoxアプリを使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。次の例では、OAuth2.0を使用していますが、他の認証方法も使用可能です。
 
-独自の**Boxアプリ**を使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。下のボタンをクリックすると、アプリが設定されます。最後に、**クライアントID**と**クライアントシークレット**を取得できます。
+  1. [開発者コンソール][devconsole]に移動します。
+  2. \[**Platformアプリの作成**] を選択します。
+  3. \[**アプリ名**] を入力し、\[**アプリタイプ**] として \[**OAuth 2.0**] を選択します。
+  4. \[**構成**] タブで、\[**OAuth 2.0リダイレクトURI**] セクションまで下にスクロールし、\[**リダイレクトURI**] に値`https://developer.box.com/auth/callback`を設定します。`box.dev`でこのチュートリアルにアクセスした場合は \[**リダイレクトURI**] が`https://box.dev/auth/callback`になることに注意してください。
+  5. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の<Link href="/guides/api-calls/permissions-and-errors/scopes">スコープ</Link>を選択します。**アプリケーションには、** **次のスコープの1つ以上が必要です:** ユーザーを管理する、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
+  6. ページ上部にある \[**変更を保存**] ボタンをクリックします。
+  7. \[**OAuth 2.0資格情報**] セクションから、\[**クライアントID**] および \[**クライアントシークレット**] の値をコピーします。これらの資格情報は、次の手順でアプリケーションを認証する際に使用します。
+</Choice>
 
-<Trigger option="postman.app_type" value="clicked">
+{/*
+  <Trigger option="postman.app_type" value="clicked">
     <AppButton
       id='postman'
       name='Postman'
@@ -74,89 +71,85 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
       authentication_type='auth_code_grant'
       redirect_url='/auth/callback'
       cors_origins=''>
-      アプリの作成 
+      Create an app
     </AppButton>
   </Trigger>
 
-
-これらの資格情報は、次の手順でアプリケーションの認証に使用します。
-
-</Choice>
+  <Observe option="postman.app_type" value="clicked">
+    We will use these credentials to authenticate your application in the next
+    step.
+  </Observe>
+  */}
 
 <Choice option="postman.app_type" value="use_existing" color="blue">
+  # 既存のアプリを使用する
 
-# 既存のアプリを使用する
+  Boxアプリをすでに作成済みの場合は、それを使用することも可能です。そのアプリを使用するには、必要な設定がいくつかあります。次の例では、OAuth2.0を使用していますが、他の認証方法も使用可能です。
 
-事前にBoxアプリをすでに作成済みの場合は、そのアプリも使用できます。そのアプリを使用するには、いくつかの設定が必要です。
-
-1. [開発者コンソール][devconsole]に移動します。
-2. アプリケーションを選択します。
-3. アプリの構成セクションに移動します。
-4. アプリケーションが認証方法として**標準OAuth 2.0**を使用することを確認します。
-5. [**OAuth 2.0リダイレクトURI**] の設定まで下にスクロールし、[**リダイレクトURI**] に値`https://developer.box.com/auth/callback`を設定します。(https://ja.developer.box.com/で操作する場合は、ドメインをhttps://ja.developer.box.com/に変更してください。) `box.dev`でこのチュートリアルにアクセスした場合は [**リダイレクトURI**] が`https://box.dev/auth/callback`になることに注意してください。
-6. [**アプリケーションスコープ**] セクションまでスクロールし、目的の[権限][scopes]を選択します。**アプリケーションには、** **次のスコープの1つ以上が必要です:** ユーザーを管理する、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
-7. ページ上部にある [**変更を保存**] ボタンをクリックします。
-
-次に、クライアントIDとクライアントシークレットの値を以下の2つのフィールドにコピーします。
-
-<Store id="postman_credentials.client_id" placeholder="zECq2EkYBjZ..." pattern="\w{32}">
-
-クライアントID
-
-</Store>
-
-<Store id="postman_credentials.client_secret" placeholder="913td9hr6jo..." pattern="\w{32}">
-
-クライアントシークレット
-
-</Store>
-
-これらの資格情報は、次の手順でアプリケーションの認証に使用します。
-
+  1. [開発者コンソール][devconsole]に移動します。
+  2. アプリケーションを選択します。
+  3. アプリの \[**構成**] タブに移動します。
+  4. アプリケーションで認証方法として**標準OAuth 2.0**を使用していることを確認します。
+  5. \[**OAuth 2.0リダイレクトURI**] セクションまで下にスクロールし、\[**リダイレクトURI**] に値`https://developer.box.com/auth/callback`を設定します。`box.dev`でこのチュートリアルにアクセスした場合は \[**リダイレクトURI**] が`https://box.dev/auth/callback`になることに注意してください。
+  6. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の<Link href="/guides/api-calls/permissions-and-errors/scopes">権限</Link>を選択します。**アプリケーションには、** **次のスコープの1つ以上が必要です:** ユーザーを管理する、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
+  7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
+  8. \[**OAuth 2.0資格情報**] セクションから、\[**クライアントID**] および \[**クライアントシークレット**] の値をコピーします。これらの資格情報は、次の手順でアプリケーションを認証する際に使用します。
 </Choice>
 
-<Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
+{/*
+  <Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
+    Client ID
+  </Store>
 
-<Danger>
-**セキュリティに関する注意**
+  <Store id='postman_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
+    Client Secret
+  </Store>
 
-API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
+  We will use these credentials to authenticate your application in the next
+  step.
 
-</Danger>
 
-</Choice>
+  <Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
 
-<Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
+  <Danger>
+  **Security notice**
+
+  Your API credentials are now stored in the browser cache. We highly
+  recommend clearing out this storage by clicking the **Reset** button later in
+  this guide.
+  </Danger>
+
+  </Choice>
+
+  <Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
+
+  ## Summary
+
+  * You either selected to create a new **Box App**
+    * Signed up for a developer account (Optional)
+    * Had us create **Platform App** for you that uses **OAuth 2.0** authentication
+    * Had us set up the **redirect URL** for the application
+  * Or you selected to use an **existing Box App**
+
+  </Choice>
+  */}
 
 ## まとめ
 
-* 新しい**Boxアプリ**の作成を選択しました。
-  * Developerアカウントにサインアップ (必要な場合)
-  * **OAuth 2.0**認証を使用する**Platformアプリ**を作成
-  * アプリケーションの**リダイレクトURL**を設定
-* または、**既存のBoxアプリ**の使用を選択しました。
-
-</Choice>
+* **Boxアプリ**の新規作成を選択し、手順に従って**クライアントID**と**クライアントシークレット**を取得しました
+* または、**既存のBoxアプリ**の使用を選択し、手順に従って**クライアントID**と**クライアントシークレット**を取得しました
 
 <Observe option="postman.app_type" value="create_new,use_existing,clicked">
-
-<Next>
-
-Boxアプリの設定が完了しました
-
-</Next>
-
+  <Next>Boxアプリの設定が完了しました</Next>
 </Observe>
 
 [devconsole]: https://cloud.app.box.com/developers/console
 
 [signup]: https://account.box.com/signup/n/developer
 
-[scopes]: /ja/guides/api-calls/permissions-and-errors/scopes
-
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Platformアプリ", href: "/ja/guides/applications/app-types/platform-apps", badge: "ガイド" }
-  ]}
+  { label: "Platform App", href: "/guides/applications/app-types/platform-apps", badge: "GUIDE" }
+]}
 />

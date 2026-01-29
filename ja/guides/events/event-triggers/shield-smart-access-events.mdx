@@ -1,22 +1,10 @@
 ---
-title: "Shieldスマートアクセスイベント"
-alias_paths:
-  - /guides/events/shield-alert-events
-  - /guides/events/shield-alert-events/
-category_id: events
-subcategory_id: events/event-triggers
-is_index: false
-id: events/event-triggers/shield-smart-access-events
-type: guide
-total_steps: 5
-sibling_id: events/event-triggers
-parent_id: events/event-triggers
-next_page_id: events/event-triggers/sign-events
-previous_page_id: events/event-triggers/shield-information-barrier-events
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-smart-access-events.md
+title: Shieldスマートアクセスイベント
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -26,7 +14,7 @@ Box管理者は、[スマートアクセス][smartaccess]を使用すると、�
 
 ## ダウンロードと印刷の制限
 
-ダウンロードまたは印刷の制限を適用するShieldアクセスポリシーを管理者が作成し、エンドユーザーがファイルをダウンロードまたは印刷できないようブロックされると、[Enterprise Event][events] Stream内でイベントが生成されます。ダウンロードと印刷の違反の可能性を監視するようアクセスポリシーを設定した場合は、ユーザーがダウンロードまたは印刷が制限されたファイルを含むフォルダを表示したとき、ダウンロードまたは印刷が制限されたファイルをプレビューで表示したとき、ダウンロードまたは印刷が制限されたファイルをAPI経由でダウンロードすることをリクエストしたときにもイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
+ダウンロードまたは印刷の制限を適用するShieldアクセスポリシーを管理者が作成し、エンドユーザーがファイルをダウンロードまたは印刷できないようブロックされると、<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内でイベントが生成されます。ダウンロードと印刷の違反の可能性を監視するようアクセスポリシーを設定した場合は、ユーザーがダウンロードまたは印刷が制限されたファイルを含むフォルダを表示したとき、ダウンロードまたは印刷が制限されたファイルをプレビューで表示したとき、ダウンロードまたは印刷が制限されたファイルをAPI経由でダウンロードすることをリクエストしたときにもイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 ダウンロードがブロックされている場合、`SHIELD_DOWNLOAD_BLOCKED`イベントの`additional-details`ペイロードには以下の詳細が示されます。
 
@@ -56,7 +44,6 @@ Boxウェブアプリの場合、`additional_details`ペイロードは以下の
     "controlMode": "enforced"
   }
 }
-
 ```
 
 Boxデスクトップアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -90,7 +77,6 @@ Boxデスクトップアプリの場合、`additional_details`ペイロードは
   "service_id": "254429",
   "service_name": "Box Drive"
 }
-
 ```
 
 Box Mobileアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -124,12 +110,11 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
   "service_id": "4715",
   "service_name": "Box for Android"
 }
-
 ```
 
 ## 外部コラボレーションの制限
 
-外部コラボレーションの招待が制限されている場合、イベントは[Enterprise Event][events] Stream内で生成されます。これらのイベントは、`event_type`値が次のいずれかに設定されている、標準のイベントオブジェクトスキーマに従います: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`、`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`。
+外部コラボレーションの招待が制限されている場合、イベントは<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内で生成されます。これらのイベントは、`event_type`値が次のいずれかに設定されている、標準のイベントオブジェクトスキーマに従います: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`、`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`。
 
 外部コラボレーションの招待がブロックされている場合、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`または`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントの`additional-details`ペイロードによって以下の詳細が示されます。
 
@@ -165,7 +150,6 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
-
 ```
 
 外部コラボレーションの招待が正当な理由で認められている場合、`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
@@ -238,7 +222,6 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
-
 ```
 
 外部コラボレーションのアクセスがブロックされている場合、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`または`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
@@ -275,10 +258,9 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
-
 ```
 
-Shieldの正当な理由が承認されると、イベントが[Enterprise Event][events] Stream内で生成されます。これらのイベントは、標準のイベントオブジェクトスキーマと、`SHIELD_JUSTIFICATION_APPROVAL`に設定された`event_type`値に従います。
+Shieldの正当な理由が承認されると、イベントが<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内で生成されます。これらのイベントは、標準のイベントオブジェクトスキーマと、`SHIELD_JUSTIFICATION_APPROVAL`に設定された`event_type`値に従います。
 
 `additional_details`ペイロードは以下の詳細を示します。
 
@@ -322,18 +304,15 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
     "details": null
   }
 }
-
 ```
 
 <Info>
-
-管理者は、共有ウィンドウから正当な理由が選択されたときに1つではなく2つのEnterprise Eventが表示される可能性があることに注意してください。たとえば、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントと`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントが1つずつ表示されます。
-
+  管理者は、共有ウィンドウから正当な理由が選択されたときに1つではなく2つのEnterprise Eventが表示される可能性があることに注意してください。たとえば、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントと`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントが1つずつ表示されます。
 </Info>
 
 ## 統合の制限
 
-サードパーティ製アプリケーション (組織と統合されている公開Platformアプリケーションなど) がファイルまたはフォルダのダウンロードを制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
+サードパーティ製アプリケーション (組織と統合されている公開Platformアプリケーションなど) がファイルまたはフォルダのダウンロードを制限されている場合は、<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 サードパーティ製アプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
@@ -360,7 +339,6 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
   "classification": "Confidential",
   "controlMode": "enforced"
 }
-
 ```
 
 Platformアプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -394,12 +372,11 @@ Platformアプリケーションの場合、`additional_details`ペイロード�
   "service_id": "123456",
   "service_name": "CustomApp"
 }
-
 ```
 
 ## FTPの制限
 
-FTPプロトコルを介したファイルまたはフォルダのダウンロードが制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
+FTPプロトコルを介したファイルまたはフォルダのダウンロードが制限されている場合は、<Link href="/guides/events/enterprise-events/for-enterprise">Enterprise Event</Link> Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 `additional_details`ペイロードは以下の詳細を示します。
 
@@ -432,7 +409,6 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
   "service_id": "4082",
   "service_name": "Box FTP Server"
 }
-
 ```
 
 {/* i18n-enable localize-links */}
@@ -443,18 +419,17 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
 
 {/* i18n-disable localize-links */}
 
-[events]: /ja/guides/events/enterprise-events/for-enterprise
-
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "List user and enterprise events", href: "/ja/reference/get-events", badge: "GET" },
-    { label: "Get events long poll endpoint", href: "/ja/reference/options-events", badge: "OPTIONS" }
-  ]}
+  { label: "List user and enterprise events", href: "/reference/get-events", badge: "GET" },
+  { label: "Get events long poll endpoint", href: "/reference/options-events", badge: "OPTIONS" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Enterprise Eventの取得", href: "/ja/guides/events/enterprise-events/for-enterprise", badge: "ガイド" }
-  ]}
+  { label: "Get Enterprise Events", href: "/guides/events/enterprise-events/for-enterprise", badge: "GUIDE" }
+]}
 />

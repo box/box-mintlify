@@ -1,38 +1,28 @@
 ---
-title: "CLIの一括コマンド"
 related_pages:
-  - sdks-and-tools
-category_id: cli
-subcategory_id: cli/cli-docs
-is_index: false
-id: cli/cli-docs/bulk-commands
-type: guide
-total_steps: 2
-sibling_id: cli/cli-docs
-parent_id: cli/cli-docs
-next_page_id: ''
-previous_page_id: cli/cli-docs
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/bulk-commands.md
+  0: sdks-and-tools
+title: CLIの一括コマンド
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "OAuth 2.0を使用した設定", href: "/ja/guides/authentication/oauth2/oauth2-setup", badge: "ガイド" }
-  ]}
+  { label: "Setup with OAuth 2.0", href: "/guides/authentication/oauth2/oauth2-setup", badge: "GUIDE" }
+]}
 />
+
 Box CLIの一括コマンドを使用すると、反復タスクを自動化できます。コマンドに`--bulk-file-path`フラグを追加すると、多数の項目に対して操作を一度に実行できます。
 
 たとえば、次のコマンドは、CSVファイルを使用してフォルダの名前 (`Name`)、説明 (`Description`)、親フォルダの`ParentId`を指定し、複数のフォルダを作成します。
 
 ```bash
 box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
-
 ```
 
 ## CSVテンプレート
@@ -52,29 +42,25 @@ box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 
 ## 前提条件
 
-一括コマンドを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+一括コマンドを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、<Link href="/guides/authentication/oauth2/oauth2-setup">OAuth 2.0を使用した設定</Link>ガイドに従ってください。
 
 ## 一括コマンドの設定と使用
 
 1. `boxcli` GitHubリポジトリを複製するか、[`Bulk actions`][bulkactions]ディレクトリからファイルをダウンロードします。
 
-```bash
-    git clone https://github.com/box/boxcli.git
-
-```
+   ```bash
+   git clone https://github.com/box/boxcli.git
+   ```
 
 2. 必要に応じて`.csv`テンプレートを調整します。たとえば、複数のフォルダを作成する場合は、出発点として[`folders-create.csv`][folderstemplate]テンプレートを使用できます。
 
 3. コマンドを実行します。
 
-```bash
-    box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
-
-```
+   ```bash
+   box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
+   ```
 
 [console]: https://app.box.com/developers/console
-
-[auth]: /ja/guides/authentication/oauth2/oauth2-setup
 
 [bulkactions]: https://github.com/box/boxcli/tree/main/docs/Bulk%20actions
 
@@ -83,6 +69,6 @@ box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "OAuth 2.0認証", href: "/ja/guides/authentication/oauth2/index", badge: "ガイド" }
-  ]}
+  { label: "OAuth 2.0 Auth", href: "/guides/authentication/oauth2/index", badge: "GUIDE" }
+]}
 />
