@@ -226,7 +226,9 @@ Once the representation is ready, use the `content/url_template` to download it.
 <CodeGroup>
 ```sh cURL
 curl -L \ 
+'https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/markdown/content/index.md' \
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+  -o file_name.md
 ```
 
 ```typescript Node/TypeScript v10

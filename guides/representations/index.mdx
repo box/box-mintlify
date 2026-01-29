@@ -24,7 +24,7 @@ The <Link href="https://github.com/box/box-python-sdk"> Box Python SDK</Link> pr
 <CodeGroup>
 ```sh cURL
 curl -X GET \  
-  https://api.box.com/2.0/files/12345?fields=representations \  
+  'https://api.box.com/2.0/files/12345?fields=representations' \  
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \  
   -H "X-Rep-Hints: [extracted_text]" 
 ```
@@ -83,7 +83,7 @@ To start generation, perform a GET request to the `info URL` from the previous r
 <CodeGroup>
 ```sh cURL
 curl -X GET \  
-  "https://api.box.com/2.0/internal_files/1294096083753/versions/1415005153353/representations/extracted_text" \  
+  'https://api.box.com/2.0/internal_files/12345/versions/1415005153353/representations/extracted_text' \  
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"  
 ```
 
@@ -193,6 +193,7 @@ Once ready, use the `content/url_template` to download the file.
 
 <CodeGroup>
 ```sh cURL
+'https://dl.boxcloud.com/api/2.0/internal_files/<FILE_ID>/versions/<VERSION_ID>/representations/<REP_TYPE>/content/{+asset_path}' \
 curl -L \  
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \   
 ```
