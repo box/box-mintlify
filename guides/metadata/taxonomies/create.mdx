@@ -1,0 +1,311 @@
+---
+
+title: "Create metadata taxonomy items"
+
+---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
+
+Metadata taxonomies can be created using the taxonomy’s `displayName` and `namespace`, with related items created using the `namespace` and `taxonomy_key`.
+
+## Create a metadata taxonomy 
+
+Create a new taxonomy that can be referenced by metadata templates.
+
+Call the <Link href="/reference/post-metadata-taxonomies">`POST /metadata_taxonomies`</Link> API endpoint with the taxonomy’s `displayName` and `namespace`. Box will optionally generate a key if you didn't specify one. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request POST \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"displayName": "DISPLAY_NAME", 
+
+"namespace": "{namespace}", 
+
+"key": "{taxonomy_key}" 
+
+}'
+```
+
+```python Python v10
+client.metadata_taxonomies.create_metadata_taxonomy(
+    display_name, namespace, key=taxonomy_key
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.createMetadataTaxonomy({
+  displayName: displayName,
+  key: taxonomyKey,
+  namespace: namespace,
+} satisfies CreateMetadataTaxonomyRequestBody);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.createMetadataTaxonomy(requestBody: CreateMetadataTaxonomyRequestBody(displayName: displayName, key: taxonomyKey, namespace: namespace))
+```
+
+```java Java v10
+client.getMetadataTaxonomies().createMetadataTaxonomy(new CreateMetadataTaxonomyRequestBody.Builder(displayName, namespace).key(taxonomyKey).build())
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.CreateMetadataTaxonomyAsync(requestBody: new CreateMetadataTaxonomyRequestBody(displayName: displayName, namespaceParam: namespaceParam) { Key = taxonomyKey });
+```
+</CodeGroup>
+
+## Create metadata taxonomy levels
+
+Before you can add nodes, you must define the hierarchy of your taxonomy by creating one or more levels. Each level represents a hierarchical tier (e.g., `Country`, `State`, `City`). 
+
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-levels">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels`</Link> API endpoint with the taxonomy’s `displayName`, `description` and `level`.    
+
+<CodeGroup>
+```sh cURL
+
+curl --request POST \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/levels" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"levels": [ 
+
+{ 
+
+"displayName": "Continent", 
+
+"description": "Continent Level" 
+
+}, 
+
+{ 
+
+"displayName": "Country", 
+
+"description": "Country Level" 
+
+} 
+
+] 
+
+}' 
+```
+
+```python Python v10
+client.metadata_taxonomies.create_metadata_taxonomy_level(
+    namespace,
+    taxonomy_key,
+    [
+        MetadataTaxonomyLevel(display_name="Continent", description="Continent Level"),
+        MetadataTaxonomyLevel(display_name="Country", description="Country Level"),
+    ],
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.createMetadataTaxonomyLevel(
+  namespace,
+  taxonomyKey,
+  [
+    {
+      displayName: 'Continent',
+      description: 'Continent Level',
+    } satisfies MetadataTaxonomyLevel,
+    {
+      displayName: 'Country',
+      description: 'Country Level',
+    } satisfies MetadataTaxonomyLevel,
+  ],
+);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.createMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: [MetadataTaxonomyLevel(displayName: "Continent", description: "Continent Level"), MetadataTaxonomyLevel(displayName: "Country", description: "Country Level")])
+```
+
+```java Java v10
+client.getMetadataTaxonomies().createMetadataTaxonomyLevel(namespace, taxonomyKey, Arrays.asList(new MetadataTaxonomyLevel.Builder().displayName("Continent").description("Continent Level").build(), new MetadataTaxonomyLevel.Builder().displayName("Country").description("Country Level").build()))
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.CreateMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: Array.AsReadOnly(new [] {new MetadataTaxonomyLevel() { DisplayName = "Continent", Description = "Continent Level" },new MetadataTaxonomyLevel() { DisplayName = "Country", Description = "Country Level" }}));
+```
+</CodeGroup>
+
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
+
+## Add an additional level
+
+After defining the initial levels, you can add another level to the end of the existing hierarchy (e.g., adding “City” after “Country”). 
+
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-levels:append">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append`</Link> API endpoint with the taxonomy’s `displayName` and `description`.
+
+<CodeGroup>
+```sh cURL
+
+curl --request POST \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"displayName": "Region", 
+
+"description": "Region Description" 
+
+}'  
+```
+
+```python Python v10
+client.metadata_taxonomies.add_metadata_taxonomy_level(
+    namespace, taxonomy_key, "Region", description="Region Description"
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.addMetadataTaxonomyLevel(
+  namespace,
+  taxonomyKey,
+  {
+    displayName: 'Region',
+    description: 'Region Description',
+  } satisfies AddMetadataTaxonomyLevelRequestBody,
+);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.addMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: AddMetadataTaxonomyLevelRequestBody(displayName: "Region", description: "Region Description"))
+```
+
+```java Java v10
+client.getMetadataTaxonomies().addMetadataTaxonomyLevel(namespace, taxonomyKey, new AddMetadataTaxonomyLevelRequestBody.Builder("Region").description("Region Description").build())
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.AddMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new AddMetadataTaxonomyLevelRequestBody(displayName: "Region") { Description = "Region Description" });
+```
+</CodeGroup>
+
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
+
+## Add nodes to the taxonomy
+
+With the hierarchy defined you can begin adding nodes, which are the data in the taxonomy hierarchy. 
+
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-nodes">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes`</Link> API endpoint with the taxonomy’s `displayName`, `level`, and `parentId`. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request POST \ 
+
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes" \ 
+
+--header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
+
+--header "Content-Type: application/json" \ 
+
+--data '{ 
+
+"displayName": "Europe", 
+
+"level": 1 
+
+}'   
+```
+
+```python Python v10
+client.metadata_taxonomies.create_metadata_taxonomy_node(
+    namespace, taxonomy_key, "Europe", 1
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.createMetadataTaxonomyNode(
+  namespace,
+  taxonomyKey,
+  {
+    displayName: 'Europe',
+    level: 1,
+  } satisfies CreateMetadataTaxonomyNodeRequestBody,
+);
+```
+
+```swift
+try await client.metadataTaxonomies.createMetadataTaxonomyNode(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: CreateMetadataTaxonomyNodeRequestBody(displayName: "Europe", level: 1))
+```
+
+```java Java v10
+client.getMetadataTaxonomies().createMetadataTaxonomyNode(namespace, taxonomyKey, new CreateMetadataTaxonomyNodeRequestBody("Europe", 1))
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.CreateMetadataTaxonomyNodeAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new CreateMetadataTaxonomyNodeRequestBody(displayName: "Europe", level: 1));
+```
+</CodeGroup>
+
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
+
+
+<RelatedLinks
+
+title="RELATED APIS"
+  items={[
+    { label: "Create metadata taxonomy", href: "/reference/post-metadata-taxonomies", badge: "POST" },
+    { label: "Create metadata taxonomy levels", href: "/reference/post-metadata-taxonomies-id-id-levels", badge: "POST" },
+    { label: "Add metadata taxonomy level", href: "/reference/post-metadata-taxonomies-id-id-levels:append", badge: "POST" },
+    { label: "Create metadata taxonomy node", href: "/reference/post-metadata-taxonomies-id-id-nodes", badge: "POST" }
+  ]}
+/>
+
+<RelatedLinks
+
+title="RELATED GUIDES"
+
+items={[
+
+ { label: "List metadata taxonomies", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" },
+ { label: "Get metadata taxonomy items", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+ { label: "Update metadata taxonomies", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" },
+ { label: "Remove metadata taxonomy items", href: "/guides/metadata/taxonomies/remove", badge: "GUIDE" }
+
+ ]}
+
+/>
+
+<RelatedLinks
+
+title="RELATED RESOURCES"
+
+items={[
+
+ { label: "Metadata", href: "/guides/metadata/index", badge: "GUIDE" }
+
+ ]}
+
+/>

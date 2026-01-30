@@ -1,0 +1,230 @@
+---
+
+title: "Get metadata taxonomy items"
+
+---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
+
+Information about metadata taxonomies can be retrieved using the `namespace`, `taxonomy_key`, `node_id`, and `field_key`. 
+
+## List metadata taxonomy nodes
+
+Retrieve a list of nodes defined within a metadata taxonomy. Nodes are the hierarchical data available in your taxonomy. 
+
+To list all nodes, call the <Link href="/reference/get-metadata-taxonomies-id-id-nodes">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes`</Link> API endpoint.
+
+<CodeGroup>
+```sh cURL
+
+curl --request GET \ 
+
+  --url https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes \ 
+
+  --header 'Authorization: Bearer <token>' 
+```
+
+```python Python v10
+client.metadata_taxonomies.get_metadata_taxonomy_nodes(namespace, taxonomy_key)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.getMetadataTaxonomyNodes(namespace, taxonomyKey);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.getMetadataTaxonomyNodes(namespace: namespace, taxonomyKey: taxonomyKey)
+```
+
+```java Java v10
+client.getMetadataTaxonomies().getMetadataTaxonomyNodes(namespace, taxonomyKey)
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.GetMetadataTaxonomyNodesAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey);
+```
+</CodeGroup>
+
+
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>. 
+</Info>
+
+## Get a metadata taxonomy by key
+
+Get the full definition of a specific taxonomy including how many levels it has, and what the display names and descriptions of those levels are. 
+
+To get information by taxonomy key, call the <Link href="/reference/get-metadata-taxonomies-id-id">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}`</Link> API endpoint. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request GET \ 
+
+  --url https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key} \ 
+
+  --header 'Authorization: Bearer <token>'
+```
+
+```python Python v10
+client.metadata_taxonomies.get_metadata_taxonomy_by_key(namespace, taxonomy_key)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.getMetadataTaxonomyByKey(
+  namespace,
+  taxonomyKey,
+);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.getMetadataTaxonomyByKey(namespace: namespace, taxonomyKey: taxonomyKey)
+```
+
+```java Java v10
+client.getMetadataTaxonomies().getMetadataTaxonomyByKey(namespace, taxonomyKey)
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.GetMetadataTaxonomyByKeyAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey);
+```
+</CodeGroup>
+
+
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>. 
+</Info>
+
+## Get a metadata taxonomy node by ID
+
+You can fetch a specific node and its metadata using its ID. Nodes are the hierarchical data available in your taxonomy.  
+
+To get a node, call the <Link href="/reference/get-metadata-taxonomies-id-id-nodes-id">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}`</Link> API endpoint. 
+
+<CodeGroup>
+```sh cURL
+
+curl --request GET \ 
+
+  --url https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id} \ 
+
+  --header 'Authorization: Bearer <token>' 
+```
+
+```python Python v10
+client.metadata_taxonomies.get_metadata_taxonomy_node_by_id(
+    namespace, taxonomy_key, country_node.id
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.getMetadataTaxonomyNodeById(
+  namespace,
+  taxonomyKey,
+  countryNode.id,
+);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.getMetadataTaxonomyNodeById(namespace: namespace, taxonomyKey: taxonomyKey, nodeId: countryNode.id)
+```
+
+```java Java v10
+client.getMetadataTaxonomies().getMetadataTaxonomyNodeById(namespace, taxonomyKey, countryNode.getId())
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.GetMetadataTaxonomyNodeByIdAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, nodeId: countryNode.Id);
+```
+</CodeGroup>
+
+<Info>
+To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>. 
+</Info>
+
+## List metadata taxonomy field options
+
+Retrieve the nodes that serve as selectable options for a taxonomy field, as defined inside a metadata template. 
+
+To list possible values for taxonomy nodes in a template, call the <Link href="/reference/get-metadata-templates-id-id-fields-id-options">`GET /metadata_templates/{namespace}/{template_key}/fields/{field_key}/options`</Link> API endpoint.  
+
+<CodeGroup>
+```sh cURL
+
+curl --request GET \  
+
+  --url https://api.box.com/2.0/metadata_templates/{namespace}/{template_key}/fields/{field_key}/options \ 
+
+  --header 'Authorization: Bearer <token>'
+```
+
+```python Python v10
+client.metadata_taxonomies.get_metadata_template_field_options(
+    namespace, metadata_template_key, "taxonomy"
+)
+```
+
+```typescript Node/TypeScript v10
+await client.metadataTaxonomies.getMetadataTemplateFieldOptions(
+  namespace,
+  metadataTemplateKey,
+  'taxonomy',
+);
+```
+
+```swift Swift v10
+try await client.metadataTaxonomies.getMetadataTemplateFieldOptions(namespace: namespace, templateKey: metadataTemplateKey, fieldKey: "taxonomy")
+```
+
+```java Java v10
+client.getMetadataTaxonomies().getMetadataTemplateFieldOptions(namespace, metadataTemplateKey, "taxonomy")
+```
+
+```cs .NET v10
+await client.MetadataTaxonomies.GetMetadataTemplateFieldOptionsAsync(namespaceParam: namespaceParam, templateKey: metadataTemplateKey, fieldKey: "taxonomy");
+```
+</CodeGroup>
+
+<Info>
+To get the `namespace`, `taxonomy_key`, and `field_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>. 
+</Info>
+
+
+<RelatedLinks
+
+title="RELATED APIS"
+  items={[
+    { label: "List metadata taxonomy nodes", href: "/reference/get-metadata-taxonomies-id-id-nodes", badge: "GET" },
+    { label: "Get metadata taxonomy by taxonomy key", href: "/reference/get-metadata-taxonomies-id-id", badge: "GET" },
+    { label: "Get metadata taxonomy node by ID", href: "/reference/get-metadata-taxonomies-id-id-nodes-id", badge: "GET" },
+    { label: "List metadata template's options for taxonomy field", href: "/reference/get-metadata-templates-id-id-fields-id-options", badge: "GET" }
+  ]}
+/>
+
+<RelatedLinks
+
+title="RELATED GUIDES"
+
+items={[
+
+ { label: "Create metadata taxonomy items", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
+ { label: "List metadata taxonomies", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" },
+ { label: "Update metadata taxonomies", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" },
+ { label: "Remove metadata taxonomy items", href: "/guides/metadata/taxonomies/remove", badge: "GUIDE" }
+
+ ]}
+
+/>
+
+<RelatedLinks
+
+title="RELATED RESOURCES"
+
+items={[
+
+ { label: "Metadata", href: "/guides/metadata/index", badge: "GUIDE" }
+
+ ]}
+
+/>
