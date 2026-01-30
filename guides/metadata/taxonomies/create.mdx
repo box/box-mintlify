@@ -4,7 +4,10 @@ title: "Create metadata taxonomy items"
 
 ---
 
-Metadata taxonomies can be created using the taxonomy’s `displayName` and `namespace`, with related items created using the `namespace` and `taxonomy_key`, 
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
+
+Metadata taxonomies can be created using the taxonomy’s `displayName` and `namespace`, with related items created using the `namespace` and `taxonomy_key`.
 
 ## Create a metadata taxonomy 
 
@@ -34,13 +37,13 @@ curl --request POST \
 }'
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.create_metadata_taxonomy(
     display_name, namespace, key=taxonomy_key
 )
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.createMetadataTaxonomy({
   displayName: displayName,
   key: taxonomyKey,
@@ -48,15 +51,15 @@ await client.metadataTaxonomies.createMetadataTaxonomy({
 } satisfies CreateMetadataTaxonomyRequestBody);
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.createMetadataTaxonomy(requestBody: CreateMetadataTaxonomyRequestBody(displayName: displayName, key: taxonomyKey, namespace: namespace))
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().createMetadataTaxonomy(new CreateMetadataTaxonomyRequestBody.Builder(displayName, namespace).key(taxonomyKey).build())
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.CreateMetadataTaxonomyAsync(requestBody: new CreateMetadataTaxonomyRequestBody(displayName: displayName, namespaceParam: namespaceParam) { Key = taxonomyKey });
 ```
 </CodeGroup>
@@ -103,7 +106,7 @@ curl --request POST \
 }' 
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.create_metadata_taxonomy_level(
     namespace,
     taxonomy_key,
@@ -114,7 +117,7 @@ client.metadata_taxonomies.create_metadata_taxonomy_level(
 )
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.createMetadataTaxonomyLevel(
   namespace,
   taxonomyKey,
@@ -131,22 +134,22 @@ await client.metadataTaxonomies.createMetadataTaxonomyLevel(
 );
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.createMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: [MetadataTaxonomyLevel(displayName: "Continent", description: "Continent Level"), MetadataTaxonomyLevel(displayName: "Country", description: "Country Level")])
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().createMetadataTaxonomyLevel(namespace, taxonomyKey, Arrays.asList(new MetadataTaxonomyLevel.Builder().displayName("Continent").description("Continent Level").build(), new MetadataTaxonomyLevel.Builder().displayName("Country").description("Country Level").build()))
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.CreateMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: Array.AsReadOnly(new [] {new MetadataTaxonomyLevel() { DisplayName = "Continent", Description = "Continent Level" },new MetadataTaxonomyLevel() { DisplayName = "Country", Description = "Country Level" }}));
 ```
 </CodeGroup>
 
-<info>
-To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 ## Add an additional level
 
@@ -159,7 +162,7 @@ Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append` AP
 
 curl --request POST \ 
 
---url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/levels" \ 
+--url "https://api.box.com/2.0/metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append" \ 
 
 --header "Authorization: Bearer YOUR_ACCESS_TOKEN" \ 
 
@@ -174,13 +177,13 @@ curl --request POST \
 }'  
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.add_metadata_taxonomy_level(
     namespace, taxonomy_key, "Region", description="Region Description"
 )
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.addMetadataTaxonomyLevel(
   namespace,
   taxonomyKey,
@@ -191,22 +194,22 @@ await client.metadataTaxonomies.addMetadataTaxonomyLevel(
 );
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.addMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: AddMetadataTaxonomyLevelRequestBody(displayName: "Region", description: "Region Description"))
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().addMetadataTaxonomyLevel(namespace, taxonomyKey, new AddMetadataTaxonomyLevelRequestBody.Builder("Region").description("Region Description").build())
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.AddMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new AddMetadataTaxonomyLevelRequestBody(displayName: "Region") { Description = "Region Description" });
 ```
 </CodeGroup>
 
-<info>
-To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 ## Add nodes to the taxonomy
 
@@ -234,13 +237,13 @@ curl --request POST \
 }'   
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.create_metadata_taxonomy_node(
     namespace, taxonomy_key, "Europe", 1
 )
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.createMetadataTaxonomyNode(
   namespace,
   taxonomyKey,
@@ -255,28 +258,28 @@ await client.metadataTaxonomies.createMetadataTaxonomyNode(
 try await client.metadataTaxonomies.createMetadataTaxonomyNode(namespace: namespace, taxonomyKey: taxonomyKey, requestBody: CreateMetadataTaxonomyNodeRequestBody(displayName: "Europe", level: 1))
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().createMetadataTaxonomyNode(namespace, taxonomyKey, new CreateMetadataTaxonomyNodeRequestBody("Europe", 1))
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.CreateMetadataTaxonomyNodeAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, requestBody: new CreateMetadataTaxonomyNodeRequestBody(displayName: "Europe", level: 1));
 ```
 </CodeGroup>
 
-<info>
-To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 
 <RelatedLinks
 
 title="RELATED APIS"
   items={[
-    { label: "Create metadata taxonomy", href: "https://developer.box.com/reference/post-metadata-taxonomies", badge: "POST" },
-    { label: "Create metadata taxonomy levels", href: "https://developer.box.com/reference/post-metadata-taxonomies-id-id-levels", badge: "POST" },
-    { label: "Add metadata taxonomy level", href: "https://developer.box.com/reference/post-metadata-taxonomies-id-id-levels:append", badge: "POST" },
-    { label: "Create metadata taxonomy node", href: "https://developer.box.com/reference/post-metadata-taxonomies-id-id-nodes", badge: "POST" }
+    { label: "Create metadata taxonomy", href: "/reference/post-metadata-taxonomies", badge: "POST" },
+    { label: "Create metadata taxonomy levels", href: "/reference/post-metadata-taxonomies-id-id-levels", badge: "POST" },
+    { label: "Add metadata taxonomy level", href: "/reference/post-metadata-taxonomies-id-id-levels:append", badge: "POST" },
+    { label: "Create metadata taxonomy node", href: "/reference/post-metadata-taxonomies-id-id-nodes", badge: "POST" }
   ]}
 />
 
@@ -286,9 +289,10 @@ title="RELATED GUIDES"
 
 items={[
 
- { label: "Get metadata taxonomy items", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
  { label: "List metadata taxonomies", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" },
- { label: "Update metadata on an item", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" }
+ { label: "Get metadata taxonomy items", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+ { label: "Update metadata taxonomies", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" },
+ { label: "Remove metadata taxonomy items", href: "/guides/metadata/taxonomies/remove", badge: "GUIDE" }
 
  ]}
 

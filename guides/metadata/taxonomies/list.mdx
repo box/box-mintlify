@@ -4,10 +4,12 @@ title: "List metadata taxonomies"
 
 ---
 
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
 Retrieve all metadata taxonomies defined within a given namespace, such as an enterprise. This lets you discover which taxonomies are available before working with a specific one.
 
-To list taxonomies, call the `GET /metadata_taxonomies/ {namespace}` API endpoint.
+To list taxonomies, call the `GET /metadata_taxonomies/{namespace}` API endpoint.
 
 
 <CodeGroup>
@@ -20,32 +22,32 @@ curl --request GET \
 --header 'Authorization: Bearer <token>'
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.get_metadata_taxonomies(namespace)
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.getMetadataTaxonomies(namespace);
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.getMetadataTaxonomies(namespace: namespace)
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().getMetadataTaxonomies(namespace)
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.GetMetadataTaxonomiesAsync(namespaceParam: namespaceParam);
 ```
 </CodeGroup>
 
 
 
-<info>
-To get the `namespace` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 
 
@@ -55,7 +57,7 @@ title="RELATED APIS"
 
 items={[
 
- { label: "Get metadata taxonomies for namespace", href: "https://developer.box.com/reference/get-metadata-taxonomies-id", badge: "GET" },
+ { label: "Get metadata taxonomies for namespace", href: "/reference/get-metadata-taxonomies-id", badge: "GET" },
 
  ]}
 
@@ -67,11 +69,10 @@ title="RELATED GUIDES"
 
 items={[
 
- { label: "Get metadata on item", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
-
- { label: "Apply metadata to an item", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
-
- { label: "Update metadata on an item", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" }
+ { label: "Create metadata taxonomy items", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
+ { label: "Get metadata taxonomy items", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+ { label: "Update metadata taxonomies", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" },
+ { label: "Remove metadata taxonomy items", href: "/guides/metadata/taxonomies/remove", badge: "GUIDE" }
 
  ]}
 

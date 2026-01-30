@@ -4,6 +4,9 @@ title: "Remove metadata taxonomy items"
 
 ---
 
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
+
 Remove metadata taxonomies and their structural components. Taxonomy deletion is permanent and irreversible, so use with caution.  
 
 ## Delete a metadata taxonomy
@@ -11,8 +14,6 @@ Remove metadata taxonomies and their structural components. Taxonomy deletion is
 Deletes an entire metadata taxonomy and all associated levels and nodes. This action cannot be undone. The taxonomy and its nodes will no longer be accessible for metadata templates or other API calls. 
 
 Call the `DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}` API endpoint.
-
-
 
 <CodeGroup>
 ```sh cURL
@@ -24,38 +25,37 @@ curl --request DELETE \
 --header "Authorization: Bearer YOUR_ACCESS_TOKEN" 
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.delete_metadata_taxonomy(namespace, taxonomy_key)
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.deleteMetadataTaxonomy(namespace, taxonomyKey);
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.deleteMetadataTaxonomy(namespace: namespace, taxonomyKey: taxonomyKey)
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().deleteMetadataTaxonomy(namespace, taxonomyKey)
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.DeleteMetadataTaxonomyAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey);
 ```
 </CodeGroup>
 
 
-
-<info>
-To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 ## Remove a metadata taxonomy node
 
 Deletes a specific node within a taxonomy. If the node has child nodes, you must delete those children first before you can remove the parent node. This endpoint does not cascade; it only deletes individual nodes that have no children under them. 
 
-Call the `DELETE /metadata_taxonomies/ {namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint.
+Call the `DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -67,13 +67,13 @@ curl --request DELETE \
 --header "Authorization: Bearer YOUR_ACCESS_TOKEN" 
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.delete_metadata_taxonomy_node(
     namespace, taxonomy_key, country_node.id
 )
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.deleteMetadataTaxonomyNode(
   namespace,
   taxonomyKey,
@@ -85,24 +85,24 @@ await client.metadataTaxonomies.deleteMetadataTaxonomyNode(
 try await client.metadataTaxonomies.deleteMetadataTaxonomyNode(namespace: namespace, taxonomyKey: taxonomyKey, nodeId: countryNode.id)
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().deleteMetadataTaxonomyNode(namespace, taxonomyKey, countryNode.getId())
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.DeleteMetadataTaxonomyNodeAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey, nodeId: countryNode.Id);
 ```
 </CodeGroup>
 
-<info>
-To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 ## Remove the last level of a taxonomy
 
 Removes the last level of a taxonomy’s hierarchy. Levels are evaluated in hierarchical order, and this call trims only the deepest level. 
 
-Call the `POST /m metadata_taxonomies/{namespace}/{taxonomy_key}/levels:trim` API endpoint.
+Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:trim` API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -114,41 +114,41 @@ curl --request POST \
 --header "Authorization: Bearer YOUR_ACCESS_TOKEN" 
 ```
 
-```python
+```python Python v10
 client.metadata_taxonomies.delete_metadata_taxonomy_level(namespace, taxonomy_key)
 ```
 
-```Node.js
+```typescript Node/TypeScript v10
 await client.metadataTaxonomies.deleteMetadataTaxonomyLevel(
   namespace,
   taxonomyKey,
 );
 ```
 
-```swift
+```swift Swift v10
 try await client.metadataTaxonomies.deleteMetadataTaxonomyLevel(namespace: namespace, taxonomyKey: taxonomyKey)
 ```
 
-```Java
+```java Java v10
 client.getMetadataTaxonomies().deleteMetadataTaxonomyLevel(namespace, taxonomyKey)
 ```
 
-```.NET
+```cs .NET v10
 await client.MetadataTaxonomies.DeleteMetadataTaxonomyLevelAsync(namespaceParam: namespaceParam, taxonomyKey: taxonomyKey);
 ```
 </CodeGroup>
 
-<info>
-To get the `namespace` and `taxonomy_key`, <Link href="https://developer.box.com/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="https://developer.box.com/guides/metadata/instances/list">list all instances on an item</Link>.
-</info>
+<Info>
+To get the `namespace` and `taxonomy_key`, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>.
+</Info>
 
 <RelatedLinks
 
 title="RELATED APIS"
   items={[
-    { label: "Remove metadata taxonomy", href: "https://developer.box.com/reference/delete-metadata-taxonomies-id-id", badge: "DELETE" },
-    { label: "Remove metadata taxonomy node", href: "https://developer.box.com/reference/delete-metadata-taxonomies-id-id-nodes-id", badge: "DELETE" },
-    { label: "Delete metadata taxonomy level", href: "https://developer.box.com/reference/post-metadata-taxonomies-id-id-levels:trim", badge: "POST" }
+    { label: "Remove metadata taxonomy", href: "/reference/delete-metadata-taxonomies-id-id", badge: "DELETE" },
+    { label: "Remove metadata taxonomy node", href: "/reference/delete-metadata-taxonomies-id-id-nodes-id", badge: "DELETE" },
+    { label: "Delete metadata taxonomy level", href: "/reference/post-metadata-taxonomies-id-id-levels:trim", badge: "POST" }
   ]}
 />
 
@@ -158,10 +158,11 @@ title="RELATED GUIDES"
 
 items={[
 
- { label: "Get metadata on item", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
- { label: "Apply metadata to an item", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
- { label: "Apply metadata to an item", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" },
- { label: "Update metadata on an item", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" }
+ { label: "Create metadata taxonomy items", href: "/guides/metadata/taxonomies/create", badge: "GUIDE" },
+ { label: "List metadata taxonomies", href: "/guides/metadata/taxonomies/list", badge: "GUIDE" },
+ { label: "Get metadata taxonomy items", href: "/guides/metadata/taxonomies/get", badge: "GUIDE" },
+ { label: "Update metadata taxonomies", href: "/guides/metadata/taxonomies/update", badge: "GUIDE" }
+
 
  ]}
 
