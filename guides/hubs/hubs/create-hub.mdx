@@ -1,0 +1,81 @@
+---
+title: "Create a hub"
+description: "Create a new Box Hub via the API with required and optional parameters."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+To create a new Box Hub, call the <Link href="/reference/post-hubs">create hub</Link> endpoint with a `title` (required). You can optionally provide a `description`. The hub is created with default settings; you can update styling and other options later via the API or the Box web app.
+
+<Note>
+
+Hub styling (for example, cover image or layout) is not supported by the API. Hub owners can edit styling in the Box Hubs web interface.
+
+</Note>
+
+## Create hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hubs" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "title": "HR Hub",
+       "description": "Central hub for HR policies and onboarding materials."
+     }'
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.createHubV2025R0({
+  title: hubTitle,
+  description: hubDescription,
+} satisfies HubCreateRequestV2025R0);
+```
+
+```python Python v10
+client.hubs.create_hub_v2025_r0("HR Hub", description="Central hub for HR policies and onboarding materials.")
+```
+
+```csharp .NET v10
+await client.Hubs.CreateHubV2025R0Async(requestBody: new HubCreateRequestV2025R0(title: hubTitle) { Description = hubDescription });
+```
+
+```swift Swift v10
+try await client.hubs.createHubV2025R0(requestBody: HubCreateRequestV2025R0(title: hubTitle, description: hubDescription))
+```
+
+```java Java v10
+client.getHubs().createHubV2025R0(new HubCreateRequestV2025R0.Builder(hubTitle).description(hubDescription).build());
+```
+
+</CodeGroup>
+
+## Request body
+
+| Field         | Type   | Required | Description                                                                 |
+| ------------- | ------ | -------- | ---------------------------------------------------------------------------- |
+| `title`      | string | Yes      | Title of the Box Hub. Cannot be empty; max 50 characters.                    |
+| `description`| string | No       | Description of the Box Hub.                                                  |
+
+A successful response returns the new <Link href="/reference/resources/hub">Hub</Link> object. After creating the hub, you can see it in the Box Hubs web interface and manage its items and collaborations via the API.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Create hub", href: "/reference/post-hubs", badge: "POST" },
+    { label: "Get hub", href: "/reference/get-hubs-id", badge: "GET" },
+    { label: "Update hub", href: "/reference/put-hubs-id", badge: "PUT" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Update a hub", href: "/guides/hubs/hubs/update-hub", badge: "GUIDE" },
+    { label: "Manage hub items", href: "/guides/hubs/hubs-items/hub-items", badge: "GUIDE" }
+  ]}
+/>

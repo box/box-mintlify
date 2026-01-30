@@ -1,0 +1,101 @@
+---
+title: "Hubs APIs use cases"
+description: "Overview of Box Hubs API use cases across industries and line-of-business solutions."
+---
+
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+Managing content portals at scale can be challenging due to the need for manual curation, complex permission management, and inconsistent user experiences across teams.
+
+The Box Hubs API provides the programmatic control for automating the creation, management, and governance of content portals. It handles the complexity—orchestration, security inheritance, and content indexing—so you can build scalable knowledge bases and embed them directly into your applications.
+
+The Box Hubs API empowers developers to:
+
+- **Scale faster:** Automate Hub creation and management using APIs to replace tedious manual configuration with event-driven workflows.
+- **Minimize maintenance:** Programmatically inherit Box's enterprise-grade governance, ensuring sensitive data stays protected without building custom security frameworks.
+- **Reduce complexity:** Seamlessly embed AI-powered content portals into existing internal portals or third-party tools instead of building custom interfaces from scratch.
+
+<AccordionGroup>
+    <Accordion title="Industry-Specific Solutions">
+        Leverage the Hubs API to build tailored solutions for specific vertical needs.
+
+        <AccordionGroup>
+            <Accordion title="Financial Services">
+                - **Client Portals:** Programmatically generate secure portals for high-net-worth clients to access their specific tax documents, contract updates, and market trend reports.
+                - **Deal Rooms:** Automatically spin up "Deal Hubs" for M&A activities, populating them with necessary due diligence documents while strictly controlling external access permissions.
+            </Accordion>
+
+            <Accordion title="Life Sciences">
+                - **Clinical Trial Portals:** Create standardized hubs for each trial site to centralize protocols, investigator brochures, and patient enrollment forms.
+                - **SOP Guidelines:** Maintain a single source of truth Hub for Standard Operating Procedures that automatically updates when the underlying files in Box are modified.
+            </Accordion>
+
+            <Accordion title="Public Sector">
+                - **Citizen Information Portals:** Build public-facing or inter-agency hubs for grant documentation, policy procurement, and court judgments.
+                - **Case Management:** Automate the creation of hubs for specific legal cases or public records requests, gathering all relevant files into one navigable view for review.
+            </Accordion>
+
+            <Accordion title="Retail">
+                - **Store Operations:** Distinct hubs for every franchise location containing the latest merchandising guidelines, campaign assets, and safety policies.
+                - **Franchisee Resources:** Automate the distribution of new season playbooks to thousands of partner portals simultaneously.
+            </Accordion>
+        </AccordionGroup>
+    </Accordion>
+
+    <Accordion title="Line of Business Solutions">
+        Streamline knowledge sharing across departments by integrating Hubs into your end users' daily workflows.
+
+        <AccordionGroup>
+            <Accordion title="Sales">
+                - **Sales Enablement:** Embed a "Sales Hub" into your CRM that surfaces the latest pitch decks, competitive intelligence, and pricing sheets so reps can close deals faster.
+                - **Request for Proposal (RFP) Libraries:** Create a curated RFP library where teams can use Box AI to instantly find answers to technical questions from past proposals.
+            </Accordion>
+
+            <Accordion title="HR / People Ops">
+                - **Onboarding Portals:** Automatically generate a personalized "Welcome Hub" for new hires containing their specific benefits info, handbook, and training videos triggered by their start date in the Human Resource Information System (HRIS).
+                - **Employee Resources:** Surface training and benefit resources to employees across the globe in a centralized, easily navigable Hub.
+            </Accordion>
+
+            <Accordion title="Marketing">
+                - **Brand Asset Libraries:** Create a central, read-only Hub for external agencies to access approved logos and campaign assets without giving them access to the raw working files.
+                - **Campaign Management:** Find, repurpose, and align on campaigns faster with AI-powered insights and a centralized project Hub.
+            </Accordion>
+
+            <Accordion title="Legal">
+                - **Contract Repositories:** Build a "Legal Hub" that aggregates approved contract templates and policy libraries, allowing users to ask questions against the content using Box AI.
+                - **Compliance Portals:** Effortlessly manage and organize compliance documentation to ensure teams have access to the latest regulations.
+            </Accordion>
+
+            <Accordion title="Operations">
+                - **Standard Operating Procedure (SOP) Libraries:** Streamline and manage content for standardized procedures and documentation, ensuring operational consistency across teams.
+                - **Product Documentation:** Create self-serve product knowledge hubs that reduce the burden on subject matter experts to answer repetitive questions.
+            </Accordion>
+
+            <Accordion title="IT">
+                - **Service Desk Hubs:** Reduce ticket volume by providing a self-service IT documentation and policy hub where users can find their own answers.
+                - **Security Policies:** Distribute up-to-date security and access policies through a governed portal that ensures version control.
+            </Accordion>
+        </AccordionGroup>
+    </Accordion>
+</AccordionGroup>
+
+## Core Benefits of using the Box Hubs API
+
+- **Security & Compliance:** All content within a Hub inherits the permissions of the underlying source files. The Hubs API respects Box's enterprise-grade security framework, eliminating the need for developers to build custom authentication or encryption layers.
+- **AI-Ready Infrastructure:** Hubs are pre-indexed for Box AI. By using the Hubs API, you are tapping into your company's knowledge base, without the complexity of building and maintaining custom RAG systems or storing content in a vector database.
+- **Model-Neutral Flexibility:** Box AI in Hubs allows you to leverage the latest, most powerful LLMs to query your curated content without being locked into a single AI provider.
+
+## Next steps
+
+Get started with the Box Hubs API with practical example-led quick starts guides, API reference pages, and extensive developer guides:
+
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Create hub", href: "/reference/post-hubs", badge: "POST" },
+    { label: "Get hub", href: "/reference/get-hubs-id", badge: "GET" },
+    { label: "List hubs", href: "/reference/get-hubs", badge: "GET" },
+    { label: "Update hub", href: "/reference/put-hubs-id", badge: "PUT" },
+    { label: "Manage hub items", href: "/reference/post-hubs-id-manage-items", badge: "POST" }
+  ]}
+/>

@@ -1,0 +1,74 @@
+---
+title: "Copy a hub"
+description: "Create a copy of an existing Box Hub via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+To create a copy of an existing Box Hub, call the <Link href="/reference/post-hubs-id-copy">copy hub</Link> endpoint with the source hub ID and optional new title and description. The original hub is not modified.
+
+## Copy hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hubs/HUB_ID/copy" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "title": "HR Hub (Copy)",
+       "description": "Copy of the HR hub for a new region."
+     }'
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.copyHubV2025R0(createdHub.id, {
+  title: copiedHubTitle,
+  description: copiedHubDescription,
+} satisfies HubCopyRequestV2025R0);
+```
+
+```python Python v10
+client.hubs.copy_hub_v2025_r0(created_hub.id, title=copied_hub_title, description=copied_hub_description)
+```
+
+```csharp .NET v10
+await client.Hubs.CopyHubV2025R0Async(hubId: createdHub.Id, requestBody: new HubCopyRequestV2025R0() { Title = copiedHubTitle, Description = copiedHubDescription });
+```
+
+```swift Swift v10
+try await client.hubs.copyHubV2025R0(hubId: createdHub.id, requestBody: HubCopyRequestV2025R0(title: copiedHubTitle, description: copiedHubDescription))
+```
+
+```java Java v10
+client.getHubs().copyHubV2025R0(createdHub.getId(), new HubCopyRequestV2025R0.Builder().title(copiedHubTitle).description(copiedHubDescription).build());
+```
+
+</CodeGroup>
+
+Replace `HUB_ID` with the source hub ID. Request body fields are optional; if you omit `title`, the API may use a default. A successful response returns the new <Link href="/reference/resources/hub">Hub</Link> object.
+
+## Request body fields
+
+| Field         | Type   | Required | Description                                          |
+| ------------- | ------ | -------- | ---------------------------------------------------- |
+| `title`       | string | No       | Title for the new hub. Max 50 characters.             |
+| `description` | string | No       | Description for the new hub.                         |
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Copy hub", href: "/reference/post-hubs-id-copy", badge: "POST" },
+    { label: "Create hub", href: "/reference/post-hubs", badge: "POST" },
+    { label: "Get hub by ID", href: "/reference/get-hubs-id", badge: "GET" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Create a hub", href: "/guides/hubs/hubs/create-hub", badge: "GUIDE" }
+  ]}
+/>

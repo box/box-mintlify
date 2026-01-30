@@ -1,0 +1,261 @@
+---
+title: "Manage hub collaborations"
+description: "Create, list, get, update, and delete Box Hub collaborations via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+Box Hub collaborations control who can access a hub and at what role. You can invite users or groups by user ID, group ID, or email (for users). Roles are `editor`, `viewer`, and `co-owner`. You can only invite users who have a Box account (any plan) to collaborate on a hub.
+
+## Create a hub collaboration
+
+To add a user or group to a hub, call the <Link href="/reference/post-hub-collaborations">create hub collaboration</Link> endpoint with the hub reference, the collaborator (`accessible_by`), and the `role`.
+
+### Create by user ID
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hub_collaborations" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "hub": {
+         "type": "hubs",
+         "id": "HUB_ID"
+       },
+       "accessible_by": {
+         "type": "user",
+         "id": "USER_ID"
+       },
+       "role": "viewer"
+     }'
+```
+
+```typescript Node/TypeScript v10
+await client.hubCollaborations.createHubCollaborationV2025R0({
+  hub: new HubCollaborationCreateRequestV2025R0HubField({ id: hub.id }),
+  accessibleBy: {
+    type: 'user',
+    id: user.id,
+  } satisfies HubCollaborationCreateRequestV2025R0AccessibleByField,
+  role: 'viewer',
+} satisfies HubCollaborationCreateRequestV2025R0);
+```
+
+```python Python v10
+client.hub_collaborations.create_hub_collaboration_v2025_r0(
+    CreateHubCollaborationV2025R0Hub(id=hub.id),
+    CreateHubCollaborationV2025R0AccessibleBy(type="user", id=user.id),
+    "viewer",
+)
+```
+
+```csharp .NET v10
+await client.HubCollaborations.CreateHubCollaborationV2025R0Async(requestBody: new HubCollaborationCreateRequestV2025R0(hub: new HubCollaborationCreateRequestV2025R0HubField(id: hub.Id), accessibleBy: new HubCollaborationCreateRequestV2025R0AccessibleByField(type: "user") { Id = user.Id }, role: "viewer"));
+```
+
+```swift Swift v10
+try await client.hubCollaborations.createHubCollaborationV2025R0(requestBody: HubCollaborationCreateRequestV2025R0(hub: HubCollaborationCreateRequestV2025R0HubField(id: hub.id), accessibleBy: HubCollaborationCreateRequestV2025R0AccessibleByField(type: "user", id: user.id), role: "viewer"))
+```
+
+```java Java v10
+client.getHubCollaborations().createHubCollaborationV2025R0(new HubCollaborationCreateRequestV2025R0(new HubCollaborationCreateRequestV2025R0HubField(hub.getId()), new HubCollaborationCreateRequestV2025R0AccessibleByField.Builder("user").id(user.getId()).build(), "viewer"));
+```
+
+</CodeGroup>
+
+### Create by user email (login)
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hub_collaborations" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "hub": {
+         "type": "hubs",
+         "id": "HUB_ID"
+       },
+       "accessible_by": {
+         "type": "user",
+         "login": "john@example.com"
+       },
+       "role": "editor"
+     }'
+```
+
+```python Python v10
+client.hub_collaborations.create_hub_collaboration_v2025_r0(
+    CreateHubCollaborationV2025R0Hub(id=hub.id),
+    CreateHubCollaborationV2025R0AccessibleBy(type="user", login="john@example.com"),
+    "editor",
+)
+```
+
+</CodeGroup>
+
+Replace `HUB_ID`, `USER_ID`, and the email with real values. Valid `role` values are `editor`, `viewer`, and `co-owner`. A successful response returns the new <Link href="/reference/resources/hub-collaboration">Hub collaboration</Link> object.
+
+## List hub collaborations
+
+To list all collaborations for a hub, call the <Link href="/reference/get-hub-collaborations">get hub collaborations</Link> endpoint with the hub ID.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/hub_collaborations?hub_id=HUB_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubCollaborations.getHubCollaborationsV2025R0({
+  hubId: hub.id,
+} satisfies GetHubCollaborationsV2025R0QueryParams);
+```
+
+```python Python v10
+client.hub_collaborations.get_hub_collaborations_v2025_r0(hub.id)
+```
+
+```csharp .NET v10
+await client.HubCollaborations.GetHubCollaborationsV2025R0Async(queryParams: new GetHubCollaborationsV2025R0QueryParams(hubId: hub.Id));
+```
+
+```swift Swift v10
+try await client.hubCollaborations.getHubCollaborationsV2025R0(queryParams: GetHubCollaborationsV2025R0QueryParams(hubId: hub.id))
+```
+
+```java Java v10
+client.getHubCollaborations().getHubCollaborationsV2025R0(new GetHubCollaborationsV2025R0QueryParams(hub.getId()));
+```
+
+</CodeGroup>
+
+Optional query parameters: `marker`, `limit` (pagination).
+
+## Get a hub collaboration by ID
+
+To retrieve a single hub collaboration, call the <Link href="/reference/get-hub-collaborations-id">get hub collaboration by ID</Link> endpoint with the collaboration ID.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/hub_collaborations/HUB_COLLABORATION_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubCollaborations.getHubCollaborationByIdV2025R0(hubCollaborationId);
+```
+
+```python Python v10
+client.hub_collaborations.get_hub_collaboration_by_id_v2025_r0(hub_collaboration_id)
+```
+
+```csharp .NET v10
+await client.HubCollaborations.GetHubCollaborationByIdV2025R0Async(hubCollaborationId: hubCollaborationId);
+```
+
+```java Java v10
+client.getHubCollaborations().getHubCollaborationByIdV2025R0(hubCollaborationId);
+```
+
+</CodeGroup>
+
+## Update a hub collaboration
+
+To change a collaborator's role, call the <Link href="/reference/put-hub-collaborations-id">update hub collaboration</Link> endpoint with the collaboration ID and the new `role`.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X PUT "https://api.box.com/2.0/hub_collaborations/HUB_COLLABORATION_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "role": "editor"
+     }'
+```
+
+```typescript Node/TypeScript v10
+await client.hubCollaborations.updateHubCollaborationByIdV2025R0(hubCollaborationId, {
+  role: 'editor',
+} satisfies HubCollaborationUpdateRequestV2025R0);
+```
+
+```python Python v10
+client.hub_collaborations.update_hub_collaboration_by_id_v2025_r0(hub_collaboration_id, role="editor")
+```
+
+```csharp .NET v10
+await client.HubCollaborations.UpdateHubCollaborationByIdV2025R0Async(hubCollaborationId: hubCollaborationId, requestBody: new HubCollaborationUpdateRequestV2025R0() { Role = "editor" });
+```
+
+```java Java v10
+client.getHubCollaborations().updateHubCollaborationByIdV2025R0(hubCollaborationId, new HubCollaborationUpdateRequestV2025R0.Builder().role("editor").build());
+```
+
+</CodeGroup>
+
+## Delete a hub collaboration
+
+To remove a collaborator from a hub, call the <Link href="/reference/delete-hub-collaborations-id">remove hub collaboration</Link> endpoint with the collaboration ID.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X DELETE "https://api.box.com/2.0/hub_collaborations/HUB_COLLABORATION_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubCollaborations.deleteHubCollaborationByIdV2025R0(hubCollaborationId);
+```
+
+```python Python v10
+client.hub_collaborations.delete_hub_collaboration_by_id_v2025_r0(hub_collaboration_id)
+```
+
+```csharp .NET v10
+await client.HubCollaborations.DeleteHubCollaborationByIdV2025R0Async(hubCollaborationId: hubCollaborationId);
+```
+
+```java Java v10
+client.getHubCollaborations().deleteHubCollaborationByIdV2025R0(hubCollaborationId);
+```
+
+</CodeGroup>
+
+A successful delete returns no body (HTTP 204).
+
+## Use cases
+
+- **Onboarding automation:** When a new hire is added to your HRIS, create a "Welcome Hub" and add them as a collaborator with the appropriate role.
+- **Group-based access:** Use the <Link href="/reference/get-groups">Box Groups API</Link> to find the right group, then create a hub collaboration for that group so all members get access.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Create hub collaboration", href: "/reference/post-hub-collaborations", badge: "POST" },
+    { label: "Get hub collaborations", href: "/reference/get-hub-collaborations", badge: "GET" },
+    { label: "Get hub collaboration by ID", href: "/reference/get-hub-collaborations-id", badge: "GET" },
+    { label: "Update hub collaboration", href: "/reference/put-hub-collaborations-id", badge: "PUT" },
+    { label: "Remove hub collaboration", href: "/reference/delete-hub-collaborations-id", badge: "DELETE" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Manage hub items", href: "/guides/hubs/hubs-items/hub-items", badge: "GUIDE" }
+  ]}
+/>

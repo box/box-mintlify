@@ -202,6 +202,26 @@
                     ]
                   },
                   {
+                    "group": "Box Hubs",
+                    "pages": [
+                      "guides/hubs/index",
+                      "guides/hubs/use-cases",
+                      {
+                        "group": "Hubs",
+                        "pages": [
+                          "guides/hubs/hubs/create-hub",
+                          "guides/hubs/hubs/get-hub",
+                          "guides/hubs/hubs/list-hubs",
+                          "guides/hubs/hubs/update-hub",
+                          "guides/hubs/hubs/delete-hub",
+                          "guides/hubs/hubs/copy-hub"
+                        ]
+                      },
+                      "guides/hubs/hubs-items/hub-items",
+                      "guides/hubs/hubs-collaborations/hub-collaborations"
+                    ]
+                  },
+                  {
                     "group": "Box Doc Gen",
                     "pages": [
                       "guides/docgen/index",

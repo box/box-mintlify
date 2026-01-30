@@ -1,0 +1,114 @@
+---
+title: "List hubs"
+description: "List Box Hubs for a user or for the enterprise via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+You can list Box Hubs in two ways: all hubs for the requesting user, or all hubs for the enterprise. Use query parameters to search, filter by scope, and sort results.
+
+## List hubs for the requesting user
+
+To retrieve all Box Hubs accessible to the authenticated user, call the <Link href="/reference/get-hubs">list hubs</Link> endpoint.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/hubs?scope=all&sort=name&direction=ASC" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.getHubsV2025R0({
+  scope: 'all',
+  sort: 'name',
+  direction: 'ASC' as GetHubsV2025R0QueryParamsDirectionField,
+} satisfies GetHubsV2025R0QueryParams);
+```
+
+```python Python v10
+client.hubs.get_hubs_v2025_r0(scope="all", sort="name", direction=GetHubsV2025R0Direction.ASC)
+```
+
+```csharp .NET v10
+await client.Hubs.GetHubsV2025R0Async(queryParams: new GetHubsV2025R0QueryParams() { Scope = "all", Sort = "name", Direction = GetHubsV2025R0QueryParamsDirectionField.Asc });
+```
+
+```swift Swift v10
+try await client.hubs.getHubsV2025R0(queryParams: GetHubsV2025R0QueryParams(scope: "all", sort: "name", direction: GetHubsV2025R0QueryParamsDirectionField.asc))
+```
+
+```java Java v10
+client.getHubs().getHubsV2025R0(new GetHubsV2025R0QueryParams.Builder().scope("all").sort("name").direction(GetHubsV2025R0QueryParamsDirectionField.ASC).build());
+```
+
+</CodeGroup>
+
+### Query parameters (list hubs for user)
+
+| Parameter   | Type   | Required | Description                                                                 |
+| ----------- | ------ | -------- | --------------------------------------------------------------------------- |
+| `query`     | string | No       | Search string for Box Hubs.                                                 |
+| `scope`     | string | No       | `editable`, `view_only`, or `all`. Default is `all`.                        |
+| `sort`      | string | No       | Sort by `name`, `updated_at`, `last_accessed_at`, `view_count`, or `relevance`. Default is `relevance`. |
+| `direction` | string | No       | `ASC` or `DESC`.                                                            |
+| `marker`    | string | No       | Marker for marker-based pagination.                                         |
+| `limit`     | integer| No       | Max items per page (max 1000).                                              |
+
+## List hubs for the enterprise
+
+Admins or Hub Co-admins of an enterprise with <Link href="/guides/api-calls/permissions-and-errors/scopes/#global-content-manager-gcm">Global Content Manager (GCM)</Link> scope can list all Box Hubs for the enterprise using the <Link href="/reference/get-enterprise-hubs">list enterprise hubs</Link> endpoint.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/enterprise_hubs?scope=all&sort=name&direction=ASC" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.getEnterpriseHubsV2025R0({
+  scope: 'all',
+  sort: 'name',
+  direction: 'ASC' as GetEnterpriseHubsV2025R0QueryParamsDirectionField,
+} satisfies GetEnterpriseHubsV2025R0QueryParams);
+```
+
+```python Python v10
+client.hubs.get_enterprise_hubs_v2025_r0(scope="all", sort="name", direction=GetEnterpriseHubsV2025R0Direction.ASC)
+```
+
+```csharp .NET v10
+await client.Hubs.GetEnterpriseHubsV2025R0Async(queryParams: new GetEnterpriseHubsV2025R0QueryParams() { Scope = "all", Sort = "name", Direction = GetEnterpriseHubsV2025R0QueryParamsDirectionField.Asc });
+```
+
+```swift Swift v10
+try await client.hubs.getEnterpriseHubsV2025R0(queryParams: GetEnterpriseHubsV2025R0QueryParams(scope: "all", sort: "name", direction: GetEnterpriseHubsV2025R0QueryParamsDirectionField.asc))
+```
+
+```java Java v10
+client.getHubs().getEnterpriseHubsV2025R0(new GetEnterpriseHubsV2025R0QueryParams.Builder().scope("all").sort("name").direction(GetEnterpriseHubsV2025R0QueryParamsDirectionField.ASC).build());
+```
+
+</CodeGroup>
+
+Both endpoints return a list of hubs with pagination fields (`limit`, `next_marker`). Use the API reference for full parameter descriptions and limitations.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "List hubs", href: "/reference/get-hubs", badge: "GET" },
+    { label: "List enterprise hubs", href: "/reference/get-enterprise-hubs", badge: "GET" },
+    { label: "Get hub by ID", href: "/reference/get-hubs-id", badge: "GET" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Create a hub", href: "/guides/hubs/hubs/create-hub", badge: "GUIDE" }
+  ]}
+/>
