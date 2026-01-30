@@ -22,6 +22,8 @@ curl https://api.box.com/2.0/files/123?fields=representations \
     -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
+When the status changes from `pending` to `success`, the representation is ready to download. The status indicates if the representation is available. Available options are `success`, `viewable`, `pending`, or `none`. `Success` means you can immediately download the representation, while `none` indicates the representation can be generated. 
+
 ## Multiple dimensions
 
 Some formats will require the `dimensions` to be passed in to select a

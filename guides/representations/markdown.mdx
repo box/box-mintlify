@@ -1,0 +1,302 @@
+---
+title: "Get Markdown Representation"
+description: "Generate and download Markdown representations using the Box API."
+---
+
+import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
+
+<RelatedLinks
+  title="REQUIRED GUIDES"
+  items={[
+    { label: "List All Representations for File", href: "/guides/representations/list-all-representations", badge: "GUIDE" },
+    { label: "Request Desired Representation", href: "/guides/representations/request-a-representation", badge: "GUIDE" },
+    { label: "Download File Representation", href: "/guides/representations/download-a-representation", badge: "GUIDE" }
+  ]}
+/>
+A markdown representation provides a way to extract text from a document while retaining structures such as headers, tables, lists, and formatting cues. Markdown conversion speeds depend on file size and content. 
+
+## Supported file types
+
+Markdown representations work with the following document formats: 
+
+- Microsoft Office: Word (.docx), PowerPoint (.pptx), Excel (.xls, .xlsx, .xlsm) 
+- Google Workspace: Google Docs (.gdoc), Google Slides (.gslide, .gslides), 
+- Google Sheets (.gsheet) 
+- PDF files (.pdf) 
+
+## Create a markdown representation 
+
+This process describes how to generate and download a Markdown representation of a file using the Box API.  
+
+To first create a markdown representation: 
+
+- <Link href="/guides/representations/list-all-representations">Get the list of representations available for a file</Link>
+- <Link href="/guides/representations/request-a-representation">Request a markdown representation</Link> by passing the `x-rep-hints`-header with the value `[markdown]`.
+- <Link href="/guides/representations/download-a-representation">Download the markdown</Link> by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
+
+Generated representations are cached by Box for subsequent requests.
+
+### Get available representations 
+
+Request the file’s available representations, specifying a Markdown representation hint.
+
+<CodeGroup>
+```sh cURL
+curl -X GET \ 
+  'https://api.box.com/2.0/files/12345?fields=id%2Cname%2Crepresentations' \ 
+  -H 'X-Rep-Hints: [markdown]' \ 
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
+```
+
+```typescript Node/TypeScript v10
+await client.files.getFileById(
+  "12345",
+  {
+    queryParams: {
+      fields: ["id", "name", "representations"],
+    } satisfies GetFileByIdQueryParams,
+    headers: {
+      xRepHints: "[markdown]",
+    } satisfies GetFileByIdHeadersInput,
+  } satisfies GetFileByIdOptionalsInput,
+);
+```
+
+```python Python v10
+client.files.get_file_by_id(
+    "12345",
+    fields=["id", "name", "representations"],
+    x_rep_hints="[markdown]",
+)
+```
+
+```cs .NET v10
+await client.Files.GetFileByIdAsync(
+    fileId: "12345",
+    queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"id", "name", "representations"}) },
+    headers: new GetFileByIdHeaders(xRepHints: "[markdown]")
+);
+```
+
+```swift Swift v10
+try await client.files.getFileById(
+    fileId: "12345",
+    queryParams: GetFileByIdQueryParams(fields: ["id", "name", "representations"]),
+    headers: GetFileByIdHeaders(xRepHints: "[markdown]")
+)
+```
+
+```java Java v10
+client.getFiles().getFileById(
+    "12345",
+    new GetFileByIdQueryParams.Builder().fields(Arrays.asList("id", "name", "representations")).build(),
+    new GetFileByIdHeaders("[markdown]")
+)
+```
+</CodeGroup>
+
+## Response example
+
+```json
+{
+  "type": "file",
+  "id": "{file_id}",
+  "etag": "1",
+  "name": "test.docx",
+  "representations": {
+    "entries": [
+      {
+        "representation": "markdown",
+        "properties": {},
+        "info": {
+          "url": "https://api.box.com/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}"
+        },
+        "status": {
+          "state": "none"
+        },
+        "content": {
+          "url_template": "https://dl.boxcloud.com/api/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}/content/{+asset_path}"
+        }
+      }
+    ]
+  }
+}
+```
+
+### Trigger Markdown generation 
+
+If the state is `none`, request the info URL to begin generating the Markdown representation. 
+
+<CodeGroup>
+```sh cURL
+curl -X GET \ 
+  'https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown' \ 
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
+```
+
+```typescript Node/TypeScript v10
+await fetch(
+  "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown",
+  {
+    headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
+  },
+);
+```
+
+```python Python v10
+requests.get(
+    "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown",
+    headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
+)
+```
+
+```cs .NET v10
+using var httpClient = new HttpClient();
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
+await httpClient.GetAsync("https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown");
+```
+
+```swift Swift v10
+var request = URLRequest(url: URL(string: "https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown")!)
+request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
+_ = try await URLSession.shared.data(for: request)
+```
+
+```java Java v10
+HttpClient httpClient = HttpClient.newHttpClient();
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://api.box.com/2.0/internal_files/12345/versions/2200612360399/representations/markdown"))
+    .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
+    .GET()
+    .build();
+httpClient.send(request, HttpResponse.BodyHandlers.discarding());
+```
+</CodeGroup>
+
+### Check representation status 
+
+Re-query the file to check the current status of the Markdown representation. 
+
+<CodeGroup>
+```sh cURL
+curl -X GET \ 
+  'https://api.box.com/2.0/files/12345?fields=id%2Cname%2Crepresentations' \ 
+  -H 'X-Rep-Hints: [markdown]' \ 
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
+```
+
+```typescript Node/TypeScript v10
+await client.files.getFileById(
+  "12345",
+  {
+    queryParams: {
+      fields: ["id", "name", "representations"],
+    } satisfies GetFileByIdQueryParams,
+    headers: {
+      xRepHints: "[markdown]",
+    } satisfies GetFileByIdHeadersInput,
+  } satisfies GetFileByIdOptionalsInput,
+);
+```
+
+```python Python v10
+client.files.get_file_by_id(
+    "12345",
+    fields=["id", "name", "representations"],
+    x_rep_hints="[markdown]",
+)
+```
+
+```cs .NET v10
+await client.Files.GetFileByIdAsync(
+    fileId: "12345",
+    queryParams: new GetFileByIdQueryParams() { Fields = Array.AsReadOnly(new [] {"id", "name", "representations"}) },
+    headers: new GetFileByIdHeaders(xRepHints: "[markdown]")
+);
+```
+
+```swift Swift v10
+try await client.files.getFileById(
+    fileId: "12345",
+    queryParams: GetFileByIdQueryParams(fields: ["id", "name", "representations"]),
+    headers: GetFileByIdHeaders(xRepHints: "[markdown]")
+)
+```
+
+```java Java v10
+client.getFiles().getFileById(
+    "12345",
+    new GetFileByIdQueryParams.Builder().fields(Arrays.asList("id", "name", "representations")).build(),
+    new GetFileByIdHeaders("[markdown]")
+)
+```
+</CodeGroup>
+
+When the status changes from `pending` to `success`, the Markdown file is ready to download. The status indicates if the representation is available. Available options are `success`, `viewable`, `pending`, or `none`. `Success` means you can immediately download the representation, while `none` indicates the representation can be generated. 
+
+### Download the Markdown representation 
+
+Once the representation is ready, use the `content/url_template` to download it. 
+
+<CodeGroup>
+```sh cURL
+curl -L \ 
+'https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/1415005153353/representations/markdown/content/index.md' \
+  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
+  -o file_name.md
+```
+
+```typescript Node/TypeScript v10
+await fetch(
+  "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/",
+  {
+    headers: { Authorization: "Bearer YOUR_ACCESS_TOKEN" },
+  },
+);
+```
+
+```python Python v10
+requests.get(
+    "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/",
+    headers={"Authorization": "Bearer YOUR_ACCESS_TOKEN"},
+)
+```
+
+```cs .NET v10
+using var httpClient = new HttpClient();
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "YOUR_ACCESS_TOKEN");
+await httpClient.GetAsync("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/");
+```
+
+```swift Swift v10
+var request = URLRequest(url: URL(string: "https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/")!)
+request.setValue("Bearer YOUR_ACCESS_TOKEN", forHTTPHeaderField: "Authorization")
+_ = try await URLSession.shared.data(for: request)
+```
+
+```java Java v10
+HttpClient httpClient = HttpClient.newBuilder()
+    .followRedirects(HttpClient.Redirect.NORMAL)
+    .build();
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://dl.boxcloud.com/api/2.0/internal_files/12345/versions/2200612360399/representations/markdown/content/"))
+    .header("Authorization", "Bearer YOUR_ACCESS_TOKEN")
+    .GET()
+    .build();
+httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
+```
+</CodeGroup>
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Get file information", href: "/reference/get-files-id", badge: "GET" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Supported File Types", href: "/guides/representations/supported-file-types", badge: "GUIDE" }
+  ]}
+/>

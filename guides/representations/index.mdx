@@ -3,10 +3,18 @@ title: Representations
 sidebarTitle: Overview
 ---
 A representation is an alternative asset for a file stored in Box. These assets
-can be PDFs, thumbnails, or text extractions.
+can be PDFs, thumbnails, or text extractions. Representations allow you to access content in different formats without manually converting files, such as by extracting text from documents to send to language models for processing.
 
 Representations are automatically generated for the supported file types, either
 when uploading to Box or when requesting the asset.
 
 These representations are exposed through the `GET /files/:id` endpoint by using
 the `fields=representations` query parameter and the `x-rep-hints` header.
+
+The workflow involves: 
+
+1. <Link href="/guides/representations/list-all-representations">Getting the list of available representations for a file.</Link>
+2. <Link href="/guides/representations/request-a-representation">Checking a specific representation's status and retrieving its `url_template`.</Link>
+3. <Link href="/guides/representations/download-a-representation">Downloading the representation if available.</Link>
+
+The <Link href="https://github.com/box/box-python-sdk"> Box Python SDK</Link> provides the `file.get_representation_info(rep_hints)` method to access these capabilities.

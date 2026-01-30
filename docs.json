@@ -795,6 +795,7 @@
                       "guides/representations/download-a-representation",
                       "guides/representations/thumbnail-representation",
                       "guides/representations/thumbnail",
+                      "guides/representations/markdown",
                       "guides/representations/text",
                       "guides/representations/pdf",
                       "guides/representations/supported-file-types"
