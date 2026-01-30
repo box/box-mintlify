@@ -2739,7 +2739,8 @@
           {
             "tab": "AI",
             "pages": [
-              "/ai-dev-zone"
+              "/ai-dev-zone",
+              "agent-configurator"
             ]
           },
           {
@@ -5467,7 +5468,8 @@
           {
             "tab": "AI",
             "pages": [
-              "/ja/ai-dev-zone"
+              "/ja/ai-dev-zone",
+              "/ja/agent-configurator"
             ]
           },
           {
