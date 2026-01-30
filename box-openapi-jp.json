@@ -14,7 +14,7 @@
       "url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     "version": "2024.0",
-    "x-box-commit-hash": "17ccd50336"
+    "x-box-commit-hash": "c8490cfcb1"
   },
   "servers": [
     {
@@ -25627,7 +25627,7 @@
       "post": {
         "operationId": "post_legal_hold_policy_assignments",
         "summary": "リーガルホールドポリシーを割り当て",
-        "description": "ファイル、ファイルバージョン、フォルダ、またはユーザーにリーガルホールドを割り当てます。",
+        "description": "Assign a legal hold to an item type of: file, file version, folder, user, ownership, or interactions.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -25653,7 +25653,7 @@
                           "folder",
                           "user",
                           "ownership",
-                          "interaction"
+                          "interactions"
                         ]
                       },
                       "id": {
@@ -33216,7 +33216,7 @@
           {
             "lang": "node",
             "label": "メタデータを抽出 (構造化)",
-            "source": "await client.ai.createAiExtractStructured({\n  fields: [\n    {\n      key: 'firstName',\n      displayName: 'First name',\n      description: 'Person first name',\n      prompt: 'What is the your first name?',\n      type: 'string',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'lastName',\n      displayName: 'Last name',\n      description: 'Person last name',\n      prompt: 'What is the your last name?',\n      type: 'string',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'dateOfBirth',\n      displayName: 'Birth date',\n      description: 'Person date of birth',\n      prompt: 'What is the date of your birth?',\n      type: 'date',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'age',\n      displayName: 'Age',\n      description: 'Person age',\n      prompt: 'How old are you?',\n      type: 'float',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'hobby',\n      displayName: 'Hobby',\n      description: 'Person hobby',\n      prompt: 'What is your hobby?',\n      type: 'multiSelect',\n      options: [\n        { key: 'guitar' } satisfies AiExtractStructuredFieldsOptionsField,\n        { key: 'books' } satisfies AiExtractStructuredFieldsOptionsField,\n      ],\n    } satisfies AiExtractStructuredFieldsField,\n  ],\n  items: [new AiItemBase({ id: file.id })],\n  aiAgent: aiExtractStructuredAgentBasicTextConfig,\n} satisfies AiExtractStructured);"
+            "source": "await client.ai.createAiExtractStructured({\n  fields: [\n    {\n      key: 'firstName',\n      displayName: 'First name',\n      description: 'Person first name',\n      prompt: 'What is the your first name?',\n      type: 'string',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'lastName',\n      displayName: 'Last name',\n      description: 'Person last name',\n      prompt: 'What is the your last name?',\n      type: 'string',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'dateOfBirth',\n      displayName: 'Birth date',\n      description: 'Person date of birth',\n      prompt: 'What is the date of your birth?',\n      type: 'date',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'age',\n      displayName: 'Age',\n      description: 'Person age',\n      prompt: 'How old are you?',\n      type: 'float',\n    } satisfies AiExtractStructuredFieldsField,\n    {\n      key: 'hobby',\n      displayName: 'Hobby',\n      description: 'Person hobby',\n      prompt: 'What is your hobby?',\n      type: 'multiSelect',\n      options: [\n        { key: 'guitar' } satisfies AiExtractStructuredFieldsOptionsField,\n        { key: 'books' } satisfies AiExtractStructuredFieldsOptionsField,\n      ],\n    } satisfies AiExtractStructuredFieldsField,\n  ],\n  items: [new AiItemBase({ id: file.id })],\n  includeConfidenceScore: true,\n  aiAgent: aiExtractStructuredAgentBasicTextConfig,\n} satisfies AiExtractStructured);"
           },
           {
             "lang": "python",
@@ -36410,6 +36410,11 @@
             "minItems": 1,
             "uniqueItems": true
           },
+          "include_confidence_score": {
+            "description": "抽出された各フィールドの信頼度スコアを返すかどうかを示すフラグ。",
+            "type": "boolean",
+            "example": true
+          },
           "ai_agent": {
             "allOf": [
               {
@@ -36457,6 +36462,11 @@
             "description": "応答が終了した理由。",
             "type": "string",
             "example": "done"
+          },
+          "confidence_score": {
+            "description": "JSON形式の辞書として抽出された各フィールドの信頼度スコアの数値。フィールドが抽出されなかった場合は空になります。",
+            "type": "object",
+            "additionalProperties": {}
           },
           "ai_agent_info": {
             "$ref": "#/components/schemas/AiAgentInfo"
@@ -40081,7 +40091,7 @@
                             "nullable": false
                           },
                           "can_apply_watermark": {
-                            "description": "Specifies if the user can apply a watermark to this file.",
+                            "description": "ユーザーがこのファイルに電子すかしを適用できるかどうかを指定します。",
                             "type": "boolean",
                             "example": true,
                             "nullable": false
@@ -40264,13 +40274,13 @@
                         "nullable": false
                       },
                       "is_watermark_inherited": {
-                        "description": "Specifies if the watermark is inherited from any parent folder in the hierarchy.",
+                        "description": "電子すかしが階層のいずれかの親フォルダから継承されるかどうかを指定します。",
                         "type": "boolean",
                         "example": false,
                         "nullable": false
                       },
                       "is_watermarked_by_access_policy": {
-                        "description": "Specifies if the watermark is enforced by an access policy.",
+                        "description": "電子すかしがアクセスポリシーで適用されるかどうかを指定します。",
                         "type": "boolean",
                         "example": false,
                         "nullable": false
@@ -41924,7 +41934,7 @@
                             "nullable": false
                           },
                           "can_apply_watermark": {
-                            "description": "Specifies if the user can apply a watermark to this folder and its contents.",
+                            "description": "ユーザーがこのフォルダとそのコンテンツに電子すかしを適用できるかどうかを指定します。",
                             "type": "boolean",
                             "example": true,
                             "nullable": false
@@ -42084,13 +42094,13 @@
                         "nullable": false
                       },
                       "is_watermark_inherited": {
-                        "description": "Specifies if the watermark is inherited from any parent folder in the hierarchy.",
+                        "description": "電子すかしが階層のいずれかの親フォルダから継承されるかどうかを指定します。",
                         "type": "boolean",
                         "example": false,
                         "nullable": false
                       },
                       "is_watermarked_by_access_policy": {
-                        "description": "Specifies if the watermark is enforced by an access policy.",
+                        "description": "電子すかしがアクセスポリシーで適用されるかどうかを指定します。",
                         "type": "boolean",
                         "example": false,
                         "nullable": false
@@ -43590,11 +43600,11 @@
                 ]
               },
               "assignment_counts": {
-                "description": "このリーガルホールド内の項目タイプごとの割り当て数。",
+                "description": "Counts of assignments within a legal hold policy by item type.",
                 "type": "object",
                 "properties": {
                   "user": {
-                    "description": "このポリシーが適用されるユーザーの数。",
+                    "description": "The number of users this policy is applied to with the `access` type assignment.",
                     "type": "integer",
                     "format": "int64",
                     "example": 1
@@ -43616,6 +43626,18 @@
                     "type": "integer",
                     "format": "int64",
                     "example": 4
+                  },
+                  "ownership": {
+                    "description": "The number of users this policy is applied to with the `ownership` type assignment.",
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 5
+                  },
+                  "interactions": {
+                    "description": "The number of users this policy is applied to with the `interactions` type assignment.",
+                    "type": "integer",
+                    "format": "int64",
+                    "example": 6
                   }
                 }
               },
