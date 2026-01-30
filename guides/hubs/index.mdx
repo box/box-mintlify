@@ -1,0 +1,45 @@
+---
+title: "Box Hubs"
+sidebarTitle: Overview
+description: "Overview of the Box Hubs API for creating, managing, and governing content portals programmatically."
+---
+
+import {Link} from "/snippets/Link.jsx";
+
+Box Hubs provide a centralized way to organize content for specific teams, departments, or projects within your organization. They serve as content portals that bring together files, folders, and web links in a structured, easily accessible manner. Box Hubs are integrated with Box AI, allowing for more accurate responses thanks to a narrowed context window.
+
+The Box Hubs API lets you programmatically manage Box Hubs, their content, and collaborations. There are three groups of endpoints:
+
+- **Box Hubs:** Create, get, list, update, delete, and copy hubs.
+- **Box Hub items:** List items in a hub and add or remove files, folders, and web links.
+- **Box Hub collaborations:** Create, list, get, update, and delete hub collaborations to control who can access a hub and at what role.
+
+<Note>
+
+**Required version header**
+
+Box Hubs endpoints require the `box-version` header. Not passing this parameter will result in a `400` error: "Missing required box-version header. Supported API versions: [2025.0]."
+
+Include `box-version: 2025.0` in every Hubs API request. For more on versioning, see the <Link href="/guides/api-calls/api-versioning-strategy">API versioning strategy</Link> guide.
+
+</Note>
+
+## Enable Box Hubs
+
+To enable Box Hubs (including the API) for your enterprise, follow the [Configuring Box Hubs](https://support.box.com/hc/en-us/articles/25822332454547-Configuring-Box-Hubs) product guide.
+
+## Prerequisites
+
+- A Box account with Box Hubs enabled for your enterprise.
+- An access token with the appropriate [scopes](/guides/api-calls/permissions-and-errors/scopes) for the operations you need (for example, for listing enterprise hubs, [Global Content Manager (GCM)](https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/#global-content-manager-gcm) for admins or Hub Co-admins).
+
+## Next steps
+
+- [Create a hub](/guides/hubs/hubs/create-hub) — Create a new Box Hub via the API.
+- [Get a hub](/guides/hubs/hubs/get-hub) — Retrieve a hub by ID.
+- [List hubs](/guides/hubs/hubs/list-hubs) — List hubs for a user or for the enterprise.
+- [Update a hub](/guides/hubs/hubs/update-hub) — Change a hub's title, description, or settings.
+- [Delete a hub](/guides/hubs/hubs/delete-hub) — Delete a single hub.
+- [Copy a hub](/guides/hubs/hubs/copy-hub) — Create a copy of an existing hub.
+- [Manage hub items](/guides/hubs/hubs-items/hub-items) — List, add, and remove items in a hub.
+- [Manage hub collaborations](/guides/hubs/hubs-collaborations/hub-collaborations) — Invite users or groups and manage their access to a hub.

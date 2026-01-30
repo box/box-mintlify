@@ -1,0 +1,207 @@
+---
+title: "Manage hub items"
+description: "List, add, and remove files, folders, and web links in a Box Hub via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+The Box Hub items API lets you list all items in a hub and add or remove files, folders, and web links. At this stage, the API supports managing files, folders, and web links only; elements such as callouts, dividers, paragraphs, or sections must be added in the Box Hubs web interface. Content added via the API is placed in the first content block.
+
+<Note>
+
+The manage hub items endpoint returns HTTP `207` (Multi-Status). The response body includes the status of each operation (add or remove). Follow the API reference for full response and error handling.
+
+</Note>
+
+## List hub items
+
+To retrieve all items in a Box Hub, call the <Link href="/reference/get-hub-items">get hub items</Link> endpoint with the hub ID.
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/hub_items?hub_id=HUB_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubItems.getHubItemsV2025R0({
+  hubId: createdHub.id,
+} satisfies GetHubItemsV2025R0QueryParams);
+```
+
+```python Python v10
+client.hub_items.get_hub_items_v2025_r0(created_hub.id)
+```
+
+```csharp .NET v10
+await client.HubItems.GetHubItemsV2025R0Async(queryParams: new GetHubItemsV2025R0QueryParams(hubId: createdHub.Id));
+```
+
+```swift Swift v10
+try await client.hubItems.getHubItemsV2025R0(queryParams: GetHubItemsV2025R0QueryParams(hubId: createdHub.id))
+```
+
+```java Java v10
+client.getHubItems().getHubItemsV2025R0(new GetHubItemsV2025R0QueryParams(createdHub.getId()));
+```
+
+</CodeGroup>
+
+Replace `HUB_ID` with the hub ID. You can use optional query parameters `marker` and `limit` for pagination. The response includes an `entries` array of hub items (each with `id`, `type`, `name`).
+
+## Add or remove hub items
+
+To add or remove items in a hub, call the <Link href="/reference/post-hubs-id-manage-items">manage hub items</Link> endpoint with the hub ID and a list of operations. Each operation has an `action` (`add` or `remove`) and an `item` reference (`type` and `id`).
+
+### Add a file to a hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hubs/HUB_ID/manage_items" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "operations": [
+         {
+           "action": "add",
+           "item": {
+             "type": "file",
+             "id": "FILE_ID"
+           }
+         }
+       ]
+     }'
+```
+
+```typescript Node/TypeScript v10
+await client.hubItems.manageHubItemsV2025R0(createdHub.id, {
+  operations: [
+    {
+      action: 'add' as HubItemOperationV2025R0ActionField,
+      item: new FileReferenceV2025R0({ id: file.id }),
+    } satisfies HubItemOperationV2025R0,
+  ],
+} satisfies HubItemsManageRequestV2025R0);
+```
+
+```python Python v10
+client.hub_items.manage_hub_items_v2025_r0(
+    created_hub.id,
+    operations=[
+        HubItemOperationV2025R0(
+            action=HubItemOperationV2025R0ActionField.ADD,
+            item=FileReferenceV2025R0(id=file.id),
+        )
+    ],
+)
+```
+
+```csharp .NET v10
+await client.HubItems.ManageHubItemsV2025R0Async(hubId: createdHub.Id, requestBody: new HubItemsManageRequestV2025R0() { Operations = Array.AsReadOnly(new [] { new HubItemOperationV2025R0(action: HubItemOperationV2025R0ActionField.Add, item: new FileReferenceV2025R0(id: file.Id)) }) });
+```
+
+```java Java v10
+client.getHubItems().manageHubItemsV2025R0(createdHub.getId(), new HubItemsManageRequestV2025R0.Builder().operations(Arrays.asList(new HubItemOperationV2025R0(HubItemOperationV2025R0ActionField.ADD, new FileReferenceV2025R0(file.getId())))).build());
+```
+
+</CodeGroup>
+
+### Add a folder to a hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hubs/HUB_ID/manage_items" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "operations": [
+         {
+           "action": "add",
+           "item": {
+             "type": "folder",
+             "id": "FOLDER_ID"
+           }
+         }
+       ]
+     }'
+```
+
+```python Python v10
+client.hub_items.manage_hub_items_v2025_r0(
+    created_hub.id,
+    operations=[
+        HubItemOperationV2025R0(
+            action=HubItemOperationV2025R0ActionField.ADD,
+            item=FolderReferenceV2025R0(id=folder.id),
+        )
+    ],
+)
+```
+
+</CodeGroup>
+
+### Remove an item from a hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X POST "https://api.box.com/2.0/hubs/HUB_ID/manage_items" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "operations": [
+         {
+           "action": "remove",
+           "item": {
+             "type": "file",
+             "id": "FILE_ID"
+           }
+         }
+       ]
+     }'
+```
+
+```python Python v10
+client.hub_items.manage_hub_items_v2025_r0(
+    created_hub.id,
+    operations=[
+        HubItemOperationV2025R0(
+            action=HubItemOperationV2025R0ActionField.REMOVE,
+            item=FileReferenceV2025R0(id=file.id),
+        )
+    ],
+)
+```
+
+</CodeGroup>
+
+Replace `HUB_ID`, `FILE_ID`, and `FOLDER_ID` with actual IDs. For web links, use `"type": "web_link"` and the web link ID. You can combine multiple add and remove operations in a single request.
+
+## Use cases
+
+- **Automate hub creation:** Use the <Link href="/reference/get-search">Box Search API</Link> or metadata queries to find content matching criteria, then add the filtered results to a hub with the manage hub items endpoint.
+- **Event-driven updates:** Use <Link href="/guides/webhooks">webhooks</Link> to react to events (for example, a new file in a folder) and add that content to a hub automatically.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Get hub items", href: "/reference/get-hub-items", badge: "GET" },
+    { label: "Manage hub items", href: "/reference/post-hubs-id-manage-items", badge: "POST" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Create a hub", href: "/guides/hubs/hubs/create-hub", badge: "GUIDE" },
+    { label: "Manage hub collaborations", href: "/guides/hubs/hubs-collaborations/hub-collaborations", badge: "GUIDE" }
+  ]}
+/>

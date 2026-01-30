@@ -1,0 +1,60 @@
+---
+title: "Get a hub"
+description: "Retrieve a Box Hub by ID via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+To retrieve details for a single Box Hub, call the <Link href="/reference/get-hubs-id">get hub by ID</Link> endpoint with the hub's ID. You can find the hub ID in the Box Hubs web interface URL (for example, `https://*.app.box.com/hubs/12345` has hub ID `12345`).
+
+## Get hub by ID
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X GET "https://api.box.com/2.0/hubs/HUB_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.getHubByIdV2025R0(hubId);
+```
+
+```python Python v10
+client.hubs.get_hub_by_id_v2025_r0(hub_id)
+```
+
+```csharp .NET v10
+await client.Hubs.GetHubByIdV2025R0Async(hubId: hubId);
+```
+
+```swift Swift v10
+try await client.hubs.getHubByIdV2025R0(hubId: hubId)
+```
+
+```java Java v10
+client.getHubs().getHubByIdV2025R0(hubId);
+```
+
+</CodeGroup>
+
+Replace `HUB_ID` (or `hubId` / `hub_id`) with the actual hub ID. A successful response returns the <Link href="/reference/resources/hub">Hub</Link> object.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Get hub by ID", href: "/reference/get-hubs-id", badge: "GET" },
+    { label: "List hubs", href: "/reference/get-hubs", badge: "GET" },
+    { label: "Update hub", href: "/reference/put-hubs-id", badge: "PUT" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "List hubs", href: "/guides/hubs/hubs/list-hubs", badge: "GUIDE" },
+    { label: "Update a hub", href: "/guides/hubs/hubs/update-hub", badge: "GUIDE" }
+  ]}
+/>

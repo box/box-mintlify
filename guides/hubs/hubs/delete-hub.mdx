@@ -1,0 +1,59 @@
+---
+title: "Delete a hub"
+description: "Delete a single Box Hub via the API."
+---
+
+import {Link} from "/snippets/Link.jsx";
+import {RelatedLinks} from "/snippets/related-links.jsx";
+
+To delete a Box Hub, call the <Link href="/reference/delete-hubs-id">delete hub</Link> endpoint with the hub ID. The hub and its association with content are removed; the underlying files and folders in Box are not deleted.
+
+## Delete hub
+
+<CodeGroup>
+
+```sh cURL
+curl -i -X DELETE "https://api.box.com/2.0/hubs/HUB_ID" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>" \
+     -H "box-version: 2025.0"
+```
+
+```typescript Node/TypeScript v10
+await client.hubs.deleteHubByIdV2025R0(hubId);
+```
+
+```python Python v10
+client.hubs.delete_hub_by_id_v2025_r0(hub_id)
+```
+
+```csharp .NET v10
+await client.Hubs.DeleteHubByIdV2025R0Async(hubId: hubId);
+```
+
+```swift Swift v10
+try await client.hubs.deleteHubByIdV2025R0(hubId: hubId)
+```
+
+```java Java v10
+client.getHubs().deleteHubByIdV2025R0(hubId);
+```
+
+</CodeGroup>
+
+Replace `HUB_ID` with the actual hub ID. A successful response has no response body (HTTP 204). The caller must have permission to delete the hub.
+
+<RelatedLinks
+  title="RELATED APIS"
+  items={[
+    { label: "Delete hub", href: "/reference/delete-hubs-id", badge: "DELETE" },
+    { label: "Get hub by ID", href: "/reference/get-hubs-id", badge: "GET" },
+    { label: "List hubs", href: "/reference/get-hubs", badge: "GET" }
+  ]}
+/>
+<RelatedLinks
+  title="RELATED GUIDES"
+  items={[
+    { label: "Box Hubs overview", href: "/guides/hubs", badge: "GUIDE" },
+    { label: "Create a hub", href: "/guides/hubs/hubs/create-hub", badge: "GUIDE" }
+  ]}
+/>
