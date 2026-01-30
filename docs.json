@@ -708,6 +708,17 @@
                         ]
                       },
                       {
+                        "group": "Metadata taxonomies",
+                        "pages": [
+                          "guides/metadata/taxonomies/index",
+                          "guides/metadata/taxonomies/create",
+                          "guides/metadata/taxonomies/list",
+                          "guides/metadata/taxonomies/get",
+                          "guides/metadata/taxonomies/update",
+                          "guides/metadata/taxonomies/remove"
+                        ]
+                      },
+                      {
                         "group": "Metadata fields",
                         "pages": [
                           "guides/metadata/fields/index",
