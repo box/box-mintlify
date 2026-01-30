@@ -13,7 +13,7 @@ Remove metadata taxonomies and their structural components. Taxonomy deletion is
 
 Deletes an entire metadata taxonomy and all associated levels and nodes. This action cannot be undone. The taxonomy and its nodes will no longer be accessible for metadata templates or other API calls. 
 
-Call the `DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}` API endpoint.
+Call the <Link href="/reference/delete-metadata-taxonomies-id-id">`DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -55,7 +55,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 Deletes a specific node within a taxonomy. If the node has child nodes, you must delete those children first before you can remove the parent node. This endpoint does not cascade; it only deletes individual nodes that have no children under them. 
 
-Call the `DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint.
+Call the <Link href="/reference/delete-metadata-taxonomies-id-id-nodes-id">`DELETE /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -102,7 +102,7 @@ To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href=
 
 Removes the last level of a taxonomy’s hierarchy. Levels are evaluated in hierarchical order, and this call trims only the deepest level. 
 
-Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:trim` API endpoint.
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-levels:trim">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:trim`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL

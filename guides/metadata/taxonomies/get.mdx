@@ -13,7 +13,7 @@ Information about metadata taxonomies can be retrieved using the `namespace`, `t
 
 Retrieve a list of nodes defined within a metadata taxonomy. Nodes are the hierarchical data available in your taxonomy. 
 
-To list all nodes, call the `GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes` API endpoint.
+To list all nodes, call the <Link href="/reference/get-metadata-taxonomies-id-id-nodes">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes`</Link> API endpoint.
 
 <CodeGroup>
 ```sh cURL
@@ -55,7 +55,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 Get the full definition of a specific taxonomy including how many levels it has, and what the display names and descriptions of those levels are. 
 
-To get information by taxonomy key, call the  `GET /metadata_taxonomies/{namespace}/{taxonomy_key}` API endpoint. 
+To get information by taxonomy key, call the <Link href="/reference/get-metadata-taxonomies-id-id">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}`</Link> API endpoint. 
 
 <CodeGroup>
 ```sh cURL
@@ -100,7 +100,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 You can fetch a specific node and its metadata using its ID. Nodes are the hierarchical data available in your taxonomy.  
 
-To get a node, call the `GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint. 
+To get a node, call the <Link href="/reference/get-metadata-taxonomies-id-id-nodes-id">`GET /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}`</Link> API endpoint. 
 
 <CodeGroup>
 ```sh cURL
@@ -143,24 +143,11 @@ await client.MetadataTaxonomies.GetMetadataTaxonomyNodeByIdAsync(namespaceParam:
 To get the `namespace`, `taxonomy_key`, and `node_id` of a taxonomy, <Link href="/guides/metadata/templates/list">list all metadata templates</Link> or <Link href="/guides/metadata/instances/list">list all instances on an item</Link>. 
 </Info>
 
-
-<RelatedLinks
-
-title="RELATED APIS"
-
-items={[
-
- { label: "Get metadata taxonomies for namespace", href: "https://developer.box.com/reference/get-metadata-taxonomies-id", badge: "GET" },
-
- ]}
-
-/>
-
 ## List metadata taxonomy field options
 
 Retrieve the nodes that serve as selectable options for a taxonomy field, as defined inside a metadata template. 
 
-To list possible values for taxonomy nodes in a template, call the `GET /metadata_templates/{namespace}/{template_key}/fields/{field_key}/options` API endpoint.  
+To list possible values for taxonomy nodes in a template, call the <Link href="/reference/get-metadata-templates-id-id-fields-id-options">`GET /metadata_templates/{namespace}/{template_key}/fields/{field_key}/options`</Link> API endpoint.  
 
 <CodeGroup>
 ```sh cURL

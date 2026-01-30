@@ -13,7 +13,7 @@ Metadata taxonomies can be created using the taxonomy’s `displayName` and `nam
 
 Create a new taxonomy that can be referenced by metadata templates.
 
-Call the `POST /metadata_taxonomies` API endpoint with the taxonomy’s `displayName` and `namespace`. Box will optionally generate a key if you don’t specify one. 
+Call the <Link href="/reference/post-metadata-taxonomies">`POST /metadata_taxonomies`</Link> API endpoint with the taxonomy’s `displayName` and `namespace`. Box will optionally generate a key if you didn't specify one. 
 
 <CodeGroup>
 ```sh cURL
@@ -68,7 +68,7 @@ await client.MetadataTaxonomies.CreateMetadataTaxonomyAsync(requestBody: new Cre
 
 Before you can add nodes, you must define the hierarchy of your taxonomy by creating one or more levels. Each level represents a hierarchical tier (e.g., `Country`, `State`, `City`). 
 
-Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels` API endpoint with the taxonomy’s `displayName`, `description` and `level`.    
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-levels">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels`</Link> API endpoint with the taxonomy’s `displayName`, `description` and `level`.    
 
 <CodeGroup>
 ```sh cURL
@@ -155,7 +155,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 After defining the initial levels, you can add another level to the end of the existing hierarchy (e.g., adding “City” after “Country”). 
 
-Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append` API endpoint with the taxonomy’s `displayName` and `description`.
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-levels:append">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/levels:append`</Link> API endpoint with the taxonomy’s `displayName` and `description`.
 
 <CodeGroup>
 ```sh cURL
@@ -215,7 +215,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 With the hierarchy defined you can begin adding nodes, which are the data in the taxonomy hierarchy. 
 
-Call the `POST /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes` API endpoint with the taxonomy’s `displayName`, `level`, and `parentId`. 
+Call the <Link href="/reference/post-metadata-taxonomies-id-id-nodes">`POST /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes`</Link> API endpoint with the taxonomy’s `displayName`, `level`, and `parentId`. 
 
 <CodeGroup>
 ```sh cURL

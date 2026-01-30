@@ -13,7 +13,7 @@ Update metadata taxonomy elements such as `displayNames`, `descriptions`, and ot
 
 Use this endpoint to update top-level attributes of an existing taxonomy, such as changing its `displayName`. 
 
-Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}` API endpoint. 
+Call the <Link href="/reference/patch-metadata-taxonomies-id-id">`PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}`</Link> API endpoint. 
 
 <CodeGroup>
 ```sh cURL
@@ -66,7 +66,7 @@ To get the `namespace` and `taxonomy_key` of a taxonomy, <Link href="/guides/met
 
 Update the display name and description of an existing level within a taxonomy. The level index identifies which level to update. 
 
-Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/levels/{level_index}` API endpoint with the `displayName` and `description`. 
+Call the <Link href="/reference/patch-metadata-taxonomies-id-id-levels-id">`PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/levels/{level_index}`</Link> API endpoint with the `displayName` and `description`. 
 
 <CodeGroup>
 ```sh cURL
@@ -131,7 +131,7 @@ To get the `namespace`, `taxonomy_key`, and `level_index` of a taxonomy, <Link h
 
 Use this endpoint to modify the display name or relationship attributes of an existing node in a taxonomy - for example, renaming **Paris** to **Paris City**. 
 
-Call the `PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}` API endpoint with the taxonomy’s `displayName`.
+Call the <Link href="/reference/patch-metadata-taxonomies-id-id-nodes-id">`PATCH /metadata_taxonomies/{namespace}/{taxonomy_key}/nodes/{node_id}`</Link> API endpoint with the taxonomy’s `displayName`.
 
 <CodeGroup>
 ```sh cURL
