@@ -98,15 +98,35 @@ client.getFiles().getFileById(
 
 ## Response example
 
-<div style={{
-  backgroundColor: "#f3f4f6",
-  borderLeft: "4px solid #9ca3af",
-  padding: "1rem",
-  borderRadius: "6px",
-  margin: "1.5rem 0"
-}}>
-  ```{ "type": "file", "id": "{file_id}", "etag": "1", "name": "test.docx", "representations": { "entries": [ { "representation": "markdown", "properties": {}, "info": { "url": "https://api.box.com/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}" }, "status": { "state": "none" }, "content": { "url_template": "https://dl.boxcloud.com/api/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}/content/{+asset_path}" } } ] } }```
-  </div>
+<Note>
+
+```json
+{
+  "type": "file",
+  "id": "{file_id}",
+  "etag": "1",
+  "name": "test.docx",
+  "representations": {
+    "entries": [
+      {
+        "representation": "markdown",
+        "properties": {},
+        "info": {
+          "url": "https://api.box.com/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}"
+        },
+        "status": {
+          "state": "none"
+        },
+        "content": {
+          "url_template": "https://dl.boxcloud.com/api/2.0/internal_files/{file_id}/versions/{version_id}/representations/{representation}/content/{+asset_path}"
+        }
+      }
+    ]
+  }
+}
+```
+
+</Note>
 
 ### Trigger Markdown generation 
 
