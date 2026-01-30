@@ -1,73 +1,28 @@
 ---
-title: "アクセストークンの取得"
-alias_paths: []
-category_id: tooling
-subcategory_id: tooling/postman
-is_index: false
-id: tooling/postman/access-token
-type: guide
-total_steps: 4
-sibling_id: tooling/postman
-parent_id: tooling/postman
-next_page_id: tooling/postman/refresh
-previous_page_id: tooling/postman/make-api-call
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/access-token.md
+title: アクセストークンの取得
+
 fullyTranslated: true
 ---
 
-import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
+import {Link} from "/snippets/Link.jsx";
 
-すべてのAPIコールでは、認証済みユーザーの本人確認のために**アクセストークン**が要求されます。セキュリティ上の理由により、アクセストークンは60分後に期限切れになります。[OAuth 2.0][oauth]を使用している場合は、提供された[更新トークン][rt]を使用して、新しいアクセストークンを取得してください。サーバー認証、[JWT][jwt]、または[クライアント資格情報許可][ccg]を使用している場合は、[トークンエンドポイント][token]に対してAPIコールを実行して、新しいアクセストークンをリクエストしてください。
+すべてのAPIコールでは、認証済みユーザーの本人確認のために**アクセストークン**が要求されます。セキュリティ上の理由により、アクセストークンは60分後に期限切れになります。<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>を使用している場合は、提供された<Link href="/guides/authentication/tokens/refresh/">更新トークン</Link>を使用して、新しいアクセストークンを取得してください。サーバー認証、<Link href="/guides/authentication/jwt">JWT</Link>、または<Link href="/guides/authentication/client-credentials">クライアント資格情報許可</Link>を使用している場合は、<Link href="/reference/post-oauth2-token">トークンエンドポイント</Link>に対してAPIコールを実行して、新しいアクセストークンをリクエストしてください。
 
 ## OAuth 2.0
 
-アプリケーションが認証に[OAuth 2.0][oauth]を利用している場合は、以下の手順に従って[Postman][postman]を使用してトークンのペアを取得できます。
+アプリケーションが認証に<Link href="/guides/authentication/oauth2">OAuth 2.0</Link>を利用している場合は、以下の手順に従って<Link href="/guides/tooling/postman/install">Postman</Link>を使用してトークンのペアを取得できます。
 
 <Frame border center shadow>
-
-![OAuth2.0のトークンリクエスト](/images/guides/tooling/postman/oauth-postman.png)
-
+  ![OAuth2.0のトークンリクエスト](/images/guides/tooling/postman/oauth-postman.png)
 </Frame>
 
 * `grant_type`は常に`authorization_code`です。
 * `client_id`と`client_secret`の値は、[開発者コンソール][dc]でアプリケーションの \[**構成**] タブから取得できます。
 
-`code`の値を取得するには、ブラウザで[承認URL][authurl]を作成してアクセスします。OAuth 2.0のフローを完了し、構成済みのリダイレクトURLにリダイレクトすると、そのURLの末尾に承認コードがあります。この承認コードの有効期間は30秒間のみであることに注意してください。つまり、有効期限が切れる前に、Postmanの指定フィールドに承認コードを入力し、\[**Send (送信)**] をクリックする必要があります。そのため、コードを取得したらすぐにAPIコールを送信できるように、他の値を入力しておくことをお勧めします。
+`code`の値を取得するには、ブラウザで<Link href="/guides/authentication/oauth2/without-sdk">承認URL</Link>を作成してアクセスします。OAuth 2.0のフローを完了し、構成済みのリダイレクトURLにリダイレクトすると、そのURLの末尾に承認コードがあります。この承認コードの有効期間は30秒間のみであることに注意してください。つまり、有効期限が切れる前に、Postmanの指定フィールドに承認コードを入力し、\[**Send (送信)**] をクリックする必要があります。そのため、コードを取得したらすぐにAPIコールを送信できるように、他の値を入力しておくことをお勧めします。
 
 <Frame border center shadow>
-
-![OAuth2.0のトークンリクエスト](/images/guides/tooling/postman/oauth2-access-token.gif)
-
+  ![OAuth2.0のトークンリクエスト](/images/guides/tooling/postman/oauth2-access-token.gif)
 </Frame>
 
-[oauth]: /ja/guides/authentication/oauth2
-
 [dc]: https://app.box.com/developers/console
-
-[authurl]: /ja/guides/authentication/oauth2/without-sdk
-
-[postman]: /ja/guides/tooling/postman/install
-
-[jwt]: /ja/guides/authentication/jwt
-
-[ccg]: /ja/guides/authentication/client-credentials
-
-[token]: /ja/reference/post-oauth2-token
-
-[rt]: /ja/guides/authentication/tokens/refresh/
-
-<RelatedLinks
-  title="関連するAPI"
-  items={[
-    { label: "Request access token", href: "/ja/reference/post-oauth2-token", badge: "POST" }
-  ]}
-/>
-<RelatedLinks
-  title="関連するガイド"
-  items={[
-    { label: "トークン", href: "/ja/guides/authentication/tokens/index", badge: "ガイド" },
-    { label: "トークンの更新", href: "/ja/guides/authentication/tokens/refresh", badge: "ガイド" },
-    { label: "OAuth 2.0認証", href: "/ja/guides/authentication/oauth2/index", badge: "ガイド" }
-  ]}
-/>

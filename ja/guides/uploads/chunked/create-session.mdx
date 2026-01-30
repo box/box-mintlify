@@ -1,43 +1,29 @@
 ---
-title: "アップロードセッションの作成"
-related_pages: []
-alias_paths: []
-category_id: uploads
-subcategory_id: uploads/chunked
-is_index: false
-id: uploads/chunked/create-session
-type: guide
-total_steps: 5
-sibling_id: uploads/chunked
-parent_id: uploads/chunked
-next_page_id: uploads/chunked/with-sdks
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/create-session.md
+related_pages: {}
+title: アップロードセッションの作成
+
 fullyTranslated: true
 ---
 
+import {Link} from "/snippets/Link.jsx";
+
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
-アップロードセッションを作成するには、目的の`file_name`とそのファイルを配置する`folder_id`、およびアップロードするファイルの`file_size`を指定して[`POST /files/upload_sessions`][createsession] APIを呼び出します。
+アップロードセッションを作成するには、目的の`file_name`とそのファイルを配置する`folder_id`、およびアップロードするファイルの`file_size`を指定して<Link href="/reference/post_files_upload_sessions">`POST /files/upload_sessions`</Link> APIを呼び出します。
 
-{/* <Samples sample="post_files_upload_sessions">
+{/* <Samples sample='post_files_upload_sessions' /> */}
 
-</Samples> */}
+既存ファイルの新しいバージョン用のセッションを作成するには、代わりに<Link href="/reference/post_files_id_upload_sessions">`POST /files/:id/upload_sessions`</Link> APIを呼び出します。この場合、`file_name`と`folder_id`は、プロセスでファイルの名前変更または移動を行う場合にのみ必要となります。
 
-既存ファイルの新しいバージョン用のセッションを作成するには、代わりに[`POST /files/:id/upload_sessions`][createsessionversion] APIを呼び出します。この場合、`file_name`と`folder_id`は、プロセスでファイルの名前変更または移動を行う場合にのみ必要となります。
-
-{/* <Samples sample="post_files_id_upload_sessions">
-
-</Samples> */}
+{/* <Samples sample='post_files_id_upload_sessions' /> */}
 
 ## 事前チェック
 
-アップロードセッションの作成によって[事前チェック][check]も実行されるため、分割アップロードを行う際に個別に行う必要はありません。
+アップロードセッションの作成によって<Link href="/guides/uploads/check">事前チェック</Link>も実行されるため、分割アップロードを行う際に個別に行う必要はありません。
 
 ## レスポンス
 
-セッションが正常に作成されると、レスポンスには、セッションID、パーツ数、パーツサイズ、および使用する関連する次のAPIエンドポイントへのリンクを含む[アップロードセッション][uploadsession]が含まれます。
+セッションが正常に作成されると、レスポンスには、セッションID、パーツ数、パーツサイズ、および使用する関連する次のAPIエンドポイントへのリンクを含む<Link href="/reference/resources/upload_session">アップロードセッション</Link>が含まれます。
 
 ```json
 {
@@ -56,30 +42,22 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
     "log_event": "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/log"
   }
 }
-
 ```
 
 アップロードセッションは、個々のパーツをアップロードするときに使用するパーツのサイズを定義します。
 
-[createsession]: /ja/reference/post-files-upload-sessions
-
-[createsessionversion]: /ja/reference/post-files-id-upload-sessions
-
-[check]: /ja/guides/uploads/check
-
-[uploadsession]: /ja/reference/resources/upload_session
-
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Create upload session", href: "/ja/reference/post-files-upload-sessions", badge: "POST" },
-    { label: "Create upload session for existing file", href: "/ja/reference/post-files-id-upload-sessions", badge: "POST" }
-  ]}
+  { label: "Create upload session", href: "/reference/post-files-upload-sessions", badge: "POST" },
+  { label: "Create upload session for existing file", href: "/reference/post-files-id-upload-sessions", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "パーツのアップロード", href: "/ja/guides/uploads/chunked/upload-part", badge: "ガイド" },
-    { label: "アップロードセッションのコミット", href: "/ja/guides/uploads/chunked/commit-session", badge: "ガイド" }
-  ]}
+  { label: "Upload Part", href: "/guides/uploads/chunked/upload-part", badge: "GUIDE" },
+  { label: "Commit Upload Session", href: "/guides/uploads/chunked/commit-session", badge: "GUIDE" }
+]}
 />
