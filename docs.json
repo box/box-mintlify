@@ -6494,6 +6494,4374 @@
     {
       "source": "/ja/docs/developer-newsletter",
       "destination": "/ja/newsletter"
+    },
+    {
+      "source": "/reference/delete_ai_agents_id",
+      "destination": "/reference/delete-ai-agents-id"
+    },
+    {
+      "source": "/reference/delete_collaboration_whitelist_entries_id",
+      "destination": "/reference/delete-collaboration-whitelist-entries-id"
+    },
+    {
+      "source": "/reference/delete_collaboration_whitelist_exempt_targets_id",
+      "destination": "/reference/delete-collaboration-whitelist-exempt-targets-id"
+    },
+    {
+      "source": "/reference/delete_collaborations_id",
+      "destination": "/reference/delete-collaborations-id"
+    },
+    {
+      "source": "/reference/delete_comments_id",
+      "destination": "/reference/delete-comments-id"
+    },
+    {
+      "source": "/reference/delete_device_pinners_id",
+      "destination": "/reference/delete-device-pinners-id"
+    },
+    {
+      "source": "/reference/delete_file_requests_id",
+      "destination": "/reference/delete-file-requests-id"
+    },
+    {
+      "source": "/reference/delete_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/delete_files_id_metadata_global_boxSkillsCards",
+      "destination": "/reference/delete-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/reference/delete_files_id_metadata_id_id",
+      "destination": "/reference/delete-files-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/delete_files_id_trash",
+      "destination": "/reference/delete-files-id-trash"
+    },
+    {
+      "source": "/reference/delete_files_id_versions_id",
+      "destination": "/reference/delete-files-id-versions-id"
+    },
+    {
+      "source": "/reference/delete_files_id_watermark",
+      "destination": "/reference/delete-files-id-watermark"
+    },
+    {
+      "source": "/reference/delete_files_id",
+      "destination": "/reference/delete-files-id"
+    },
+    {
+      "source": "/reference/delete_files_upload_sessions_id",
+      "destination": "/reference/delete-files-upload-sessions-id"
+    },
+    {
+      "source": "/reference/delete_folder_locks_id",
+      "destination": "/reference/delete-folder-locks-id"
+    },
+    {
+      "source": "/reference/delete_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/delete-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/delete_folders_id_metadata_id_id",
+      "destination": "/reference/delete-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/delete_folders_id_trash",
+      "destination": "/reference/delete-folders-id-trash"
+    },
+    {
+      "source": "/reference/delete_folders_id_watermark",
+      "destination": "/reference/delete-folders-id-watermark"
+    },
+    {
+      "source": "/reference/delete_folders_id",
+      "destination": "/reference/delete-folders-id"
+    },
+    {
+      "source": "/reference/delete_group_memberships_id",
+      "destination": "/reference/delete-group-memberships-id"
+    },
+    {
+      "source": "/reference/delete_groups_id",
+      "destination": "/reference/delete-groups-id"
+    },
+    {
+      "source": "/reference/delete_integration_mappings_slack_id",
+      "destination": "/reference/delete-integration-mappings-slack-id"
+    },
+    {
+      "source": "/reference/delete_integration_mappings_teams_id",
+      "destination": "/reference/delete-integration-mappings-teams-id"
+    },
+    {
+      "source": "/reference/delete_legal_hold_policies_id",
+      "destination": "/reference/delete-legal-hold-policies-id"
+    },
+    {
+      "source": "/reference/delete_legal_hold_policy_assignments_id",
+      "destination": "/reference/delete-legal-hold-policy-assignments-id"
+    },
+    {
+      "source": "/reference/delete_metadata_cascade_policies_id",
+      "destination": "/reference/delete-metadata-cascade-policies-id"
+    },
+    {
+      "source": "/reference/delete_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/reference/delete-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/reference/delete_metadata_taxonomies_id_id",
+      "destination": "/reference/delete-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/reference/delete_metadata_templates_id_id_schema",
+      "destination": "/reference/delete-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/reference/delete_retention_policies_id",
+      "destination": "/reference/delete-retention-policies-id"
+    },
+    {
+      "source": "/reference/delete_retention_policy_assignments_id",
+      "destination": "/reference/delete-retention-policy-assignments-id"
+    },
+    {
+      "source": "/reference/delete_shield_information_barrier_segment_members_id",
+      "destination": "/reference/delete-shield-information-barrier-segment-members-id"
+    },
+    {
+      "source": "/reference/delete_shield_information_barrier_segment_restrictions_id",
+      "destination": "/reference/delete-shield-information-barrier-segment-restrictions-id"
+    },
+    {
+      "source": "/reference/delete_shield_information_barrier_segments_id",
+      "destination": "/reference/delete-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/reference/delete_storage_policy_assignments_id",
+      "destination": "/reference/delete-storage-policy-assignments-id"
+    },
+    {
+      "source": "/reference/delete_task_assignments_id",
+      "destination": "/reference/delete-task-assignments-id"
+    },
+    {
+      "source": "/reference/delete_tasks_id",
+      "destination": "/reference/delete-tasks-id"
+    },
+    {
+      "source": "/reference/delete_users_id_avatar",
+      "destination": "/reference/delete-users-id-avatar"
+    },
+    {
+      "source": "/reference/delete_users_id_email_aliases_id",
+      "destination": "/reference/delete-users-id-email-aliases-id"
+    },
+    {
+      "source": "/reference/delete_users_id",
+      "destination": "/reference/delete-users-id"
+    },
+    {
+      "source": "/reference/delete_web_links_id_trash",
+      "destination": "/reference/delete-web-links-id-trash"
+    },
+    {
+      "source": "/reference/delete_web_links_id",
+      "destination": "/reference/delete-web-links-id"
+    },
+    {
+      "source": "/reference/delete_webhooks_id",
+      "destination": "/reference/delete-webhooks-id"
+    },
+    {
+      "source": "/reference/get_ai_agent_default",
+      "destination": "/reference/get-ai-agent-default"
+    },
+    {
+      "source": "/reference/get_ai_agents_id",
+      "destination": "/reference/get-ai-agents-id"
+    },
+    {
+      "source": "/reference/get_ai_agents",
+      "destination": "/reference/get-ai-agents"
+    },
+    {
+      "source": "/reference/get_authorize",
+      "destination": "/reference/get-authorize"
+    },
+    {
+      "source": "/reference/get_collaboration_whitelist_entries_id",
+      "destination": "/reference/get-collaboration-whitelist-entries-id"
+    },
+    {
+      "source": "/reference/get_collaboration_whitelist_entries",
+      "destination": "/reference/get-collaboration-whitelist-entries"
+    },
+    {
+      "source": "/reference/get_collaboration_whitelist_exempt_targets_id",
+      "destination": "/reference/get-collaboration-whitelist-exempt-targets-id"
+    },
+    {
+      "source": "/reference/get_collaboration_whitelist_exempt_targets",
+      "destination": "/reference/get-collaboration-whitelist-exempt-targets"
+    },
+    {
+      "source": "/reference/get_collaborations_id",
+      "destination": "/reference/get-collaborations-id"
+    },
+    {
+      "source": "/reference/get_collaborations",
+      "destination": "/reference/get-collaborations"
+    },
+    {
+      "source": "/reference/get_collections_id_items",
+      "destination": "/reference/get-collections-id-items"
+    },
+    {
+      "source": "/reference/get_collections_id",
+      "destination": "/reference/get-collections-id"
+    },
+    {
+      "source": "/reference/get_collections",
+      "destination": "/reference/get-collections"
+    },
+    {
+      "source": "/reference/get_comments_id",
+      "destination": "/reference/get-comments-id"
+    },
+    {
+      "source": "/reference/get_device_pinners_id",
+      "destination": "/reference/get-device-pinners-id"
+    },
+    {
+      "source": "/reference/get_enterprises_id_device_pinners",
+      "destination": "/reference/get-enterprises-id-device-pinners"
+    },
+    {
+      "source": "/reference/get_events",
+      "destination": "/reference/get-events"
+    },
+    {
+      "source": "/reference/get_file_requests_id",
+      "destination": "/reference/get-file-requests-id"
+    },
+    {
+      "source": "/reference/get_file_version_legal_holds_id",
+      "destination": "/reference/get-file-version-legal-holds-id"
+    },
+    {
+      "source": "/reference/get_file_version_legal_holds",
+      "destination": "/reference/get-file-version-legal-holds"
+    },
+    {
+      "source": "/reference/get_file_version_retentions_id",
+      "destination": "/reference/get-file-version-retentions-id"
+    },
+    {
+      "source": "/reference/get_file_version_retentions",
+      "destination": "/reference/get-file-version-retentions"
+    },
+    {
+      "source": "/reference/get_files_id__get_shared_link",
+      "destination": "/reference/get-files-id--get-shared-link"
+    },
+    {
+      "source": "/reference/get_files_id_app_item_associations",
+      "destination": "/reference/get-files-id-app-item-associations"
+    },
+    {
+      "source": "/reference/get_files_id_collaborations",
+      "destination": "/reference/get-files-id-collaborations"
+    },
+    {
+      "source": "/reference/get_files_id_comments",
+      "destination": "/reference/get-files-id-comments"
+    },
+    {
+      "source": "/reference/get_files_id_content",
+      "destination": "/reference/get-files-id-content"
+    },
+    {
+      "source": "/reference/get_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/get-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/get_files_id_metadata_global_boxSkillsCards",
+      "destination": "/reference/get-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/reference/get_files_id_metadata_id_id",
+      "destination": "/reference/get-files-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/get_files_id_metadata",
+      "destination": "/reference/get-files-id-metadata"
+    },
+    {
+      "source": "/reference/get_files_id_tasks",
+      "destination": "/reference/get-files-id-tasks"
+    },
+    {
+      "source": "/reference/get_files_id_thumbnail_id",
+      "destination": "/reference/get-files-id-thumbnail-id"
+    },
+    {
+      "source": "/reference/get_files_id_trash",
+      "destination": "/reference/get-files-id-trash"
+    },
+    {
+      "source": "/reference/get_files_id_versions_id",
+      "destination": "/reference/get-files-id-versions-id"
+    },
+    {
+      "source": "/reference/get_files_id_versions",
+      "destination": "/reference/get-files-id-versions"
+    },
+    {
+      "source": "/reference/get_files_id_watermark",
+      "destination": "/reference/get-files-id-watermark"
+    },
+    {
+      "source": "/reference/get_files_id",
+      "destination": "/reference/get-files-id"
+    },
+    {
+      "source": "/reference/get_files_upload_sessions_id_parts",
+      "destination": "/reference/get-files-upload-sessions-id-parts"
+    },
+    {
+      "source": "/reference/get_files_upload_sessions_id",
+      "destination": "/reference/get-files-upload-sessions-id"
+    },
+    {
+      "source": "/reference/get_folder_locks",
+      "destination": "/reference/get-folder-locks"
+    },
+    {
+      "source": "/reference/get_folders_id__get_shared_link",
+      "destination": "/reference/get-folders-id--get-shared-link"
+    },
+    {
+      "source": "/reference/get_folders_id_app_item_associations",
+      "destination": "/reference/get-folders-id-app-item-associations"
+    },
+    {
+      "source": "/reference/get_folders_id_collaborations",
+      "destination": "/reference/get-folders-id-collaborations"
+    },
+    {
+      "source": "/reference/get_folders_id_items",
+      "destination": "/reference/get-folders-id-items"
+    },
+    {
+      "source": "/reference/get_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/get-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/get_folders_id_metadata_id_id",
+      "destination": "/reference/get-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/get_folders_id_metadata",
+      "destination": "/reference/get-folders-id-metadata"
+    },
+    {
+      "source": "/reference/get_folders_id_trash",
+      "destination": "/reference/get-folders-id-trash"
+    },
+    {
+      "source": "/reference/get_folders_id_watermark",
+      "destination": "/reference/get-folders-id-watermark"
+    },
+    {
+      "source": "/reference/get_folders_id",
+      "destination": "/reference/get-folders-id"
+    },
+    {
+      "source": "/reference/get_folders_trash_items",
+      "destination": "/reference/get-folders-trash-items"
+    },
+    {
+      "source": "/reference/get_group_memberships_id",
+      "destination": "/reference/get-group-memberships-id"
+    },
+    {
+      "source": "/reference/get_groups_id_collaborations",
+      "destination": "/reference/get-groups-id-collaborations"
+    },
+    {
+      "source": "/reference/get_groups_id_memberships",
+      "destination": "/reference/get-groups-id-memberships"
+    },
+    {
+      "source": "/reference/get_groups_id",
+      "destination": "/reference/get-groups-id"
+    },
+    {
+      "source": "/reference/get_groups",
+      "destination": "/reference/get-groups"
+    },
+    {
+      "source": "/reference/get_integration_mappings_slack",
+      "destination": "/reference/get-integration-mappings-slack"
+    },
+    {
+      "source": "/reference/get_integration_mappings_teams",
+      "destination": "/reference/get-integration-mappings-teams"
+    },
+    {
+      "source": "/reference/get_invites_id",
+      "destination": "/reference/get-invites-id"
+    },
+    {
+      "source": "/reference/get_legal_hold_policies_id",
+      "destination": "/reference/get-legal-hold-policies-id"
+    },
+    {
+      "source": "/reference/get_legal_hold_policies",
+      "destination": "/reference/get-legal-hold-policies"
+    },
+    {
+      "source": "/reference/get_legal_hold_policy_assignments_id_file_versions_on_hold",
+      "destination": "/reference/get-legal-hold-policy-assignments-id-file-versions-on-hold"
+    },
+    {
+      "source": "/reference/get_legal_hold_policy_assignments_id_files_on_hold",
+      "destination": "/reference/get-legal-hold-policy-assignments-id-files-on-hold"
+    },
+    {
+      "source": "/reference/get_legal_hold_policy_assignments_id",
+      "destination": "/reference/get-legal-hold-policy-assignments-id"
+    },
+    {
+      "source": "/reference/get_legal_hold_policy_assignments",
+      "destination": "/reference/get-legal-hold-policy-assignments"
+    },
+    {
+      "source": "/reference/get_metadata_cascade_policies_id",
+      "destination": "/reference/get-metadata-cascade-policies-id"
+    },
+    {
+      "source": "/reference/get_metadata_cascade_policies",
+      "destination": "/reference/get-metadata-cascade-policies"
+    },
+    {
+      "source": "/reference/get_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/reference/get-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/reference/get_metadata_taxonomies_id_id_nodes",
+      "destination": "/reference/get-metadata-taxonomies-id-id-nodes"
+    },
+    {
+      "source": "/reference/get_metadata_taxonomies_id_id",
+      "destination": "/reference/get-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/reference/get_metadata_taxonomies_id",
+      "destination": "/reference/get-metadata-taxonomies-id"
+    },
+    {
+      "source": "/reference/get_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema",
+      "destination": "/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema"
+    },
+    {
+      "source": "/reference/get_metadata_templates_enterprise",
+      "destination": "/reference/get-metadata-templates-enterprise"
+    },
+    {
+      "source": "/reference/get_metadata_templates_global",
+      "destination": "/reference/get-metadata-templates-global"
+    },
+    {
+      "source": "/reference/get_metadata_templates_id_id_fields_id_options",
+      "destination": "/reference/get-metadata-templates-id-id-fields-id-options"
+    },
+    {
+      "source": "/reference/get_metadata_templates_id_id_schema",
+      "destination": "/reference/get-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/reference/get_metadata_templates_id",
+      "destination": "/reference/get-metadata-templates-id"
+    },
+    {
+      "source": "/reference/get_metadata_templates",
+      "destination": "/reference/get-metadata-templates"
+    },
+    {
+      "source": "/reference/get_recent_items",
+      "destination": "/reference/get-recent-items"
+    },
+    {
+      "source": "/reference/get_retention_policies_id_assignments",
+      "destination": "/reference/get-retention-policies-id-assignments"
+    },
+    {
+      "source": "/reference/get_retention_policies_id",
+      "destination": "/reference/get-retention-policies-id"
+    },
+    {
+      "source": "/reference/get_retention_policies",
+      "destination": "/reference/get-retention-policies"
+    },
+    {
+      "source": "/reference/get_retention_policy_assignments_id_file_versions_under_retention",
+      "destination": "/reference/get-retention-policy-assignments-id-file-versions-under-retention"
+    },
+    {
+      "source": "/reference/get_retention_policy_assignments_id_files_under_retention",
+      "destination": "/reference/get-retention-policy-assignments-id-files-under-retention"
+    },
+    {
+      "source": "/reference/get_retention_policy_assignments_id",
+      "destination": "/reference/get-retention-policy-assignments-id"
+    },
+    {
+      "source": "/reference/get_search",
+      "destination": "/reference/get-search"
+    },
+    {
+      "source": "/reference/get_shared_items__app_items",
+      "destination": "/reference/get-shared-items--app-items"
+    },
+    {
+      "source": "/reference/get_shared_items__folders",
+      "destination": "/reference/get-shared-items--folders"
+    },
+    {
+      "source": "/reference/get_shared_items__web_links",
+      "destination": "/reference/get-shared-items--web-links"
+    },
+    {
+      "source": "/reference/get_shared_items",
+      "destination": "/reference/get-shared-items"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_reports_id",
+      "destination": "/reference/get-shield-information-barrier-reports-id"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_reports",
+      "destination": "/reference/get-shield-information-barrier-reports"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segment_members_id",
+      "destination": "/reference/get-shield-information-barrier-segment-members-id"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segment_members",
+      "destination": "/reference/get-shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segment_restrictions_id",
+      "destination": "/reference/get-shield-information-barrier-segment-restrictions-id"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segment_restrictions",
+      "destination": "/reference/get-shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segments_id",
+      "destination": "/reference/get-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/reference/get_shield_information_barrier_segments",
+      "destination": "/reference/get-shield-information-barrier-segments"
+    },
+    {
+      "source": "/reference/get_shield_information_barriers_id",
+      "destination": "/reference/get-shield-information-barriers-id"
+    },
+    {
+      "source": "/reference/get_shield_information_barriers",
+      "destination": "/reference/get-shield-information-barriers"
+    },
+    {
+      "source": "/reference/get_sign_requests_id",
+      "destination": "/reference/get-sign-requests-id"
+    },
+    {
+      "source": "/reference/get_sign_requests",
+      "destination": "/reference/get-sign-requests"
+    },
+    {
+      "source": "/reference/get_sign_templates_id",
+      "destination": "/reference/get-sign-templates-id"
+    },
+    {
+      "source": "/reference/get_sign_templates",
+      "destination": "/reference/get-sign-templates"
+    },
+    {
+      "source": "/reference/get_storage_policies_id",
+      "destination": "/reference/get-storage-policies-id"
+    },
+    {
+      "source": "/reference/get_storage_policies",
+      "destination": "/reference/get-storage-policies"
+    },
+    {
+      "source": "/reference/get_storage_policy_assignments_id",
+      "destination": "/reference/get-storage-policy-assignments-id"
+    },
+    {
+      "source": "/reference/get_storage_policy_assignments",
+      "destination": "/reference/get-storage-policy-assignments"
+    },
+    {
+      "source": "/reference/get_task_assignments_id",
+      "destination": "/reference/get-task-assignments-id"
+    },
+    {
+      "source": "/reference/get_tasks_id_assignments",
+      "destination": "/reference/get-tasks-id-assignments"
+    },
+    {
+      "source": "/reference/get_tasks_id",
+      "destination": "/reference/get-tasks-id"
+    },
+    {
+      "source": "/reference/get_terms_of_service_user_statuses",
+      "destination": "/reference/get-terms-of-service-user-statuses"
+    },
+    {
+      "source": "/reference/get_terms_of_services_id",
+      "destination": "/reference/get-terms-of-services-id"
+    },
+    {
+      "source": "/reference/get_terms_of_services",
+      "destination": "/reference/get-terms-of-services"
+    },
+    {
+      "source": "/reference/get_users_id_avatar",
+      "destination": "/reference/get-users-id-avatar"
+    },
+    {
+      "source": "/reference/get_users_id_email_aliases",
+      "destination": "/reference/get-users-id-email-aliases"
+    },
+    {
+      "source": "/reference/get_users_id_memberships",
+      "destination": "/reference/get-users-id-memberships"
+    },
+    {
+      "source": "/reference/get_users_id",
+      "destination": "/reference/get-users-id"
+    },
+    {
+      "source": "/reference/get_users_me",
+      "destination": "/reference/get-users-me"
+    },
+    {
+      "source": "/reference/get_users",
+      "destination": "/reference/get-users"
+    },
+    {
+      "source": "/reference/get_web_links_id__get_shared_link",
+      "destination": "/reference/get-web-links-id--get-shared-link"
+    },
+    {
+      "source": "/reference/get_web_links_id_trash",
+      "destination": "/reference/get-web-links-id-trash"
+    },
+    {
+      "source": "/reference/get_web_links_id",
+      "destination": "/reference/get-web-links-id"
+    },
+    {
+      "source": "/reference/get_webhooks_id",
+      "destination": "/reference/get-webhooks-id"
+    },
+    {
+      "source": "/reference/get_webhooks",
+      "destination": "/reference/get-webhooks"
+    },
+    {
+      "source": "/reference/get_workflows",
+      "destination": "/reference/get-workflows"
+    },
+    {
+      "source": "/reference/get_zip_downloads_id_content",
+      "destination": "/reference/get-zip-downloads-id-content"
+    },
+    {
+      "source": "/reference/get_zip_downloads_id_status",
+      "destination": "/reference/get-zip-downloads-id-status"
+    },
+    {
+      "source": "/reference/options_events",
+      "destination": "/reference/options-events"
+    },
+    {
+      "source": "/reference/options_files_content",
+      "destination": "/reference/options-files-content"
+    },
+    {
+      "source": "/reference/patch_metadata_taxonomies_id_id_levels_id",
+      "destination": "/reference/patch-metadata-taxonomies-id-id-levels-id"
+    },
+    {
+      "source": "/reference/patch_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/reference/patch-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/reference/patch_metadata_taxonomies_id_id",
+      "destination": "/reference/patch-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/reference/post_ai_agents",
+      "destination": "/reference/post-ai-agents"
+    },
+    {
+      "source": "/reference/post_ai_ask",
+      "destination": "/reference/post-ai-ask"
+    },
+    {
+      "source": "/reference/post_ai_extract_structured",
+      "destination": "/reference/post-ai-extract-structured"
+    },
+    {
+      "source": "/reference/post_ai_extract",
+      "destination": "/reference/post-ai-extract"
+    },
+    {
+      "source": "/reference/post_ai_text_gen",
+      "destination": "/reference/post-ai-text-gen"
+    },
+    {
+      "source": "/reference/post_collaboration_whitelist_entries",
+      "destination": "/reference/post-collaboration-whitelist-entries"
+    },
+    {
+      "source": "/reference/post_collaboration_whitelist_exempt_targets",
+      "destination": "/reference/post-collaboration-whitelist-exempt-targets"
+    },
+    {
+      "source": "/reference/post_collaborations",
+      "destination": "/reference/post-collaborations"
+    },
+    {
+      "source": "/reference/post_comments",
+      "destination": "/reference/post-comments"
+    },
+    {
+      "source": "/reference/post_file_requests_id_copy",
+      "destination": "/reference/post-file-requests-id-copy"
+    },
+    {
+      "source": "/reference/post_files_content",
+      "destination": "/reference/post-files-content"
+    },
+    {
+      "source": "/reference/post_files_id_content",
+      "destination": "/reference/post-files-id-content"
+    },
+    {
+      "source": "/reference/post_files_id_copy",
+      "destination": "/reference/post-files-id-copy"
+    },
+    {
+      "source": "/reference/post_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/post_files_id_metadata_global_boxSkillsCards",
+      "destination": "/reference/post-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/reference/post_files_id_metadata_id_id",
+      "destination": "/reference/post-files-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/post_files_id_upload_sessions",
+      "destination": "/reference/post-files-id-upload-sessions"
+    },
+    {
+      "source": "/reference/post_files_id_versions_current",
+      "destination": "/reference/post-files-id-versions-current"
+    },
+    {
+      "source": "/reference/post_files_id",
+      "destination": "/reference/post-files-id"
+    },
+    {
+      "source": "/reference/post_files_upload_sessions_id_commit",
+      "destination": "/reference/post-files-upload-sessions-id-commit"
+    },
+    {
+      "source": "/reference/post_files_upload_sessions",
+      "destination": "/reference/post-files-upload-sessions"
+    },
+    {
+      "source": "/reference/post_folder_locks",
+      "destination": "/reference/post-folder-locks"
+    },
+    {
+      "source": "/reference/post_folders_id_copy",
+      "destination": "/reference/post-folders-id-copy"
+    },
+    {
+      "source": "/reference/post_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/post_folders_id_metadata_id_id",
+      "destination": "/reference/post-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/post_folders_id",
+      "destination": "/reference/post-folders-id"
+    },
+    {
+      "source": "/reference/post_folders",
+      "destination": "/reference/post-folders"
+    },
+    {
+      "source": "/reference/post_group_memberships",
+      "destination": "/reference/post-group-memberships"
+    },
+    {
+      "source": "/reference/post_groups_terminate_sessions",
+      "destination": "/reference/post-groups-terminate-sessions"
+    },
+    {
+      "source": "/reference/post_groups",
+      "destination": "/reference/post-groups"
+    },
+    {
+      "source": "/reference/post_integration_mappings_slack",
+      "destination": "/reference/post-integration-mappings-slack"
+    },
+    {
+      "source": "/reference/post_integration_mappings_teams",
+      "destination": "/reference/post-integration-mappings-teams"
+    },
+    {
+      "source": "/reference/post_invites",
+      "destination": "/reference/post-invites"
+    },
+    {
+      "source": "/reference/post_legal_hold_policies",
+      "destination": "/reference/post-legal-hold-policies"
+    },
+    {
+      "source": "/reference/post_legal_hold_policy_assignments",
+      "destination": "/reference/post-legal-hold-policy-assignments"
+    },
+    {
+      "source": "/reference/post_metadata_cascade_policies_id_apply",
+      "destination": "/reference/post-metadata-cascade-policies-id-apply"
+    },
+    {
+      "source": "/reference/post_metadata_cascade_policies",
+      "destination": "/reference/post-metadata-cascade-policies"
+    },
+    {
+      "source": "/reference/post_metadata_queries_execute_read",
+      "destination": "/reference/post-metadata-queries-execute-read"
+    },
+    {
+      "source": "/reference/post_metadata_taxonomies_id_id_levels",
+      "destination": "/reference/post-metadata-taxonomies-id-id-levels"
+    },
+    {
+      "source": "/reference/post_metadata_taxonomies_id_id_levels:append",
+      "destination": "/reference/post-metadata-taxonomies-id-id-levels:append"
+    },
+    {
+      "source": "/reference/post_metadata_taxonomies_id_id_levels:trim",
+      "destination": "/reference/post-metadata-taxonomies-id-id-levels:trim"
+    },
+    {
+      "source": "/reference/post_metadata_taxonomies_id_id_nodes",
+      "destination": "/reference/post-metadata-taxonomies-id-id-nodes"
+    },
+    {
+      "source": "/reference/post_metadata_taxonomies",
+      "destination": "/reference/post-metadata-taxonomies"
+    },
+    {
+      "source": "/reference/post_metadata_templates_schema__classifications",
+      "destination": "/reference/post-metadata-templates-schema--classifications"
+    },
+    {
+      "source": "/reference/post_metadata_templates_schema",
+      "destination": "/reference/post-metadata-templates-schema"
+    },
+    {
+      "source": "/reference/post_oauth2_revoke",
+      "destination": "/reference/post-oauth2-revoke"
+    },
+    {
+      "source": "/reference/post_oauth2_token__refresh",
+      "destination": "/reference/post-oauth2-token--refresh"
+    },
+    {
+      "source": "/reference/post_oauth2_token",
+      "destination": "/reference/post-oauth2-token"
+    },
+    {
+      "source": "/reference/post_retention_policies",
+      "destination": "/reference/post-retention-policies"
+    },
+    {
+      "source": "/reference/post_retention_policy_assignments",
+      "destination": "/reference/post-retention-policy-assignments"
+    },
+    {
+      "source": "/reference/post_shield_information_barrier_reports",
+      "destination": "/reference/post-shield-information-barrier-reports"
+    },
+    {
+      "source": "/reference/post_shield_information_barrier_segment_members",
+      "destination": "/reference/post-shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/reference/post_shield_information_barrier_segment_restrictions",
+      "destination": "/reference/post-shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/reference/post_shield_information_barrier_segments",
+      "destination": "/reference/post-shield-information-barrier-segments"
+    },
+    {
+      "source": "/reference/post_shield_information_barriers_change_status",
+      "destination": "/reference/post-shield-information-barriers-change-status"
+    },
+    {
+      "source": "/reference/post_shield_information_barriers",
+      "destination": "/reference/post-shield-information-barriers"
+    },
+    {
+      "source": "/reference/post_sign_requests_id_cancel",
+      "destination": "/reference/post-sign-requests-id-cancel"
+    },
+    {
+      "source": "/reference/post_sign_requests_id_resend",
+      "destination": "/reference/post-sign-requests-id-resend"
+    },
+    {
+      "source": "/reference/post_sign_requests",
+      "destination": "/reference/post-sign-requests"
+    },
+    {
+      "source": "/reference/post_storage_policy_assignments",
+      "destination": "/reference/post-storage-policy-assignments"
+    },
+    {
+      "source": "/reference/post_task_assignments",
+      "destination": "/reference/post-task-assignments"
+    },
+    {
+      "source": "/reference/post_tasks",
+      "destination": "/reference/post-tasks"
+    },
+    {
+      "source": "/reference/post_terms_of_service_user_statuses",
+      "destination": "/reference/post-terms-of-service-user-statuses"
+    },
+    {
+      "source": "/reference/post_terms_of_services",
+      "destination": "/reference/post-terms-of-services"
+    },
+    {
+      "source": "/reference/post_users_id_avatar",
+      "destination": "/reference/post-users-id-avatar"
+    },
+    {
+      "source": "/reference/post_users_id_email_aliases",
+      "destination": "/reference/post-users-id-email-aliases"
+    },
+    {
+      "source": "/reference/post_users_terminate_sessions",
+      "destination": "/reference/post-users-terminate-sessions"
+    },
+    {
+      "source": "/reference/post_users",
+      "destination": "/reference/post-users"
+    },
+    {
+      "source": "/reference/post_web_links_id",
+      "destination": "/reference/post-web-links-id"
+    },
+    {
+      "source": "/reference/post_web_links",
+      "destination": "/reference/post-web-links"
+    },
+    {
+      "source": "/reference/post_webhooks",
+      "destination": "/reference/post-webhooks"
+    },
+    {
+      "source": "/reference/post_workflows_id_start",
+      "destination": "/reference/post-workflows-id-start"
+    },
+    {
+      "source": "/reference/post_zip_downloads",
+      "destination": "/reference/post-zip-downloads"
+    },
+    {
+      "source": "/reference/put_ai_agents_id",
+      "destination": "/reference/put-ai-agents-id"
+    },
+    {
+      "source": "/reference/put_collaborations_id",
+      "destination": "/reference/put-collaborations-id"
+    },
+    {
+      "source": "/reference/put_comments_id",
+      "destination": "/reference/put-comments-id"
+    },
+    {
+      "source": "/reference/put_file_requests_id",
+      "destination": "/reference/put-file-requests-id"
+    },
+    {
+      "source": "/reference/put_files_id__add_shared_link",
+      "destination": "/reference/put-files-id--add-shared-link"
+    },
+    {
+      "source": "/reference/put_files_id__remove_shared_link",
+      "destination": "/reference/put-files-id--remove-shared-link"
+    },
+    {
+      "source": "/reference/put_files_id__update_shared_link",
+      "destination": "/reference/put-files-id--update-shared-link"
+    },
+    {
+      "source": "/reference/put_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/put_files_id_metadata_global_boxSkillsCards",
+      "destination": "/reference/put-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/reference/put_files_id_metadata_id_id",
+      "destination": "/reference/put-files-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/put_files_id_versions_id",
+      "destination": "/reference/put-files-id-versions-id"
+    },
+    {
+      "source": "/reference/put_files_id_watermark",
+      "destination": "/reference/put-files-id-watermark"
+    },
+    {
+      "source": "/reference/put_files_id",
+      "destination": "/reference/put-files-id"
+    },
+    {
+      "source": "/reference/put_files_upload_sessions_id",
+      "destination": "/reference/put-files-upload-sessions-id"
+    },
+    {
+      "source": "/reference/put_folders_id__add_shared_link",
+      "destination": "/reference/put-folders-id--add-shared-link"
+    },
+    {
+      "source": "/reference/put_folders_id__remove_shared_link",
+      "destination": "/reference/put-folders-id--remove-shared-link"
+    },
+    {
+      "source": "/reference/put_folders_id__update_shared_link",
+      "destination": "/reference/put-folders-id--update-shared-link"
+    },
+    {
+      "source": "/reference/put_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/reference/put-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/reference/put_folders_id_metadata_id_id",
+      "destination": "/reference/put-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/reference/put_folders_id_watermark",
+      "destination": "/reference/put-folders-id-watermark"
+    },
+    {
+      "source": "/reference/put_folders_id",
+      "destination": "/reference/put-folders-id"
+    },
+    {
+      "source": "/reference/put_group_memberships_id",
+      "destination": "/reference/put-group-memberships-id"
+    },
+    {
+      "source": "/reference/put_groups_id",
+      "destination": "/reference/put-groups-id"
+    },
+    {
+      "source": "/reference/put_integration_mappings_slack_id",
+      "destination": "/reference/put-integration-mappings-slack-id"
+    },
+    {
+      "source": "/reference/put_integration_mappings_teams_id",
+      "destination": "/reference/put-integration-mappings-teams-id"
+    },
+    {
+      "source": "/reference/put_legal_hold_policies_id",
+      "destination": "/reference/put-legal-hold-policies-id"
+    },
+    {
+      "source": "/reference/put_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema__add",
+      "destination": "/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add"
+    },
+    {
+      "source": "/reference/put_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema__update",
+      "destination": "/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--update"
+    },
+    {
+      "source": "/reference/put_metadata_templates_id_id_schema",
+      "destination": "/reference/put-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/reference/put_retention_policies_id",
+      "destination": "/reference/put-retention-policies-id"
+    },
+    {
+      "source": "/reference/put_shield_information_barrier_segments_id",
+      "destination": "/reference/put-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/reference/put_skill_invocations_id",
+      "destination": "/reference/put-skill-invocations-id"
+    },
+    {
+      "source": "/reference/put_storage_policy_assignments_id",
+      "destination": "/reference/put-storage-policy-assignments-id"
+    },
+    {
+      "source": "/reference/put_task_assignments_id",
+      "destination": "/reference/put-task-assignments-id"
+    },
+    {
+      "source": "/reference/put_tasks_id",
+      "destination": "/reference/put-tasks-id"
+    },
+    {
+      "source": "/reference/put_terms_of_service_user_statuses_id",
+      "destination": "/reference/put-terms-of-service-user-statuses-id"
+    },
+    {
+      "source": "/reference/put_terms_of_services_id",
+      "destination": "/reference/put-terms-of-services-id"
+    },
+    {
+      "source": "/reference/put_users_id_folders_0",
+      "destination": "/reference/put-users-id-folders-0"
+    },
+    {
+      "source": "/reference/put_users_id",
+      "destination": "/reference/put-users-id"
+    },
+    {
+      "source": "/reference/put_web_links_id__add_shared_link",
+      "destination": "/reference/put-web-links-id--add-shared-link"
+    },
+    {
+      "source": "/reference/put_web_links_id__remove_shared_link",
+      "destination": "/reference/put-web-links-id--remove-shared-link"
+    },
+    {
+      "source": "/reference/put_web_links_id__update_shared_link",
+      "destination": "/reference/put-web-links-id--update-shared-link"
+    },
+    {
+      "source": "/reference/put_web_links_id",
+      "destination": "/reference/put-web-links-id"
+    },
+    {
+      "source": "/reference/put_webhooks_id",
+      "destination": "/reference/put-webhooks-id"
+    },
+    {
+      "source": "/reference/resources/access_token",
+      "destination": "/reference/resources/access-token"
+    },
+    {
+      "source": "/reference/resources/ai_agent_allowed_entity",
+      "destination": "/reference/resources/ai-agent-allowed-entity"
+    },
+    {
+      "source": "/reference/resources/ai_agent_ask",
+      "destination": "/reference/resources/ai-agent-ask"
+    },
+    {
+      "source": "/reference/resources/ai_agent_extract_structured",
+      "destination": "/reference/resources/ai-agent-extract-structured"
+    },
+    {
+      "source": "/reference/resources/ai_agent_extract",
+      "destination": "/reference/resources/ai-agent-extract"
+    },
+    {
+      "source": "/reference/resources/ai_agent_reference",
+      "destination": "/reference/resources/ai-agent-reference"
+    },
+    {
+      "source": "/reference/resources/ai_agent_text_gen",
+      "destination": "/reference/resources/ai-agent-text-gen"
+    },
+    {
+      "source": "/reference/resources/ai_extract_response",
+      "destination": "/reference/resources/ai-extract-response"
+    },
+    {
+      "source": "/reference/resources/ai_extract_structured_response",
+      "destination": "/reference/resources/ai-extract-structured-response"
+    },
+    {
+      "source": "/reference/resources/ai_llm_endpoint_params_aws",
+      "destination": "/reference/resources/ai-llm-endpoint-params-aws"
+    },
+    {
+      "source": "/reference/resources/ai_llm_endpoint_params_google",
+      "destination": "/reference/resources/ai-llm-endpoint-params-google"
+    },
+    {
+      "source": "/reference/resources/ai_llm_endpoint_params_ibm",
+      "destination": "/reference/resources/ai-llm-endpoint-params-ibm"
+    },
+    {
+      "source": "/reference/resources/ai_llm_endpoint_params_openai",
+      "destination": "/reference/resources/ai-llm-endpoint-params-openai"
+    },
+    {
+      "source": "/reference/resources/ai_multiple_agent_response",
+      "destination": "/reference/resources/ai-multiple-agent-response"
+    },
+    {
+      "source": "/reference/resources/ai_response__full",
+      "destination": "/reference/resources/ai-response--full"
+    },
+    {
+      "source": "/reference/resources/ai_response",
+      "destination": "/reference/resources/ai-response"
+    },
+    {
+      "source": "/reference/resources/ai_single_agent_response__full",
+      "destination": "/reference/resources/ai-single-agent-response--full"
+    },
+    {
+      "source": "/reference/resources/ai_single_agent_response",
+      "destination": "/reference/resources/ai-single-agent-response"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_ask_response",
+      "destination": "/reference/resources/ai-studio-agent-ask-response"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_ask",
+      "destination": "/reference/resources/ai-studio-agent-ask"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_extract_response",
+      "destination": "/reference/resources/ai-studio-agent-extract-response"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_extract",
+      "destination": "/reference/resources/ai-studio-agent-extract"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_text_gen_response",
+      "destination": "/reference/resources/ai-studio-agent-text-gen-response"
+    },
+    {
+      "source": "/reference/resources/ai_studio_agent_text_gen",
+      "destination": "/reference/resources/ai-studio-agent-text-gen"
+    },
+    {
+      "source": "/reference/resources/app_item_association",
+      "destination": "/reference/resources/app-item-association"
+    },
+    {
+      "source": "/reference/resources/app_item_associations",
+      "destination": "/reference/resources/app-item-associations"
+    },
+    {
+      "source": "/reference/resources/app_item_event_source",
+      "destination": "/reference/resources/app-item-event-source"
+    },
+    {
+      "source": "/reference/resources/app_item",
+      "destination": "/reference/resources/app-item"
+    },
+    {
+      "source": "/reference/resources/classification_template",
+      "destination": "/reference/resources/classification-template"
+    },
+    {
+      "source": "/reference/resources/client_error",
+      "destination": "/reference/resources/client-error"
+    },
+    {
+      "source": "/reference/resources/collaboration_allowlist_entries",
+      "destination": "/reference/resources/collaboration-allowlist-entries"
+    },
+    {
+      "source": "/reference/resources/collaboration_allowlist_entry",
+      "destination": "/reference/resources/collaboration-allowlist-entry"
+    },
+    {
+      "source": "/reference/resources/collaboration_allowlist_exempt_target",
+      "destination": "/reference/resources/collaboration-allowlist-exempt-target"
+    },
+    {
+      "source": "/reference/resources/collaboration_allowlist_exempt_targets",
+      "destination": "/reference/resources/collaboration-allowlist-exempt-targets"
+    },
+    {
+      "source": "/reference/resources/collaborations_offset_paginated",
+      "destination": "/reference/resources/collaborations-offset-paginated"
+    },
+    {
+      "source": "/reference/resources/comment__base",
+      "destination": "/reference/resources/comment--base"
+    },
+    {
+      "source": "/reference/resources/comment__full",
+      "destination": "/reference/resources/comment--full"
+    },
+    {
+      "source": "/reference/resources/conflict_error",
+      "destination": "/reference/resources/conflict-error"
+    },
+    {
+      "source": "/reference/resources/device_pinner",
+      "destination": "/reference/resources/device-pinner"
+    },
+    {
+      "source": "/reference/resources/device_pinners",
+      "destination": "/reference/resources/device-pinners"
+    },
+    {
+      "source": "/reference/resources/email_alias",
+      "destination": "/reference/resources/email-alias"
+    },
+    {
+      "source": "/reference/resources/email_aliases",
+      "destination": "/reference/resources/email-aliases"
+    },
+    {
+      "source": "/reference/resources/enterprise__base",
+      "destination": "/reference/resources/enterprise--base"
+    },
+    {
+      "source": "/reference/resources/event_source",
+      "destination": "/reference/resources/event-source"
+    },
+    {
+      "source": "/reference/resources/file__base",
+      "destination": "/reference/resources/file--base"
+    },
+    {
+      "source": "/reference/resources/file__full",
+      "destination": "/reference/resources/file--full"
+    },
+    {
+      "source": "/reference/resources/file__mini",
+      "destination": "/reference/resources/file--mini"
+    },
+    {
+      "source": "/reference/resources/file_conflict",
+      "destination": "/reference/resources/file-conflict"
+    },
+    {
+      "source": "/reference/resources/file_request",
+      "destination": "/reference/resources/file-request"
+    },
+    {
+      "source": "/reference/resources/file_version__base",
+      "destination": "/reference/resources/file-version--base"
+    },
+    {
+      "source": "/reference/resources/file_version__full",
+      "destination": "/reference/resources/file-version--full"
+    },
+    {
+      "source": "/reference/resources/file_version__mini",
+      "destination": "/reference/resources/file-version--mini"
+    },
+    {
+      "source": "/reference/resources/file_version_legal_hold",
+      "destination": "/reference/resources/file-version-legal-hold"
+    },
+    {
+      "source": "/reference/resources/file_version_legal_holds",
+      "destination": "/reference/resources/file-version-legal-holds"
+    },
+    {
+      "source": "/reference/resources/file_version_retention",
+      "destination": "/reference/resources/file-version-retention"
+    },
+    {
+      "source": "/reference/resources/file_version_retentions",
+      "destination": "/reference/resources/file-version-retentions"
+    },
+    {
+      "source": "/reference/resources/file_version",
+      "destination": "/reference/resources/file-version"
+    },
+    {
+      "source": "/reference/resources/file_versions_on_hold",
+      "destination": "/reference/resources/file-versions-on-hold"
+    },
+    {
+      "source": "/reference/resources/file_versions",
+      "destination": "/reference/resources/file-versions"
+    },
+    {
+      "source": "/reference/resources/files_on_hold",
+      "destination": "/reference/resources/files-on-hold"
+    },
+    {
+      "source": "/reference/resources/files_under_retention",
+      "destination": "/reference/resources/files-under-retention"
+    },
+    {
+      "source": "/reference/resources/folder__base",
+      "destination": "/reference/resources/folder--base"
+    },
+    {
+      "source": "/reference/resources/folder__full",
+      "destination": "/reference/resources/folder--full"
+    },
+    {
+      "source": "/reference/resources/folder__mini",
+      "destination": "/reference/resources/folder--mini"
+    },
+    {
+      "source": "/reference/resources/folder_lock",
+      "destination": "/reference/resources/folder-lock"
+    },
+    {
+      "source": "/reference/resources/folder_locks",
+      "destination": "/reference/resources/folder-locks"
+    },
+    {
+      "source": "/reference/resources/generic_source",
+      "destination": "/reference/resources/generic-source"
+    },
+    {
+      "source": "/reference/resources/group__base",
+      "destination": "/reference/resources/group--base"
+    },
+    {
+      "source": "/reference/resources/group__full",
+      "destination": "/reference/resources/group--full"
+    },
+    {
+      "source": "/reference/resources/group__mini",
+      "destination": "/reference/resources/group--mini"
+    },
+    {
+      "source": "/reference/resources/group_membership",
+      "destination": "/reference/resources/group-membership"
+    },
+    {
+      "source": "/reference/resources/group_memberships",
+      "destination": "/reference/resources/group-memberships"
+    },
+    {
+      "source": "/reference/resources/integration_mapping_slack_create_request",
+      "destination": "/reference/resources/integration-mapping-slack-create-request"
+    },
+    {
+      "source": "/reference/resources/integration_mapping_slack",
+      "destination": "/reference/resources/integration-mapping-slack"
+    },
+    {
+      "source": "/reference/resources/integration_mapping_teams_create_request",
+      "destination": "/reference/resources/integration-mapping-teams-create-request"
+    },
+    {
+      "source": "/reference/resources/integration_mapping_teams",
+      "destination": "/reference/resources/integration-mapping-teams"
+    },
+    {
+      "source": "/reference/resources/integration_mappings_slack",
+      "destination": "/reference/resources/integration-mappings-slack"
+    },
+    {
+      "source": "/reference/resources/integration_mappings_teams",
+      "destination": "/reference/resources/integration-mappings-teams"
+    },
+    {
+      "source": "/reference/resources/items_offset_paginated",
+      "destination": "/reference/resources/items-offset-paginated"
+    },
+    {
+      "source": "/reference/resources/keyword_skill_card",
+      "destination": "/reference/resources/keyword-skill-card"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policies",
+      "destination": "/reference/resources/legal-hold-policies"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policy__mini",
+      "destination": "/reference/resources/legal-hold-policy--mini"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policy_assignment__base",
+      "destination": "/reference/resources/legal-hold-policy-assignment--base"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policy_assignment",
+      "destination": "/reference/resources/legal-hold-policy-assignment"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policy_assignments",
+      "destination": "/reference/resources/legal-hold-policy-assignments"
+    },
+    {
+      "source": "/reference/resources/legal_hold_policy",
+      "destination": "/reference/resources/legal-hold-policy"
+    },
+    {
+      "source": "/reference/resources/metadata__base",
+      "destination": "/reference/resources/metadata--base"
+    },
+    {
+      "source": "/reference/resources/metadata__full",
+      "destination": "/reference/resources/metadata--full"
+    },
+    {
+      "source": "/reference/resources/metadata_cascade_policies",
+      "destination": "/reference/resources/metadata-cascade-policies"
+    },
+    {
+      "source": "/reference/resources/metadata_cascade_policy",
+      "destination": "/reference/resources/metadata-cascade-policy"
+    },
+    {
+      "source": "/reference/resources/metadata_error",
+      "destination": "/reference/resources/metadata-error"
+    },
+    {
+      "source": "/reference/resources/metadata_field_filter_date_range",
+      "destination": "/reference/resources/metadata-field-filter-date-range"
+    },
+    {
+      "source": "/reference/resources/metadata_field_filter_float_range",
+      "destination": "/reference/resources/metadata-field-filter-float-range"
+    },
+    {
+      "source": "/reference/resources/metadata_filter",
+      "destination": "/reference/resources/metadata-filter"
+    },
+    {
+      "source": "/reference/resources/metadata_query_results",
+      "destination": "/reference/resources/metadata-query-results"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomies",
+      "destination": "/reference/resources/metadata-taxonomies"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomy_level",
+      "destination": "/reference/resources/metadata-taxonomy-level"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomy_levels",
+      "destination": "/reference/resources/metadata-taxonomy-levels"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomy_node",
+      "destination": "/reference/resources/metadata-taxonomy-node"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomy_nodes",
+      "destination": "/reference/resources/metadata-taxonomy-nodes"
+    },
+    {
+      "source": "/reference/resources/metadata_taxonomy",
+      "destination": "/reference/resources/metadata-taxonomy"
+    },
+    {
+      "source": "/reference/resources/metadata_template",
+      "destination": "/reference/resources/metadata-template"
+    },
+    {
+      "source": "/reference/resources/metadata_templates",
+      "destination": "/reference/resources/metadata-templates"
+    },
+    {
+      "source": "/reference/resources/oauth2_error",
+      "destination": "/reference/resources/oauth2-error"
+    },
+    {
+      "source": "/reference/resources/realtime_server",
+      "destination": "/reference/resources/realtime-server"
+    },
+    {
+      "source": "/reference/resources/realtime_servers",
+      "destination": "/reference/resources/realtime-servers"
+    },
+    {
+      "source": "/reference/resources/recent_item",
+      "destination": "/reference/resources/recent-item"
+    },
+    {
+      "source": "/reference/resources/recent_items",
+      "destination": "/reference/resources/recent-items"
+    },
+    {
+      "source": "/reference/resources/retention_policies",
+      "destination": "/reference/resources/retention-policies"
+    },
+    {
+      "source": "/reference/resources/retention_policy__base",
+      "destination": "/reference/resources/retention-policy--base"
+    },
+    {
+      "source": "/reference/resources/retention_policy__mini",
+      "destination": "/reference/resources/retention-policy--mini"
+    },
+    {
+      "source": "/reference/resources/retention_policy_assignment",
+      "destination": "/reference/resources/retention-policy-assignment"
+    },
+    {
+      "source": "/reference/resources/retention_policy_assignments",
+      "destination": "/reference/resources/retention-policy-assignments"
+    },
+    {
+      "source": "/reference/resources/retention_policy",
+      "destination": "/reference/resources/retention-policy"
+    },
+    {
+      "source": "/reference/resources/search_result_with_shared_link",
+      "destination": "/reference/resources/search-result-with-shared-link"
+    },
+    {
+      "source": "/reference/resources/search_results_with_shared_links",
+      "destination": "/reference/resources/search-results-with-shared-links"
+    },
+    {
+      "source": "/reference/resources/search_results",
+      "destination": "/reference/resources/search-results"
+    },
+    {
+      "source": "/reference/resources/session_termination",
+      "destination": "/reference/resources/session-termination"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier__base",
+      "destination": "/reference/resources/shield-information-barrier--base"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_reference",
+      "destination": "/reference/resources/shield-information-barrier-reference"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_report__base",
+      "destination": "/reference/resources/shield-information-barrier-report--base"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_report_details",
+      "destination": "/reference/resources/shield-information-barrier-report-details"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_report",
+      "destination": "/reference/resources/shield-information-barrier-report"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_reports",
+      "destination": "/reference/resources/shield-information-barrier-reports"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_member__base",
+      "destination": "/reference/resources/shield-information-barrier-segment-member--base"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_member__mini",
+      "destination": "/reference/resources/shield-information-barrier-segment-member--mini"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_member",
+      "destination": "/reference/resources/shield-information-barrier-segment-member"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_members",
+      "destination": "/reference/resources/shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_restriction__base",
+      "destination": "/reference/resources/shield-information-barrier-segment-restriction--base"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_restriction__mini",
+      "destination": "/reference/resources/shield-information-barrier-segment-restriction--mini"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_restriction",
+      "destination": "/reference/resources/shield-information-barrier-segment-restriction"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment_restrictions",
+      "destination": "/reference/resources/shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segment",
+      "destination": "/reference/resources/shield-information-barrier-segment"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier_segments",
+      "destination": "/reference/resources/shield-information-barrier-segments"
+    },
+    {
+      "source": "/reference/resources/shield_information_barrier",
+      "destination": "/reference/resources/shield-information-barrier"
+    },
+    {
+      "source": "/reference/resources/shield_information_barriers",
+      "destination": "/reference/resources/shield-information-barriers"
+    },
+    {
+      "source": "/reference/resources/sign_request_create_request",
+      "destination": "/reference/resources/sign-request-create-request"
+    },
+    {
+      "source": "/reference/resources/sign_request",
+      "destination": "/reference/resources/sign-request"
+    },
+    {
+      "source": "/reference/resources/sign_requests",
+      "destination": "/reference/resources/sign-requests"
+    },
+    {
+      "source": "/reference/resources/sign_template",
+      "destination": "/reference/resources/sign-template"
+    },
+    {
+      "source": "/reference/resources/sign_templates",
+      "destination": "/reference/resources/sign-templates"
+    },
+    {
+      "source": "/reference/resources/skill_cards_metadata",
+      "destination": "/reference/resources/skill-cards-metadata"
+    },
+    {
+      "source": "/reference/resources/status_skill_card",
+      "destination": "/reference/resources/status-skill-card"
+    },
+    {
+      "source": "/reference/resources/storage_policies",
+      "destination": "/reference/resources/storage-policies"
+    },
+    {
+      "source": "/reference/resources/storage_policy__mini",
+      "destination": "/reference/resources/storage-policy--mini"
+    },
+    {
+      "source": "/reference/resources/storage_policy_assignment",
+      "destination": "/reference/resources/storage-policy-assignment"
+    },
+    {
+      "source": "/reference/resources/storage_policy_assignments",
+      "destination": "/reference/resources/storage-policy-assignments"
+    },
+    {
+      "source": "/reference/resources/storage_policy",
+      "destination": "/reference/resources/storage-policy"
+    },
+    {
+      "source": "/reference/resources/task_assignment",
+      "destination": "/reference/resources/task-assignment"
+    },
+    {
+      "source": "/reference/resources/task_assignments",
+      "destination": "/reference/resources/task-assignments"
+    },
+    {
+      "source": "/reference/resources/terms_of_service__base",
+      "destination": "/reference/resources/terms-of-service--base"
+    },
+    {
+      "source": "/reference/resources/terms_of_service_user_status",
+      "destination": "/reference/resources/terms-of-service-user-status"
+    },
+    {
+      "source": "/reference/resources/terms_of_service",
+      "destination": "/reference/resources/terms-of-service"
+    },
+    {
+      "source": "/reference/resources/terms_of_services_user_statuses",
+      "destination": "/reference/resources/terms-of-services-user-statuses"
+    },
+    {
+      "source": "/reference/resources/terms_of_services",
+      "destination": "/reference/resources/terms-of-services"
+    },
+    {
+      "source": "/reference/resources/timeline_skill_card",
+      "destination": "/reference/resources/timeline-skill-card"
+    },
+    {
+      "source": "/reference/resources/transcript_skill_card",
+      "destination": "/reference/resources/transcript-skill-card"
+    },
+    {
+      "source": "/reference/resources/trash_file_restored",
+      "destination": "/reference/resources/trash-file-restored"
+    },
+    {
+      "source": "/reference/resources/trash_file",
+      "destination": "/reference/resources/trash-file"
+    },
+    {
+      "source": "/reference/resources/trash_folder_restored",
+      "destination": "/reference/resources/trash-folder-restored"
+    },
+    {
+      "source": "/reference/resources/trash_folder",
+      "destination": "/reference/resources/trash-folder"
+    },
+    {
+      "source": "/reference/resources/trash_web_link_restored",
+      "destination": "/reference/resources/trash-web-link-restored"
+    },
+    {
+      "source": "/reference/resources/trash_web_link",
+      "destination": "/reference/resources/trash-web-link"
+    },
+    {
+      "source": "/reference/resources/upload_part__mini",
+      "destination": "/reference/resources/upload-part--mini"
+    },
+    {
+      "source": "/reference/resources/upload_part",
+      "destination": "/reference/resources/upload-part"
+    },
+    {
+      "source": "/reference/resources/upload_parts",
+      "destination": "/reference/resources/upload-parts"
+    },
+    {
+      "source": "/reference/resources/upload_session",
+      "destination": "/reference/resources/upload-session"
+    },
+    {
+      "source": "/reference/resources/upload_url",
+      "destination": "/reference/resources/upload-url"
+    },
+    {
+      "source": "/reference/resources/uploaded_part",
+      "destination": "/reference/resources/uploaded-part"
+    },
+    {
+      "source": "/reference/resources/user__base",
+      "destination": "/reference/resources/user--base"
+    },
+    {
+      "source": "/reference/resources/user__full",
+      "destination": "/reference/resources/user--full"
+    },
+    {
+      "source": "/reference/resources/user__mini",
+      "destination": "/reference/resources/user--mini"
+    },
+    {
+      "source": "/reference/resources/user_avatar",
+      "destination": "/reference/resources/user-avatar"
+    },
+    {
+      "source": "/reference/resources/user_collaborations",
+      "destination": "/reference/resources/user-collaborations"
+    },
+    {
+      "source": "/reference/resources/user_integration_mappings_reference",
+      "destination": "/reference/resources/user-integration-mappings-reference"
+    },
+    {
+      "source": "/reference/resources/web_link__base",
+      "destination": "/reference/resources/web-link--base"
+    },
+    {
+      "source": "/reference/resources/web_link__mini",
+      "destination": "/reference/resources/web-link--mini"
+    },
+    {
+      "source": "/reference/resources/web_link",
+      "destination": "/reference/resources/web-link"
+    },
+    {
+      "source": "/reference/resources/webhook__mini",
+      "destination": "/reference/resources/webhook--mini"
+    },
+    {
+      "source": "/reference/resources/workflow__mini",
+      "destination": "/reference/resources/workflow--mini"
+    },
+    {
+      "source": "/reference/resources/zip_download_status",
+      "destination": "/reference/resources/zip-download-status"
+    },
+    {
+      "source": "/reference/resources/zip_download",
+      "destination": "/reference/resources/zip-download"
+    },
+    {
+      "source": "/reference/v2025.0/delete_archives_id",
+      "destination": "/reference/v2025.0/delete-archives-id"
+    },
+    {
+      "source": "/reference/v2025.0/delete_docgen_templates_id",
+      "destination": "/reference/v2025.0/delete-docgen-templates-id"
+    },
+    {
+      "source": "/reference/v2025.0/delete_hub_collaborations_id",
+      "destination": "/reference/v2025.0/delete-hub-collaborations-id"
+    },
+    {
+      "source": "/reference/v2025.0/delete_hubs_id",
+      "destination": "/reference/v2025.0/delete-hubs-id"
+    },
+    {
+      "source": "/reference/v2025.0/delete_shield_lists_id",
+      "destination": "/reference/v2025.0/delete-shield-lists-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_archives",
+      "destination": "/reference/v2025.0/get-archives"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_batch_jobs_id",
+      "destination": "/reference/v2025.0/get-docgen-batch-jobs-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_jobs_id",
+      "destination": "/reference/v2025.0/get-docgen-jobs-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_jobs",
+      "destination": "/reference/v2025.0/get-docgen-jobs"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_template_jobs_id",
+      "destination": "/reference/v2025.0/get-docgen-template-jobs-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_templates_id_tags",
+      "destination": "/reference/v2025.0/get-docgen-templates-id-tags"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_templates_id",
+      "destination": "/reference/v2025.0/get-docgen-templates-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_docgen_templates",
+      "destination": "/reference/v2025.0/get-docgen-templates"
+    },
+    {
+      "source": "/reference/v2025.0/get_enterprise_configurations_id",
+      "destination": "/reference/v2025.0/get-enterprise-configurations-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_enterprise_hubs",
+      "destination": "/reference/v2025.0/get-enterprise-hubs"
+    },
+    {
+      "source": "/reference/v2025.0/get_hub_collaborations_id",
+      "destination": "/reference/v2025.0/get-hub-collaborations-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_hub_collaborations",
+      "destination": "/reference/v2025.0/get-hub-collaborations"
+    },
+    {
+      "source": "/reference/v2025.0/get_hub_items",
+      "destination": "/reference/v2025.0/get-hub-items"
+    },
+    {
+      "source": "/reference/v2025.0/get_hubs_id",
+      "destination": "/reference/v2025.0/get-hubs-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_hubs",
+      "destination": "/reference/v2025.0/get-hubs"
+    },
+    {
+      "source": "/reference/v2025.0/get_shield_lists_id",
+      "destination": "/reference/v2025.0/get-shield-lists-id"
+    },
+    {
+      "source": "/reference/v2025.0/get_shield_lists",
+      "destination": "/reference/v2025.0/get-shield-lists"
+    },
+    {
+      "source": "/reference/v2025.0/post_archives",
+      "destination": "/reference/v2025.0/post-archives"
+    },
+    {
+      "source": "/reference/v2025.0/post_docgen_batches",
+      "destination": "/reference/v2025.0/post-docgen-batches"
+    },
+    {
+      "source": "/reference/v2025.0/post_docgen_templates",
+      "destination": "/reference/v2025.0/post-docgen-templates"
+    },
+    {
+      "source": "/reference/v2025.0/post_external_users_submit_delete_job",
+      "destination": "/reference/v2025.0/post-external-users-submit-delete-job"
+    },
+    {
+      "source": "/reference/v2025.0/post_hub_collaborations",
+      "destination": "/reference/v2025.0/post-hub-collaborations"
+    },
+    {
+      "source": "/reference/v2025.0/post_hubs_id_copy",
+      "destination": "/reference/v2025.0/post-hubs-id-copy"
+    },
+    {
+      "source": "/reference/v2025.0/post_hubs_id_manage_items",
+      "destination": "/reference/v2025.0/post-hubs-id-manage-items"
+    },
+    {
+      "source": "/reference/v2025.0/post_hubs",
+      "destination": "/reference/v2025.0/post-hubs"
+    },
+    {
+      "source": "/reference/v2025.0/post_shield_lists",
+      "destination": "/reference/v2025.0/post-shield-lists"
+    },
+    {
+      "source": "/reference/v2025.0/put_archives_id",
+      "destination": "/reference/v2025.0/put-archives-id"
+    },
+    {
+      "source": "/reference/v2025.0/put_hub_collaborations_id",
+      "destination": "/reference/v2025.0/put-hub-collaborations-id"
+    },
+    {
+      "source": "/reference/v2025.0/put_hubs_id",
+      "destination": "/reference/v2025.0/put-hubs-id"
+    },
+    {
+      "source": "/reference/v2025.0/put_shield_lists_id",
+      "destination": "/reference/v2025.0/put-shield-lists-id"
+    },
+    {
+      "source": "/reference/v2025.0/resources/client_error",
+      "destination": "/reference/v2025.0/resources/client-error"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_batch__base",
+      "destination": "/reference/v2025.0/resources/docgen-batch--base"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_job__base",
+      "destination": "/reference/v2025.0/resources/docgen-job--base"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_job__full",
+      "destination": "/reference/v2025.0/resources/docgen-job--full"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_job",
+      "destination": "/reference/v2025.0/resources/docgen-job"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_jobs__full",
+      "destination": "/reference/v2025.0/resources/docgen-jobs--full"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_jobs",
+      "destination": "/reference/v2025.0/resources/docgen-jobs"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_tag",
+      "destination": "/reference/v2025.0/resources/docgen-tag"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_tags_processing_message",
+      "destination": "/reference/v2025.0/resources/docgen-tags-processing-message"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_tags",
+      "destination": "/reference/v2025.0/resources/docgen-tags"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_template__base",
+      "destination": "/reference/v2025.0/resources/docgen-template--base"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_template",
+      "destination": "/reference/v2025.0/resources/docgen-template"
+    },
+    {
+      "source": "/reference/v2025.0/resources/docgen_templates",
+      "destination": "/reference/v2025.0/resources/docgen-templates"
+    },
+    {
+      "source": "/reference/v2025.0/resources/enterprise_configuration_content_and_sharing",
+      "destination": "/reference/v2025.0/resources/enterprise-configuration-content-and-sharing"
+    },
+    {
+      "source": "/reference/v2025.0/resources/enterprise_configuration_security",
+      "destination": "/reference/v2025.0/resources/enterprise-configuration-security"
+    },
+    {
+      "source": "/reference/v2025.0/resources/enterprise_configuration_shield",
+      "destination": "/reference/v2025.0/resources/enterprise-configuration-shield"
+    },
+    {
+      "source": "/reference/v2025.0/resources/enterprise_configuration_user_settings",
+      "destination": "/reference/v2025.0/resources/enterprise-configuration-user-settings"
+    },
+    {
+      "source": "/reference/v2025.0/resources/enterprise_configuration",
+      "destination": "/reference/v2025.0/resources/enterprise-configuration"
+    },
+    {
+      "source": "/reference/v2025.0/resources/external_users_submit_delete_job_response",
+      "destination": "/reference/v2025.0/resources/external-users-submit-delete-job-response"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub__base",
+      "destination": "/reference/v2025.0/resources/hub--base"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub_collaboration",
+      "destination": "/reference/v2025.0/resources/hub-collaboration"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub_collaborations",
+      "destination": "/reference/v2025.0/resources/hub-collaborations"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub_item",
+      "destination": "/reference/v2025.0/resources/hub-item"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub_items_manage_response",
+      "destination": "/reference/v2025.0/resources/hub-items-manage-response"
+    },
+    {
+      "source": "/reference/v2025.0/resources/hub_items",
+      "destination": "/reference/v2025.0/resources/hub-items"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list__mini",
+      "destination": "/reference/v2025.0/resources/shield-list--mini"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list_content__country",
+      "destination": "/reference/v2025.0/resources/shield-list-content--country"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list_content__domains",
+      "destination": "/reference/v2025.0/resources/shield-list-content--domains"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list_content__email",
+      "destination": "/reference/v2025.0/resources/shield-list-content--email"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list_content__integration",
+      "destination": "/reference/v2025.0/resources/shield-list-content--integration"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list_content__ip",
+      "destination": "/reference/v2025.0/resources/shield-list-content--ip"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_list",
+      "destination": "/reference/v2025.0/resources/shield-list"
+    },
+    {
+      "source": "/reference/v2025.0/resources/shield_lists",
+      "destination": "/reference/v2025.0/resources/shield-lists"
+    },
+    {
+      "source": "/ja/reference/delete_ai_agents_id",
+      "destination": "/ja/reference/delete-ai-agents-id"
+    },
+    {
+      "source": "/ja/reference/delete_collaboration_whitelist_entries_id",
+      "destination": "/ja/reference/delete-collaboration-whitelist-entries-id"
+    },
+    {
+      "source": "/ja/reference/delete_collaboration_whitelist_exempt_targets_id",
+      "destination": "/ja/reference/delete-collaboration-whitelist-exempt-targets-id"
+    },
+    {
+      "source": "/ja/reference/delete_collaborations_id",
+      "destination": "/ja/reference/delete-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/delete_comments_id",
+      "destination": "/ja/reference/delete-comments-id"
+    },
+    {
+      "source": "/ja/reference/delete_device_pinners_id",
+      "destination": "/ja/reference/delete-device-pinners-id"
+    },
+    {
+      "source": "/ja/reference/delete_file_requests_id",
+      "destination": "/ja/reference/delete-file-requests-id"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/delete-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_metadata_global_boxSkillsCards",
+      "destination": "/ja/reference/delete-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_metadata_id_id",
+      "destination": "/ja/reference/delete-files-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_trash",
+      "destination": "/ja/reference/delete-files-id-trash"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_versions_id",
+      "destination": "/ja/reference/delete-files-id-versions-id"
+    },
+    {
+      "source": "/ja/reference/delete_files_id_watermark",
+      "destination": "/ja/reference/delete-files-id-watermark"
+    },
+    {
+      "source": "/ja/reference/delete_files_id",
+      "destination": "/ja/reference/delete-files-id"
+    },
+    {
+      "source": "/ja/reference/delete_files_upload_sessions_id",
+      "destination": "/ja/reference/delete-files-upload-sessions-id"
+    },
+    {
+      "source": "/ja/reference/delete_folder_locks_id",
+      "destination": "/ja/reference/delete-folder-locks-id"
+    },
+    {
+      "source": "/ja/reference/delete_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/delete-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/delete_folders_id_metadata_id_id",
+      "destination": "/ja/reference/delete-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/delete_folders_id_trash",
+      "destination": "/ja/reference/delete-folders-id-trash"
+    },
+    {
+      "source": "/ja/reference/delete_folders_id_watermark",
+      "destination": "/ja/reference/delete-folders-id-watermark"
+    },
+    {
+      "source": "/ja/reference/delete_folders_id",
+      "destination": "/ja/reference/delete-folders-id"
+    },
+    {
+      "source": "/ja/reference/delete_group_memberships_id",
+      "destination": "/ja/reference/delete-group-memberships-id"
+    },
+    {
+      "source": "/ja/reference/delete_groups_id",
+      "destination": "/ja/reference/delete-groups-id"
+    },
+    {
+      "source": "/ja/reference/delete_integration_mappings_slack_id",
+      "destination": "/ja/reference/delete-integration-mappings-slack-id"
+    },
+    {
+      "source": "/ja/reference/delete_integration_mappings_teams_id",
+      "destination": "/ja/reference/delete-integration-mappings-teams-id"
+    },
+    {
+      "source": "/ja/reference/delete_legal_hold_policies_id",
+      "destination": "/ja/reference/delete-legal-hold-policies-id"
+    },
+    {
+      "source": "/ja/reference/delete_legal_hold_policy_assignments_id",
+      "destination": "/ja/reference/delete-legal-hold-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/delete_metadata_cascade_policies_id",
+      "destination": "/ja/reference/delete-metadata-cascade-policies-id"
+    },
+    {
+      "source": "/ja/reference/delete_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/ja/reference/delete-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/ja/reference/delete_metadata_taxonomies_id_id",
+      "destination": "/ja/reference/delete-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/ja/reference/delete_metadata_templates_id_id_schema",
+      "destination": "/ja/reference/delete-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/ja/reference/delete_retention_policies_id",
+      "destination": "/ja/reference/delete-retention-policies-id"
+    },
+    {
+      "source": "/ja/reference/delete_retention_policy_assignments_id",
+      "destination": "/ja/reference/delete-retention-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/delete_shield_information_barrier_segment_members_id",
+      "destination": "/ja/reference/delete-shield-information-barrier-segment-members-id"
+    },
+    {
+      "source": "/ja/reference/delete_shield_information_barrier_segment_restrictions_id",
+      "destination": "/ja/reference/delete-shield-information-barrier-segment-restrictions-id"
+    },
+    {
+      "source": "/ja/reference/delete_shield_information_barrier_segments_id",
+      "destination": "/ja/reference/delete-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/ja/reference/delete_storage_policy_assignments_id",
+      "destination": "/ja/reference/delete-storage-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/delete_task_assignments_id",
+      "destination": "/ja/reference/delete-task-assignments-id"
+    },
+    {
+      "source": "/ja/reference/delete_tasks_id",
+      "destination": "/ja/reference/delete-tasks-id"
+    },
+    {
+      "source": "/ja/reference/delete_users_id_avatar",
+      "destination": "/ja/reference/delete-users-id-avatar"
+    },
+    {
+      "source": "/ja/reference/delete_users_id_email_aliases_id",
+      "destination": "/ja/reference/delete-users-id-email-aliases-id"
+    },
+    {
+      "source": "/ja/reference/delete_users_id",
+      "destination": "/ja/reference/delete-users-id"
+    },
+    {
+      "source": "/ja/reference/delete_web_links_id_trash",
+      "destination": "/ja/reference/delete-web-links-id-trash"
+    },
+    {
+      "source": "/ja/reference/delete_web_links_id",
+      "destination": "/ja/reference/delete-web-links-id"
+    },
+    {
+      "source": "/ja/reference/delete_webhooks_id",
+      "destination": "/ja/reference/delete-webhooks-id"
+    },
+    {
+      "source": "/ja/reference/get_ai_agent_default",
+      "destination": "/ja/reference/get-ai-agent-default"
+    },
+    {
+      "source": "/ja/reference/get_ai_agents_id",
+      "destination": "/ja/reference/get-ai-agents-id"
+    },
+    {
+      "source": "/ja/reference/get_ai_agents",
+      "destination": "/ja/reference/get-ai-agents"
+    },
+    {
+      "source": "/ja/reference/get_authorize",
+      "destination": "/ja/reference/get-authorize"
+    },
+    {
+      "source": "/ja/reference/get_collaboration_whitelist_entries_id",
+      "destination": "/ja/reference/get-collaboration-whitelist-entries-id"
+    },
+    {
+      "source": "/ja/reference/get_collaboration_whitelist_entries",
+      "destination": "/ja/reference/get-collaboration-whitelist-entries"
+    },
+    {
+      "source": "/ja/reference/get_collaboration_whitelist_exempt_targets_id",
+      "destination": "/ja/reference/get-collaboration-whitelist-exempt-targets-id"
+    },
+    {
+      "source": "/ja/reference/get_collaboration_whitelist_exempt_targets",
+      "destination": "/ja/reference/get-collaboration-whitelist-exempt-targets"
+    },
+    {
+      "source": "/ja/reference/get_collaborations_id",
+      "destination": "/ja/reference/get-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/get_collaborations",
+      "destination": "/ja/reference/get-collaborations"
+    },
+    {
+      "source": "/ja/reference/get_collections_id_items",
+      "destination": "/ja/reference/get-collections-id-items"
+    },
+    {
+      "source": "/ja/reference/get_collections_id",
+      "destination": "/ja/reference/get-collections-id"
+    },
+    {
+      "source": "/ja/reference/get_collections",
+      "destination": "/ja/reference/get-collections"
+    },
+    {
+      "source": "/ja/reference/get_comments_id",
+      "destination": "/ja/reference/get-comments-id"
+    },
+    {
+      "source": "/ja/reference/get_device_pinners_id",
+      "destination": "/ja/reference/get-device-pinners-id"
+    },
+    {
+      "source": "/ja/reference/get_enterprises_id_device_pinners",
+      "destination": "/ja/reference/get-enterprises-id-device-pinners"
+    },
+    {
+      "source": "/ja/reference/get_events",
+      "destination": "/ja/reference/get-events"
+    },
+    {
+      "source": "/ja/reference/get_file_requests_id",
+      "destination": "/ja/reference/get-file-requests-id"
+    },
+    {
+      "source": "/ja/reference/get_file_version_legal_holds_id",
+      "destination": "/ja/reference/get-file-version-legal-holds-id"
+    },
+    {
+      "source": "/ja/reference/get_file_version_legal_holds",
+      "destination": "/ja/reference/get-file-version-legal-holds"
+    },
+    {
+      "source": "/ja/reference/get_file_version_retentions_id",
+      "destination": "/ja/reference/get-file-version-retentions-id"
+    },
+    {
+      "source": "/ja/reference/get_file_version_retentions",
+      "destination": "/ja/reference/get-file-version-retentions"
+    },
+    {
+      "source": "/ja/reference/get_files_id__get_shared_link",
+      "destination": "/ja/reference/get-files-id--get-shared-link"
+    },
+    {
+      "source": "/ja/reference/get_files_id_app_item_associations",
+      "destination": "/ja/reference/get-files-id-app-item-associations"
+    },
+    {
+      "source": "/ja/reference/get_files_id_collaborations",
+      "destination": "/ja/reference/get-files-id-collaborations"
+    },
+    {
+      "source": "/ja/reference/get_files_id_comments",
+      "destination": "/ja/reference/get-files-id-comments"
+    },
+    {
+      "source": "/ja/reference/get_files_id_content",
+      "destination": "/ja/reference/get-files-id-content"
+    },
+    {
+      "source": "/ja/reference/get_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/get-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/get_files_id_metadata_global_boxSkillsCards",
+      "destination": "/ja/reference/get-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/ja/reference/get_files_id_metadata_id_id",
+      "destination": "/ja/reference/get-files-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/get_files_id_metadata",
+      "destination": "/ja/reference/get-files-id-metadata"
+    },
+    {
+      "source": "/ja/reference/get_files_id_tasks",
+      "destination": "/ja/reference/get-files-id-tasks"
+    },
+    {
+      "source": "/ja/reference/get_files_id_thumbnail_id",
+      "destination": "/ja/reference/get-files-id-thumbnail-id"
+    },
+    {
+      "source": "/ja/reference/get_files_id_trash",
+      "destination": "/ja/reference/get-files-id-trash"
+    },
+    {
+      "source": "/ja/reference/get_files_id_versions_id",
+      "destination": "/ja/reference/get-files-id-versions-id"
+    },
+    {
+      "source": "/ja/reference/get_files_id_versions",
+      "destination": "/ja/reference/get-files-id-versions"
+    },
+    {
+      "source": "/ja/reference/get_files_id_watermark",
+      "destination": "/ja/reference/get-files-id-watermark"
+    },
+    {
+      "source": "/ja/reference/get_files_id",
+      "destination": "/ja/reference/get-files-id"
+    },
+    {
+      "source": "/ja/reference/get_files_upload_sessions_id_parts",
+      "destination": "/ja/reference/get-files-upload-sessions-id-parts"
+    },
+    {
+      "source": "/ja/reference/get_files_upload_sessions_id",
+      "destination": "/ja/reference/get-files-upload-sessions-id"
+    },
+    {
+      "source": "/ja/reference/get_folder_locks",
+      "destination": "/ja/reference/get-folder-locks"
+    },
+    {
+      "source": "/ja/reference/get_folders_id__get_shared_link",
+      "destination": "/ja/reference/get-folders-id--get-shared-link"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_app_item_associations",
+      "destination": "/ja/reference/get-folders-id-app-item-associations"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_collaborations",
+      "destination": "/ja/reference/get-folders-id-collaborations"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_items",
+      "destination": "/ja/reference/get-folders-id-items"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/get-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_metadata_id_id",
+      "destination": "/ja/reference/get-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_metadata",
+      "destination": "/ja/reference/get-folders-id-metadata"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_trash",
+      "destination": "/ja/reference/get-folders-id-trash"
+    },
+    {
+      "source": "/ja/reference/get_folders_id_watermark",
+      "destination": "/ja/reference/get-folders-id-watermark"
+    },
+    {
+      "source": "/ja/reference/get_folders_id",
+      "destination": "/ja/reference/get-folders-id"
+    },
+    {
+      "source": "/ja/reference/get_folders_trash_items",
+      "destination": "/ja/reference/get-folders-trash-items"
+    },
+    {
+      "source": "/ja/reference/get_group_memberships_id",
+      "destination": "/ja/reference/get-group-memberships-id"
+    },
+    {
+      "source": "/ja/reference/get_groups_id_collaborations",
+      "destination": "/ja/reference/get-groups-id-collaborations"
+    },
+    {
+      "source": "/ja/reference/get_groups_id_memberships",
+      "destination": "/ja/reference/get-groups-id-memberships"
+    },
+    {
+      "source": "/ja/reference/get_groups_id",
+      "destination": "/ja/reference/get-groups-id"
+    },
+    {
+      "source": "/ja/reference/get_groups",
+      "destination": "/ja/reference/get-groups"
+    },
+    {
+      "source": "/ja/reference/get_integration_mappings_slack",
+      "destination": "/ja/reference/get-integration-mappings-slack"
+    },
+    {
+      "source": "/ja/reference/get_integration_mappings_teams",
+      "destination": "/ja/reference/get-integration-mappings-teams"
+    },
+    {
+      "source": "/ja/reference/get_invites_id",
+      "destination": "/ja/reference/get-invites-id"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policies_id",
+      "destination": "/ja/reference/get-legal-hold-policies-id"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policies",
+      "destination": "/ja/reference/get-legal-hold-policies"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policy_assignments_id_file_versions_on_hold",
+      "destination": "/ja/reference/get-legal-hold-policy-assignments-id-file-versions-on-hold"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policy_assignments_id_files_on_hold",
+      "destination": "/ja/reference/get-legal-hold-policy-assignments-id-files-on-hold"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policy_assignments_id",
+      "destination": "/ja/reference/get-legal-hold-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/get_legal_hold_policy_assignments",
+      "destination": "/ja/reference/get-legal-hold-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/get_metadata_cascade_policies_id",
+      "destination": "/ja/reference/get-metadata-cascade-policies-id"
+    },
+    {
+      "source": "/ja/reference/get_metadata_cascade_policies",
+      "destination": "/ja/reference/get-metadata-cascade-policies"
+    },
+    {
+      "source": "/ja/reference/get_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/ja/reference/get-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/ja/reference/get_metadata_taxonomies_id_id_nodes",
+      "destination": "/ja/reference/get-metadata-taxonomies-id-id-nodes"
+    },
+    {
+      "source": "/ja/reference/get_metadata_taxonomies_id_id",
+      "destination": "/ja/reference/get-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/ja/reference/get_metadata_taxonomies_id",
+      "destination": "/ja/reference/get-metadata-taxonomies-id"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema",
+      "destination": "/ja/reference/get-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_enterprise",
+      "destination": "/ja/reference/get-metadata-templates-enterprise"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_global",
+      "destination": "/ja/reference/get-metadata-templates-global"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_id_id_fields_id_options",
+      "destination": "/ja/reference/get-metadata-templates-id-id-fields-id-options"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_id_id_schema",
+      "destination": "/ja/reference/get-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates_id",
+      "destination": "/ja/reference/get-metadata-templates-id"
+    },
+    {
+      "source": "/ja/reference/get_metadata_templates",
+      "destination": "/ja/reference/get-metadata-templates"
+    },
+    {
+      "source": "/ja/reference/get_recent_items",
+      "destination": "/ja/reference/get-recent-items"
+    },
+    {
+      "source": "/ja/reference/get_retention_policies_id_assignments",
+      "destination": "/ja/reference/get-retention-policies-id-assignments"
+    },
+    {
+      "source": "/ja/reference/get_retention_policies_id",
+      "destination": "/ja/reference/get-retention-policies-id"
+    },
+    {
+      "source": "/ja/reference/get_retention_policies",
+      "destination": "/ja/reference/get-retention-policies"
+    },
+    {
+      "source": "/ja/reference/get_retention_policy_assignments_id_file_versions_under_retention",
+      "destination": "/ja/reference/get-retention-policy-assignments-id-file-versions-under-retention"
+    },
+    {
+      "source": "/ja/reference/get_retention_policy_assignments_id_files_under_retention",
+      "destination": "/ja/reference/get-retention-policy-assignments-id-files-under-retention"
+    },
+    {
+      "source": "/ja/reference/get_retention_policy_assignments_id",
+      "destination": "/ja/reference/get-retention-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/get_search",
+      "destination": "/ja/reference/get-search"
+    },
+    {
+      "source": "/ja/reference/get_shared_items__app_items",
+      "destination": "/ja/reference/get-shared-items--app-items"
+    },
+    {
+      "source": "/ja/reference/get_shared_items__folders",
+      "destination": "/ja/reference/get-shared-items--folders"
+    },
+    {
+      "source": "/ja/reference/get_shared_items__web_links",
+      "destination": "/ja/reference/get-shared-items--web-links"
+    },
+    {
+      "source": "/ja/reference/get_shared_items",
+      "destination": "/ja/reference/get-shared-items"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_reports_id",
+      "destination": "/ja/reference/get-shield-information-barrier-reports-id"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_reports",
+      "destination": "/ja/reference/get-shield-information-barrier-reports"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segment_members_id",
+      "destination": "/ja/reference/get-shield-information-barrier-segment-members-id"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segment_members",
+      "destination": "/ja/reference/get-shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segment_restrictions_id",
+      "destination": "/ja/reference/get-shield-information-barrier-segment-restrictions-id"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segment_restrictions",
+      "destination": "/ja/reference/get-shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segments_id",
+      "destination": "/ja/reference/get-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barrier_segments",
+      "destination": "/ja/reference/get-shield-information-barrier-segments"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barriers_id",
+      "destination": "/ja/reference/get-shield-information-barriers-id"
+    },
+    {
+      "source": "/ja/reference/get_shield_information_barriers",
+      "destination": "/ja/reference/get-shield-information-barriers"
+    },
+    {
+      "source": "/ja/reference/get_sign_requests_id",
+      "destination": "/ja/reference/get-sign-requests-id"
+    },
+    {
+      "source": "/ja/reference/get_sign_requests",
+      "destination": "/ja/reference/get-sign-requests"
+    },
+    {
+      "source": "/ja/reference/get_sign_templates_id",
+      "destination": "/ja/reference/get-sign-templates-id"
+    },
+    {
+      "source": "/ja/reference/get_sign_templates",
+      "destination": "/ja/reference/get-sign-templates"
+    },
+    {
+      "source": "/ja/reference/get_storage_policies_id",
+      "destination": "/ja/reference/get-storage-policies-id"
+    },
+    {
+      "source": "/ja/reference/get_storage_policies",
+      "destination": "/ja/reference/get-storage-policies"
+    },
+    {
+      "source": "/ja/reference/get_storage_policy_assignments_id",
+      "destination": "/ja/reference/get-storage-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/get_storage_policy_assignments",
+      "destination": "/ja/reference/get-storage-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/get_task_assignments_id",
+      "destination": "/ja/reference/get-task-assignments-id"
+    },
+    {
+      "source": "/ja/reference/get_tasks_id_assignments",
+      "destination": "/ja/reference/get-tasks-id-assignments"
+    },
+    {
+      "source": "/ja/reference/get_tasks_id",
+      "destination": "/ja/reference/get-tasks-id"
+    },
+    {
+      "source": "/ja/reference/get_terms_of_service_user_statuses",
+      "destination": "/ja/reference/get-terms-of-service-user-statuses"
+    },
+    {
+      "source": "/ja/reference/get_terms_of_services_id",
+      "destination": "/ja/reference/get-terms-of-services-id"
+    },
+    {
+      "source": "/ja/reference/get_terms_of_services",
+      "destination": "/ja/reference/get-terms-of-services"
+    },
+    {
+      "source": "/ja/reference/get_users_id_avatar",
+      "destination": "/ja/reference/get-users-id-avatar"
+    },
+    {
+      "source": "/ja/reference/get_users_id_email_aliases",
+      "destination": "/ja/reference/get-users-id-email-aliases"
+    },
+    {
+      "source": "/ja/reference/get_users_id_memberships",
+      "destination": "/ja/reference/get-users-id-memberships"
+    },
+    {
+      "source": "/ja/reference/get_users_id",
+      "destination": "/ja/reference/get-users-id"
+    },
+    {
+      "source": "/ja/reference/get_users_me",
+      "destination": "/ja/reference/get-users-me"
+    },
+    {
+      "source": "/ja/reference/get_users",
+      "destination": "/ja/reference/get-users"
+    },
+    {
+      "source": "/ja/reference/get_web_links_id__get_shared_link",
+      "destination": "/ja/reference/get-web-links-id--get-shared-link"
+    },
+    {
+      "source": "/ja/reference/get_web_links_id_trash",
+      "destination": "/ja/reference/get-web-links-id-trash"
+    },
+    {
+      "source": "/ja/reference/get_web_links_id",
+      "destination": "/ja/reference/get-web-links-id"
+    },
+    {
+      "source": "/ja/reference/get_webhooks_id",
+      "destination": "/ja/reference/get-webhooks-id"
+    },
+    {
+      "source": "/ja/reference/get_webhooks",
+      "destination": "/ja/reference/get-webhooks"
+    },
+    {
+      "source": "/ja/reference/get_workflows",
+      "destination": "/ja/reference/get-workflows"
+    },
+    {
+      "source": "/ja/reference/get_zip_downloads_id_content",
+      "destination": "/ja/reference/get-zip-downloads-id-content"
+    },
+    {
+      "source": "/ja/reference/get_zip_downloads_id_status",
+      "destination": "/ja/reference/get-zip-downloads-id-status"
+    },
+    {
+      "source": "/ja/reference/options_events",
+      "destination": "/ja/reference/options-events"
+    },
+    {
+      "source": "/ja/reference/options_files_content",
+      "destination": "/ja/reference/options-files-content"
+    },
+    {
+      "source": "/ja/reference/patch_metadata_taxonomies_id_id_levels_id",
+      "destination": "/ja/reference/patch-metadata-taxonomies-id-id-levels-id"
+    },
+    {
+      "source": "/ja/reference/patch_metadata_taxonomies_id_id_nodes_id",
+      "destination": "/ja/reference/patch-metadata-taxonomies-id-id-nodes-id"
+    },
+    {
+      "source": "/ja/reference/patch_metadata_taxonomies_id_id",
+      "destination": "/ja/reference/patch-metadata-taxonomies-id-id"
+    },
+    {
+      "source": "/ja/reference/post_ai_agents",
+      "destination": "/ja/reference/post-ai-agents"
+    },
+    {
+      "source": "/ja/reference/post_ai_ask",
+      "destination": "/ja/reference/post-ai-ask"
+    },
+    {
+      "source": "/ja/reference/post_ai_extract_structured",
+      "destination": "/ja/reference/post-ai-extract-structured"
+    },
+    {
+      "source": "/ja/reference/post_ai_extract",
+      "destination": "/ja/reference/post-ai-extract"
+    },
+    {
+      "source": "/ja/reference/post_ai_text_gen",
+      "destination": "/ja/reference/post-ai-text-gen"
+    },
+    {
+      "source": "/ja/reference/post_collaboration_whitelist_entries",
+      "destination": "/ja/reference/post-collaboration-whitelist-entries"
+    },
+    {
+      "source": "/ja/reference/post_collaboration_whitelist_exempt_targets",
+      "destination": "/ja/reference/post-collaboration-whitelist-exempt-targets"
+    },
+    {
+      "source": "/ja/reference/post_collaborations",
+      "destination": "/ja/reference/post-collaborations"
+    },
+    {
+      "source": "/ja/reference/post_comments",
+      "destination": "/ja/reference/post-comments"
+    },
+    {
+      "source": "/ja/reference/post_file_requests_id_copy",
+      "destination": "/ja/reference/post-file-requests-id-copy"
+    },
+    {
+      "source": "/ja/reference/post_files_content",
+      "destination": "/ja/reference/post-files-content"
+    },
+    {
+      "source": "/ja/reference/post_files_id_content",
+      "destination": "/ja/reference/post-files-id-content"
+    },
+    {
+      "source": "/ja/reference/post_files_id_copy",
+      "destination": "/ja/reference/post-files-id-copy"
+    },
+    {
+      "source": "/ja/reference/post_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/post-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/post_files_id_metadata_global_boxSkillsCards",
+      "destination": "/ja/reference/post-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/ja/reference/post_files_id_metadata_id_id",
+      "destination": "/ja/reference/post-files-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/post_files_id_upload_sessions",
+      "destination": "/ja/reference/post-files-id-upload-sessions"
+    },
+    {
+      "source": "/ja/reference/post_files_id_versions_current",
+      "destination": "/ja/reference/post-files-id-versions-current"
+    },
+    {
+      "source": "/ja/reference/post_files_id",
+      "destination": "/ja/reference/post-files-id"
+    },
+    {
+      "source": "/ja/reference/post_files_upload_sessions_id_commit",
+      "destination": "/ja/reference/post-files-upload-sessions-id-commit"
+    },
+    {
+      "source": "/ja/reference/post_files_upload_sessions",
+      "destination": "/ja/reference/post-files-upload-sessions"
+    },
+    {
+      "source": "/ja/reference/post_folder_locks",
+      "destination": "/ja/reference/post-folder-locks"
+    },
+    {
+      "source": "/ja/reference/post_folders_id_copy",
+      "destination": "/ja/reference/post-folders-id-copy"
+    },
+    {
+      "source": "/ja/reference/post_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/post-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/post_folders_id_metadata_id_id",
+      "destination": "/ja/reference/post-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/post_folders_id",
+      "destination": "/ja/reference/post-folders-id"
+    },
+    {
+      "source": "/ja/reference/post_folders",
+      "destination": "/ja/reference/post-folders"
+    },
+    {
+      "source": "/ja/reference/post_group_memberships",
+      "destination": "/ja/reference/post-group-memberships"
+    },
+    {
+      "source": "/ja/reference/post_groups_terminate_sessions",
+      "destination": "/ja/reference/post-groups-terminate-sessions"
+    },
+    {
+      "source": "/ja/reference/post_groups",
+      "destination": "/ja/reference/post-groups"
+    },
+    {
+      "source": "/ja/reference/post_integration_mappings_slack",
+      "destination": "/ja/reference/post-integration-mappings-slack"
+    },
+    {
+      "source": "/ja/reference/post_integration_mappings_teams",
+      "destination": "/ja/reference/post-integration-mappings-teams"
+    },
+    {
+      "source": "/ja/reference/post_invites",
+      "destination": "/ja/reference/post-invites"
+    },
+    {
+      "source": "/ja/reference/post_legal_hold_policies",
+      "destination": "/ja/reference/post-legal-hold-policies"
+    },
+    {
+      "source": "/ja/reference/post_legal_hold_policy_assignments",
+      "destination": "/ja/reference/post-legal-hold-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/post_metadata_cascade_policies_id_apply",
+      "destination": "/ja/reference/post-metadata-cascade-policies-id-apply"
+    },
+    {
+      "source": "/ja/reference/post_metadata_cascade_policies",
+      "destination": "/ja/reference/post-metadata-cascade-policies"
+    },
+    {
+      "source": "/ja/reference/post_metadata_queries_execute_read",
+      "destination": "/ja/reference/post-metadata-queries-execute-read"
+    },
+    {
+      "source": "/ja/reference/post_metadata_taxonomies_id_id_levels",
+      "destination": "/ja/reference/post-metadata-taxonomies-id-id-levels"
+    },
+    {
+      "source": "/ja/reference/post_metadata_taxonomies_id_id_levels:append",
+      "destination": "/ja/reference/post-metadata-taxonomies-id-id-levels:append"
+    },
+    {
+      "source": "/ja/reference/post_metadata_taxonomies_id_id_levels:trim",
+      "destination": "/ja/reference/post-metadata-taxonomies-id-id-levels:trim"
+    },
+    {
+      "source": "/ja/reference/post_metadata_taxonomies_id_id_nodes",
+      "destination": "/ja/reference/post-metadata-taxonomies-id-id-nodes"
+    },
+    {
+      "source": "/ja/reference/post_metadata_taxonomies",
+      "destination": "/ja/reference/post-metadata-taxonomies"
+    },
+    {
+      "source": "/ja/reference/post_metadata_templates_schema__classifications",
+      "destination": "/ja/reference/post-metadata-templates-schema--classifications"
+    },
+    {
+      "source": "/ja/reference/post_metadata_templates_schema",
+      "destination": "/ja/reference/post-metadata-templates-schema"
+    },
+    {
+      "source": "/ja/reference/post_oauth2_revoke",
+      "destination": "/ja/reference/post-oauth2-revoke"
+    },
+    {
+      "source": "/ja/reference/post_oauth2_token__refresh",
+      "destination": "/ja/reference/post-oauth2-token--refresh"
+    },
+    {
+      "source": "/ja/reference/post_oauth2_token",
+      "destination": "/ja/reference/post-oauth2-token"
+    },
+    {
+      "source": "/ja/reference/post_retention_policies",
+      "destination": "/ja/reference/post-retention-policies"
+    },
+    {
+      "source": "/ja/reference/post_retention_policy_assignments",
+      "destination": "/ja/reference/post-retention-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barrier_reports",
+      "destination": "/ja/reference/post-shield-information-barrier-reports"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barrier_segment_members",
+      "destination": "/ja/reference/post-shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barrier_segment_restrictions",
+      "destination": "/ja/reference/post-shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barrier_segments",
+      "destination": "/ja/reference/post-shield-information-barrier-segments"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barriers_change_status",
+      "destination": "/ja/reference/post-shield-information-barriers-change-status"
+    },
+    {
+      "source": "/ja/reference/post_shield_information_barriers",
+      "destination": "/ja/reference/post-shield-information-barriers"
+    },
+    {
+      "source": "/ja/reference/post_sign_requests_id_cancel",
+      "destination": "/ja/reference/post-sign-requests-id-cancel"
+    },
+    {
+      "source": "/ja/reference/post_sign_requests_id_resend",
+      "destination": "/ja/reference/post-sign-requests-id-resend"
+    },
+    {
+      "source": "/ja/reference/post_sign_requests",
+      "destination": "/ja/reference/post-sign-requests"
+    },
+    {
+      "source": "/ja/reference/post_storage_policy_assignments",
+      "destination": "/ja/reference/post-storage-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/post_task_assignments",
+      "destination": "/ja/reference/post-task-assignments"
+    },
+    {
+      "source": "/ja/reference/post_tasks",
+      "destination": "/ja/reference/post-tasks"
+    },
+    {
+      "source": "/ja/reference/post_terms_of_service_user_statuses",
+      "destination": "/ja/reference/post-terms-of-service-user-statuses"
+    },
+    {
+      "source": "/ja/reference/post_terms_of_services",
+      "destination": "/ja/reference/post-terms-of-services"
+    },
+    {
+      "source": "/ja/reference/post_users_id_avatar",
+      "destination": "/ja/reference/post-users-id-avatar"
+    },
+    {
+      "source": "/ja/reference/post_users_id_email_aliases",
+      "destination": "/ja/reference/post-users-id-email-aliases"
+    },
+    {
+      "source": "/ja/reference/post_users_terminate_sessions",
+      "destination": "/ja/reference/post-users-terminate-sessions"
+    },
+    {
+      "source": "/ja/reference/post_users",
+      "destination": "/ja/reference/post-users"
+    },
+    {
+      "source": "/ja/reference/post_web_links_id",
+      "destination": "/ja/reference/post-web-links-id"
+    },
+    {
+      "source": "/ja/reference/post_web_links",
+      "destination": "/ja/reference/post-web-links"
+    },
+    {
+      "source": "/ja/reference/post_webhooks",
+      "destination": "/ja/reference/post-webhooks"
+    },
+    {
+      "source": "/ja/reference/post_workflows_id_start",
+      "destination": "/ja/reference/post-workflows-id-start"
+    },
+    {
+      "source": "/ja/reference/post_zip_downloads",
+      "destination": "/ja/reference/post-zip-downloads"
+    },
+    {
+      "source": "/ja/reference/put_ai_agents_id",
+      "destination": "/ja/reference/put-ai-agents-id"
+    },
+    {
+      "source": "/ja/reference/put_collaborations_id",
+      "destination": "/ja/reference/put-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/put_comments_id",
+      "destination": "/ja/reference/put-comments-id"
+    },
+    {
+      "source": "/ja/reference/put_file_requests_id",
+      "destination": "/ja/reference/put-file-requests-id"
+    },
+    {
+      "source": "/ja/reference/put_files_id__add_shared_link",
+      "destination": "/ja/reference/put-files-id--add-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_files_id__remove_shared_link",
+      "destination": "/ja/reference/put-files-id--remove-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_files_id__update_shared_link",
+      "destination": "/ja/reference/put-files-id--update-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_files_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/put-files-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/put_files_id_metadata_global_boxSkillsCards",
+      "destination": "/ja/reference/put-files-id-metadata-global-boxSkillsCards"
+    },
+    {
+      "source": "/ja/reference/put_files_id_metadata_id_id",
+      "destination": "/ja/reference/put-files-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/put_files_id_versions_id",
+      "destination": "/ja/reference/put-files-id-versions-id"
+    },
+    {
+      "source": "/ja/reference/put_files_id_watermark",
+      "destination": "/ja/reference/put-files-id-watermark"
+    },
+    {
+      "source": "/ja/reference/put_files_id",
+      "destination": "/ja/reference/put-files-id"
+    },
+    {
+      "source": "/ja/reference/put_files_upload_sessions_id",
+      "destination": "/ja/reference/put-files-upload-sessions-id"
+    },
+    {
+      "source": "/ja/reference/put_folders_id__add_shared_link",
+      "destination": "/ja/reference/put-folders-id--add-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_folders_id__remove_shared_link",
+      "destination": "/ja/reference/put-folders-id--remove-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_folders_id__update_shared_link",
+      "destination": "/ja/reference/put-folders-id--update-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_folders_id_metadata_enterprise_securityClassification_6VMVochwUWo",
+      "destination": "/ja/reference/put-folders-id-metadata-enterprise-securityClassification-6VMVochwUWo"
+    },
+    {
+      "source": "/ja/reference/put_folders_id_metadata_id_id",
+      "destination": "/ja/reference/put-folders-id-metadata-id-id"
+    },
+    {
+      "source": "/ja/reference/put_folders_id_watermark",
+      "destination": "/ja/reference/put-folders-id-watermark"
+    },
+    {
+      "source": "/ja/reference/put_folders_id",
+      "destination": "/ja/reference/put-folders-id"
+    },
+    {
+      "source": "/ja/reference/put_group_memberships_id",
+      "destination": "/ja/reference/put-group-memberships-id"
+    },
+    {
+      "source": "/ja/reference/put_groups_id",
+      "destination": "/ja/reference/put-groups-id"
+    },
+    {
+      "source": "/ja/reference/put_integration_mappings_slack_id",
+      "destination": "/ja/reference/put-integration-mappings-slack-id"
+    },
+    {
+      "source": "/ja/reference/put_integration_mappings_teams_id",
+      "destination": "/ja/reference/put-integration-mappings-teams-id"
+    },
+    {
+      "source": "/ja/reference/put_legal_hold_policies_id",
+      "destination": "/ja/reference/put-legal-hold-policies-id"
+    },
+    {
+      "source": "/ja/reference/put_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema__add",
+      "destination": "/ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--add"
+    },
+    {
+      "source": "/ja/reference/put_metadata_templates_enterprise_securityClassification_6VMVochwUWo_schema__update",
+      "destination": "/ja/reference/put-metadata-templates-enterprise-securityClassification-6VMVochwUWo-schema--update"
+    },
+    {
+      "source": "/ja/reference/put_metadata_templates_id_id_schema",
+      "destination": "/ja/reference/put-metadata-templates-id-id-schema"
+    },
+    {
+      "source": "/ja/reference/put_retention_policies_id",
+      "destination": "/ja/reference/put-retention-policies-id"
+    },
+    {
+      "source": "/ja/reference/put_shield_information_barrier_segments_id",
+      "destination": "/ja/reference/put-shield-information-barrier-segments-id"
+    },
+    {
+      "source": "/ja/reference/put_skill_invocations_id",
+      "destination": "/ja/reference/put-skill-invocations-id"
+    },
+    {
+      "source": "/ja/reference/put_storage_policy_assignments_id",
+      "destination": "/ja/reference/put-storage-policy-assignments-id"
+    },
+    {
+      "source": "/ja/reference/put_task_assignments_id",
+      "destination": "/ja/reference/put-task-assignments-id"
+    },
+    {
+      "source": "/ja/reference/put_tasks_id",
+      "destination": "/ja/reference/put-tasks-id"
+    },
+    {
+      "source": "/ja/reference/put_terms_of_service_user_statuses_id",
+      "destination": "/ja/reference/put-terms-of-service-user-statuses-id"
+    },
+    {
+      "source": "/ja/reference/put_terms_of_services_id",
+      "destination": "/ja/reference/put-terms-of-services-id"
+    },
+    {
+      "source": "/ja/reference/put_users_id_folders_0",
+      "destination": "/ja/reference/put-users-id-folders-0"
+    },
+    {
+      "source": "/ja/reference/put_users_id",
+      "destination": "/ja/reference/put-users-id"
+    },
+    {
+      "source": "/ja/reference/put_web_links_id__add_shared_link",
+      "destination": "/ja/reference/put-web-links-id--add-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_web_links_id__remove_shared_link",
+      "destination": "/ja/reference/put-web-links-id--remove-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_web_links_id__update_shared_link",
+      "destination": "/ja/reference/put-web-links-id--update-shared-link"
+    },
+    {
+      "source": "/ja/reference/put_web_links_id",
+      "destination": "/ja/reference/put-web-links-id"
+    },
+    {
+      "source": "/ja/reference/put_webhooks_id",
+      "destination": "/ja/reference/put-webhooks-id"
+    },
+    {
+      "source": "/ja/reference/resources/access_token",
+      "destination": "/ja/reference/resources/access-token"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_allowed_entity",
+      "destination": "/ja/reference/resources/ai-agent-allowed-entity"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_ask",
+      "destination": "/ja/reference/resources/ai-agent-ask"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_extract_structured",
+      "destination": "/ja/reference/resources/ai-agent-extract-structured"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_extract",
+      "destination": "/ja/reference/resources/ai-agent-extract"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_reference",
+      "destination": "/ja/reference/resources/ai-agent-reference"
+    },
+    {
+      "source": "/ja/reference/resources/ai_agent_text_gen",
+      "destination": "/ja/reference/resources/ai-agent-text-gen"
+    },
+    {
+      "source": "/ja/reference/resources/ai_extract_response",
+      "destination": "/ja/reference/resources/ai-extract-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_extract_structured_response",
+      "destination": "/ja/reference/resources/ai-extract-structured-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_llm_endpoint_params_aws",
+      "destination": "/ja/reference/resources/ai-llm-endpoint-params-aws"
+    },
+    {
+      "source": "/ja/reference/resources/ai_llm_endpoint_params_google",
+      "destination": "/ja/reference/resources/ai-llm-endpoint-params-google"
+    },
+    {
+      "source": "/ja/reference/resources/ai_llm_endpoint_params_ibm",
+      "destination": "/ja/reference/resources/ai-llm-endpoint-params-ibm"
+    },
+    {
+      "source": "/ja/reference/resources/ai_llm_endpoint_params_openai",
+      "destination": "/ja/reference/resources/ai-llm-endpoint-params-openai"
+    },
+    {
+      "source": "/ja/reference/resources/ai_multiple_agent_response",
+      "destination": "/ja/reference/resources/ai-multiple-agent-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_response__full",
+      "destination": "/ja/reference/resources/ai-response--full"
+    },
+    {
+      "source": "/ja/reference/resources/ai_response",
+      "destination": "/ja/reference/resources/ai-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_single_agent_response__full",
+      "destination": "/ja/reference/resources/ai-single-agent-response--full"
+    },
+    {
+      "source": "/ja/reference/resources/ai_single_agent_response",
+      "destination": "/ja/reference/resources/ai-single-agent-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_ask_response",
+      "destination": "/ja/reference/resources/ai-studio-agent-ask-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_ask",
+      "destination": "/ja/reference/resources/ai-studio-agent-ask"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_extract_response",
+      "destination": "/ja/reference/resources/ai-studio-agent-extract-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_extract",
+      "destination": "/ja/reference/resources/ai-studio-agent-extract"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_text_gen_response",
+      "destination": "/ja/reference/resources/ai-studio-agent-text-gen-response"
+    },
+    {
+      "source": "/ja/reference/resources/ai_studio_agent_text_gen",
+      "destination": "/ja/reference/resources/ai-studio-agent-text-gen"
+    },
+    {
+      "source": "/ja/reference/resources/app_item_association",
+      "destination": "/ja/reference/resources/app-item-association"
+    },
+    {
+      "source": "/ja/reference/resources/app_item_associations",
+      "destination": "/ja/reference/resources/app-item-associations"
+    },
+    {
+      "source": "/ja/reference/resources/app_item_event_source",
+      "destination": "/ja/reference/resources/app-item-event-source"
+    },
+    {
+      "source": "/ja/reference/resources/app_item",
+      "destination": "/ja/reference/resources/app-item"
+    },
+    {
+      "source": "/ja/reference/resources/classification_template",
+      "destination": "/ja/reference/resources/classification-template"
+    },
+    {
+      "source": "/ja/reference/resources/client_error",
+      "destination": "/ja/reference/resources/client-error"
+    },
+    {
+      "source": "/ja/reference/resources/collaboration_allowlist_entries",
+      "destination": "/ja/reference/resources/collaboration-allowlist-entries"
+    },
+    {
+      "source": "/ja/reference/resources/collaboration_allowlist_entry",
+      "destination": "/ja/reference/resources/collaboration-allowlist-entry"
+    },
+    {
+      "source": "/ja/reference/resources/collaboration_allowlist_exempt_target",
+      "destination": "/ja/reference/resources/collaboration-allowlist-exempt-target"
+    },
+    {
+      "source": "/ja/reference/resources/collaboration_allowlist_exempt_targets",
+      "destination": "/ja/reference/resources/collaboration-allowlist-exempt-targets"
+    },
+    {
+      "source": "/ja/reference/resources/collaborations_offset_paginated",
+      "destination": "/ja/reference/resources/collaborations-offset-paginated"
+    },
+    {
+      "source": "/ja/reference/resources/comment__base",
+      "destination": "/ja/reference/resources/comment--base"
+    },
+    {
+      "source": "/ja/reference/resources/comment__full",
+      "destination": "/ja/reference/resources/comment--full"
+    },
+    {
+      "source": "/ja/reference/resources/conflict_error",
+      "destination": "/ja/reference/resources/conflict-error"
+    },
+    {
+      "source": "/ja/reference/resources/device_pinner",
+      "destination": "/ja/reference/resources/device-pinner"
+    },
+    {
+      "source": "/ja/reference/resources/device_pinners",
+      "destination": "/ja/reference/resources/device-pinners"
+    },
+    {
+      "source": "/ja/reference/resources/email_alias",
+      "destination": "/ja/reference/resources/email-alias"
+    },
+    {
+      "source": "/ja/reference/resources/email_aliases",
+      "destination": "/ja/reference/resources/email-aliases"
+    },
+    {
+      "source": "/ja/reference/resources/enterprise__base",
+      "destination": "/ja/reference/resources/enterprise--base"
+    },
+    {
+      "source": "/ja/reference/resources/event_source",
+      "destination": "/ja/reference/resources/event-source"
+    },
+    {
+      "source": "/ja/reference/resources/file__base",
+      "destination": "/ja/reference/resources/file--base"
+    },
+    {
+      "source": "/ja/reference/resources/file__full",
+      "destination": "/ja/reference/resources/file--full"
+    },
+    {
+      "source": "/ja/reference/resources/file__mini",
+      "destination": "/ja/reference/resources/file--mini"
+    },
+    {
+      "source": "/ja/reference/resources/file_conflict",
+      "destination": "/ja/reference/resources/file-conflict"
+    },
+    {
+      "source": "/ja/reference/resources/file_request",
+      "destination": "/ja/reference/resources/file-request"
+    },
+    {
+      "source": "/ja/reference/resources/file_version__base",
+      "destination": "/ja/reference/resources/file-version--base"
+    },
+    {
+      "source": "/ja/reference/resources/file_version__full",
+      "destination": "/ja/reference/resources/file-version--full"
+    },
+    {
+      "source": "/ja/reference/resources/file_version__mini",
+      "destination": "/ja/reference/resources/file-version--mini"
+    },
+    {
+      "source": "/ja/reference/resources/file_version_legal_hold",
+      "destination": "/ja/reference/resources/file-version-legal-hold"
+    },
+    {
+      "source": "/ja/reference/resources/file_version_legal_holds",
+      "destination": "/ja/reference/resources/file-version-legal-holds"
+    },
+    {
+      "source": "/ja/reference/resources/file_version_retention",
+      "destination": "/ja/reference/resources/file-version-retention"
+    },
+    {
+      "source": "/ja/reference/resources/file_version_retentions",
+      "destination": "/ja/reference/resources/file-version-retentions"
+    },
+    {
+      "source": "/ja/reference/resources/file_version",
+      "destination": "/ja/reference/resources/file-version"
+    },
+    {
+      "source": "/ja/reference/resources/file_versions_on_hold",
+      "destination": "/ja/reference/resources/file-versions-on-hold"
+    },
+    {
+      "source": "/ja/reference/resources/file_versions",
+      "destination": "/ja/reference/resources/file-versions"
+    },
+    {
+      "source": "/ja/reference/resources/files_on_hold",
+      "destination": "/ja/reference/resources/files-on-hold"
+    },
+    {
+      "source": "/ja/reference/resources/files_under_retention",
+      "destination": "/ja/reference/resources/files-under-retention"
+    },
+    {
+      "source": "/ja/reference/resources/folder__base",
+      "destination": "/ja/reference/resources/folder--base"
+    },
+    {
+      "source": "/ja/reference/resources/folder__full",
+      "destination": "/ja/reference/resources/folder--full"
+    },
+    {
+      "source": "/ja/reference/resources/folder__mini",
+      "destination": "/ja/reference/resources/folder--mini"
+    },
+    {
+      "source": "/ja/reference/resources/folder_lock",
+      "destination": "/ja/reference/resources/folder-lock"
+    },
+    {
+      "source": "/ja/reference/resources/folder_locks",
+      "destination": "/ja/reference/resources/folder-locks"
+    },
+    {
+      "source": "/ja/reference/resources/generic_source",
+      "destination": "/ja/reference/resources/generic-source"
+    },
+    {
+      "source": "/ja/reference/resources/group__base",
+      "destination": "/ja/reference/resources/group--base"
+    },
+    {
+      "source": "/ja/reference/resources/group__full",
+      "destination": "/ja/reference/resources/group--full"
+    },
+    {
+      "source": "/ja/reference/resources/group__mini",
+      "destination": "/ja/reference/resources/group--mini"
+    },
+    {
+      "source": "/ja/reference/resources/group_membership",
+      "destination": "/ja/reference/resources/group-membership"
+    },
+    {
+      "source": "/ja/reference/resources/group_memberships",
+      "destination": "/ja/reference/resources/group-memberships"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mapping_slack_create_request",
+      "destination": "/ja/reference/resources/integration-mapping-slack-create-request"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mapping_slack",
+      "destination": "/ja/reference/resources/integration-mapping-slack"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mapping_teams_create_request",
+      "destination": "/ja/reference/resources/integration-mapping-teams-create-request"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mapping_teams",
+      "destination": "/ja/reference/resources/integration-mapping-teams"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mappings_slack",
+      "destination": "/ja/reference/resources/integration-mappings-slack"
+    },
+    {
+      "source": "/ja/reference/resources/integration_mappings_teams",
+      "destination": "/ja/reference/resources/integration-mappings-teams"
+    },
+    {
+      "source": "/ja/reference/resources/items_offset_paginated",
+      "destination": "/ja/reference/resources/items-offset-paginated"
+    },
+    {
+      "source": "/ja/reference/resources/keyword_skill_card",
+      "destination": "/ja/reference/resources/keyword-skill-card"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policies",
+      "destination": "/ja/reference/resources/legal-hold-policies"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policy__mini",
+      "destination": "/ja/reference/resources/legal-hold-policy--mini"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policy_assignment__base",
+      "destination": "/ja/reference/resources/legal-hold-policy-assignment--base"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policy_assignment",
+      "destination": "/ja/reference/resources/legal-hold-policy-assignment"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policy_assignments",
+      "destination": "/ja/reference/resources/legal-hold-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/resources/legal_hold_policy",
+      "destination": "/ja/reference/resources/legal-hold-policy"
+    },
+    {
+      "source": "/ja/reference/resources/metadata__base",
+      "destination": "/ja/reference/resources/metadata--base"
+    },
+    {
+      "source": "/ja/reference/resources/metadata__full",
+      "destination": "/ja/reference/resources/metadata--full"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_cascade_policies",
+      "destination": "/ja/reference/resources/metadata-cascade-policies"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_cascade_policy",
+      "destination": "/ja/reference/resources/metadata-cascade-policy"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_error",
+      "destination": "/ja/reference/resources/metadata-error"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_field_filter_date_range",
+      "destination": "/ja/reference/resources/metadata-field-filter-date-range"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_field_filter_float_range",
+      "destination": "/ja/reference/resources/metadata-field-filter-float-range"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_filter",
+      "destination": "/ja/reference/resources/metadata-filter"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_query_results",
+      "destination": "/ja/reference/resources/metadata-query-results"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomies",
+      "destination": "/ja/reference/resources/metadata-taxonomies"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomy_level",
+      "destination": "/ja/reference/resources/metadata-taxonomy-level"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomy_levels",
+      "destination": "/ja/reference/resources/metadata-taxonomy-levels"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomy_node",
+      "destination": "/ja/reference/resources/metadata-taxonomy-node"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomy_nodes",
+      "destination": "/ja/reference/resources/metadata-taxonomy-nodes"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_taxonomy",
+      "destination": "/ja/reference/resources/metadata-taxonomy"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_template",
+      "destination": "/ja/reference/resources/metadata-template"
+    },
+    {
+      "source": "/ja/reference/resources/metadata_templates",
+      "destination": "/ja/reference/resources/metadata-templates"
+    },
+    {
+      "source": "/ja/reference/resources/oauth2_error",
+      "destination": "/ja/reference/resources/oauth2-error"
+    },
+    {
+      "source": "/ja/reference/resources/realtime_server",
+      "destination": "/ja/reference/resources/realtime-server"
+    },
+    {
+      "source": "/ja/reference/resources/realtime_servers",
+      "destination": "/ja/reference/resources/realtime-servers"
+    },
+    {
+      "source": "/ja/reference/resources/recent_item",
+      "destination": "/ja/reference/resources/recent-item"
+    },
+    {
+      "source": "/ja/reference/resources/recent_items",
+      "destination": "/ja/reference/resources/recent-items"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policies",
+      "destination": "/ja/reference/resources/retention-policies"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policy__base",
+      "destination": "/ja/reference/resources/retention-policy--base"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policy__mini",
+      "destination": "/ja/reference/resources/retention-policy--mini"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policy_assignment",
+      "destination": "/ja/reference/resources/retention-policy-assignment"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policy_assignments",
+      "destination": "/ja/reference/resources/retention-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/resources/retention_policy",
+      "destination": "/ja/reference/resources/retention-policy"
+    },
+    {
+      "source": "/ja/reference/resources/search_result_with_shared_link",
+      "destination": "/ja/reference/resources/search-result-with-shared-link"
+    },
+    {
+      "source": "/ja/reference/resources/search_results_with_shared_links",
+      "destination": "/ja/reference/resources/search-results-with-shared-links"
+    },
+    {
+      "source": "/ja/reference/resources/search_results",
+      "destination": "/ja/reference/resources/search-results"
+    },
+    {
+      "source": "/ja/reference/resources/session_termination",
+      "destination": "/ja/reference/resources/session-termination"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier__base",
+      "destination": "/ja/reference/resources/shield-information-barrier--base"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_reference",
+      "destination": "/ja/reference/resources/shield-information-barrier-reference"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_report__base",
+      "destination": "/ja/reference/resources/shield-information-barrier-report--base"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_report_details",
+      "destination": "/ja/reference/resources/shield-information-barrier-report-details"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_report",
+      "destination": "/ja/reference/resources/shield-information-barrier-report"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_reports",
+      "destination": "/ja/reference/resources/shield-information-barrier-reports"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_member__base",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-member--base"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_member__mini",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-member--mini"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_member",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-member"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_members",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-members"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_restriction__base",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-restriction--base"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_restriction__mini",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-restriction--mini"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_restriction",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-restriction"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment_restrictions",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment-restrictions"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segment",
+      "destination": "/ja/reference/resources/shield-information-barrier-segment"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier_segments",
+      "destination": "/ja/reference/resources/shield-information-barrier-segments"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barrier",
+      "destination": "/ja/reference/resources/shield-information-barrier"
+    },
+    {
+      "source": "/ja/reference/resources/shield_information_barriers",
+      "destination": "/ja/reference/resources/shield-information-barriers"
+    },
+    {
+      "source": "/ja/reference/resources/sign_request_create_request",
+      "destination": "/ja/reference/resources/sign-request-create-request"
+    },
+    {
+      "source": "/ja/reference/resources/sign_request",
+      "destination": "/ja/reference/resources/sign-request"
+    },
+    {
+      "source": "/ja/reference/resources/sign_requests",
+      "destination": "/ja/reference/resources/sign-requests"
+    },
+    {
+      "source": "/ja/reference/resources/sign_template",
+      "destination": "/ja/reference/resources/sign-template"
+    },
+    {
+      "source": "/ja/reference/resources/sign_templates",
+      "destination": "/ja/reference/resources/sign-templates"
+    },
+    {
+      "source": "/ja/reference/resources/skill_cards_metadata",
+      "destination": "/ja/reference/resources/skill-cards-metadata"
+    },
+    {
+      "source": "/ja/reference/resources/status_skill_card",
+      "destination": "/ja/reference/resources/status-skill-card"
+    },
+    {
+      "source": "/ja/reference/resources/storage_policies",
+      "destination": "/ja/reference/resources/storage-policies"
+    },
+    {
+      "source": "/ja/reference/resources/storage_policy__mini",
+      "destination": "/ja/reference/resources/storage-policy--mini"
+    },
+    {
+      "source": "/ja/reference/resources/storage_policy_assignment",
+      "destination": "/ja/reference/resources/storage-policy-assignment"
+    },
+    {
+      "source": "/ja/reference/resources/storage_policy_assignments",
+      "destination": "/ja/reference/resources/storage-policy-assignments"
+    },
+    {
+      "source": "/ja/reference/resources/storage_policy",
+      "destination": "/ja/reference/resources/storage-policy"
+    },
+    {
+      "source": "/ja/reference/resources/task_assignment",
+      "destination": "/ja/reference/resources/task-assignment"
+    },
+    {
+      "source": "/ja/reference/resources/task_assignments",
+      "destination": "/ja/reference/resources/task-assignments"
+    },
+    {
+      "source": "/ja/reference/resources/terms_of_service__base",
+      "destination": "/ja/reference/resources/terms-of-service--base"
+    },
+    {
+      "source": "/ja/reference/resources/terms_of_service_user_status",
+      "destination": "/ja/reference/resources/terms-of-service-user-status"
+    },
+    {
+      "source": "/ja/reference/resources/terms_of_service",
+      "destination": "/ja/reference/resources/terms-of-service"
+    },
+    {
+      "source": "/ja/reference/resources/terms_of_services_user_statuses",
+      "destination": "/ja/reference/resources/terms-of-services-user-statuses"
+    },
+    {
+      "source": "/ja/reference/resources/terms_of_services",
+      "destination": "/ja/reference/resources/terms-of-services"
+    },
+    {
+      "source": "/ja/reference/resources/timeline_skill_card",
+      "destination": "/ja/reference/resources/timeline-skill-card"
+    },
+    {
+      "source": "/ja/reference/resources/transcript_skill_card",
+      "destination": "/ja/reference/resources/transcript-skill-card"
+    },
+    {
+      "source": "/ja/reference/resources/trash_file_restored",
+      "destination": "/ja/reference/resources/trash-file-restored"
+    },
+    {
+      "source": "/ja/reference/resources/trash_file",
+      "destination": "/ja/reference/resources/trash-file"
+    },
+    {
+      "source": "/ja/reference/resources/trash_folder_restored",
+      "destination": "/ja/reference/resources/trash-folder-restored"
+    },
+    {
+      "source": "/ja/reference/resources/trash_folder",
+      "destination": "/ja/reference/resources/trash-folder"
+    },
+    {
+      "source": "/ja/reference/resources/trash_web_link_restored",
+      "destination": "/ja/reference/resources/trash-web-link-restored"
+    },
+    {
+      "source": "/ja/reference/resources/trash_web_link",
+      "destination": "/ja/reference/resources/trash-web-link"
+    },
+    {
+      "source": "/ja/reference/resources/upload_part__mini",
+      "destination": "/ja/reference/resources/upload-part--mini"
+    },
+    {
+      "source": "/ja/reference/resources/upload_part",
+      "destination": "/ja/reference/resources/upload-part"
+    },
+    {
+      "source": "/ja/reference/resources/upload_parts",
+      "destination": "/ja/reference/resources/upload-parts"
+    },
+    {
+      "source": "/ja/reference/resources/upload_session",
+      "destination": "/ja/reference/resources/upload-session"
+    },
+    {
+      "source": "/ja/reference/resources/upload_url",
+      "destination": "/ja/reference/resources/upload-url"
+    },
+    {
+      "source": "/ja/reference/resources/uploaded_part",
+      "destination": "/ja/reference/resources/uploaded-part"
+    },
+    {
+      "source": "/ja/reference/resources/user__base",
+      "destination": "/ja/reference/resources/user--base"
+    },
+    {
+      "source": "/ja/reference/resources/user__full",
+      "destination": "/ja/reference/resources/user--full"
+    },
+    {
+      "source": "/ja/reference/resources/user__mini",
+      "destination": "/ja/reference/resources/user--mini"
+    },
+    {
+      "source": "/ja/reference/resources/user_avatar",
+      "destination": "/ja/reference/resources/user-avatar"
+    },
+    {
+      "source": "/ja/reference/resources/user_collaborations",
+      "destination": "/ja/reference/resources/user-collaborations"
+    },
+    {
+      "source": "/ja/reference/resources/user_integration_mappings_reference",
+      "destination": "/ja/reference/resources/user-integration-mappings-reference"
+    },
+    {
+      "source": "/ja/reference/resources/web_link__base",
+      "destination": "/ja/reference/resources/web-link--base"
+    },
+    {
+      "source": "/ja/reference/resources/web_link__mini",
+      "destination": "/ja/reference/resources/web-link--mini"
+    },
+    {
+      "source": "/ja/reference/resources/web_link",
+      "destination": "/ja/reference/resources/web-link"
+    },
+    {
+      "source": "/ja/reference/resources/webhook__mini",
+      "destination": "/ja/reference/resources/webhook--mini"
+    },
+    {
+      "source": "/ja/reference/resources/workflow__mini",
+      "destination": "/ja/reference/resources/workflow--mini"
+    },
+    {
+      "source": "/ja/reference/resources/zip_download_status",
+      "destination": "/ja/reference/resources/zip-download-status"
+    },
+    {
+      "source": "/ja/reference/resources/zip_download",
+      "destination": "/ja/reference/resources/zip-download"
+    },
+    {
+      "source": "/ja/reference/v2025.0/delete_archives_id",
+      "destination": "/ja/reference/v2025.0/delete-archives-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/delete_docgen_templates_id",
+      "destination": "/ja/reference/v2025.0/delete-docgen-templates-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/delete_hub_collaborations_id",
+      "destination": "/ja/reference/v2025.0/delete-hub-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/delete_hubs_id",
+      "destination": "/ja/reference/v2025.0/delete-hubs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/delete_shield_lists_id",
+      "destination": "/ja/reference/v2025.0/delete-shield-lists-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_archives",
+      "destination": "/ja/reference/v2025.0/get-archives"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_batch_jobs_id",
+      "destination": "/ja/reference/v2025.0/get-docgen-batch-jobs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_jobs_id",
+      "destination": "/ja/reference/v2025.0/get-docgen-jobs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_jobs",
+      "destination": "/ja/reference/v2025.0/get-docgen-jobs"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_template_jobs_id",
+      "destination": "/ja/reference/v2025.0/get-docgen-template-jobs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_templates_id_tags",
+      "destination": "/ja/reference/v2025.0/get-docgen-templates-id-tags"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_templates_id",
+      "destination": "/ja/reference/v2025.0/get-docgen-templates-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_docgen_templates",
+      "destination": "/ja/reference/v2025.0/get-docgen-templates"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_enterprise_configurations_id",
+      "destination": "/ja/reference/v2025.0/get-enterprise-configurations-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_enterprise_hubs",
+      "destination": "/ja/reference/v2025.0/get-enterprise-hubs"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_hub_collaborations_id",
+      "destination": "/ja/reference/v2025.0/get-hub-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_hub_collaborations",
+      "destination": "/ja/reference/v2025.0/get-hub-collaborations"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_hub_items",
+      "destination": "/ja/reference/v2025.0/get-hub-items"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_hubs_id",
+      "destination": "/ja/reference/v2025.0/get-hubs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_hubs",
+      "destination": "/ja/reference/v2025.0/get-hubs"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_shield_lists_id",
+      "destination": "/ja/reference/v2025.0/get-shield-lists-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/get_shield_lists",
+      "destination": "/ja/reference/v2025.0/get-shield-lists"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_archives",
+      "destination": "/ja/reference/v2025.0/post-archives"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_docgen_batches",
+      "destination": "/ja/reference/v2025.0/post-docgen-batches"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_docgen_templates",
+      "destination": "/ja/reference/v2025.0/post-docgen-templates"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_external_users_submit_delete_job",
+      "destination": "/ja/reference/v2025.0/post-external-users-submit-delete-job"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_hub_collaborations",
+      "destination": "/ja/reference/v2025.0/post-hub-collaborations"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_hubs_id_copy",
+      "destination": "/ja/reference/v2025.0/post-hubs-id-copy"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_hubs_id_manage_items",
+      "destination": "/ja/reference/v2025.0/post-hubs-id-manage-items"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_hubs",
+      "destination": "/ja/reference/v2025.0/post-hubs"
+    },
+    {
+      "source": "/ja/reference/v2025.0/post_shield_lists",
+      "destination": "/ja/reference/v2025.0/post-shield-lists"
+    },
+    {
+      "source": "/ja/reference/v2025.0/put_archives_id",
+      "destination": "/ja/reference/v2025.0/put-archives-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/put_hub_collaborations_id",
+      "destination": "/ja/reference/v2025.0/put-hub-collaborations-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/put_hubs_id",
+      "destination": "/ja/reference/v2025.0/put-hubs-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/put_shield_lists_id",
+      "destination": "/ja/reference/v2025.0/put-shield-lists-id"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/client_error",
+      "destination": "/ja/reference/v2025.0/resources/client-error"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_batch__base",
+      "destination": "/ja/reference/v2025.0/resources/docgen-batch--base"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_job__base",
+      "destination": "/ja/reference/v2025.0/resources/docgen-job--base"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_job__full",
+      "destination": "/ja/reference/v2025.0/resources/docgen-job--full"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_job",
+      "destination": "/ja/reference/v2025.0/resources/docgen-job"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_jobs__full",
+      "destination": "/ja/reference/v2025.0/resources/docgen-jobs--full"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_jobs",
+      "destination": "/ja/reference/v2025.0/resources/docgen-jobs"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_tag",
+      "destination": "/ja/reference/v2025.0/resources/docgen-tag"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_tags_processing_message",
+      "destination": "/ja/reference/v2025.0/resources/docgen-tags-processing-message"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_tags",
+      "destination": "/ja/reference/v2025.0/resources/docgen-tags"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_template__base",
+      "destination": "/ja/reference/v2025.0/resources/docgen-template--base"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_template",
+      "destination": "/ja/reference/v2025.0/resources/docgen-template"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/docgen_templates",
+      "destination": "/ja/reference/v2025.0/resources/docgen-templates"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/enterprise_configuration_content_and_sharing",
+      "destination": "/ja/reference/v2025.0/resources/enterprise-configuration-content-and-sharing"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/enterprise_configuration_security",
+      "destination": "/ja/reference/v2025.0/resources/enterprise-configuration-security"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/enterprise_configuration_shield",
+      "destination": "/ja/reference/v2025.0/resources/enterprise-configuration-shield"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/enterprise_configuration_user_settings",
+      "destination": "/ja/reference/v2025.0/resources/enterprise-configuration-user-settings"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/enterprise_configuration",
+      "destination": "/ja/reference/v2025.0/resources/enterprise-configuration"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/external_users_submit_delete_job_response",
+      "destination": "/ja/reference/v2025.0/resources/external-users-submit-delete-job-response"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub__base",
+      "destination": "/ja/reference/v2025.0/resources/hub--base"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub_collaboration",
+      "destination": "/ja/reference/v2025.0/resources/hub-collaboration"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub_collaborations",
+      "destination": "/ja/reference/v2025.0/resources/hub-collaborations"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub_item",
+      "destination": "/ja/reference/v2025.0/resources/hub-item"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub_items_manage_response",
+      "destination": "/ja/reference/v2025.0/resources/hub-items-manage-response"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/hub_items",
+      "destination": "/ja/reference/v2025.0/resources/hub-items"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list__mini",
+      "destination": "/ja/reference/v2025.0/resources/shield-list--mini"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list_content__country",
+      "destination": "/ja/reference/v2025.0/resources/shield-list-content--country"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list_content__domains",
+      "destination": "/ja/reference/v2025.0/resources/shield-list-content--domains"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list_content__email",
+      "destination": "/ja/reference/v2025.0/resources/shield-list-content--email"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list_content__integration",
+      "destination": "/ja/reference/v2025.0/resources/shield-list-content--integration"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list_content__ip",
+      "destination": "/ja/reference/v2025.0/resources/shield-list-content--ip"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_list",
+      "destination": "/ja/reference/v2025.0/resources/shield-list"
+    },
+    {
+      "source": "/ja/reference/v2025.0/resources/shield_lists",
+      "destination": "/ja/reference/v2025.0/resources/shield-lists"
     }
   ],
   "footer": {
