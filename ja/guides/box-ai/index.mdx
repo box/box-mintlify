@@ -1,20 +1,11 @@
 ---
-title: "Box AI"
 sidebarTitle: 概要
-category_id: box-ai
-subcategory_id: null
-is_index: true
-id: box-ai
-type: guide
-total_steps: 0
-sibling_id: guides
-parent_id: guides
-next_page_id: ''
-previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/index.md
+title: Box AI
+
 fullyTranslated: true
 ---
+
+import {Link} from "/snippets/Link.jsx";
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
@@ -26,7 +17,7 @@ Box AI APIには、アプリケーションのワークフローで大規模言�
 
 Box AIに対して、ユーザーの質問への回答、ドキュメントの内容の要約、ドキュメントで使用できるテキストの生成を求めることができます。また、Box AIを使用して、スキーマやメタデータテンプレートなど、指定した入力データからメタデータを抽出することもできます。
 
-[Box AI for UI Elements][boxaielement]機能を使用すると、アプリにBox AIを組み込むことができます。
+<Link href="/guides/embed/ui-elements/preview#box-ai-ui-element">Box AI for UI Elements</Link>機能を使用すると、アプリにBox AIを組み込むことができます。
 
 ### Box AIに質問する
 
@@ -34,7 +25,9 @@ Boxに保存しているドキュメントで作業している間など、Box A
 
 Box AIは、指定されたファイルに基づいて、コンテンツに関する質問に回答したり、要約を生成したりできます。
 
-![ドキュメント内の \[Box AI\]](/images/guides/box-ai/box-ai-in-doc.png)
+<Frame>
+  ![ドキュメント内の \[Box AI\]](/images/guides/box-ai/box-ai-in-doc.png)
+</Frame>
 
 ユーザーがドキュメントでの作業中にBox AIを操作する方法の例については、[Box AI for Documents][boxaidocs]を参照してください。
 
@@ -44,11 +37,13 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 また、もう1つの例として、Box Notesでは、テキストの生成や既存メモのコンテンツのリファインにBox AIを使用します。詳細については、[Box AI for Notes][boxainotes]を参照してください。
 
-![Notes内の \[Box AI\]](/images/guides/box-ai/box-ai-in-notes.png)
+<Frame>
+  ![Notes内の \[Box AI\]](/images/guides/box-ai/box-ai-in-notes.png)
+</Frame>
 
 ### メタデータの抽出
 
-[`POST /2.0/ai/extract`][extract]および[`POST /2.0/ai/extract_structured`][extract-structured]エンドポイントを使用すると、指定した入力からデータを抽出し、キー/値ペアの形式で返すことができます。
+<Link href="/reference/post-ai-extract">`POST /2.0/ai/extract`</Link>および<Link href="/reference/post-ai-extract-structured">`POST /2.0/ai/extract_structured`</Link>エンドポイントを使用すると、指定した入力からデータを抽出し、キー/値ペアの形式で返すことができます。
 
 * `extract_structured`エンドポイントは、メタデータテンプレートから取得したあらかじめ定義された構造、または一連のフィールドに従ってデータを抽出する場合に使用します。ドキュメントが短い場合に使用してください。
 * ドキュメントが長くて複雑な場合は、抽出エージェント (強化) を使用します。
@@ -58,7 +53,7 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 抽出エージェント (強化) は、複雑なドキュメントからキー/値ペアを抽出するよう設計されています。検出や検索を容易にするため、非構造化コンテンツをメタデータに変換します。
 
-Box AI APIを介して[エージェントを使用][eea-tutorial]すると、非構造化データを、実稼働環境のデータベース、サードパーティ製システム、分析で使用する構造化された出力に変換できます。
+Box AI APIを介して<Link href="/guides/box-ai/ai-tutorials/extract-metadata-structured#">エージェントを使用</Link>すると、非構造化データを、実稼働環境のデータベース、サードパーティ製システム、分析で使用する構造化された出力に変換できます。
 
 抽出エージェント (強化) は、Gemini 2.5 Proを使用して思考連鎖推論機能を提供し、抽出された値とその回答の根拠となる推論の両方を返します。
 
@@ -66,11 +61,11 @@ Box AI APIを介して[エージェントを使用][eea-tutorial]すると、非
 
 デフォルトのエージェント構成を上書きし、独自のカスタム設定を導入するには、Box AI APIリクエストで利用可能な`ai_agent`パラメータを使用できます。
 
-詳細については、[AIエージェントのデフォルト構成][agent-default]を参照してください。
+詳細については、<Link href="/guides/box-ai/ai-agents/get-agent-default-config">AIエージェントのデフォルト構成</Link>を参照してください。
 
 ### Box AI for UI Elements
 
-Box AI for UI Elementsはコンテンツプレビューで利用可能で、これにより、Platformアプリケーション内で直接ドキュメントについて質問することができます。[Box AI for UI Elements][boxaielement]を使用してプロジェクトにBox AI機能を埋め込む方法をご確認ください。
+Box AI for UI Elementsはコンテンツプレビューで利用可能で、これにより、Platformアプリケーション内で直接ドキュメントについて質問することができます。<Link href="/guides/embed/ui-elements/preview#box-ai-ui-element">Box AI for UI Elements</Link>を使用してプロジェクトにBox AI機能を埋め込む方法をご確認ください。
 
 {/* alex ignore */}
 
@@ -79,9 +74,7 @@ Box AI for UI Elementsはコンテンツプレビューで利用可能で、こ�
 Box AIは、英語、日本語、フランス語、スペイン語など、多くの言語で使用できます。ただし、基になるモデルは、主に英語のドキュメントでトレーニングされています。つまり、他の言語のプロンプトで返される回答は、英語の場合よりも低品質になる可能性があります。テストでは、要約、文法やつづりの確認、質問への回答について満足のいく結果が示されていますが、結果は英語の場合と異なる可能性があることに留意してください。
 
 <Tip>
-
-言語を日本語に切り替えると、より適切な結果が得られます。
-
+  言語を日本語に切り替えると、より適切な結果が得られます。
 </Tip>
 
 ## \[ユーザーアクティビティ] レポート (UAR) でのBox AI API
@@ -95,32 +88,23 @@ Box AIは、英語、日本語、フランス語、スペイン語など、多�
 
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 
-[boxaielement]: /ja/guides/embed/ui-elements/preview#box-ai-ui-element
-
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
-
-[agent-default]: /ja/guides/box-ai/ai-agents/get-agent-default-config
-
-[extract]: /ja/reference/post-ai-extract
-
-[extract-structured]: /ja/reference/post-ai-extract-structured
-
-[eea-tutorial]: /ja/guides/box-ai/ai-tutorials/extract-metadata-structured#
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Generate text", href: "/ja/reference/post-ai-text-gen", badge: "POST" },
-    { label: "Ask question", href: "/ja/reference/post-ai-ask", badge: "POST" }
-  ]}
+  { label: "Generate text", href: "/reference/post-ai-text-gen", badge: "POST" },
+  { label: "Ask question", href: "/reference/post-ai-ask", badge: "POST" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "Box AIの使い方", href: "/ja/guides/box-ai/ai-tutorials/prerequisites", badge: "ガイド" },
-    { label: "Box AIに質問する", href: "/ja/guides/box-ai/ai-tutorials/ask-questions", badge: "ガイド" },
-    { label: "Box AIを使用してテキストを生成する", href: "/ja/guides/box-ai/ai-tutorials/generate-text", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (構造化)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "ガイド" },
-    { label: "ファイルからメタデータを抽出する (自由形式)", href: "/ja/guides/box-ai/ai-tutorials/extract-metadata", badge: "ガイド" }
-  ]}
+  { label: "Get started with Box AI", href: "/guides/box-ai/ai-tutorials/prerequisites", badge: "GUIDE" },
+  { label: "Ask questions to Box AI", href: "/guides/box-ai/ai-tutorials/ask-questions", badge: "GUIDE" },
+  { label: "Generate text with Box AI", href: "/guides/box-ai/ai-tutorials/generate-text", badge: "GUIDE" },
+  { label: "Extract metadata from file (structured)", href: "/guides/box-ai/ai-tutorials/extract-metadata-structured", badge: "GUIDE" },
+  { label: "Extract metadata from file (freeform)", href: "/guides/box-ai/ai-tutorials/extract-metadata", badge: "GUIDE" }
+]}
 />

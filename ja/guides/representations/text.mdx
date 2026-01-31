@@ -1,32 +1,21 @@
 ---
-title: "テキストレプリゼンテーションの取得"
-alias_paths: []
-category_id: representations
-subcategory_id: null
-is_index: false
-id: representations/text
-type: guide
-total_steps: 8
-sibling_id: representations
-parent_id: representations
-next_page_id: representations/supported-file-types
-previous_page_id: representations/pdf
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/representations/text.md
+title: テキストレプリゼンテーションの取得
+
 fullyTranslated: true
 ---
 
 import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
-
+import {Link} from "/snippets/Link.jsx";
 
 <RelatedLinks
-  title="REQUIRED GUIDES"
+  title="必須のガイド"
   items={[
-    { label: "ファイルのすべてのレプリゼンテーションのリストの取得", href: "/ja/guides/representations/list-all-representations", badge: "ガイド" },
-    { label: "目的のレプリゼンテーションのリクエスト", href: "/ja/guides/representations/request-a-representation", badge: "ガイド" },
-    { label: "ファイルレプリゼンテーションのダウンロード", href: "/ja/guides/representations/download-a-representation", badge: "ガイド" }
-  ]}
+  { label: "List All Representations for File", href: "/guides/representations/list-all-representations", badge: "GUIDE" },
+  { label: "Request Desired Representation", href: "/guides/representations/request-a-representation", badge: "GUIDE" },
+  { label: "Download File Representation", href: "/guides/representations/download-a-representation", badge: "GUIDE" }
+]}
 />
+
 テキストレプリゼンテーションでは、ドキュメントからプレーンテキストを抽出できます。
 
 テキストは、プレーンテキストを含むさまざまな種類のドキュメントファイルやBoxでサポートされているコードファイルに対して生成されます。テキストレイヤがないため、画像ファイルは含まれません。
@@ -37,19 +26,20 @@ import {RelatedLinks, MultiRelatedLinks} from "/snippets/related-links.jsx";
 
 テキストレプリゼンテーションを取得するには、以下の手順に従います。
 
-* [すべてのレプリゼンテーションのリストを取得する](/ja/guides/representations/list-all-representations)
-* 値`[extracted_text]`を指定した`x-rep-hints`ヘッダーを渡して、[テキストレプリゼンテーションをリクエスト](/ja/guides/representations/request-a-representation)する
-* `url_template`を呼び出して[テキストをダウンロード](/ja/guides/representations/download-a-representation)する。その際、`{+asset_path}`を空の文字列に置き換えます。
+* <Link href="/guides/representations/list-all-representations">すべてのレプリゼンテーションのリストを取得する</Link>
+* 値`[extracted_text]`を指定した`x-rep-hints`ヘッダーを渡して、<Link href="/guides/representations/request-a-representation">テキストレプリゼンテーションをリクエスト</Link>する
+* `url_template`を呼び出して<Link href="/guides/representations/download-a-representation">テキストをダウンロード</Link>する。その際、`{+asset_path}`を空の文字列に置き換えます。
 
 <RelatedLinks
   title="関連するAPI"
   items={[
-    { label: "Get file information", href: "/ja/reference/get-files-id", badge: "GET" }
-  ]}
+  { label: "Get file information", href: "/reference/get-files-id", badge: "GET" }
+]}
 />
+
 <RelatedLinks
   title="関連するガイド"
   items={[
-    { label: "サポートされているファイルの種類", href: "/ja/guides/representations/supported-file-types", badge: "ガイド" }
-  ]}
+  { label: "Supported File Types", href: "/guides/representations/supported-file-types", badge: "GUIDE" }
+]}
 />
